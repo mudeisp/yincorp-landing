@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Well Perdizes |Rua Turiassú x Rua Cardoso de Almeida - Oportunidade</title>
+    <title>Well Perdizes | YinCorp - Oportunidade</title>
 
-    <!-- Google Fonts: Montserrat para Leitura, Playfair Display para Luxo -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Meta Pixel Code (Mantenha o seu original) -->
+    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -33,14 +33,14 @@
 
     <style>
         :root {
-            --gold-primary: #D4AF37;
-            --gold-light: #F3E5AB;
-            --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
-            --bg-dark: #0A0D14;
-            --bg-card: #121722;
-            --bg-card-border: rgba(212, 175, 55, 0.25);
-            --text-white: #FFFFFF;
-            --text-muted: #A0A5B5;
+            --gold-primary: #B38728;
+            --gold-dark: #8C6818;
+            --gold-gradient: linear-gradient(135deg, #B38728 0%, #D4AF37 50%, #AA771C 100%);
+            --bg-light: #F9FAFC;
+            --bg-card: #FFFFFF;
+            --bg-card-border: rgba(179, 135, 40, 0.2);
+            --text-dark: #1A1D20;
+            --text-muted: #5A626A;
             --whatsapp-green: #25D366;
             --whatsapp-hover: #1EBE57;
         }
@@ -49,55 +49,61 @@
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-white);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
-            padding-bottom: 100px; /* Espaço para o botão flutuante */
+            padding-bottom: 110px;
         }
 
-        /* --- Container Principal --- */
         .main-container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* --- Header: Logo à Esquerda --- */
+        /* Header: Logo à Esquerda */
         header {
             padding: 20px 0;
             display: flex;
-            justify-content: flex-start; /* Alinha à esquerda */
+            justify-content: flex-start;
             align-items: center;
-            background: linear-gradient(180deg, rgba(18,23,34,0.9) 0%, rgba(10,13,20,0) 100%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            background-color: #FFFFFF;
         }
 
         .logo-img {
-            max-height: 70px; /* Tamanho ajustado para o canto */
+            max-height: 65px;
             width: auto;
             display: block;
         }
 
-        /* --- Títulos das Seções --- */
+        /* Seções e Títulos */
         .section-header {
             text-align: center;
-            margin: 60px 0 30px;
+            margin: 45px 0 25px;
         }
 
         .section-header h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.2em;
-            color: var(--gold-primary);
-            margin-bottom: 10px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .section-header h2 span {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .section-header p {
             color: var(--text-muted);
             font-size: 1em;
-            font-weight: 300;
+            font-weight: 400;
         }
 
-        /* --- 1. Carrossel de Vídeos (2 YouTube dividindo a tela) --- */
+        /* Carrossel de Vídeos (Shorts Vertical 9:16) */
         .video-carousel-container {
             display: flex;
             gap: 20px;
@@ -105,24 +111,25 @@
             scroll-snap-type: x mandatory;
             padding-bottom: 15px;
             -webkit-overflow-scrolling: touch;
+            justify-content: center;
         }
 
         .video-carousel-container::-webkit-scrollbar { height: 6px; }
         .video-carousel-container::-webkit-scrollbar-thumb { background: var(--gold-primary); border-radius: 10px; }
 
         .video-slide {
-            flex: 0 0 calc(50% - 10px); /* 2 vídeos por tela menos o gap */
-            scroll-snap-align: start;
-            border-radius: 12px;
+            flex: 0 0 310px; /* Largura proporcional para formato Shorts */
+            scroll-snap-align: center;
+            border-radius: 16px;
             overflow: hidden;
             border: 1px solid var(--bg-card-border);
-            position: relative;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            background: #000;
         }
 
-        /* Aspecto 16:9 para os vídeos */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 177.78%; /* Proporção 9:16 */
             height: 0;
         }
 
@@ -135,14 +142,7 @@
             border: 0;
         }
 
-        /* Ajuste para Mobile (1 vídeo por tela) */
-        @media (max-width: 768px) {
-            .video-slide {
-                flex: 0 0 90%;
-            }
-        }
-
-        /* --- 2. Carrossel de 10 Imagens (Scroll Horizontal) --- */
+        /* Carrossel de 10 Imagens */
         .image-carousel-container {
             display: flex;
             gap: 15px;
@@ -156,11 +156,13 @@
         .image-carousel-container::-webkit-scrollbar-thumb { background: var(--gold-primary); border-radius: 10px; }
 
         .image-slide {
-            flex: 0 0 300px; /* Largura fixa das imagens */
+            flex: 0 0 290px;
             scroll-snap-align: center;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            background: #FFFFFF;
             transition: 0.3s;
         }
 
@@ -170,126 +172,112 @@
 
         .image-slide img {
             width: 100%;
-            height: 200px; /* Altura fixa para alinhar */
+            height: 200px;
             object-fit: cover;
             display: block;
         }
 
-        /* Ajuste para Mobile */
-        @media (max-width: 768px) {
-            .image-slide {
-                flex: 0 0 80%;
-            }
-        }
-
-        /* --- 3. Botão do WhatsApp Flutuante com Foto dentro --- */
+        /* Botão do WhatsApp Flutuante com FOTO */
         .whatsapp-fixed {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 25px;
+            right: 25px;
             display: flex;
             align-items: center;
             gap: 12px;
             background-color: var(--whatsapp-green);
             color: #FFFFFF;
-            padding: 10px 25px 10px 10px; /* Espaço para a foto na esquerda */
+            padding: 8px 22px 8px 8px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1em;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            font-size: 1.05em;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
             transition: 0.3s;
-            z-index: 1000; /* Garante que fique por cima */
+            z-index: 1000;
         }
 
         .whatsapp-fixed:hover {
             background-color: var(--whatsapp-hover);
-            transform: translateY(-5px);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
         }
 
-        /* Container da Foto dentro do botão */
         .whatsapp-photo-container {
-            width: 55px;
-            height: 55px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             overflow: hidden;
-            border: 3px solid #FFFFFF; /* Borda branca elegante ao redor da foto */
+            border: 2px solid #FFFFFF;
             flex-shrink: 0;
         }
 
         .whatsapp-photo-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Garante que a foto preencha o círculo */
+            object-fit: cover;
             display: block;
-        }
-
-        /* Ajuste para Mobile (reduz o tamanho) */
-        @media (max-width: 768px) {
-            .whatsapp-fixed {
-                bottom: 20px;
-                right: 20px;
-                font-size: 0.95em;
-                padding: 8px 18px 8px 8px;
-            }
-            .whatsapp-photo-container {
-                width: 45px;
-                height: 45px;
-            }
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 40px 20px 30px;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 35px 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
             color: var(--text-muted);
             font-size: 0.85em;
-            margin-top: 60px;
+            margin-top: 50px;
+            background-color: #FFFFFF;
         }
 
         footer p.brand {
             color: var(--gold-primary);
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 2px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .video-carousel-container { justify-content: flex-start; }
+            .video-slide { flex: 0 0 82%; }
+            .image-slide { flex: 0 0 78%; }
+            .whatsapp-fixed { bottom: 15px; right: 15px; font-size: 0.95em; }
         }
     </style>
 </head>
 <body>
 
-    <div class="main-container">
-        
-        <!-- Header / Logo à Esquerda -->
-        <header>
-            <img src="Y Incorp 2.png" alt="YinCorp Operações Imobiliárias" class="logo-img">
-        </header>
+    <header>
+        <div class="main-container">
+            <!-- Logo à Esquerda -->
+            <img src="Y Incorp.png" alt="YinCorp Operações Imobiliárias" class="logo-img">
+        </div>
+    </header>
 
-        <!-- Título da Campanha -->
+    <div class="main-container">
+
+        <!-- Título principal -->
         <div class="section-header">
-            <h2>Well Perdizes <span style="background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">YinCorp</span></h2>
-            <p>Oportunidade Premium para Moradia ou Investimento em São Paulo</p>
+            <h2>Well Perdizes <span>YinCorp</span></h2>
+            <p>Apresentação em Vídeo e Galeria Exclusiva</p>
         </div>
 
-        <!-- 1. Carrossel de 2 Vídeos (Dividindo a Tela) -->
+        <!-- 1. Carrossel de 2 Vídeos Shorts (Dividindo a Tela) -->
         <section>
-            <div class="section-header">
-                <h2>Apresentação & Tour Virtual</h2>
-            </div>
             <div class="video-carousel-container">
-                <!-- Vídeo 1 (Substitua o ID 'dQw4w9WgXcQ' pelo ID real) -->
+                <!-- Vídeo 1: Tour Decorado 34m² -->
                 <div class="video-slide">
                     <div class="video-wrapper">
-                        <iframe src="https://youtube.com/shorts/SGquvhKz4ok?feature=share" title="Pronto para morar em Pinheiros" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/RCHJn8uGTp4" title="Well Perdizes 2 dorms Tour Decorado" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
-                <!-- Vídeo 2 (Substitua o ID 'dQw4w9WgXcQ' pelo ID real) -->
+
+                <!-- Vídeo 2: Apresentação Empreendimento & Condições -->
                 <div class="video-slide">
                     <div class="video-wrapper">
-                        <iframe src="https://youtube.com/shorts/tIJTYxLXYTU?feature=share" title="Lançamento em Perdizes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/tIJTYxLXYTU" title="Well Perdizes Apresentação" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
-                <!-- Você pode adicionar mais vídeos aqui, eles aparecerão no scroll -->
             </div>
         </section>
 
@@ -299,21 +287,20 @@
                 <h2>Galeria do Empreendimento</h2>
             </div>
             <div class="image-carousel-container">
-                <!-- Substitua as URLs 'https://via.placeholder.com/600x400' pelas fotos reais -->
-                <div class="image-slide"><img src="https://via.placeholder.com/600x400/0A0D14/D4AF37?text=Foto+1" alt="Well Perdizes 1"></div>
-                <div class="image-slide"><img src="https://via.placeholder.com/600x400/0A0D14/D4AF37?text=Foto+2" alt="Well Perdizes 2"></div>
-                <div class="image-slide"><img src="https://via.placeholder.com/600x400/0A0D14/D4AF37?text=Foto+3" alt="Well Perdizes 3"></div>
-                <div class="image-slide"><img src="https://via.placeholder.com/600x400/0A0D14/D4AF37?text=Foto+4" alt="Well Perdizes 4"></div>
-                <div class="image-slide"><img src="https://via.placeholder.com/600x400/0A0D14/D4AF37?text=Foto+5" alt="Well Perdizes 5"></div>
-                <div class="image-slide"><img src="https://via.placeholder.com/600x400/0A0D14/D4AF37?text=Foto+6" alt="Well Perdizes 6"></div>
-                <div class="image-slide"><img src="https://via.placeholder.com/600x400/0A0D14/D4AF37?text=Foto+7" alt="Well Perdizes 7"></div>
-                <div class="image-slide"><img src="https://via.placeholder.com/600x400/0A0D14/D4AF37?text=Foto+8" alt="Well Perdizes 8"></div>
-                <div class="image-slide"><img src="https://via.placeholder.com/600x400/0A0D14/D4AF37?text=Foto+9" alt="Well Perdizes 9"></div>
-                <div class="image-slide"><img src="https://via.placeholder.com/600x400/0A0D14/D4AF37?text=Foto+10" alt="Well Perdizes 10"></div>
+                <div class="image-slide"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Well Perdizes 1"></div>
+                <div class="image-slide"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Well Perdizes 2"></div>
+                <div class="image-slide"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Well Perdizes 3"></div>
+                <div class="image-slide"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80" alt="Well Perdizes 4"></div>
+                <div class="image-slide"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Well Perdizes 5"></div>
+                <div class="image-slide"><img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=600&q=80" alt="Well Perdizes 6"></div>
+                <div class="image-slide"><img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=600&q=80" alt="Well Perdizes 7"></div>
+                <div class="image-slide"><img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=600&q=80" alt="Well Perdizes 8"></div>
+                <div class="image-slide"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80" alt="Well Perdizes 9"></div>
+                <div class="image-slide"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80" alt="Well Perdizes 10"></div>
             </div>
         </section>
 
-    </div> <!-- Fim Main Container -->
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -321,11 +308,10 @@
         <p>&copy; Todos os direitos reservados.</p>
     </footer>
 
-    <!-- 3. Botão do WhatsApp Flutuante com SUA FOTO dentro -->
-    <!-- Substitua 'SUA_FOTO.png' pelo arquivo da sua foto que você subir no GitHub -->
+    <!-- 3. Botão Flutuante do WhatsApp com a foto PERFIL.jfif -->
     <a href="https://wa.me/5511992976368?text=Olá,%20vi%20o%20site%20da%20YinCorp%20e%20gostaria%20de%20receber%20informações%20do%20Well%20Perdizes." class="whatsapp-fixed" target="_blank">
         <div class="whatsapp-photo-container">
-            <img src="SUA_FOTO.png" alt="Consultor YinCorp">
+            <img src="PERFIL.jfif" alt="Consultor YinCorp">
         </div>
         Falar no WhatsApp
     </a>
