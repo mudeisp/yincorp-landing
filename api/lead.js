@@ -1,0 +1,47 @@
+export default async function handler(req, res) {
+  // Configuração dos cabeçalhos CORS para permitir o envio
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  );
+
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Método não permitido' });
+  }
+
+  try {
+    const { nome, telefone, perfil } = req.body;
+
+    // COLE A URL DO WEBHOOK DO PRAEDIUM ABAIXO
+    const PRAEDIUM_WEBHOOK_URL = "https://api.praedium.com.br/v1/12052/ca9006e6-9aa2-11f1-b277-0affe18deec3/conversion?access_token=02769f1cae419fe1fc00e76d479b2486dc96682c0868859cb5ca771bcd56f4c7";
+
+    const response = await fetch(PRAEDIUM_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        nome: nome,
+        telefone: telefone,
+        origem: "Landing Page - Well Perdizes",
+        perfil: perfil,
+        data: new Date().toISOString()
+      })
+    });
+
+    const data = await response.text();
+    return res.status(200).json({ success: true, response: data });
+
+  } catch (error) {
+    console.error("Erro na API de Lead:", error);
+    return res.status(500).json({ success: false, error: error.message });
+  }
+}
