@@ -1,5 +1,4 @@
 export default async function handler(req, res) {
-  // Configuração de cabeçalhos para evitar erro de CORS no navegador
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
@@ -20,10 +19,9 @@ export default async function handler(req, res) {
   try {
     const { nome, telefone, perfil } = req.body;
 
-    // URL completa e autenticada do Webhook de Entrada do Praedium
+    // URL COMPLETA COM ASPAS DUPLAS E PROTOCOLO HTTPS
     const PRAEDIUM_WEBHOOK_URL = "https://api.praedium.com.br/v1/12052/eff285d6-a704-11f1-b277-0affe18deec3/conversion?access_token=2e1b0a3576408d4e14780289654053fbb99ad2c023c19785d4a81658d355d77c";
 
-    // Estrutura do payload mapeada com os nomes aceitos pelo Praedium
     const payload = {
       name: nome,
       nome: nome,
