@@ -56,20 +56,20 @@
             padding-bottom: 110px;
         }
 
-        .main-container {
+        /* Header: Logo alinhado à Esquerda */
+        header {
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            background-color: #FFFFFF;
+        }
+
+        .header-container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
-        }
-
-        /* Header: Logo à Esquerda */
-        header {
-            padding: 20px 0;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            background-color: #FFFFFF;
         }
 
         .logo-img {
@@ -78,10 +78,16 @@
             display: block;
         }
 
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         /* Seções e Títulos */
         .section-header {
             text-align: center;
-            margin: 45px 0 25px;
+            margin: 40px 0 25px;
         }
 
         .section-header h2 {
@@ -111,15 +117,14 @@
             scroll-snap-type: x mandatory;
             padding-bottom: 15px;
             -webkit-overflow-scrolling: touch;
-            justify-content: center;
         }
 
         .video-carousel-container::-webkit-scrollbar { height: 6px; }
         .video-carousel-container::-webkit-scrollbar-thumb { background: var(--gold-primary); border-radius: 10px; }
 
         .video-slide {
-            flex: 0 0 310px; /* Largura proporcional para formato Shorts */
-            scroll-snap-align: center;
+            flex: 0 0 290px; /* Largura proporcional para formato Shorts */
+            scroll-snap-align: start;
             border-radius: 16px;
             overflow: hidden;
             border: 1px solid var(--bg-card-border);
@@ -156,7 +161,7 @@
         .image-carousel-container::-webkit-scrollbar-thumb { background: var(--gold-primary); border-radius: 10px; }
 
         .image-slide {
-            flex: 0 0 290px;
+            flex: 0 0 280px;
             scroll-snap-align: center;
             border-radius: 12px;
             overflow: hidden;
@@ -238,7 +243,6 @@
         }
 
         @media (max-width: 768px) {
-            .video-carousel-container { justify-content: flex-start; }
             .video-slide { flex: 0 0 82%; }
             .image-slide { flex: 0 0 78%; }
             .whatsapp-fixed { bottom: 15px; right: 15px; font-size: 0.95em; }
@@ -247,35 +251,49 @@
 </head>
 <body>
 
+    <!-- Header com Logo alinhado à Esquerda -->
     <header>
-        <div class="main-container">
-            <!-- Logo à Esquerda -->
+        <div class="header-container">
             <img src="Y Incorp.png" alt="YinCorp Operações Imobiliárias" class="logo-img">
         </div>
     </header>
 
     <div class="main-container">
 
-        <!-- Título principal -->
+        <!-- Título Principal -->
         <div class="section-header">
             <h2>Well Perdizes <span>YinCorp</span></h2>
             <p>Apresentação em Vídeo e Galeria Exclusiva</p>
         </div>
 
-        <!-- 1. Carrossel de 2 Vídeos Shorts (Dividindo a Tela) -->
+        <!-- 1. Carrossel de 4 Vídeos Shorts -->
         <section>
             <div class="video-carousel-container">
-                <!-- Vídeo 1: Tour Decorado 34m² -->
+                <!-- Vídeo 1: Tour Decorado -->
                 <div class="video-slide">
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/RCHJn8uGTp4" title="Well Perdizes 2 dorms Tour Decorado" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
 
-                <!-- Vídeo 2: Apresentação Empreendimento & Condições -->
+                <!-- Vídeo 2: Apresentação Geral -->
                 <div class="video-slide">
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/tIJTYxLXYTU" title="Well Perdizes Apresentação" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Vídeo 3: Condição de Pagamento / Lançamento -->
+                <div class="video-slide">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/xUZH-58fMFw" title="Well Perdizes Condição de Pagamento" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Vídeo 4: Localização Cardoso de Almeida -->
+                <div class="video-slide">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/0Bpx87BMuck" title="Well Perdizes Localização" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -308,7 +326,7 @@
         <p>&copy; Todos os direitos reservados.</p>
     </footer>
 
-    <!-- 3. Botão Flutuante do WhatsApp com a foto PERFIL.jfif -->
+    <!-- Botão Flutuante do WhatsApp com a foto PERFIL.jfif -->
     <a href="https://wa.me/5511992976368?text=Olá,%20vi%20o%20site%20da%20YinCorp%20e%20gostaria%20de%20receber%20informações%20do%20Well%20Perdizes." class="whatsapp-fixed" target="_blank">
         <div class="whatsapp-photo-container">
             <img src="PERFIL.jfif" alt="Consultor YinCorp">
