@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  // Configuração dos cabeçalhos CORS para permitir o envio
+  // Configuração dos cabeçalhos para evitar bloqueio de CORS no navegador
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
@@ -20,8 +20,8 @@ export default async function handler(req, res) {
   try {
     const { nome, telefone, perfil } = req.body;
 
-    // COLE A URL DO WEBHOOK DO PRAEDIUM ABAIXO
-    const PRAEDIUM_WEBHOOK_URL = "https://api.praedium.com.br/v1/12052/ca9006e6-9aa2-11f1-b277-0affe18deec3/conversion?access_token=02769f1cae419fe1fc00e76d479b2486dc96682c0868859cb5ca771bcd56f4c7";
+    // URL Exata e Autenticada do Webhook do Praedium
+    const PRAEDIUM_WEBHOOK_URL = "https://api.praedium.com.br/v1/12052/eff285d6-a704-11f1-b277-0affe18deec3/conversion?access_token=2e1b0a3576408d4e14780289654053fbb99ad2c023c19785d4a81658d355d77c";
 
     const response = await fetch(PRAEDIUM_WEBHOOK_URL, {
       method: 'POST',
@@ -41,7 +41,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ success: true, response: data });
 
   } catch (error) {
-    console.error("Erro na API de Lead:", error);
+    console.error("Erro no proxy de Lead:", error);
     return res.status(500).json({ success: false, error: error.message });
   }
 }
