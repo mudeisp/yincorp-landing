@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YinCorp | Oportunidades & Investimentos Imobiliários em SP</title>
+    <title>YinCorp | Inteligência & Investimentos Imobiliários</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- Meta Pixel Code -->
     <script>
@@ -33,31 +38,279 @@
     <meta property="og:url" content="https://yincorp.com.br">
 
     <style>
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-light: #F3E5AB;
+            --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+            --bg-dark: #0A0D14;
+            --bg-card: #121722;
+            --bg-card-border: rgba(212, 175, 55, 0.25);
+            --text-white: #FFFFFF;
+            --text-muted: #A0A5B5;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #0b132b; color: #ffffff; line-height: 1.6; }
-        header { background: #1c2541; padding: 70px 20px; text-align: center; border-bottom: 2px solid #6fffe9; }
-        h1 { font-size: 3em; color: #ffffff; letter-spacing: 2px; font-weight: 800; margin-bottom: 10px; }
-        p.subtitle { font-size: 1.3em; color: #5bc0be; max-width: 650px; margin: 0 auto; }
-        .container { max-width: 800px; margin: 40px auto; padding: 40px 30px; background: #1c2541; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; }
-        h2 { font-size: 1.8em; color: #ffffff; margin-bottom: 15px; }
-        p.description { color: #c5c6c7; font-size: 1.1em; margin-bottom: 30px; }
-        .cta-btn { display: inline-block; background: #6fffe9; color: #0b132b; padding: 18px 36px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1.2em; transition: 0.3s; box-shadow: 0 4px 15px rgba(111,255,233,0.3); }
-        .cta-btn:hover { background: #5bc0be; color: #ffffff; }
-        footer { text-align: center; padding: 30px; color: #6c757d; font-size: 0.9em; }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header / Logo */
+        header {
+            padding: 40px 20px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(18,23,34,0.8) 0%, rgba(10,13,20,0) 100%);
+        }
+
+        .logo-container {
+            display: inline-block;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            font-weight: 700;
+            letter-spacing: 6px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75em;
+            letter-spacing: 4px;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            margin-top: -5px;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 900px;
+            margin: 40px auto 20px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6em;
+            line-height: 1.3;
+            color: var(--text-white);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero h1 span {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p.lead {
+            font-size: 1.15em;
+            color: var(--text-muted);
+            max-width: 720px;
+            margin: 0 auto 35px;
+            font-weight: 300;
+        }
+
+        /* CTA Button */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gold-gradient);
+            color: #0A0D14;
+            padding: 20px 42px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.35);
+            filter: brightness(1.1);
+        }
+
+        /* Key Metrics / Highlights */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .metric-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+        }
+
+        .metric-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            font-weight: 700;
+            color: var(--gold-primary);
+            margin-bottom: 5px;
+        }
+
+        .metric-label {
+            font-size: 0.85em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Features Section */
+        .features {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: var(--text-white);
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 35px 25px;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--gold-primary);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3em;
+            color: var(--gold-primary);
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95em;
+            font-weight: 300;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px 20px 30px;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            color: var(--text-muted);
+            font-size: 0.85em;
+            margin-top: 80px;
+        }
+
+        footer p.brand {
+            color: var(--gold-primary);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .logo-text { font-size: 2.2em; }
+            .hero h1 { font-size: 1.9em; }
+            .cta-btn { width: 100%; padding: 18px 20px; font-size: 0.95em; }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Header / Logo -->
     <header>
-        <h1>YINCORP</h1>
-        <p class="subtitle">Inteligência Imobiliária e Oportunidades de Alto Impacto em São Paulo</p>
+        <div class="logo-container">
+            <!-- Caso queira trocar por uma imagem de logo no futuro: <img src="logo.png" alt="YinCorp" height="60"> -->
+            <div class="logo-text">YINCORP</div>
+            <div class="logo-subtitle">Operações Imobiliárias</div>
+        </div>
     </header>
-    <div class="container">
-        <h2>Acesso Antecipado a Lançamentos & Portfólio Exclusivo</h2>
-        <p class="description">Consultoria especializada para investidores que buscam rentabilidade, valorização patrimonial e condições especiais de pré-lançamento.</p>
-        <a href="https://wa.me/5511992976368" class="cta-btn" target="_blank">Falar com um Consultor Yincorp</a>
-    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Inteligência Imobiliária & <span>Oportunidades de Alto Impacto</span> em São Paulo</h1>
+        <p class="lead">Acesso exclusivo a pré-lançamentos, oportunidades off-market e consultoria estratégica para investidores focados em máxima rentabilidade e proteção patrimonial.</p>
+        
+        <a href="https://wa.me/5511992976368?text=Olá,%20gostaria%20de%20conhecer%20as%20oportunidades%20de%20investimento%20da%20YinCorp." class="cta-btn" target="_blank">
+            Falar com um Consultor YinCorp
+        </a>
+    </section>
+
+    <!-- Metrics -->
+    <section class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-number">Off-Market</div>
+            <div class="metric-label">Oportunidades Exclusivas</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number">São Paulo</div>
+            <div class="metric-label">Polos de Alta Valorização</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number">Short-Stay</div>
+            <div class="metric-label">Foco em Renda Passiva</div>
+        </div>
+    </section>
+
+    <!-- Features / Pilares -->
+    <section class="features">
+        <h2 class="section-title">Teses de Investimento Estratégico</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Pré-Lançamentos</h3>
+                <p>Acesso antecipado às melhores tabelas de compra na planta nas zonas de maior adensamento de São Paulo.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Ativos de Renda</h3>
+                <p>Unidades voltadas para locação por temporada (Airbnb / Short-Stay) com projeção de yield otimizado.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Consultoria Dedicada</h3>
+                <p>Atendimento individualizado para estruturação de portfólio imobiliário e ganho de capital na obra.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        &copy; YinCorp Operações Imobiliárias. Todos os direitos reservados.
+        <p class="brand">YINCORP OPERAÇÕES IMOBILIÁRIAS</p>
+        <p>&copy; Todos os direitos reservados.</p>
     </footer>
+
 </body>
 </html>
