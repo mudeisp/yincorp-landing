@@ -1,1 +1,5 @@
+User-agent: *
+Allow: /
 
+# Sitemap oficial da Yincorp
+Sitemap: https://www.yincorp.com.br/sitemap.xml
