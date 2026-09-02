@@ -19,16 +19,16 @@ export default async function handler(req, res) {
   try {
     const { nome, telefone, perfil } = req.body;
 
+    // URL COMPLETA COM TOKEN
     const PRAEDIUM_WEBHOOK_URL = "https://api.praedium.com.br/v1/12052/eff285d6-a704-11f1-b277-0affe18deec3/conversion?access_token=2e1b0a3576408d4e14780289654053fbb99ad2c023c19785d4a81658d355d77c";
 
-    // Mapeamento compatível com a API do Praedium
     const payload = {
       name: nome,
       nome: nome,
       phone: telefone,
       mobile_phone: telefone,
       telefone: telefone,
-      email: "contato@yincorp.com.br", // Evita descarte por falta de e-mail
+      email: "contato@yincorp.com.br",
       origin: "Landing Page - Well Perdizes",
       origem: "Landing Page - Well Perdizes",
       notes: "Objetivo: " + perfil,
@@ -49,7 +49,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ success: true, response: data });
 
   } catch (error) {
-    console.error("Erro no envio para Praedium:", error);
+    console.error("Erro no proxy de Lead:", error);
     return res.status(500).json({ success: false, error: error.message });
   }
 }
