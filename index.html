@@ -408,7 +408,7 @@
         <div class="price">
           <div>
             <small>A partir de</small>
-            <strong>R$ 280 mil</strong>
+            <strong>R$ 340 mil</strong>
           </div>
         </div>
 
@@ -417,7 +417,56 @@
           <a class="btn btn-outline" href="#videos">VER OS VÍDEOS</a>
         </div>
       </div>
+      document.getElementById('leadForm').addEventListener('submit', function(e){
+    e.preventDefault();
 
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const profile = document.getElementById('profile').value;
+
+    // 1. Métricas Meta Pixel e GA4
+    if(window.fbq){
+      fbq('track','Lead',{
+        content_name:'Well Perdizes',
+        profile:profile
+      });
+    }
+
+    if(window.gtag){
+      gtag('event', 'generate_lead', {
+        'event_category': 'Form',
+        'event_label': 'Lead Form',
+        'value': profile
+      });
+    }
+
+    document.getElementById('success').style.display='block';
+
+    // 2. Envio Seguro para o Praedium via Servidor Vercel
+    fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nome: name,
+        telefone: phone,
+        perfil: profile
+      })
+    }).catch(err => console.error("Erro na API:", err));
+
+    // 3. Redirecionamento para o WhatsApp
+    const message =
+      "Olá, meu nome é " + name +
+      ". Meu WhatsApp é " + phone +
+      ". Tenho interesse no Well Perdizes. " +
+      "Procuro " + profile.toLowerCase() + ".";
+
+    setTimeout(function(){
+      window.open(
+        "https://wa.me/" + WA + "?text=" + encodeURIComponent(message),
+        "_blank"
+      );
+    }, 350);
+  });
       <div class="hero-card">
         <h3>Well Perdizes</h3>
         <p>Confira rapidamente os principais pontos do empreendimento.</p>
@@ -500,7 +549,7 @@
       </div>
 
       <div class="numbers">
-        <div class="number-card"><span>Preço anunciado</span><strong>A partir de R$ 280 mil</strong></div>
+        <div class="number-card"><span>Preço anunciado</span><strong>A partir de R$ 340 mil</strong></div>
         <div class="number-card"><span>Entrada anunciada</span><strong>Consulte as condições</strong></div>
         <div class="number-card"><span>Financiamento</span><strong>Simule seu perfil</strong></div>
       </div>
