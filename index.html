@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yincorp | Inteligência & Investimentos Imobiliários</title>
+    <title>Well Perdizes | YinCorp Operações Imobiliárias</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,11 +31,11 @@
     <!-- Vercel Speed Insights -->
     <script defer src="/_vercel/speed-insights/script.js"></script>
 
-    <!-- Meta Tags para Compartilhamento (WhatsApp e Redes Sociais) -->
-    <meta property="og:title" content="YinCorp | Oportunidades & Investimentos Imobiliários em SP">
-    <meta property="og:description" content="Acesso antecipado a lançamentos e consultoria especializada para investidores imobiliários em São Paulo.">
+    <!-- Meta Tags para Compartilhamento -->
+    <meta property="og:title" content="Well Perdizes | YinCorp Operações Imobiliárias">
+    <meta property="og:description" content="Oportunidade única em Perdizes. Studios e apartamentos de alto padrão para moradia ou investimento.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yincorp.com.br">
+    <meta property="og:url" content="https://yincorp.com.br/well-perdizes.html">
 
     <style>
         :root {
@@ -47,6 +47,8 @@
             --bg-card-border: rgba(212, 175, 55, 0.25);
             --text-white: #FFFFFF;
             --text-muted: #A0A5B5;
+            --whatsapp-green: #25D366;
+            --whatsapp-hover: #1EBE57;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -61,17 +63,13 @@
 
         /* Header / Logo */
         header {
-            padding: 40px 20px 20px;
+            padding: 30px 20px 15px;
             text-align: center;
-            background: linear-gradient(180deg, rgba(18,23,34,0.8) 0%, rgba(10,13,20,0) 100%);
-        }
-
-        .logo-container {
-            display: inline-block;
+            background: linear-gradient(180deg, rgba(18,23,34,0.9) 0%, rgba(10,13,20,0) 100%);
         }
 
         .logo-img {
-            max-height: 110px;
+            max-height: 90px;
             width: auto;
             display: block;
             margin: 0 auto;
@@ -80,17 +78,31 @@
         /* Hero Section */
         .hero {
             max-width: 900px;
-            margin: 40px auto 20px;
+            margin: 20px auto 30px;
             padding: 0 20px;
             text-align: center;
         }
 
+        .tag-highlight {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.6em;
-            line-height: 1.3;
+            font-size: 2.5em;
+            line-height: 1.25;
             color: var(--text-white);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: 600;
         }
 
@@ -101,139 +113,202 @@
         }
 
         .hero p.lead {
-            font-size: 1.15em;
+            font-size: 1.1em;
             color: var(--text-muted);
-            max-width: 720px;
-            margin: 0 auto 35px;
+            max-width: 700px;
+            margin: 0 auto;
             font-weight: 300;
         }
 
-        /* CTA Button */
-        .cta-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--gold-gradient);
-            color: #0A0D14;
-            padding: 20px 42px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1em;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.35);
-            filter: brightness(1.1);
-        }
-
-        /* Key Metrics / Highlights */
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+        /* Section Block */
+        .content-section {
             max-width: 900px;
-            margin: 60px auto;
+            margin: 50px auto;
             padding: 0 20px;
         }
 
-        .metric-card {
+        .section-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: var(--gold-primary);
+            margin-bottom: 8px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 0.95em;
+        }
+
+        /* Carrossel de Fotos (Scroll Horizontal) */
+        .carousel-container {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding-bottom: 15px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .carousel-track::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .carousel-track::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .carousel-track::-webkit-scrollbar-thumb {
+            background: var(--gold-primary);
+            border-radius: 10px;
+        }
+
+        .carousel-slide {
+            flex: 0 0 85%;
+            scroll-snap-align: center;
             background: var(--bg-card);
             border: 1px solid var(--bg-card-border);
-            padding: 30px 20px;
-            border-radius: 8px;
-            text-align: center;
+            border-radius: 12px;
+            overflow: hidden;
             position: relative;
         }
 
-        .metric-number {
+        @media (min-width: 768px) {
+            .carousel-slide {
+                flex: 0 0 55%;
+            }
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .slide-caption {
+            padding: 15px 20px;
+            background: var(--bg-card);
+        }
+
+        .slide-caption h4 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2em;
-            font-weight: 700;
-            color: var(--gold-primary);
-            margin-bottom: 5px;
+            color: var(--text-white);
+            font-size: 1.1em;
+            margin-bottom: 4px;
         }
 
-        .metric-label {
-            font-size: 0.85em;
+        .slide-caption p {
             color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 0.85em;
         }
 
-        /* Features Section */
-        .features {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
+        /* Vídeo do YouTube Responsivo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid var(--bg-card-border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .section-title {
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Chamada de Ação e Botão WhatsApp */
+        .cta-section {
+            background: linear-gradient(180deg, var(--bg-card) 0%, rgba(10,13,20,1) 100%);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 16px;
+            padding: 40px 25px;
             text-align: center;
+            margin: 60px auto 40px;
+            max-width: 800px;
+        }
+
+        .cta-section h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.8em;
             color: var(--text-white);
-            margin-bottom: 40px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-
-        .feature-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(255,255,255,0.05);
-            padding: 35px 25px;
-            border-radius: 8px;
-            transition: 0.3s ease;
-        }
-
-        .feature-card:hover {
-            border-color: var(--gold-primary);
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3em;
-            color: var(--gold-primary);
             margin-bottom: 12px;
         }
 
-        .feature-card p {
+        .cta-section p {
             color: var(--text-muted);
-            font-size: 0.95em;
-            font-weight: 300;
+            font-size: 1em;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--whatsapp-green);
+            color: #FFFFFF;
+            padding: 20px 38px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15em;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: var(--whatsapp-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.45);
+        }
+
+        .whatsapp-btn svg {
+            width: 26px;
+            height: 26px;
+            fill: currentColor;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 50px 20px 30px;
+            padding: 40px 20px 30px;
             border-top: 1px solid rgba(212, 175, 55, 0.1);
             color: var(--text-muted);
             font-size: 0.85em;
-            margin-top: 80px;
+            margin-top: 60px;
         }
 
         footer p.brand {
             color: var(--gold-primary);
             font-weight: 600;
             letter-spacing: 2px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         @media (max-width: 768px) {
-            .logo-img { max-height: 85px; }
-            .hero h1 { font-size: 1.9em; }
-            .cta-btn { width: 100%; padding: 18px 20px; font-size: 0.95em; }
+            .hero h1 { font-size: 1.8em; }
+            .carousel-slide img { height: 220px; }
+            .whatsapp-btn { width: 100%; padding: 18px 20px; font-size: 1em; }
         }
     </style>
 </head>
@@ -248,52 +323,90 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Inteligência Imobiliária & <span>Oportunidades de Alto Impacto</span> em São Paulo</h1>
-        <p class="lead">Acesso exclusivo a pré-lançamentos, oportunidades off-market e consultoria estratégica para investidores focados em máxima rentabilidade e proteção patrimonial.</p>
-        
-        <a href="https://wa.me/5511992976368?text=Olá,%20gostaria%20de%20conhecer%20as%20oportunidades%20de%20investimento%20da%20YinCorp." class="cta-btn" target="_blank">
-            Falar com um Consultor YinCorp
-        </a>
+        <span class="tag-highlight">Lançamento Exclusivo</span>
+        <h1>Well Perdizes <span>&bull; YinCorp</span></h1>
+        <p class="lead">Design sofisticado, infraestrutura completa e a melhor localização de Perdizes para morar ou rentabilizar com locação.</p>
     </section>
 
-    <!-- Metrics -->
-    <section class="metrics-grid">
-        <div class="metric-card">
-            <div class="metric-number">Off-Market</div>
-            <div class="metric-label">Oportunidades Exclusivas</div>
+    <!-- 1. Carrossel de Fotos (Scroll Horizontal) -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2>Galeria &amp; Perspectivas</h2>
+            <p>Deslize para o lado para conhecer os detalhes do empreendimento</p>
         </div>
-        <div class="metric-card">
-            <div class="metric-number">São Paulo</div>
-            <div class="metric-label">Polos de Alta Valorização</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-number">Short-Stay</div>
-            <div class="metric-label">Foco em Renda Passiva</div>
+
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- Foto 1 -->
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Fachada Well Perdizes">
+                    <div class="slide-caption">
+                        <h4>Arquitetura &amp; Fachada</h4>
+                        <p>Design contemporâneo integrado ao bairro de Perdizes.</p>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Interior do Aparelho">
+                    <div class="slide-caption">
+                        <h4>Studios &amp; Apartamentos</h4>
+                        <p>Plantas inteligentes otimizadas para alto rendimento e conforto.</p>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Lazer & Rooftop">
+                    <div class="slide-caption">
+                        <h4>Rooftop com Vista Panorâmica</h4>
+                        <p>Área de lazer premium para momentos exclusivos.</p>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Área de Convivência">
+                    <div class="slide-caption">
+                        <h4>Coworking &amp; Serviços</h4>
+                        <p>Infraestrutura pronta para o estilo de vida moderno.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Features / Pilares -->
-    <section class="features">
-        <h2 class="section-title">Teses de Investimento Estratégico</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Pré-Lançamentos</h3>
-                <p>Acesso antecipado às melhores tabelas de compra na planta nas zonas de maior adensamento de São Paulo.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Ativos de Renda</h3>
-                <p>Unidades voltadas para locação por temporada (Airbnb / Short-Stay) com projeção de yield otimizado.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Consultoria Dedicada</h3>
-                <p>Atendimento individualizado para estruturação de portfólio imobiliário e ganho de capital na obra.</p>
-            </div>
+    <!-- 2. Vídeo do YouTube -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2>Apresentação em Vídeo</h2>
+            <p>Assista ao vídeo e conheça a proposta do Well Perdizes</p>
+        </div>
+
+        <div class="video-container">
+            <!-- Substitua o ID 'dQw4w9WgXcQ' no link src abaixo pelo ID do seu vídeo no YouTube -->
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo Well Perdizes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- 3. Botão do WhatsApp -->
+    <section class="content-section">
+        <div class="cta-section">
+            <h3>Receba a Tabela Exclusiva e Plantas</h3>
+            <p>Fale diretamente com nosso consultor no WhatsApp para obter condições especiais de pré-lançamento e agendar uma apresentação.</p>
+
+            <a href="https://wa.me/5511992976368?text=Olá,%20gostaria%20de%20receber%20a%20tabela%20e%20informações%20do%20Well%20Perdizes." class="whatsapp-btn" target="_blank">
+                <svg viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.572-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                Falar no WhatsApp com o Consultor
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p class="brand">YINCORP + MUDEISP OPERAÇÕES IMOBILIÁRIAS</p>
+        <p class="brand">YINCORP + MUDEISP IMOBILIÁRIAS</p>
         <p>&copy; Todos os direitos reservados.</p>
     </footer>
 
