@@ -1,1 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yincorp + 100Leads | Infraestrutura Imobiliária Robotinic</title>
+  <meta name="description" content="Pare de descartar 99 leads por mês. Conheça a infraestrutura Robotinic da Yincorp: Landing Pages Serverless, SEO para IA e dupla conversão para seu WhatsApp.">
+  <meta name="theme-color" content="#111315">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold:#b38728;
+      --gold2:#d4af37;
+      --dark:#111315;
+      --dark-card:#1e2226;
+      --text:#202428;
+      --muted:#889098;
+      --light:#f7f7f5;
+      --white:#fff;
+      --green:#25d366;
+      --border:#33383d;
+      --shadow:0 15px 45px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Montserrat,Arial,sans-serif;
+      color:#e0e4e8;
+      background:var(--dark);
+      line-height:1.55;
+      padding-bottom:85px;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1120px;margin:auto;padding:0 20px}
+
+    header{
+      background:#0b0c0d;
+      border-bottom:1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      font-weight:800;
+      font-size:18px;
+      letter-spacing:1px;
+      color:var(--white);
+    }
+    .brand span{color:var(--gold2)}
+    .nav-cta{
+      border:1px solid var(--gold);
+      color:var(--gold2);
+      padding:10px 20px;
+      border-radius:30px;
+      font-weight:700;
+      font-size:12px;
+      transition:.2s;
+    }
+    .nav-cta:hover{background:var(--gold);color:#111}
+
+    .hero{
+      padding:80px 0 60px;
+      background:radial-gradient(circle at 80% 20%,rgba(212,175,55,.15),transparent 45%);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:45px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-block;
+      color:var(--gold2);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:15px;
+    }
+    h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(32px,4vw,52px);
+      line-height:1.1;
+      margin-bottom:20px;
+      color:var(--white);
+    }
+    h1 span{color:var(--gold2)}
+    .hero-copy{
+      color:#b0b8c0;
+      font-size:16px;
+      margin-bottom:28px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:0 26px;
+      border-radius:8px;
+      font-weight:800;
+      border:none;
+      cursor:pointer;
+      transition:.2s;
+    }
+    .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111}
+    .btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(212,175,55,.3)}
+
+    .hero-card{
+      background:var(--dark-card);
+      border:1px solid var(--border);
+      padding:30px;
+      border-radius:18px;
+      box-shadow:var(--shadow);
+    }
+    .hero-card h3{color:var(--white);margin-bottom:12px;font-size:20px}
+    .hero-card p{color:var(--muted);font-size:13px;margin-bottom:20px}
+    .stat-list{display:grid;gap:12px}
+    .stat-item{
+      background:#14171a;
+      padding:14px;
+      border-radius:8px;
+      border-left:3px solid var(--gold);
+    }
+    .stat-item strong{display:block;color:var(--gold2);font-size:18px}
+    .stat-item span{font-size:12px;color:var(--muted)}
+
+    section{padding:70px 0}
+    .section-title{text-align:center;margin-bottom:40px}
+    h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(28px,3.5vw,40px);
+      color:var(--white);
+      margin-bottom:10px;
+    }
+
+    /* CARROSSEL DE VÍDEOS B2B */
+    .video-carousel{
+      display:flex;
+      gap:20px;
+      overflow-x:auto;
+      padding-bottom:15px;
+      scroll-snap-type:x mandatory;
+    }
+    .video-card{
+      flex:0 0 320px;
+      scroll-snap-align:start;
+      background:var(--dark-card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px;
+    }
+    .video-card h4{color:var(--gold2);margin-bottom:8px;font-size:15px}
+    .video-card p{color:var(--muted);font-size:12px;margin-bottom:12px}
+    .video-card iframe{width:100%;aspect-ratio:9/16;border:0;border-radius:12px}
+
+    /* GRID DE DORES / BENEFÍCIOS */
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .card{
+      background:var(--dark-card);
+      border:1px solid var(--border);
+      padding:25px;
+      border-radius:14px;
+    }
+    .card h3{color:var(--gold2);margin-bottom:10px;font-size:17px}
+    .card p{color:#a0a8b0;font-size:13px;line-height:1.6}
+
+    /* FORMULÁRIO */
+    .lead-section{background:#0b0c0d;border-top:1px solid var(--border)}
+    .lead-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+    form{
+      background:var(--dark-card);
+      padding:30px;
+      border-radius:16px;
+      border:1px solid var(--border);
+    }
+    label{font-size:11px;font-weight:700;display:block;margin-bottom:6px;color:var(--gold2)}
+    input,select{
+      width:100%;
+      height:48px;
+      border:1px solid var(--border);
+      border-radius:8px;
+      padding:0 14px;
+      font-family:inherit;
+      margin-bottom:14px;
+      background:#14171a;
+      color:#fff;
+    }
+    input:focus,select:focus{outline:1px solid var(--gold)}
+
+    footer{
+      text-align:center;
+      padding:30px;
+      font-size:11px;
+      color:var(--muted);
+      border-top:1px solid var(--border);
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      bottom:15px;
+      left:20px;
+      right:20px;
+      background:var(--green);
+      color:#fff;
+      padding:14px;
+      border-radius:35px;
+      text-align:center;
+      font-weight:800;
+      font-size:13px;
+      box-shadow:var(--shadow);
+      z-index:99;
+    }
+
+    @media(max-width:850px){
+      .hero-grid,.lead-wrap,.grid-3{grid-template-columns:1fr}
+      .video-card{flex-basis:82vw}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">YINCORP <span>+ 100LEADS</span></div>
+    <a href="#contato" class="nav-cta">QUERO O ROBOTINIC</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Robotinic • Performance Imobiliária</span>
+        <h1>Você gera 100 leads no mês, vende para 1 e <span>descarta 99?</span></h1>
+        <p class="hero-copy">
+          Chega de rasgar dinheiro com tráfego sem infraestrutura. Conheça o ecossistema Robotinic: Landing Pages Serverless, SEO para IA e captura inteligente em tempo real.
+        </p>
+        <a href="#contato" class="btn btn-gold">ESCALAR MINHA OPERAÇÃO</a>
+      </div>
+
+      <div class="hero-card">
+        <h3>O Vazamento da sua Operação:</h3>
+        <p>O que acontece quando seu site não tem infraestrutura Robotinic:</p>
+        <div class="stat-list">
+          <div class="stat-item"><strong>99% dos Leads Perdidos</strong><span>Sem fluxo de nutrição nem salvamento automático.</span></div>
+          <div class="stat-item"><strong>Descarte de Inteligência</strong><span>Seu Pixel/GA4 não aprende quem é o comprador real.</span></div>
+          <div class="stat-item"><strong>Gestão Fragmentada</strong><span>Tráfego, site e CRM que não se conversam.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARROSSEL DE VÍDEOS -->
+  <section id="videos">
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow">Entenda o Ecossistema</span>
+        <h2>Assista como o Robotinic funciona na prática</h2>
+      </div>
+
+      <div class="video-carousel">
+        <div class="video-card">
+          <h4>Vídeo 1: As 3 Dores</h4>
+          <p>O ralo de dinheiro no tráfego e o descarte de leads.</p>
+          <iframe src="https://www.youtube.com/embed/RCHJn8uGTp4" title="Vídeo 1" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <h4>Vídeo 2: A Engenharia</h4>
+          <p>Serverless, SEO semântico para IA e Schema.org.</p>
+          <iframe src="https://www.youtube.com/embed/tIJTYxLXYTU" title="Vídeo 2" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <h4>Vídeo 3: A Dupla Conversão</h4>
+          <p>Lead no CRM + WhatsApp Direct no mesmo segundo.</p>
+          <iframe src="https://www.youtube.com/embed/xUZH-58fMFw" title="Vídeo 3" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILARES -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow">A Solução Robotinic</span>
+        <h2>O que sua operação recebe em 5 dias</h2>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>01. Engenharia Serverless</h3>
+          <p>Hospedagem na Vercel com carregamento em menos de 1 segundo. Nenhuma perda por lentidão no celular.</p>
+        </div>
+        <div class="card">
+          <h3>02. Inteligência de IA & SEO</h3>
+          <p>Código Schema.org e estruturação H1/H2 para o Google e as Inteligências Artificiais encontrarem seu imóvel.</p>
+        </div>
+        <div class="card">
+          <h3>03. Dupla Conversão</h3>
+          <p>O lead preenche, é salvo na planilha/CRM automaticamente e a conversa abre na hora no seu WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="lead-section" id="contato">
+    <div class="container lead-wrap">
+      <div>
+        <span class="eyebrow">Próximo Passo</span>
+        <h2>Pronto para parar de descartar leads?</h2>
+        <p style="color:var(--muted);margin-top:10px">
+          Preencha os dados e receba a apresentação comercial do Robotinic diretamente no seu WhatsApp.
+        </p>
+      </div>
+
+      <form id="robotinicForm">
+        <label for="name">SEU NOME</label>
+        <input id="name" type="text" placeholder="Como podemos te chamar?" required>
+
+        <label for="phone">WHATSAPP</label>
+        <input id="phone" type="tel" placeholder="(11) 99999-9999" required>
+
+        <label for="role">SEU PERFIL</label>
+        <select id="role" required>
+          <option value="">Selecione</option>
+          <option value="Corretor Autônomo">Corretor Autônomo</option>
+          <option value="Imobiliária / Equipe">Imobiliária / Equipe</option>
+          <option value="Gestor de Tráfego">Gestor de Tráfego Imobiliário</option>
+        </select>
+
+        <button type="submit" class="btn btn-gold" style="width:100%" id="btnSub">QUERO O ROBOTINIC NA MINHA OPERAÇÃO</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>YINCORP + 100LEADS • ROBOTINIC</strong>
+  <p style="margin-top:5px">© 2026 Todos os direitos reservados. Infraestrutura Imobiliária de Alta Performance.</p>
+</footer>
+
+<a href="https://wa.me/5511992976368?text=Ol%C3%A1%2C%20quero%20conhecer%20a%20infraestrutura%20Robotinic%20da%20Yincorp." target="_blank" class="whatsapp-float">
+  FALAR COM ESPECIALISTA NO WHATSAPP
+</a>
+
+<script>
+  const WA_NUMBER = "5511992976368";
+
+  document.getElementById('robotinicForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const btn = document.getElementById('btnSub');
+    btn.disabled = true;
+    btn.innerText = "ENVIANDO...";
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const role = document.getElementById('role').value;
+
+    // Disparo API
+    fetch('/api/lead', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        nome: name,
+        telefone: phone,
+        perfil: role,
+        origem: 'landing-yincorp-100leads'
+      })
+    }).catch(err => console.error(err));
+
+    const msg = `Olá! Meu nome é ${name} (${role}). Quero conhecer o Robotinic e parar de descartar leads na minha operação.`;
+
+    setTimeout(() => {
+      window.location.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+    }, 400);
+  });
+</script>
+
+</body>
+</html>
