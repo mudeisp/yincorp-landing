@@ -7,6 +7,34 @@
   <meta name="description" content="Pare de descartar 99 leads por mês. Conheça a infraestrutura ROBOT.NIC do Yincorp Group: Landing Pages Serverless, SEO para IA e dupla conversão para seu WhatsApp.">
   <meta name="theme-color" content="#0b0f19">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDBT7VZPWW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TDBT7VZPWW');
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1552958819302786');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1552958819302786&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -302,7 +330,6 @@
 <header>
   <div class="container nav">
     <div class="brand-logo">
-      <!-- Nome exato do arquivo de imagem do logo salvo na pasta /100leads -->
       <img src="whatsApp Imagem 2026-09-03 at 06.04.34.jpeg" alt="ROBOT.NIC Logo">
       <div class="brand-text">
         ROBOT.NIC
@@ -432,7 +459,6 @@
 <!-- BOTÃO FLUTUANTE DO WHATSAPP COM A SUA FOTO -->
 <a href="https://wa.me/5511992976368?text=Ol%C3%A1%2C%20quero%20conhecer%20a%20infraestrutura%20ROBOT.NIC." target="_blank" class="whatsapp-widget">
   <div class="whatsapp-avatar">
-    <!-- Sua foto de perfil vinda da raiz -->
     <img src="../PERFIL.jfif" alt="Atendimento WhatsApp">
     <div class="whatsapp-status"></div>
   </div>
@@ -455,6 +481,18 @@
     const phone = document.getElementById('phone').value.trim();
     const role = document.getElementById('role').value;
 
+    // Disparo de evento de conversão para Meta Pixel e GA4
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead');
+    }
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'generate_lead', {
+        'event_category': 'Engagement',
+        'event_label': 'Formulario Robotinic'
+      });
+    }
+
+    // Disparo para a API Vercel
     fetch('/api/lead', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
