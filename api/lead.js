@@ -1,55 +1,60 @@
+import crypto from 'crypto';
+
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-  );
-
-  if (req.method === 'OPTIONS') {
-    res.status(200).end();
-    return;
-  }
-
+  // Garantir que aceita apenas requisições POST
   if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Método não permitido' });
+    return res.status(405).json({ error: 'Método não permitido' });
   }
 
   try {
-    const { nome, telefone, perfil } = req.body;
+    const { nome, telefone, perfil, origem, utms } = req.body;
 
-    // URL COMPLETA COM ASPAS DUPLAS E PROTOCOLO HTTPS
-    const PRAEDIUM_WEBHOOK_URL = "https://api.praedium.com.br/v1/12052/eff285d6-a704-11f1-b277-0affe18deec3/conversion?access_token=2e1b0a3576408d4e14780289654053fbb99ad2c023c19785d4a81658d355d77c";
+    // 1. Pegar credenciais das Variáveis de Ambiente da Vercel
+    const pixelId = process.env.META_PIXEL_ID || '1552958819302786';
+    const capiToken = process.env.META_CAPI_TOKEN;
 
-    const payload = {
-      name: nome,
-      nome: nome,
-      phone: telefone,
-      mobile_phone: telefone,
-      telefone: telefone,
-      email: "contato@yincorp.com.br",
-      origin: "Landing Page - Well Perdizes",
-      origem: "Landing Page - Well Perdizes",
-      notes: "Objetivo: " + perfil,
-      perfil: perfil,
-      created_at: new Date().toISOString()
-    };
+    // 2. Se o token da CAPI estiver configurado, envia o evento Server-Side para o Meta
+    if (capiToken) {
+      const cleanPhone = telefone ? telefone.replace(/\D/g, '') : '';
+      const cleanName = nome ? nome.toLowerCase().trim() : '';
 
-    const response = await fetch(PRAEDIUM_WEBHOOK_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(payload)
+      // Hash SHA256 exigido pelo Meta para dados de privacidade
+      const hashedPhone = cleanPhone ? crypto.createHash('sha256').update(cleanPhone).digest('hex') : undefined;
+      const hashedName = cleanName ? crypto.createHash('sha256').update(cleanName).digest('hex') : undefined;
+
+      const payload = {
+        data: [{
+          event_name: 'Lead',
+          event_time: Math.floor(Date.now() / 1000),
+          action_source: 'website',
+          user_data: {
+            fn: hashedName,
+            ph: hashedPhone
+          },
+          custom_data: {
+            content_name: 'Formulario ROBOT.NIC 100Leads',
+            profile: perfil || 'Não informado',
+            utm_source: utms?.utm_source || 'direto',
+            utm_campaign: utms?.utm_campaign || 'none'
+          }
+        }]
+      };
+
+      await fetch(`https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${capiToken}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    }
+
+    // 3. Retorno de sucesso para o site
+    return res.status(200).json({ 
+      success: true, 
+      message: 'Lead registrado com sucesso e enviado via Meta CAPI!' 
     });
 
-    const data = await response.text();
-    return res.status(200).json({ success: true, response: data });
-
   } catch (error) {
-    console.error("Erro no proxy de Lead:", error);
-    return res.status(500).json({ success: false, error: error.message });
+    console.error('Erro na API /lead:', error);
+    return res.status(500).json({ error: 'Erro interno ao processar o lead' });
   }
 }
