@@ -1,1 +1,17 @@
+User-agent: *
+Allow: /
 
+# Permitir indexação por crawlers de Inteligência Artificial
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://www.yincorp.com.br/sitemap.xml
