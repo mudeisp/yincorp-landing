@@ -36,7 +36,7 @@
       padding-bottom:85px;
     }
     a{text-decoration:none;color:inherit}
-    .container{max-width:1120px;margin:auto;padding:0 20px}
+    .container{max-width:900px;margin:auto;padding:0 20px}
 
     header{
       background:#0b0c0d;
@@ -71,14 +71,9 @@
     .nav-cta:hover{background:var(--gold);color:#111}
 
     .hero{
-      padding:80px 0 60px;
+      padding:60px 0 40px;
       background:radial-gradient(circle at 80% 20%,rgba(212,175,55,.15),transparent 45%);
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:45px;
-      align-items:center;
+      text-align:center;
     }
     .eyebrow{
       display:inline-block;
@@ -91,8 +86,8 @@
     }
     h1{
       font-family:"Playfair Display",serif;
-      font-size:clamp(32px,4vw,52px);
-      line-height:1.1;
+      font-size:clamp(32px,4vw,48px);
+      line-height:1.15;
       margin-bottom:20px;
       color:var(--white);
     }
@@ -101,7 +96,49 @@
       color:#b0b8c0;
       font-size:16px;
       margin-bottom:28px;
+      max-width:700px;
+      margin-left:auto;
+      margin-right:auto;
     }
+
+    section{padding:50px 0}
+    
+    /* BLOCOS DE VÍDEOS VERTICAIS */
+    .video-section{
+      background:var(--dark-card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:30px;
+      margin-bottom:40px;
+      box-shadow:var(--shadow);
+    }
+    .video-header{
+      text-align:center;
+      margin-bottom:20px;
+    }
+    .video-header h3{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(22px,3vw,30px);
+      color:var(--white);
+      margin-top:5px;
+    }
+    .video-wrapper{
+      position:relative;
+      width:100%;
+      max-width:400px;
+      margin:0 auto;
+      aspect-ratio:9/16;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#000;
+    }
+    .video-wrapper iframe{
+      width:100%;
+      height:100%;
+      border:0;
+    }
+
     .btn{
       display:inline-flex;
       align-items:center;
@@ -117,59 +154,12 @@
     .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111}
     .btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(212,175,55,.3)}
 
-    .hero-card{
-      background:var(--dark-card);
-      border:1px solid var(--border);
-      padding:30px;
-      border-radius:18px;
-      box-shadow:var(--shadow);
-    }
-    .hero-card h3{color:var(--white);margin-bottom:12px;font-size:20px}
-    .hero-card p{color:var(--muted);font-size:13px;margin-bottom:20px}
-    .stat-list{display:grid;gap:12px}
-    .stat-item{
-      background:#14171a;
-      padding:14px;
-      border-radius:8px;
-      border-left:3px solid var(--gold);
-    }
-    .stat-item strong{display:block;color:var(--gold2);font-size:18px}
-    .stat-item span{font-size:12px;color:var(--muted)}
-
-    section{padding:70px 0}
-    .section-title{text-align:center;margin-bottom:40px}
-    h2{
-      font-family:"Playfair Display",serif;
-      font-size:clamp(28px,3.5vw,40px);
-      color:var(--white);
-      margin-bottom:10px;
-    }
-
-    /* CARROSSEL DE VÍDEOS B2B */
-    .video-carousel{
-      display:flex;
-      gap:20px;
-      overflow-x:auto;
-      padding-bottom:15px;
-      scroll-snap-type:x mandatory;
-    }
-    .video-card{
-      flex:0 0 320px;
-      scroll-snap-align:start;
-      background:var(--dark-card);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:16px;
-    }
-    .video-card h4{color:var(--gold2);margin-bottom:8px;font-size:15px}
-    .video-card p{color:var(--muted);font-size:12px;margin-bottom:12px}
-    .video-card iframe{width:100%;aspect-ratio:9/16;border:0;border-radius:12px}
-
-    /* GRID DE DORES / BENEFÍCIOS */
+    /* GRID DE PILARES */
     .grid-3{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:20px;
+      margin-top:30px;
     }
     .card{
       background:var(--dark-card);
@@ -181,7 +171,7 @@
     .card p{color:#a0a8b0;font-size:13px;line-height:1.6}
 
     /* FORMULÁRIO */
-    .lead-section{background:#0b0c0d;border-top:1px solid var(--border)}
+    .lead-section{background:#0b0c0d;border-top:1px solid var(--border);padding:60px 0}
     .lead-wrap{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -233,8 +223,8 @@
     }
 
     @media(max-width:850px){
-      .hero-grid,.lead-wrap,.grid-3{grid-template-columns:1fr}
-      .video-card{flex-basis:82vw}
+      .lead-wrap,.grid-3{grid-template-columns:1fr}
+      .video-wrapper{max-width:100%}
     }
   </style>
 </head>
@@ -251,89 +241,88 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Robotinic • Performance Imobiliária</span>
-        <h1>Você gera 100 leads no mês, vende para 1 e <span>descarta 99?</span></h1>
-        <p class="hero-copy">
-          Chega de rasgar dinheiro com tráfego sem infraestrutura. Conheça o ecossistema Robotinic: Landing Pages Serverless, SEO para IA e captura inteligente em tempo real.
-        </p>
-        <a href="#contato" class="btn btn-gold">ESCALAR MINHA OPERAÇÃO</a>
-      </div>
-
-      <div class="hero-card">
-        <h3>O Vazamento da sua Operação:</h3>
-        <p>O que acontece quando seu site não tem infraestrutura Robotinic:</p>
-        <div class="stat-list">
-          <div class="stat-item"><strong>99% dos Leads Perdidos</strong><span>Sem fluxo de nutrição nem salvamento automático.</span></div>
-          <div class="stat-item"><strong>Descarte de Inteligência</strong><span>Seu Pixel/GA4 não aprende quem é o comprador real.</span></div>
-          <div class="stat-item"><strong>Gestão Fragmentada</strong><span>Tráfego, site e CRM que não se conversam.</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CARROSSEL DE VÍDEOS -->
-  <section id="videos">
     <div class="container">
-      <div class="section-title">
-        <span class="eyebrow">Entenda o Ecossistema</span>
-        <h2>Assista como o Robotinic funciona na prática</h2>
-      </div>
-
-      <div class="video-carousel">
-        <div class="video-card">
-          <h4>Vídeo 1: As 3 Dores</h4>
-          <p>O ralo de dinheiro no tráfego e o descarte de leads.</p>
-          <iframe src="https://www.youtube.com/embed/RCHJn8uGTp4" title="Vídeo 1" loading="lazy" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <h4>Vídeo 2: A Engenharia</h4>
-          <p>Serverless, SEO semântico para IA e Schema.org.</p>
-          <iframe src="https://www.youtube.com/embed/tIJTYxLXYTU" title="Vídeo 2" loading="lazy" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <h4>Vídeo 3: A Dupla Conversão</h4>
-          <p>Lead no CRM + WhatsApp Direct no mesmo segundo.</p>
-          <iframe src="https://www.youtube.com/embed/xUZH-58fMFw" title="Vídeo 3" loading="lazy" allowfullscreen></iframe>
-        </div>
-      </div>
+      <span class="eyebrow">Robotinic • Performance Imobiliária</span>
+      <h1>Você gera 100 leads no mês, vende para 1 e <span>descarta 99?</span></h1>
+      <p class="hero-copy">
+        Chega de rasgar dinheiro com tráfego sem infraestrutura. Assista aos vídeos abaixo e entenda como o ecossistema Robotinic transforma sua operação.
+      </p>
     </div>
   </section>
 
-  <!-- PILARES -->
+  <!-- SEÇÃO DE VÍDEOS VERTICAIS -->
   <section>
     <div class="container">
-      <div class="section-title">
-        <span class="eyebrow">A Solução Robotinic</span>
-        <h2>O que sua operação recebe em 5 dias</h2>
+
+      <!-- VÍDEO 1 -->
+      <div class="video-section">
+        <div class="video-header">
+          <span class="eyebrow">Vídeo 01</span>
+          <h3>Entenda o Ecossistema</h3>
+        </div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/x53fTIxbw1w" title="Vídeo 1 - Entenda o Ecossistema" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- VÍDEO 2 -->
+      <div class="video-section">
+        <div class="video-header">
+          <span class="eyebrow">Vídeo 02</span>
+          <h3>Assista as telas funcionando</h3>
+        </div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/O9cwqymRCMM" title="Vídeo 2 - Assista as telas funcionando" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- VÍDEO 3 -->
+      <div class="video-section">
+        <div class="video-header">
+          <span class="eyebrow">Vídeo 03</span>
+          <h3>Valores e Investimento</h3>
+        </div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/6oEwihkZhRs" title="Vídeo 3 - Valores" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PILARES TÉCNICOS -->
+  <section style="background:#0b0c0d; border-top:1px solid var(--border)">
+    <div class="container">
+      <div style="text-align:center">
+        <span class="eyebrow">Engenharia Imobiliária</span>
+        <h2 style="font-family:'Playfair Display',serif; font-size:clamp(26px,3vw,36px); color:#fff">O que sua operação recebe</h2>
       </div>
 
       <div class="grid-3">
         <div class="card">
           <h3>01. Engenharia Serverless</h3>
-          <p>Hospedagem na Vercel com carregamento em menos de 1 segundo. Nenhuma perda por lentidão no celular.</p>
+          <p>Hospedagem na Vercel com carregamento em menos de 1 segundo. Nenhuma perda de clique por lentidão no celular.</p>
         </div>
         <div class="card">
           <h3>02. Inteligência de IA & SEO</h3>
-          <p>Código Schema.org e estruturação H1/H2 para o Google e as Inteligências Artificiais encontrarem seu imóvel.</p>
+          <p>Código Schema.org e estruturação semântica para o Google e Inteligências Artificiais encontrarem suas ofertas.</p>
         </div>
         <div class="card">
           <h3>03. Dupla Conversão</h3>
-          <p>O lead preenche, é salvo na planilha/CRM automaticamente e a conversa abre na hora no seu WhatsApp.</p>
+          <p>O lead preenche o formulário, é salvo no CRM/Sheets e a conversa abre instantaneamente no seu WhatsApp.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTATO -->
+  <!-- FORMULÁRIO DE CONTATO -->
   <section class="lead-section" id="contato">
     <div class="container lead-wrap">
       <div>
         <span class="eyebrow">Próximo Passo</span>
-        <h2>Pronto para parar de descartar leads?</h2>
+        <h2 style="font-family:'Playfair Display',serif; font-size:clamp(28px,3.5vw,40px); color:#fff">Pronto para acelerar suas vendas?</h2>
         <p style="color:var(--muted);margin-top:10px">
-          Preencha os dados e receba a apresentação comercial do Robotinic diretamente no seu WhatsApp.
+          Preencha o formulário para receber o contato da nossa equipe e ativar o Robotinic na sua operação em até 5 dias.
         </p>
       </div>
 
@@ -389,7 +378,7 @@
         nome: name,
         telefone: phone,
         perfil: role,
-        origem: 'landing-yincorp-100leads'
+        origem: 'site-100leads'
       })
     }).catch(err => console.error(err));
 
