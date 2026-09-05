@@ -6,12 +6,13 @@
 
   <title>Raio-X Zona Oeste Nobre 2026 | Guia de Lançamentos Imobiliários | Yincorp Group</title>
 
-  <meta name="description" content="Confira o panorama completo de lançamentos e valorização imobiliária em Perdizes, Pompéia e Pinheiros. Análise de m², infraestrutura de bairro e projetos exclusivos da Zona Oeste Nobre.">
+  <meta name="description" content="Confira o panorama completo de lançamentos e valorização imobiliária em Perdizes, Pompéia e Pinheiros. Análise de m², infraestrutura de bairro e projetos exclusivos.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Yincorp Group">
-  <meta name="theme-color" content="#0a160d">
+  <meta name="theme-color" content="#0f1115">
 
   <link rel="canonical" href="https://www.yincorp.com.br/zona-oeste">
+  <link rel="icon" href="/LOGO.jpeg" type="image/jpeg">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -19,6 +20,7 @@
   <meta property="og:title" content="Raio-X Zona Oeste Nobre 2026 | Lançamentos Imobiliários">
   <meta property="og:description" content="Panorama de lançamentos, valorização de m² e oportunidades em Perdizes e região.">
   <meta property="og:url" content="https://www.yincorp.com.br/zona-oeste">
+  <meta property="og:image" content="https://www.yincorp.com.br/LOGO.jpeg">
   <meta property="og:site_name" content="Yincorp Group">
 
   <!-- Google Fonts -->
@@ -59,7 +61,11 @@
         "@type":"Organization",
         "@id":"https://www.yincorp.com.br/#organization",
         "name":"Yincorp Group",
-        "url":"https://www.yincorp.com.br/"
+        "url":"https://www.yincorp.com.br/",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://www.yincorp.com.br/LOGO.jpeg"
+        }
       },
       {
         "@type":"RealEstateAgent",
@@ -75,25 +81,92 @@
         "name":"Raio-X Imobiliário Zona Oeste Nobre 2026",
         "description":"Guia de lançamentos, m² e inteligência imobiliária para Perdizes, Pompéia, Pinheiros e região.",
         "isPartOf":{"@id":"https://www.yincorp.com.br/#organization"}
+      },
+      {
+        "@type":"CollectionPage",
+        "@id":"https://www.yincorp.com.br/zona-oeste#collection",
+        "url":"https://www.yincorp.com.br/zona-oeste",
+        "name":"Lançamentos imobiliários na Zona Oeste de São Paulo",
+        "about":[
+          {"@type":"Place","name":"Perdizes, São Paulo"},
+          {"@type":"Place","name":"Pompéia, São Paulo"},
+          {"@type":"Place","name":"Pinheiros, São Paulo"}
+        ]
+      },
+      {
+        "@type":"ItemList",
+        "@id":"https://www.yincorp.com.br/zona-oeste#itemlist",
+        "name":"Empreendimentos em destaque na Zona Oeste",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Well Perdizes",
+            "url":"https://www.yincorp.com.br/well-perdizes"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Lançamento Zona Oeste 02"
+          },
+          {
+            "@type":"ListItem",
+            "position":3,
+            "name":"Lançamento Zona Oeste 03"
+          },
+          {
+            "@type":"ListItem",
+            "position":4,
+            "name":"Lançamento Zona Oeste 04"
+          },
+          {
+            "@type":"ListItem",
+            "position":5,
+            "name":"Lançamento Zona Oeste 05"
+          },
+          {
+            "@type":"ListItem",
+            "position":6,
+            "name":"Lançamento Zona Oeste 06"
+          }
+        ]
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://www.yincorp.com.br/zona-oeste#breadcrumb",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Yincorp Group",
+            "item":"https://www.yincorp.com.br/"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Zona Oeste",
+            "item":"https://www.yincorp.com.br/zona-oeste"
+          }
+        ]
       }
     ]
   }
   </script>
 
   <style>
-    /* ===== TEMA PALETA VERDE NATUREZA / ÁRVORE DA VIDA ===== */
+    /* ===== TEMA PREMIUM IMOBILIÁRIO ===== */
     :root {
-      --bg-dark: #0a160d;
-      --bg-soft: #112416;
-      --card-bg: rgba(18, 38, 24, 0.75);
-      --emerald: #22c55e;
-      --emerald-glow: rgba(34, 197, 94, 0.25);
-      --gold: #d97706;
-      --gold-light: #f59e0b;
-      --gold-soft: rgba(217, 119, 6, 0.15);
-      --border-color: rgba(34, 197, 94, 0.2);
-      --text-main: #f0fdf4;
-      --text-muted: #a7f3d0;
+      --bg-dark: #0f1115;
+      --bg-soft: #171b22;
+      --card-bg: rgba(28, 34, 44, 0.88);
+      --gold: #c8a96b;
+      --gold-light: #e2c48a;
+      --gold-soft: rgba(200, 169, 107, 0.12);
+      --emerald: #8bb9a8;
+      --emerald-glow: rgba(139, 185, 168, 0.18);
+      --border-color: rgba(200, 169, 107, 0.18);
+      --text-main: #ffffff;
+      --text-muted: #b6beca;
       --green-bright: #25d366;
       --max: 1120px;
     }
@@ -109,20 +182,27 @@
     }
 
     body {
-      background-color: var(--bg-dark);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(200,169,107,.10), transparent 34%),
+        var(--bg-dark);
       color: var(--text-main);
       font-family: 'Montserrat', sans-serif;
       line-height: 1.6;
     }
 
     body::selection {
-      background: var(--emerald);
-      color: #0a160d;
+      background: var(--gold);
+      color: #111;
     }
 
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .container {
@@ -150,7 +230,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: var(--gold-light);
+      color: var(--gold);
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 1.9px;
@@ -161,8 +241,8 @@
     .eyebrow::before {
       content: "";
       width: 24px;
-      height: 2px;
-      background: var(--gold-light);
+      height: 1px;
+      background: var(--gold);
     }
 
     h2 {
@@ -170,7 +250,6 @@
       margin-bottom: 18px;
       line-height: 1.2;
       letter-spacing: -.8px;
-      color: #ffffff;
     }
 
     .section-intro {
@@ -188,7 +267,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(10, 22, 13, 0.88);
+      background: rgba(15,17,21,.92);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-color);
     }
@@ -201,53 +280,9 @@
       gap: 20px;
     }
 
-    .brand-group {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .brand-text {
-      font-size: 15px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      color: #ffffff;
-    }
-
-    .brand-text span {
-      color: var(--gold-light);
-      font-weight: 600;
-    }
-
-    .brand-divider {
-      width: 1px;
-      height: 20px;
-      background: var(--border-color);
-    }
-
-    .live-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-muted);
-      letter-spacing: 0.5px;
-    }
-
-    .live-dot {
-      width: 8px;
-      height: 8px;
-      background-color: var(--emerald);
-      border-radius: 50%;
-      box-shadow: 0 0 8px var(--emerald);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.4; }
-      100% { opacity: 1; }
+    .logo {
+      width: 118px;
+      height: auto;
     }
 
     .nav-links {
@@ -271,7 +306,7 @@
     }
 
     .nav-cta {
-      border: 1px solid var(--gold-light);
+      border: 1px solid var(--gold);
       background: var(--gold-soft);
       color: var(--gold-light);
       padding: 10px 17px;
@@ -284,25 +319,30 @@
     }
 
     .nav-cta:hover {
-      background: var(--gold-light);
-      color: #000000;
+      background: var(--gold);
+      color: #11151a;
     }
 
-    /* HERO COM ILUSTRAÇÃO ÁRVORE DA VIDA EM SVG */
+    /* HERO */
     .hero {
-      min-height: 620px;
+      min-height: 650px;
       display: flex;
       align-items: center;
       text-align: center;
       position: relative;
       overflow: hidden;
-      background-color: var(--bg-dark);
-      background-image: 
-        radial-gradient(circle at 50% 50%, rgba(10, 22, 13, 0.45) 0%, var(--bg-dark) 90%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' opacity='0.15'%3E%3Cpath fill='%2322c55e' d='M400,100 C300,100 220,150 180,220 C150,270 140,330 160,390 C180,450 220,490 260,510 C240,540 210,560 180,570 C150,580 120,580 100,600 C120,600 150,610 190,600 C230,590 270,570 300,540 C330,520 350,500 370,470 C360,520 350,580 340,650 C330,700 310,740 280,780 C320,770 360,740 380,700 C390,680 395,650 400,620 C405,650 410,680 420,700 C440,740 480,770 520,780 C490,740 470,700 460,650 C450,580 440,520 430,470 C450,500 470,520 500,540 C530,570 570,590 610,600 C650,610 680,600 700,600 C680,580 650,580 620,570 C590,560 560,540 540,510 C580,490 620,450 640,390 C660,330 650,270 620,220 C580,150 500,100 400,100 Z M400,160 C470,160 530,200 560,250 C580,290 590,340 570,380 C550,420 520,450 480,470 C470,440 460,400 450,360 C480,350 510,330 520,300 C530,270 520,240 500,220 C480,200 450,200 430,210 C420,220 410,240 410,260 C400,230 390,200 380,180 C390,170 395,165 400,160 Z M330,210 C350,200 380,200 400,220 C380,240 370,270 380,300 C390,330 420,350 450,360 C440,400 430,440 420,470 C380,450 350,420 330,380 C310,340 320,290 340,250 C350,235 340,220 330,210 Z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 550px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 680px;
+      height: 680px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -42%);
+      background: radial-gradient(circle, rgba(200,169,107,.07), transparent 68%);
+      pointer-events: none;
     }
 
     .hero > .container {
@@ -317,7 +357,6 @@
       font-weight: 900;
       letter-spacing: -1.8px;
       line-height: 1.08;
-      color: #ffffff;
     }
 
     .hero h1 span {
@@ -351,26 +390,24 @@
     }
 
     .btn-primary {
-      background: var(--emerald);
-      color: #0a160d;
-      box-shadow: 0 4px 20px var(--emerald-glow);
+      background: linear-gradient(135deg, #c8a96b, #e2c48a);
+      color: #11151a;
+      box-shadow: 0 8px 28px rgba(200,169,107,.18);
     }
 
     .btn-primary:hover {
-      background: #16a34a;
-      color: #ffffff;
       transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(200,169,107,.28);
     }
 
     .btn-secondary {
-      border: 1px solid var(--border-color);
-      color: var(--text-main);
-      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      background: rgba(15,17,21,.62);
     }
 
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: var(--gold-light);
+      background: var(--gold-soft);
       transform: translateY(-2px);
     }
 
@@ -390,40 +427,56 @@
     }
 
     .card-product {
-      background: var(--card-bg);
+      background: linear-gradient(145deg, rgba(34,39,49,.95), rgba(22,26,34,.95));
       border: 1px solid var(--border-color);
       border-radius: 14px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       transition: .25s;
-      box-shadow: 0 12px 35px rgba(0,0,0,.2);
-      backdrop-filter: blur(8px);
+      box-shadow: 0 12px 35px rgba(0,0,0,.16);
     }
 
     .card-product:hover {
-      border-color: var(--gold-light);
+      border-color: rgba(200,169,107,.48);
       transform: translateY(-4px);
-      box-shadow: 0 18px 45px rgba(0,0,0,.4);
+      box-shadow: 0 18px 45px rgba(0,0,0,.26);
     }
 
-    .card-header-box {
-      padding: 16px 20px;
-      background: rgba(10, 22, 13, 0.6);
+    .card-img {
+      height: 160px;
+      background: #0b0e12;
+      position: relative;
       border-bottom: 1px solid var(--border-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    }
+
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .78;
+    }
+
+    .card-img::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(15,17,21,.52));
+      pointer-events: none;
     }
 
     .card-tag {
-      background: var(--gold-soft);
-      border: 1px solid var(--gold-light);
+      position: absolute;
+      z-index: 2;
+      top: 12px;
+      left: 12px;
+      background: rgba(15,17,21,.84);
+      border: 1px solid var(--gold);
       color: var(--gold-light);
       font-size: 9px;
       font-weight: 800;
       padding: 5px 9px;
-      border-radius: 20px;
+      border-radius: 4px;
       letter-spacing: .7px;
     }
 
@@ -438,7 +491,6 @@
     .card-body h3 {
       font-size: 18px;
       margin-bottom: 8px;
-      color: #ffffff;
     }
 
     .card-body p {
@@ -449,13 +501,12 @@
 
     /* MARKET SIDEBAR */
     .news-sidebar {
-      background: var(--card-bg);
+      background: linear-gradient(145deg, rgba(34,39,49,.95), rgba(22,26,34,.95));
       border: 1px solid var(--border-color);
       border-radius: 14px;
       padding: 22px;
       height: fit-content;
-      box-shadow: 0 12px 35px rgba(0,0,0,.2);
-      backdrop-filter: blur(8px);
+      box-shadow: 0 12px 35px rgba(0,0,0,.16);
     }
 
     .news-header {
@@ -466,8 +517,9 @@
     }
 
     .news-tag {
-      background: #ef4444;
-      color: #ffffff;
+      background: var(--gold-soft);
+      border: 1px solid var(--border-color);
+      color: var(--gold-light);
       font-size: 9px;
       font-weight: 800;
       padding: 3px 7px;
@@ -476,11 +528,10 @@
     }
 
     .news-body h5 {
-      color: var(--emerald);
+      color: var(--gold-light);
       font-size: 14px;
       margin-bottom: 8px;
       line-height: 1.35;
-      font-weight: 800;
     }
 
     .news-body p {
@@ -492,7 +543,7 @@
     .news-link {
       display: block;
       margin-top: 15px;
-      color: var(--emerald);
+      color: var(--gold-light);
       font-size: 11px;
       font-weight: 800;
     }
@@ -501,12 +552,11 @@
     .form-box {
       max-width: 650px;
       margin: 0 auto;
-      background: var(--card-bg);
+      background: linear-gradient(145deg, rgba(34,39,49,.95), rgba(22,26,34,.95));
       border: 1px solid var(--border-color);
       border-radius: 18px;
       padding: 35px;
-      box-shadow: 0 20px 55px rgba(0,0,0,.3);
-      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 55px rgba(0,0,0,.22);
     }
 
     .form-group {
@@ -525,9 +575,9 @@
     .form-group select {
       width: 100%;
       height: 50px;
-      border: 1px solid var(--border-color);
+      border: 1px solid #2a3340;
       border-radius: 8px;
-      background: rgba(10, 22, 13, 0.8);
+      background: #121821;
       color: var(--text-main);
       padding: 0 15px;
       font-family: inherit;
@@ -536,14 +586,13 @@
     }
 
     .form-group input::placeholder {
-      color: #5c7a67;
+      color: #737d89;
     }
 
     .form-group input:focus,
     .form-group select:focus {
-      border-color: var(--emerald);
-      background: var(--bg-dark);
-      box-shadow: 0 0 0 3px var(--emerald-glow);
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(200,169,107,.08);
     }
 
     /* WHATSAPP */
@@ -593,10 +642,6 @@
       .hero {
         min-height: 580px;
       }
-
-      .brand-divider {
-        display: none;
-      }
     }
 
     @media (max-width: 560px) {
@@ -633,16 +678,9 @@
   <!-- HEADER -->
   <header>
     <div class="container nav">
-      <div class="brand-group">
-        <a href="#top" class="brand-text">
-          YINCORP <span>GROUP</span>
-        </a>
-        <div class="brand-divider"></div>
-        <div class="live-badge">
-          <span class="live-dot"></span>
-          ZONA OESTE NOBRE 2026
-        </div>
-      </div>
+      <a href="#top" aria-label="Yincorp Group">
+        <img src="/LOGO.jpeg" alt="Yincorp Group" class="logo">
+      </a>
 
       <nav aria-label="Navegação principal">
         <ul class="nav-links">
@@ -665,11 +703,11 @@
 
         <h1>
           Panorama de Lançamentos
-          <span>Zona Oeste Nobre 2026</span>
+          <span>Zona Oeste SP 2026</span>
         </h1>
 
         <p class="hero-subtitle">
-          Análise de valorização do m², infraestrutura verde e raio-X completo dos empreendimentos mais desejados de
+          Análise de valorização do m², infraestrutura de mobilidade e raio-X completo dos empreendimentos mais desejados de
           <strong>Perdizes, Pompéia e Pinheiros</strong>.
         </p>
 
@@ -681,7 +719,7 @@
     </section>
 
     <!-- LANÇAMENTOS -->
-    <section class="section" id="produtos" style="background: var(--bg-soft);">
+    <section class="section" id="produtos">
       <div class="container">
 
         <div class="main-grid">
@@ -698,16 +736,16 @@
 
               <!-- 01 -->
               <article class="card-product">
-                <div class="card-header-box">
+                <div class="card-img">
                   <span class="card-tag">PERDIZES</span>
-                  <span style="font-size:11px;font-weight:700;color:var(--text-muted);">RUA CARDOSO DE ALMEIDA</span>
+                  <img src="/LOGO.jpeg" alt="Well Perdizes">
                 </div>
 
                 <div class="card-body">
                   <div>
                     <h3>Well Perdizes</h3>
                     <p>
-                      Studios e apartamentos de 1 e 2 dormitórios no coração de Perdizes. Lazer completo no rooftop e altíssimo potencial de rentabilidade.
+                      Studios e apartamentos de 1 e 2 dormitórios na Rua Cardoso de Almeida, em Perdizes.
                     </p>
                   </div>
 
@@ -723,9 +761,9 @@
 
               <!-- 02 -->
               <article class="card-product">
-                <div class="card-header-box">
-                  <span class="card-tag">ZONA OESTE NOBRE</span>
-                  <span style="font-size:11px;font-weight:700;color:var(--text-muted);">EM BREVE</span>
+                <div class="card-img">
+                  <span class="card-tag">ZONA OESTE</span>
+                  <img src="/LOGO.jpeg" alt="Lançamento imobiliário Zona Oeste 02">
                 </div>
 
                 <div class="card-body">
@@ -744,16 +782,16 @@
 
               <!-- 03 -->
               <article class="card-product">
-                <div class="card-header-box">
+                <div class="card-img">
                   <span class="card-tag">POMPÉIA</span>
-                  <span style="font-size:11px;font-weight:700;color:var(--text-muted);">EM BREVE</span>
+                  <img src="/LOGO.jpeg" alt="Lançamento imobiliário Zona Oeste 03">
                 </div>
 
                 <div class="card-body">
                   <div>
                     <h3>Lançamento Zona Oeste 03</h3>
                     <p>
-                      Projeto em análise dentro do eixo residencial e de mobilidade da Zona Oeste Nobre.
+                      Projeto em análise dentro do eixo residencial e de mobilidade da Zona Oeste.
                     </p>
                   </div>
 
@@ -765,9 +803,9 @@
 
               <!-- 04 -->
               <article class="card-product">
-                <div class="card-header-box">
+                <div class="card-img">
                   <span class="card-tag">PINHEIROS</span>
-                  <span style="font-size:11px;font-weight:700;color:var(--text-muted);">EM BREVE</span>
+                  <img src="/LOGO.jpeg" alt="Lançamento imobiliário Zona Oeste 04">
                 </div>
 
                 <div class="card-body">
@@ -786,9 +824,9 @@
 
               <!-- 05 -->
               <article class="card-product">
-                <div class="card-header-box">
-                  <span class="card-tag">ZONA OESTE NOBRE</span>
-                  <span style="font-size:11px;font-weight:700;color:var(--text-muted);">EM BREVE</span>
+                <div class="card-img">
+                  <span class="card-tag">ZONA OESTE</span>
+                  <img src="/LOGO.jpeg" alt="Lançamento imobiliário Zona Oeste 05">
                 </div>
 
                 <div class="card-body">
@@ -805,27 +843,23 @@
                 </div>
               </article>
 
-              <!-- 06 - B2B -->
+              <!-- 06 -->
               <article class="card-product">
-                <div class="card-header-box">
-                  <span class="card-tag" style="color:var(--emerald);border-color:var(--emerald);">B2B • TECNOLOGIA</span>
-                  <span style="font-size:11px;font-weight:700;color:var(--text-muted);">INFRAESTRUTURA</span>
+                <div class="card-img">
+                  <span class="card-tag">ZONA OESTE</span>
+                  <img src="/LOGO.jpeg" alt="Lançamento imobiliário Zona Oeste 06">
                 </div>
 
                 <div class="card-body">
                   <div>
-                    <h3>ROBOT.NIC 100Leads</h3>
+                    <h3>Lançamento Zona Oeste 06</h3>
                     <p>
-                      Infraestrutura serverless para corretores e imobiliárias não perderem leads de tráfego pago.
+                      Projeto selecionado para completar o raio-X dos principais eixos da região.
                     </p>
                   </div>
 
-                  <a href="https://www.yincorp.com.br/100leads"
-                     target="_blank"
-                     rel="noopener"
-                     class="btn btn-secondary"
-                     style="font-size:11px;min-height:42px;">
-                    VER INFRAESTRUTURA →
+                  <a href="#contato" class="btn btn-secondary" style="font-size:11px;min-height:42px;">
+                    RECEBER INFORMAÇÕES →
                   </a>
                 </div>
               </article>
@@ -836,8 +870,8 @@
           <!-- MERCADO -->
           <aside class="news-sidebar" id="mercado">
             <div class="news-header">
-              <span class="news-tag">INFOMONEY</span>
-              <h4 style="font-size:13px;color:#fff;font-weight:800;">Mercado Imobiliário</h4>
+              <span class="news-tag">MERCADO</span>
+              <h4 style="font-size:13px;color:#fff;">Mercado Imobiliário</h4>
             </div>
 
             <div id="newsContent" class="news-body">
@@ -852,7 +886,7 @@
               target="_blank"
               rel="noopener"
               class="news-link">
-              Ler no InfoMoney →
+              Acompanhar mercado →
             </a>
           </aside>
 
@@ -869,7 +903,7 @@
             <div class="eyebrow">ACESSO AO RAIO-X</div>
 
             <h2 style="font-size:26px;">
-              Receber Relatório Zona Oeste Nobre
+              Receber Relatório da Zona Oeste
             </h2>
 
             <p style="color:var(--text-muted);font-size:13px;margin-bottom:25px;">
@@ -911,7 +945,7 @@
 
   <!-- WHATSAPP -->
   <a
-    href="https://wa.me/5511992976368?text=Ol%C3%A1!%20Vim%20pelo%20Portal%20Zona%20Oeste%20Nobre."
+    href="https://wa.me/5511992976368?text=Ol%C3%A1!%20Vim%20pelo%20Portal%20Zona%20Oeste."
     class="whatsapp"
     target="_blank"
     rel="noopener"
@@ -921,7 +955,7 @@
 
   <footer>
     <div class="container">
-      © 2026 Yincorp Group · Inteligência Imobiliária · Zona Oeste Nobre de São Paulo
+      © 2026 Yincorp Group · Inteligência Imobiliária · Zona Oeste de São Paulo
     </div>
   </footer>
 
@@ -967,7 +1001,7 @@
 
       if (typeof fbq !== 'undefined') {
         fbq('track', 'Lead', {
-          content_name: 'Guia Zona Oeste Nobre',
+          content_name: 'Guia Zona Oeste',
           content_category: role
         });
       }
@@ -996,7 +1030,7 @@
       } catch (err) {}
 
       const msg =
-        `Olá! Meu nome é ${name}. Acessei o Portal da Zona Oeste Nobre (${role}) e gostaria de receber o relatório.`;
+        `Olá! Meu nome é ${name}. Acessei o Portal da Zona Oeste (${role}) e gostaria de receber o relatório.`;
 
       window.location.href =
         `https://wa.me/5511992976368?text=${encodeURIComponent(msg)}`;
