@@ -3,322 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Well Perdizes — 1 e 2 Dormitórios, 2 Suítes e Studios com Sky Bar no Rooftop (25º andar), Piscina com Raia de 25m e Fitness de 200 m².">
-<title>Well Perdizes | Yincorp</title>
-<style>
-:root{--ink:#0f1c24;--green:#1d3935;--cream:#f6f4ee;--sand:#d7c9b7;--gold:#c2a26f;--white:#fff;--line:rgba(23,36,37,.12)}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.5}
-a{color:inherit;text-decoration:none}
-img{display:block;width:100%;height:100%;object-fit:cover}
-.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
-.top{position:absolute;z-index:10;top:0;left:0;width:100%;color:#fff;border-bottom:1px solid rgba(255,255,255,.2)}
-.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{font-size:24px;letter-spacing:2px;font-weight:700}
-.brand small{display:block;font-size:9px;letter-spacing:3px;font-weight:400;margin-top:-2px;color:var(--gold)}
-.navlinks{display:flex;gap:24px;font-size:11px;letter-spacing:1.2px;text-transform:uppercase}
-.navlinks a:hover{color:var(--gold)}
-.menu{display:none;border:0;background:none;color:#fff;font-size:26px;cursor:pointer}
-.hero{min-height:760px;color:#fff;display:flex;align-items:flex-end;position:relative;background:linear-gradient(90deg,rgba(15,28,36,.88),rgba(15,28,36,.4)),url("assets/images/AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0002.jpg") center/cover}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,28,36,.55),transparent 45%)}
-.hero-content{position:relative;z-index:1;padding:180px 0 80px;max-width:720px}
-.eyebrow,.tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
-.eyebrow{color:var(--gold);margin:0 0 18px}
-.hero h1{font-family:Georgia,serif;font-size:clamp(38px,6vw,72px);font-weight:400;line-height:1.02;letter-spacing:-2px;margin:0}
-.hero h1 em{font-style:italic;color:var(--gold)}
-.hero p{font-size:18px;max-width:540px;margin:24px 0 32px;color:#e1e7e5}
-.button{display:inline-flex;justify-content:center;align-items:center;min-height:50px;padding:0 28px;background:var(--gold);color:var(--ink);font-size:11px;letter-spacing:1.3px;font-weight:700;text-transform:uppercase;transition:.2s;border:none;cursor:pointer}
-.button:hover{background:#fff;transform:translateY(-2px)}
-.intro{background:var(--green);padding:50px 0;color:#fff}
-.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.info{border-left:1px solid rgba(255,255,255,.3);padding-left:18px}
-.info b{font-family:Georgia,serif;font-size:22px;font-weight:400;display:block;color:var(--gold);margin-bottom:4px}
-.info span{font-size:12px;color:#cfd8d5}
-.section{padding:100px 0}
-.section-head{max-width:720px;margin-bottom:48px}
-.tag{color:var(--gold);margin:0 0 12px}
-.section h2{font-family:Georgia,serif;font-size:clamp(32px,4.5vw,50px);line-height:1.05;letter-spacing:-1.5px;font-weight:400;margin:0}
-.section-head>p:last-child{font-size:16px;max-width:580px;margin:18px 0 0;color:#556360}
-.living{display:grid;grid-template-columns:1fr 1fr;background:#eae4d9;border-radius:4px;overflow:hidden}
-.living-photo{background:url("AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0005.jpg") center/cover;min-height:460px}
-.living-copy{padding:60px clamp(24px,5vw,70px);display:flex;flex-direction:column;justify-content:center}
-.living-copy p{color:#556360;font-size:15px}
-.categories{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
-.category h4{margin:0 0 10px;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--green)}
-.features{margin:0;padding:0;list-style:none}
-.features li{border-top:1px solid var(--line);padding:8px 0;font-size:12px;color:#2c3a38}
-.plantas-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.planta-card{background:#fff;border-radius:4px;overflow:hidden;border:1px solid rgba(0,0,0,.08);display:flex;flex-direction:column}
-.planta-card img{height:340px;background:#0d1e2b;object-fit:contain;padding:12px}
-.planta-info{padding:24px}
-.planta-info h3{margin:0 0 8px;font-family:Georgia,serif;font-size:24px;color:var(--ink)}
-.planta-info p{margin:0;color:#556360;font-size:14px}
-.gallery-section{background:#e8e4da}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));grid-auto-rows:230px;gap:16px}
-.gallery-item{overflow:hidden;position:relative;cursor:pointer;background:#cfc9be;border-radius:3px}
-.gallery-item:after{content:attr(data-title);position:absolute;inset:auto 0 0;padding:25px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font-size:11px;letter-spacing:1px;text-transform:uppercase;opacity:0;transition:.25s}
-.gallery-item:hover:after{opacity:1}
-.gallery-item img{transition:.4s}
-.gallery-item:hover img{transform:scale(1.05)}
-.location{background:var(--ink);color:#fff}
-.location-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
-.location p{color:#b6c2be;font-size:16px}
-.loc-categories{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
-.loc-col h4{margin:0 0 10px;font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:1px}
-.points{margin:0;padding:0;list-style:none}
-.points li{display:flex;justify-content:space-between;padding:8px 0;border-top:1px solid rgba(255,255,255,.12);font-size:12px;color:#d8e0dd}
-.points li span{color:var(--gold)}
-.map-photo{border-radius:4px;overflow:hidden;min-height:420px;background:url("AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0003.jpg") center/cover}
-.contact{background:#dfd6c7;padding:90px 0}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.form{display:grid;gap:14px}
-.field{border:0;border-bottom:1px solid rgba(23,36,37,.35);background:transparent;padding:14px 0;color:var(--ink);outline:0;font-size:14px}
-.field::placeholder{color:#6c7a76}
-.check{font-size:11px;display:flex;align-items:flex-start;gap:8px;margin:6px 0;cursor:pointer;color:#495652}
-.footer{background:#0a1318;color:#9aa7a3;padding:28px 0;font-size:11px}
-.footer .wrap{display:flex;justify-content:space-between;gap:20px}
-.lightbox{position:fixed;z-index:20;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:24px}
-.lightbox.open{display:flex}
-.lightbox img{max-width:min(100%,1100px);max-height:88vh;width:auto;height:auto;object-fit:contain}
-.close{position:absolute;top:20px;right:25px;background:none;border:0;color:#fff;font-size:36px;cursor:pointer}
-@media(max-width:760px){
-.wrap{width:min(100% - 32px,1180px)}
-.nav{height:68px}
-.navlinks{display:none}
-.menu{display:block}
-.navlinks.open{display:flex;position:absolute;top:68px;left:0;right:0;background:var(--ink);flex-direction:column;padding:25px 20px;gap:19px}
-.hero{min-height:680px}
-.hero-content{padding:150px 0 70px}
-.info-grid{grid-template-columns:1fr 1fr;gap:24px 12px}
-.section{padding:70px 0}
-.living,.plantas-grid,.location-grid,.contact-grid{grid-template-columns:1fr;gap:35px}
-.living-copy{padding:40px 24px}
-.categories,.loc-categories{grid-template-columns:1fr}
-.gallery{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));grid-auto-rows:140px;gap:8px}
-.footer .wrap{flex-direction:column}
-.section-head{margin-bottom:30px}
+<title>Well Perdizes | Studios e Apartamentos de Alto Padrão em Perdizes</title>
+<meta name="description" content="Well Perdizes: studios e apartamentos de 1 e 2 dormitórios em Perdizes, São Paulo. Rooftop, sky bar e plantas de 34 a 37m². Conheça o lançamento.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Well Perdizes | Alto Padrão em Perdizes">
+<meta property="og:description" content="Studios e apartamentos de 1 e 2 dormitórios com rooftop e sky bar em Perdizes, São Paulo.">
+<meta property="og:url" content="https://www.yincorp.com.br/well-perdizes">
+<meta property="og:image" content="https://www.yincorp.com.br/well-perdizes/assets/images/fachada.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Residence",
+"name": "Well Perdizes",
+"description": "Studios e apartamentos de 1 e 2 dormitórios com rooftop e sky bar em Perdizes, São Paulo.",
+"url": "https://www.yincorp.com.br/well-perdizes",
+"image": "https://www.yincorp.com.br/well-perdizes/assets/images/fachada.jpg",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Perdizes",
+"addressRegion": "SP",
+"addressCountry": "BR"
 }
+}
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GT-T9L6Z3XD');</script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2W11SX5VV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y2W11SX5VV');
+</script>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1847735489548242');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1847735489548242&ev=PageView&noscript=1"/></noscript>
+
+<style>
+:root { --verde: #1a3c34; --dourado: #c9a24b; --claro: #f7f5f0; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Helvetica Neue', Arial, sans-serif; color:#222; background:var(--claro); }
+h1,h2,h3 { font-family: Georgia, serif; color:var(--verde); }
+.hero { min-height:90vh; background:linear-gradient(rgba(26,60,52,.6),rgba(26,60,52,.6)), url('https://www.yincorp.com.br/well-perdizes/assets/images/fachada.jpg') center/cover; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:#fff; padding:2rem; }
+.hero h1 { color:#fff; font-size:3rem; margin-bottom:1rem; }
+.hero span { color:var(--dourado); letter-spacing:2px; }
+.btn { display:inline-block; background:var(--dourado); color:var(--verde); padding:.9rem 2rem; border-radius:4px; text-decoration:none; font-weight:bold; margin-top:1.5rem; border:none; cursor:pointer; }
+section { padding:4rem 1.5rem; max-width:1100px; margin:auto; }
+.form-box { background:var(--verde); color:#fff; padding:2.5rem; border-radius:8px; max-width:500px; margin:auto; }
+.form-box h2 { color:#fff; margin-bottom:1.5rem; }
+.form-box input { width:100%; padding:.8rem; margin-bottom:1rem; border:none; border-radius:4px; }
+.wa-float { position:fixed; bottom:20px; right:20px; background:#25d366; color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,.3); z-index:999; }
 </style>
 </head>
 <body>
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-T9L6Z3XD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header class="top">
-<div class="wrap nav">
-<a class="brand" href="#inicio">WELL<small>PERDIZES</small></a>
-<nav class="navlinks" id="navlinks">
-<a href="#empreendimento">O Empreendimento</a>
-<a href="#lazer">Lazer</a>
-<a href="#plantas">Plantas</a>
-<a href="#galeria">Galeria</a>
-<a href="#localizacao">Localização</a>
-<a href="#contato">Contato</a>
-</nav>
-<button class="menu" id="menu" aria-label="Abrir menu">☰</button>
-</div>
+<header class="hero">
+<span>PERDIZES · SÃO PAULO</span>
+<h1>Well Perdizes</h1>
+<p>Studios e apartamentos de 1 e 2 dormitórios · Rooftop e Sky Bar</p>
+<a href="#contato" class="btn">Quero conhecer</a>
 </header>
 
-<main>
-<section class="hero" id="inicio">
-<div class="wrap hero-content">
-<p class="eyebrow">Yincorp traz esse novo lançamento em Perdizes</p>
-<h1>Sua vida mudou, seu endereço <em>acompanhou</em>.</h1>
-<p>1 e 2 Dormitórios, 2 Suítes e Studios com Sky Bar no Rooftop no 25º andar, Piscina com Raia de 25m e Fitness com 200 m².</p>
-<a class="button" href="#contato">Receber Informações</a>
-</div>
-</section>
-
-<section class="intro">
-<div class="wrap info-grid">
-<div class="info"><b>Rooftop</b><span>Sky Bar no 25º andar</span></div>
-<div class="info"><b>Raia 25m</b><span>Piscina e Solarium</span></div>
-<div class="info"><b>200 m²</b><span>Fitness Center completo</span></div>
-<div class="info"><b>500m</b><span>Do Parque da Água Branca</span></div>
-</div>
-</section>
-
-<section class="section" id="empreendimento">
-<div class="wrap">
-<div class="section-head">
-<p class="tag">O Empreendimento</p>
-<h2>Alguns endereços acompanham a cidade, outros acompanham você.</h2>
-<p>Projetado para quem busca equilíbrio, comodidade e sofisticação no coração de Perdizes.</p>
-</div>
-<div class="living" id="lazer">
-<div class="living-photo"></div>
-<div class="living-copy">
-<p class="tag">Lazer Completo & Exclusivo</p>
-<h2>Experiências completas em todos os andares.</h2>
-<p>Ambientes pensados para momentos de descanso, trabalho e celebração.</p>
-<div class="categories">
-<div class="category">
-<h4>Lazer & Cobertura</h4>
-<ul class="features">
-<li>Sky Bar no 25º andar</li>
-<li>2 Churrasqueiras no Rooftop</li>
-<li>Deck Pôr do Sol</li>
-<li>Piscina com Raia de 25m</li>
-<li>Quadra de Beach Sports</li>
-<li>Praça do Fogo</li>
-</ul>
-</div>
-<div class="category">
-<h4>Conveniência</h4>
-<ul class="features">
-<li>Fitness com 200 m²</li>
-<li>Coworking integrado</li>
-<li>Salão de Festas & Gourmet</li>
-<li>Pet Place & Pet Care</li>
-<li>Brinquedoteca & Playground</li>
-<li>Lavanderia e Minimercado</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="section" id="plantas" style="background:#f0ece3;">
-<div class="wrap">
-<div class="section-head">
-<p class="tag">Plantas Inteligentes</p>
-<h2>Espaços projetados para o seu bem-estar.</h2>
-<p>Opções de 1 e 2 dormitórios, 2 suítes e studios com plantas modernas e funcionais.</p>
-</div>
-<div class="plantas-grid">
-<div class="planta-card">
-<img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0030.jpg" alt="Planta Space 34m²" loading="lazy">
-<div class="planta-info">
-<h3>Planta Space — 34 m²</h3>
-<p>2 dormitórios com varanda integrada, living otimizado e máximo aproveitamento de cada metro quadrado.</p>
-</div>
-</div>
-<div class="planta-card">
-<img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0031.jpg" alt="Planta Max 37m²" loading="lazy">
-<div class="planta-info">
-<h3>Planta Max — 37 m²</h3>
-<p>2 dormitórios ou opção de living ampliado, ideal para quem prioriza conforto e praticidade.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="section gallery-section" id="galeria">
-<div class="wrap">
-<div class="section-head">
-<p class="tag">Galeria de Imagens</p>
-<h2>Conheça os detalhes do Well Perdizes.</h2>
-<p>Clique em qualquer imagem para ampliar e navegar pelas perspectivas do projeto.</p>
-</div>
-<div class="gallery">
-<div class="gallery-item" data-title="Fachada e Chegada"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0002.jpg" alt="Fachada Well Perdizes" loading="lazy"></div>
-<div class="gallery-item" data-title="Localização e Entorno"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0003.jpg" alt="Entorno Well Perdizes" loading="lazy"></div>
-<div class="gallery-item" data-title="Conceito Arquitetônico"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0004.jpg" alt="Conceito Arquitetônico" loading="lazy"></div>
-<div class="gallery-item" data-title="Hall de Entrada"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0005.jpg" alt="Hall Social" loading="lazy"></div>
-<div class="gallery-item" data-title="Áreas Sociais"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0006.jpg" alt="Áreas Sociais" loading="lazy"></div>
-<div class="gallery-item" data-title="Living Integrado"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0007.jpg" alt="Living" loading="lazy"></div>
-<div class="gallery-item" data-title="Varanda & Estar"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0008.jpg" alt="Varanda" loading="lazy"></div>
-<div class="gallery-item" data-title="Suíte Master"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0009.jpg" alt="Suíte" loading="lazy"></div>
-<div class="gallery-item" data-title="Dormitório"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0010.jpg" alt="Dormitório" loading="lazy"></div>
-<div class="gallery-item" data-title="Lazer & Sky Bar (25º Andar)"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0011.jpg" alt="Sky Bar Rooftop" loading="lazy"></div>
-<div class="gallery-item" data-title="Planta Space 34m²"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0012.jpg" alt="Planta Space" loading="lazy"></div>
-<div class="gallery-item" data-title="Planta Max 37m²"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0013.jpg" alt="Planta Max" loading="lazy"></div>
-<div class="gallery-item" data-title="Implantação Geral"><img src="AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0014.jpg" alt="Implantação" loading="lazy"></div>
-</div>
-</div>
-</section>
-
-<section class="section location" id="localizacao">
-<div class="wrap location-grid">
-<div>
-<p class="tag">Localização Privilegiada</p>
-<h2>Perdizes tem tudo a ver com você.</h2>
-<p>Um dos bairros mais valorizados de São Paulo, cercado por gastronomia, parques, faculdades e com fácil acesso a tudo.</p>
-<div class="loc-categories">
-<div class="loc-col">
-<h4>Mobilidade & Lazer</h4>
-<ul class="points">
-<li>Futura Estação PUC-Cardoso <span>750 m</span></li>
-<li>Estação Marechal Deodoro <span>1,2 km</span></li>
-<li>Terminal Barra Funda <span>1,3 km</span></li>
-<li>Parque da Água Branca <span>550 m</span></li>
-<li>Memorial da América Latina <span>900 m</span></li>
-<li>Bourbon Shopping <span>2,1 km</span></li>
-</ul>
-</div>
-<div class="loc-col">
-<h4>Educação & Serviços</h4>
-<ul class="points">
-<li>Colégio Santa Marcelina <span>300 m</span></li>
-<li>PUC-SP <span>800 m</span></li>
-<li>Hospital Samaritano <span>850 m</span></li>
-<li>Sacolão Perdizes <span>20 m</span></li>
-<li>Veridiana Pizzaria <span>200 m</span></li>
-<li>Pão de Açúcar <span>300 m</span></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="map-photo" aria-label="Mapa de Localização Well Perdizes"></div>
-</div>
-</section>
-
-<section class="contact" id="contato">
-<div class="wrap contact-grid">
-<div>
-<p class="tag">Atendimento Exclusivo</p>
-<h2>O seu próximo capítulo começa aqui.</h2>
-<p>Preencha os campos ao lado para receber a tabela de valores, book digital completo e condições especiais de lançamento.</p>
-</div>
-<form class="form"id="form">
-<input class="field" type="text" placeholder="Seu nome" required>
-<input class="field" type="email" placeholder="Seu e-mail" required>
-<input class="field" type="tel" placeholder="Seu telefone / WhatsApp" required>
-<label class="check"><input type="checkbox" required>Autorizo o contato para receber informações e novidades sobre o Well Perdizes.</label>
-<button class="button" type="submit">Quero receber informações</button>
+<section id="contato">
+<div class="form-box">
+<h2>Fale com um consultor</h2>
+<form id="leadForm">
+<input type="text" id="nome" name="nome" placeholder="Nome" required>
+<input type="email" id="email" name="email" placeholder="E-mail" required>
+<input type="tel" id="telefone" name="telefone" placeholder="Telefone com DDD" required>
+<button type="submit" class="btn">Enviar</button>
 </form>
 </div>
 </section>
-</main>
 
-<footer class="footer">
-<div class="wrap">
-<span>© 2026 Well Perdizes — Yincorp. Todos os direitos reservados.</span>
-<span>Imagens meramente ilustrativas sujeitas a alteração sem aviso prévio.</span>
-</div>
-</footer>
-
-<div class="lightbox" id="lightbox">
-<button class="close" aria-label="Fechar visualização">×</button>
-<img src="" alt="Imagem ampliada Well Perdizes">
-</div>
+<a href="https://wa.me/5511992976368" class="wa-float" target="_blank" aria-label="WhatsApp">&#128172;</a>
 
 <script>
-const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
-menu.onclick=()=>links.classList.toggle('open');
-document.querySelectorAll('.navlinks a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+document.getElementById('leadForm').addEventListener('submit', function(e){
+e.preventDefault();
+var nome = document.getElementById('nome').value;
+var email = document.getElementById('email').value;
+var telefone = document.getElementById('telefone').value;
 
-const box=document.getElementById('lightbox'),boxImg=box.querySelector('img');
-document.querySelectorAll('.gallery-item img, .planta-card img').forEach(img=>{
-img.onclick=()=>{
-boxImg.src=img.src;
-boxImg.alt=img.alt;
-box.classList.add('open');
-};
+fetch('https://api.praedium.com.br/v1/12052/eff285d6-a704-11f1-b277-0affe18deec3/conversion?access_token=2e1b0a3576408d4e14780289654053fbb99ad2c023c19785d4a81658d355d77c', {
+method: 'POST',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ nome: nome, email: email, telefone: telefone })
 });
 
-box.onclick=e=>{
-if(e.target===box||e.target.classList.contains('close')){
-box.classList.remove('open');
-}
-};
+if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+if (typeof gtag !== 'undefined') gtag('event', 'generate_lead');
 
-document.getElementById('form').onsubmit=e=>{
-e.preventDefault();
-alert('Recebemos seus dados com sucesso. Em breve nossa equipe entrará em contato com a apresentação completa.');
-};
+var msg = encodeURIComponent('Olá! Meu nome é ' + nome + ' e tenho interesse no Well Perdizes. E-mail: ' + email + ' · Telefone: ' + telefone);
+window.open('https://wa.me/5511992976368?text=' + msg, '_blank');
+});
 </script>
 </body>
 </html>
