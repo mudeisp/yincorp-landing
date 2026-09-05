@@ -1,82 +1,27 @@
-html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Well Perdizes | Studios e apartamentos em Perdizes</title>
-
-  <meta name="description" content="Conheça o Well Perdizes: studios e apartamentos de 1 e 2 dormitórios, com plantas de 34 a 37 m², rooftop e Sky Bar em Perdizes, São Paulo.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.yincorp.com.br/well-perdizes">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Well Perdizes | Studios e apartamentos em Perdizes">
-  <meta property="og:description" content="Studios e apartamentos de 1 e 2 dormitórios, com rooftop e Sky Bar em Perdizes, São Paulo.">
-  <meta property="og:url" content="https://www.yincorp.com.br/well-perdizes">
-  <meta property="og:image" content="https://www.yincorp.com.br/well-perdizes/assets/images/fachada.jpg">
-  <meta property="og:locale" content="pt_BR">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#3d3222">
-
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){
-      w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),
-      dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GT-T9L6Z3XD');
-  </script>
-
-  <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {
-      if(f.fbq)return;
-      n=f.fbq=function(){
-        n.callMethod ?
-        n.callMethod.apply(n,arguments) :
-        n.queue.push(arguments)
-      };
-      if(!f._fbq)f._fbq=n;
-      n.push=n;
-      n.loaded=!0;
-      n.version='2.0';
-      n.queue=[];
-      t=b.createElement(e);
-      t.async=!0;
-      t.src=v;
-      s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)
-    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-
-    fbq('init', '1847735489548242');
-    fbq('track', 'PageView');
-  </script>
+  <meta name="description" content="Well Perdizes: studios, apartamentos de 1 e 2 dormitórios, lazer completo e rooftop.">
+  <title>Well Perdizes | Seu novo endereço</title>
 
   <style>
     :root {
-      --marrom: #3d3222;
-      --dourado: #c2a878;
-      --creme: #f4efe6;
+      --azul: #071d3a;
+      --azul-2: #0d3158;
+      --amarelo: #f4d44d;
+      --bege: #f4f0e8;
       --branco: #ffffff;
-      --texto: #222222;
-      --verde-whatsapp: #25d366;
-      --erro: #b42318;
-      --sucesso: #16794c;
+      --texto: #172231;
+      --cinza: #66717d;
+      --borda: rgba(255, 255, 255, .22);
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -84,10 +29,10 @@ html
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bege);
       color: var(--texto);
-      background: var(--creme);
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
     }
 
     img {
@@ -97,826 +42,866 @@ html
 
     a {
       color: inherit;
+      text-decoration: none;
     }
 
-    h1,
-    h2,
-    h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--marrom);
-      line-height: 1.2;
-    }
-
-    section {
-      width: min(1100px, calc(100% - 32px));
+    .container {
+      width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 72px 0;
     }
 
     .topbar {
-      background: var(--marrom);
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px 0;
+    }
+
+    .topbar-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--amarelo);
+      font-size: 30px;
+      font-weight: 900;
+      line-height: .85;
+      letter-spacing: -2px;
+    }
+
+    .logo small {
+      margin-top: 7px;
+      padding: 4px 10px;
+      background: var(--amarelo);
+      color: var(--azul);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 24px;
       color: var(--branco);
-      text-align: center;
-      padding: 10px 16px;
       font-size: 13px;
+      font-weight: 700;
+    }
+
+    .menu a:hover {
+      color: var(--amarelo);
     }
 
     .hero {
-      min-height: 680px;
+      min-height: 720px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-      text-align: center;
+      position: relative;
+      overflow: hidden;
       color: var(--branco);
       background:
-        linear-gradient(rgba(61, 50, 34, .58), rgba(61, 50, 34, .72)),
-        url("https://www.yincorp.com.br/well-perdizes/assets/images/fachada.jpg")
-        center / cover no-repeat;
+        linear-gradient(90deg, rgba(7, 29, 58, .95) 0%, rgba(7, 29, 58, .78) 43%, rgba(7, 29, 58, .2) 100%),
+        url("./AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0002.jpg") center / cover;
     }
 
     .hero-content {
-      max-width: 760px;
+      position: relative;
+      z-index: 1;
+      max-width: 590px;
+      padding-top: 70px;
     }
 
     .eyebrow {
       display: inline-block;
-      margin-bottom: 18px;
-      color: var(--dourado);
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding: 8px 14px;
+      background: var(--amarelo);
+      color: var(--azul);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
-    .hero h1 {
-      color: var(--branco);
-      font-size: clamp(2.3rem, 6vw, 4.5rem);
-      margin-bottom: 20px;
+    h1 {
+      margin-bottom: 22px;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: .95;
+      letter-spacing: -3px;
+    }
+
+    h1 span {
+      color: var(--amarelo);
     }
 
     .hero p {
-      max-width: 680px;
-      margin: 0 auto;
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      max-width: 500px;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, .88);
+      font-size: 19px;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      margin-top: 28px;
-      padding: 14px 26px;
-      border: 0;
-      border-radius: 5px;
-      background: var(--dourado);
-      color: var(--marrom);
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      cursor: pointer;
-      transition: opacity .2s ease, transform .2s ease;
-    }
-
-    .btn:hover {
-      opacity: .9;
-      transform: translateY(-2px);
-    }
-
-    .btn:focus-visible,
-    a:focus-visible,
-    input:focus-visible,
-    button:focus-visible {
-      outline: 3px solid #ffffff;
-      outline-offset: 3px;
-    }
-
-    .stats {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      padding: 34px 20px;
-      background: var(--marrom);
-      color: var(--branco);
-      text-align: center;
-    }
-
-    .stat-number {
-      display: block;
-      margin-bottom: 5px;
-      color: var(--dourado);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    .section-title {
-      margin-bottom: 14px;
-      text-align: center;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-    }
-
-    .section-intro {
-      max-width: 720px;
-      margin: 0 auto 38px;
-      text-align: center;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .card,
-    .plant-card {
-      overflow: hidden;
-      border-radius: 8px;
-      background: var(--branco);
-      box-shadow: 0 5px 18px rgba(0, 0, 0, .08);
-    }
-
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .card-content,
-    .plant-content {
-      padding: 22px;
-    }
-
-    .card h3,
-    .plant-card h3 {
-      margin-bottom: 8px;
-      font-size: 1.35rem;
-    }
-
-    .plants {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .plant-card {
-      text-align: center;
-    }
-
-    .plant-card img {
-      width: 100%;
-      height: 300px;
-      object-fit: contain;
-      background: #fafafa;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
       gap: 12px;
     }
 
-    .gallery-button {
-      padding: 0;
-      border: 0;
+    .button {
+      display: inline-block;
+      padding: 15px 22px;
+      border: 1px solid var(--amarelo);
+      background: var(--amarelo);
+      color: var(--azul);
+      font-size: 13px;
+      font-weight: 800;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      filter: brightness(.95);
+    }
+
+    .button-outline {
       background: transparent;
-      cursor: pointer;
+      color: var(--branco);
     }
 
-    .gallery-button img {
-      width: 100%;
-      height: 210px;
-      border-radius: 6px;
-      object-fit: cover;
-      transition: transform .2s ease;
+    section {
+      padding: 90px 0;
     }
 
-    .gallery-button:hover img {
-      transform: scale(1.02);
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 38px;
     }
 
-    .location-text {
-      max-width: 760px;
-      margin: 0 auto;
-      text-align: center;
+    .section-heading small {
+      display: block;
+      margin-bottom: 10px;
+      color: #927900;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
-    .map {
-      width: 100%;
-      height: 360px;
-      margin-top: 28px;
-      border: 0;
-      border-radius: 8px;
+    h2 {
+      margin-bottom: 14px;
+      color: var(--azul);
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1;
+      letter-spacing: -1.5px;
     }
 
-    .contact-section {
-      width: 100%;
-      background: var(--marrom);
+    .section-heading p {
+      color: var(--cinza);
+      font-size: 17px;
     }
 
-    .form-box {
-      width: min(560px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 38px;
-      border-radius: 8px;
+    .intro {
       background: var(--branco);
     }
 
-    .form-box h2 {
-      margin-bottom: 10px;
-      text-align: center;
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+      align-items: center;
     }
 
-    .form-description {
-      margin-bottom: 24px;
-      text-align: center;
-    }
-
-    .field {
-      margin-bottom: 16px;
-    }
-
-    .field label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: bold;
-    }
-
-    .field input,
-    .field select {
+    .intro-image {
       width: 100%;
-      min-height: 48px;
-      padding: 12px;
-      border: 1px solid #c9c9c9;
+      max-height: 600px;
+      object-fit: cover;
       border-radius: 4px;
-      background: #fff;
-      color: var(--texto);
-      font-size: 16px;
     }
 
-    .consent {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      margin: 16px 0;
-      font-size: 13px;
+    .intro-text p {
+      margin-bottom: 18px;
+      color: var(--cinza);
+      font-size: 17px;
     }
 
-    .consent input {
-      width: 18px;
-      height: 18px;
-      flex: 0 0 auto;
-      margin-top: 2px;
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
     }
 
-    .consent a {
-      color: var(--marrom);
-      font-weight: bold;
+    .highlight {
+      padding: 24px;
+      background: var(--azul);
+      color: var(--branco);
     }
 
-    .form-box .btn {
+    .highlight strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--amarelo);
+      font-size: 18px;
+    }
+
+    .highlight span {
+      color: rgba(255, 255, 255, .8);
+      font-size: 14px;
+    }
+
+    .amenities {
+      background: var(--azul);
+      color: var(--branco);
+    }
+
+    .amenities h2 {
+      color: var(--branco);
+    }
+
+    .amenities .section-heading p {
+      color: rgba(255, 255, 255, .75);
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px 35px;
+    }
+
+    .amenity-group {
+      padding: 22px 0;
+      border-top: 1px solid var(--borda);
+    }
+
+    .amenity-group h3 {
+      margin-bottom: 14px;
+      color: var(--amarelo);
+      font-size: 17px;
+    }
+
+    .amenity-group ul {
+      padding-left: 18px;
+      color: rgba(255, 255, 255, .85);
+      font-size: 14px;
+    }
+
+    .amenity-group li {
+      margin-bottom: 7px;
+    }
+
+    .gallery {
+      background: var(--bege);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .gallery-grid img {
       width: 100%;
-      margin-top: 8px;
+      height: 270px;
+      object-fit: cover;
+      cursor: zoom-in;
+      border-radius: 3px;
+      background: #ddd;
+      transition: transform .2s ease, opacity .2s ease;
     }
 
-    .form-status {
-      min-height: 24px;
-      margin-top: 16px;
-      text-align: center;
-      font-weight: bold;
+    .gallery-grid img:hover {
+      opacity: .9;
+      transform: scale(1.02);
     }
 
-    .form-status.success {
-      color: var(--sucesso);
+    .plans {
+      background: var(--branco);
     }
 
-    .form-status.error {
-      color: var(--erro);
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .plan-card {
+      padding: 14px;
+      border: 1px solid #e2e2e2;
+      background: var(--bege);
+    }
+
+    .plan-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .plan-card h3 {
+      padding: 16px 4px 4px;
+      color: var(--azul);
+      font-size: 20px;
+    }
+
+    .videos {
+      background: var(--azul);
+      color: var(--branco);
+    }
+
+    .videos h2 {
+      color: var(--branco);
+    }
+
+    .videos .section-heading p {
+      color: rgba(255, 255, 255, .75);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .video-grid iframe {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border: 0;
+      border-radius: 4px;
+      background: #000;
+    }
+
+    .contact {
+      background:
+        linear-gradient(90deg, rgba(7, 29, 58, .96), rgba(7, 29, 58, .88)),
+        url("./AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0016.jpg") center / cover;
+      color: var(--branco);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .contact h2 {
+      color: var(--branco);
+    }
+
+    .contact p {
+      color: rgba(255, 255, 255, .8);
+      font-size: 17px;
+    }
+
+    .contact-list {
+      margin-top: 28px;
+      color: rgba(255, 255, 255, .9);
+      font-size: 15px;
+    }
+
+    .contact-list div {
+      margin-bottom: 12px;
+    }
+
+    .form {
+      display: grid;
+      gap: 14px;
+      padding: 28px;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .form label {
+      color: rgba(255, 255, 255, .85);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .form input,
+    .form select,
+    .form textarea {
+      width: 100%;
+      margin-top: 6px;
+      padding: 14px;
+      border: 0;
+      border-radius: 2px;
+      background: var(--branco);
+      color: var(--texto);
+      font: inherit;
+    }
+
+    .form textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form button {
+      cursor: pointer;
+      font: inherit;
     }
 
     footer {
-      padding: 34px 20px;
-      background: #2b2419;
-      color: var(--branco);
-      font-size: 14px;
+      padding: 24px 0;
+      background: #04152b;
+      color: rgba(255, 255, 255, .65);
       text-align: center;
-    }
-
-    footer a {
-      color: var(--dourado);
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      background: var(--verde-whatsapp);
-      color: var(--branco);
-      font-size: 28px;
-      text-decoration: none;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, .3);
+      font-size: 12px;
     }
 
     .lightbox {
       position: fixed;
+      z-index: 20;
       inset: 0;
-      z-index: 100;
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 24px;
-      background: rgba(0, 0, 0, .92);
+      padding: 30px;
+      background: rgba(0, 0, 0, .9);
     }
 
-    .lightbox.open {
+    .lightbox.active {
       display: flex;
     }
 
     .lightbox img {
-      max-width: 92vw;
-      max-height: 86vh;
-      border-radius: 6px;
+      max-width: 95vw;
+      max-height: 90vh;
+      object-fit: contain;
     }
 
     .lightbox-close {
-      position: absolute;
-      top: 16px;
-      right: 20px;
+      position: fixed;
+      top: 20px;
+      right: 28px;
       border: 0;
       background: transparent;
-      color: #fff;
-      font-size: 36px;
+      color: var(--branco);
+      font-size: 38px;
       cursor: pointer;
     }
 
-    @media (max-width: 800px) {
-      .stats,
-      .grid,
-      .gallery {
+    @media (max-width: 900px) {
+      .intro-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .video-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 600px) {
-      section {
-        padding: 52px 0;
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .topbar {
+        padding: 16px 0;
+      }
+
+      .menu {
+        display: none;
       }
 
       .hero {
-        min-height: 600px;
+        min-height: 680px;
       }
 
-      .stats,
-      .grid,
-      .plants,
-      .gallery {
+      section {
+        padding: 65px 0;
+      }
+
+      .highlight-grid,
+      .amenities-grid,
+      .plans-grid {
         grid-template-columns: 1fr;
       }
 
-      .form-box {
-        padding: 26px 20px;
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
       }
 
-      .gallery-button img {
-        height: 230px;
+      .gallery-grid img {
+        height: 210px;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .contact-grid {
+        gap: 30px;
+      }
+
+      .form {
+        padding: 20px;
       }
     }
   </style>
 </head>
 
 <body>
-  <noscript>
-    <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GT-T9L6Z3XD"
-      height="0"
-      width="0"
-      style="display:none;visibility:hidden"
-      title="Google Tag Manager">
-    </iframe>
 
-    <img
-      height="1"
-      width="1"
-      style="display:none"
-      src="https://www.facebook.com/tr?id=1847735489548242&ev=PageView&noscript=1"
-      alt="">
-  </noscript>
-
-  <div class="topbar">
-    Atendimento especializado para apresentar plantas, valores e condições.
-  </div>
-
-  <header class="hero">
-    <div class="hero-content">
-      <span class="eyebrow">Perdizes · São Paulo</span>
-
-      <h1>Well Perdizes</h1>
-
-      <p>
-        Studios e apartamentos de 1 e 2 dormitórios, com plantas de 34 a 37 m²,
-        rooftop e Sky Bar em uma das regiões mais tradicionais de São Paulo.
-      </p>
-
-      <a
-        class="btn"
-        href="#contato"
-        data-event="cta_principal">
-        Receber plantas, valores e condições
+  <header class="topbar">
+    <div class="container topbar-content">
+      <a class="logo" href="#inicio">
+        Well
+        <small>PERDIZES</small>
       </a>
+
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="#empreendimento">O empreendimento</a>
+        <a href="#lazer">Lazer</a>
+        <a href="#plantas">Plantas</a>
+        <a href="#videos">Vídeos</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </div>
   </header>
 
-  <div class="stats" aria-label="Destaques do empreendimento">
-    <div>
-      <span class="stat-number">34 a 37 m²</span>
-      Plantas inteligentes
-    </div>
-
-    <div>
-      <span class="stat-number">1 e 2</span>
-      Dormitórios
-    </div>
-
-    <div>
-      <span class="stat-number">Rooftop</span>
-      Sky Bar
-    </div>
-
-    <div>
-      <span class="stat-number">Perdizes</span>
-      São Paulo
-    </div>
-  </div>
-
   <main>
-    <section id="empreendimento">
-      <h2 class="section-title">Um projeto pensado para viver ou investir</h2>
 
-      <p class="section-intro">
-        O Well Perdizes tem ambientes compactos e funcionais, áreas de lazer diferenciadas e uma localização estratégica para quem busca praticidade, conforto e potencial de valorização.
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">NOVO ENDEREÇO EM PERDIZES</span>
 
-      <div class="grid">
-        <article class="card">
-          <img
-            src="https://www.yincorp.com.br/well-perdizes/assets/images/studio.jpg"
-            alt="Ambiente interno de studio do Well Perdizes"
-            loading="lazy"
-            width="800"
-            height="500">
+          <h1>
+            Sua vida mudou.<br>
+            Seu endereço <span>acompanhou.</span>
+          </h1>
 
-          <div class="card-content">
-            <h3>Studios</h3>
-            <p>
-              Ambientes compactos e sofisticados para quem valoriza praticidade
-              em uma das regiões mais desejadas de São Paulo.
-            </p>
+          <p>
+            Um projeto completo para acompanhar seu ritmo, com lazer, conforto,
+            praticidade e localização privilegiada.
+          </p>
+
+          <div class="buttons">
+            <a class="button" href="#contato">Tenho interesse</a>
+            <a class="button button-outline" href="#plantas">Ver plantas</a>
           </div>
-        </article>
-
-        <article class="card">
-          <img
-            src="https://www.yincorp.com.br/well-perdizes/assets/images/apartamento.jpg"
-            alt="Apartamento de 1 e 2 dormitórios do Well Perdizes"
-            loading="lazy"
-            width="800"
-            height="500">
-
-          <div class="card-content">
-            <h3>1 e 2 dormitórios</h3>
-            <p>
-              Plantas funcionais de 34 a 37 m², planejadas para aproveitar
-              melhor cada ambiente.
-            </p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img
-            src="https://www.yincorp.com.br/well-perdizes/assets/images/rooftop.jpg"
-            alt="Rooftop com Sky Bar do Well Perdizes"
-            loading="lazy"
-            width="800"
-            height="500">
-
-          <div class="card-content">
-            <h3>Rooftop e Sky Bar</h3>
-            <p>
-              Um espaço no topo do empreendimento para aproveitar momentos de
-              lazer, convivência e contemplação.
-            </p>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section id="plantas">
-      <h2 class="section-title">Plantas</h2>
-
-      <p class="section-intro">
-        Conheça algumas das opções de plantas disponíveis no Well Perdizes.
-        Consulte a disponibilidade atual com um consultor.
-      </p>
-
-      <div class="plants">
-        <article class="plant-card">
+    <section class="intro" id="empreendimento">
+      <div class="container intro-grid">
+        <div>
           <img
-            src="https://www.yincorp.com.br/well-perdizes/assets/images/planta-34.jpg"
-            alt="Planta de 34 metros quadrados do Well Perdizes"
-            loading="lazy"
-            width="800"
-            height="600">
+            class="intro-image"
+            src="./AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0005.jpg"
+            alt="Ambiente de lazer e convivência do Well Perdizes"
+            loading="lazy">
+        </div>
 
-          <div class="plant-content">
+        <div class="intro-text">
+          <div class="section-heading">
+            <small>Well-made. Well-ness. Well-integrated.</small>
+            <h2>Conforto em cada detalhe</h2>
+            <p>
+              Um empreendimento pensado para transformar a rotina em uma
+              experiência mais completa, prática e conectada.
+            </p>
+          </div>
+
+          <p>
+            Studios e apartamentos de 1 e 2 dormitórios com ambientes de lazer
+            coberto e descoberto, rooftop, espaços de convivência e soluções
+            para diferentes momentos do dia.
+          </p>
+
+          <div class="highlight-grid">
+            <div class="highlight">
+              <strong>25 m</strong>
+              <span>Piscina com raia</span>
+            </div>
+
+            <div class="highlight">
+              <strong>200 m```
+              <span>Da Avenida Sumaré</span>
+            </div>
+
+            <div class="highlight">
+              <strong>Rooftop</strong>
+              <span>Lazer com vista privilegiada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="amenities" id="lazer">
+      <div class="container">
+        <div class="section-heading">
+          <small>Lazer completo</small>
+          <h2>Um lugar para viver bem</h2>
+          <p>
+            Ambientes planejados para você relaxar, receber, cuidar da saúde e
+            aproveitar cada momento.
+          </p>
+        </div>
+
+        <div class="amenities-grid">
+          <div class="amenity-group">
+            <h3>Rooftop</h3>
+            <ul>
+              <li>Piscina com raia de 25 metros</li>
+              <li>Deck molhado</li>
+              <li>Solarium</li>
+              <li>Vista privilegiada</li>
+            </ul>
+          </div>
+
+          <div class="amenity-group">
+            <h3>Bem-estar</h3>
+            <ul>
+              <li>Fitness</li>
+              <li>Espaço funcional</li>
+              <li>Sauna</li>
+              <li>Área de descanso</li>
+            </ul>
+          </div>
+
+          <div class="amenity-group">
+            <h3>Convivência</h3>
+            <ul>
+              <li>Salão de festas</li>
+              <li>Espaço gourmet</li>
+              <li>Churrasqueira</li>
+              <li>Praça de convivência</li>
+            </ul>
+          </div>
+
+          <div class="amenity-group">
+            <h3>Praticidade</h3>
+            <ul>
+              <li>Lavanderia compartilhada</li>
+              <li>Bicicletário</li>
+              <li>Delivery room</li>
+              <li>Espaço para encomendas</li>
+            </ul>
+          </div>
+
+          <div class="amenity-group">
+            <h3>Mobilidade</h3>
+            <ul>
+              <li>Vagas para bicicletas</li>
+              <li>Infraestrutura para carregamento</li>
+              <li>Acesso facilitado</li>
+              <li>Região conectada</li>
+            </ul>
+          </div>
+
+          <div class="amenity-group">
+            <h3>Segurança</h3>
+            <ul>
+              <li>Controle de acesso</li>
+              <li>Portaria</li>
+              <li>Monitoramento das áreas comuns</li>
+              <li>Entrada social independente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="galeria">
+      <div class="container">
+        <div class="section-heading">
+          <small>Por dentro do projeto</small>
+          <h2>Conheça o Well Perdizes</h2>
+          <p>
+            Veja detalhes dos ambientes, áreas comuns, apartamentos e plantas
+            do empreendimento.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="bookGallery"></div>
+      </div>
+    </section>
+
+    <section class="plans" id="plantas">
+      <div class="container">
+        <div class="section-heading">
+          <small>Escolha seu espaço</small>
+          <h2>Plantas inteligentes</h2>
+          <p>
+            Ambientes funcionais para você aproveitar melhor cada metro quadrado.
+          </p>
+        </div>
+
+        <div class="plans-grid">
+          <article class="plan-card">
+            <img
+              src="./AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0027.jpg"
+              alt="Planta do apartamento de 34 metros quadrados"
+              loading="lazy">
+
             <h3>Planta de 34 m²</h3>
-            <p>Studio ou 1 dormitório, conforme a configuração da unidade.</p>
-          </div>
-        </article>
+          </article>
 
-        <article class="plant-card">
-          <img
-            src="https://www.yincorp.com.br/well-perdizes/assets/images/planta-37.jpg"
-            alt="Planta de 37 metros quadrados do Well Perdizes"
-            loading="lazy"
-            width="800"
-            height="600">
+          <article class="plan-card">
+            <img
+              src="./AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41%20(3)_page-0028.jpg"
+              alt="Planta do apartamento de 37 metros quadrados"
+              loading="lazy">
 
-          <div class="plant-content">
             <h3>Planta de 37 m²</h3>
-            <p>Opções de configuração para diferentes perfis de moradores.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="videos" id="videos">
+      <div class="container">
+        <div class="section-heading">
+          <small>Veja em detalhes</small>
+          <h2>Vídeos do empreendimento</h2>
+          <p>
+            Conheça melhor o projeto, os ambientes e a localização do Well
+            Perdizes.
+          </p>
+        </div>
+
+        <div class="video-grid">
+          <iframe
+            src="https://www.youtube.com/embed/9RDOf2jGbJg"
+            title="Vídeo do Well Perdizes 1"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+
+          <iframe
+            src="https://www.youtube.com/embed/RCHJn8uGTp4"
+            title="Vídeo do Well Perdizes 2"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+
+          <iframe
+            src="https://www.youtube.com/embed/xUZH-58fMFw"
+            title="Vídeo do Well Perdizes 3"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+
+          <iframe
+            src="https://www.youtube.com/embed/pd-Dqx5cMOY"
+            title="Vídeo do Well Perdizes 4"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-heading">
+            <small>Fale com um consultor</small>
+            <h2>Viva o seu próximo capítulo em Perdizes</h2>
+            <p>
+              Preencha seus dados e receba mais informações sobre plantas,
+              condições comerciais e disponibilidade.
+            </p>
           </div>
-        </article>
-      </div>
-    </section>
 
-    <section id="galeria">
-      <h2 class="section-title">Galeria do empreendimento</h2>
+          <div class="contact-list">
+            <div>Localização privilegiada em Perdizes</div>
+            <div>Studios e apartamentos de 1 e 2 dormitórios</div>
+            <div>Lazer completo e áreas comuns planejadas</div>
+          </div>
+        </div>
 
-      <p class="section-intro">
-        Veja detalhes do projeto e conheça a proposta do Well Perdizes.
-      </p>
-
-      <div class="gallery">
-        <button
-          class="gallery-button"
-          type="button"
-          aria-label="Ampliar imagem da fachada"
-          data-image="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-1.jpg"
-          data-alt="Fachada do Well Perdizes">
-
-          <img
-            src="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-1.jpg"
-            alt="Fachada do Well Perdizes"
-            loading="lazy"
-            width="800"
-            height="500">
-        </button>
-
-        <button
-          class="gallery-button"
-          type="button"
-          aria-label="Ampliar imagem do Well Perdizes"
-          data-image="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-2.jpg"
-          data-alt="Detalhe do projeto Well Perdizes">
-
-          <img
-            src="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-2.jpg"
-            alt="Detalhe do projeto Well Perdizes"
-            loading="lazy"
-            width="800"
-            height="500">
-        </button>
-
-        <button
-          class="gallery-button"
-          type="button"
-          aria-label="Ampliar imagem da área comum"
-          data-image="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-3.jpg"
-          data-alt="Área comum do Well Perdizes">
-
-          <img
-            src="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-3.jpg"
-            alt="Área comum do Well Perdizes"
-            loading="lazy"
-            width="800"
-            height="500">
-        </button>
-
-        <button
-          class="gallery-button"
-          type="button"
-          aria-label="Ampliar imagem do rooftop"
-          data-image="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-4.jpg"
-          data-alt="Rooftop do Well Perdizes">
-
-          <img
-            src="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-4.jpg"
-            alt="Rooftop do Well Perdizes"
-            loading="lazy"
-            width="800"
-            height="500">
-        </button>
-
-        <button
-          class="gallery-button"
-          type="button"
-          aria-label="Ampliar imagem do Sky Bar"
-          data-image="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-5.jpg"
-          data-alt="Sky Bar do Well Perdizes">
-
-          <img
-            src="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-5.jpg"
-            alt="Sky Bar do Well Perdizes"
-            loading="lazy"
-            width="800"
-            height="500">
-        </button>
-
-        <button
-          class="gallery-button"
-          type="button"
-          aria-label="Ampliar imagem do empreendimento"
-          data-image="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-6.jpg"
-          data-alt="Detalhe do empreendimento Well Perdizes">
-
-          <img
-            src="https://www.yincorp.com.br/well-perdizes/assets/images/galeria-6.jpg"
-            alt="Detalhe do empreendimento Well Perdizes"
-            loading="lazy"
-            width="800"
-            height="500">
-        </button>
-      </div>
-    </section>
-
-    <section id="localizacao">
-      <h2 class="section-title">Localização</h2>
-
-      <div class="location-text">
-        <p>
-          O Well Perdizes está localizado em Perdizes, São Paulo, uma região
-          tradicional, arborizada e com acesso a serviços, comércio, lazer e
-          importantes vias da cidade.
-        </p>
-
-        <p>
-          Consulte um consultor para receber informações detalhadas sobre o
-          endereço, pontos de referência e disponibilidade.
-        </p>
-      </div>
-
-      <iframe
-        class="map"
-        title="Mapa da localização do Well Perdizes em Perdizes, São Paulo"
-        loading="lazy"
-        src="https://www.google.com/maps?q=Perdizes,+S%C3%A3o+Paulo&output=embed">
-      </iframe>
-    </section>
-
-    <section class="contact-section" id="contato">
-      <div class="form-box">
-        <h2>Receba plantas, valores e condições</h2>
-
-        <p class="form-description">
-          Preencha seus dados e fale com um consultor da Yincorp.
-        </p>
-
-        <form id="leadForm" novalidate>
-          <div class="field">
-            <label for="nome">Nome completo</label>
+        <form class="form" id="contactForm">
+          <label>
+            Nome
             <input
               type="text"
-              id="nome"
               name="nome"
-              autocomplete="name"
               placeholder="Digite seu nome"
+              autocomplete="name"
               required>
-          </div>
-
-          <div class="field">
-            <label for="email">E-mail</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autocomplete="email"
-              placeholder="Digite seu melhor e-mail"
-              required>
-          </div>
-
-          <div class="field">
-            <label for="telefone">Telefone com DDD</label>
-            <input
-              type="tel"
-              id="telefone"
-              name="telefone"
-              autocomplete="tel"
-              inputmode="tel"
-              placeholder="(11) 99999-9999"
-              required>
-          </div>
-
-          <div class="field">
-            <label for="objetivo">Tenho interesse em</label>
-            <select id="objetivo" name="objetivo">
-              <option value="">Selecione uma opção</option>
-              <option value="morar">Morar</option>
-              <option value="investir">Investir</option>
-              <option value="ainda_nao_sei">Ainda não sei</option>
-            </select>
-          </div>
-
-          <label class="consent" for="consentimento">
-            <input
-              type="checkbox"
-              id="consentimento"
-              name="consentimento"
-              required>
-
-            <span>
-              Autorizo a Yincorp a utilizar meus dados para entrar em contato
-              sobre o Well Perdizes e outros empreendimentos relacionados,
-              conforme a
-              <a href="/politica-de-privacidade" target="_blank" rel="noopener noreferrer">
-                Política de Privacidade
-              </a>.
-            </span>
           </label>
 
-          <button
-            class="btn"
-            id="submitButton"
-            type="submit">
-            Quero falar com um consultor
+          <label>
+            E-mail
+            <input
+              type="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+              autocomplete="email"
+              required>
+          </label>
+
+          <label>
+            Telefone
+            <input
+              type="tel"
+              name="telefone"
+              placeholder="(11) 99999-9999"
+              autocomplete="tel"
+              required>
+          </label>
+
+          <label>
+            Tenho interesse em
+            <select name="interesse" required>
+              <option value="">Selecione uma opção</option>
+              <option value="studio">Studio</option>
+              <option value="1 dormitorio">Apartamento de 1 dormitório</option>
+              <option value="2 dormitorios">Apartamento de 2 dormitórios</option>
+              <option value="nao sei">Ainda não sei</option>
+            </select>
+          </label>
+
+          <label>
+            Mensagem
+            <textarea
+              name="mensagem"
+              placeholder="Como podemos ajudar?"></textarea>
+          </label>
+
+          <button class="button" type="submit">
+            Quero receber informações
           </button>
 
-          <div
-            class="form-status"
-            id="formStatus"
-            role="status"
-            aria-live="polite">
-          </div>
+          <p id="formMessage" aria-live="polite"></p>
         </form>
       </div>
     </section>
+
   </main>
 
   <footer>
-    <p>© <span id="currentYear"></span> Yincorp. Todos os direitos reservados.</p>
-
-    <p>
-      Well Perdizes · Perdizes, São Paulo
-    </p>
-
-    <p>
-      <a href="https://www.yincorp.com.br" rel="noopener noreferrer">
-        Site principal da Yincorp
-      </a>
-      ·
-      <a href="/politica-de-privacidade">
-        Política de Privacidade
-      </a>
-    </p>
-
-    <p>
-      Imagens, perspectivas e informações do empreendimento podem ser
-      meramente ilustrativas. Consulte condições, disponibilidade e materiais
-      oficiais com um consultor.
-    </p>
+    <div class="container">
+      Well Perdizes — Material sujeito a alterações sem aviso prévio.
+    </div>
   </footer>
 
-  <a
-    class="whatsapp"
-    href="https://wa.me/5511992976368?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20do%20Well%20Perdizes%20e%20gostaria%20de%20receber%20plantas%20e%20valores."
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Falar com um consultor pelo WhatsApp"
-    data-event="whatsapp_click">
-    ☎
-  </a>
-
-  <div
-    class="lightbox"
-    id="lightbox"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Imagem ampliada">
-
-    <button
-      class="lightbox-close"
-      id="lightboxClose"
-      type="button"
-      aria-label="Fechar imagem ampliada">
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar imagem">
       ×
     </button>
 
@@ -924,137 +909,44 @@ html
   </div>
 
   <script>
-    const dataLayer = window.dataLayer = window.dataLayer || [];
+    const prefixo =
+      "AF_NOVV_018_26_NOVVO_CARDOSO_BOOK_DE_MESA_WIREO_A3-digital-1-41 (3)_page-";
 
-    function registrarEvento(nome, dados = {}) {
-      dataLayer.push({
-        event: nome,
-        ...dados
-      });
-    }
-
-    const leadForm = document.getElementById("leadForm");
-    const submitButton = document.getElementById("submitButton");
-    const formStatus = document.getElementById("formStatus");
-
-    leadForm.addEventListener("submit", async function(event) {
-      event.preventDefault();
-
-      formStatus.textContent = "";
-      formStatus.className = "form-status";
-
-      if (!leadForm.checkValidity()) {
-        leadForm.reportValidity();
-
-        formStatus.textContent = "Confira os campos obrigatórios.";
-        formStatus.classList.add("error");
-
-        registrarEvento("formulario_erro", {
-          formulario: "well_perdizes"
-        });
-
-        return;
-      }
-
-      const dados = {
-        nome: document.getElementById("nome").value.trim(),
-        email: document.getElementById("email").value.trim(),
-        telefone: document.getElementById("telefone").value.trim(),
-        objetivo: document.getElementById("objetivo").value,
-        consentimento: document.getElementById("consentimento").checked,
-        pagina: window.location.href,
-        origem: "lp_well_perdizes"
-      };
-
-      submitButton.disabled = true;
-      submitButton.textContent = "Enviando...";
-
-      registrarEvento("formulario_inicio", {
-        formulario: "well_perdizes"
-      });
-
-      try {
-        const resposta = await fetch("/api/leads/well-perdizes", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify(dados)
-        });
-
-        if (!resposta.ok) {
-          throw new Error("Falha ao enviar o formulário.");
-        }
-
-        formStatus.textContent =
-          "Cadastro enviado com sucesso. Um consultor entrará em contato.";
-        formStatus.classList.add("success");
-
-        registrarEvento("generate_lead", {
-          formulario: "well_perdizes"
-        });
-
-        if (typeof fbq !== "undefined") {
-          fbq("track", "Lead");
-        }
-
-        leadForm.reset();
-
-        setTimeout(function() {
-          window.open(
-            "https://wa.me/5511992976368?text=Ol%C3%A1%21%20Acabei%20de%20me%20cadastrar%20na%20p%C3%A1gina%20do%20Well%20Perdizes%20e%20gostaria%20de%20continuar%20o%20atendimento.",
-            "_blank",
-            "noopener,noreferrer"
-          );
-        }, 800);
-
-      } catch (error) {
-        formStatus.textContent =
-          "Não foi possível enviar agora. Tente novamente ou fale conosco pelo WhatsApp.";
-        formStatus.classList.add("error");
-
-        registrarEvento("formulario_erro", {
-          formulario: "well_perdizes",
-          motivo: "falha_envio"
-        });
-
-      } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = "Quero falar com um consultor";
-      }
-    });
-
+    const galeria = document.getElementById("bookGallery");
     const lightbox = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightboxImage");
     const lightboxClose = document.getElementById("lightboxClose");
-    const galleryButtons = document.querySelectorAll(".gallery-button");
 
-    function abrirLightbox(imagem, alt) {
-      lightboxImage.src = imagem;
-      lightboxImage.alt = alt;
-      lightbox.classList.add("open");
-      lightboxClose.focus();
+    function criarCaminhoImagem(numero) {
+      const pagina = String(numero).padStart(4, "0");
 
-      registrarEvento("galeria_visualizacao", {
-        formulario: "well_perdizes"
+      return "./" +
+        encodeURIComponent(prefixo + pagina + ".jpg");
+    }
+
+    for (let numero = 2; numero <= 33; numero++) {
+      const imagem = document.createElement("img");
+
+      imagem.src = criarCaminhoImagem(numero);
+      imagem.alt = "Página " + String(numero).padStart(4, "0") +
+        " do material do Well Perdizes";
+      imagem.loading = "lazy";
+
+      imagem.addEventListener("click", function() {
+        lightboxImage.src = imagem.src;
+        lightboxImage.alt = imagem.alt;
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
       });
+
+      galeria.appendChild(imagem);
     }
 
     function fecharLightbox() {
-      lightbox.classList.remove("open");
+      lightbox.classList.remove("active");
+      lightbox.setAttribute("aria-hidden", "true");
       lightboxImage.src = "";
-      lightboxImage.alt = "";
     }
-
-    galleryButtons.forEach(function(button) {
-      button.addEventListener("click", function() {
-        abrirLightbox(
-          button.dataset.image,
-          button.dataset.alt
-        );
-      });
-    });
 
     lightboxClose.addEventListener("click", fecharLightbox);
 
@@ -1065,21 +957,24 @@ html
     });
 
     document.addEventListener("keydown", function(event) {
-      if (event.key === "Escape" && lightbox.classList.contains("open")) {
+      if (event.key === "Escape") {
         fecharLightbox();
       }
     });
 
-    document.querySelectorAll("[data-event]").forEach(function(element) {
-      element.addEventListener("click", function() {
-        registrarEvento(element.dataset.event, {
-          pagina: "well_perdizes"
-        });
-      });
-    });
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
 
-    document.getElementById("currentYear").textContent =
-      new Date().getFullYear();
+      const formMessage = document.getElementById("formMessage");
+
+      formMessage.textContent =
+        "Obrigado! Seus dados foram preenchidos. Em breve entraremos em contato.";
+      formMessage.style.marginTop = "8px";
+      formMessage.style.color = "#f4d44d";
+
+      this.reset();
+    });
   </script>
+
 </body>
 </html>
