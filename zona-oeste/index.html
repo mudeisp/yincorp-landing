@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raio-X Zona Oeste 2026 | Guia de Lançamentos Imobiliários</title>
-  <meta name="description" content="Confira o panorama completo dos melhores lançamentos em Perdizes, Pompéia e Pinheiros. Análise de m², valorização e projetos exclusivos.">
+  <meta name="description" content="Confira o panorama completo dos melhores lançamentos e infraestrutura da Zona Oeste.">
   <meta name="theme-color" content="#0b0f19">
 
-  <link rel="icon" type="image/jpeg" href="/LOGO.jpeg">
+  <link rel="icon" type="image/jpeg" href="../LOGO.jpeg">
 
   <!-- GOOGLE ANALYTICS -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDBT7VZPWW"></script>
@@ -76,7 +76,7 @@
     /* HERO */
     .hero {
       text-align: center;
-      padding: 50px 0 30px;
+      padding: 40px 0 25px;
       background: radial-gradient(circle at 50% 10%, var(--cyan-glow), transparent 60%);
     }
     .badge {
@@ -93,7 +93,7 @@
       text-transform: uppercase;
     }
     h1 {
-      font-size: clamp(26px, 4vw, 42px);
+      font-size: clamp(24px, 4vw, 38px);
       font-weight: 900;
       color: #fff;
       line-height: 1.2;
@@ -102,21 +102,21 @@
     h1 span { color: var(--cyan); }
     .hero p {
       color: var(--text-muted);
-      font-size: 15px;
+      font-size: 14px;
       max-width: 680px;
-      margin: 0 auto 25px;
+      margin: 0 auto;
     }
 
-    /* GRID DE PRODUTOS */
+    /* GRID DE PRODUTOS CORRIGIDO */
     .products-section { padding: 30px 0; }
-    .section-title { margin-bottom: 30px; }
-    .section-title h2 { font-size: 22px; font-weight: 800; color: #fff; }
+    .section-title { margin-bottom: 25px; text-align: center; }
+    .section-title h2 { font-size: 20px; font-weight: 800; color: #fff; }
     .section-title p { color: var(--text-muted); font-size: 13px; }
 
     .grid-products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
 
     .card-product {
@@ -124,104 +124,71 @@
       border: 1px solid var(--border-color);
       border-radius: 14px;
       overflow: hidden;
-      transition: transform 0.2s, border-color 0.2s;
       display: flex;
       flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s;
     }
     .card-product:hover {
-      transform: translateY(-4px);
       border-color: var(--cyan);
       box-shadow: 0 5px 20px var(--cyan-glow);
     }
+
+    /* CAPA COM IMAGEM TRATADA */
     .card-img {
-      height: 180px;
-      background-size: cover;
+      height: 160px;
+      background-color: #070a12;
+      background-size: contain;
+      background-repeat: no-repeat;
       background-position: center;
       position: relative;
+      border-bottom: 1px solid var(--border-color);
     }
     .card-tag {
       position: absolute;
-      top: 12px;
-      left: 12px;
-      background: rgba(11, 15, 25, 0.85);
+      top: 10px;
+      left: 10px;
+      background: rgba(11, 15, 25, 0.9);
       border: 1px solid var(--cyan);
       color: var(--cyan);
       font-size: 9px;
       font-weight: 800;
-      padding: 4px 10px;
+      padding: 4px 8px;
       border-radius: 4px;
     }
-    .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .card-body h3 { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 8px; }
-    .card-body p { color: var(--text-muted); font-size: 12px; margin-bottom: 15px; }
+
+    .card-body { padding: 18px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .card-body h3 { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+    .card-body p { color: var(--text-muted); font-size: 12px; margin-bottom: 12px; }
     
     .card-features {
       list-style: none;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       font-size: 11px;
       color: #cbd5e1;
     }
-    .card-features li { margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+    .card-features li { margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
     .card-features li::before { content: "•"; color: var(--cyan); font-weight: bold; }
 
     .btn-card {
       display: block;
       text-align: center;
-      background: transparent;
-      border: 1px solid var(--cyan);
-      color: var(--cyan);
-      padding: 10px;
+      background: var(--cyan);
+      color: var(--bg-dark);
+      padding: 12px;
       border-radius: 6px;
       font-weight: 800;
       font-size: 11px;
       transition: 0.2s;
     }
-    .card-product:hover .btn-card {
-      background: var(--cyan);
-      color: var(--bg-dark);
+    .btn-card:hover {
+      opacity: 0.9;
     }
 
-    /* LEAD CAPTURA GERAL */
-    .hub-lead-box {
-      background: #070a12;
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 35px 25px;
-      margin-top: 40px;
-      text-align: center;
-    }
-    .hub-lead-box h3 { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 10px; }
-    .hub-lead-box p { color: var(--text-muted); font-size: 13px; max-width: 500px; margin: 0 auto 20px; }
-    
-    .lead-form-inline {
-      display: flex;
-      gap: 10px;
-      max-width: 500px;
-      margin: auto;
-      flex-direction: column;
-    }
-    .lead-form-inline input {
-      height: 46px;
-      border-radius: 6px;
-      border: 1px solid var(--border-color);
-      background: #0d131f;
-      padding: 0 14px;
-      color: #fff;
-      font-family: inherit;
-    }
-    .lead-form-inline button {
-      height: 46px;
-      background: var(--cyan);
-      color: var(--bg-dark);
-      border: none;
-      border-radius: 6px;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    @media (min-width: 600px) {
-      .lead-form-inline { flex-direction: row; }
-      .lead-form-inline input { flex: 1; }
+    /* MOBILE RESPONSIVO */
+    @media (max-width: 768px) {
+      .grid-products {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -233,102 +200,67 @@
       YINCORP GROUP
       <span>PORTAL ZONA OESTE • SP</span>
     </div>
-    <span style="font-size: 10px; color: var(--text-muted);">ATUALIZADO EM 2026</span>
+    <span style="font-size: 10px; color: var(--text-muted);">2026</span>
   </div>
 </header>
 
 <main>
   <section class="hero">
     <div class="container">
-      <span class="badge">Especial Mercado Imobiliário</span>
-      <h1>Panorama de Lançamentos <span>Zona Oeste SP</span></h1>
-      <p>Compare metragens, valores por m² e diferenciais dos empreendimentos mais desejados de Perdizes e da região em um só lugar.</p>
+      <span class="badge">Painel de Demonstração</span>
+      <h1>Escolha a experiência para <span>testar</span></h1>
+      <p>Acesse abaixo qualquer um dos dois projetos ativos na infraestrutura da Yincorp.</p>
     </div>
   </section>
 
   <section class="products-section">
     <div class="container">
-      <div class="section-title">
-        <h2>Selecione a opção que você deseja conhecer:</h2>
-        <p>Acesse a apresentação técnica e o direcionamento para o canal correspondente.</p>
-      </div>
 
       <div class="grid-products">
 
-        <!-- CARD 1: WELL PERDIZES (/well-perdizes) -->
+        <!-- CARD 1: WELL PERDIZES -->
         <article class="card-product">
-          <div class="card-img" style="background-image: url('/LOGO.jpeg');">
-            <span class="card-tag">LANÇAMENTO • PERDIZES</span>
+          <div class="card-img" style="background-image: url('../LOGO.jpeg');">
+            <span class="card-tag">B2C • IMÓVEIS</span>
           </div>
           <div class="card-body">
             <div>
               <h3>Well Perdizes</h3>
-              <p>Studios e 1&2 Dorms no coração de Perdizes com lazer completo no rooftop.</p>
+              <p>Studios e 1&2 Dorms no coração de Perdizes com lazer no rooftop.</p>
               <ul class="card-features">
                 <li>Opções de 28m² a 64m²</li>
                 <li>Ideal para morar ou investir</li>
-                <li>A poucas quadras da PUC e do Metrô</li>
+                <li>A poucas quadras da PUC</li>
               </ul>
             </div>
-            <a href="https://www.yincorp.com.br/well-perdizes" class="btn-card" onclick="trackClickProduct('Well Perdizes')">VER PÁGINA DO PRODUTO →</a>
+            <a href="https://www.yincorp.com.br/well-perdizes" class="btn-card">ACESSAR WELL PERDIZES →</a>
           </div>
         </article>
 
-        <!-- CARD 2: ROBOT.NIC / 100LEADS (/100leads) -->
+        <!-- CARD 2: ROBOT.NIC 100LEADS -->
         <article class="card-product">
-          <div class="card-img" style="background-image: url('/LOGO.jpeg');">
-            <span class="card-tag">INFRAESTRUTURA B2B</span>
+          <div class="card-img" style="background-image: url('../LOGO.jpeg');">
+            <span class="card-tag">B2B • INFRAESTRUTURA</span>
           </div>
           <div class="card-body">
             <div>
               <h3>ROBOT.NIC • 100Leads</h3>
-              <p>Infraestrutura digital imobiliária serverless para capturar e converter tráfego em vendas.</p>
+              <p>Infraestrutura digital imobiliária serverless para otimização de tráfego.</p>
               <ul class="card-features">
                 <li>Carregamento sub-segundo na Vercel</li>
                 <li>Meta CAPI Server-Side integrado</li>
-                <li>Dupla conversão e rastreamento de UTMs</li>
+                <li>Dupla conversão e UTMs</li>
               </ul>
             </div>
-            <a href="https://www.yincorp.com.br/100leads" class="btn-card" onclick="trackClickProduct('ROBOT.NIC 100Leads')">CONHECER A INFRAESTRUTURA →</a>
+            <a href="https://www.yincorp.com.br/100leads" class="btn-card">ACESSAR 100LEADS →</a>
           </div>
         </article>
 
-      </div>
-
-      <!-- CAPTURA DE LEAD SIMPLIFICADA NO HUB -->
-      <div class="hub-lead-box" id="contato-geral">
-        <h3>Quer suporte do Yincorp Group?</h3>
-        <p>Receba atendimento do nosso time técnico ou comercial via WhatsApp.</p>
-        
-        <form class="lead-form-inline" id="hubForm">
-          <input type="tel" id="hubPhone" placeholder="Seu WhatsApp com DDD" required>
-          <button type="submit">SOLICITAR CONTATO</button>
-        </form>
       </div>
 
     </div>
   </section>
 </main>
-
-<script>
-  function trackClickProduct(productName) {
-    if (typeof fbq !== 'undefined') {
-      fbq('trackCustom', 'InteresseProdutoZonaOeste', { product: productName });
-    }
-  }
-
-  document.getElementById('hubForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const phone = document.getElementById('hubPhone').value;
-    
-    if (typeof fbq !== 'undefined') {
-      fbq('track', 'Lead');
-    }
-
-    const msg = `Olá! Acessei o Portal da Zona Oeste e gostaria de receber suporte. Meu WhatsApp: ${phone}`;
-    window.open(`https://wa.me/5511992976368?text=${encodeURIComponent(msg)}`, '_blank');
-  });
-</script>
 
 </body>
 </html>
