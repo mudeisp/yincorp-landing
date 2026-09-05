@@ -3,22 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raio-X Zona Oeste 2026 | Guia de Lançamentos Imobiliários</title>
-  <meta name="description" content="Confira o panorama completo dos melhores lançamentos e notícias do Mercado Imobiliário.">
-  <meta name="theme-color" content="#0b0f19">
 
-  <link rel="icon" type="image/jpeg" href="../LOGO.jpeg">
+  <title>Raio-X Zona Oeste 2026 | Guia de Lançamentos Imobiliários | Yincorp Group</title>
 
-  <!-- GOOGLE ANALYTICS -->
+  <meta
+    name="description"
+    content="Confira o panorama completo de lançamentos e valorização imobiliária em Perdizes, Pompéia e Pinheiros. Análise de m², infraestrutura de bairro e projetos exclusivos."
+  >
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Yincorp Group">
+  <meta name="theme-color" content="#05070a">
+
+  <link rel="canonical" href="https://www.yincorp.com.br/zona-oeste">
+  <link rel="icon" href="/LOGO.jpeg" type="image/jpeg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Raio-X Zona Oeste 2026 | Lançamentos Imobiliários">
+  <meta
+    property="og:description"
+    content="Panorama de lançamentos, valorização de m² e oportunidades em Perdizes e região."
+  >
+  <meta property="og:url" content="https://www.yincorp.com.br/zona-oeste">
+  <meta property="og:image" content="https://www.yincorp.com.br/LOGO.jpeg">
+  <meta property="og:site_name" content="Yincorp Group">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDBT7VZPWW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-TDBT7VZPWW');
   </script>
 
-  <!-- META PIXEL -->
+  <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -33,316 +62,387 @@
     fbq('trackCustom', 'ViewContent_GuiaZonaOeste');
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.yincorp.com.br/#organization",
+        "name": "Yincorp Group",
+        "url": "https://www.yincorp.com.br/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.yincorp.com.br/LOGO.jpeg"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.yincorp.com.br/zona-oeste#webpage",
+        "url": "https://www.yincorp.com.br/zona-oeste",
+        "name": "Raio-X Imobiliário Zona Oeste SP 2026",
+        "description": "Guia de lançamentos, m² e inteligência imobiliária para Perdizes, Pompéia e região."
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root {
-      --cyan: #00f0ff;
-      --cyan-glow: rgba(0, 240, 255, 0.2);
-      --bg-dark: #0b0f19;
-      --card-bg: #131a29;
-      --border-color: #1f2a3e;
-      --text-main: #ffffff;
-      --text-muted: #8d9bb0;
-      --green: #25d366;
+      --bg: #05070a;
+      --bg-soft: #0b1016;
+      --card: #0d131a;
+      --cyan: #00e5ff;
+      --cyan-soft: rgba(0, 229, 255, 0.12);
+      --cyan-border: rgba(0, 229, 255, 0.28);
+      --text: #f4f7f9;
+      --muted: #9ca8b3;
+      --border: rgba(255,255,255,0.09);
+      --green: #28e38a;
+      --max: 1120px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
+      background: radial-gradient(circle at 50% 0%, rgba(0,229,255,0.08), transparent 32%), var(--bg);
+      color: var(--text);
       font-family: 'Montserrat', sans-serif;
-      background-color: var(--bg-dark);
-      color: #e0e8f5;
-      line-height: 1.5;
-      padding-bottom: 60px;
+      line-height: 1.6;
     }
-    a { text-decoration: none; color: inherit; }
-    .container { max-width: 1000px; margin: auto; padding: 0 20px; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(100% - 32px, var(--max)); margin: 0 auto; }
+    .section { padding: 80px 0; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--cyan); }
+    h2 { font-size: clamp(28px, 4vw, 44px); margin-bottom: 18px; line-height: 1.2; }
+    .section-intro { max-width: 760px; margin-bottom: 42px; }
+    .section-intro p { color: var(--muted); font-size: 16px; }
 
     /* HEADER */
     header {
-      background: #070a12;
-      border-bottom: 1px solid var(--border-color);
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(5,7,10,0.88); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
     }
-    .nav { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-weight: 900; font-size: 16px; color: #fff; letter-spacing: 1px; }
-    .logo span { color: var(--cyan); display: block; font-size: 9px; }
+    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { width: 118px; height: auto; }
+    .nav-cta {
+      border: 1px solid var(--cyan-border); background: var(--cyan-soft);
+      color: var(--cyan); padding: 10px 17px; border-radius: 999px;
+      font-size: 12px; font-weight: 800; text-transform: uppercase; transition: .2s;
+    }
 
     /* HERO */
-    .hero {
-      text-align: center;
-      padding: 40px 0 25px;
-      background: radial-gradient(circle at 50% 10%, var(--cyan-glow), transparent 60%);
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(0, 240, 255, 0.1);
-      border: 1px solid var(--cyan);
-      color: var(--cyan);
-      font-size: 10px;
-      font-weight: 800;
-      padding: 5px 12px;
-      border-radius: 20px;
-      letter-spacing: 1.5px;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-    }
-    h1 {
-      font-size: clamp(24px, 4vw, 38px);
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.2;
-      margin-bottom: 15px;
-    }
-    h1 span { color: var(--cyan); }
-    .hero p {
-      color: var(--text-muted);
-      font-size: 14px;
-      max-width: 680px;
-      margin: 0 auto;
-    }
-
-    /* GRID DE PRODUTOS */
-    .products-section { padding: 30px 0; }
-    .grid-layout {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 25px;
-    }
-
-    .grid-products {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .card-product {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .card-product:hover {
-      border-color: var(--cyan);
-      box-shadow: 0 5px 20px var(--cyan-glow);
-    }
-
-    .card-img {
-      height: 160px;
-      background-color: #070a12;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      position: relative;
-      border-bottom: 1px solid var(--border-color);
-    }
-    .card-tag {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: rgba(11, 15, 25, 0.9);
-      border: 1px solid var(--cyan);
-      color: var(--cyan);
-      font-size: 9px;
-      font-weight: 800;
-      padding: 4px 8px;
-      border-radius: 4px;
-    }
-
-    .card-body { padding: 18px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .card-body h3 { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 6px; }
-    .card-body p { color: var(--text-muted); font-size: 12px; margin-bottom: 12px; }
+    .hero { min-height: 650px; display: flex; align-items: center; text-align: center; position: relative; }
+    .hero h1 { max-width: 980px; margin: 0 auto 25px; font-size: clamp(36px, 6vw, 68px); font-weight: 900; letter-spacing: -1.5px; }
+    .hero h1 span { color: var(--cyan); }
+    .hero-subtitle { max-width: 780px; margin: 0 auto 32px; color: var(--muted); font-size: clamp(16px, 2vw, 20px); }
     
-    .card-features {
-      list-style: none;
-      margin-bottom: 18px;
-      font-size: 11px;
-      color: #cbd5e1;
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 52px; padding: 0 25px; border-radius: 8px; font-weight: 800; font-size: 14px; transition: .2s; cursor: pointer; border: none;
     }
-    .card-features li { margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
-    .card-features li::before { content: "•"; color: var(--cyan); font-weight: bold; }
+    .btn-primary { background: var(--cyan); color: #001014; box-shadow: 0 0 35px rgba(0,229,255,0.15); }
+    .btn-secondary { border: 1px solid var(--border); color: var(--text); background: rgba(255,255,255,0.03); }
 
-    .btn-card {
-      display: block;
-      text-align: center;
-      background: var(--cyan);
-      color: var(--bg-dark);
-      padding: 12px;
-      border-radius: 6px;
-      font-weight: 800;
-      font-size: 11px;
-      transition: 0.2s;
+    /* LAYOUT COM SIDEBAR INFOMONEY */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr;
+      gap: 30px;
     }
 
-    /* BANNER INFOMONEY */
-    .news-banner {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      padding: 20px;
-      height: fit-content;
+    /* CARDS DE PRODUTO/BAIRRO */
+    .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .card-product {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: .2s;
     }
-    .news-banner-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 15px;
+    .card-product:hover { border-color: var(--cyan-border); transform: translateY(-3px); }
+    .card-img {
+      height: 160px; background: #000; position: relative; border-bottom: 1px solid var(--border);
     }
-    .news-tag {
-      background: #ff0055;
-      color: #fff;
-      font-size: 9px;
-      font-weight: 800;
-      padding: 2px 6px;
-      border-radius: 4px;
-      letter-spacing: 1px;
+    .card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .card-tag {
+      position: absolute; top: 12px; left: 12px; background: rgba(5,7,10,0.85); border: 1px solid var(--cyan); color: var(--cyan); font-size: 10px; font-weight: 800; padding: 4px 8px; border-radius: 4px;
     }
-    .news-banner-header h4 { color: #fff; font-size: 14px; font-weight: 800; }
-    .news-banner-body h5 { color: var(--cyan); font-size: 13px; margin-bottom: 6px; line-height: 1.3; }
-    .news-banner-body p { color: var(--text-muted); font-size: 11px; line-height: 1.4; }
-    .news-banner-footer {
-      display: block;
-      margin-top: 15px;
-      padding-top: 12px;
-      border-top: 1px solid var(--border-color);
-      color: var(--cyan);
-      font-size: 11px;
-      font-weight: 700;
+    .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .card-body h3 { font-size: 18px; margin-bottom: 8px; }
+    .card-body p { color: var(--muted); font-size: 13px; margin-bottom: 15px; }
+
+    /* SIDEBAR INFOMONEY */
+    .news-sidebar {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; height: fit-content;
+    }
+    .news-header { display: flex; align-items: center; gap: 8px; margin-bottom: 15px; }
+    .news-tag { background: #ff0055; color: #fff; font-size: 9px; font-weight: 800; padding: 2px 6px; border-radius: 4px; }
+    .news-body h5 { color: var(--cyan); font-size: 14px; margin-bottom: 8px; }
+    .news-body p { color: var(--muted); font-size: 12px; line-height: 1.5; }
+
+    /* VIDEOS 9:16 */
+    .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .video-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .video-wrapper { position: relative; aspect-ratio: 9/16; background: #000; }
+    .video-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video-info { padding: 15px; }
+
+    /* FORMULARIO */
+    .form-box { max-width: 650px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 35px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 700; margin-bottom: 6px; color: var(--cyan); }
+    .form-group input, .form-group select {
+      width: 100%; height: 50px; border: 1px solid var(--border); border-radius: 8px; background: #080c11; color: var(--text); padding: 0 15px; font-family: inherit; outline: none;
     }
 
-    /* MOBILE RESPONSIVO */
+    /* WHATSAPP FLUTUANTE */
+    .whatsapp {
+      position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; background: var(--green);
+      display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.4); z-index: 200;
+    }
+
     @media (max-width: 850px) {
-      .grid-layout { grid-template-columns: 1fr; }
-      .grid-products { grid-template-columns: 1fr; }
+      .main-grid { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="logo">
-      YINCORP GROUP
-      <span>PORTAL ZONA OESTE • SP</span>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <a href="#top">
+        <img src="/LOGO.jpeg" alt="Yincorp Group" class="logo">
+      </a>
+      <a href="#contato" class="nav-cta">Receber Raio-X</a>
     </div>
-    <span style="font-size: 10px; color: var(--text-muted);">2026</span>
-  </div>
-</header>
+  </header>
 
-<main>
-  <section class="hero">
-    <div class="container">
-      <span class="badge">Painel de Demonstração</span>
-      <h1>Escolha a experiência para <span>testar</span></h1>
-      <p>Acesse abaixo qualquer um dos dois projetos ativos na infraestrutura da Yincorp.</p>
-    </div>
-  </section>
+  <main id="top">
 
-  <section class="products-section">
-    <div class="container">
-      <div class="grid-layout">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">PORTAL DE INTELIGÊNCIA IMOBILIÁRIA</div>
+        <h1>Panorama de Lançamentos <span>Zona Oeste SP 2026</span></h1>
+        <p class="hero-subtitle">
+          Análise de valorização do m², infraestrutura de mobilidade e raio-X completo dos empreendimentos mais desejados de <strong>Perdizes, Pompéia e Pinheiros</strong>.
+        </p>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a href="#produtos" class="btn btn-primary">VER PROJETOS EM DESTAQUE</a>
+          <a href="#contato" class="btn btn-secondary">BAIXAR COMPARATIVO DE M²</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTOS + SIDEBAR INFOMONEY -->
+    <section class="section" id="produtos">
+      <div class="container">
         
-        <!-- COLUNA DA ESQUERDA: CARDS DOS PRODUTOS -->
-        <div class="grid-products">
+        <div class="main-grid">
+          
+          <!-- ESQUERDA: LANÇAMENTOS -->
+          <div>
+            <div class="eyebrow">SELEÇÃO DA REGIÃO</div>
+            <h2>Empreendimentos em Destaque</h2>
+            <p style="color: var(--muted); margin-bottom: 25px; font-size: 14px;">Clique no produto para abrir a página dedicada com tabela e plantas exclusivas:</p>
 
-          <!-- CARD 1: WELL PERDIZES -->
-          <article class="card-product">
-            <div class="card-img" style="background-image: url('../LOGO.jpeg');">
-              <span class="card-tag">B2C • IMÓVEIS</span>
-            </div>
-            <div class="card-body">
-              <div>
-                <h3>Well Perdizes</h3>
-                <p>Studios e 1&2 Dorms no coração de Perdizes com lazer no rooftop.</p>
-                <ul class="card-features">
-                  <li>Opções de 28m² a 64m²</li>
-                  <li>Ideal para morar ou investir</li>
-                  <li>A poucas quadras da PUC</li>
-                </ul>
-              </div>
-              <a href="https://www.yincorp.com.br/well-perdizes" target="_blank" rel="noopener" class="btn-card">ACESSAR WELL PERDIZES →</a>
-            </div>
-          </article>
+            <div class="products-grid">
+              
+              <!-- WELL PERDIZES -->
+              <article class="card-product">
+                <div class="card-img">
+                  <span class="card-tag">PERDIZES</span>
+                  <img src="/LOGO.jpeg" alt="Well Perdizes">
+                </div>
+                <div class="card-body">
+                  <div>
+                    <h3>Well Perdizes</h3>
+                    <p>Studios e 1&2 Dorms na Rua Cardoso de Almeida. Lazer completo no rooftop e alta rentabilidade.</p>
+                  </div>
+                  <a href="https://www.yincorp.com.br/well-perdizes" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 11px; height: 42px;">PÁGINA DO PRODUTO →</a>
+                </div>
+              </article>
 
-          <!-- CARD 2: ROBOT.NIC 100LEADS -->
-          <article class="card-product">
-            <div class="card-img" style="background-image: url('../LOGO.jpeg');">
-              <span class="card-tag">B2B • INFRAESTRUTURA</span>
+              <!-- INFRAESTRUTURA ROBOT.NIC -->
+              <article class="card-product">
+                <div class="card-img">
+                  <span class="card-tag">B2B • TECNOLOGIA</span>
+                  <img src="/LOGO.jpeg" alt="ROBOT.NIC">
+                </div>
+                <div class="card-body">
+                  <div>
+                    <h3>ROBOT.NIC 100Leads</h3>
+                    <p>Infraestrutura serverless para corretores e imobiliárias não perderem leads de tráfego pago.</p>
+                  </div>
+                  <a href="https://www.yincorp.com.br/100leads" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 11px; height: 42px;">VER INFRAESTRUTURA →</a>
+                </div>
+              </article>
+
             </div>
-            <div class="card-body">
-              <div>
-                <h3>ROBOT.NIC • 100Leads</h3>
-                <p>Infraestrutura digital imobiliária serverless para otimização de tráfego.</p>
-                <ul class="card-features">
-                  <li>Carregamento sub-segundo na Vercel</li>
-                  <li>Meta CAPI Server-Side integrado</li>
-                  <li>Dupla conversão e UTMs</li>
-                </ul>
-              </div>
-              <a href="https://www.yincorp.com.br/100leads" target="_blank" rel="noopener" class="btn-card">ACESSAR 100LEADS →</a>
+          </div>
+
+          <!-- DIREITA: FEED INFOMONEY -->
+          <aside class="news-sidebar">
+            <div class="news-header">
+              <span class="news-tag">INFOMONEY</span>
+              <h4 style="font-size: 13px; color: #fff;">Mercado Imobiliário</h4>
             </div>
-          </article>
+            <div id="newsContent" class="news-body">
+              <p style="font-size: 11px; color: var(--muted);">Carregando notícias do setor...</p>
+            </div>
+            <a id="newsLink" href="https://www.infomoney.com.br/tudo-sobre/mercado-imobiliario/" target="_blank" rel="noopener" style="display: block; margin-top: 15px; color: var(--cyan); font-size: 11px; font-weight: 800;">
+              Ler no InfoMoney →
+            </a>
+          </aside>
 
         </div>
 
-        <!-- COLUNA DA DIREITA: BANNER INFOMONEY -->
-        <aside class="news-banner">
-          <div class="news-banner-header">
-            <span class="news-tag">INFOMONEY</span>
-            <h4>Mercado Imobiliário</h4>
-          </div>
-          <div id="newsContent" class="news-banner-body">
-            <p>Carregando análises do InfoMoney...</p>
-          </div>
-          <a id="newsLink" href="https://www.infomoney.com.br/tudo-sobre/mercado-imobiliario/" target="_blank" rel="noopener" class="news-banner-footer">
-            Ver todas no InfoMoney →
-          </a>
-        </aside>
-
       </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<script>
-  // RSS Feed de Mercado Imobiliário do InfoMoney
-  const INFOMONEY_RSS = 'https://api.rss2json.com/v1/api.json?rss_url=https://www.infomoney.com.br/tudo-sobre/mercado-imobiliario/feed/';
+    <!-- VÍDEOS DE APRESENTAÇÃO (9:16) -->
+    <section class="section" style="background: #070b10;">
+      <div class="container">
+        <div class="section-intro" style="text-align: center; margin: 0 auto 40px;">
+          <div class="eyebrow">ANÁLISE EM VÍDEO</div>
+          <h2>Conheça a Zona Oeste em detalhes</h2>
+        </div>
 
-  async function loadInfoMoneyNews() {
-    try {
-      const res = await fetch(INFOMONEY_RSS);
-      const data = await res.json();
-      
-      if (data.status === 'ok' && data.items.length > 0) {
-        const item = data.items[0]; // Pega a matéria mais recente do InfoMoney
-        document.getElementById('newsContent').innerHTML = `
-          <h5>${item.title}</h5>
-          <p>${item.description.replace(/<[^>]*>?/gm, '').substring(0, 95)}...</p>
-        `;
-        document.getElementById('newsLink').href = item.link;
-      } else {
-        throw new Error('Falha no feed');
+        <div class="video-grid">
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/x53fTIxbw1w" title="Vídeo 1" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <h3 style="font-size: 14px;">01 · Potencial de Perdizes</h3>
+              <p style="font-size: 11px; color: var(--muted);">Análise do m² perto das novas estações de metrô.</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/O9cwqymRCMM" title="Vídeo 2" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <h3 style="font-size: 14px;">02 · Perfil de Investimento</h3>
+              <p style="font-size: 11px; color: var(--muted);">Comparativo de rentabilidade entre Studios e 2 Dorms.</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/6oEwihkZhRs" title="Vídeo 3" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <h3 style="font-size: 14px;">03 · Condições Exclusivas</h3>
+              <p style="font-size: 11px; color: var(--muted);">Tabela de pré-lançamento e prazos de obra.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO DE CAPTURA COM TRIPLE TRACKING -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="form-box">
+          <h2 style="text-align: center; font-size: 26px;">Receber Relatório da Zona Oeste</h2>
+          <p style="text-align: center; color: var(--muted); font-size: 13px; margin-bottom: 25px;">Preencha para receber no seu WhatsApp o comparativo de lançamentos e tabelas da região.</p>
+
+          <form id="leadForm">
+            <div class="form-group">
+              <label for="name">Nome Completo</label>
+              <input type="text" id="name" required placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+              <label for="phone">WhatsApp com DDD</label>
+              <input type="tel" id="phone" required placeholder="(11) 99999-9999">
+            </div>
+            <div class="form-group">
+              <label for="role">Objetivo de Busca</label>
+              <select id="role" required>
+                <option value="Comprar para Morar">Comprar para Morar</option>
+                <option value="Investir em Locação">Investir em Locação / Renda</option>
+                <option value="Corretor / Parceiro">Sou Corretor de Imóveis</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">SOLICITAR RELATÓRIO NO WHATSAPP →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="https://wa.me/5511992976368?text=Ol%C3%A1!%20Vim%20pelo%20Portal%20Zona%20Oeste." class="whatsapp" target="_blank" rel="noopener">
+    <span style="color: #fff; font-size: 22px; font-weight: bold;">↗</span>
+  </a>
+
+  <script>
+    // FEED INFOMONEY
+    const INFOMONEY_RSS = 'https://api.rss2json.com/v1/api.json?rss_url=https://www.infomoney.com.br/tudo-sobre/mercado-imobiliario/feed/';
+
+    async function loadNews() {
+      try {
+        const res = await fetch(INFOMONEY_RSS);
+        const data = await res.json();
+        if (data.status === 'ok' && data.items.length > 0) {
+          const item = data.items[0];
+          document.getElementById('newsContent').innerHTML = `
+            <h5>${item.title}</h5>
+            <p>${item.description.replace(/<[^>]*>?/gm, '').substring(0, 95)}...</p>
+          `;
+          document.getElementById('newsLink').href = item.link;
+        }
+      } catch (e) {
+        document.getElementById('newsContent').innerHTML = `<p style="font-size:11px;">Acompanhe os indicadores e valorização do m² no mercado imobiliário.</p>`;
       }
-    } catch (e) {
-      // Fallback elegante caso a API de RSS demore a responder
-      document.getElementById('newsContent').innerHTML = `
-        <h5>Valorização e Tendências do Mercado</h5>
-        <p>Acompanhe os principais indicadores, valorização do m² e relatórios do setor no InfoMoney.</p>
-      `;
-      document.getElementById('newsLink').href = 'https://www.infomoney.com.br/tudo-sobre/mercado-imobiliario/';
     }
-  }
+    loadNews();
 
-  loadInfoMoneyNews();
-</script>
+    // RASTREAMENTO E SUBMIT DO FORMULÁRIO (DUPLA CONVERSÃO)
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const role = document.getElementById('role').value;
+
+      // Meta Pixel
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', { content_name: 'Guia Zona Oeste', content_category: role });
+      }
+
+      // Disparo Serverless API
+      try {
+        fetch('/api/lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, phone, role, page: 'zona-oeste' }),
+          keepalive: true
+        });
+      } catch (err) {}
+
+      // Redirecionamento WhatsApp
+      const msg = `Olá! Meu nome é ${name}. Acessei o Portal da Zona Oeste (${role}) e gostaria de receber o relatório.`;
+      window.location.href = `https://wa.me/5511992976368?text=${encodeURIComponent(msg)}`;
+    });
+  </script>
 
 </body>
 </html>
