@@ -181,7 +181,7 @@
       color: var(--bg-dark);
     }
 
-    /* LEAD CAPTURE (CAPTURA GERAL) */
+    /* LEAD CAPTURA GERAL */
     .hub-lead-box {
       background: #070a12;
       border: 1px solid var(--border-color);
@@ -242,23 +242,23 @@
     <div class="container">
       <span class="badge">Especial Mercado Imobiliário</span>
       <h1>Panorama de Lançamentos <span>Zona Oeste SP</span></h1>
-      <p>Compare metragens, valores por m² e diferenciais dos empreendimentos mais desejados de Perdizes, Pompéia e Pinheiros em um só lugar.</p>
+      <p>Compare metragens, valores por m² e diferenciais dos empreendimentos mais desejados de Perdizes e da região em um só lugar.</p>
     </div>
   </section>
 
   <section class="products-section">
     <div class="container">
       <div class="section-title">
-        <h2>Selecione o perfil de imóvel que você procura:</h2>
-        <p>Clique no projeto para ver a apresentação técnica completa e a tabela de valores.</p>
+        <h2>Selecione a opção que você deseja conhecer:</h2>
+        <p>Acesse a apresentação técnica e o direcionamento para o canal correspondente.</p>
       </div>
 
       <div class="grid-products">
 
-        <!-- PRODUTO 1: WELL PERDIZES -->
+        <!-- CARD 1: WELL PERDIZES (/well-perdizes) -->
         <article class="card-product">
-          <div class="card-img" style="background-image: url('https://www.yincorp.com.br/well-perdizes/LOGO.jpeg');">
-            <span class="card-tag">PERDIZES</span>
+          <div class="card-img" style="background-image: url('/LOGO.jpeg');">
+            <span class="card-tag">LANÇAMENTO • PERDIZES</span>
           </div>
           <div class="card-body">
             <div>
@@ -267,62 +267,42 @@
               <ul class="card-features">
                 <li>Opções de 28m² a 64m²</li>
                 <li>Ideal para morar ou investir</li>
-                <li>A 4 min do metrô e da PUC</li>
+                <li>A poucas quadras da PUC e do Metrô</li>
               </ul>
             </div>
-            <!-- Ao clicar, dispara evento no Pixel e leva para a Landing Page do produto -->
-            <a href="https://www.yincorp.com.br/well-perdizes" class="btn-card" onclick="trackClickProduct('Well Perdizes')">VER DETALHES DO PROJETO →</a>
+            <a href="https://www.yincorp.com.br/well-perdizes" class="btn-card" onclick="trackClickProduct('Well Perdizes')">VER PÁGINA DO PRODUTO →</a>
           </div>
         </article>
 
-        <!-- PRODUTO 2: EXEMPLO POMPÉIA -->
+        <!-- CARD 2: ROBOT.NIC / 100LEADS (/100leads) -->
         <article class="card-product">
           <div class="card-img" style="background-image: url('/LOGO.jpeg');">
-            <span class="card-tag">POMPÉIA</span>
+            <span class="card-tag">INFRAESTRUTURA B2B</span>
           </div>
           <div class="card-body">
             <div>
-              <h3>Residencial Pompéia Park</h3>
-              <p>Apartamentos de alto padrão com varanda gourmet e 2 ou 3 suítes.</p>
+              <h3>ROBOT.NIC • 100Leads</h3>
+              <p>Infraestrutura digital imobiliária serverless para capturar e converter tráfego em vendas.</p>
               <ul class="card-features">
-                <li>Plantas de 82m² a 115m²</li>
-                <li>2 vagas de garagem demarcadas</li>
-                <li>Próximo ao Allianz Parque</li>
+                <li>Carregamento sub-segundo na Vercel</li>
+                <li>Meta CAPI Server-Side integrado</li>
+                <li>Dupla conversão e rastreamento de UTMs</li>
               </ul>
             </div>
-            <a href="#contato-geral" class="btn-card" onclick="trackClickProduct('Pompéia Park')">SOLICITAR APRESENTAÇÃO →</a>
-          </div>
-        </article>
-
-        <!-- PRODUTO 3: EXEMPLO PINHEIROS -->
-        <article class="card-product">
-          <div class="card-img" style="background-image: url('/LOGO.jpeg');">
-            <span class="card-tag">PINHEIROS</span>
-          </div>
-          <div class="card-body">
-            <div>
-              <h3>Design Pinheiros Studio</h3>
-              <p>Conceito arquitetônico assinado com alta rentabilidade de locação por short-stay.</p>
-              <ul class="card-features">
-                <li>Studios de 24m² a 35m²</li>
-                <li>Gestão de locação automatizada</li>
-                <li>Passos da Estação Fradique Coutinho</li>
-              </ul>
-            </div>
-            <a href="#contato-geral" class="btn-card" onclick="trackClickProduct('Design Pinheiros')">SOLICITAR APRESENTAÇÃO →</a>
+            <a href="https://www.yincorp.com.br/100leads" class="btn-card" onclick="trackClickProduct('ROBOT.NIC 100Leads')">CONHECER A INFRAESTRUTURA →</a>
           </div>
         </article>
 
       </div>
 
-      <!-- CAPTURA DE LEAD PARA QUEM QUER O COMPARATIVO EM PDF -->
+      <!-- CAPTURA DE LEAD SIMPLIFICADA NO HUB -->
       <div class="hub-lead-box" id="contato-geral">
-        <h3>Quer receber o comparativo completo de preço por m²?</h3>
-        <p>Receba a planilha resumida com todos os lançamentos da Zona Oeste no seu WhatsApp.</p>
+        <h3>Quer suporte do Yincorp Group?</h3>
+        <p>Receba atendimento do nosso time técnico ou comercial via WhatsApp.</p>
         
         <form class="lead-form-inline" id="hubForm">
           <input type="tel" id="hubPhone" placeholder="Seu WhatsApp com DDD" required>
-          <button type="submit">RECEBER PLANILHA</button>
+          <button type="submit">SOLICITAR CONTATO</button>
         </form>
       </div>
 
@@ -331,14 +311,12 @@
 </main>
 
 <script>
-  // Rastreia no Meta qual produto despertou interesse antes de redirecionar
   function trackClickProduct(productName) {
     if (typeof fbq !== 'undefined') {
       fbq('trackCustom', 'InteresseProdutoZonaOeste', { product: productName });
     }
   }
 
-  // Captura simplificada no Hub
   document.getElementById('hubForm').addEventListener('submit', function(e){
     e.preventDefault();
     const phone = document.getElementById('hubPhone').value;
@@ -347,8 +325,7 @@
       fbq('track', 'Lead');
     }
 
-    // Dispara WhatsApp
-    const msg = `Olá! Vi o Portal da Zona Oeste e gostaria de receber a planilha comparativa de lançamentos. Meu número: ${phone}`;
+    const msg = `Olá! Acessei o Portal da Zona Oeste e gostaria de receber suporte. Meu WhatsApp: ${phone}`;
     window.open(`https://wa.me/5511992976368?text=${encodeURIComponent(msg)}`, '_blank');
   });
 </script>
