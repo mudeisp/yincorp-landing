@@ -132,18 +132,92 @@
     .section-intro { max-width: 760px; margin-bottom: 42px; }
     .section-intro p { color: var(--muted); font-size: 16px; }
 
-    /* HEADER */
+    /* NOVO HEADER SOFISTICADO */
     header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(5,7,10,0.88); backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5, 7, 10, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
-    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { width: 118px; height: auto; }
+    .nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo {
+      width: 105px;
+      height: auto;
+    }
+    .brand-divider {
+      width: 1px;
+      height: 24px;
+      background: var(--border);
+    }
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+    }
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      background-color: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--green);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
     .nav-cta {
-      border: 1px solid var(--cyan-border); background: var(--cyan-soft);
-      color: var(--cyan); padding: 10px 17px; border-radius: 999px;
-      font-size: 12px; font-weight: 800; text-transform: uppercase; transition: .2s;
+      border: 1px solid var(--cyan-border);
+      background: var(--cyan-soft);
+      color: var(--cyan);
+      padding: 9px 18px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.2s ease;
+      box-shadow: 0 0 15px rgba(0, 229, 255, 0.05);
+    }
+    .nav-cta:hover {
+      background: var(--cyan);
+      color: #001014;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+      transform: translateY(-1px);
     }
 
     /* HERO */
@@ -192,13 +266,6 @@
     .news-body h5 { color: var(--cyan); font-size: 14px; margin-bottom: 8px; }
     .news-body p { color: var(--muted); font-size: 12px; line-height: 1.5; }
 
-    /* VIDEOS 9:16 */
-    .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .video-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
-    .video-wrapper { position: relative; aspect-ratio: 9/16; background: #000; }
-    .video-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-    .video-info { padding: 15px; }
-
     /* FORMULARIO */
     .form-box { max-width: 650px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 35px; }
     .form-group { margin-bottom: 16px; }
@@ -216,19 +283,36 @@
     @media (max-width: 850px) {
       .main-grid { grid-template-columns: 1fr; }
       .products-grid { grid-template-columns: 1fr; }
-      .video-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+      .nav-links { display: none; } /* Oculta links no celular para não poluir */
+      .brand-divider { display: none; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER NOVO -->
   <header>
     <div class="container nav">
-      <a href="#top">
-        <img src="/LOGO.jpeg" alt="Yincorp Group" class="logo">
-      </a>
+      <div class="brand-group">
+        <a href="#top" aria-label="Yincorp Group">
+          <img src="/LOGO.jpeg" alt="Yincorp Group" class="logo">
+        </a>
+        <div class="brand-divider"></div>
+        <div class="live-badge">
+          <span class="live-dot"></span>
+          ZONA OESTE 2026
+        </div>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#produtos">Lançamentos</a></li>
+          <li><a href="#noticias">Mercado</a></li>
+          <li><a href="#contato">Relatório</a></li>
+        </ul>
+      </nav>
+
       <a href="#contato" class="nav-cta">Receber Raio-X</a>
     </div>
   </header>
@@ -259,8 +343,8 @@
           <!-- ESQUERDA: LANÇAMENTOS -->
           <div>
             <div class="eyebrow">SELEÇÃO DA REGIÃO</div>
-            <h2>6 Empreendimentos em Destaque na Zona Oeste</h2>
-            <p style="color: var(--muted); margin-bottom: 25px; font-size: 14px;">Compare 6 empreendimentos selecionados da Zona Oeste e acesse a página dedicada de cada projeto:</p>
+            <h2>Empreendimentos em Destaque na Zona Oeste</h2>
+            <p style="color: var(--muted); margin-bottom: 25px; font-size: 14px;">Compare os empreendimentos selecionados da Zona Oeste e acesse a página dedicada de cada projeto:</p>
 
             <div class="products-grid">
               
@@ -279,7 +363,7 @@
                 </div>
               </article>
 
-              <!-- CONDOMÍNIO 02 — PREENCHER -->
+              <!-- CONDOMÍNIO 02 -->
               <article class="card-product">
                 <div class="card-img">
                   <span class="card-tag">ZONA OESTE</span>
@@ -291,7 +375,7 @@
                 </div>
               </article>
 
-              <!-- CONDOMÍNIO 03 — PREENCHER -->
+              <!-- CONDOMÍNIO 03 -->
               <article class="card-product">
                 <div class="card-img">
                   <span class="card-tag">ZONA OESTE</span>
@@ -303,7 +387,7 @@
                 </div>
               </article>
 
-              <!-- CONDOMÍNIO 04 — PREENCHER -->
+              <!-- CONDOMÍNIO 04 -->
               <article class="card-product">
                 <div class="card-img">
                   <span class="card-tag">ZONA OESTE</span>
@@ -315,7 +399,7 @@
                 </div>
               </article>
 
-              <!-- CONDOMÍNIO 05 — PREENCHER -->
+              <!-- CONDOMÍNIO 05 -->
               <article class="card-product">
                 <div class="card-img">
                   <span class="card-tag">ZONA OESTE</span>
@@ -327,19 +411,12 @@
                 </div>
               </article>
 
-              <!-- CONDOMÍNIO 06 — PREENCHER -->
+              <!-- ROBOT.NIC 100LEADS -->
               <article class="card-product">
                 <div class="card-img">
-                  <span class="card-tag">ZONA OESTE</span>
-                  <img src="/LOGO.jpeg" alt="Condomínio 06 — Zona Oeste">
+                  <span class="card-tag">B2B • TECNOLOGIA</span>
+                  <img src="/LOGO.jpeg" alt="ROBOT.NIC">
                 </div>
-                <div class="card-body">
-                  <div><h3>Condomínio 06</h3><p>Adicione aqui nome, localização, tipologia e principal diferencial.</p></div>
-                  <a href="#contato" class="btn btn-secondary" style="font-size:11px;height:42px;">VER DETALHES →</a>
-                </div>
-              </article>
-
-            </div>
                 <div class="card-body">
                   <div>
                     <h3>ROBOT.NIC 100Leads</h3>
@@ -353,7 +430,7 @@
           </div>
 
           <!-- DIREITA: FEED INFOMONEY -->
-          <aside class="news-sidebar">
+          <aside class="news-sidebar" id="noticias">
             <div class="news-header">
               <span class="news-tag">INFOMONEY</span>
               <h4 style="font-size: 13px; color: #fff;">Mercado Imobiliário</h4>
@@ -370,11 +447,6 @@
 
       </div>
     </section>
-
-    <!-- VÍDEOS FUTUROS
-         Seção reservada para os novos vídeos da Zona Oeste.
-         Inserir os vídeos quando estiverem prontos.
-    -->
 
     <!-- FORMULÁRIO DE CAPTURA COM TRIPLE TRACKING -->
     <section class="section" id="contato">
