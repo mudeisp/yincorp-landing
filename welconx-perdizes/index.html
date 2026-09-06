@@ -745,7 +745,7 @@
 
     .videos-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 25px;
       margin-top: 40px;
     }
@@ -762,6 +762,44 @@
       width: 100%;
       height: 100%;
       border: 0;
+    }
+
+    .floorplan-card {
+      position: relative;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .floorplan-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #fff;
+    }
+
+    .floorplan-overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 18px 20px;
+      background: linear-gradient(transparent, rgba(0,0,0,.85));
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .floorplan-overlay span {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #ddd;
+    }
+
+    .floorplan-overlay strong {
+      font-size: 17px;
     }
 
     /* LOCATION */
@@ -1289,6 +1327,21 @@
           >
             Ver localização
           </a>
+
+        </div>
+
+        <div class="video-wrapper floorplan-card">
+
+          <img
+            src="/assets/welconx-perdizes/welconx-perdizes.png"
+            alt="Planta do apartamento de 40 m² com 2 dormitórios do Welconx Perdizes"
+            loading="lazy"
+          >
+
+          <div class="floorplan-overlay">
+            <span>Planta do apartamento</span>
+            <strong>40 m² · 2 dormitórios</strong>
+          </div>
 
         </div>
 
