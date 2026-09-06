@@ -743,8 +743,14 @@
       background: #0e0e0e;
     }
 
-    .video-wrapper {
+    .videos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
       margin-top: 40px;
+    }
+
+    .video-wrapper {
       border-radius: 8px;
       overflow: hidden;
       border: 1px solid #333;
@@ -1102,6 +1108,10 @@
       .property-grid,
       .location-grid,
       .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .videos-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1502,20 +1512,33 @@
         com um consultor.
       </p>
 
-      <div class="video-wrapper">
+      <div class="videos-grid">
 
-        <!--
-          SUBSTITUA O ID ABAIXO PELO VÍDEO CORRETO DO WELCONX PERDIZES.
-        -->
+        <div class="video-wrapper">
 
-        <iframe
-          src="https://www.youtube.com/embed/SEU_VIDEO_WELCONX_PERDIZES"
-          title="Welconx Perdizes"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          onclick="trackVideo()"
-        ></iframe>
+          <iframe
+            src="https://www.youtube.com/embed/p9AwnJzPAwo"
+            title="Welconx Perdizes — vídeo 1"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+        </div>
+
+        <div class="video-wrapper">
+
+          <iframe
+            src="https://www.youtube.com/embed/8xy-qWsKHgQ"
+            title="Welconx Perdizes — vídeo 2"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+        </div>
 
       </div>
 
