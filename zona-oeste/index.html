@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -43,15 +45,122 @@
     content="https://www.yincorp.com.br/zona-oeste"
   >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- =====================================================
+       GOOGLE ANALYTICS 4
+  ====================================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2W11SX5VV"></script>
+
+  <script>
+
+    window.dataLayer =
+      window.dataLayer || [];
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    gtag(
+      "js",
+      new Date()
+    );
+
+    gtag(
+      "config",
+      "G-Y2W11SX5VV",
+      {
+        page_title:
+          document.title,
+
+        page_location:
+          window.location.href
+      }
+    );
+
+  </script>
+
+
+  <!-- =====================================================
+       META PIXEL
+  ====================================================== -->
+
+  <script>
+
+    !function(f,b,e,v,n,t,s)
+    {
+      if(f.fbq)return;
+
+      n=f.fbq=function(){
+
+        n.callMethod ?
+        n.callMethod.apply(
+          n,
+          arguments
+        ) :
+        n.queue.push(arguments);
+
+      };
+
+      if(!f._fbq)
+        f._fbq=n;
+
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+
+      t=b.createElement(e);
+      t.async=!0;
+
+      t.src=v;
+
+      s=b.getElementsByTagName(e)[0];
+
+      s.parentNode.insertBefore(
+        t,
+        s
+      );
+
+    }(
+      window,
+      document,
+      'script',
+      'https://connect.facebook.net/en_US/fbevents.js'
+    );
+
+
+    fbq(
+      'init',
+      '1552958819302786'
+    );
+
+    fbq(
+      'track',
+      'PageView'
+    );
+
+  </script>
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   >
 
+
   <style>
+
     :root{
       --bg:#0f1115;
       --soft:#171b22;
@@ -811,6 +920,7 @@
       .metrics{
         grid-template-columns:repeat(2,1fr)
       }
+
     }
 
     @media(max-width:560px){
@@ -872,17 +982,27 @@
       .metric strong{
         font-size:22px
       }
+
     }
+
   </style>
+
 </head>
 
+
 <body>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
 
   <header>
 
     <nav
       class="nav"
       aria-label="Navegação principal"
+    >
 
       <a
         href="#top"
@@ -890,6 +1010,7 @@
         aria-label="Zona Oeste Nobre - início"
       >
       </a>
+
 
       <ul>
 
@@ -913,9 +1034,11 @@
 
       </ul>
 
+
       <a
         href="#contato"
         class="nav-cta"
+        onclick="trackClick('receber_raio_x')"
       >
         RECEBER RAIO-X
       </a>
@@ -928,13 +1051,14 @@
   <main id="top">
 
 
-    <!-- HERO -->
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
     <section class="hero">
 
       <div class="container hero-content">
 
-        >
 
         <div
           class="eyebrow"
@@ -942,6 +1066,7 @@
         >
           PORTAL DE INTELIGÊNCIA IMOBILIÁRIA
         </div>
+
 
         <h1>
 
@@ -953,33 +1078,40 @@
 
         </h1>
 
+
         <p>
 
           Análise de valorização do m², mobilidade e empreendimentos
           em destaque de
+
           <strong>
             Perdizes, Pompéia e Pinheiros.
           </strong>
 
         </p>
 
+
         <div class="hero-actions">
 
           <a
             href="#produtos"
             class="btn primary"
+            onclick="trackClick('ver_projetos_destaque')"
           >
             VER PROJETOS EM DESTAQUE
           </a>
 
+
           <a
             href="#contato"
             class="btn secondary"
+            onclick="trackClick('baixar_comparativo')"
           >
             BAIXAR COMPARATIVO DE M²
           </a>
 
         </div>
+
 
         <div class="hero-numbers">
 
@@ -995,6 +1127,7 @@
 
           </div>
 
+
           <div>
 
             <strong>
@@ -1006,6 +1139,7 @@
             </span>
 
           </div>
+
 
           <div>
 
@@ -1026,7 +1160,9 @@
     </section>
 
 
-    <!-- PRODUTOS -->
+    <!-- =====================================================
+         PRODUTOS
+    ====================================================== -->
 
     <section
       class="section"
@@ -1035,13 +1171,16 @@
 
       <div class="container">
 
+
         <div class="eyebrow">
           SELEÇÃO DA REGIÃO
         </div>
 
+
         <h2>
           Empreendimentos em Destaque
         </h2>
+
 
         <p class="lead">
 
@@ -1070,15 +1209,18 @@
 
               </div>
 
+
               <div class="card-body">
 
                 <h3>
-                  Well Perdizes (Lançamento com super preço) 
+                  Well Perdizes (Lançamento com super preço)
                 </h3>
+
 
                 <span class="price">
                   34m² 2 dorms À partir de R$ 340 mil
                 </span>
+
 
                 <p>
 
@@ -1086,6 +1228,7 @@
                   na Rua Cardoso de Almeida x Rua Turiassu, em Perdizes.
 
                 </p>
+
 
                 <a
                   href="https://www.yincorp.com.br/well-perdizes"
@@ -1114,15 +1257,18 @@
 
               </div>
 
+
               <div class="card-body">
 
                 <h3>
                   Welconx Perdizes (Pronto, perto PUC)
                 </h3>
 
+
                 <span class="price">
-                  40 m² · R$ 499 mil Promocão 12º
+                  40 m² · R$ 499 mil Promoção 12º
                 </span>
+
 
                 <p>
 
@@ -1130,6 +1276,7 @@
                   em Perdizes. Oferta anunciada de R$ 499 mil.
 
                 </p>
+
 
                 <a
                   href="https://www.yincorp.com.br/welconx-perdizes"
@@ -1158,15 +1305,18 @@
 
               </div>
 
+
               <div class="card-body">
 
                 <h3>
                   Villa Pompeia (Pronto no SESC Pompeia)
                 </h3>
 
+
                 <span class="price">
-                  35 m² 2 dorms com varanda · R$ 470 mil *Promoção"
+                  35 m² 2 dorms com varanda · R$ 470 mil *Promoção
                 </span>
+
 
                 <p>
 
@@ -1175,6 +1325,7 @@
                   na Pompéia.
 
                 </p>
+
 
                 <a
                   href="https://www.yincorp.com.br/villa-pompeia"
@@ -1203,15 +1354,18 @@
 
               </div>
 
+
               <div class="card-body">
 
                 <h3>
                   Marka Perdizes
                 </h3>
 
+
                 <span class="price">
                   Em breve 36 m² · R$ 329 mil
                 </span>
+
 
                 <p>
 
@@ -1219,6 +1373,7 @@
                   com valor anunciado de R$ 329 mil.
 
                 </p>
+
 
                 <a
                   href="#contato"
@@ -1245,15 +1400,18 @@
 
               </div>
 
+
               <div class="card-body">
 
                 <h3>
                   Today Perdizes
                 </h3>
 
+
                 <span class="price">
-                 Em Breve 41 m² · R$ 479 mil
+                  Em Breve 41 m² · R$ 479 mil
                 </span>
+
 
                 <p>
 
@@ -1261,6 +1419,7 @@
                   com valor anunciado de R$ 479 mil.
 
                 </p>
+
 
                 <a
                   href="#contato"
@@ -1287,15 +1446,18 @@
 
               </div>
 
+
               <div class="card-body">
 
                 <h3>
                   Welconx Pinheiros (Pronto, SESC Pinheiros)
                 </h3>
 
+
                 <span class="price">
                   31m² 1 dorm "Promocional" de R$ 383.600
                 </span>
+
 
                 <p>
 
@@ -1303,6 +1465,7 @@
                   com unidades anunciadas a partir de R$ 383.600.
 
                 </p>
+
 
                 <a
                   href="#contato"
@@ -1320,7 +1483,9 @@
           </div>
 
 
-          <!-- SIDEBAR -->
+          <!-- =================================================
+               SIDEBAR
+          ================================================== -->
 
           <aside>
 
@@ -1330,6 +1495,7 @@
               <div class="eyebrow">
                 MERCADO LOCAL
               </div>
+
 
               <h3>
                 Radar Zona Oeste
@@ -1387,6 +1553,7 @@
               <a
                 href="#mercado"
                 class="market-link"
+                onclick="trackClick('analise_regional')"
               >
                 VER ANÁLISE REGIONAL →
               </a>
@@ -1403,9 +1570,11 @@
                 ACESSO EXCLUSIVO
               </div>
 
+
               <h3>
                 Receba o relatório completo
               </h3>
+
 
               <p>
 
@@ -1414,9 +1583,11 @@
 
               </p>
 
+
               <a
                 href="#contato"
                 class="btn primary"
+                onclick="trackClick('quero_receber_relatorio')"
               >
                 QUERO RECEBER
               </a>
@@ -1434,7 +1605,9 @@
     </section>
 
 
-    <!-- MERCADO -->
+    <!-- =====================================================
+         MERCADO
+    ====================================================== -->
 
     <section
       class="section"
@@ -1443,13 +1616,16 @@
 
       <div class="container">
 
+
         <div class="eyebrow">
           INTELIGÊNCIA DE MERCADO
         </div>
 
+
         <h2>
           Por que a Zona Oeste segue no radar?
         </h2>
+
 
         <p class="lead">
 
@@ -1461,6 +1637,7 @@
 
 
         <div class="metrics">
+
 
           <div class="metric">
 
@@ -1513,6 +1690,7 @@
 
           </div>
 
+
         </div>
 
 
@@ -1523,6 +1701,7 @@
             class="map-art"
             aria-label="Mapa ilustrativo da Zona Oeste"
           >
+
 
             <span class="pin p1">
 
@@ -1550,20 +1729,24 @@
 
             </span>
 
+
           </div>
 
 
           <div class="map-content">
 
+
             <div class="eyebrow">
               EIXO DE VALORIZAÇÃO
             </div>
+
 
             <h3
               style="font-size:25px;margin-bottom:12px"
             >
               Localização que conecta estilo de vida e investimento
             </h3>
+
 
             <p>
 
@@ -1572,6 +1755,7 @@
               trabalho, lazer, cultura e mobilidade.
 
             </p>
+
 
             <ul class="map-list">
 
@@ -1593,17 +1777,21 @@
 
             </ul>
 
+
           </div>
 
 
         </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- CONTATO -->
+    <!-- =====================================================
+         CONTATO
+    ====================================================== -->
 
     <section
       class="section"
@@ -1612,6 +1800,7 @@
 
       <div class="container">
 
+
         <div
           class="eyebrow"
           style="justify-content:center"
@@ -1619,9 +1808,11 @@
           RELATÓRIO PERSONALIZADO
         </div>
 
+
         <h2>
           Receba o Raio-X da Zona Oeste
         </h2>
+
 
         <p
           class="lead"
@@ -1703,6 +1894,7 @@
               SEU PRINCIPAL INTERESSE
             </label>
 
+
             <select
               id="interesse"
               name="interesse"
@@ -1713,19 +1905,19 @@
                 Selecione uma opção
               </option>
 
-              <option>
+              <option value="Comprar para morar">
                 Comprar para morar
               </option>
 
-              <option>
+              <option value="Investir em imóvel">
                 Investir em imóvel
               </option>
 
-              <option>
+              <option value="Conhecer lançamentos">
                 Conhecer lançamentos
               </option>
 
-              <option>
+              <option value="Comparar regiões e valores">
                 Comparar regiões e valores
               </option>
 
@@ -1737,6 +1929,7 @@
           <button
             class="btn primary"
             type="submit"
+            id="submitButton"
           >
             QUERO RECEBER O RELATÓRIO
           </button>
@@ -1754,14 +1947,13 @@
             class="success"
             id="success"
           >
-
             Dados enviados com sucesso.
             Em breve, um especialista entrará em contato.
-
           </p>
 
 
         </form>
+
 
       </div>
 
@@ -1771,7 +1963,9 @@
   </main>
 
 
-  <!-- WHATSAPP -->
+  <!-- =====================================================
+       WHATSAPP
+  ====================================================== -->
 
   <a
     class="whatsapp"
@@ -1779,12 +1973,15 @@
     target="_blank"
     rel="noopener"
     aria-label="Falar pelo WhatsApp"
+    onclick="trackClick('whatsapp')"
   >
     ◔
   </a>
 
 
-  <!-- FOOTER -->
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
   <footer>
 
@@ -1798,6 +1995,7 @@
 
     </p>
 
+
     <p style="margin-top:7px">
 
       © 2026 Yincorp Group.
@@ -1808,11 +2006,54 @@
   </footer>
 
 
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
   <script>
 
-    /* =========================
+
+    /* =====================================================
+       CAPTURA DE UTMs
+    ====================================================== */
+
+    function getUTMs(){
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+      return {
+
+        utm_source:
+          params.get("utm_source") ||
+          "",
+
+        utm_medium:
+          params.get("utm_medium") ||
+          "",
+
+        utm_campaign:
+          params.get("utm_campaign") ||
+          "",
+
+        utm_content:
+          params.get("utm_content") ||
+          "",
+
+        utm_term:
+          params.get("utm_term") ||
+          ""
+
+      };
+
+    }
+
+
+    /* =====================================================
        TRACKING DOS CARDS
-    ========================= */
+    ====================================================== */
 
     function trackClick(product){
 
@@ -1824,8 +2065,34 @@
           "event",
           "click_project",
           {
-            project_name: product,
-            page_location: window.location.href
+
+            project_name:
+              product,
+
+            page_location:
+              window.location.href
+
+          }
+        );
+
+      }
+
+
+      if(
+        typeof window.fbq === "function"
+      ){
+
+        window.fbq(
+          "trackCustom",
+          "ClickProject",
+          {
+
+            project_name:
+              product,
+
+            page_location:
+              window.location.href
+
           }
         );
 
@@ -1834,21 +2101,37 @@
     }
 
 
-    /* =========================
-       FORMULÁRIO
-    ========================= */
+    /* =====================================================
+       ELEMENTOS DO FORMULÁRIO
+    ====================================================== */
 
     const form =
-      document.getElementById("leadForm");
+      document.getElementById(
+        "leadForm"
+      );
+
 
     const success =
-      document.getElementById("success");
+      document.getElementById(
+        "success"
+      );
+
 
     const phone =
-      document.getElementById("telefone");
+      document.getElementById(
+        "telefone"
+      );
 
 
-    /* MÁSCARA WHATSAPP */
+    const btn =
+      document.getElementById(
+        "submitButton"
+      );
+
+
+    /* =====================================================
+       MÁSCARA WHATSAPP
+    ====================================================== */
 
     phone.addEventListener(
       "input",
@@ -1856,11 +2139,13 @@
 
         let v =
           this.value
-          .replace(/\D/g,"")
-          .slice(0,11);
+            .replace(/\D/g,"")
+            .slice(0,11);
 
 
-        if(v.length > 10){
+        if(
+          v.length > 10
+        ){
 
           v =
             v.replace(
@@ -1870,7 +2155,9 @@
 
         }
 
-        else if(v.length > 6){
+        else if(
+          v.length > 6
+        ){
 
           v =
             v.replace(
@@ -1880,7 +2167,9 @@
 
         }
 
-        else if(v.length > 2){
+        else if(
+          v.length > 2
+        ){
 
           v =
             v.replace(
@@ -1897,54 +2186,285 @@
     );
 
 
-    /* ENVIO DO FORMULÁRIO */
+    /* =====================================================
+       ENVIO DO FORMULÁRIO
+    ====================================================== */
 
     form.addEventListener(
       "submit",
-      function(e){
+      async function(e){
 
         e.preventDefault();
 
 
-        success.style.display =
-          "block";
+        if(
+          btn.disabled
+        ){
+
+          return;
+
+        }
 
 
-        const btn =
-          form.querySelector("button");
+        const nome =
+          document
+            .getElementById("nome")
+            .value
+            .trim();
 
 
-        btn.textContent =
-          "SOLICITAÇÃO ENVIADA ✓";
+        const telefone =
+          document
+            .getElementById("telefone")
+            .value
+            .trim();
 
+
+        const email =
+          document
+            .getElementById("email")
+            .value
+            .trim();
+
+
+        const interesse =
+          document
+            .getElementById("interesse")
+            .value;
+
+
+        const utms =
+          getUTMs();
+
+
+        const payload = {
+
+          nome:
+            nome,
+
+          telefone:
+            telefone,
+
+          email:
+            email,
+
+          perfil:
+            interesse,
+
+          origem:
+            "zona-oeste",
+
+          source:
+            "zona-oeste",
+
+          property:
+            "Zona Oeste",
+
+          propertyName:
+            "Zona Oeste",
+
+          propertyType:
+            "Relatório imobiliário",
+
+          page:
+            window.location.href,
+
+          createdAt:
+            new Date().toISOString(),
+
+          utms:
+            utms,
+
+          utm_source:
+            utms.utm_source,
+
+          utm_medium:
+            utms.utm_medium,
+
+          utm_campaign:
+            utms.utm_campaign,
+
+          utm_content:
+            utms.utm_content,
+
+          utm_term:
+            utms.utm_term
+
+        };
+
+
+        /* ================================================
+           ESTADO DO BOTÃO
+        ================================================= */
 
         btn.disabled =
           true;
 
+        btn.textContent =
+          "ENVIANDO...";
 
         btn.style.opacity =
           ".75";
 
 
-        if(
-          typeof window.gtag === "function"
-        ){
+        try {
 
-          window.gtag(
-            "event",
-            "generate_lead",
-            {
-              form_name:
-                "raio_x_zona_oeste"
-            }
+
+          /* ================================================
+             ENVIO PARA API
+          ================================================= */
+
+          const response =
+            await fetch(
+              "/api/lead",
+              {
+
+                method:
+                  "POST",
+
+                headers:
+                {
+                  "Content-Type":
+                    "application/json"
+                },
+
+                body:
+                  JSON.stringify(
+                    payload
+                  )
+
+              }
+            );
+
+
+          const data =
+            await response.json()
+              .catch(
+                () => ({})
+              );
+
+
+          if(
+            !response.ok ||
+            data.success === false
+          ){
+
+            throw new Error(
+              data.error ||
+              "Erro ao enviar o lead"
+            );
+
+          }
+
+
+          /* ================================================
+             GOOGLE ANALYTICS
+          ================================================= */
+
+          if(
+            typeof window.gtag === "function"
+          ){
+
+            window.gtag(
+              "event",
+              "generate_lead",
+              {
+
+                form_name:
+                  "raio_x_zona_oeste",
+
+                lead_source:
+                  "zona-oeste",
+
+                property:
+                  "Zona Oeste"
+
+              }
+            );
+
+          }
+
+
+          /* ================================================
+             META PIXEL
+          ================================================= */
+
+          if(
+            typeof window.fbq === "function"
+          ){
+
+            window.fbq(
+              "track",
+              "Lead",
+              {
+
+                content_name:
+                  "Zona Oeste",
+
+                content_category:
+                  "Relatório imobiliário"
+
+              }
+            );
+
+          }
+
+
+          /* ================================================
+             SUCESSO
+          ================================================= */
+
+          success.textContent =
+            "Dados enviados com sucesso. Em breve, um especialista entrará em contato.";
+
+          success.style.display =
+            "block";
+
+
+          btn.textContent =
+            "SOLICITAÇÃO ENVIADA ✓";
+
+
+        } catch(error){
+
+
+          console.error(
+            "Erro ao enviar lead:",
+            error
           );
+
+
+          /* ================================================
+             ERRO
+          ================================================= */
+
+          success.textContent =
+            "Não foi possível enviar seus dados agora. Tente novamente.";
+
+          success.style.display =
+            "block";
+
+
+          btn.disabled =
+            false;
+
+
+          btn.textContent =
+            "TENTAR NOVAMENTE";
+
+
+          btn.style.opacity =
+            "1";
 
         }
 
       }
     );
 
+
   </script>
 
+
 </body>
+
 </html>
