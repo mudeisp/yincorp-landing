@@ -77,18 +77,11 @@ export default async function handler(req, res) {
 
               body: JSON.stringify({
 
-                Nome: leadName,
+  Nome: leadName,
 
-                WhatsApp: leadPhone,
+  WhatsApp: leadPhone
 
-                // Enviado para:
-                // UTM - utm_content
-                Origem: leadSource
-
-              })
-            }
-          );
-
+})
         if (!praediumResponse.ok) {
 
           const responseText =
