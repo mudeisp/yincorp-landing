@@ -78,7 +78,7 @@
   >
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDBT7VZPWW"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2W11SX5VV"></script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -89,7 +89,7 @@
 
     gtag('js', new Date());
 
-    gtag('config', 'G-TDBT7VZPWW');
+    gtag('config', 'G-Y2W11SX5VV');
   </script>
 
   <!-- Meta Pixel -->
@@ -683,11 +683,22 @@
 
     .property-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
       align-items: center;
     }
 
+    .property-image {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #333;
+    }
+
+    .property-image img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+    }
 
     .property-content h2 {
       font-family: 'Playfair Display', serif;
@@ -732,14 +743,8 @@
       background: #0e0e0e;
     }
 
-    .videos-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-      margin-top: 40px;
-    }
-
     .video-wrapper {
+      margin-top: 40px;
       border-radius: 8px;
       overflow: hidden;
       border: 1px solid #333;
@@ -752,7 +757,6 @@
       height: 100%;
       border: 0;
     }
-
 
     /* LOCATION */
 
@@ -850,7 +854,7 @@
 
     .differential-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       margin-top: 45px;
     }
@@ -1101,10 +1105,6 @@
         grid-template-columns: 1fr;
       }
 
-      .videos-grid {
-        grid-template-columns: 1fr;
-      }
-
       .amenities-grid {
         grid-template-columns: 1fr 1fr;
       }
@@ -1113,6 +1113,9 @@
         grid-template-columns: 1fr;
       }
 
+      .property-image img {
+        height: 420px;
+      }
 
       .map,
       .map iframe {
@@ -1278,6 +1281,13 @@
           </a>
 
         </div>
+
+      </div>
+
+          </div>
+
+    </div>
+
 </div>
 
   </section>
@@ -1411,6 +1421,17 @@
 
     <div class="container property-grid">
 
+      <div class="property-image">
+
+        <img
+          src="/assets/welconx-perdizes/apartamento.jpg"
+          alt="Apartamento de 40 m² com 2 dormitórios no Welconx Perdizes"
+          loading="lazy"
+        >
+
+      </div>
+
+
       <div class="property-content">
 
         <div class="section-label">
@@ -1485,33 +1506,20 @@
         com um consultor.
       </p>
 
-      <div class="videos-grid">
+      <div class="video-wrapper">
 
-        <div class="video-wrapper">
+        <!--
+          SUBSTITUA O ID ABAIXO PELO VÍDEO CORRETO DO WELCONX PERDIZES.
+        -->
 
-          <iframe
-            src="https://www.youtube.com/embed/p9AwnJzPAwo"
-            title="Welconx Perdizes — vídeo 1"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-
-        </div>
-
-        <div class="video-wrapper">
-
-          <iframe
-            src="https://www.youtube.com/embed/8xy-qWsKHgQ"
-            title="Welconx Perdizes — vídeo 2"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-
-        </div>
+        <iframe
+          src="https://www.youtube.com/embed/SEU_VIDEO_WELCONX_PERDIZES"
+          title="Welconx Perdizes"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          onclick="trackVideo()"
+        ></iframe>
 
       </div>
 
