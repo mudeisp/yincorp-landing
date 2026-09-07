@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
 
   if (req.method !== 'POST') {
     return res.status(405).json({
@@ -9,6 +9,7 @@ export default async function handler(req, res) {
   }
 
   try {
+
     const {
       name,
       phone,
@@ -43,12 +44,14 @@ export default async function handler(req, res) {
       origem ||
       'site';
 
+
     if (!leadName || !leadPhone) {
       return res.status(400).json({
         success: false,
         error: 'Nome e telefone são obrigatórios'
       });
     }
+
 
     /*
      * ============================
@@ -60,6 +63,7 @@ export default async function handler(req, res) {
       process.env.PRAEDIUM_URL;
 
     let praediumSuccess = false;
+
 
     if (praediumUrl) {
 
@@ -77,11 +81,15 @@ export default async function handler(req, res) {
 
               body: JSON.stringify({
 
-  Nome: leadName,
+                Nome: leadName,
 
-  WhatsApp: leadPhone
+                WhatsApp: leadPhone
 
-})
+              })
+            }
+          );
+
+
         if (!praediumResponse.ok) {
 
           const responseText =
@@ -138,6 +146,7 @@ export default async function handler(req, res) {
 
     let metaSuccess = false;
 
+
     if (capiToken) {
 
       try {
@@ -147,11 +156,13 @@ export default async function handler(req, res) {
             .toLowerCase()
             .trim();
 
+
         const hashedPhone =
           crypto
             .createHash('sha256')
             .update(leadPhone)
             .digest('hex');
+
 
         const hashedName =
           crypto
@@ -166,7 +177,8 @@ export default async function handler(req, res) {
 
             {
 
-              event_name: 'Lead',
+              event_name:
+                'Lead',
 
               event_time:
                 Math.floor(
@@ -319,4 +331,4 @@ export default async function handler(req, res) {
 
   }
 
-}
+};
