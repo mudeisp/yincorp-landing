@@ -83,7 +83,9 @@ module.exports = async function handler(req, res) {
 
                 Nome: leadName,
 
-                WhatsApp: leadPhone
+                WhatsApp: leadPhone,
+
+                utm_content: leadSource
 
               })
             }
