@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Árvore da Vida - Vento nas Folhas</title>
+<style>
+body { margin: 0; background: #f5f0e8; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: serif; }
+canvas { display: block; }
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+let W = 500, H = 600;
+canvas.width = W;
+canvas.height = H;
+
+// cor champagne (dourado claro)
+const champagne = '#f7e7ce';
+const champagneEscuro = '#d4af37';
+const marrom = '#8b6914';
+
+// estrutura da árvore: galhos como raios (polar)
+let galhos = [];
+function gerarGalhos() {
+galhos = [];
+const raiz = { x: W/2, y: H - 50 };
+const profundidade = 7;
+const angBase = -Math.PI / 2;
+const compBase = 80;
+
+function ramificar(x, y, ang, comp, prof, largura) {
+if (prof === 0) return;
+const x2 = x + Math.cos(ang) * comp;
+const y2 = y + Math.sin(ang) * comp;
+galhos.push({ x1: x, y1: y, x2, y2, largura, prof, ang });
+
+// dois subgalhos com ângulos variados
+const fator = 0.65 + Math.random() * 0.15;
+const novaComp = comp * fator;
+const novaProf = prof - 1;
+const desvio = 0.3 + Math.random() * 0.3;
+const novaAng1 = ang - desvio;
+const novaAng2 = ang + desvio;
+const novaLarg = largura * 0.7;
+
+ramificar(x2, y2, novaAng1, novaComp, novaProf, novaLarg);
+ramificar(x2, y2, novaAng2, novaComp, novaProf, novaLarg);
+}
+
+ramificar(raiz.x, raiz.y, angBase, compBase, profundidade, 12);
+}
+gerarGalhos();
+
+function desenharArvore(time) {
+ctx.clearRect(0, 0, W, H);
+
+// fundo suave
+ctx.fillStyle = '#faf6ed';
+ctx.fillRect(0, 0, W, H);
+
+// desenha galhos com leve oscilação (vento)
+for (let g of galhos) {
+// vento afeta o ângulo de cada galho proporcional à profundidade
+const fator = (g.prof / 7) * 0.08; // máximo 0.08 radianos
+const oscilacao = Math.sin(time * 2 + g.x1 * 0.02 + g.y1 * 0.02) * fator;
+const angVento = g.ang + oscilacao;
+
+const comp = Math.sqrt((g.x2 - g.x1)**2 + (g.y2 - g.y1)**2);
+const x2 = g.x1 + Math.cos(angVento) * comp;
+const y2 = g.y1 + Math.sin(angVento) * comp;
+
+ctx.beginPath();
+ctx.moveTo(g.x1, g.y1);
+ctx.lineTo(x2, y2);
+ctx.strokeStyle = (g.prof > 3) ? marrom : champagneEscuro;
+ctx.lineWidth = g.largura;
+ctx.lineCap = 'round';
+ctx.stroke();
+
+// folhas nas pontas (profundidade 1)
+if (g.prof === 1) {
+const numFolhas = 4 + Math.floor(Math.random() * 3);
+for (let i = 0; i < numFolhas; i++) {
+const t = 0.3 + Math.random() * 0.7;
+const fx = g.x1 + (x2 - g.x1) * t;
+const fy = g.y1 + (y2 - g.y1) * t;
+const tamanho = 4 + Math.random() * 6;
+const oscFolha = Math.sin(time * 3 + fx * 0.05 + fy * 0.05) * 0.3;
+const angFolha = angVento + oscFolha + Math.random() * 0.2;
+
+ctx.save();
+ctx.translate(fx, fy);
+ctx.rotate(angFolha);
+// folha oval em champagne
+ctx.beginPath();
+ctx.ellipse(0, 0, tamanho, tamanho * 0.5, 0, 0, Math.PI * 2);
+ctx.fillStyle = champagne;
+ctx.shadowColor = 'rgba(215, 175, 55, 0.3)';
+ctx.shadowBlur = 6;
+ctx.fill();
+ctx.restore();
+}
+}
+}
+}
+
+// animação
+let startTime = null;
+function animar(timestamp) {
+if (!startTime) startTime = timestamp;
+const time = (timestamp - startTime) / 1000;
+desenharArvore(time);
+requestAnimationFrame(animar);
+}
+animar(0);
+</script>
+</body>
+</html>
