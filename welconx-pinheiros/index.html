@@ -190,12 +190,12 @@ footer{padding:29px 16px 42px;text-align:center;border-top:1px solid var(--line)
 <div class="amenity"><strong>Torre única</strong><span>Projeto residencial com uma torre.</span></div>
 <div class="amenity"><strong>2 elevadores</strong><span>Infraestrutura do edifício.</span></div>
 </div>
-<div class="video-box">
-<video id="videoAmenities" controls playsinline preload="metadata">
-<source src="/1001066898.mp4" type="video/mp4">
+<div class="video-box" id="video">
+<video id="videoPrincipal" controls playsinline preload="metadata">
+<source src="/1001066773.mp4" type="video/mp4">
 Seu navegador não suporta vídeo HTML5.
 </video>
-<div class="video-caption"><strong>Áreas comuns e estrutura</strong><span>Segundo vídeo do empreendimento</span></div>
+<div class="video-caption"><strong>Welconx Pinheiros</strong><span>Vídeo do empreendimento e áreas comuns</span></div>
 </div>
 </div>
 </section>
@@ -283,7 +283,7 @@ Seu navegador não suporta vídeo HTML5.
 
 </main>
 
-<a class="whatsapp" href="#contato" aria-label="Consultar pelo atendimento" onclick="trackCTA('floating_contact')">◔</a>
+<a class="whatsapp" href="https://wa.me/5511992976368?text=Ol%C3%A1%2C%20vi%20o%20site%20do%20Welconx%20Pinheiros%20e%20quero%20informa%C3%A7%C3%B5es%20sobre%20a%20unidade%20de%20R%24%20383.600." target="_blank" rel="noopener" aria-label="Falar com especialista no WhatsApp" onclick="trackWhatsApp()">◉</a>
 
 <footer>
 <p><strong>YINCORP GROUP</strong> · Inteligência imobiliária para decisões mais seguras.</p>
@@ -366,8 +366,15 @@ function setupVideoTracking(video,videoName){
   metaCustom("VideoComplete",{video_name:videoName});
  });
 }
-setupVideoTracking(document.getElementById("videoPrincipal"),"welconx_pinheiros_principal");
-setupVideoTracking(document.getElementById("videoAmenities"),"welconx_pinheiros_areas_comuns");
+setupVideoTracking(document.getElementById("videoPrincipal"),"welconx_pinheiros_video");
+
+function trackWhatsApp(){
+  gaEvent("whatsapp_click",{action:"whatsapp",location:"floating",lead_source:PROJECT.source});
+  if(typeof window.fbq==="function"){
+    window.fbq("track","Contact",{content_name:PROJECT.name,content_category:PROJECT.category,contact_method:"whatsapp"});
+    metaCustom("ClickProject",{action:"whatsapp",location:"floating"});
+  }
+}
 
 form.addEventListener("submit",async function(e){
  e.preventDefault();
