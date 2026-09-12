@@ -1,1482 +1,4154 @@
-```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<!-- V2 TESTE: sem Analytics, Pixel, Supabase ou envio ao CRM.
+     Esta versão não deve substituir a produção antes da integração e validação. -->
+<script>
+function gtag() {} // Isolamento intencional das métricas de produção.
+</script>
 
-<title>Ynteligencia | Inteligência imobiliária</title>
 
-<meta name="description" content="A Ynteligencia entende o que você procura e encontra os imóveis mais compatíveis com seu perfil.">
+<meta name="theme-color" content="#111111">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Ynteligencia — encontre imóveis que fazem sentido para você.">
+
+<title>Ynteligencia V2 | Ambiente de testes</title>
 
 <style>
 :root{
-  --azul:#102f52;
-  --azul2:#195c91;
-  --azul-claro:#edf5fb;
-  --laranja:#ef8d22;
-  --texto:#172033;
-  --cinza:#64748b;
-  --borda:#e2e8f0;
-  --fundo:#f6f8fb;
-  --branco:#fff;
-  --verde:#16845b;
+  --dark:#101a2b;
+  --dark2:#1d304c;
+  --orange:#ff914d;
+  --bg:#f5f6f8;
+  --text:#182232;
+  --muted:#697487;
+  --line:#e2e6eb;
+  --white:#fff;
+  --green:#17835b;
+  --greenbg:#eaf7f1;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--texto);
-  background:var(--fundo);
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,Arial,sans-serif
 }
 
-button,input,select{
-  font:inherit;
-}
+button,input,select{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
 
-button{
-  cursor:pointer;
+.container{
+  width:min(1120px,calc(100% - 32px));
+  margin:auto
 }
-
-/* ================= HEADER ================= */
 
 header{
-  color:white;
-  padding:20px 6vw 120px;
-  background:
-    radial-gradient(circle at 85% 20%,rgba(45,130,190,.35),transparent 30%),
-    linear-gradient(125deg,#092542,#176aa6);
+  position:sticky;
+  top:0;
+  z-index:30;
+  background:rgba(16,26,43,.97);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-nav{
-  max-width:1180px;
-  margin:auto;
+.nav{
+  min-height:70px;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:20px
 }
 
 .logo{
-  font-size:27px;
-  font-weight:800;
-  letter-spacing:-1.5px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+  font-size:21px;
+  font-weight:900
 }
 
-.logo span{
-  color:#ffad42;
+.logo-mark{
+  width:37px;
+  height:37px;
+  display:grid;
+  place-items:center;
+  border-radius:11px;
+  background:var(--orange);
+  color:var(--dark);
+  font-size:21px
 }
 
-nav a{
-  color:#dcecf9;
-  text-decoration:none;
-  margin-left:25px;
-  font-size:14px;
+.nav-links{
+  display:flex;
+  gap:25px;
+  color:#dce2ea;
+  font-size:14px
 }
 
-/* ================= HERO ================= */
+.nav-links button{
+  background:none;
+  border:0;
+  color:#dce2ea;
+  padding:8px 0
+}
 
 .hero{
-  max-width:1180px;
-  margin:75px auto 0;
+  padding:78px 0 92px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 82% 12%,rgba(255,145,77,.25),transparent 31%),
+    linear-gradient(135deg,var(--dark),var(--dark2));
 }
 
-.hero-content{
-  max-width:720px;
-}
-
-.badge{
-  display:inline-block;
-  padding:7px 11px;
-  border:1px solid rgba(255,255,255,.25);
-  border-radius:30px;
-  color:#e6f4ff;
-  background:rgba(255,255,255,.08);
+.eyebrow{
+  color:var(--orange);
   font-size:12px;
-  font-weight:bold;
-  margin-bottom:18px;
+  font-weight:900;
+  letter-spacing:1.7px
 }
 
 .hero h1{
-  margin:0 0 18px;
-  font-size:clamp(38px,5.5vw,62px);
-  line-height:1.02;
-  letter-spacing:-2.7px;
+  max-width:800px;
+  margin:15px 0 18px;
+  font-size:clamp(42px,6vw,68px);
+  line-height:.99;
+  letter-spacing:-2.8px
 }
 
-.hero h1 span{
-  color:#ffad42;
-}
+.hero h1 span{color:var(--orange)}
 
 .hero p{
-  max-width:650px;
+  max-width:680px;
   margin:0;
-  color:#d7e8f7;
+  color:#d6dde6;
   font-size:18px;
-  line-height:1.55;
+  line-height:1.6
 }
 
-/* ================= CTA ================= */
-
-.hero-buttons{
+.hero-actions{
   display:flex;
   gap:12px;
-  margin-top:30px;
+  flex-wrap:wrap;
+  margin-top:30px
 }
 
-.btn-principal{
-  padding:14px 21px;
-  border:0;
-  border-radius:9px;
-  color:white;
-  background:var(--laranja);
-  font-weight:bold;
-}
-
-.btn-secundario{
-  padding:14px 21px;
-  border:1px solid rgba(255,255,255,.35);
-  border-radius:9px;
-  color:white;
-  background:rgba(255,255,255,.08);
-  font-weight:bold;
-}
-
-/* ================= BUSCA ================= */
-
-.busca{
-  max-width:1080px;
-  margin:45px auto -150px;
-  padding:17px;
-  display:grid;
-  grid-template-columns:1.7fr 1fr 1fr 1fr auto;
-  gap:10px;
-  background:white;
-  border-radius:15px;
-  box-shadow:0 18px 42px rgba(5,27,49,.23);
-}
-
-.campo{
-  padding:7px 12px;
-  border:1px solid var(--borda);
-  border-radius:8px;
-}
-
-.campo label{
-  display:block;
-  margin-bottom:4px;
-  color:var(--cinza);
-  font-size:10px;
-  font-weight:bold;
-}
-
-.campo input,
-.campo select{
-  width:100%;
-  border:0;
-  outline:0;
-  background:transparent;
-  color:var(--texto);
-}
-
-.btn-buscar{
-  padding:12px 18px;
-  border:0;
-  border-radius:8px;
-  color:white;
-  background:var(--azul);
-  font-weight:bold;
-}
-
-/* ================= MAIN ================= */
-
-main{
-  max-width:1180px;
-  margin:205px auto 70px;
+.primary,.secondary{
+  min-height:50px;
   padding:0 20px;
+  border-radius:12px;
+  font-weight:900;
+  border:1px solid transparent
 }
 
-/* ================= COMO FUNCIONA ================= */
-
-.intro{
-  max-width:760px;
-  margin:0 auto 60px;
-  text-align:center;
+.primary{
+  background:var(--orange);
+  color:var(--dark)
 }
 
-.intro h2{
-  margin:0 0 12px;
-  font-size:34px;
-  letter-spacing:-1px;
+.secondary{
+  background:rgba(255,255,255,.07);
+  border-color:rgba(255,255,255,.18);
+  color:#fff
 }
 
-.intro p{
+.section{padding:58px 0}
+
+.section-head{margin-bottom:25px}
+
+.section-head h2{
+  margin:0 0 8px;
+  font-size:30px;
+  letter-spacing:-.8px
+}
+
+.section-head p{
   margin:0;
-  color:var(--cinza);
-  line-height:1.6;
+  color:var(--muted)
 }
 
-.passos{
+.wizard-wrap{
+  margin-top:-42px;
+  position:relative;
+  z-index:5
+}
+
+.wizard{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  box-shadow:0 18px 50px rgba(9,20,36,.14);
+  overflow:hidden
+}
+
+.progress{
+  height:5px;
+  background:#edf0f3
+}
+
+.progress span{
+  display:block;
+  height:100%;
+  width:14.28%;
+  background:var(--orange);
+  transition:.25s
+}
+
+.wizard-inner{padding:30px}
+
+.step-label{
+  color:var(--orange);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.5px
+}
+
+.step h2{
+  margin:9px 0 8px;
+  font-size:29px;
+  letter-spacing:-.7px
+}
+
+.step p{
+  margin:0 0 23px;
+  color:var(--muted)
+}
+
+.options{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-bottom:75px;
+  grid-template-columns:repeat(4,1fr);
+  gap:11px
 }
 
-.passo{
-  padding:25px;
-  border:1px solid var(--borda);
-  border-radius:14px;
-  background:white;
+.option{
+  min-height:72px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:#fff;
+  text-align:left;
+  color:var(--text);
+  font-weight:800;
+  transition:.15s
 }
 
-.numero{
-  width:38px;
-  height:38px;
+.option small{
+  display:block;
+  margin-top:5px;
+  color:var(--muted);
+  font-size:11px;
+  font-weight:600
+}
+
+.option:hover,
+.option.selected{
+  border-color:var(--orange);
+  background:#fff8f3;
+  box-shadow:0 0 0 2px rgba(255,145,77,.12)
+}
+
+.inventory-switch{
   display:flex;
   align-items:center;
-  justify-content:center;
-  margin-bottom:18px;
-  border-radius:50%;
-  color:white;
-  background:var(--azul);
-  font-weight:bold;
+  gap:8px;
+  margin-bottom:22px;
+  padding-bottom:15px;
+  border-bottom:1px solid var(--line)
 }
 
-.passo h3{
-  margin:0 0 8px;
-  font-size:17px;
+.inventory-switch span{
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.3px;
+  color:var(--muted);
+  margin-right:4px
 }
 
-.passo p{
-  margin:0;
-  color:var(--cinza);
-  font-size:14px;
-  line-height:1.5;
+.source-btn{
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--text);
+  padding:9px 15px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:12px
 }
 
-/* ================= LISTA ================= */
+.source-btn.selected{
+  background:var(--dark);
+  border-color:var(--dark);
+  color:#fff
+}
 
-.cabecalho-lista{
+.catalog-filters{
+  margin:0 0 18px;
+  padding:18px;
+  background:#f7f8fa;
+  border:1px solid var(--line);
+  border-radius:16px
+}
+
+.catalog-filters .filter-title{
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:12px
+}
+
+.filter-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px
+}
+
+.filter-grid .field{min-height:44px}
+
+.filter-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:8px;
+  margin-top:10px
+}
+
+.filter-reset{
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:10px;
+  padding:10px 14px;
+  font-weight:800
+}
+
+.wizard-actions{
   display:flex;
   justify-content:space-between;
-  align-items:end;
-  margin-bottom:24px;
+  gap:10px;
+  margin-top:25px
 }
 
-.cabecalho-lista h2{
+.back,.next{
+  min-height:46px;
+  padding:0 17px;
+  border-radius:11px;
+  font-weight:850;
+  border:1px solid var(--line)
+}
+
+.back{
+  background:#fff;
+  color:var(--text)
+}
+
+.next{
+  background:var(--dark);
+  color:#fff;
+  border-color:var(--dark)
+}
+
+.next:disabled{
+  opacity:.35;
+  cursor:not-allowed
+}
+
+.results{display:none}
+
+.results.visible{display:block}
+
+.result-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+  margin-bottom:20px
+}
+
+.result-top h2{
   margin:0;
-  font-size:30px;
+  font-size:32px;
+  letter-spacing:-1px
 }
 
-.subtitulo{
+.result-top p{
   margin:7px 0 0;
-  color:var(--cinza);
+  color:var(--muted)
 }
 
-#resultado{
-  color:var(--cinza);
-  font-size:14px;
+.reset-link{
+  border:0;
+  background:none;
+  color:var(--dark);
+  font-weight:850;
+  text-decoration:underline
 }
 
-.imoveis{
+.grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:18px;
+  gap:18px
 }
 
 .card{
   overflow:hidden;
-  border:1px solid var(--borda);
-  border-radius:14px;
-  background:white;
-  transition:.2s;
+  display:flex;
+  flex-direction:column;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 7px 24px rgba(16,26,43,.06);
+  transition:.2s
 }
 
 .card:hover{
   transform:translateY(-4px);
-  box-shadow:0 14px 30px rgba(15,23,42,.10);
+  box-shadow:0 14px 35px rgba(9,20,36,.12)
 }
 
-.foto{
+.cover{
+  height:205px;
   position:relative;
-  height:195px;
   overflow:hidden;
+  background:linear-gradient(135deg,#263e5b,#101a2b)
 }
 
-.foto img{
+.cover.has-image{
+  background-size:cover;
+  background-position:center
+}
+
+.photo-carousel{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  overflow:hidden;
+  background:#15243a
+}
+
+.photo-track{
+  display:flex;
   width:100%;
   height:100%;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch
+}
+
+.photo-track::-webkit-scrollbar{display:none}
+
+.photo-slide{
+  flex:0 0 100%;
+  width:100%;
+  height:100%;
+  scroll-snap-align:start;
   object-fit:cover;
+  display:block
 }
 
-.tag{
+.photo-arrow{
   position:absolute;
-  top:12px;
-  left:12px;
-  padding:6px 9px;
-  border-radius:6px;
-  color:var(--azul);
-  background:white;
-  font-size:11px;
-  font-weight:bold;
+  z-index:4;
+  top:50%;
+  transform:translateY(-50%);
+  width:34px;
+  height:34px;
+  border:0;
+  border-radius:50%;
+  background:rgba(16,26,43,.68);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-size:20px;
+  line-height:1
 }
 
-.score{
+.photo-arrow.prev{left:10px}
+.photo-arrow.next{right:10px}
+
+.photo-dots{
   position:absolute;
-  right:12px;
+  z-index:4;
+  left:50%;
   bottom:12px;
-  padding:7px 9px;
-  border-radius:7px;
-  color:white;
-  background:var(--verde);
-  font-size:12px;
-  font-weight:bold;
+  transform:translateX(-50%);
+  display:flex;
+  gap:5px;
+  max-width:75%
 }
 
-.favorito{
-  position:absolute;
-  top:11px;
-  right:11px;
-  width:36px;
-  height:36px;
-  border:0;
+.photo-dot{
+  width:6px;
+  height:6px;
   border-radius:50%;
-  color:#e11d48;
-  background:rgba(255,255,255,.94);
-  font-size:18px;
+  background:rgba(255,255,255,.55)
 }
 
-.dados{
-  padding:16px;
+.photo-dot.active{background:#fff}
+
+.photo-counter{
+  position:absolute;
+  z-index:4;
+  top:13px;
+  right:13px;
+  padding:6px 8px;
+  border-radius:999px;
+  background:rgba(16,26,43,.68);
+  color:#fff;
+  font-size:10px;
+  font-weight:900
 }
 
-.preco{
-  color:var(--azul);
-  font-size:20px;
-  font-weight:bold;
-}
-
-.dados h3{
-  margin:8px 0 5px;
-  font-size:16px;
-}
-
-.local{
-  margin:0;
-  color:var(--cinza);
-  font-size:13px;
-}
-
-.detalhes{
-  display:flex;
-  gap:13px;
-  margin-top:14px;
-  padding-top:12px;
-  border-top:1px solid var(--borda);
-  color:#475569;
-  font-size:13px;
-}
-
-.compatibilidade{
-  margin-top:13px;
-  padding:10px;
-  border-radius:8px;
-  color:#155487;
-  background:var(--azul-claro);
-  font-size:12px;
-  line-height:1.4;
-}
-
-.botao-card{
-  width:100%;
-  margin-top:13px;
-  padding:10px;
-  border:1px solid #cfddea;
-  border-radius:7px;
-  color:var(--azul);
-  background:white;
-  font-weight:bold;
-}
-
-/* ================= PERFIL ================= */
-
-.perfil-banner{
-  margin:75px 0;
-  padding:40px;
-  border-radius:18px;
-  color:white;
-  background:linear-gradient(135deg,#102f52,#1b70ad);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:30px;
-}
-
-.perfil-banner h2{
-  margin:0 0 10px;
-  font-size:30px;
-}
-
-.perfil-banner p{
-  max-width:650px;
-  margin:0;
-  color:#dbeefd;
-  line-height:1.5;
-}
-
-.perfil-banner button{
-  flex-shrink:0;
-  padding:13px 18px;
-  border:0;
-  border-radius:8px;
-  color:var(--azul);
-  background:white;
-  font-weight:bold;
-}
-
-/* ================= MODAL ================= */
-
-.modal{
-  display:none;
-  position:fixed;
+.cover:after{
+  content:"";
+  position:absolute;
   inset:0;
-  z-index:20;
-  padding:18px;
-  align-items:center;
-  justify-content:center;
-  background:rgba(15,23,42,.75);
+  background:linear-gradient(180deg,transparent 30%,rgba(7,15,27,.72))
 }
 
-.modal.ativo{
-  display:flex;
-}
-
-.caixa-modal{
-  position:relative;
-  width:min(620px,100%);
-  max-height:92vh;
-  overflow-y:auto;
-  padding:30px;
-  border-radius:16px;
-  background:white;
-}
-
-.fechar{
+.cover-art{
   position:absolute;
-  top:12px;
-  right:12px;
-  width:35px;
-  height:35px;
-  border:0;
-  border-radius:50%;
-  font-size:20px;
-  background:#eef3f8;
+  inset:0
 }
 
-.caixa-modal h2{
-  margin:0 35px 8px 0;
+.building{
+  position:absolute;
+  bottom:0;
+  background:linear-gradient(#dce4eb,#8798a8);
+  border-radius:4px 4px 0 0
 }
 
-.caixa-modal > p{
-  color:var(--cinza);
-  line-height:1.5;
+.building.one{
+  right:8%;
+  width:38%;
+  height:77%
 }
 
-.formulario{
-  display:grid;
-  gap:12px;
-  margin-top:20px;
+.building.two{
+  right:43%;
+  width:27%;
+  height:55%
 }
 
-.formulario input,
-.formulario select{
-  width:100%;
-  padding:13px;
-  border:1px solid var(--borda);
-  border-radius:8px;
-  outline-color:var(--azul);
+.building:after{
+  content:"";
+  position:absolute;
+  inset:12%;
+  background:
+    repeating-linear-gradient(90deg,#29425e 0 17%,transparent 17% 28%),
+    repeating-linear-gradient(0deg,transparent 0 18%,#29425e 18% 29%)
 }
 
-.checks{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-  margin-top:4px;
+.match{
+  position:absolute;
+  z-index:3;
+  top:13px;
+  left:13px;
+  padding:8px 10px;
+  border-radius:999px;
+  background:#fff;
+  color:var(--green);
+  font-size:12px;
+  font-weight:950
 }
 
-.check{
-  padding:11px;
-  border:1px solid var(--borda);
-  border-radius:8px;
+.cover-location{
+  position:absolute;
+  z-index:3;
+  right:14px;
+  bottom:13px;
+  left:14px;
+  color:#fff;
   font-size:13px;
+  font-weight:850
 }
 
-.check input{
-  margin-right:7px;
+.card-body{
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  flex:1
 }
 
-/* ================= RESULTADO IA ================= */
-
-.resultado-ia{
-  display:none;
-  margin-top:22px;
+.card-tag{
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1px;
+  color:var(--orange);
+  margin-bottom:6px
 }
 
-.resultado-ia h3{
-  margin-bottom:12px;
+.cost-line{
+  font-size:11px;
+  color:var(--muted);
+  margin:0 0 12px;
+  padding-top:2px
 }
 
-.perfil-resumo{
-  padding:15px;
-  border-radius:10px;
-  background:var(--azul-claro);
-  color:#155487;
-  font-size:14px;
-  line-height:1.5;
+.card h3{
+  margin:0 0 6px;
+  font-size:19px;
+  line-height:1.25
 }
 
-.recomendacao{
-  margin-top:12px;
-  padding:14px;
-  border:1px solid var(--borda);
-  border-radius:10px;
+.card-address{
+  margin:0;
+  min-height:35px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.4
 }
 
-.recomendacao strong{
-  color:var(--azul);
+.price{
+  margin:15px 0 3px;
+  font-size:23px;
+  font-weight:950
 }
 
-.recomendacao small{
+.m2{
+  font-size:12px;
+  color:var(--muted)
+}
+
+.features{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:14px 0
+}
+
+.feature{
+  padding:7px 8px;
+  border-radius:8px;
+  background:#f0f3f6;
+  color:#4f5c6e;
+  font-size:11px;
+  font-weight:800
+}
+
+.reasons{
+  margin:0 0 15px;
+  padding:12px;
+  border-radius:11px;
+  background:var(--greenbg);
+  color:#27674e;
+  font-size:12px;
+  line-height:1.45
+}
+
+.reasons strong{
   display:block;
-  margin-top:5px;
-  color:var(--cinza);
+  margin-bottom:4px
 }
 
-/* ================= FOOTER ================= */
+.card-actions{
+  display:flex;
+  gap:8px;
+  margin-top:auto
+}
+
+.view,.interest{
+  flex:1;
+  min-height:45px;
+  display:grid;
+  place-items:center;
+  border-radius:10px;
+  font-size:13px;
+  font-weight:900
+}
+
+.view{
+  background:var(--dark);
+  color:#fff
+}
+
+.interest{
+  background:var(--orange);
+  color:var(--dark);
+  border:0
+}
+
+.explore{
+  padding:54px 0 70px;
+  background:#fff;
+  border-top:1px solid var(--line)
+}
+
+.explore-box{
+  display:grid;
+  grid-template-columns:1.2fr 2fr auto;
+  gap:10px;
+  align-items:center;
+  padding:20px;
+  background:#f7f8fa;
+  border:1px solid var(--line);
+  border-radius:16px
+}
+
+.field{
+  width:100%;
+  min-height:48px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#fff;
+  padding:0 13px;
+  color:var(--text);
+  outline:0
+}
+
+.field:focus{
+  border-color:var(--orange);
+  box-shadow:0 0 0 3px rgba(255,145,77,.12)
+}
+
+.catalog{
+  display:none;
+  padding:0 0 70px;
+  background:#fff
+}
+
+.catalog.visible{display:block}
+
+.catalog-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+
+.empty{
+  grid-column:1/-1;
+  padding:50px 20px;
+  text-align:center;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px
+}
+
+.empty h3{margin:0 0 8px}
+
+.empty p{
+  margin:0;
+  color:var(--muted)
+}
+
+.toast{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:100;
+  max-width:340px;
+  padding:14px 16px;
+  border-radius:12px;
+  background:var(--dark);
+  color:#fff;
+  box-shadow:0 15px 35px rgba(0,0,0,.18);
+  font-size:13px;
+  display:none
+}
+
+.toast.show{display:block}
 
 footer{
-  padding:35px 20px;
-  color:var(--cinza);
+  padding:28px 0;
+  background:var(--dark);
+  color:#c0c9d4;
   text-align:center;
-  font-size:13px;
+  font-size:13px
 }
-
-/* ================= RESPONSIVO ================= */
 
 @media(max-width:900px){
-
-  .busca{
-    grid-template-columns:1fr 1fr;
-  }
-
-  main{
-    margin-top:270px;
-  }
-
-  .imoveis{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .passos{
-    grid-template-columns:1fr;
-  }
-
-  .perfil-banner{
-    display:block;
-  }
-
-  .perfil-banner button{
-    margin-top:20px;
-  }
+  .options{grid-template-columns:repeat(2,1fr)}
+  .grid,.catalog-grid{grid-template-columns:repeat(2,1fr)}
+  .explore-box{grid-template-columns:1fr 1fr}
+  .explore-box button{grid-column:1/-1}
 }
 
-@media(max-width:560px){
-
-  header{
-    padding-bottom:70px;
+@media(max-width:650px){
+  .photo-arrow{
+    width:32px;
+    height:32px
   }
 
-  nav a{
-    display:none;
+  .nav-links{display:none}
+
+  .hero{padding:55px 0 75px}
+
+  .hero h1{font-size:44px}
+
+  .wizard-wrap{margin-top:-28px}
+
+  .wizard-inner{padding:22px}
+
+  .options{grid-template-columns:1fr}
+
+  .grid,.catalog-grid{grid-template-columns:1fr}
+
+  .result-top{
+    align-items:flex-start;
+    flex-direction:column
   }
 
-  .hero{
-    margin-top:50px;
-  }
+  .explore-box{grid-template-columns:1fr}
 
-  .hero-buttons{
-    flex-direction:column;
-  }
-
-  .busca{
-    grid-template-columns:1fr;
-    margin-bottom:-290px;
-  }
-
-  main{
-    margin-top:330px;
-  }
-
-  .imoveis{
-    grid-template-columns:1fr;
-  }
-
-  .cabecalho-lista{
-    display:block;
-  }
-
-  #resultado{
-    display:block;
-    margin-top:10px;
-  }
-
-  .perfil-banner{
-    padding:28px;
-  }
-
-  .checks{
-    grid-template-columns:1fr;
-  }
+  .explore-box button{grid-column:auto}
 }
+/* V2: mobile, foco, modal e estados */
+[hidden]{display:none!important}
+html{scroll-padding-top:90px}
+.test-bar{padding:9px 16px;background:#fff0cc;color:#4c3807;text-align:center;font-size:13px;font-weight:700}
+.test-tools{position:relative;z-index:6;margin:20px auto;padding:16px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:13px}
+.test-tools p{line-height:1.5}.test-tools label{display:block;margin:12px 0}.test-tools input{max-width:100%}
+.wizard-wrap{margin-top:20px}
+summary{cursor:pointer;font-weight:800;padding:10px 0}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ac4a09;outline-offset:3px}
+.field{min-width:0}.filter-grid{margin-top:14px}
+.cover:after{pointer-events:none}.photo-fallback{height:100%;display:grid;place-items:center;color:#fff;background:var(--dark2)}
+.load-more{display:block;margin:24px auto}
+.v2-modal{position:fixed;inset:0;z-index:250;background:rgba(7,15,27,.82);display:flex;align-items:center;justify-content:center;padding:16px}
+.v2-dialog{width:min(520px,100%);max-height:90dvh;overflow:auto;background:white;border-radius:20px;padding:26px;position:relative}
+.v2-dialog h2{padding-right:30px}.v2-dialog label{display:block;margin:14px 0 6px;font-weight:700}
+.close-dialog{position:absolute;right:12px;top:12px;width:44px;height:44px;border:0;border-radius:50%;font-size:25px}
+.test-notice{background:#fff0cc;color:#4c3807;padding:12px;border-radius:10px;font-size:13px}
+.gallery-controls{display:flex;gap:12px;justify-content:center;margin-top:12px}
+#leadError{color:#a11c16}#leadSuccess{color:var(--green)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:650px){
+ .hero{padding:32px 0}.hero h1{font-size:clamp(32px,9vw,44px);letter-spacing:-1.5px}
+ .hero p{font-size:16px}.wizard-inner{padding:18px}.options{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .option{padding:12px;min-height:64px}.filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .field{font-size:16px}.step h2{font-size:25px}.card:hover{transform:none}
+ .toast{left:16px;right:16px;bottom:16px;max-width:none}.card-actions{flex-wrap:wrap}
+}
+@media(max-width:360px){.filter-grid,.options{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 
 <body>
+<aside class="test-bar">V2 · Ambiente de testes · Nenhum lead é enviado</aside>
 
 <header>
+  <div class="container nav">
+    <div class="logo">
+      <span class="logo-mark">Y</span>
+      Ynteligencia
+    </div>
 
-<nav>
-  <div class="logo">Ynteligencia</div>
-
-  <div>
-    <a href="#como">Como funciona</a>
-    <a href="#imoveis">Imóveis</a>
-    <a href="#perfil">Meu perfil</a>
+    <nav class="nav-links">
+      <button id="navMatch">Encontrar meu imóvel</button>
+      <button id="navExplore">Explorar imóveis</button>
+    </nav>
   </div>
-</nav>
+</header>
 
-<section class="hero">
-
-  <div class="hero-content">
-
-    <div class="badge">INTELIGÊNCIA IMOBILIÁRIA</div>
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="eyebrow">INTELIGÊNCIA IMOBILIÁRIA</div>
 
     <h1>
       Encontre o imóvel que
-      <span>faz sentido para você.</span>
+      <span>faz sentido</span>
+      para você.
     </h1>
 
     <p>
-      A Ynteligencia entende seu momento, cruza suas preferências
-      com os imóveis disponíveis e apresenta as oportunidades
+      Você não precisa procurar entre centenas de imóveis.
+      Conte o que procura e a Ynteligencia encontra as opções
       mais compatíveis com o seu perfil.
     </p>
 
-    <div class="hero-buttons">
-      <button class="btn-principal" onclick="abrirModal('modalPerfil')">
+    <div class="hero-actions">
+      <button class="primary" id="startHero">
         Descobrir meu imóvel
       </button>
 
-      <button class="btn-secundario" onclick="document.getElementById('imoveis').scrollIntoView()">
+      <button class="secondary" id="exploreHero">
         Explorar imóveis
       </button>
     </div>
-
   </div>
-
 </section>
-
-<form class="busca" onsubmit="event.preventDefault(); filtrarImoveis();">
-
-  <div class="campo">
-    <label>ONDE VOCÊ PROCURA?</label>
-    <input id="buscaTexto" placeholder="Bairro, cidade ou endereço">
-  </div>
-
-  <div class="campo">
-    <label>FINALIDADE</label>
-    <select id="finalidade">
-      <option value="">Comprar ou alugar</option>
-      <option value="Venda">Comprar</option>
-      <option value="Aluguel">Alugar</option>
-    </select>
-  </div>
-
-  <div class="campo">
-    <label>TIPO</label>
-    <select id="tipo">
-      <option value="">Todos</option>
-      <option value="Apartamento">Apartamento</option>
-      <option value="Casa">Casa</option>
-      <option value="Studio">Studio</option>
-    </select>
-  </div>
-
-  <div class="campo">
-    <label>QUARTOS</label>
-    <select id="quartos">
-      <option value="0">Qualquer</option>
-      <option value="1">1+</option>
-      <option value="2">2+</option>
-      <option value="3">3+</option>
-    </select>
-  </div>
-
-  <button class="btn-buscar">Buscar</button>
-
-</form>
-
-</header>
-
 
 <main>
+<details class="test-tools container" open><summary>Preparar base de testes</summary>
+<p id="inventoryState" role="status">Carregando base local…</p>
+<p>Esta cópia usa Remax.teste.2.csv e photos.json na mesma pasta. Você também pode selecionar os arquivos abaixo; eles ficam apenas nesta sessão.</p>
+<label>Base de imóveis (.csv) <input id="csvInput" type="file" accept=".csv,text/csv"></label>
+<label>Mapa de fotos (.json) <input id="photosInput" type="file" accept=".json,application/json"></label>
+<p>Uso exclusivo para validação. O bloqueio de indexação não substitui a proteção de acesso do domínio de testes.</p>
+</details>
 
-<section id="como">
+<section class="wizard-wrap" id="match">
+  <div class="container">
 
-  <div class="intro">
+    <div class="wizard">
 
-    <h2>Não procure entre milhares. Deixe a Ynteligencia procurar por você.</h2>
+      <div class="progress">
+        <span id="progress"></span>
+      </div>
 
-    <p>
-      Quanto mais entendemos o seu perfil, melhores ficam as recomendações.
-      Você conta o que procura. A Ynteligencia encontra as combinações.
-    </p>
+      <div class="wizard-inner">
 
+        <div class="inventory-switch">
+          <span>ESTOQUE</span>
+
+          <button
+            type="button"
+            class="source-btn selected"
+            data-source="usados">
+            Usados
+          </button>
+
+          <button
+            type="button"
+            class="source-btn"
+            data-source="novos" hidden disabled>
+            Novos
+          </button>
+        </div>
+
+        <div class="step" data-step="0">
+          <div class="step-label">01 · OBJETIVO</div>
+
+          <h2>O que você está procurando?</h2>
+
+          <p>
+            A Ynteligencia usa seu objetivo para priorizar
+            os imóveis mais adequados.
+          </p>
+
+          <div class="options">
+
+            <button
+              class="option"
+              data-key="purpose"
+              data-value="morar">
+              Morar
+              <small>Meu próximo lar</small>
+            </button>
+
+            <button
+              class="option"
+              data-key="purpose"
+              data-value="investir">
+              Investir
+              <small>Renda ou valorização</small>
+            </button>
+
+            <button
+              class="option"
+              data-key="purpose"
+              data-value="pesquisar">
+              Ainda estou avaliando
+              <small>Quero conhecer o mercado</small>
+            </button>
+
+          </div>
+        </div>
+
+        <div class="step" data-step="1" hidden>
+
+          <div class="step-label">
+            02 · TIPO DE IMÓVEL
+          </div>
+
+          <h2>Que tipo de imóvel faz sentido?</h2>
+
+          <p>
+            Você pode escolher mais de um tipo.
+          </p>
+
+          <div class="options">
+
+            <button
+              class="option multi"
+              data-key="types"
+              data-value="apartamento">
+              Apartamento
+            </button>
+
+            <button
+              class="option multi"
+              data-key="types"
+              data-value="casa">
+              Casa
+            </button>
+
+            <button
+              class="option multi"
+              data-key="types"
+              data-value="studio">
+              Studio
+            </button>
+
+            <button
+              class="option multi"
+              data-key="types"
+              data-value="cobertura">
+              Cobertura
+            </button>
+
+            <button
+              class="option multi"
+              data-key="types"
+              data-value="sobrado">
+              Sobrado
+            </button>
+
+            <button
+              class="option multi"
+              data-key="types"
+              data-value="comercial">
+              Comercial
+            </button>
+
+          </div>
+        </div>
+
+        <div class="step" data-step="2" hidden>
+
+          <div class="step-label">
+            03 · REGIÃO
+          </div>
+
+          <h2>Onde você quer estar?</h2>
+
+          <p>
+            Escolha uma região ou bairro prioritário.
+          </p>
+
+          <div class="options">
+
+            <button
+              class="option"
+              data-key="region"
+              data-value="perdizes">
+              Perdizes
+            </button>
+
+            <button
+              class="option"
+              data-key="region"
+              data-value="pinheiros">
+              Pinheiros
+            </button>
+
+            <button
+              class="option"
+              data-key="region"
+              data-value="vila madalena">
+              Vila Madalena
+            </button>
+
+            <button
+              class="option"
+              data-key="region"
+              data-value="moema">
+              Moema
+            </button>
+
+            <button
+              class="option"
+              data-key="region"
+              data-value="chácara klabin">
+              Chácara Klabin
+            </button>
+
+            <button
+              class="option"
+              data-key="region"
+              data-value="brooklin">
+              Brooklin
+            </button>
+
+            <button
+              class="option"
+              data-key="region"
+              data-value="vila mariana">
+              Vila Mariana
+            </button>
+
+            <button
+              class="option"
+              data-key="region"
+              data-value="outra">
+              Outra região
+            </button>
+
+          </div>
+        </div>
+
+        <div class="step" data-step="3" hidden>
+
+          <div class="step-label">
+            04 · ORÇAMENTO
+          </div>
+
+          <h2>
+            Qual é o seu limite de investimento?
+          </h2>
+
+          <p>
+            Usaremos esse valor como referência, mas o MATCH
+            também encontra oportunidades próximas.
+          </p>
+
+          <div class="options">
+
+            <button
+              class="option"
+              data-key="budget"
+              data-value="400000">
+              Até R$ 400 mil
+            </button>
+
+            <button
+              class="option"
+              data-key="budget"
+              data-value="600000">
+              Até R$ 600 mil
+            </button>
+
+            <button
+              class="option"
+              data-key="budget"
+              data-value="900000">
+              Até R$ 900 mil
+            </button>
+
+            <button
+              class="option"
+              data-key="budget"
+              data-value="1500000">
+              Até R$ 1,5 mi
+            </button>
+
+            <button
+              class="option"
+              data-key="budget"
+              data-value="3000000">
+              Até R$ 3 mi
+            </button>
+
+          </div>
+        </div>
+
+        <div class="step" data-step="4" hidden>
+
+          <div class="step-label">
+            05 · TAMANHO
+          </div>
+
+          <h2>
+            Quantos dormitórios você procura?
+          </h2>
+
+          <p>
+            Se não for decisivo, escolha a opção mais próxima.
+          </p>
+
+          <div class="options">
+
+            <button
+              class="option"
+              data-key="bedrooms"
+              data-value="1">
+              1 dormitório
+            </button>
+
+            <button
+              class="option"
+              data-key="bedrooms"
+              data-value="2">
+              2 dormitórios
+            </button>
+
+            <button
+              class="option"
+              data-key="bedrooms"
+              data-value="3">
+              3 dormitórios
+            </button>
+
+            <button
+              class="option"
+              data-key="bedrooms"
+              data-value="4">
+              4 ou mais
+            </button>
+
+          </div>
+        </div>
+
+        <div class="step" data-step="5" hidden>
+
+          <div class="step-label">
+            06 · O QUE É INDISPENSÁVEL?
+          </div>
+
+          <h2>Escolha suas prioridades.</h2>
+
+          <p>
+            Esses critérios terão peso maior no seu MATCH.
+          </p>
+
+          <div class="options">
+
+            <button
+              class="option multi"
+              data-key="feature"
+              data-value="area50">
+              Área maior
+            </button>
+
+            <button
+              class="option multi"
+              data-key="feature"
+              data-value="suite">
+              Suíte
+            </button>
+
+            <button
+              class="option multi"
+              data-key="feature"
+              data-value="parking">
+              Vaga
+            </button>
+
+            <button
+              class="option multi"
+              data-key="feature"
+              data-value="balcony">
+              Varanda
+            </button>
+
+            <button
+              class="option multi"
+              data-key="feature"
+              data-value="pool">
+              Piscina
+            </button>
+
+            <button
+              class="option multi"
+              data-key="feature"
+              data-value="metro">
+              Metrô próximo
+            </button>
+
+            <button
+              class="option multi"
+              data-key="feature"
+              data-value="lowcondo">
+              Condomínio baixo
+            </button>
+
+          </div>
+        </div>
+
+        <div class="step" data-step="6" hidden>
+
+          <div class="step-label">
+            07 · MOMENTO
+          </div>
+
+          <h2>
+            Quando você pretende comprar?
+          </h2>
+
+          <p>
+            Isso ajuda a Ynteligencia a entender sua intenção.
+          </p>
+
+          <div class="options">
+
+            <button
+              class="option"
+              data-key="timing"
+              data-value="agora">
+              Agora
+            </button>
+
+            <button
+              class="option"
+              data-key="timing"
+              data-value="1-3">
+              Nos próximos 1–3 meses
+            </button>
+
+            <button
+              class="option"
+              data-key="timing"
+              data-value="3-6">
+              Nos próximos 3–6 meses
+            </button>
+
+            <button
+              class="option"
+              data-key="timing"
+              data-value="pesquisando">
+              Só pesquisando
+            </button>
+
+          </div>
+        </div>
+
+        <div class="wizard-actions">
+
+          <button
+            class="back"
+            id="back"
+            type="button">
+            Voltar
+          </button>
+
+          <button
+            class="next"
+            id="next"
+            type="button"
+            disabled>
+            Continuar
+          </button>
+
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="passos">
-
-    <div class="passo">
-      <div class="numero">1</div>
-      <h3>Conte o que você procura</h3>
-      <p>
-        Região, orçamento, tamanho, dormitórios e o que realmente
-        importa para você.
-      </p>
-    </div>
-
-    <div class="passo">
-      <div class="numero">2</div>
-      <h3>A Ynteligencia cruza os dados</h3>
-      <p>
-        Seu perfil é comparado com os imóveis disponíveis
-        na plataforma.
-      </p>
-    </div>
-
-    <div class="passo">
-      <div class="numero">3</div>
-      <h3>Receba suas melhores combinações</h3>
-      <p>
-        Em vez de centenas de anúncios, você recebe
-        uma seleção mais relevante.
-      </p>
-    </div>
-
-  </div>
-
 </section>
 
+<section
+  class="section results"
+  id="results">
 
-<section id="imoveis">
+  <div class="container">
 
-  <div class="cabecalho-lista">
+    <div class="result-top">
 
-    <div>
-      <h2>Imóveis selecionados</h2>
-      <p class="subtitulo">
-        O catálogo abaixo é uma demonstração do conceito Ynteligencia.
-      </p>
+      <div>
+        <h2>Seus imóveis</h2>
+
+        <p id="resultSummary">
+          Encontramos opções compatíveis com o seu perfil.
+        </p>
+      </div>
+
+      <button
+        class="reset-link"
+        id="newSearch">
+        Refazer busca
+      </button>
+
     </div>
 
-    <span id="resultado"></span>
+    <div
+      class="grid"
+      id="matchGrid">
+    </div>
 
   </div>
-
-  <div class="imoveis" id="listaImoveis"></div>
-
 </section>
 
+<section
+  class="explore"
+  id="explore">
 
-<section class="perfil-banner" id="perfil">
+  <div class="container">
 
-  <div>
-    <h2>Quer parar de procurar?</h2>
+    <div class="section-head">
 
-    <p>
-      Conte seu perfil para a Ynteligencia e descubra quais imóveis
-      têm maior compatibilidade com o que você procura.
-    </p>
+      <h2>
+        Prefere procurar sozinho?
+      </h2>
+
+      <p>
+        Explore a base disponível e use os filtros
+        para encontrar uma oportunidade.
+      </p>
+
+    </div>
+
+    <div class="explore-box">
+
+      <select
+        id="catalogNeighborhood"
+        class="field">
+        <option value="">
+          Todos os bairros
+        </option>
+      </select>
+
+      <input
+        id="catalogSearch"
+        class="field"
+        placeholder="Empreendimento, bairro, endereço ou código">
+
+      <button
+        class="primary"
+        id="showCatalog">
+        Explorar
+      </button>
+
+    </div>
+
+    <details class="catalog-filters"><summary>Mais filtros de compra</summary>
+
+      <div class="filter-title">
+        Filtros de compra
+      </div>
+
+      <div class="filter-grid">
+
+        <select id="catalogType" class="field">
+          <option value="">Todos os tipos</option>
+          <option value="apartamento">Apartamento</option>
+          <option value="casa">Casa</option>
+          <option value="studio">Studio</option>
+          <option value="cobertura">Cobertura</option>
+          <option value="sobrado">Sobrado</option>
+          <option value="comercial">Comercial</option>
+        </select>
+
+        <input
+          id="minPrice"
+          class="field"
+          type="number"
+          min="0"
+          step="10000"
+          placeholder="Preço mínimo">
+
+        <input
+          id="maxPrice"
+          class="field"
+          type="number"
+          min="0"
+          step="10000"
+          placeholder="Preço máximo">
+
+        <select
+          id="catalogBedrooms"
+          class="field">
+
+          <option value="">Dormitórios</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4+</option>
+
+        </select>
+
+        <input
+          id="minArea"
+          class="field"
+          type="number"
+          min="0"
+          step="1"
+          placeholder="Área mínima (m²)">
+
+        <select
+          id="catalogParking"
+          class="field">
+
+          <option value="">Vagas</option>
+          <option value="0">Sem vaga</option>
+          <option value="1">1+</option>
+          <option value="2">2+</option>
+          <option value="3">3+</option>
+
+        </select>
+
+        <input
+          id="maxCondo"
+          class="field"
+          type="number"
+          min="0"
+          step="50"
+          placeholder="Condomínio máx.">
+
+        <input
+          id="maxIptu"
+          class="field"
+          type="number"
+          min="0"
+          step="50"
+          placeholder="IPTU máx.">
+
+      </div>
+
+      <div class="filter-actions">
+
+        <button
+          class="filter-reset"
+          id="resetCatalogFilters"
+          type="button">
+          Limpar filtros
+        </button>
+
+      </div>
+    </details>
   </div>
+</section>
 
-  <button onclick="abrirModal('modalPerfil')">
-    Criar meu perfil
-  </button>
+<section
+  class="catalog"
+  id="catalog">
 
+  <div class="container">
+
+    <div class="result-top">
+
+      <div>
+
+        <h2>
+          Imóveis disponíveis
+        </h2>
+
+        <label for="catalogSort">Ordenar por</label>
+        <select class="field" id="catalogSort"><option value="original">Ordem do catálogo</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option><option value="area-desc">Maior área</option></select>
+        <p id="catalogStatus">
+          Carregando estoque...
+        </p>
+
+      </div>
+    </div>
+
+    <div
+      class="catalog-grid"
+      id="catalogGrid">
+    </div>
+    <button id="loadMore" class="primary load-more" hidden>Carregar mais 12 imóveis</button>
+
+  </div>
 </section>
 
 </main>
 
-
-<!-- MODAL PERFIL -->
-
-<div class="modal" id="modalPerfil">
-
-  <div class="caixa-modal">
-
-    <button class="fechar" onclick="fecharModal('modalPerfil')">×</button>
-
-    <h2>Vamos entender o que você procura.</h2>
-
-    <p>
-      Leva menos de um minuto. Essas informações ajudam a Ynteligencia
-      a encontrar imóveis mais compatíveis com você.
-    </p>
-
-    <form class="formulario" onsubmit="gerarPerfil(event)">
-
-      <input id="nomeLead" required placeholder="Seu nome">
-
-      <select id="finalidadeLead" required>
-        <option value="">O que você pretende fazer?</option>
-        <option value="moradia">Comprar para morar</option>
-        <option value="investimento">Comprar para investir</option>
-        <option value="aluguel">Alugar</option>
-      </select>
-
-      <input id="regiaoLead" placeholder="Região ou bairros de interesse">
-
-      <select id="orcamentoLead" required>
-        <option value="">Qual seu orçamento?</option>
-        <option value="500000">Até R$ 500 mil</option>
-        <option value="700000">Até R$ 700 mil</option>
-        <option value="900000">Até R$ 900 mil</option>
-        <option value="1200000">Até R$ 1,2 milhão</option>
-        <option value="2000000">Até R$ 2 milhões</option>
-        <option value="99999999">Acima de R$ 2 milhões</option>
-      </select>
-
-      <select id="entradaLead">
-        <option value="">Quanto pretende dar de entrada?</option>
-        <option value="50000">Até R$ 50 mil</option>
-        <option value="100000">Até R$ 100 mil</option>
-        <option value="200000">Até R$ 200 mil</option>
-        <option value="300000">Até R$ 300 mil</option>
-        <option value="500000">Acima de R$ 300 mil</option>
-      </select>
-
-      <select id="quartosLead">
-        <option value="">Quantos dormitórios?</option>
-        <option value="1">1+</option>
-        <option value="2">2+</option>
-        <option value="3">3+</option>
-        <option value="4">4+</option>
-      </select>
-
-      <input
-        id="metragemLead"
-        type="number"
-        placeholder="Metragem mínima desejada (m²)"
-      >
-
-      <div>
-
-        <strong style="font-size:14px;">
-          O que é importante para você?
-        </strong>
-
-        <div class="checks">
-
-          <label class="check">
-            <input type="checkbox" value="Varanda" class="preferencia">
-            Varanda
-          </label>
-
-          <label class="check">
-            <input type="checkbox" value="Vaga" class="preferencia">
-            Vaga
-          </label>
-
-          <label class="check">
-            <input type="checkbox" value="Piscina" class="preferencia">
-            Piscina
-          </label>
-
-          <label class="check">
-            <input type="checkbox" value="Metrô" class="preferencia">
-            Próximo ao metrô
-          </label>
-
-        </div>
-
-      </div>
-
-      <button class="btn-principal">
-        Encontrar meus imóveis
-      </button>
-
-    </form>
-
-    <div class="resultado-ia" id="resultadoIA"></div>
-
-  </div>
-
+<div
+  class="toast"
+  id="toast">
 </div>
 
-
 <footer>
-  Ynteligencia • Inteligência imobiliária
+  Ynteligencia · Inteligência imobiliária
 </footer>
-
 
 <script>
 
-/* =========================================================
-   BASE DEMONSTRATIVA
-   FUTURO: SUBSTITUIR POR API / BACKEND YNTELIGENCIA
-========================================================= */
+const CSV_FILE="Remax.teste.2.csv";
 
-const imoveis = [
+let properties=[];
+let sourceMode="usados";
 
-{
-  id:1,
-  nome:"Well Perdizes",
-  bairro:"Perdizes",
-  cidade:"São Paulo",
-  preco:340000,
-  quartos:2,
-  metragem:35,
-  tipo:"Apartamento",
-  finalidade:"Venda",
-  imagem:"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80",
-  recursos:["Varanda","Metrô"],
-  destaque:"Lançamento"
-},
+let profile={
+  purpose:"",
+  region:"",
+  budget:0,
+  bedrooms:null,
+  feature:[],
+  timing:"",
+  types:[]
+};
 
-{
-  id:2,
-  nome:"Apartamento Vila Madalena",
-  bairro:"Vila Madalena",
-  cidade:"São Paulo",
-  preco:790000,
-  quartos:2,
-  metragem:68,
-  tipo:"Apartamento",
-  finalidade:"Venda",
-  imagem:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80",
-  recursos:["Varanda","Vaga","Metrô"],
-  destaque:"Oportunidade"
-},
+let step=0;
 
-{
-  id:3,
-  nome:"Studio Pinheiros",
-  bairro:"Pinheiros",
-  cidade:"São Paulo",
-  preco:520000,
-  quartos:1,
-  metragem:32,
-  tipo:"Studio",
-  finalidade:"Venda",
-  imagem:"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-  recursos:["Piscina","Metrô"],
-  destaque:"Investimento"
-},
+const $=id=>document.getElementById(id);
 
-{
-  id:4,
-  nome:"Apartamento Moema",
-  bairro:"Moema",
-  cidade:"São Paulo",
-  preco:980000,
-  quartos:3,
-  metragem:82,
-  tipo:"Apartamento",
-  finalidade:"Venda",
-  imagem:"https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=80",
-  recursos:["Vaga","Piscina"],
-  destaque:"Exclusivo"
-},
-
-{
-  id:5,
-  nome:"Apartamento Chácara Klabin",
-  bairro:"Chácara Klabin",
-  cidade:"São Paulo",
-  preco:389000,
-  quartos:2,
-  metragem:40,
-  tipo:"Apartamento",
-  finalidade:"Venda",
-  imagem:"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80",
-  recursos:["Varanda","Vaga","Metrô"],
-  destaque:"Novo"
-},
-
-{
-  id:6,
-  nome:"Apartamento João Dias",
-  bairro:"João Dias",
-  cidade:"São Paulo",
-  preco:450000,
-  quartos:2,
-  metragem:48,
-  tipo:"Apartamento",
-  finalidade:"Venda",
-  imagem:"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80",
-  recursos:["Vaga","Piscina"],
-  destaque:"Oportunidade"
-}
-
+const steps=[
+  ...document.querySelectorAll(".step")
 ];
 
+function clean(v){
+  return String(v??"")
+    .replace(/\s+/g," ")
+    .trim()
+}
 
-/* =========================================================
-   RENDER
-========================================================= */
-
-function moeda(valor){
-
-  return valor.toLocaleString("pt-BR",{
-    style:"currency",
-    currency:"BRL",
-    maximumFractionDigits:0
-  });
-
+function norm(v){
+  return clean(v)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g,"")
+    .toLowerCase()
 }
 
 
-function renderImoveis(lista=imoveis){
+/* =========================================================
+   SUPABASE
+========================================================= */
 
-  const container=document.getElementById("listaImoveis");
+// Sem credenciais ou gravação externa nesta versão de avaliação.
+async function supabaseTrack() { return false; }
+async function supabaseCreateLead() { return false; }
 
-  container.innerHTML="";
 
-  if(!lista.length){
 
-    container.innerHTML=`
-      <div style="
-        grid-column:1/-1;
-        padding:50px;
-        border-radius:14px;
-        background:white;
-        text-align:center;
-        color:#64748b;">
-        Nenhum imóvel encontrado com esses critérios.
-      </div>
-    `;
+/* =========================================================
+   HELPERS
+========================================================= */
+
+function esc(value) {
+  return String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  }[char]));
+}
+
+
+function numberBR(value) {
+  if (typeof value === 'number') return Number.isFinite(value) && value >= 0 ? value : 0;
+  let s = String(value ?? '').replace(/R\$/gi, '').replace(/\s/g, '');
+  if (!s || !/^[\d.,]+$/.test(s)) return 0;
+  if (s.includes(',')) {
+    if (!/^(?:\d+|\d{1,3}(?:\.\d{3})+),\d{1,2}$/.test(s)) return 0;
+    s = s.replace(/\./g, '').replace(',', '.');
+  } else if (/^\d{1,3}(?:\.\d{3})+$/.test(s)) {
+    s = s.replace(/\./g, '');
+  } else if (!/^\d+(?:\.\d{1,2})?$/.test(s)) return 0;
+  const n = Number(s);
+  return Number.isFinite(n) && n >= 0 ? n : 0;
+}
+const currencyFormatter = new Intl.NumberFormat('pt-BR', {style:'currency',currency:'BRL',maximumFractionDigits:0});
+const areaFormatter = new Intl.NumberFormat('pt-BR', {maximumFractionDigits:2});
+function money(v) { return v > 0 ? currencyFormatter.format(v) : 'Valor sob consulta'; }
+function area(v) { return areaFormatter.format(v); }
+
+
+/* =========================================================
+   FOTOS
+========================================================= */
+
+let photoManifest={};
+
+
+function normalizePhotoURL(v){
+
+  const s=clean(v);
+
+  if(!s)return "";
+
+  return validURL(s)
+    ? s
+    : "";
+}
+
+
+function photoList(p){
+
+  const m=
+    photoManifest[String(p.id)] ||
+    photoManifest[p.id];
+
+
+  if(Array.isArray(m)){
+
+    return m
+      .map(normalizePhotoURL)
+      .filter(Boolean)
+      .slice(0,8);
+  }
+
+
+  if(Array.isArray(p.photos)){
+
+    return p.photos
+      .map(normalizePhotoURL)
+      .filter(Boolean)
+      .slice(0,8);
+  }
+
+
+  const raw=clean(p.photos);
+
+
+  if(raw.includes("|")){
+
+    return raw
+      .split("|")
+      .map(normalizePhotoURL)
+      .filter(Boolean)
+      .slice(0,8);
+  }
+
+
+  const one=
+    normalizePhotoURL(raw);
+
+
+  return one
+    ? [one]
+    : [];
+}
+
+
+async function loadPhotoManifest(){
+
+  try{
+
+    const r=
+      await fetch(
+        "photos.json",
+        {
+          cache:"no-cache"
+        }
+      );
+
+
+    if(!r.ok)return;
+
+
+    const d=
+      await r.json();
+
+
+    if(
+      d &&
+      typeof d==="object"
+    ){
+
+      photoManifest=d;
+    }
+
+  }catch{
+
+    photoManifest={};
+  }
+}
+
+
+function validURL(v){
+
+  try{
+
+    let u=new URL(v);
+
+    return(
+      u.protocol==="http:" ||
+      u.protocol==="https:"
+    );
+
+  }catch{
+
+    return false;
+  }
+}
+
+
+/* =========================================================
+   CSV
+========================================================= */
+
+function parseCSV(text) {
+  text = String(text).replace(/^\uFEFF/, '');
+  if (text.length > 15000000) throw new Error('CSV acima do limite de 15 MB para este teste.');
+  const rows = []; let row = [], value = '', quoted = false, closed = false;
+  const pushRow = () => { row.push(value); if(row.some(v=>v.trim())) rows.push(row); row=[]; value=''; closed=false; };
+  for (let i=0; i<text.length; i++) {
+    const c = text[i];
+    if (quoted) {
+      if(c==='"' && text[i+1]==='"') { value+='"'; i++; }
+      else if(c==='"') { quoted=false; closed=true; }
+      else value+=c;
+    } else if(c===';') { row.push(value); value=''; closed=false; }
+    else if(c==='\n' || c==='\r') { if(c==='\r' && text[i+1]==='\n') i++; pushRow(); }
+    else if(c==='"') { if(value || closed) throw new Error('Aspas inválidas no CSV.'); quoted=true; }
+    else { if(closed && !/\s/.test(c)) throw new Error('Texto após fechamento de aspas.'); if(!closed) value+=c; }
+  }
+  if(quoted) throw new Error('CSV com aspas não fechadas.');
+  pushRow();
+  if(rows.length<2) throw new Error('CSV vazio ou sem imóveis.');
+  const headers=rows.shift().map(norm);
+  if(headers.some(h=>!h) || new Set(headers).size!==headers.length) throw new Error('Cabeçalhos vazios ou repetidos.');
+  if(!(headers.includes('empreendimento') || headers.includes('emprendimento')) || !headers.includes('valor de venda (r$)')) throw new Error('Use o CSV original separado por ponto e vírgula, com nome do empreendimento e Valor de venda (R$).');
+  return rows.map((cols,index)=>{
+    if(cols.length!==headers.length) throw new Error('Quantidade de colunas inválida no registro '+(index+2));
+    const obj=Object.create(null);
+    headers.forEach((key,i)=>obj[key]=clean(cols[i]));
+    return obj;
+  });
+}
+
+
+function field(
+  row,
+  names
+){
+
+  for(
+    const name of names
+  ){
+
+    const value=
+      row[norm(name)];
+
+    if(
+      clean(value)!==""
+    ){
+
+      return clean(value);
+    }
+  }
+
+  return "";
+}
+
+
+function inferType(row){
+
+  const t=
+    norm(
+      [
+        field(
+          row,
+          ["EMPREENDIMENTO","EMPRENDIMENTO"]
+        ),
+
+        field(
+          row,
+          ["Observações"]
+        ),
+
+        field(
+          row,
+          ["Tipo"]
+        ),
+
+        field(
+          row,
+          ["Categoria"]
+        )
+
+      ].join(" ")
+    );
+
+
+  if(
+    t.includes("cobertura")
+  )return "cobertura";
+
+
+  if(
+    t.includes("sobrado")
+  )return "sobrado";
+
+
+  if(
+    t.includes("casa")
+  )return "casa";
+
+
+  if(
+    t.includes("studio") ||
+    t.includes("studios") ||
+    t.includes("kitnet") ||
+    t.includes("loft")
+  )return "studio";
+
+
+  if(
+    t.includes("comercial") ||
+    t.includes("sala comercial") ||
+    t.includes("conjunto comercial")
+  )return "comercial";
+
+
+  return "apartamento";
+}
+
+
+function mapProperty(
+  row,
+  index
+){
+
+  return{
+
+    id:
+      clean(
+        field(
+          row,
+          ["ID"]
+        )
+      ) ||
+      `IMOVEL-${index+1}`,
+
+
+    name:
+      clean(
+        field(
+          row,
+          ["EMPREENDIMENTO","EMPRENDIMENTO"]
+        )
+      ) ||
+      "Imóvel disponível",
+
+
+    neighborhood:
+      clean(
+        field(
+          row,
+          ["Bairro"]
+        )
+      ) ||
+      "Bairro não informado",
+
+
+    address:
+      clean(
+        field(
+          row,
+          ["Endereço"]
+        )
+      ),
+
+
+    unit:
+      clean(
+        field(
+          row,
+          ["Nº da unidade"]
+        )
+      ),
+
+
+    area:
+      numberBR(
+        field(
+          row,
+          ["Área Privativa (m2)"]
+        )
+      ),
+
+
+    bedrooms:
+      numberBR(
+        field(
+          row,
+          ["N˚ Dorms.","Nº Dorms."]
+        )
+      ),
+
+
+    suites:
+      numberBR(
+        field(
+          row,
+          ["Nº Suítes"]
+        )
+      ),
+
+
+    parking:
+      numberBR(
+        field(
+          row,
+          ["N˚ Vagas","Nº Vagas"]
+        )
+      ),
+
+
+    year:
+      numberBR(
+        field(
+          row,
+          ["Ano Const."]
+        )
+      ),
+
+
+    description:
+      clean(
+        field(
+          row,
+          ["Observações"]
+        )
+      ),
+
+
+    condominium:
+      numberBR(
+        field(
+          row,
+          ["Valor Condomínio"]
+        )
+      ),
+
+
+    iptu:
+      numberBR(
+        field(
+          row,
+          ["Valor IPTU"]
+        )
+      ),
+
+
+    value:
+      numberBR(
+        field(
+          row,
+          ["Valor de venda (R$)"]
+        )
+      ),
+
+
+    m2:
+      numberBR(
+        field(
+          row,
+          ["Valor M2 (R$ / m2)"]
+        )
+      ),
+
+
+    photos:
+      clean(
+        field(
+          row,
+          ["Link das Fotos sem marca d´água"]
+        )
+      ),
+
+
+    type:
+      inferType(row),
+
+
+    source:
+      "usados"
+  };
+}
+
+
+function deduplicate(items){
+
+  const map=new Map();
+
+  items.forEach(
+    p=>{
+
+      const k=norm(p.id);
+
+      if(
+        k &&
+        !map.has(k)
+      ){
+
+        map.set(k,p);
+      }
+    }
+  );
+
+  return[
+    ...map.values()
+  ];
+}
+
+
+/* =========================================================
+   WIZARD
+========================================================= */
+
+function setStep(n, shouldScroll=true){
+
+  step=
+    Math.max(
+      0,
+      Math.min(
+        6,
+        n
+      )
+    );
+
+
+  steps.forEach(
+    (s,i)=>
+      s.hidden=i!==step
+  );
+
+
+  $("progress").style.width=
+    `${((step+1)/7)*100}%`;
+
+
+  $("back").style.visibility=
+    step===0
+      ? "hidden"
+      : "visible";
+
+
+  $("next").textContent=
+    step===6
+      ? "Encontrar meus MATCHs"
+      : "Continuar";
+
+
+  updateNext();
+
+
+  if(step===6){
+
+    updateSummary();
+  }
+
+
+  if(shouldScroll) document
+    .getElementById("match")
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+}
+
+
+function currentValid(){
+
+  if(step===1){
+
+    return(
+      profile.types.length>0
+    );
+  }
+
+
+  if(step===5){
+
+    return(
+      profile.feature.length>0
+    );
+  }
+
+
+  if(step===3){
+
+    return(
+      Number(profile.budget)>0
+    );
+  }
+
+
+  if(step===6){
+
+    return(
+      profile.timing!==""
+    );
+  }
+
+
+  const key=
+    [
+      "purpose",
+      "types",
+      "region",
+      "budget",
+      "bedrooms",
+      "feature",
+      "timing"
+    ][step];
+
+
+  return(
+    profile[key]!=="" &&
+    profile[key]!==null &&
+    profile[key]!==undefined
+  );
+}
+
+
+function updateNext(){
+
+  $("next").disabled=
+    !currentValid();
+}
+
+
+document
+  .querySelectorAll(
+    ".source-btn"
+  )
+  .forEach(
+    btn=>
+      btn.addEventListener(
+        "click",
+        ()=>{
+
+          sourceMode=
+            btn.dataset.source;
+
+
+          document
+            .querySelectorAll(
+              ".source-btn"
+            )
+            .forEach(
+              x=>
+                x.classList.toggle(
+                  "selected",
+                  x===btn
+                )
+            );
+
+
+          if(
+            sourceMode==="novos"
+          ){
+
+            showToast(
+              "Novos: integração com a Órulo será conectada assim que as credenciais forem liberadas."
+            );
+
+          }else{
+
+            showToast(
+              "Usados: base própria da Ynteligencia."
+            );
+          }
+        }
+      )
+  );
+
+
+document
+  .querySelectorAll(
+    ".option"
+  )
+  .forEach(
+    btn=>
+      btn.addEventListener(
+        "click",
+        ()=>{
+
+          const key=
+            btn.dataset.key;
+
+          const value=
+            btn.dataset.value;
+
+
+          if(
+            btn.classList.contains(
+              "multi"
+            )
+          ){
+
+            const arr=
+              profile[key];
+
+            const i=
+              arr.indexOf(value);
+
+
+            if(i>=0){
+
+              arr.splice(i,1);
+
+            }else{
+
+              arr.push(value);
+            }
+
+
+            btn.classList.toggle(
+              "selected",
+              arr.includes(value)
+            );
+
+          }else{
+
+            profile[key]=
+              key==="budget"
+                ? Number(value)
+                : value;
+
+
+            document
+              .querySelectorAll(
+                `.option[data-key="${key}"]:not(.multi)`
+              )
+              .forEach(
+                x=>
+                  x.classList.remove(
+                    "selected"
+                  )
+              );
+
+
+            btn
+              .classList
+              .add(
+                "selected"
+              );
+          }
+
+
+          updateNext();
+        }
+      )
+  );
+
+
+function trackProfileCompleted(){
+
+  try{
+
+    gtag(
+      'event',
+      'profile_completed',
+      {
+
+        purpose:
+          profile.purpose || "",
+
+        region:
+          profile.region || "",
+
+        budget:
+          Number(
+            profile.budget
+          ) || 0,
+
+        bedrooms:
+          profile.bedrooms ?? "",
+
+        timing:
+          profile.timing || "",
+
+        property_types:
+          (
+            profile.types || []
+          ).join("|"),
+
+        priorities:
+          (
+            profile.feature || []
+          ).join("|"),
+
+        debug_mode:false
+      }
+    );
+
+  }catch(error){
+
+    console.warn(
+      "Não foi possível registrar profile_completed:",
+      error
+    );
+  }
+
+
+  supabaseTrack(
+    "profile_completed",
+    {
+      profile:{
+        ...profile
+      }
+    }
+  );
+}
+
+
+$("next")
+  .addEventListener(
+    "click",
+    ()=>{
+
+      if(
+        !currentValid()
+      )return;
+
+
+      if(step<6){
+
+        setStep(
+          step+1
+        );
+
+      }else{
+
+        trackProfileCompleted();
+
+        showMatches();
+      }
+    }
+  );
+
+
+$("back")
+  .addEventListener(
+    "click",
+    ()=>{
+
+      if(step>0){
+
+        setStep(
+          step-1
+        );
+      }
+    }
+  );
+
+
+$("startHero")
+  .addEventListener(
+    "click",
+    ()=>{
+
+      gtag(
+        'event',
+        'profile_started',
+        {
+          source:'hero'
+        }
+      );
+
+
+      supabaseTrack(
+        "profile_started",
+        {
+          source:"hero"
+        }
+      );
+
+
+      $("match")
+        .scrollIntoView({
+          behavior:"smooth",
+          block:"center"
+        });
+    }
+  );
+
+
+$("navMatch")
+  .addEventListener(
+    "click",
+    ()=>
+      $("match")
+        .scrollIntoView({
+          behavior:"smooth",
+          block:"center"
+        })
+  );
+
+
+$("exploreHero")
+  .addEventListener(
+    "click",
+    ()=>
+      $("explore")
+        .scrollIntoView({
+          behavior:"smooth"
+        })
+  );
+
+
+$("navExplore")
+  .addEventListener(
+    "click",
+    ()=>
+      $("explore")
+        .scrollIntoView({
+          behavior:"smooth"
+        })
+  );
+
+
+$("newSearch")
+  .addEventListener(
+    "click",
+    ()=>{
+
+      profile={
+        purpose:"",
+        region:"",
+        budget:0,
+        bedrooms:null,
+        feature:[],
+        timing:"",
+        types:[]
+      };
+
+
+      document
+        .querySelectorAll(
+          ".option"
+        )
+        .forEach(
+          x=>
+            x.classList.remove(
+              "selected"
+            )
+        );
+
+
+      $("results")
+        .classList
+        .remove(
+          "visible"
+        );
+
+
+      setStep(0);
+    }
+  );
+
+
+function updateSummary(){
+
+  const el=
+    $("summary");
+
+
+  if(!el)return;
+
+
+  const p=
+    profile;
+
+
+  const region=
+    p.region==="outra"
+      ? "outra região"
+      : p.region;
+
+
+  const budget=
+    p.budget
+      ? money(p.budget)
+      : "qualquer faixa";
+
+
+  const beds=
+    p.bedrooms===4
+      ? "4+"
+      : p.bedrooms ??
+        "qualquer número";
+
+
+  const types=
+    p.types.join(", ");
+
+
+  el.textContent=
+    `Você busca ${types||"um imóvel"} para ${p.purpose||"comprar"}, em ${region||"São Paulo"}, até ${budget}, com ${beds} dormitório(s). ${p.feature.length?"Prioridades: "+p.feature.join(", ")+".":""}`;
+}
+
+
+/* =========================================================
+   MATCH
+========================================================= */
+
+function textHas(
+  p,
+  terms
+){
+
+  const t=
+    norm(
+      [
+        p.description,
+        p.name,
+        p.address
+      ].join(" ")
+    );
+
+
+  return terms.some(
+    x=>
+      t.includes(
+        norm(x)
+      )
+  );
+}
+
+
+function scoreProperty(p){
+
+  let score=0;
+
+  let reasons=[];
+
+
+  const region=
+    norm(
+      profile.region
+    );
+
+
+  const neighborhood=
+    norm(
+      p.neighborhood
+    );
+
+
+  if(
+    region &&
+    region!=="outra"
+  ){
+
+    if(
+      neighborhood.includes(
+        region
+      ) ||
+      region.includes(
+        neighborhood
+      )
+    ){
+
+      score+=25;
+
+      reasons.push(
+        "Região desejada"
+      );
+    }
+
+  }else{
+
+    score+=25;
+  }
+
+
+  if(
+    profile.budget
+  ){
+
+    if(
+      p.value &&
+      p.value<=profile.budget
+    ){
+
+      score+=25;
+
+      reasons.push(
+        "Dentro do orçamento"
+      );
+
+    }else if(
+      p.value &&
+      p.value<=
+        profile.budget*1.1
+    ){
+
+      score+=17;
+
+      reasons.push(
+        "Próximo do orçamento"
+      );
+    }
+
+  }else{
+
+    score+=25;
+  }
+
+
+  if(
+    profile.bedrooms!==null
+  ){
+
+    if(
+      profile.bedrooms===4
+    ){
+
+      if(
+        p.bedrooms>=4
+      ){
+
+        score+=15;
+
+        reasons.push(
+          "4+ dormitórios"
+        );
+
+      }else if(
+        p.bedrooms===3
+      ){
+
+        score+=8;
+      }
+
+    }else if(
+      p.bedrooms===
+      profile.bedrooms
+    ){
+
+      score+=15;
+
+      reasons.push(
+        `${p.bedrooms} dormitórios`
+      );
+
+    }else if(
+      Math.abs(
+        p.bedrooms-
+        profile.bedrooms
+      )===1
+    ){
+
+      score+=8;
+    }
+
+  }else{
+
+    score+=15;
+  }
+
+
+  if(
+    profile.types.length
+  ){
+
+    if(
+      profile.types.includes(
+        p.type
+      )
+    ){
+
+      score+=8;
+
+      reasons.push(
+        `Tipo: ${p.type}`
+      );
+
+    }else{
+
+      score-=4;
+    }
+
+  }else{
+
+    score+=8;
+  }
+
+
+  if(
+    profile.feature.includes(
+      "area50"
+    )
+  ){
+
+    if(
+      p.area>=50
+    ){
+
+      score+=4;
+
+      reasons.push(
+        "Área compatível"
+      );
+    }
+  }
+
+
+  if(
+    profile.feature.includes(
+      "suite"
+    )
+  ){
+
+    if(
+      p.suites>0
+    ){
+
+      score+=4;
+
+      reasons.push(
+        "Suíte"
+      );
+    }
+  }
+
+
+  if(
+    profile.feature.includes(
+      "parking"
+    )
+  ){
+
+    if(
+      p.parking>0
+    ){
+
+      score+=4;
+
+      reasons.push(
+        "Vaga"
+      );
+    }
+  }
+
+
+  if(
+    profile.feature.includes(
+      "balcony"
+    )
+  ){
+
+    if(
+      textHas(
+        p,
+        [
+          "varanda",
+          "sacada",
+          "terraço",
+          "terraco"
+        ]
+      )
+    ){
+
+      score+=3;
+
+      reasons.push(
+        "Varanda"
+      );
+    }
+  }
+
+
+  if(
+    profile.feature.includes(
+      "pool"
+    )
+  ){
+
+    if(
+      textHas(
+        p,
+        ["piscina"]
+      )
+    ){
+
+      score+=3;
+
+      reasons.push(
+        "Piscina"
+      );
+    }
+  }
+
+
+  if(
+    profile.feature.includes(
+      "metro"
+    )
+  ){
+
+    if(
+      textHas(
+        p,
+        [
+          "metrô",
+          "metro",
+          "estação",
+          "estacao"
+        ]
+      )
+    ){
+
+      score+=3;
+
+      reasons.push(
+        "Metrô próximo"
+      );
+    }
+  }
+
+
+  if(
+    profile.feature.includes(
+      "lowcondo"
+    )
+  ){
+
+    if(
+      p.condominium>0 &&
+      p.condominium<=900
+    ){
+
+      score+=4;
+
+      reasons.push(
+        "Condomínio controlado"
+      );
+    }
+  }
+
+
+  return{
+
+    score:
+      Math.max(
+        0,
+        Math.min(
+          100,
+          Math.round(score)
+        )
+      ),
+
+    reasons:
+      [
+        ...new Set(reasons)
+      ].slice(0,5)
+  };
+}
+
+
+function showMatches(){
+  if(!inventoryReady) { showToast('Carregue a base de imóveis antes de gerar o MATCH.'); return; }
+
+  if(
+    sourceMode==="novos"
+  ){
+
+    $("results")
+      .classList
+      .add(
+        "visible"
+      );
+
+
+    $("resultSummary")
+      .textContent=
+        "O estoque de Novos será conectado à Órulo assim que as credenciais forem liberadas.";
+
+
+    $("matchGrid")
+      .innerHTML=
+        `
+        <div class="empty">
+
+          <h3>
+            Novos imóveis em preparação
+          </h3>
+
+          <p>
+            A Ynteligencia já está preparada para receber
+            o catálogo da Órulo. Assim que a API for conectada,
+            o mesmo MATCH será aplicado aos lançamentos.
+          </p>
+
+        </div>
+        `;
+
+
+    $("results")
+      .scrollIntoView({
+        behavior:"smooth"
+      });
+
 
     return;
   }
 
 
-  lista.forEach(imovel=>{
+  const scored=
+    properties
 
-    const score=Math.floor(82+Math.random()*17);
+      .map(
+        p=>({
+          ...p,
+          match:
+            scoreProperty(p)
+        })
+      )
 
-    container.innerHTML+=`
+      .filter(
+        x=>
+          x.match.score>=45
+      )
 
-      <article class="card">
+      .sort(
+        (a,b)=>
+          b.match.score-
+          a.match.score ||
+          a.value-
+          b.value
+      )
 
-        <div class="foto">
-
-          <img
-            src="${imovel.imagem}"
-            alt="${imovel.nome}"
-            loading="lazy"
-          >
-
-          <div class="tag">
-            ${imovel.destaque}
-          </div>
-
-          <div class="score">
-            ${score}% compatível
-          </div>
-
-          <button
-            class="favorito"
-            onclick="favoritar(${imovel.id})"
-            aria-label="Favoritar imóvel">
-            ♡
-          </button>
-
-        </div>
-
-        <div class="dados">
-
-          <div class="preco">
-            ${moeda(imovel.preco)}
-          </div>
-
-          <h3>${imovel.nome}</h3>
-
-          <p class="local">
-            ${imovel.bairro} • ${imovel.cidade}
-          </p>
-
-          <div class="detalhes">
-            <span>${imovel.quartos} dorm.</span>
-            <span>${imovel.metragem} m²</span>
-            <span>${imovel.tipo}</span>
-          </div>
-
-          <div class="compatibilidade">
-            <strong>Por que recomendamos?</strong><br>
-            Região, faixa de preço e características
-            compatíveis com perfis de compradores semelhantes.
-          </div>
-
-          <button
-            class="botao-card"
-            onclick="interesse(${imovel.id})">
-            Quero conhecer
-          </button>
-
-        </div>
-
-      </article>
-
-    `;
-
-  });
-
-}
+      .slice(0,12);
 
 
-renderImoveis();
+  try{
 
+    gtag(
+      'event',
+      'match_generated',
+      {
 
-/* =========================================================
-   BUSCA
-========================================================= */
+        results_count:
+          scored.length,
 
-function filtrarImoveis(){
+        top_match_score:
+          scored.length
+            ? scored[0].match.score
+            : 0,
 
-  const texto=
-    document.getElementById("buscaTexto").value
-    .toLowerCase();
+        region:
+          profile.region || "",
 
-  const finalidade=
-    document.getElementById("finalidade").value;
+        budget:
+          Number(
+            profile.budget
+          ) || 0,
 
-  const tipo=
-    document.getElementById("tipo").value;
+        inventory_source:
+          sourceMode || "usados",
 
-  const quartos=
-    Number(document.getElementById("quartos").value);
-
-
-  const filtrados=imoveis.filter(imovel=>{
-
-    const local=(
-      imovel.nome+" "+
-      imovel.bairro+" "+
-      imovel.cidade
-    ).toLowerCase();
-
-    return (
-
-      (!texto || local.includes(texto)) &&
-
-      (!finalidade ||
-       imovel.finalidade===finalidade) &&
-
-      (!tipo ||
-       imovel.tipo===tipo) &&
-
-      (!quartos ||
-       imovel.quartos>=quartos)
-
+        debug_mode:false
+      }
     );
 
-  });
+  }catch(error){
 
-
-  document.getElementById("resultado").textContent=
-    `${filtrados.length} imóvel(is) encontrado(s)`;
-
-  renderImoveis(filtrados);
-
-  document.getElementById("imoveis")
-    .scrollIntoView({behavior:"smooth"});
-
-}
-
-
-/* =========================================================
-   FAVORITO
-========================================================= */
-
-function favoritar(id){
-
-  let favoritos=
-    JSON.parse(localStorage.getItem("ynteligencia_favoritos")||"[]");
-
-  if(!favoritos.includes(id)){
-    favoritos.push(id);
-    localStorage.setItem(
-      "ynteligencia_favoritos",
-      JSON.stringify(favoritos)
+    console.warn(
+      "Não foi possível registrar match_generated:",
+      error
     );
   }
 
-  alert("Imóvel salvo no seu perfil.");
 
+  supabaseTrack(
+    "match_generated",
+    {
+
+      profile:{
+        ...profile
+      },
+
+      results_count:
+        scored.length,
+
+      top_match_score:
+        scored.length
+          ? scored[0].match.score
+          : 0,
+
+      matches:
+        scored
+          .slice(0,12)
+          .map(
+            item=>({
+
+              property_id:
+                String(
+                  item.id || ""
+                ),
+
+              property_name:
+                item.name || "",
+
+              neighborhood:
+                item.neighborhood || "",
+
+              value:
+                Number(
+                  item.value
+                ) || 0,
+
+              score:
+                Number(
+                  item.match?.score
+                ) || 0
+
+            })
+          )
+    }
+  );
+
+
+  $("results")
+    .classList
+    .add(
+      "visible"
+    );
+
+
+  $("resultSummary")
+    .textContent=
+      scored.length
+
+        ? `Encontramos ${scored.length} imóveis com maior compatibilidade com o seu perfil.`
+
+        : "Não encontramos uma combinação forte. Vamos ampliar sua busca.";
+
+
+  $("matchGrid")
+    .innerHTML=
+      scored.length
+
+        ? scored
+            .map(
+              p=>
+                card(
+                  p,
+                  true
+                )
+            )
+            .join("")
+
+        : `
+          <div class="empty">
+
+            <h3>
+              Vamos ampliar o MATCH
+            </h3>
+
+            <p>
+              Tente uma região ou faixa de preço
+              um pouco mais ampla.
+            </p>
+
+          </div>
+          `;
+
+
+  $("results")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
 }
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+function coverHTML(p) {
+  const cover=photoList(p)[0];
+  return `<div class="cover">
+    ${cover ? `<img class="photo-slide" src="${esc(cover)}" alt="${esc(p.name)}" loading="lazy" decoding="async" width="640" height="420">` : '<div class="photo-fallback">Fotos em atualização</div>'}
+    <span class="match">${p.match ? p.match.score+'% MATCH' : 'IMÓVEL DISPONÍVEL'}</span>
+    <span class="cover-location">${esc(p.neighborhood)}</span>
+  </div>`;
+}
+
+
+function card(
+  p,
+  isMatch=false
+){
+
+  const features=[];
+
+
+  if(p.area){
+
+    features.push(
+      `${area(p.area)} m²`
+    );
+  }
+
+
+  if(p.bedrooms){
+
+    features.push(
+      `${p.bedrooms} ${
+        p.bedrooms===1
+          ? "dorm."
+          : "dorms."
+      }`
+    );
+  }
+
+
+  if(p.suites && p.suites <= p.bedrooms){
+
+    features.push(
+      `${p.suites} ${
+        p.suites===1
+          ? "suíte"
+          : "suítes"
+      }`
+    );
+  }
+
+
+  if(p.parking){
+
+    features.push(
+      `${p.parking} ${
+        p.parking===1
+          ? "vaga"
+          : "vagas"
+      }`
+    );
+  }
+
+
+  const addr=
+    [
+      p.address,
+
+      p.unit && !/^(x|n\/?a|-)$/i.test(p.unit)
+        ? `Unidade ${p.unit}`
+        : ""
+
+    ]
+      .filter(Boolean)
+      .join(" · ");
+
+
+  const priceM2=
+    p.m2 ||
+    (
+      p.value &&
+      p.area
+
+        ? p.value/
+          p.area
+
+        : 0
+    );
+
+
+  const reasons=
+    isMatch &&
+    p.match
+
+      ? p.match.reasons
+      : [];
+
+
+  const reasonHTML=
+    isMatch
+
+      ? `
+        <div class="reasons">
+
+          <strong>
+            Por que apareceu para você?
+          </strong>
+
+          ${
+            reasons.length
+
+              ? reasons
+                  .map(
+                    r=>
+                      `✓ ${esc(r)}`
+                  )
+                  .join(" · ")
+
+              : "Combinação com seus critérios."
+          }
+
+        </div>
+        `
+
+      : "";
+
+
+  const photos=
+    photoList(p);
+
+
+  const photoButton=
+    photos.length
+
+      ? `
+        <button
+          class="view"
+          type="button"
+          data-action="photos" data-id="${esc(p.id)}">
+          Ver fotos
+        </button>
+        `
+
+      : `
+        <button
+          class="view"
+          type="button"
+          data-action="missing-photos">
+          Fotos indisponíveis
+        </button>
+        `;
+
+
+  return`
+    <article class="card">
+
+      ${coverHTML(p)}
+
+      <div class="card-body">
+
+        <div class="card-tag">
+          USADO
+        </div>
+
+        <h3>
+          ${esc(p.name)}
+        </h3>
+
+        <p class="card-address">
+          ${
+            esc(
+              addr ||
+              p.neighborhood ||
+              "São Paulo"
+            )
+          }
+        </p>
+
+        <div class="price">
+          ${money(p.value)}
+        </div>
+
+        <div class="m2">
+
+          ${
+            priceM2
+
+              ? `${money(priceM2)} por m²`
+
+              : "Valor por m² não informado"
+          }
+
+        </div>
+
+        <div class="features">
+
+          ${
+            features
+              .map(
+                x=>
+                  `
+                  <span class="feature">
+                    ${esc(x)}
+                  </span>
+                  `
+              )
+              .join("")
+          }
+
+        </div>
+
+        ${
+          p.condominium
+
+            ? `
+              <div class="cost-line">
+
+                Condomínio
+                ${money(p.condominium)}
+
+                ${
+                  p.iptu
+                    ? ` · IPTU ${money(p.iptu)} (periodicidade a confirmar)`
+                    : ""
+                }
+
+              </div>
+              `
+
+            : ""
+        }
+
+        ${reasonHTML}
+
+        <div class="card-actions">
+
+          ${photoButton}
+
+          <button
+            class="interest"
+            type="button"
+            data-action="interest" data-id="${esc(p.id)}">
+            Tenho interesse
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+    `;
+}
+
+
+/* =========================================================
+   PROPERTY VIEW
+========================================================= */
+
+function showPhotoModal(id){
+
+  const p=
+    properties.find(
+      x=>
+        String(x.id)===
+        String(id)
+    );
+
+
+  if(!p)return;
+
+
+  supabaseTrack(
+    "property_view",
+    {
+
+      property:{
+
+        id:
+          String(p.id||""),
+
+        name:
+          p.name||"",
+
+        neighborhood:
+          p.neighborhood||"",
+
+        value:
+          Number(p.value)||0,
+
+        area:
+          Number(p.area)||0,
+
+        bedrooms:
+          Number(p.bedrooms)||0,
+
+        match_score:
+          Number(
+            p.match?.score
+          )||0
+      },
+
+      profile:{
+        ...profile
+      }
+    }
+  );
+
+
+  const photos=
+    photoList(p);
+
+
+  if(!photos.length){
+
+    showToast(
+      "As imagens deste imóvel ainda estão sendo atualizadas."
+    );
+
+    return;
+  }
+
+
+  const old=
+    document.getElementById(
+      "photoModal"
+    );
+
+
+  if(old)old.remove();
+
+
+  const modal=
+    document.createElement(
+      "div"
+    );
+
+
+  modal.id=
+    "photoModal";
+
+
+  modal.style.cssText=
+    "position:fixed;inset:0;z-index:200;background:rgba(7,15,27,.92);display:flex;align-items:center;justify-content:center;padding:20px";
+
+
+  modal.innerHTML=
+    `
+    <button
+      type="button"
+      aria-label="Fechar"
+      data-action="close-modal"
+      style="position:absolute;top:18px;right:18px;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#101a2b;font-size:25px;font-weight:900;z-index:3">
+      ×
+    </button>
+
+    <div style="width:min(920px,100%)">
+
+      <div style="height:min(72vh,650px);background:#101a2b;border-radius:16px;overflow:hidden">
+
+        <div
+          class="photo-track"
+          style="height:100%">
+
+          ${
+            photos
+              .map(
+                url=>
+                  `
+                  <img
+                    class="photo-slide"
+                    src="${esc(url)}"
+                    alt="${esc(p.name)}"
+                    loading="lazy" decoding="async" style="object-fit:contain;background:#101a2b">
+                  `
+              )
+              .join("")
+          }
+
+        </div>
+
+      </div>
+
+      <div style="color:#fff;text-align:center;margin-top:12px;font-weight:800;font-size:13px">
+
+        ${esc(p.name)}
+        ·
+        ${photos.length}
+        ${
+          photos.length===1
+            ? "foto"
+            : "fotos"
+        }
+
+      </div>
+
+    </div>
+    `;
+
+
+  modal.addEventListener(
+    "click",
+    e=>{
+
+      if(e.target===modal){
+
+        modal.close?.();
+      }
+    }
+  );
+
+
+  document
+    .body
+    .appendChild(
+      modal
+    );
+  setupDialog(modal, 'Fotos de '+p.name);
+  const track=modal.querySelector('.photo-track');track.tabIndex=0;track.setAttribute('aria-label','Galeria de fotos');
+  const controls=document.createElement('div');controls.className='gallery-controls';
+  for(const [label,direction] of [['Foto anterior',-1],['Próxima foto',1]]){
+    const button=document.createElement('button');button.type='button';button.className='back';button.textContent=label;
+    button.addEventListener('click',()=>track.scrollBy({left:direction*track.clientWidth,behavior:'smooth'}));controls.appendChild(button);
+  }
+  track.parentElement.after(controls);
+}
+
+
+/* =========================================================
+   CATÁLOGO
+========================================================= */
+
+function fillCatalogNeighborhoods(){
+
+  const list=
+    [
+      ...new Set(
+        properties
+          .map(
+            p=>
+              p.neighborhood
+          )
+          .filter(Boolean)
+      )
+    ]
+      .sort(
+        (a,b)=>
+          a.localeCompare(
+            b,
+            "pt-BR"
+          )
+      );
+
+
+  $("catalogNeighborhood")
+    .innerHTML=
+
+      '<option value="">Todos os bairros</option>' +
+
+      list
+        .map(
+          v=>
+            `<option value="${esc(v)}">${esc(v)}</option>`
+        )
+        .join("");
+}
+
+
+let catalogLimit=12;
+function renderCatalog(more=false){
+  if(more!==true) catalogLimit=12;
+  if(!inventoryReady) { showToast('Carregue a base de imóveis antes de buscar.'); return; }
+
+
+  const q=
+    norm(
+      $("catalogSearch").value
+    );
+
+
+  const n=
+    $("catalogNeighborhood").value;
+
+
+  const type=
+    $("catalogType").value;
+
+
+  const minP=
+    numberBR(
+      $("minPrice").value
+    );
+
+
+  const maxP=
+    numberBR(
+      $("maxPrice").value
+    );
+
+
+  const beds=
+    $("catalogBedrooms").value;
+
+
+  const areaMin=
+    numberBR(
+      $("minArea").value
+    );
+
+
+  const parking=
+    $("catalogParking").value;
+
+
+  const condo=
+    numberBR(
+      $("maxCondo").value
+    );
+
+
+  const iptu=
+    numberBR(
+      $("maxIptu").value
+    );
+
+
+  const list=
+    properties.filter(
+      p=>{
+
+        const searchable=p.searchText;
+
+
+        return(
+
+          (!q ||
+            searchable.includes(q))
+
+          &&
+
+          (!n ||
+            norm(p.neighborhood)===norm(n))
+
+          &&
+
+          (!type ||
+            p.type===type)
+
+          &&
+
+          (!minP ||
+            p.value>=minP)
+
+          &&
+
+          (!maxP ||
+            p.value<=maxP)
+
+          &&
+
+          (
+            !beds ||
+
+            (
+              beds==="4"
+
+                ? p.bedrooms>=4
+
+                : p.bedrooms===
+                  Number(beds)
+            )
+          )
+
+          &&
+
+          (!areaMin ||
+            p.area>=areaMin)
+
+          &&
+
+          (
+            !parking ||
+
+            (
+              parking==="0"
+
+                ? p.parking===0
+
+                : p.parking>=
+                  Number(parking)
+            )
+          )
+
+          &&
+
+          (
+            !condo ||
+
+            (
+              p.condominium>0 &&
+              p.condominium<=condo
+            )
+          )
+
+          &&
+
+          (
+            !iptu ||
+
+            (
+              p.iptu>0 &&
+              p.iptu<=iptu
+            )
+          )
+
+        );
+      }
+    );
+
+
+  $("catalogStatus")
+    .textContent=
+      `${list.length} imóveis encontrados · exibindo ${Math.min(catalogLimit,list.length)}`;
+  const order=$('catalogSort').value;
+  if(order==='price-asc') list.sort((a,b)=>(a.value||Infinity)-(b.value||Infinity));
+  if(order==='price-desc') list.sort((a,b)=>b.value-a.value);
+  if(order==='area-desc') list.sort((a,b)=>b.area-a.area);
+  $('loadMore').hidden=list.length<=catalogLimit;
+  $('catalog').classList.add('visible');
+
+
+  $("catalogGrid")
+    .innerHTML=
+      list.length
+
+        ? list
+            .slice(0,catalogLimit)
+            .map(
+              p=>
+                card(
+                  p,
+                  false
+                )
+            )
+            .join("")
+
+        : `
+          <div class="empty">
+
+            <h3>
+              Nenhum imóvel encontrado
+            </h3>
+
+            <p>
+              Ajuste os filtros para ampliar a busca.
+            </p>
+
+          </div>
+          `;
+}
+
+
+$("showCatalog")
+  .addEventListener(
+    "click",
+    ()=>{
+
+      if(
+        sourceMode==="novos"
+      ){
+
+        showToast(
+          "O catálogo de Novos será disponibilizado pela integração com a Órulo."
+        );
+
+        return;
+      }
+
+
+      $("catalog")
+        .classList
+        .add(
+          "visible"
+        );
+
+
+      renderCatalog();
+
+
+      $("catalog")
+        .scrollIntoView({
+          behavior:"smooth"
+        });
+    }
+  );
+
+
+[
+  "catalogSearch",
+  "catalogNeighborhood",
+  "catalogType",
+  "minPrice",
+  "maxPrice",
+  "catalogBedrooms",
+  "minArea",
+  "catalogParking",
+  "maxCondo",
+  "maxIptu"
+]
+.forEach(
+  id=>
+    $(id).addEventListener(
+
+      $(id).tagName==="SELECT"
+        ? "change"
+        : "input",
+
+      scheduleCatalog
+    )
+);
+
+
+$("resetCatalogFilters")
+  .addEventListener(
+    "click",
+    ()=>{
+
+      [
+        "catalogSearch",
+        "minPrice",
+        "maxPrice",
+        "minArea",
+        "maxCondo",
+        "maxIptu"
+      ]
+      .forEach(
+        id=>
+          $(id).value=""
+      );
+
+
+      [
+        "catalogNeighborhood",
+        "catalogType",
+        "catalogBedrooms",
+        "catalogParking"
+      ]
+      .forEach(
+        id=>
+          $(id).value=""
+      );
+
+
+      renderCatalog();
+    }
+  );
 
 
 /* =========================================================
    INTERESSE
 ========================================================= */
 
-function interesse(id){
+function interest(
+  id,
+  name
+){
 
-  const imovel=
-    imoveis.find(item=>item.id===id);
-
-  localStorage.setItem(
-    "ynteligencia_interesse",
-    JSON.stringify({
-      imovelId:id,
-      imovel:imovel.nome,
-      data:new Date().toISOString()
-    })
-  );
-
-  abrirModal("modalPerfil");
-
-}
-
-
-/* =========================================================
-   PERFIL
-========================================================= */
-
-function gerarPerfil(event){
-
-  event.preventDefault();
-
-
-  const nome=
-    document.getElementById("nomeLead").value;
-
-  const regiao=
-    document.getElementById("regiaoLead").value;
-
-  const orcamento=
-    Number(document.getElementById("orcamentoLead").value);
-
-  const quartos=
-    Number(document.getElementById("quartosLead").value);
-
-  const metragem=
-    Number(document.getElementById("metragemLead").value||0);
-
-
-  const preferencias=
-    [...document.querySelectorAll(".preferencia:checked")]
-    .map(item=>item.value);
-
-
-  const perfil={
-    nome,
-    regiao,
-    orcamento,
-    quartos,
-    metragem,
-    preferencias,
-    criadoEm:new Date().toISOString()
-  };
-
-
-  localStorage.setItem(
-    "ynteligencia_perfil",
-    JSON.stringify(perfil)
-  );
-
-
-  const recomendados=
-    imoveis
-      .map(imovel=>{
-
-        let pontos=0;
-
-        if(imovel.preco<=orcamento)
-          pontos+=30;
-
-        if(quartos && imovel.quartos>=quartos)
-          pontos+=20;
-
-        if(metragem && imovel.metragem>=metragem)
-          pontos+=15;
-
-        if(regiao &&
-          (
-            imovel.bairro.toLowerCase()
-              .includes(regiao.toLowerCase())
-          )
-        )
-          pontos+=20;
-
-        preferencias.forEach(preferencia=>{
-
-          if(imovel.recursos.includes(preferencia))
-            pontos+=5;
-
-        });
-
-
-        return {
-          ...imovel,
-          pontos:Math.min(pontos,100)
-        };
-
-      })
-      .sort((a,b)=>b.pontos-a.pontos)
-      .slice(0,3);
-
-
-  const resultado=
-    document.getElementById("resultadoIA");
-
-
-  resultado.style.display="block";
-
-
-  resultado.innerHTML=`
-
-    <h3>
-      ${nome}, encontramos algumas combinações para você.
-    </h3>
-
-    <div class="perfil-resumo">
-
-      <strong>Seu perfil</strong><br><br>
-
-      Região:
-      ${regiao||"Não definida"}<br>
-
-      Orçamento:
-      ${orcamento ? moeda(orcamento) : "Não informado"}<br>
-
-      Dormitórios:
-      ${quartos||"Não definido"}<br>
-
-      Metragem:
-      ${metragem ? metragem+" m²+" : "Não definida"}
-
-    </div>
-
-    <br>
-
-    <strong>Melhores combinações:</strong>
-
-    ${recomendados.map(item=>`
-
-      <div class="recomendacao">
-
-        <strong>
-          ${item.pontos}% compatível —
-          ${item.nome}
-        </strong>
-
-        <small>
-          ${item.bairro} •
-          ${item.quartos} dorm. •
-          ${item.metragem} m² •
-          ${moeda(item.preco)}
-        </small>
-
-      </div>
-
-    `).join("")}
-
-    <button
-      class="btn-principal"
-      style="margin-top:18px;width:100%;"
-      onclick="finalizarLead()">
-      Quero receber atendimento
-    </button>
-
-  `;
-
-}
-
-
-/* =========================================================
-   LEAD
-========================================================= */
-
-function finalizarLead(){
-
-  const perfil=
-    JSON.parse(
-      localStorage.getItem("ynteligencia_perfil")||"{}"
+  const p=
+    properties.find(
+      x=>
+        String(x.id)===
+        String(id)
     );
 
-  localStorage.setItem(
-    "ynteligencia_lead",
-    JSON.stringify({
-      ...perfil,
-      evento:"solicitou_atendimento",
-      data:new Date().toISOString()
-    })
+
+  try{
+
+    gtag(
+      'event',
+      'property_interest',
+      {
+
+        property_id:
+          String(id || ""),
+
+        property_name:
+          name || "",
+
+        neighborhood:
+          p?.neighborhood || "",
+
+        property_value:
+          Number(
+            p?.value
+          ) || 0,
+
+        match_score:
+          Number(
+            p?.match?.score
+          ) || 0,
+
+        region:
+          profile.region || "",
+
+        budget:
+          Number(
+            profile.budget
+          ) || 0,
+
+        inventory_source:
+          p?.source ||
+          sourceMode ||
+          "usados",
+
+        debug_mode:false
+      }
+    );
+
+  }catch(error){
+
+    console.warn(
+      "Não foi possível registrar property_interest:",
+      error
+    );
+  }
+
+
+  supabaseTrack(
+    "property_interest",
+    {
+
+      property:{
+
+        id:
+          String(id||""),
+
+        name:
+          name||"",
+
+        neighborhood:
+          p?.neighborhood||"",
+
+        value:
+          Number(
+            p?.value
+          )||0,
+
+        match_score:
+          Number(
+            p?.match?.score
+          )||0
+      },
+
+      profile:{
+        ...profile
+      }
+    }
   );
 
 
-  alert(
-    "Perfeito. Seu perfil foi registrado. " +
-    "Na versão conectada, esse evento será enviado ao backend Ynteligencia."
+  openLeadCapture(
+    p || {
+      id,
+      name
+    }
   );
-
 }
 
 
 /* =========================================================
-   MODAIS
+   CAPTURA DE LEAD
 ========================================================= */
 
-function abrirModal(id){
-
-  document
-    .getElementById(id)
-    .classList.add("ativo");
-
-}
-
-
-function fecharModal(id){
-
-  document
-    .getElementById(id)
-    .classList.remove("ativo");
-
-}
-
-
-document.querySelectorAll(".modal").forEach(modal=>{
-
-  modal.addEventListener("click",function(event){
-
-    if(event.target===modal){
-      modal.classList.remove("ativo");
+function openLeadCapture(p) {
+  document.getElementById('leadModal')?.remove();
+  const modal=document.createElement('div'); modal.id='leadModal'; modal.className='v2-modal';
+  modal.innerHTML=`<div class="v2-dialog">
+    <button type="button" class="close-dialog" data-action="close-modal" aria-label="Fechar">×</button>
+    <div class="eyebrow">CONSULTAR DISPONIBILIDADE</div>
+    <h2>Vamos conversar sobre este imóvel?</h2><p>${esc(p.name)}</p>
+    <p class="test-notice">Teste de formulário: nenhum dado será enviado ou salvo. Use dados fictícios.</p>
+    <form id="leadCaptureForm">
+      <label for="leadName">Nome</label><input id="leadName" class="field" name="name" autocomplete="name" maxlength="100" required>
+      <label for="leadPhone">WhatsApp com DDD</label><input id="leadPhone" class="field" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="22" required>
+      <label for="leadEmail">E-mail (opcional)</label><input id="leadEmail" class="field" name="email" type="email" autocomplete="email" maxlength="254">
+      <p id="leadError" role="alert"></p><button class="primary" type="submit">Simular solicitação</button>
+      <p id="leadSuccess" role="status"></p>
+    </form></div>`;
+  document.body.appendChild(modal); setupDialog(modal, 'Consulta de imóvel — teste');
+  modal.querySelector('form').addEventListener('submit', event=>{
+    event.preventDefault();
+    const digits=$('leadPhone').value.replace(/\D/g,'').replace(/^55(?=\d{10,11}$)/,'');
+    if(clean($('leadName').value).length<2 || !/^\d{10,11}$/.test(digits)) {
+      $('leadError').textContent='Informe um nome e telefone com DDD (10 ou 11 dígitos).'; return;
     }
-
+    $('leadError').textContent='';
+    event.currentTarget.reset();
+    $('leadSuccess').textContent='Simulação concluída. Nenhum dado foi enviado ao atendimento.';
   });
+}
 
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+function showToast(message){
+
+  const t=
+    $("toast");
+
+
+  t.textContent=
+    message;
+
+
+  t.classList
+    .add(
+      "show"
+    );
+
+
+  clearTimeout(
+    window.__toast
+  );
+
+
+  window.__toast=
+    setTimeout(
+      ()=>
+        t.classList.remove(
+          "show"
+        ),
+      3500
+    );
+}
+
+
+/* =========================================================
+   INVENTÁRIO
+========================================================= */
+
+let inventoryReady=false;
+function setInventory(text) {
+  const rows=parseCSV(text);
+  const neighborhoods=new Map();
+  const parsed=deduplicate(rows.map(mapProperty)).map(p=>{
+    const key=norm(p.neighborhood);
+    if(!neighborhoods.has(key)) neighborhoods.set(key,p.neighborhood);
+    p.neighborhood=neighborhoods.get(key);
+    p.searchText=norm([p.id,p.name,p.neighborhood,p.address,p.unit,p.description].join(' '));
+    return p;
+  });
+  properties=parsed; inventoryReady=true; fillCatalogNeighborhoods();
+  $('inventoryState').textContent=properties.length+' imóveis carregados. Fotos dependem do photos.json ou dos links do CSV.';
+  if($('catalog').classList.contains('visible')) renderCatalog();
+}
+async function loadInventory() {
+  try {
+    const response=await fetch(CSV_FILE,{cache:'no-cache'});
+    if(!response.ok) throw new Error('CSV ausente');
+    setInventory(await response.text());
+  } catch(error) {
+    $('inventoryState').textContent='Base não carregada. Selecione o CSV original abaixo. '+error.message;
+  }
+}
+function setupDialog(modal, name) {
+  const opener=document.activeElement;
+  modal.setAttribute('role','dialog'); modal.setAttribute('aria-modal','true'); modal.setAttribute('aria-label',name);
+  const background=[...document.body.children].filter(el=>el!==modal && el.tagName!=='SCRIPT').map(el=>[el,el.inert]);
+  background.forEach(([el])=>el.inert=true);
+  const originalOverflow=document.body.style.overflow; document.body.style.overflow='hidden';
+  modal.close=()=>{ modal.remove(); background.forEach(([el,value])=>el.inert=value); document.body.style.overflow=originalOverflow; opener?.focus(); };
+  modal.addEventListener('click',e=>{ if(e.target===modal || e.target.closest('[data-action="close-modal"]')) modal.close(); });
+  modal.addEventListener('keydown',e=>{
+    if(e.key==='Escape') { e.preventDefault(); modal.close(); return; }
+    if(e.key!=='Tab') return;
+    const items=[...modal.querySelectorAll('button,input,[tabindex="0"]')].filter(x=>!x.disabled);
+    const first=items[0], last=items[items.length-1];
+    if(e.shiftKey && document.activeElement===first) {e.preventDefault();last?.focus();}
+    else if(!e.shiftKey && document.activeElement===last) {e.preventDefault();first?.focus();}
+  });
+  (modal.querySelector('input') || modal.querySelector('button'))?.focus();
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-action]'); if(!b) return;
+  if(b.dataset.action==='photos') showPhotoModal(b.dataset.id);
+  if(b.dataset.action==='interest') {
+    const p=properties.find(p=>String(p.id)===b.dataset.id); if(p) interest(p.id,p.name);
+  }
+  if(b.dataset.action==='missing-photos') showToast('Fotos em atualização. Você pode consultar a disponibilidade.');
 });
+document.addEventListener('error',e=>{
+  if(e.target.tagName==='IMG') {
+    const fallback=document.createElement('div'); fallback.className='photo-slide photo-fallback'; fallback.textContent='Foto indisponível';
+    e.target.replaceWith(fallback);
+  }
+},true);
+let catalogTimer;
+function scheduleCatalog(){clearTimeout(catalogTimer);catalogTimer=setTimeout(()=>renderCatalog(),220);}
+$('loadMore').addEventListener('click',()=>{catalogLimit+=12;renderCatalog(true);});
+$('catalogSort').addEventListener('change',()=>renderCatalog());
+$('csvInput').addEventListener('change',async e=>{
+  const file=e.target.files[0]; if(!file)return;
+  try { if(file.size>15000000)throw new Error('CSV acima de 15 MB.'); setInventory(await file.text()); }
+  catch(error){$('inventoryState').textContent=error.message;}
+});
+$('photosInput').addEventListener('change',async e=>{
+  const file=e.target.files[0];if(!file)return;
+  try {
+    if(file.size>15000000)throw new Error('JSON acima de 15 MB.');
+    const data=JSON.parse(await file.text());
+    if(!data || typeof data!=='object' || Array.isArray(data))throw new Error('Formato de photos.json inválido.');
+    photoManifest=data;
+    if($('catalog').classList.contains('visible'))renderCatalog();
+    if($('results').classList.contains('visible'))showMatches();
+    $('inventoryState').textContent='Mapa de fotos carregado. '+properties.length+' imóveis disponíveis.';
+  } catch(error){$('inventoryState').textContent=error.message;}
+});
+document.querySelectorAll('input.field,select.field').forEach(el=>{
+  if(el.id && !document.querySelector('label[for="'+el.id+'"]')) {
+    const label=document.createElement('label');label.htmlFor=el.id;label.className='sr-only';
+    label.textContent=el.placeholder || el.options?.[0]?.textContent || 'Filtro';el.before(label);
+  }
+});
+document.querySelectorAll('.option').forEach(button=>{
+  button.setAttribute('aria-pressed','false');
+  button.addEventListener('click',()=>document.querySelectorAll('.option').forEach(b=>b.setAttribute('aria-pressed',String(b.classList.contains('selected')))));
+});
+$('toast').setAttribute('role','status');$('catalogStatus').setAttribute('aria-live','polite');
+setStep(0,false);
+Promise.all([loadPhotoManifest(),loadInventory()]).then(()=>{
+  if(inventoryReady && $('catalog').classList.contains('visible'))renderCatalog();
+});
+
 
 </script>
 
 </body>
 </html>
-```
