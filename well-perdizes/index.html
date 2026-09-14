@@ -2369,19 +2369,38 @@
 
         const formData = new FormData(leadForm);
 
-        const payload = {
+        const params = new URLSearchParams(window.location.search);
 
-          nome: formData.get('nome'),
+      const tracking = {
+        gclid: params.get('gclid') || localStorage.getItem('gclid') || '',
+        gbraid: params.get('gbraid') || localStorage.getItem('gbraid') || '',
+        wbraid: params.get('wbraid') || localStorage.getItem('wbraid') || '',
+        utm_source: params.get('utm_source') || localStorage.getItem('utm_source') || '',
+        utm_medium: params.get('utm_medium') || localStorage.getItem('utm_medium') || '',
+        utm_campaign: params.get('utm_campaign') || localStorage.getItem('utm_campaign') || '',
+        utm_content: params.get('utm_content') || localStorage.getItem('utm_content') || '',
+        utm_term: params.get('utm_term') || localStorage.getItem('utm_term') || ''
+      };
 
-          telefone: formData.get('whatsapp'),
+      Object.entries(tracking).forEach(([key, value]) => {
+        if (value) localStorage.setItem(key, value);
+      });
 
-          perfil: formData.get('perfil'),
-
-          origem: 'well-perdizes',
-
-          pagina: window.location.href
-
-        };
+      const payload = {
+        nome: formData.get('nome'),
+        telefone: formData.get('whatsapp'),
+        perfil: formData.get('perfil'),
+        origem: 'well-perdizes',
+        pagina: window.location.href,
+        gclid: tracking.gclid,
+        gbraid: tracking.gbraid,
+        wbraid: tracking.wbraid,
+        utm_source: tracking.utm_source,
+        utm_medium: tracking.utm_medium,
+        utm_campaign: tracking.utm_campaign,
+        utm_content: tracking.utm_content,
+        utm_term: tracking.utm_term
+      };
 
 
         pushEvent(
