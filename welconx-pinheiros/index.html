@@ -21,6 +21,7 @@ window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
 gtag("js",new Date());
 gtag("config","G-Y2W11SX5VV",{page_title:document.title,page_location:window.location.href});
+gtag("config","AW-18371236623");
 </script>
 
 <script>
@@ -292,7 +293,7 @@ const PROJECT={name:"Welconx Pinheiros",slug:"welconx-pinheiros",price:383600,ca
 
 function getTrackingData(){
  const params=new URLSearchParams(window.location.search);
- const keys=["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid","gclid"];
+ const keys=["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid","gclid","gbraid","wbraid"];
  const current={};
  keys.forEach(k=>{const v=params.get(k);if(v)current[k]=v});
  try{
@@ -419,7 +420,9 @@ form.addEventListener("submit",async function(e){
   utm_content:tracking.utm_content||"",
   utm_term:tracking.utm_term||"",
   fbclid:tracking.fbclid||"",
-  gclid:tracking.gclid||""
+  gclid:tracking.gclid||"",
+  gbraid:tracking.gbraid||"",
+  wbraid:tracking.wbraid||""
  };
 
  btn.disabled=true;btn.textContent="ENVIANDO...";btn.style.opacity=".75";
