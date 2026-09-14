@@ -1,21 +1,47 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex,nofollow,noarchive">
-<!-- V2 TESTE: sem Analytics, Pixel, Supabase ou envio ao CRM.
-     Esta versão não deve substituir a produção antes da integração e validação. -->
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2W11SX5VV"></script>
 <script>
-function gtag() {} // Isolamento intencional das métricas de produção.
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-Y2W11SX5VV');
 </script>
 
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;
+    n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+    t=b.createElement(e);t.async=!0;t.src=v;
+    s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+  }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1552958819302786');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=1552958819302786&ev=PageView&noscript=1"
+       alt="">
+</noscript>
+
+<link rel="manifest" href="/manifest.json">
 
 <meta name="theme-color" content="#111111">
-
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Ynteligencia — encontre imóveis que fazem sentido para você.">
 
-<title>Ynteligencia V2 | Ambiente de testes</title>
+<title>Ynteligencia | Seu imóvel por MATCH</title>
 
 <style>
 :root{
@@ -798,40 +824,65 @@ footer{
 
   .explore-box button{grid-column:auto}
 }
-/* V2: mobile, foco, modal e estados */
-[hidden]{display:none!important}
-html{scroll-padding-top:90px}
-.test-bar{padding:9px 16px;background:#fff0cc;color:#4c3807;text-align:center;font-size:13px;font-weight:700}
-.test-tools{position:relative;z-index:6;margin:20px auto;padding:16px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:13px}
-.test-tools p{line-height:1.5}.test-tools label{display:block;margin:12px 0}.test-tools input{max-width:100%}
-.wizard-wrap{margin-top:20px}
-summary{cursor:pointer;font-weight:800;padding:10px 0}
-button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ac4a09;outline-offset:3px}
-.field{min-width:0}.filter-grid{margin-top:14px}
-.cover:after{pointer-events:none}.photo-fallback{height:100%;display:grid;place-items:center;color:#fff;background:var(--dark2)}
-.load-more{display:block;margin:24px auto}
-.v2-modal{position:fixed;inset:0;z-index:250;background:rgba(7,15,27,.82);display:flex;align-items:center;justify-content:center;padding:16px}
-.v2-dialog{width:min(520px,100%);max-height:90dvh;overflow:auto;background:white;border-radius:20px;padding:26px;position:relative}
-.v2-dialog h2{padding-right:30px}.v2-dialog label{display:block;margin:14px 0 6px;font-weight:700}
-.close-dialog{position:absolute;right:12px;top:12px;width:44px;height:44px;border:0;border-radius:50%;font-size:25px}
-.test-notice{background:#fff0cc;color:#4c3807;padding:12px;border-radius:10px;font-size:13px}
-.gallery-controls{display:flex;gap:12px;justify-content:center;margin-top:12px}
-#leadError{color:#a11c16}#leadSuccess{color:var(--green)}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:650px){
- .hero{padding:32px 0}.hero h1{font-size:clamp(32px,9vw,44px);letter-spacing:-1.5px}
- .hero p{font-size:16px}.wizard-inner{padding:18px}.options{grid-template-columns:repeat(2,minmax(0,1fr))}
- .option{padding:12px;min-height:64px}.filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .field{font-size:16px}.step h2{font-size:25px}.card:hover{transform:none}
- .toast{left:16px;right:16px;bottom:16px;max-width:none}.card-actions{flex-wrap:wrap}
+/* YNTELIGENCIA NATIVE — camada exclusivamente visual */
+:root{--dark:#07111f;--dark2:#10223a;--orange:#ff7a3d;--orange2:#ffb17d;--bg:#f3f5f8;--text:#0b1727;--muted:#697386;--line:rgba(11,23,39,.09);--green:#08775a;--greenbg:#e8f7f1}
+body{min-height:100vh;background:radial-gradient(circle at 100% 0,rgba(255,122,61,.08),transparent 28rem),var(--bg);font-family:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:76px}
+header{position:fixed;inset:0 0 auto;background:rgba(7,17,31,.78);border-bottom:1px solid rgba(255,255,255,.09);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%)}
+.nav{min-height:64px}.logo{font-size:18px;letter-spacing:-.45px}.logo-mark{width:34px;height:34px;border-radius:12px;box-shadow:0 8px 22px rgba(255,122,61,.28)}
+.nav-links{gap:8px}.nav-links button{padding:9px 13px;border-radius:999px;font-size:12px;font-weight:800}.nav-links button:first-child{background:rgba(255,255,255,.1);color:#fff}
+.hero{min-height:590px;display:flex;align-items:flex-end;padding:138px 0 104px;background:linear-gradient(180deg,rgba(7,17,31,.08),rgba(7,17,31,.96)),radial-gradient(circle at 86% 18%,rgba(255,122,61,.5),transparent 23rem),linear-gradient(145deg,#162e4d 0%,#07111f 66%)}
+.hero .container{position:relative}.hero .container:after{content:"MATCH";position:absolute;right:0;bottom:-64px;color:rgba(255,255,255,.035);font-size:clamp(80px,15vw,190px);font-weight:950;letter-spacing:-.09em;pointer-events:none}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(255,255,255,.07);color:#ffd5bd;backdrop-filter:blur(12px)}
+.hero h1{max-width:760px;margin:18px 0;font-size:clamp(46px,7vw,78px);line-height:.94;letter-spacing:-.055em}.hero h1 span{display:inline;color:var(--orange2)}
+.hero p{max-width:610px;color:#c8d1de;font-size:17px;line-height:1.55}.hero-actions{position:relative;z-index:2;margin-top:28px}
+.primary,.secondary{min-height:54px;border-radius:16px;padding:0 22px;box-shadow:none;transition:transform .18s ease,box-shadow .18s ease}.primary:active,.secondary:active{transform:scale(.98)}
+.primary{background:linear-gradient(135deg,var(--orange),#ff9a61);box-shadow:0 12px 30px rgba(255,122,61,.24)}
+.wizard-wrap{margin-top:-54px}.wizard{max-width:880px;margin:auto;border:1px solid rgba(255,255,255,.75);border-radius:28px;box-shadow:0 24px 70px rgba(7,17,31,.16);background:rgba(255,255,255,.92);backdrop-filter:blur(24px)}
+.progress{height:4px;background:#edf0f4}.progress span{background:linear-gradient(90deg,var(--orange),#ffb17d)}.wizard-inner{padding:34px}
+.inventory-switch{width:max-content;margin:0 0 30px;padding:5px;border:0;border-radius:999px;background:#eef1f5;gap:3px}.inventory-switch span{margin:0 8px;font-size:9px}.source-btn{border:0;background:transparent;padding:10px 18px;color:#657083}.source-btn.selected{background:#fff;color:var(--dark);box-shadow:0 4px 14px rgba(7,17,31,.09)}
+.step-label{color:var(--orange);font-size:10px}.step h2{font-size:clamp(28px,4vw,38px);letter-spacing:-.035em;margin-top:10px}.step p{max-width:610px;line-height:1.55}.options{gap:10px}
+.option{min-height:78px;border-color:var(--line);border-radius:17px;padding:16px;background:rgba(255,255,255,.8);transition:.18s ease}.option:hover,.option.selected{transform:translateY(-1px);border-color:rgba(255,122,61,.7);background:#fff7f1;box-shadow:0 8px 24px rgba(255,122,61,.1)}
+.back,.next{min-height:50px;border-radius:15px;padding:0 20px}.next{background:linear-gradient(135deg,#10223a,#07111f)}
+.section.results{padding:64px 0 30px}.result-top h2,.section-head h2{letter-spacing:-.04em}.grid,.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:920px;margin:auto}
+.card{border:1px solid rgba(11,23,39,.08);border-radius:26px;box-shadow:0 12px 38px rgba(7,17,31,.08);background:#fff}.card:hover{transform:translateY(-3px);box-shadow:0 22px 50px rgba(7,17,31,.13)}
+.cover{height:320px;background:#10223a}.cover:after{background:linear-gradient(180deg,rgba(7,17,31,.05) 35%,rgba(7,17,31,.78))}.match{top:16px;left:16px;padding:10px 13px;border-radius:14px;color:#fff;background:rgba(8,119,90,.9);backdrop-filter:blur(12px);box-shadow:0 8px 25px rgba(0,0,0,.16)}
+.photo-counter{top:16px;right:16px;padding:8px 10px;background:rgba(7,17,31,.68)}.cover-location{bottom:17px;left:18px;right:18px;font-size:13px}.card-body{padding:21px}.card-tag{color:var(--orange);font-size:9px;letter-spacing:1.5px}.card h3{font-size:22px;letter-spacing:-.025em}.price{font-size:27px;letter-spacing:-.035em}.feature{background:#f2f4f7;border-radius:10px;padding:8px 9px}
+.reasons{border:1px solid rgba(8,119,90,.1);border-radius:14px;background:linear-gradient(135deg,#ebf8f3,#f6fbf9);color:#12644f}.view,.interest{min-height:50px;border-radius:14px}.view{background:#edf1f5;color:var(--dark)}.interest{background:linear-gradient(135deg,var(--orange),#ff9d65);box-shadow:0 8px 20px rgba(255,122,61,.17)}
+.explore{margin-top:36px;padding:64px 0;background:#fff;border-radius:34px 34px 0 0}.explore .container,.catalog .container{max-width:920px}.explore-box,.catalog-filters{border-radius:20px;border-color:var(--line);background:#f6f7f9}.field{min-height:52px;border-radius:14px;border-color:var(--line)}.catalog{padding-bottom:40px}footer{background:transparent;color:#7b8596;padding:34px 0 20px}.app-dock{display:none}
+@media(max-width:700px){body{padding-bottom:86px}.container{width:min(100% - 24px,620px)}header{background:rgba(7,17,31,.72)}.nav{min-height:58px}.logo{font-size:16px}.logo-mark{width:32px;height:32px}.nav-links{display:none}.hero{min-height:560px;padding:112px 0 91px;align-items:center}.hero .container:after{right:-8px;bottom:-70px;font-size:82px}.hero h1{font-size:49px;max-width:390px}.hero p{font-size:15px;max-width:380px}.hero-actions{display:grid;grid-template-columns:1fr;margin-top:24px}.hero-actions button{width:100%}.wizard-wrap{margin-top:-45px}.wizard{border-radius:25px}.wizard-inner{padding:23px 18px 21px}.inventory-switch{width:100%;display:grid;grid-template-columns:auto 1fr 1fr;margin-bottom:26px}.inventory-switch span{align-self:center}.source-btn{padding:10px 8px}.step h2{font-size:29px}.step p{font-size:14px;margin-bottom:20px}.options{grid-template-columns:1fr 1fr;gap:9px}.option{min-height:70px;padding:13px;font-size:14px}.step[data-step="0"] .options,.step[data-step="6"] .options{grid-template-columns:1fr}.wizard-actions{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 28%);padding-top:20px}.section.results{padding-top:48px}.result-top{margin-bottom:16px}.result-top h2{font-size:29px}.grid,.catalog-grid{grid-template-columns:1fr;gap:20px}.cover{height:min(62vh,410px);min-height:350px}.card{border-radius:25px}.card-body{padding:19px}.photo-arrow{background:rgba(7,17,31,.56);backdrop-filter:blur(8px)}.explore{border-radius:28px 28px 0 0;padding-top:48px}.section-head h2{font-size:28px}.filter-grid{grid-template-columns:1fr 1fr}.app-dock{position:fixed;z-index:80;left:12px;right:12px;bottom:10px;height:66px;display:grid;grid-template-columns:repeat(3,1fr);align-items:center;padding:6px;border:1px solid rgba(255,255,255,.62);border-radius:22px;background:rgba(7,17,31,.88);box-shadow:0 14px 38px rgba(7,17,31,.28);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%)}.app-dock button{height:52px;border:0;border-radius:17px;background:transparent;color:#aeb8c6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:9px;font-weight:800;letter-spacing:.02em}.app-dock button:first-child{background:rgba(255,255,255,.09);color:#fff}.app-dock b{font-size:17px;line-height:1;font-weight:700}.toast{left:18px;right:18px;bottom:91px;max-width:none;border-radius:16px}}
+@media(max-width:380px){.hero h1{font-size:43px}.options{grid-template-columns:1fr}.filter-grid{grid-template-columns:1fr}}
+
+/* Ajuste fiel ao blueprint aprovado: onboarding claro + feed vertical */
+@media(max-width:700px){
+  .hero{min-height:100svh;padding:98px 0 100px;background:linear-gradient(180deg,rgba(8,16,29,.18),rgba(8,16,29,.96)),radial-gradient(circle at 50% 58%,rgba(190,139,77,.28),transparent 18rem),linear-gradient(155deg,#172138 0%,#080d17 76%)}
+  .hero .container{text-align:center}.hero .eyebrow{border:0;background:transparent;padding:0;color:#d8b77c;letter-spacing:.22em}.hero h1{margin:220px auto 16px;font-size:34px;line-height:1.02;max-width:340px;color:#f4d79d}.hero p{margin:auto;max-width:320px;color:#ebe6dc}.hero-actions{max-width:340px;margin:24px auto 0}.hero .secondary{border-color:#d8b77c;color:#fff;background:rgba(0,0,0,.12)}
+  .wizard-wrap{margin:0;background:#fbfaf7;padding:0;min-height:100svh}.wizard-wrap>.container{width:100%}.wizard{min-height:100svh;border:0;border-radius:0;box-shadow:none;background:#fbfaf7}.progress{margin-top:58px;height:3px}.progress span{background:#b98a45}.wizard-inner{padding:24px 22px 92px}.inventory-switch{margin-top:6px;background:#f1eee7}.source-btn.selected{color:#1a1712}.step-label{color:#96703b}.step h2{font-size:30px;color:#121212}.option{background:#fffdfa;border-color:#ded8cd;border-radius:14px;color:#161616}.option:hover,.option.selected{border-color:#b98a45;background:#faf5ea;box-shadow:0 5px 18px rgba(137,99,45,.09)}.next{background:#151513}.wizard-actions{position:fixed;z-index:12;left:22px;right:22px;bottom:16px;background:#fbfaf7;padding:10px 0 0}.back,.next{min-height:52px}
+  .results.visible{position:relative;background:#080d12;padding:0}.results.visible>.container{width:100%;max-width:none}.results .result-top{padding:80px 20px 14px;margin:0;color:#fff;background:#080d12}.results .result-top p{color:#abb3bd}.results .reset-link{color:#daba82}.results .grid{display:block;max-width:none;scroll-snap-type:y mandatory}.results .card{min-height:calc(100svh - 12px);border:0;border-radius:0;background:#0a0f12;color:#fff;box-shadow:none;scroll-snap-align:start;scroll-snap-stop:always}.results .cover{height:52svh;min-height:390px}.results .card-body{min-height:48svh;padding:18px 20px 94px;background:linear-gradient(180deg,#101518,#080c0f)}.results .card h3{font-size:25px}.results .card-address,.results .m2,.results .cost-line{color:#c3c9ce}.results .price{font-size:28px}.results .feature{background:rgba(255,255,255,.1);color:#f2f3f4}.results .reasons{background:transparent;border:0;border-left:2px solid #d6ae68;border-radius:0;padding:4px 0 4px 12px;color:#f0e5d2}.results .view{background:#f0d39b;color:#15120c}.results .interest{background:#f0d39b;color:#15120c}.results .match{background:rgba(10,13,14,.82);border:1px solid rgba(216,183,124,.55);color:#fff;font-size:17px}.results .match::first-line{color:#fff}.results .card-tag{display:inline-flex;width:max-content;padding:5px 8px;border-radius:6px;background:#e6c27e;color:#21180c}.results .photo-arrow{top:47%}
+  .app-dock{grid-template-columns:repeat(4,1fr);background:rgba(8,12,14,.94);border-color:rgba(216,183,124,.2)}.app-dock button:first-child{background:transparent;color:#e0bc79}.app-dock button{font-size:8px}.app-dock button:nth-child(3),.app-dock button:nth-child(4){display:flex}
 }
-@media(max-width:360px){.filter-grid,.options{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
+
+/* =========================================================
+   YNTELIGENCIA PRODUCT SYSTEM — CHAMPAGNE / IVORY
+========================================================= */
+:root{--dark:#0b0b0b;--dark2:#171717;--orange:#c6a76b;--orange2:#e4d0a3;--bg:#f7f4ed;--text:#0b0b0b;--muted:#77736b;--line:rgba(11,11,11,.10);--green:#c6a76b;--greenbg:#f7f0e1}
+body{background:#f7f4ed;color:#0b0b0b}
+.inventory-switch{display:none!important}
+.hero{background:linear-gradient(180deg,rgba(11,11,11,.16),rgba(11,11,11,.94)),radial-gradient(circle at 50% 55%,rgba(198,167,107,.18),transparent 22rem),#171717}
+.hero .eyebrow,.step-label,.card-tag{color:#c6a76b}.hero h1 span{color:#f1e2be}.primary{background:#e4d0a3;color:#0b0b0b;box-shadow:none}.secondary{border-color:rgba(228,208,163,.62)}
+.progress span{background:#c6a76b}.source-btn.selected{background:#171717}.option:hover,.option.selected{border-color:#c6a76b;background:#fcfaf6;box-shadow:0 8px 24px rgba(198,167,107,.11)}
+.step-count{display:flex;justify-content:space-between;align-items:center;margin:0 0 34px;color:#77736b;font-size:12px}.step-count strong{color:#0b0b0b;font-weight:700}.step-count button{border:0;background:transparent;color:#77736b;padding:5px}
+.match{background:rgba(11,11,11,.84)!important;border:1px solid rgba(241,226,190,.72)!important;color:#f1e2be!important}.reasons{background:#f7f0e1;color:#4d4029;border-color:rgba(198,167,107,.25)}
+.interest{background:#e4d0a3;color:#0b0b0b}.view{background:#171717;color:#fff}
+.match-processing{position:fixed;inset:0;z-index:190;display:none;place-items:center;padding:28px;background:#0b0b0b;color:#fff;text-align:center}.match-processing.visible{display:grid}.match-processing-mark{width:74px;height:74px;display:grid;place-items:center;margin:0 auto 28px;border:1px solid rgba(228,208,163,.45);border-radius:50%;color:#e4d0a3;font-size:30px;animation:matchPulse 1.2s ease-in-out infinite}.match-processing h2{margin:0 0 12px;font-size:30px;letter-spacing:-.04em}.match-processing p{margin:0;color:#aaa49a;transition:.25s}.match-processing-line{width:210px;height:2px;margin:28px auto 0;background:#292929;overflow:hidden}.match-processing-line span{display:block;width:42%;height:100%;background:#c6a76b;animation:matchLoad 1s ease-in-out infinite}
+@keyframes matchPulse{50%{transform:scale(1.06);box-shadow:0 0 42px rgba(198,167,107,.13)}}@keyframes matchLoad{from{transform:translateX(-110%)}to{transform:translateX(350%)}}
+.app-dock{border-color:rgba(198,167,107,.24);background:rgba(11,11,11,.94)}.app-dock button:first-child{color:#e4d0a3}
+.photo-detail-shell{position:fixed;inset:0;z-index:210;background:#fcfaf6;color:#0b0b0b;overflow-y:auto}.photo-detail-hero{height:min(62vh,680px);background:#171717;position:relative}.photo-detail-hero .photo-track{height:100%}.photo-detail-close{position:fixed;top:18px;left:18px;z-index:4;width:44px;height:44px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(11,11,11,.55);color:#fff;font-size:24px}.photo-detail-content{position:relative;width:min(720px,calc(100% - 32px));margin:-28px auto 0;padding:30px 30px 120px;border-radius:28px 28px 0 0;background:#fcfaf6}.photo-detail-score{display:inline-flex;padding:9px 12px;margin-bottom:13px;border-radius:11px;background:#171717;color:#e4d0a3;font-weight:900}.photo-detail-content h2{margin:0 0 5px;font-size:32px;letter-spacing:-.04em}.photo-detail-location{color:#77736b}.photo-detail-price{margin:18px 0 5px;font-size:30px;font-weight:900}.photo-detail-meta{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.photo-detail-meta span{padding:8px 10px;border-radius:10px;background:#f0ece3;font-size:12px;font-weight:700}.photo-detail-reasons{margin:22px 0;padding:18px 0;border-top:1px solid #ded8cd;border-bottom:1px solid #ded8cd}.photo-detail-reasons strong{display:block;margin-bottom:10px}.photo-detail-reasons div{margin:7px 0}.photo-detail-cta{position:fixed;left:50%;bottom:14px;z-index:5;width:min(690px,calc(100% - 24px));transform:translateX(-50%);display:grid;grid-template-columns:1fr 1.2fr;gap:8px;padding:7px;border-radius:18px;background:rgba(252,250,246,.92);backdrop-filter:blur(18px);box-shadow:0 10px 40px rgba(11,11,11,.15)}.photo-detail-cta button{min-height:52px;border-radius:14px;font-weight:850}.photo-detail-cta .detail-back{border:1px solid #171717;background:#fff}.photo-detail-cta .detail-interest{border:0;background:#171717;color:#fff}
+@media(min-width:701px){.results.visible{background:#171717;color:#fff;padding:52px 0}.results>.container{max-width:1180px}.results .result-top{max-width:590px;margin:0 auto 20px}.results .result-top p{color:#aaa49a}.results .reset-link{color:#e4d0a3}.results .grid{display:block;max-width:590px}.results .card{min-height:820px;margin:0 0 28px;border:0;background:#0b0b0b;color:#fff}.results .cover{height:500px}.results .card-address,.results .m2,.results .cost-line{color:#aaa49a}.results .feature{background:#232323;color:#fff}.results .reasons{background:transparent;border-left:2px solid #c6a76b;border-radius:0;color:#eee3cf}}
+@media(max-width:700px){header{background:linear-gradient(180deg,rgba(11,11,11,.74),transparent);border:0}.hero .eyebrow{color:#e4d0a3}.hero h1{color:#fff}.hero h1 span{display:block;margin-top:5px}.wizard-wrap,.wizard,.wizard-actions{background:#fcfaf6}.progress{background:#ece7dd}.step-count{margin-bottom:42px}.step h2{font-size:34px;line-height:1.02}.option{background:#fcfaf6}.next{background:#171717}.results .result-top{display:none}.results .grid{height:100svh;overflow-y:auto;scroll-snap-type:y mandatory}.results .card{height:100svh;min-height:100svh;overflow:hidden;display:grid;grid-template-rows:54svh 46svh}.results .cover{height:54svh;min-height:0}.results .card-body{height:46svh;min-height:0;overflow-y:auto;padding:17px 20px 98px}.results .price{margin:9px 0 2px}.results .features{margin:10px 0}.results .reasons{margin-bottom:11px}.results .card-actions{position:sticky;bottom:-82px}.explore{background:#fcfaf6}.catalog{background:#fcfaf6}.catalog-filters,.explore-box{background:#f1ede5}.field{background:#fff}.photo-detail-shell{position:fixed;inset:0;z-index:210;background:#fcfaf6;color:#0b0b0b;overflow-y:auto}.photo-detail-hero{height:52svh;background:#171717;position:relative}.photo-detail-hero .photo-track{height:100%}.photo-detail-close{position:fixed;top:18px;left:16px;z-index:4;width:42px;height:42px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(11,11,11,.55);color:#fff;font-size:24px}.photo-detail-content{position:relative;margin-top:-20px;padding:25px 20px 110px;border-radius:24px 24px 0 0;background:#fcfaf6}.photo-detail-score{display:inline-flex;padding:9px 12px;margin-bottom:13px;border-radius:11px;background:#171717;color:#e4d0a3;font-weight:900}.photo-detail-content h2{margin:0 0 5px;font-size:27px;letter-spacing:-.04em}.photo-detail-location{color:#77736b}.photo-detail-price{margin:18px 0 5px;font-size:28px;font-weight:900}.photo-detail-reasons{margin:22px 0;padding:18px 0;border-top:1px solid #ded8cd;border-bottom:1px solid #ded8cd}.photo-detail-reasons strong{display:block;margin-bottom:10px}.photo-detail-cta{position:fixed;left:12px;right:12px;bottom:10px;z-index:5;display:grid;grid-template-columns:1fr 1.2fr;gap:8px;padding:7px;border-radius:18px;background:rgba(252,250,246,.92);backdrop-filter:blur(18px)}.photo-detail-cta button{min-height:52px;border-radius:14px;font-weight:850}.photo-detail-cta .detail-back{border:1px solid #171717;background:#fff}.photo-detail-cta .detail-interest{border:0;background:#171717;color:#fff}}
 </style>
 </head>
 
 <body>
-<aside class="test-bar">V2 · Ambiente de testes · Nenhum lead é enviado</aside>
 
 <header>
   <div class="container nav">
@@ -849,18 +900,15 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ac
 
 <section class="hero" id="inicio">
   <div class="container">
-    <div class="eyebrow">INTELIGÊNCIA IMOBILIÁRIA</div>
+    <div class="eyebrow">✦ SEU MATCH IMOBILIÁRIO</div>
 
     <h1>
-      Encontre o imóvel que
-      <span>faz sentido</span>
-      para você.
+      Seu próximo imóvel não é uma busca.
+      É um <span>MATCH.</span>
     </h1>
 
     <p>
-      Você não precisa procurar entre centenas de imóveis.
-      Conte o que procura e a Ynteligencia encontra as opções
-      mais compatíveis com o seu perfil.
+      Novos e usados. Em uma única busca inteligente.
     </p>
 
     <div class="hero-actions">
@@ -876,13 +924,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ac
 </section>
 
 <main>
-<details class="test-tools container" open><summary>Preparar base de testes</summary>
-<p id="inventoryState" role="status">Carregando base local…</p>
-<p>Esta cópia usa Remax.teste.2.csv e photos.json na mesma pasta. Você também pode selecionar os arquivos abaixo; eles ficam apenas nesta sessão.</p>
-<label>Base de imóveis (.csv) <input id="csvInput" type="file" accept=".csv,text/csv"></label>
-<label>Mapa de fotos (.json) <input id="photosInput" type="file" accept=".json,application/json"></label>
-<p>Uso exclusivo para validação. O bloqueio de indexação não substitui a proteção de acesso do domínio de testes.</p>
-</details>
 
 <section class="wizard-wrap" id="match">
   <div class="container">
@@ -908,9 +949,14 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ac
           <button
             type="button"
             class="source-btn"
-            data-source="novos" hidden disabled>
+            data-source="novos">
             Novos
           </button>
+        </div>
+
+        <div class="step-count" aria-live="polite">
+          <strong id="stepCount">01 de 07</strong>
+          <button type="button" id="skipStep">Pular</button>
         </div>
 
         <div class="step" data-step="0">
@@ -1396,7 +1442,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ac
 
     </div>
 
-    <details class="catalog-filters"><summary>Mais filtros de compra</summary>
+    <div class="catalog-filters">
 
       <div class="filter-title">
         Filtros de compra
@@ -1490,7 +1536,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ac
         </button>
 
       </div>
-    </details>
+    </div>
   </div>
 </section>
 
@@ -1508,8 +1554,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ac
           Imóveis disponíveis
         </h2>
 
-        <label for="catalogSort">Ordenar por</label>
-        <select class="field" id="catalogSort"><option value="original">Ordem do catálogo</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option><option value="area-desc">Maior área</option></select>
         <p id="catalogStatus">
           Carregando estoque...
         </p>
@@ -1521,7 +1565,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ac
       class="catalog-grid"
       id="catalogGrid">
     </div>
-    <button id="loadMore" class="primary load-more" hidden>Carregar mais 12 imóveis</button>
 
   </div>
 </section>
@@ -1533,9 +1576,33 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ac
   id="toast">
 </div>
 
+<div class="match-processing" id="matchProcessing" role="status" aria-live="polite">
+  <div>
+    <div class="match-processing-mark">Y</div>
+    <h2>Construindo seu MATCH</h2>
+    <p id="matchProcessingText">Analisando seu perfil...</p>
+    <div class="match-processing-line"><span></span></div>
+  </div>
+</div>
+
 <footer>
   Ynteligencia · Inteligência imobiliária
 </footer>
+
+<nav class="app-dock" aria-label="Navegação principal">
+  <button type="button" onclick="document.getElementById('match').scrollIntoView({behavior:'smooth'})">
+    <b>⌕</b><span>DESCOBRIR</span>
+  </button>
+  <button type="button" onclick="showToast('Salvos será ativado em uma próxima etapa do produto.')">
+    <b>♡</b><span>SALVOS</span>
+  </button>
+  <button type="button" onclick="document.getElementById('explore').scrollIntoView({behavior:'smooth'})">
+    <b>⌖</b><span>EXPLORAR</span>
+  </button>
+  <button type="button" onclick="showToast('Perfil será ativado em uma próxima etapa do produto.')">
+    <b>○</b><span>PERFIL</span>
+  </button>
+</nav>
 
 <script>
 
@@ -1580,40 +1647,389 @@ function norm(v){
    SUPABASE
 ========================================================= */
 
-// Sem credenciais ou gravação externa nesta versão de avaliação.
-async function supabaseTrack() { return false; }
-async function supabaseCreateLead() { return false; }
+const SUPABASE_URL =
+  "https://wzaegidwtdjuhqchpdpd.supabase.co";
 
+const SUPABASE_PUBLISHABLE_KEY =
+  "sb_publishable_YmN9DjeDgog_mlVw9EsDUQ_Z-4MJKsp";
+
+
+function getYnteligenciaSessionId(){
+
+  const key="ynteligencia_session_id";
+
+  let id=localStorage.getItem(key);
+
+  if(!id){
+
+    id=
+      (crypto && crypto.randomUUID)
+        ? crypto.randomUUID()
+        : `${Date.now()}-${Math.random()
+            .toString(16)
+            .slice(2)}`;
+
+    localStorage.setItem(key,id);
+  }
+
+  return id;
+}
+
+
+const YNTELIGENCIA_SESSION_ID =
+  getYnteligenciaSessionId();
+
+
+/* =========================================================
+   ATRIBUIÇÃO GOOGLE / UTMs
+========================================================= */
+
+function captureYnteligenciaAttribution(){
+
+  const params=
+    new URLSearchParams(
+      window.location.search
+    );
+
+  const keys=[
+    "gclid",
+    "gbraid",
+    "wbraid",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_content",
+    "utm_term"
+  ];
+
+  const attribution={};
+
+  keys.forEach(key=>{
+
+    const incoming=
+      clean(
+        params.get(key)
+      );
+
+    if(incoming){
+
+      localStorage.setItem(
+        `ynteligencia_${key}`,
+        incoming
+      );
+
+      attribution[key]=incoming;
+
+    }else{
+
+      attribution[key]=
+        localStorage.getItem(
+          `ynteligencia_${key}`
+        ) || "";
+    }
+
+  });
+
+  return attribution;
+}
+
+
+const YNTELIGENCIA_ATTRIBUTION =
+  captureYnteligenciaAttribution();
+
+
+async function supabaseTrack(
+  eventType,
+  metadata={}
+){
+
+  try{
+
+    const response=await fetch(
+      `${SUPABASE_URL}/rest/v1/events`,
+      {
+        method:"POST",
+
+        headers:{
+          "apikey":
+            SUPABASE_PUBLISHABLE_KEY,
+
+          "Content-Type":
+            "application/json",
+
+          "Prefer":
+            "return=minimal"
+        },
+
+        body:JSON.stringify({
+
+          session_id:
+            YNTELIGENCIA_SESSION_ID,
+
+          event_type:
+            eventType,
+
+          metadata:{
+            ...metadata,
+
+            page:
+              location.pathname,
+
+            source_mode:
+              sourceMode || "usados",
+
+            attribution:{
+              ...YNTELIGENCIA_ATTRIBUTION
+            }
+          }
+
+        })
+
+      }
+    );
+
+
+    if(!response.ok){
+
+      const detail=
+        await response.text();
+
+      console.warn(
+        `Supabase ${eventType} não gravou:`,
+        response.status,
+        detail
+      );
+
+      return false;
+    }
+
+    return true;
+
+  }catch(error){
+
+    console.warn(
+      `Falha Supabase ${eventType}:`,
+      error
+    );
+
+    return false;
+  }
+}
+
+
+async function supabaseCreateLead(lead){
+
+  try{
+
+    const response=await fetch(
+      `${SUPABASE_URL}/rest/v1/leads`,
+      {
+
+        method:"POST",
+
+        headers:{
+
+          "apikey":
+            SUPABASE_PUBLISHABLE_KEY,
+
+          "Content-Type":
+            "application/json",
+
+          "Prefer":
+            "return=minimal"
+        },
+
+        body:JSON.stringify({
+
+          name:
+            lead.name || "",
+
+          email:
+            lead.email || "",
+
+          phone:
+            lead.phone || "",
+
+          status:
+            "novo",
+
+          lead_score:
+            Number(lead.match_score) || 0,
+
+          destination:
+            "yincorp",
+
+          notes:
+            `Interesse gerado na Ynteligencia | ` +
+            `Código: ${lead.property_id || ""} | ` +
+            `Imóvel: ${lead.property_name || ""}`,
+
+          session_id:
+            YNTELIGENCIA_SESSION_ID,
+
+          metadata:{
+
+            source:
+              "ynteligencia",
+
+            crm:
+              "praedium",
+
+            attribution:{
+              ...YNTELIGENCIA_ATTRIBUTION,
+
+              landing_page:
+                window.location.href
+            },
+
+            property:{
+
+              id:
+                lead.property_id || "",
+
+              name:
+                lead.property_name || "",
+
+              neighborhood:
+                lead.neighborhood || "",
+
+              value:
+                Number(
+                  lead.property_value
+                ) || 0
+            },
+
+            match:{
+
+              score:
+                Number(
+                  lead.match_score
+                ) || 0
+            },
+
+            profile:{
+              ...profile
+            }
+
+          }
+
+        })
+
+      }
+    );
+
+
+    if(!response.ok){
+
+      const detail=
+        await response.text();
+
+      console.warn(
+        "Supabase não gravou o lead:",
+        response.status,
+        detail
+      );
+
+      return false;
+    }
+
+
+    console.log(
+      "Lead gravado no Supabase."
+    );
+
+    return true;
+
+
+  }catch(error){
+
+    console.warn(
+      "Falha ao gravar lead no Supabase:",
+      error
+    );
+
+    return false;
+  }
+}
 
 
 /* =========================================================
    HELPERS
 ========================================================= */
 
-function esc(value) {
-  return String(value ?? '').replace(/[&<>"']/g, char => ({
-    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
-  }[char]));
+function esc(v){
+  return String(v??"")
+    .replace(
+      /[&<>"]/g,
+      c=>({
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;"
+      }[c])
+    )
 }
 
 
-function numberBR(value) {
-  if (typeof value === 'number') return Number.isFinite(value) && value >= 0 ? value : 0;
-  let s = String(value ?? '').replace(/R\$/gi, '').replace(/\s/g, '');
-  if (!s || !/^[\d.,]+$/.test(s)) return 0;
-  if (s.includes(',')) {
-    if (!/^(?:\d+|\d{1,3}(?:\.\d{3})+),\d{1,2}$/.test(s)) return 0;
-    s = s.replace(/\./g, '').replace(',', '.');
-  } else if (/^\d{1,3}(?:\.\d{3})+$/.test(s)) {
-    s = s.replace(/\./g, '');
-  } else if (!/^\d+(?:\.\d{1,2})?$/.test(s)) return 0;
-  const n = Number(s);
-  return Number.isFinite(n) && n >= 0 ? n : 0;
+function numberBR(v){
+
+  let s=
+    String(v??"")
+      .replace(/R\$/gi,"")
+      .replace(/\s/g,"")
+      .replace(/[^\d,.-]/g,"");
+
+  if(!s)return 0;
+
+  if(
+    s.includes(",") &&
+    s.includes(".")
+  ){
+
+    s=
+      s.replace(/\./g,"")
+       .replace(",",".");
+
+  }else if(s.includes(",")){
+
+    s=s.replace(",",".");
+
+  }else if(
+    (s.match(/\./g)||[]).length>1
+  ){
+
+    s=s.replace(/\./g,"");
+  }
+
+  return Number(s)||0;
 }
-const currencyFormatter = new Intl.NumberFormat('pt-BR', {style:'currency',currency:'BRL',maximumFractionDigits:0});
-const areaFormatter = new Intl.NumberFormat('pt-BR', {maximumFractionDigits:2});
-function money(v) { return v > 0 ? currencyFormatter.format(v) : 'Valor sob consulta'; }
-function area(v) { return areaFormatter.format(v); }
+
+
+function money(v){
+
+  return v
+    ? new Intl.NumberFormat(
+        "pt-BR",
+        {
+          style:"currency",
+          currency:"BRL",
+          maximumFractionDigits:0
+        }
+      ).format(v)
+
+    : "Valor sob consulta";
+}
+
+
+function area(v){
+
+  return new Intl.NumberFormat(
+    "pt-BR",
+    {
+      maximumFractionDigits:2
+    }
+  ).format(v);
+}
 
 
 /* =========================================================
@@ -1691,7 +2107,7 @@ async function loadPhotoManifest(){
       await fetch(
         "photos.json",
         {
-          cache:"no-cache"
+          cache:"no-store"
         }
       );
 
@@ -1740,34 +2156,126 @@ function validURL(v){
    CSV
 ========================================================= */
 
-function parseCSV(text) {
-  text = String(text).replace(/^\uFEFF/, '');
-  if (text.length > 15000000) throw new Error('CSV acima do limite de 15 MB para este teste.');
-  const rows = []; let row = [], value = '', quoted = false, closed = false;
-  const pushRow = () => { row.push(value); if(row.some(v=>v.trim())) rows.push(row); row=[]; value=''; closed=false; };
-  for (let i=0; i<text.length; i++) {
-    const c = text[i];
-    if (quoted) {
-      if(c==='"' && text[i+1]==='"') { value+='"'; i++; }
-      else if(c==='"') { quoted=false; closed=true; }
-      else value+=c;
-    } else if(c===';') { row.push(value); value=''; closed=false; }
-    else if(c==='\n' || c==='\r') { if(c==='\r' && text[i+1]==='\n') i++; pushRow(); }
-    else if(c==='"') { if(value || closed) throw new Error('Aspas inválidas no CSV.'); quoted=true; }
-    else { if(closed && !/\s/.test(c)) throw new Error('Texto após fechamento de aspas.'); if(!closed) value+=c; }
+function parseCSV(text){
+
+  const rows=[];
+
+  let row=[];
+  let field="";
+  let quoted=false;
+
+  text=
+    String(text)
+      .replace(/^\uFEFF/,"");
+
+
+  for(
+    let i=0;
+    i<text.length;
+    i++
+  ){
+
+    const c=text[i];
+    const n=text[i+1];
+
+
+    if(c==='"'){
+
+      if(
+        quoted &&
+        n==='"'
+      ){
+
+        field+='"';
+        i++;
+
+      }else{
+
+        quoted=!quoted;
+      }
+
+    }else if(
+      c===';' &&
+      !quoted
+    ){
+
+      row.push(field);
+      field="";
+
+    }else if(
+      (c==="\n" || c==="\r") &&
+      !quoted
+    ){
+
+      if(
+        c==="\r" &&
+        n==="\n"
+      )i++;
+
+
+      row.push(field);
+
+      field="";
+
+
+      if(
+        row.some(
+          v=>clean(v)!==""
+        )
+      ){
+
+        rows.push(row);
+      }
+
+
+      row=[];
+
+    }else{
+
+      field+=c;
+    }
   }
-  if(quoted) throw new Error('CSV com aspas não fechadas.');
-  pushRow();
-  if(rows.length<2) throw new Error('CSV vazio ou sem imóveis.');
-  const headers=rows.shift().map(norm);
-  if(headers.some(h=>!h) || new Set(headers).size!==headers.length) throw new Error('Cabeçalhos vazios ou repetidos.');
-  if(!(headers.includes('empreendimento') || headers.includes('emprendimento')) || !headers.includes('valor de venda (r$)')) throw new Error('Use o CSV original separado por ponto e vírgula, com nome do empreendimento e Valor de venda (R$).');
-  return rows.map((cols,index)=>{
-    if(cols.length!==headers.length) throw new Error('Quantidade de colunas inválida no registro '+(index+2));
-    const obj=Object.create(null);
-    headers.forEach((key,i)=>obj[key]=clean(cols[i]));
-    return obj;
-  });
+
+
+  row.push(field);
+
+
+  if(
+    row.some(
+      v=>clean(v)!==""
+    )
+  ){
+
+    rows.push(row);
+  }
+
+
+  if(rows.length<2){
+
+    return [];
+  }
+
+
+  const headers=
+    rows
+      .shift()
+      .map(norm);
+
+
+  return rows.map(
+    cols=>{
+
+      const obj={};
+
+      headers.forEach(
+        (key,i)=>
+          obj[key]=
+            clean(cols[i])
+      );
+
+      return obj;
+    }
+  );
 }
 
 
@@ -1802,7 +2310,7 @@ function inferType(row){
       [
         field(
           row,
-          ["EMPREENDIMENTO","EMPRENDIMENTO"]
+          ["EMPRENDIMENTO"]
         ),
 
         field(
@@ -1879,7 +2387,7 @@ function mapProperty(
       clean(
         field(
           row,
-          ["EMPREENDIMENTO","EMPRENDIMENTO"]
+          ["EMPRENDIMENTO"]
         )
       ) ||
       "Imóvel disponível",
@@ -2051,7 +2559,7 @@ function deduplicate(items){
    WIZARD
 ========================================================= */
 
-function setStep(n, shouldScroll=true){
+function setStep(n){
 
   step=
     Math.max(
@@ -2071,6 +2579,14 @@ function setStep(n, shouldScroll=true){
 
   $("progress").style.width=
     `${((step+1)/7)*100}%`;
+
+  const stepCount=
+    $("stepCount");
+
+  if(stepCount){
+    stepCount.textContent=
+      `${String(step+1).padStart(2,"0")} de 07`;
+  }
 
 
   $("back").style.visibility=
@@ -2094,7 +2610,7 @@ function setStep(n, shouldScroll=true){
   }
 
 
-  if(shouldScroll) document
+  document
     .getElementById("match")
     .scrollIntoView({
       behavior:"smooth",
@@ -2325,7 +2841,7 @@ function trackProfileCompleted(){
             profile.feature || []
           ).join("|"),
 
-        debug_mode:false
+        debug_mode:true
       }
     );
 
@@ -2349,6 +2865,43 @@ function trackProfileCompleted(){
 }
 
 
+function showMatchProcessing(){
+
+  const layer=$("matchProcessing");
+  const label=$("matchProcessingText");
+
+  if(!layer){
+    showMatches();
+    return;
+  }
+
+  const messages=[
+    "Analisando seu perfil...",
+    "Comparando imóveis...",
+    "Calculando compatibilidade...",
+    "Seus MATCHES estão prontos."
+  ];
+
+  layer.classList.add("visible");
+
+  messages.forEach((message,index)=>{
+    setTimeout(()=>{
+      if(label)label.textContent=message;
+    },index*420);
+  });
+
+  setTimeout(()=>{
+    showMatches();
+    layer.classList.remove("visible");
+  },1550);
+}
+
+
+$("skipStep")?.addEventListener("click",()=>{
+  showToast("Cada resposta melhora a precisão do seu MATCH.");
+});
+
+
 $("next")
   .addEventListener(
     "click",
@@ -2369,7 +2922,7 @@ $("next")
 
         trackProfileCompleted();
 
-        showMatches();
+        showMatchProcessing();
       }
     }
   );
@@ -2896,7 +3449,6 @@ function scoreProperty(p){
 
 
 function showMatches(){
-  if(!inventoryReady) { showToast('Carregue a base de imóveis antes de gerar o MATCH.'); return; }
 
   if(
     sourceMode==="novos"
@@ -2996,7 +3548,7 @@ function showMatches(){
         inventory_source:
           sourceMode || "usados",
 
-        debug_mode:false
+        debug_mode:true
       }
     );
 
@@ -3115,13 +3667,284 @@ function showMatches(){
    CARDS
 ========================================================= */
 
-function coverHTML(p) {
-  const cover=photoList(p)[0];
-  return `<div class="cover">
-    ${cover ? `<img class="photo-slide" src="${esc(cover)}" alt="${esc(p.name)}" loading="lazy" decoding="async" width="640" height="420">` : '<div class="photo-fallback">Fotos em atualização</div>'}
-    <span class="match">${p.match ? p.match.score+'% MATCH' : 'IMÓVEL DISPONÍVEL'}</span>
-    <span class="cover-location">${esc(p.neighborhood)}</span>
-  </div>`;
+function coverHTML(p){
+
+  const photos=
+    photoList(p);
+
+
+  if(
+    photos.length
+  ){
+
+    const slides=
+      photos
+        .map(
+          (url,i)=>
+            `
+            <img
+              class="photo-slide"
+              src="${esc(url)}"
+              alt="${esc(p.name||"Foto do imóvel")}"
+              loading="${i===0?"eager":"lazy"}"
+              onerror="this.style.display='none'">
+            `
+        )
+        .join("");
+
+
+    const dots=
+      photos.length>1
+
+        ? photos
+            .map(
+              (_,i)=>
+                `
+                <span
+                  class="photo-dot ${i===0?"active":""}">
+                </span>
+                `
+            )
+            .join("")
+
+        : "";
+
+
+    const arrows=
+      photos.length>1
+
+        ? `
+          <button
+            class="photo-arrow prev"
+            type="button"
+            aria-label="Foto anterior"
+            onclick="movePhoto(this,-1)">
+            ‹
+          </button>
+
+          <button
+            class="photo-arrow next"
+            type="button"
+            aria-label="Próxima foto"
+            onclick="movePhoto(this,1)">
+            ›
+          </button>
+          `
+
+        : "";
+
+
+    const counter=
+      photos.length>1
+
+        ? `
+          <span class="photo-counter">
+            1 / ${photos.length}
+          </span>
+          `
+
+        : "";
+
+
+    return`
+      <div class="cover">
+
+        <div
+          class="photo-carousel"
+          data-photo-index="0">
+
+          <div
+            class="photo-track"
+            onscroll="syncPhotoUI(this)">
+
+            ${slides}
+
+          </div>
+
+          ${arrows}
+
+          <div class="photo-dots">
+            ${dots}
+          </div>
+
+          ${counter}
+
+        </div>
+
+        <span class="match">
+          ${
+            p.match
+              ? `${p.match.score}% MATCH`
+              : "IMÓVEL DISPONÍVEL"
+          }
+        </span>
+
+        <span class="cover-location">
+          ${esc(p.neighborhood)}
+        </span>
+
+      </div>
+      `;
+  }
+
+
+  return`
+    <div class="cover">
+
+      <div
+        class="cover-art"
+        aria-hidden="true">
+
+        <span class="building one"></span>
+        <span class="building two"></span>
+
+      </div>
+
+      <span class="match">
+        ${
+          p.match
+            ? `${p.match.score}% MATCH`
+            : "IMÓVEL DISPONÍVEL"
+        }
+      </span>
+
+      <span class="cover-location">
+        ${esc(p.neighborhood)}
+      </span>
+
+    </div>
+    `;
+}
+
+
+function movePhoto(
+  button,
+  direction
+){
+
+  const carousel=
+    button.closest(
+      ".photo-carousel"
+    );
+
+
+  if(!carousel)return;
+
+
+  const track=
+    carousel.querySelector(
+      ".photo-track"
+    );
+
+
+  const slides=
+    track.querySelectorAll(
+      ".photo-slide"
+    );
+
+
+  if(!slides.length)return;
+
+
+  const current=
+    Number(
+      carousel.dataset.photoIndex || 0
+    );
+
+
+  const next=
+    Math.max(
+      0,
+      Math.min(
+        slides.length-1,
+        current+direction
+      )
+    );
+
+
+  track.scrollTo({
+
+    left:
+      track.clientWidth*
+      next,
+
+    behavior:
+      "smooth"
+  });
+
+
+  carousel.dataset.photoIndex=
+    String(next);
+
+
+  updatePhotoUI(
+    carousel,
+    next
+  );
+}
+
+
+function syncPhotoUI(track){
+
+  const carousel=
+    track.closest(
+      ".photo-carousel"
+    );
+
+
+  if(
+    !carousel ||
+    !track.clientWidth
+  )return;
+
+
+  const index=
+    Math.round(
+      track.scrollLeft/
+      track.clientWidth
+    );
+
+
+  carousel.dataset.photoIndex=
+    String(index);
+
+
+  updatePhotoUI(
+    carousel,
+    index
+  );
+}
+
+
+function updatePhotoUI(
+  carousel,
+  index
+){
+
+  carousel
+    .querySelectorAll(
+      ".photo-dot"
+    )
+    .forEach(
+      (dot,i)=>
+        dot.classList.toggle(
+          "active",
+          i===index
+        )
+    );
+
+
+  const counter=
+    carousel.querySelector(
+      ".photo-counter"
+    );
+
+
+  if(counter){
+
+    counter.textContent=
+      `${index+1} / ${carousel.querySelectorAll(".photo-dot").length}`;
+  }
 }
 
 
@@ -3153,7 +3976,7 @@ function card(
   }
 
 
-  if(p.suites && p.suites <= p.bedrooms){
+  if(p.suites){
 
     features.push(
       `${p.suites} ${
@@ -3181,7 +4004,7 @@ function card(
     [
       p.address,
 
-      p.unit && !/^(x|n\/?a|-)$/i.test(p.unit)
+      p.unit
         ? `Unidade ${p.unit}`
         : ""
 
@@ -3207,7 +4030,7 @@ function card(
     isMatch &&
     p.match
 
-      ? p.match.reasons
+      ? p.match.reasons.slice(0,3)
       : [];
 
 
@@ -3251,8 +4074,8 @@ function card(
         <button
           class="view"
           type="button"
-          data-action="photos" data-id="${esc(p.id)}">
-          Ver fotos
+          onclick="showPhotoModal('${esc(p.id)}')">
+          Ver detalhes
         </button>
         `
 
@@ -3260,8 +4083,8 @@ function card(
         <button
           class="view"
           type="button"
-          data-action="missing-photos">
-          Fotos indisponíveis
+          onclick="showToast('As imagens deste imóvel ainda estão sendo atualizadas.')">
+          Ver detalhes
         </button>
         `;
 
@@ -3335,7 +4158,7 @@ function card(
 
                 ${
                   p.iptu
-                    ? ` · IPTU ${money(p.iptu)} (periodicidade a confirmar)`
+                    ? ` · IPTU ${money(p.iptu)}`
                     : ""
                 }
 
@@ -3354,8 +4177,8 @@ function card(
           <button
             class="interest"
             type="button"
-            data-action="interest" data-id="${esc(p.id)}">
-            Tenho interesse
+            onclick="interest('${esc(p.id)}','${esc(p.name)}')">
+            Quero conhecer
           </button>
 
         </div>
@@ -3455,26 +4278,22 @@ function showPhotoModal(id){
 
 
   modal.style.cssText=
-    "position:fixed;inset:0;z-index:200;background:rgba(7,15,27,.92);display:flex;align-items:center;justify-content:center;padding:20px";
+    "position:fixed;inset:0;z-index:210";
+
+  modal.className=
+    "photo-detail-shell";
+
+  const detailReasons=
+    (p.match?.reasons || [])
+      .slice(0,3);
 
 
   modal.innerHTML=
     `
-    <button
-      type="button"
-      aria-label="Fechar"
-      data-action="close-modal"
-      style="position:absolute;top:18px;right:18px;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#101a2b;font-size:25px;font-weight:900;z-index:3">
-      ×
-    </button>
+    <button class="photo-detail-close" type="button" aria-label="Voltar" onclick="this.closest('#photoModal').remove()">‹</button>
 
-    <div style="width:min(920px,100%)">
-
-      <div style="height:min(72vh,650px);background:#101a2b;border-radius:16px;overflow:hidden">
-
-        <div
-          class="photo-track"
-          style="height:100%">
+    <div class="photo-detail-hero">
+      <div class="photo-track">
 
           ${
             photos
@@ -3485,29 +4304,33 @@ function showPhotoModal(id){
                     class="photo-slide"
                     src="${esc(url)}"
                     alt="${esc(p.name)}"
-                    loading="lazy" decoding="async" style="object-fit:contain;background:#101a2b">
+                    style="object-fit:cover;background:#171717">
                   `
               )
               .join("")
           }
-
-        </div>
-
       </div>
+    </div>
 
-      <div style="color:#fff;text-align:center;margin-top:12px;font-weight:800;font-size:13px">
-
-        ${esc(p.name)}
-        ·
-        ${photos.length}
-        ${
-          photos.length===1
-            ? "foto"
-            : "fotos"
-        }
-
+    <section class="photo-detail-content">
+      ${p.match ? `<div class="photo-detail-score">${p.match.score}% MATCH</div>` : ""}
+      <h2>${esc(p.name)}</h2>
+      <div class="photo-detail-location">${esc(p.neighborhood || "São Paulo")}</div>
+      <div class="photo-detail-price">${money(p.value)}</div>
+      <div class="photo-detail-meta">
+        ${p.area ? `<span>${area(p.area)} m²</span>` : ""}
+        ${p.bedrooms ? `<span>${p.bedrooms} dorms.</span>` : ""}
+        ${p.suites ? `<span>${p.suites} suíte${p.suites===1?"":"s"}</span>` : ""}
+        ${p.parking ? `<span>${p.parking} vaga${p.parking===1?"":"s"}</span>` : ""}
       </div>
+      ${detailReasons.length ? `<div class="photo-detail-reasons"><strong>Por que combina com você</strong>${detailReasons.map(reason=>`<div>✓ ${esc(reason)}</div>`).join("")}</div>` : ""}
+      ${p.description ? `<h3>Sobre o imóvel</h3><p>${esc(p.description)}</p>` : ""}
+      ${p.address ? `<h3>Localização</h3><p>${esc(p.address)}</p>` : ""}
+    </section>
 
+    <div class="photo-detail-cta">
+      <button class="detail-back" type="button" onclick="this.closest('#photoModal').remove()">Voltar</button>
+      <button class="detail-interest" type="button" onclick="interest('${esc(p.id)}','${esc(p.name)}')">Quero conhecer</button>
     </div>
     `;
 
@@ -3518,7 +4341,7 @@ function showPhotoModal(id){
 
       if(e.target===modal){
 
-        modal.close?.();
+        modal.remove();
       }
     }
   );
@@ -3529,14 +4352,6 @@ function showPhotoModal(id){
     .appendChild(
       modal
     );
-  setupDialog(modal, 'Fotos de '+p.name);
-  const track=modal.querySelector('.photo-track');track.tabIndex=0;track.setAttribute('aria-label','Galeria de fotos');
-  const controls=document.createElement('div');controls.className='gallery-controls';
-  for(const [label,direction] of [['Foto anterior',-1],['Próxima foto',1]]){
-    const button=document.createElement('button');button.type='button';button.className='back';button.textContent=label;
-    button.addEventListener('click',()=>track.scrollBy({left:direction*track.clientWidth,behavior:'smooth'}));controls.appendChild(button);
-  }
-  track.parentElement.after(controls);
 }
 
 
@@ -3580,11 +4395,7 @@ function fillCatalogNeighborhoods(){
 }
 
 
-let catalogLimit=12;
-function renderCatalog(more=false){
-  if(more!==true) catalogLimit=12;
-  if(!inventoryReady) { showToast('Carregue a base de imóveis antes de buscar.'); return; }
-
+function renderCatalog(){
 
   const q=
     norm(
@@ -3642,7 +4453,17 @@ function renderCatalog(more=false){
     properties.filter(
       p=>{
 
-        const searchable=p.searchText;
+        const searchable=
+          norm(
+            [
+              p.id,
+              p.name,
+              p.neighborhood,
+              p.address,
+              p.unit,
+              p.description
+            ].join(" ")
+          );
 
 
         return(
@@ -3653,7 +4474,7 @@ function renderCatalog(more=false){
           &&
 
           (!n ||
-            norm(p.neighborhood)===norm(n))
+            p.neighborhood===n)
 
           &&
 
@@ -3734,13 +4555,7 @@ function renderCatalog(more=false){
 
   $("catalogStatus")
     .textContent=
-      `${list.length} imóveis encontrados · exibindo ${Math.min(catalogLimit,list.length)}`;
-  const order=$('catalogSort').value;
-  if(order==='price-asc') list.sort((a,b)=>(a.value||Infinity)-(b.value||Infinity));
-  if(order==='price-desc') list.sort((a,b)=>b.value-a.value);
-  if(order==='area-desc') list.sort((a,b)=>b.area-a.area);
-  $('loadMore').hidden=list.length<=catalogLimit;
-  $('catalog').classList.add('visible');
+      `${list.length} imóveis disponíveis`;
 
 
   $("catalogGrid")
@@ -3748,7 +4563,7 @@ function renderCatalog(more=false){
       list.length
 
         ? list
-            .slice(0,catalogLimit)
+            .slice(0,60)
             .map(
               p=>
                 card(
@@ -3829,7 +4644,7 @@ $("showCatalog")
         ? "change"
         : "input",
 
-      scheduleCatalog
+      renderCatalog
     )
 );
 
@@ -3926,7 +4741,7 @@ function interest(
           sourceMode ||
           "usados",
 
-        debug_mode:false
+        debug_mode:true
       }
     );
 
@@ -3985,32 +4800,590 @@ function interest(
    CAPTURA DE LEAD
 ========================================================= */
 
-function openLeadCapture(p) {
-  document.getElementById('leadModal')?.remove();
-  const modal=document.createElement('div'); modal.id='leadModal'; modal.className='v2-modal';
-  modal.innerHTML=`<div class="v2-dialog">
-    <button type="button" class="close-dialog" data-action="close-modal" aria-label="Fechar">×</button>
-    <div class="eyebrow">CONSULTAR DISPONIBILIDADE</div>
-    <h2>Vamos conversar sobre este imóvel?</h2><p>${esc(p.name)}</p>
-    <p class="test-notice">Teste de formulário: nenhum dado será enviado ou salvo. Use dados fictícios.</p>
-    <form id="leadCaptureForm">
-      <label for="leadName">Nome</label><input id="leadName" class="field" name="name" autocomplete="name" maxlength="100" required>
-      <label for="leadPhone">WhatsApp com DDD</label><input id="leadPhone" class="field" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="22" required>
-      <label for="leadEmail">E-mail (opcional)</label><input id="leadEmail" class="field" name="email" type="email" autocomplete="email" maxlength="254">
-      <p id="leadError" role="alert"></p><button class="primary" type="submit">Simular solicitação</button>
-      <p id="leadSuccess" role="status"></p>
-    </form></div>`;
-  document.body.appendChild(modal); setupDialog(modal, 'Consulta de imóvel — teste');
-  modal.querySelector('form').addEventListener('submit', event=>{
-    event.preventDefault();
-    const digits=$('leadPhone').value.replace(/\D/g,'').replace(/^55(?=\d{10,11}$)/,'');
-    if(clean($('leadName').value).length<2 || !/^\d{10,11}$/.test(digits)) {
-      $('leadError').textContent='Informe um nome e telefone com DDD (10 ou 11 dígitos).'; return;
+function openLeadCapture(p){
+
+  const old=
+    document.getElementById(
+      "leadModal"
+    );
+
+
+  if(old)old.remove();
+
+
+  const modal=
+    document.createElement(
+      "div"
+    );
+
+
+  modal.id=
+    "leadModal";
+
+
+  modal.style.cssText=
+    "position:fixed;inset:0;z-index:250;background:rgba(7,15,27,.82);display:flex;align-items:center;justify-content:center;padding:20px";
+
+
+  modal.innerHTML=
+    `
+    <div style="width:min(520px,100%);background:#fff;border-radius:20px;padding:26px;position:relative;box-shadow:0 24px 70px rgba(0,0,0,.28)">
+
+      <button
+        type="button"
+        aria-label="Fechar"
+        onclick="document.getElementById('leadModal')?.remove()"
+        style="position:absolute;top:14px;right:14px;width:38px;height:38px;border:0;border-radius:50%;background:#f0f3f6;color:#101a2b;font-size:22px;font-weight:900">
+        ×
+      </button>
+
+      <div style="font-size:11px;font-weight:900;letter-spacing:1.3px;color:#c6a76b;margin-bottom:8px">
+        TENHO INTERESSE
+      </div>
+
+      <h2 style="margin:0 42px 8px 0;font-size:28px;line-height:1.1;color:#182232">
+        Receba atendimento sobre este imóvel
+      </h2>
+
+      <p style="margin:0 0 18px;color:#697487;line-height:1.5">
+        ${esc(p.name||"Imóvel selecionado")}
+      </p>
+
+      <form id="leadCaptureForm">
+
+        <input
+          id="leadName"
+          class="field"
+          required
+          autocomplete="name"
+          placeholder="Seu nome"
+          style="margin-bottom:10px">
+
+        <input
+          id="leadPhone"
+          class="field"
+          required
+          autocomplete="tel"
+          inputmode="tel"
+          placeholder="WhatsApp / telefone"
+          style="margin-bottom:10px">
+
+        <input
+          id="leadEmail"
+          class="field"
+          type="email"
+          autocomplete="email"
+          placeholder="E-mail (opcional)"
+          style="margin-bottom:14px">
+
+        <button
+          class="primary"
+          type="submit"
+          style="width:100%;border:0">
+          Quero falar sobre este imóvel
+        </button>
+
+        <p style="margin:10px 0 0;color:#8a94a3;font-size:11px;line-height:1.4;text-align:center">
+          Ao enviar, seus dados ficam registrados para atendimento da Yincorp.
+        </p>
+
+      </form>
+
+    </div>
+    `;
+
+
+  modal.addEventListener(
+    "click",
+    e=>{
+
+      if(e.target===modal){
+
+        modal.remove();
+      }
     }
-    $('leadError').textContent='';
-    event.currentTarget.reset();
-    $('leadSuccess').textContent='Simulação concluída. Nenhum dado foi enviado ao atendimento.';
-  });
+  );
+
+
+  document
+    .body
+    .appendChild(
+      modal
+    );
+
+
+  document
+    .getElementById(
+      "leadCaptureForm"
+    )
+    .addEventListener(
+      "submit",
+      async e=>{
+
+        e.preventDefault();
+
+
+        const form=
+          e.currentTarget;
+
+
+        const submitButton=
+          form.querySelector(
+            'button[type="submit"]'
+          );
+
+
+        const lead={
+
+          name:
+            clean(
+              document
+                .getElementById(
+                  "leadName"
+                )
+                .value
+            ),
+
+          phone:
+            clean(
+              document
+                .getElementById(
+                  "leadPhone"
+                )
+                .value
+            ),
+
+          email:
+            clean(
+              document
+                .getElementById(
+                  "leadEmail"
+                )
+                .value
+            ),
+
+          property_id:
+            String(
+              p.id||""
+            ),
+
+          property_name:
+            p.name||"",
+
+          neighborhood:
+            p.neighborhood||"",
+
+          property_value:
+            Number(
+              p.value
+            )||0,
+
+          match_score:
+            Number(
+              p.match?.score
+            )||0,
+
+          profile:{
+            ...profile
+          },
+
+          created_at:
+            new Date()
+              .toISOString()
+        };
+
+
+        submitButton.disabled=
+          true;
+
+
+        submitButton.textContent=
+          "Enviando...";
+
+
+        try{
+
+          /* =================================================
+             PRAEDIUM
+          ================================================= */
+
+          const praediumResponse=
+            await fetch(
+              "/api/lead",
+              {
+
+                method:"POST",
+
+                headers:{
+                  "Content-Type":
+                    "application/json"
+                },
+
+                body:JSON.stringify({
+
+                  nome:
+                    lead.name,
+
+                  telefone:
+                    lead.phone,
+
+                  email:
+                    lead.email,
+
+                  origem:
+                    "ynteligencia",
+
+                  pagina:
+                    window.location.href,
+
+                  gclid:
+                    YNTELIGENCIA_ATTRIBUTION.gclid,
+
+                  gbraid:
+                    YNTELIGENCIA_ATTRIBUTION.gbraid,
+
+                  wbraid:
+                    YNTELIGENCIA_ATTRIBUTION.wbraid,
+
+                  utm_source:
+                    YNTELIGENCIA_ATTRIBUTION.utm_source,
+
+                  utm_medium:
+                    YNTELIGENCIA_ATTRIBUTION.utm_medium,
+
+                  utm_campaign:
+                    YNTELIGENCIA_ATTRIBUTION.utm_campaign,
+
+                  utm_content:
+                    YNTELIGENCIA_ATTRIBUTION.utm_content,
+
+                  utm_term:
+                    YNTELIGENCIA_ATTRIBUTION.utm_term,
+
+                  empreendimento:
+                    lead.property_name,
+
+                  mensagem:
+
+                    `NOVO LEAD YNTELIGENCIA | ` +
+
+                    `Código do imóvel: ${lead.property_id} | ` +
+
+                    `Imóvel: ${lead.property_name} | ` +
+
+                    `Bairro: ${lead.neighborhood} | ` +
+
+                    `Valor: ${lead.property_value} | ` +
+
+                    `MATCH: ${lead.match_score}% | ` +
+
+                    `Região buscada: ${profile.region||""} | ` +
+
+                    `Orçamento: ${Number(profile.budget)||0} | ` +
+
+                    `Dormitórios: ${profile.bedrooms ?? ""} | ` +
+
+                    `Momento de compra: ${profile.timing||""}`
+
+                })
+
+              }
+            );
+
+
+          if(
+            !praediumResponse.ok
+          ){
+
+            throw new Error(
+              "A API não confirmou o recebimento do lead."
+            );
+          }
+
+
+            /* =================================================
+               GOOGLE ADS - CONVERSÃO LEAD YNTELIGENCIA
+            ================================================= */
+
+            try{
+
+              gtag(
+                'event',
+                'conversion',
+                {
+                  'send_to':
+                    'AW-18371236623/1P2xCPmnzfccEI-mi7hE'
+                }
+              );
+
+            }catch(error){
+
+              console.warn(
+                "Não foi possível registrar a conversão no Google Ads:",
+                error
+              );
+            }
+
+
+          /* =================================================
+             GA4
+          ================================================= */
+
+          try{
+
+            gtag(
+              'event',
+              'lead_created',
+              {
+
+                property_id:
+                  lead.property_id,
+
+                property_name:
+                  lead.property_name,
+
+                neighborhood:
+                  lead.neighborhood,
+
+                property_value:
+                  lead.property_value,
+
+                match_score:
+                  lead.match_score,
+
+                region:
+                  profile.region||"",
+
+                budget:
+                  Number(
+                    profile.budget
+                  )||0,
+
+                inventory_source:
+                  p.source ||
+                  sourceMode ||
+                  "usados",
+
+                crm:
+                  "praedium",
+
+                debug_mode:true
+              }
+            );
+
+          }catch(error){
+
+            console.warn(
+              "Não foi possível registrar lead_created no GA4:",
+              error
+            );
+          }
+
+
+          /* =================================================
+             SUPABASE EVENTS
+          ================================================= */
+
+          supabaseTrack(
+            "lead_created",
+            {
+
+              lead:{
+
+                name:
+                  lead.name,
+
+                phone:
+                  lead.phone,
+
+                email:
+                  lead.email,
+
+                property_id:
+                  lead.property_id,
+
+                property_name:
+                  lead.property_name,
+
+                neighborhood:
+                  lead.neighborhood,
+
+                property_value:
+                  lead.property_value,
+
+                match_score:
+                  lead.match_score,
+
+                crm:
+                  "praedium"
+              },
+
+              profile:{
+                ...profile
+              }
+            }
+          );
+
+
+          /* =================================================
+             SUPABASE LEADS
+          ================================================= */
+
+          await supabaseCreateLead(
+            lead
+          );
+
+
+          /* =================================================
+             META PIXEL
+          ================================================= */
+
+          try{
+
+            if(
+              typeof fbq==="function"
+            ){
+
+              fbq(
+                'track',
+                'Lead',
+                {
+
+                  content_name:
+                    lead.property_name ||
+                    "Ynteligencia",
+
+                  content_category:
+                    "Imóvel",
+
+                  value:
+                    lead.property_value ||
+                    0,
+
+                  currency:
+                    "BRL"
+                }
+              );
+            }
+
+          }catch(error){
+
+            console.warn(
+              "Não foi possível registrar Lead no Meta Pixel:",
+              error
+            );
+          }
+
+
+          /* =================================================
+             LOCAL STORAGE
+          ================================================= */
+
+          try{
+
+            const leads=
+              JSON.parse(
+                localStorage.getItem(
+                  "ynteligencia_leads"
+                ) ||
+                "[]"
+              );
+
+
+            leads.push({
+
+              ...lead,
+
+              crm:
+                "praedium",
+
+              crm_sent:
+                true
+            });
+
+
+            localStorage.setItem(
+
+              "ynteligencia_leads",
+
+              JSON.stringify(
+                leads.slice(-100)
+              )
+            );
+
+          }catch{}
+
+
+          document
+            .getElementById(
+              "leadModal"
+            )
+            ?.remove();
+
+
+          showToast(
+            "Interesse enviado com sucesso para o atendimento da Yincorp."
+          );
+
+
+        }catch(error){
+
+
+          console.error(
+            "Erro ao enviar lead para o Praedium:",
+            error
+          );
+
+
+          try{
+
+            const leads=
+              JSON.parse(
+                localStorage.getItem(
+                  "ynteligencia_leads"
+                ) ||
+                "[]"
+              );
+
+
+            leads.push({
+
+              ...lead,
+
+              crm:
+                "praedium",
+
+              crm_sent:
+                false
+            });
+
+
+            localStorage.setItem(
+
+              "ynteligencia_leads",
+
+              JSON.stringify(
+                leads.slice(-100)
+              )
+            );
+
+          }catch{}
+
+
+          showToast(
+            "Não foi possível enviar agora. Tente novamente em instantes."
+          );
+
+
+          submitButton.disabled=
+            false;
+
+
+          submitButton.textContent=
+            "Quero falar sobre este imóvel";
+        }
+      }
+    );
 }
 
 
@@ -4054,99 +5427,74 @@ function showToast(message){
    INVENTÁRIO
 ========================================================= */
 
-let inventoryReady=false;
-function setInventory(text) {
-  const rows=parseCSV(text);
-  const neighborhoods=new Map();
-  const parsed=deduplicate(rows.map(mapProperty)).map(p=>{
-    const key=norm(p.neighborhood);
-    if(!neighborhoods.has(key)) neighborhoods.set(key,p.neighborhood);
-    p.neighborhood=neighborhoods.get(key);
-    p.searchText=norm([p.id,p.name,p.neighborhood,p.address,p.unit,p.description].join(' '));
-    return p;
-  });
-  properties=parsed; inventoryReady=true; fillCatalogNeighborhoods();
-  $('inventoryState').textContent=properties.length+' imóveis carregados. Fotos dependem do photos.json ou dos links do CSV.';
-  if($('catalog').classList.contains('visible')) renderCatalog();
-}
-async function loadInventory() {
-  try {
-    const response=await fetch(CSV_FILE,{cache:'no-cache'});
-    if(!response.ok) throw new Error('CSV ausente');
-    setInventory(await response.text());
-  } catch(error) {
-    $('inventoryState').textContent='Base não carregada. Selecione o CSV original abaixo. '+error.message;
-  }
-}
-function setupDialog(modal, name) {
-  const opener=document.activeElement;
-  modal.setAttribute('role','dialog'); modal.setAttribute('aria-modal','true'); modal.setAttribute('aria-label',name);
-  const background=[...document.body.children].filter(el=>el!==modal && el.tagName!=='SCRIPT').map(el=>[el,el.inert]);
-  background.forEach(([el])=>el.inert=true);
-  const originalOverflow=document.body.style.overflow; document.body.style.overflow='hidden';
-  modal.close=()=>{ modal.remove(); background.forEach(([el,value])=>el.inert=value); document.body.style.overflow=originalOverflow; opener?.focus(); };
-  modal.addEventListener('click',e=>{ if(e.target===modal || e.target.closest('[data-action="close-modal"]')) modal.close(); });
-  modal.addEventListener('keydown',e=>{
-    if(e.key==='Escape') { e.preventDefault(); modal.close(); return; }
-    if(e.key!=='Tab') return;
-    const items=[...modal.querySelectorAll('button,input,[tabindex="0"]')].filter(x=>!x.disabled);
-    const first=items[0], last=items[items.length-1];
-    if(e.shiftKey && document.activeElement===first) {e.preventDefault();last?.focus();}
-    else if(!e.shiftKey && document.activeElement===last) {e.preventDefault();first?.focus();}
-  });
-  (modal.querySelector('input') || modal.querySelector('button'))?.focus();
-}
-document.addEventListener('click',e=>{
-  const b=e.target.closest('[data-action]'); if(!b) return;
-  if(b.dataset.action==='photos') showPhotoModal(b.dataset.id);
-  if(b.dataset.action==='interest') {
-    const p=properties.find(p=>String(p.id)===b.dataset.id); if(p) interest(p.id,p.name);
-  }
-  if(b.dataset.action==='missing-photos') showToast('Fotos em atualização. Você pode consultar a disponibilidade.');
-});
-document.addEventListener('error',e=>{
-  if(e.target.tagName==='IMG') {
-    const fallback=document.createElement('div'); fallback.className='photo-slide photo-fallback'; fallback.textContent='Foto indisponível';
-    e.target.replaceWith(fallback);
-  }
-},true);
-let catalogTimer;
-function scheduleCatalog(){clearTimeout(catalogTimer);catalogTimer=setTimeout(()=>renderCatalog(),220);}
-$('loadMore').addEventListener('click',()=>{catalogLimit+=12;renderCatalog(true);});
-$('catalogSort').addEventListener('change',()=>renderCatalog());
-$('csvInput').addEventListener('change',async e=>{
-  const file=e.target.files[0]; if(!file)return;
-  try { if(file.size>15000000)throw new Error('CSV acima de 15 MB.'); setInventory(await file.text()); }
-  catch(error){$('inventoryState').textContent=error.message;}
-});
-$('photosInput').addEventListener('change',async e=>{
-  const file=e.target.files[0];if(!file)return;
-  try {
-    if(file.size>15000000)throw new Error('JSON acima de 15 MB.');
-    const data=JSON.parse(await file.text());
-    if(!data || typeof data!=='object' || Array.isArray(data))throw new Error('Formato de photos.json inválido.');
-    photoManifest=data;
-    if($('catalog').classList.contains('visible'))renderCatalog();
-    if($('results').classList.contains('visible'))showMatches();
-    $('inventoryState').textContent='Mapa de fotos carregado. '+properties.length+' imóveis disponíveis.';
-  } catch(error){$('inventoryState').textContent=error.message;}
-});
-document.querySelectorAll('input.field,select.field').forEach(el=>{
-  if(el.id && !document.querySelector('label[for="'+el.id+'"]')) {
-    const label=document.createElement('label');label.htmlFor=el.id;label.className='sr-only';
-    label.textContent=el.placeholder || el.options?.[0]?.textContent || 'Filtro';el.before(label);
-  }
-});
-document.querySelectorAll('.option').forEach(button=>{
-  button.setAttribute('aria-pressed','false');
-  button.addEventListener('click',()=>document.querySelectorAll('.option').forEach(b=>b.setAttribute('aria-pressed',String(b.classList.contains('selected')))));
-});
-$('toast').setAttribute('role','status');$('catalogStatus').setAttribute('aria-live','polite');
-setStep(0,false);
-Promise.all([loadPhotoManifest(),loadInventory()]).then(()=>{
-  if(inventoryReady && $('catalog').classList.contains('visible'))renderCatalog();
-});
+async function loadInventory(){
 
+  try{
+
+    const response=
+      await fetch(
+        CSV_FILE,
+        {
+          cache:"no-store"
+        }
+      );
+
+
+    if(!response.ok){
+
+      throw new Error(
+        "CSV não encontrado"
+      );
+    }
+
+
+    const text=
+      await response.text();
+
+
+    properties=
+      deduplicate(
+        parseCSV(text)
+          .map(
+            mapProperty
+          )
+      );
+
+
+    fillCatalogNeighborhoods();
+
+
+  }catch(error){
+
+    properties=[];
+
+
+    showToast(
+      "Estamos atualizando o estoque de imóveis. A busca continua disponível."
+    );
+  }
+}
+
+
+/* =========================================================
+   START
+========================================================= */
+
+setStep(0);
+
+
+Promise.all([
+  loadPhotoManifest(),
+  loadInventory()
+])
+.then(
+  ()=>{
+
+    console.log(
+      `Ynteligencia pronta: ${properties.length} imóveis · ${Object.keys(photoManifest).length} registros de fotos`
+    );
+  }
+);
 
 </script>
 
