@@ -433,6 +433,10 @@ form.addEventListener("submit",async function(e){
   const data=await response.json().catch(()=>({}));
   if(!response.ok||data.success===false)throw new Error(data.error||"Erro ao enviar o lead");
 
+  if(typeof window.gtag==="function"){
+   window.gtag("event","conversion",{"send_to":"AW-18371236623/Icu-CMS18_ccEI-mi7hE"});
+  }
+
   gaEvent("generate_lead",{form_name:"welconx_pinheiros_lead",lead_source:PROJECT.source,property:PROJECT.name,property_type:PROJECT.type,value:PROJECT.price,currency:"BRL"});
   if(typeof window.fbq==="function")window.fbq("track","Lead",{content_name:PROJECT.name,content_category:PROJECT.category,value:PROJECT.price,currency:"BRL"});
 
