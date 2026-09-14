@@ -16,12 +16,33 @@ module.exports = async function handler(req, res) {
       profile,
       property,
       source,
+
       nome,
       telefone,
       perfil,
       origem,
+
+      pagina,
+
+      gclid,
+      gbraid,
+      wbraid,
+
+      utm_source,
+      utm_medium,
+      utm_campaign,
+      utm_content,
+      utm_term,
+
       utms
     } = req.body || {};
+
+
+    /*
+     * ============================
+     * DADOS DO LEAD
+     * ============================
+     */
 
     const leadName =
       (name || nome || '').trim();
@@ -45,11 +66,65 @@ module.exports = async function handler(req, res) {
       'site';
 
 
+    /*
+     * ============================
+     * ATRIBUIÇÃO / TRACKING
+     * ============================
+     */
+
+    const tracking = {
+
+      gclid:
+        gclid || '',
+
+      gbraid:
+        gbraid || '',
+
+      wbraid:
+        wbraid || '',
+
+      utm_source:
+        utm_source ||
+        utms?.utm_source ||
+        '',
+
+      utm_medium:
+        utm_medium ||
+        utms?.utm_medium ||
+        '',
+
+      utm_campaign:
+        utm_campaign ||
+        utms?.utm_campaign ||
+        '',
+
+      utm_content:
+        utm_content ||
+        utms?.utm_content ||
+        '',
+
+      utm_term:
+        utm_term ||
+        utms?.utm_term ||
+        '',
+
+      pagina:
+        pagina || ''
+
+    };
+
+
     if (!leadName || !leadPhone) {
+
       return res.status(400).json({
+
         success: false,
-        error: 'Nome e telefone são obrigatórios'
+
+        error:
+          'Nome e telefone são obrigatórios'
+
       });
+
     }
 
 
@@ -69,6 +144,46 @@ module.exports = async function handler(req, res) {
 
       try {
 
+        const praediumPayload = {
+
+          Nome:
+            leadName,
+
+          WhatsApp:
+            leadPhone,
+
+          utm_source:
+            tracking.utm_source ||
+            leadSource,
+
+          utm_medium:
+            tracking.utm_medium,
+
+          utm_campaign:
+            tracking.utm_campaign,
+
+          utm_content:
+            tracking.utm_content ||
+            leadSource,
+
+          utm_term:
+            tracking.utm_term,
+
+          gclid:
+            tracking.gclid,
+
+          gbraid:
+            tracking.gbraid,
+
+          wbraid:
+            tracking.wbraid,
+
+          pagina:
+            tracking.pagina
+
+        };
+
+
         const praediumResponse =
           await fetch(
             praediumUrl,
@@ -76,18 +191,14 @@ module.exports = async function handler(req, res) {
               method: 'POST',
 
               headers: {
-                'Content-Type': 'application/json'
+                'Content-Type':
+                  'application/json'
               },
 
-              body: JSON.stringify({
-
-                Nome: leadName,
-
-                WhatsApp: leadPhone,
-
-                utm_content: leadSource
-
-              })
+              body:
+                JSON.stringify(
+                  praediumPayload
+                )
             }
           );
 
@@ -110,7 +221,13 @@ module.exports = async function handler(req, res) {
           praediumSuccess = true;
 
           console.log(
-            'Lead enviado para o Praedium com sucesso.'
+            'Lead enviado para o Praedium com sucesso.',
+            {
+              origem: leadSource,
+              gclid: tracking.gclid
+                ? 'capturado'
+                : 'não informado'
+            }
           );
 
         }
@@ -212,11 +329,23 @@ module.exports = async function handler(req, res) {
                   leadSource,
 
                 utm_source:
-                  utms?.utm_source ||
+                  tracking.utm_source ||
                   'direto',
 
+                utm_medium:
+                  tracking.utm_medium ||
+                  'none',
+
                 utm_campaign:
-                  utms?.utm_campaign ||
+                  tracking.utm_campaign ||
+                  'none',
+
+                utm_content:
+                  tracking.utm_content ||
+                  'none',
+
+                utm_term:
+                  tracking.utm_term ||
                   'none'
 
               }
@@ -235,7 +364,8 @@ module.exports = async function handler(req, res) {
 
             {
 
-              method: 'POST',
+              method:
+                'POST',
 
               headers: {
 
@@ -301,6 +431,19 @@ module.exports = async function handler(req, res) {
 
       message:
         'Lead processado com sucesso.',
+
+      tracking: {
+
+        gclid:
+          !!tracking.gclid,
+
+        gbraid:
+          !!tracking.gbraid,
+
+        wbraid:
+          !!tracking.wbraid
+
+      },
 
       integrations: {
 
