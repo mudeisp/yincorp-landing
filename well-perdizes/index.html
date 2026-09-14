@@ -46,6 +46,7 @@
 
     gtag('js', new Date());
     gtag('config', 'G-Y2W11SX5VV');
+    gtag('config', 'AW-18371236623');
   </script>
 
   <!-- Meta Pixel -->
@@ -2432,6 +2433,17 @@
             throw new Error('Erro ao enviar formulário.');
           }
 
+
+          /* GOOGLE ADS - CONVERSÃO LEADS LPS YINCORP */
+          if (typeof window.gtag === 'function') {
+            window.gtag(
+              'event',
+              'conversion',
+              {
+                'send_to': 'AW-18371236623/Icu-CMS18_ccEI-mi7hE'
+              }
+            );
+          }
 
           document.getElementById('success').style.display = 'block';
 
