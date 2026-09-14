@@ -90,6 +90,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-Y2W11SX5VV');
+    gtag('config', 'AW-18371236623');
   </script>
 
   <!-- Meta Pixel -->
@@ -2171,6 +2172,59 @@
 
 
     /* ============================
+       ATRIBUIÇÃO GOOGLE / UTMs
+    ============================ */
+
+    function getYincorpTrackingData() {
+
+      const params =
+        new URLSearchParams(window.location.search);
+
+      const keys = [
+        'gclid',
+        'gbraid',
+        'wbraid',
+        'utm_source',
+        'utm_medium',
+        'utm_campaign',
+        'utm_content',
+        'utm_term'
+      ];
+
+      const tracking = {};
+
+      keys.forEach(function(key) {
+
+        const incoming = params.get(key);
+
+        if (incoming) {
+
+          localStorage.setItem(
+            'yincorp_' + key,
+            incoming
+          );
+
+        }
+
+        tracking[key] =
+          incoming ||
+          localStorage.getItem(
+            'yincorp_' + key
+          ) ||
+          '';
+
+      });
+
+      return tracking;
+
+    }
+
+
+    const YINCORP_TRACKING =
+      getYincorpTrackingData();
+
+
+    /* ============================
        FORM
     ============================ */
 
@@ -2233,6 +2287,24 @@
         price: 'R$ 499.000',
 
         page: window.location.href,
+
+        landing_page: window.location.href,
+
+        gclid: YINCORP_TRACKING.gclid,
+
+        gbraid: YINCORP_TRACKING.gbraid,
+
+        wbraid: YINCORP_TRACKING.wbraid,
+
+        utm_source: YINCORP_TRACKING.utm_source,
+
+        utm_medium: YINCORP_TRACKING.utm_medium,
+
+        utm_campaign: YINCORP_TRACKING.utm_campaign,
+
+        utm_content: YINCORP_TRACKING.utm_content,
+
+        utm_term: YINCORP_TRACKING.utm_term,
 
         createdAt: new Date().toISOString()
 
