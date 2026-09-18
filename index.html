@@ -267,6 +267,24 @@
       margin-top:4px;
     }
 
+
+    /* Prova social */
+    .social-proof{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .proof-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:end;margin-bottom:42px}
+    .proof-rating{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .proof-stars{color:var(--champagne-dark);letter-spacing:3px;font-size:18px}
+    .proof-google{color:var(--muted);font-size:12px;font-weight:600;letter-spacing:.4px}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .review-card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:var(--champagne-soft);min-height:285px;display:flex;flex-direction:column}
+    .review-stars{color:var(--champagne-dark);letter-spacing:2px;font-size:14px;margin-bottom:22px}
+    .review-card blockquote{font-family:"Playfair Display",Georgia,serif;font-size:20px;line-height:1.48;color:var(--black);margin:0 0 28px}
+    .review-person{margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}
+    .review-person strong{display:block;font-size:12px;letter-spacing:.4px;color:var(--black)}
+    .review-person span{display:block;margin-top:4px;color:var(--muted);font-size:10px;letter-spacing:1.2px;text-transform:uppercase}
+    .proof-actions{margin-top:30px}
+    .proof-link{display:inline-flex;align-items:center;gap:8px;color:var(--black);font-size:11px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;padding-bottom:5px;border-bottom:1px solid var(--champagne-dark)}
+    .proof-link:hover{color:var(--champagne-dark)}
+
     .regions-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -427,6 +445,8 @@
       }
       .hero-badge{width:125px;right:18px;bottom:20px}
       .authority-grid{grid-template-columns:1fr;gap:55px}
+      .proof-head{grid-template-columns:1fr;gap:18px}
+      .reviews-grid{grid-template-columns:1fr}
       .regions-grid,.radar-list{grid-template-columns:1fr}
       .cta-inner{flex-direction:column;align-items:flex-start}
       .footer-grid{flex-direction:column}
@@ -516,8 +536,8 @@
             em regiões estratégicas da Zona Oeste de São Paulo.
           </p>
           <div class="actions">
-            <a class="btn btn-primary" href="/zona-oeste" data-track="hero_zona_oeste">
-              CONHECER AS OPORTUNIDADES
+            <a class="btn btn-primary" href="https://app.yincorp.com.br" data-track="hero_tecnologia">
+              CONHEÇA NOSSA TECNOLOGIA →
             </a>
             <a class="btn btn-outline" href="#rafael" data-track="hero_sobre">
               CONHECER RAFAEL
@@ -555,6 +575,49 @@
             Rafael
             <small>Posicionado na Zona Oeste Nobre</small>
           </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="social-proof" id="avaliacoes">
+      <div class="container">
+        <div class="proof-head">
+          <div>
+            <div class="section-kicker">Experiência</div>
+            <h2 class="section-title">Tecnologia nova.<br>Experiência construída há anos.</h2>
+          </div>
+          <div>
+            <p class="section-intro">O Ynteligencia traz uma nova forma de encontrar imóveis. O atendimento por trás da tecnologia, não.</p>
+            <div class="proof-rating" aria-label="Avaliações de clientes no Google">
+              <span class="proof-stars" aria-hidden="true">★★★★★</span>
+              <span class="proof-google">Avaliações reais de clientes no Google</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-stars" aria-hidden="true">★★★★★</div>
+            <blockquote>“Excelente profissional. Facilitou todo o processo de compra do imóvel, tirou todas as dúvidas que surgiram durante o processo e sempre pró-ativamente resolvia todos os problemas. Recomendo.”</blockquote>
+            <div class="review-person"><strong>Felipe Gabriel</strong><span>Avaliação no Google · 5 anos atrás</span></div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars" aria-hidden="true">★★★★★</div>
+            <blockquote>“Nos ajudou desde o início das tratativas, atencioso e responsivo, profissional e sempre nos avisando das atualizações de cada procedimento. Nos acompanhou desde a pré-venda até o pós-venda.”</blockquote>
+            <div class="review-person"><strong>Eduardo Vidoti</strong><span>Avaliação no Google · 5 anos atrás</span></div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars" aria-hidden="true">★★★★★</div>
+            <blockquote>“Há 3 anos navegava na internet em busca de um empreendimento que fosse acessível em meu bolso e de repente me deparei com o Rafael Lustosa, que me indicou um lugar.”</blockquote>
+            <div class="review-person"><strong>Vivian Carvalho</strong><span>Avaliação no Google · 6 anos atrás</span></div>
+          </article>
+        </div>
+
+        <div class="proof-actions">
+          <a class="proof-link" href="https://maps.app.goo.gl/FSjuDNNNEuAiNosg9" target="_blank" rel="noopener" data-track="google_reviews">VER AVALIAÇÕES NO GOOGLE →</a>
         </div>
       </div>
     </section>
