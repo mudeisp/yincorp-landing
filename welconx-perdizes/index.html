@@ -2225,6 +2225,102 @@
 
 
     /* ============================
+       REPASSE DE TRACKING ENTRE PÁGINAS YINCORP
+    ============================ */
+
+    const YINCORP_TRACKING_KEYS = [
+      'gclid',
+      'gbraid',
+      'wbraid',
+      'utm_source',
+      'utm_medium',
+      'utm_campaign',
+      'utm_content',
+      'utm_term'
+    ];
+
+
+    function appendTrackingToUrl(rawUrl) {
+
+      try {
+
+        const url =
+          new URL(
+            rawUrl,
+            window.location.origin
+          );
+
+
+        const isYincorpDestination =
+          url.hostname === 'www.yincorp.com.br' ||
+          url.hostname === 'yincorp.com.br' ||
+          url.hostname === 'app.yincorp.com.br';
+
+
+        if (!isYincorpDestination) {
+          return rawUrl;
+        }
+
+
+        YINCORP_TRACKING_KEYS.forEach(function(key) {
+
+          if (
+            YINCORP_TRACKING[key] &&
+            !url.searchParams.get(key)
+          ) {
+
+            url.searchParams.set(
+              key,
+              YINCORP_TRACKING[key]
+            );
+
+          }
+
+        });
+
+
+        return url.toString();
+
+      } catch (error) {
+
+        return rawUrl;
+
+      }
+
+    }
+
+
+    document
+      .querySelectorAll('a[href]')
+      .forEach(function(link) {
+
+        const href =
+          link.getAttribute('href');
+
+
+        if (
+          !href ||
+          href.startsWith('#') ||
+          href.startsWith('mailto:') ||
+          href.startsWith('tel:') ||
+          href.includes('wa.me') ||
+          href.includes('google.com/maps')
+        ) {
+
+          return;
+
+        }
+
+
+        link.setAttribute(
+          'href',
+          appendTrackingToUrl(href)
+        );
+
+      });
+
+
+    /* ============================
        FORM
     ============================ */
 
@@ -2274,17 +2370,27 @@
 
         source: 'welconx-perdizes',
 
+        origem: 'welconx-perdizes',
+
+        empreendimento: 'Welconx Perdizes',
+
         property: 'Welconx Perdizes',
 
         propertyName: 'Welconx Perdizes',
 
         propertyType: 'Apartamento',
 
+        property_value: 499000,
+
+        neighborhood: 'Perdizes',
+
         area: '40 m²',
 
         bedrooms: '2 dormitórios',
 
         price: 'R$ 499.000',
+
+        pagina: window.location.href,
 
         page: window.location.href,
 
@@ -2313,7 +2419,7 @@
 
       try {
 
-        const response = await fetch('/api/lead', {
+        const response = await fetch('https://app.yincorp.com.br/api/lead', {
 
           method: 'POST',
 
@@ -2326,9 +2432,49 @@
         });
 
 
-        if (!response.ok) {
+        const data =
+          await response
+            .json()
+            .catch(
+              () => ({})
+            );
 
-          throw new Error('Erro ao enviar');
+
+        if (
+          !response.ok ||
+          data.success !== true ||
+          (
+            data.praedium !== true &&
+            data.supabase !== true
+          )
+        ) {
+
+          throw new Error(
+            data.error ||
+            'A API não confirmou o armazenamento do lead'
+          );
+
+        }
+
+
+        console.log(
+          'LEAD_WELCONX_PERDIZES_OK',
+          data
+        );
+
+
+        /* GOOGLE ADS - CONVERSÃO LEADS LPS YINCORP */
+
+        if (typeof gtag === 'function') {
+
+          gtag(
+            'event',
+            'conversion',
+            {
+              'send_to':
+                'AW-18371236623/Icu-CMS18_ccEI-mi7hE'
+            }
+          );
 
         }
 
