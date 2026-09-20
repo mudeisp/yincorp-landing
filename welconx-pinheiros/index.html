@@ -295,15 +295,79 @@ function getTrackingData(){
  const params=new URLSearchParams(window.location.search);
  const keys=["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid","gclid","gbraid","wbraid"];
  const current={};
- keys.forEach(k=>{const v=params.get(k);if(v)current[k]=v});
+
+ keys.forEach(function(k){
+   const incoming=params.get(k);
+
+   if(incoming){
+     localStorage.setItem("yincorp_"+k,incoming);
+     current[k]=incoming;
+     return;
+   }
+
+   current[k]=localStorage.getItem("yincorp_"+k)||"";
+ });
+
+ /* Compatibilidade com a estrutura antiga */
  try{
    const existing=JSON.parse(localStorage.getItem("yincorp_tracking")||"{}");
    const merged={...existing,...current};
+
+   keys.forEach(function(k){
+     if(merged[k]){
+       localStorage.setItem("yincorp_"+k,merged[k]);
+     }
+   });
+
    localStorage.setItem("yincorp_tracking",JSON.stringify(merged));
    return merged;
- }catch(e){return current}
+ }catch(e){
+   return current;
+ }
 }
 const tracking=getTrackingData();
+
+
+/* REPASSA TRACKING PARA OUTRAS PÁGINAS YINCORP */
+function appendTrackingToUrl(rawUrl){
+ try{
+   const url=new URL(rawUrl,window.location.origin);
+
+   const isYincorp=
+     url.hostname==="www.yincorp.com.br" ||
+     url.hostname==="yincorp.com.br" ||
+     url.hostname==="app.yincorp.com.br";
+
+   if(!isYincorp)return rawUrl;
+
+   ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","gbraid","wbraid"].forEach(function(k){
+     if(tracking[k]&&!url.searchParams.get(k)){
+       url.searchParams.set(k,tracking[k]);
+     }
+   });
+
+   return url.toString();
+ }catch(e){
+   return rawUrl;
+ }
+}
+
+document.querySelectorAll("a[href]").forEach(function(link){
+ const href=link.getAttribute("href");
+
+ if(
+   !href ||
+   href.startsWith("#") ||
+   href.startsWith("mailto:") ||
+   href.startsWith("tel:") ||
+   href.includes("wa.me") ||
+   href.includes("google.com/maps")
+ ){
+   return;
+ }
+
+ link.setAttribute("href",appendTrackingToUrl(href));
+});
 
 function gaEvent(name,params){
  if(typeof window.gtag==="function")window.gtag("event",name,{...params,project_name:PROJECT.name,page_location:window.location.href});
@@ -398,11 +462,15 @@ form.addEventListener("submit",async function(e){
   perfil:interesse,
   origem:PROJECT.source,
   source:PROJECT.source,
+  empreendimento:PROJECT.name,
   property:PROJECT.name,
   propertyName:PROJECT.name,
   propertyType:PROJECT.type,
+  property_value:PROJECT.price,
+  neighborhood:"Pinheiros",
   price:String(PROJECT.price),
   category:PROJECT.condition,
+  pagina:window.location.href,
   page:window.location.href,
   landing_page:window.location.href,
   product_slug:PROJECT.slug,
@@ -429,9 +497,32 @@ form.addEventListener("submit",async function(e){
  success.style.display="none";errorMessage.style.display="none";
 
  try{
-  const response=await fetch("/api/lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+  const response=await fetch(
+    "https://app.yincorp.com.br/api/lead",
+    {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(payload)
+    }
+  );
+
   const data=await response.json().catch(()=>({}));
-  if(!response.ok||data.success===false)throw new Error(data.error||"Erro ao enviar o lead");
+
+  if(
+    !response.ok ||
+    data.success!==true ||
+    (
+      data.praedium!==true &&
+      data.supabase!==true
+    )
+  ){
+    throw new Error(
+      data.error ||
+      "A API não confirmou o armazenamento do lead"
+    );
+  }
+
+  console.log("LEAD_WELCONX_PINHEIROS_OK",data);
 
   if(typeof window.gtag==="function"){
    window.gtag("event","conversion",{"send_to":"AW-18371236623/Icu-CMS18_ccEI-mi7hE"});
