@@ -325,16 +325,16 @@
   <style>
 
     :root{
-      --black:#080808;
-      --dark:#111111;
-      --dark-2:#181818;
-      --white:#ffffff;
-      --off:#f5f4f1;
-      --gold:#c7a66a;
-      --gold-light:#e0c58e;
-      --text:#242424;
-      --muted:#777;
-      --border:#e5e2dc;
+      --black:#171717;
+      --dark:#202020;
+      --dark-2:#292929;
+      --white:#f7f4ed;
+      --off:#eee8de;
+      --gold:#b79a66;
+      --gold-light:#d8c49a;
+      --text:#2a2926;
+      --muted:#7d786f;
+      --border:#d8d0c3;
       --green:#25D366;
       --max:1180px;
     }
@@ -352,7 +352,7 @@
     body{
       font-family:'DM Sans',sans-serif;
       color:var(--text);
-      background:#fff;
+      background:var(--off);
       line-height:1.6;
     }
 
@@ -420,7 +420,7 @@
     }
 
     .btn-dark{
-      background:#111;
+      background:var(--black);
       color:#fff;
     }
 
@@ -552,7 +552,7 @@
     /* OFFER */
 
     .offer{
-      background:#111;
+      background:var(--black);
       color:#fff;
     }
 
@@ -669,7 +669,7 @@
     /* VIDEO */
 
     .video-section{
-      background:#0d0d0d;
+      background:var(--black);
       color:#fff;
     }
 
@@ -743,7 +743,7 @@
     }
 
     .price-card{
-      background:#fff;
+      background:var(--white);
       padding:45px;
       border:1px solid var(--border);
       box-shadow:0 15px 40px rgba(0,0,0,.06);
@@ -798,7 +798,7 @@
     /* LOCATION */
 
     .location{
-      background:#111;
+      background:var(--black);
       color:#fff;
     }
 
@@ -863,7 +863,7 @@
     }
 
     .amenity{
-      background:#fff;
+      background:var(--white);
       padding:25px;
       border:1px solid var(--border);
       font-weight:700;
@@ -872,7 +872,7 @@
     /* ANALYSIS */
 
     .analysis{
-      background:#111;
+      background:var(--black);
       color:#fff;
     }
 
@@ -969,7 +969,7 @@
     }
 
     .form{
-      background:#fff;
+      background:var(--white);
       padding:40px;
       border:1px solid var(--border);
     }
@@ -992,7 +992,7 @@
       border:1px solid #ddd;
       padding:0 14px;
       font-family:inherit;
-      background:#fff;
+      background:var(--white);
     }
 
     .field input:focus,
@@ -1017,7 +1017,7 @@
     /* FOOTER */
 
     footer{
-      background:#080808;
+      background:var(--black);
       color:#aaa;
       padding:45px 0;
       font-size:13px;
@@ -1036,6 +1036,47 @@
       letter-spacing:2px;
     }
 
+    /* FILTRO FLUTUANTE DO APP */
+
+    .app-filter-float{
+      position:fixed;
+      right:20px;
+      bottom:86px;
+      z-index:99;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      min-height:48px;
+      padding:0 18px;
+      border-radius:999px;
+      background:var(--gold-light);
+      color:#1c1b18;
+      border:1px solid rgba(183,154,102,.55);
+      box-shadow:0 10px 30px rgba(0,0,0,.22);
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.35px;
+      text-transform:uppercase;
+      transition:.2s;
+    }
+
+    .app-filter-float:hover{
+      transform:translateY(-2px);
+      box-shadow:0 14px 34px rgba(0,0,0,.28);
+    }
+
+    .app-filter-float .filter-icon{
+      width:18px;
+      height:18px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:15px;
+      line-height:1;
+    }
+
+
     /* WHATSAPP */
 
     .whatsapp{
@@ -1043,8 +1084,8 @@
       right:20px;
       bottom:20px;
       z-index:100;
-      background:var(--green);
-      color:#fff;
+      background:var(--gold-light);
+      color:#1c1b18;
       padding:15px 20px;
       border-radius:40px;
       font-size:12px;
@@ -1072,8 +1113,8 @@
 
     .wa-modal-card{
       width:min(100%,430px);
-      background:#fff;
-      color:#222;
+      background:var(--white);
+      color:var(--text);
       border-radius:16px;
       padding:26px;
       box-shadow:0 28px 80px rgba(0,0,0,.35);
@@ -1135,8 +1176,8 @@
       padding:0 13px;
       font-family:inherit;
       font-size:15px;
-      background:#fff;
-      color:#222;
+      background:var(--white);
+      color:var(--text);
       outline:none;
     }
 
@@ -1150,7 +1191,7 @@
       min-height:52px;
       border:0;
       border-radius:8px;
-      background:var(--green);
+      background:var(--gold-light);
       color:#07160d;
       font-family:inherit;
       font-weight:900;
@@ -1308,6 +1349,14 @@
 
       .form{
         padding:25px;
+      }
+
+      .app-filter-float{
+        left:14px;
+        right:14px;
+        bottom:76px;
+        min-height:48px;
+        width:auto;
       }
 
       .whatsapp{
@@ -2453,6 +2502,21 @@
 </footer>
 
 
+<!-- FILTRO FLUTUANTE DO APP -->
+
+<a
+  class="app-filter-float"
+  id="appFilterButton"
+  href="https://app.yincorp.com.br/"
+  target="_blank"
+  rel="noopener"
+  aria-label="Abrir filtros de imóveis no app Ynteligencia"
+>
+  <span class="filter-icon">☰</span>
+  FILTRAR IMÓVEIS
+</a>
+
+
 <!-- WHATSAPP -->
 
 <a
@@ -2717,6 +2781,37 @@
       );
 
     });
+
+
+  /* BOTÃO FLUTUANTE DO APP */
+
+  const appFilterButton =
+    document.getElementById('appFilterButton');
+
+  if(appFilterButton){
+
+    appFilterButton.addEventListener(
+      'click',
+      function(){
+
+        trackGA(
+          'app_filter_click',
+          {
+            source:'villa-pompeia'
+          }
+        );
+
+        trackMeta(
+          'App_Filter_Click',
+          {
+            source:'villa-pompeia'
+          }
+        );
+
+      }
+    );
+
+  }
 
 
   /* GA4 */
