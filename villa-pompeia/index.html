@@ -2381,6 +2381,100 @@
   const YINCORP_TRACKING = getYincorpTrackingData();
 
 
+  /* REPASSA TRACKING PARA OUTRAS PÁGINAS YINCORP */
+
+  const YINCORP_TRACKING_KEYS = [
+    'gclid',
+    'gbraid',
+    'wbraid',
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+    'utm_content',
+    'utm_term'
+  ];
+
+
+  function appendTrackingToUrl(rawUrl){
+
+    try{
+
+      const url =
+        new URL(
+          rawUrl,
+          window.location.origin
+        );
+
+
+      const isYincorpDestination =
+        url.hostname === 'www.yincorp.com.br' ||
+        url.hostname === 'yincorp.com.br' ||
+        url.hostname === 'app.yincorp.com.br';
+
+
+      if(!isYincorpDestination){
+        return rawUrl;
+      }
+
+
+      YINCORP_TRACKING_KEYS.forEach(function(key){
+
+        if(
+          YINCORP_TRACKING[key] &&
+          !url.searchParams.get(key)
+        ){
+
+          url.searchParams.set(
+            key,
+            YINCORP_TRACKING[key]
+          );
+
+        }
+
+      });
+
+
+      return url.toString();
+
+    }catch(error){
+
+      return rawUrl;
+
+    }
+
+  }
+
+
+  document
+    .querySelectorAll('a[href]')
+    .forEach(function(link){
+
+      const href =
+        link.getAttribute('href');
+
+
+      if(
+        !href ||
+        href.startsWith('#') ||
+        href.startsWith('mailto:') ||
+        href.startsWith('tel:') ||
+        href.includes('wa.me') ||
+        href.includes('google.com/maps')
+      ){
+
+        return;
+
+      }
+
+
+      link.setAttribute(
+        'href',
+        appendTrackingToUrl(href)
+      );
+
+    });
+
+
   /* GA4 */
 
   function trackGA(eventName, params = {}){
@@ -2541,100 +2635,175 @@
       }
 
 
-      /*
-        Endpoint opcional da API.
-        O código continua funcionando mesmo
-        que a API não esteja configurada.
-      */
-
       try{
 
         const response = await fetch(
-          '/api/lead',
+          'https://app.yincorp.com.br/api/lead',
           {
             method:'POST',
+
             headers:{
               'Content-Type':'application/json'
             },
+
             body:JSON.stringify({
-              name:name,
-              phone:phone,
-              profile:profile,
-              property:propertyName,
-              source:'villa-pompeia',
-              page:window.location.href,
+
+              nome:name,
+
+              telefone:phone,
+
+              perfil:profile,
+
+              origem:'villa-pompeia',
+
+              empreendimento:'Villa Pompeia Welconx',
+
+              property:'Villa Pompeia Welconx',
+
+              property_value:470000,
+
+              neighborhood:'Pompéia',
+
               pagina:window.location.href,
+
+              page:window.location.href,
+
               gclid:YINCORP_TRACKING.gclid,
+
               gbraid:YINCORP_TRACKING.gbraid,
+
               wbraid:YINCORP_TRACKING.wbraid,
+
               utm_source:YINCORP_TRACKING.utm_source,
+
               utm_medium:YINCORP_TRACKING.utm_medium,
+
               utm_campaign:YINCORP_TRACKING.utm_campaign,
+
               utm_content:YINCORP_TRACKING.utm_content,
+
               utm_term:YINCORP_TRACKING.utm_term
+
             })
           }
         );
 
 
-        if(!response.ok){
+        const data =
+          await response
+            .json()
+            .catch(
+              () => ({})
+            );
 
-          console.warn(
-            'API de lead retornou:',
-            response.status
+
+        if(
+          !response.ok ||
+          data.success !== true ||
+          (
+            data.praedium !== true &&
+            data.supabase !== true
+          )
+        ){
+
+          throw new Error(
+            data.error ||
+            'A API não confirmou o armazenamento do lead'
           );
-
-        }else{
-
-          /* GOOGLE ADS - CONVERSÃO LEADS LPS YINCORP */
-          if(typeof gtag === 'function'){
-
-            gtag('event', 'conversion', {
-              'send_to': 'AW-18371236623/Icu-CMS18_ccEI-mi7hE'
-            });
-
-          }
 
         }
 
+
+        console.log(
+          'LEAD_VILLA_POMPEIA_OK',
+          data
+        );
+
+
+        /* GOOGLE ADS - CONVERSÃO LEADS LPS YINCORP */
+
+        if(typeof gtag === 'function'){
+
+          gtag(
+            'event',
+            'conversion',
+            {
+              'send_to':
+                'AW-18371236623/Icu-CMS18_ccEI-mi7hE'
+            }
+          );
+
+        }
+
+
+        const message =
+          "Olá, meu nome é " +
+          name +
+          ". Meu WhatsApp é " +
+          phone +
+          ". Tenho interesse no " +
+          propertyName +
+          ". Procuro " +
+          profile.toLowerCase() +
+          ".";
+
+
+        document
+          .getElementById('success')
+          .style.display = 'block';
+
+
+        setTimeout(function(){
+
+          window.open(
+            "https://wa.me/" +
+            WA +
+            "?text=" +
+            encodeURIComponent(message),
+            "_blank"
+          );
+
+        },350);
+
+
       }catch(error){
 
-        console.warn(
-          'Não foi possível enviar para a API:',
+        console.error(
+          'Erro ao enviar lead Villa Pompeia:',
           error
         );
 
-      }
+
+        const success =
+          document.getElementById('success');
 
 
-      const message =
-        "Olá, meu nome é " +
-        name +
-        ". Meu WhatsApp é " +
-        phone +
-        ". Tenho interesse no " +
-        propertyName +
-        ". Procuro " +
-        profile.toLowerCase() +
-        ".";
+        if(success){
+
+          success.textContent =
+            'Não foi possível confirmar o envio agora. Você pode falar diretamente pelo WhatsApp.';
+
+          success.style.display =
+            'block';
+
+        }
 
 
-      document
-        .getElementById('success')
-        .style.display = 'block';
+        const fallbackMessage =
+          "Olá, vi o Villa Pompeia na Yincorp e quero receber as condições.";
 
-
-      setTimeout(function(){
 
         window.open(
           "https://wa.me/" +
           WA +
           "?text=" +
-          encodeURIComponent(message),
+          encodeURIComponent(
+            fallbackMessage
+          ),
           "_blank"
         );
 
-      },350);
+      }
 
     });
 
