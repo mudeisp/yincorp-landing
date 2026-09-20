@@ -2016,43 +2016,137 @@
 
   <script>
 
-
     /* =====================================================
-       CAPTURA DE UTMs
+       ATRIBUIÇÃO YINCORP
+       GCLID + GBRAID + WBRAID + UTMs
     ====================================================== */
 
-    function getUTMs(){
+    const TRACKING_KEYS = [
+      "gclid",
+      "gbraid",
+      "wbraid",
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_content",
+      "utm_term"
+    ];
+
+    function getTrackingData(){
 
       const params =
         new URLSearchParams(
           window.location.search
         );
 
-      return {
+      const tracking = {};
 
-        utm_source:
-          params.get("utm_source") ||
-          "",
+      TRACKING_KEYS.forEach(function(key){
 
-        utm_medium:
-          params.get("utm_medium") ||
-          "",
+        const incoming =
+          params.get(key);
 
-        utm_campaign:
-          params.get("utm_campaign") ||
-          "",
+        if(incoming){
 
-        utm_content:
-          params.get("utm_content") ||
-          "",
+          localStorage.setItem(
+            "yincorp_" + key,
+            incoming
+          );
 
-        utm_term:
-          params.get("utm_term") ||
-          ""
+        }
 
-      };
+        tracking[key] =
+          incoming ||
+          localStorage.getItem(
+            "yincorp_" + key
+          ) ||
+          "";
+
+      });
+
+      return tracking;
 
     }
+
+
+    const YINCORP_TRACKING =
+      getTrackingData();
+
+
+    /* =====================================================
+       REPASSA TRACKING PARA AS LPs
+    ====================================================== */
+
+    function appendTrackingToUrl(rawUrl){
+
+      try{
+
+        const url =
+          new URL(
+            rawUrl,
+            window.location.origin
+          );
+
+        const isYincorp =
+          url.hostname === "www.yincorp.com.br" ||
+          url.hostname === "yincorp.com.br" ||
+          url.hostname === "app.yincorp.com.br";
+
+        if(!isYincorp){
+          return rawUrl;
+        }
+
+        TRACKING_KEYS.forEach(function(key){
+
+          if(
+            YINCORP_TRACKING[key] &&
+            !url.searchParams.get(key)
+          ){
+
+            url.searchParams.set(
+              key,
+              YINCORP_TRACKING[key]
+            );
+
+          }
+
+        });
+
+        return url.toString();
+
+      }
+      catch(error){
+
+        return rawUrl;
+
+      }
+
+    }
+
+
+    document
+      .querySelectorAll("a[href]")
+      .forEach(function(link){
+
+        const href =
+          link.getAttribute("href");
+
+        if(
+          !href ||
+          href.startsWith("#") ||
+          href.startsWith("mailto:") ||
+          href.startsWith("tel:") ||
+          href.includes("wa.me")
+        ){
+          return;
+        }
+
+        link.setAttribute(
+          "href",
+          appendTrackingToUrl(href)
+        );
+
+      });
 
 
     /* =====================================================
@@ -2074,7 +2168,13 @@
               product,
 
             page_location:
-              window.location.href
+              window.location.href,
+
+            gclid_present:
+              !!YINCORP_TRACKING.gclid,
+
+            utm_source:
+              YINCORP_TRACKING.utm_source || ""
 
           }
         );
@@ -2237,10 +2337,6 @@
             .value;
 
 
-        const utms =
-          getUTMs();
-
-
         const payload = {
 
           nome:
@@ -2261,14 +2357,20 @@
           source:
             "zona-oeste",
 
+          empreendimento:
+            "Zona Oeste Nobre",
+
           property:
-            "Zona Oeste",
+            "Zona Oeste Nobre",
 
           propertyName:
-            "Zona Oeste",
+            "Zona Oeste Nobre",
 
           propertyType:
             "Relatório imobiliário",
+
+          pagina:
+            window.location.href,
 
           page:
             window.location.href,
@@ -2276,23 +2378,29 @@
           createdAt:
             new Date().toISOString(),
 
-          utms:
-            utms,
+          gclid:
+            YINCORP_TRACKING.gclid,
+
+          gbraid:
+            YINCORP_TRACKING.gbraid,
+
+          wbraid:
+            YINCORP_TRACKING.wbraid,
 
           utm_source:
-            utms.utm_source,
+            YINCORP_TRACKING.utm_source,
 
           utm_medium:
-            utms.utm_medium,
+            YINCORP_TRACKING.utm_medium,
 
           utm_campaign:
-            utms.utm_campaign,
+            YINCORP_TRACKING.utm_campaign,
 
           utm_content:
-            utms.utm_content,
+            YINCORP_TRACKING.utm_content,
 
           utm_term:
-            utms.utm_term
+            YINCORP_TRACKING.utm_term
 
         };
 
@@ -2315,12 +2423,12 @@
 
 
           /* ================================================
-             ENVIO PARA API
+             ENVIO PARA API CENTRAL
           ================================================= */
 
           const response =
             await fetch(
-              "/api/lead",
+              "https://app.yincorp.com.br/api/lead",
               {
 
                 method:
@@ -2350,29 +2458,44 @@
 
           if(
             !response.ok ||
-            data.success === false
+            data.success !== true ||
+            (
+              data.praedium !== true &&
+              data.supabase !== true
+            )
           ){
 
             throw new Error(
               data.error ||
-              "Erro ao enviar o lead"
+              "A API não confirmou o armazenamento do lead"
             );
 
           }
+
+
+          console.log(
+            "LEAD_ZONA_OESTE_OK",
+            data
+          );
 
 
           /* ================================================
              GOOGLE ADS - CONVERSÃO LEADS LPS YINCORP
           ================================================= */
 
-          if(typeof window.gtag === "function"){
+          if(
+            typeof window.gtag === "function"
+          ){
+
             window.gtag(
               "event",
               "conversion",
               {
-                "send_to":"AW-18371236623/Icu-CMS18_ccEI-mi7hE"
+                "send_to":
+                  "AW-18371236623/Icu-CMS18_ccEI-mi7hE"
               }
             );
+
           }
 
 
@@ -2396,7 +2519,10 @@
                   "zona-oeste",
 
                 property:
-                  "Zona Oeste"
+                  "Zona Oeste Nobre",
+
+                gclid_present:
+                  !!YINCORP_TRACKING.gclid
 
               }
             );
@@ -2418,7 +2544,7 @@
               {
 
                 content_name:
-                  "Zona Oeste",
+                  "Zona Oeste Nobre",
 
                 content_category:
                   "Relatório imobiliário"
@@ -2444,7 +2570,8 @@
             "SOLICITAÇÃO ENVIADA ✓";
 
 
-        } catch(error){
+        }
+        catch(error){
 
 
           console.error(
