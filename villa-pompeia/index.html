@@ -325,18 +325,25 @@
   <style>
 
     :root{
-      --black:#171717;
-      --dark:#202020;
-      --dark-2:#292929;
-      --white:#f7f4ed;
-      --off:#eee8de;
-      --gold:#b79a66;
-      --gold-light:#d8c49a;
-      --text:#2a2926;
-      --muted:#7d786f;
-      --border:#d8d0c3;
+      --dark:#0B0B0B;
+      --dark2:#171717;
+      --orange:#C6A76B;
+      --orange2:#E4D0A3;
+      --bg:#F7F4ED;
+      --text:#0B0B0B;
+      --muted:#77736B;
+      --line:rgba(11,11,11,.10);
+      --white:#FCFAF6;
       --green:#25D366;
       --max:1180px;
+
+      /* aliases da LP */
+      --black:var(--dark2);
+      --dark-2:#292929;
+      --off:var(--bg);
+      --gold:var(--orange);
+      --gold-light:var(--orange2);
+      --border:#DED8CD;
     }
 
     *{
@@ -350,10 +357,11 @@
     }
 
     body{
-      font-family:'DM Sans',sans-serif;
+      font-family:'DM Sans',-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
       color:var(--text);
-      background:var(--off);
+      background:var(--bg);
       line-height:1.6;
+      -webkit-font-smoothing:antialiased;
     }
 
     img{
@@ -410,12 +418,14 @@
     }
 
     .btn-primary{
-      background:var(--gold);
-      color:#111;
+      background:var(--orange2);
+      color:var(--dark);
+      border-radius:12px;
     }
 
     .btn-primary:hover{
-      background:var(--gold-light);
+      background:var(--orange);
+      color:var(--dark);
       transform:translateY(-2px);
     }
 
@@ -437,8 +447,12 @@
       left:0;
       width:100%;
       z-index:20;
-      padding:22px 0;
-      color:#fff;
+      padding:18px 0;
+      background:rgba(247,244,237,.94);
+      color:var(--dark);
+      border-bottom:1px solid rgba(11,11,11,.08);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
     }
 
     .nav{
@@ -452,10 +466,11 @@
       font-size:20px;
       font-weight:800;
       letter-spacing:2px;
+      color:var(--dark);
     }
 
     .logo span{
-      color:var(--gold);
+      color:var(--orange);
     }
 
     .nav-links{
@@ -464,19 +479,22 @@
       list-style:none;
       font-size:13px;
       font-weight:600;
+      color:var(--dark);
     }
 
     .nav-links a:hover{
-      color:var(--gold-light);
+      color:var(--orange);
     }
 
     .nav-cta{
-      background:var(--gold);
-      color:#111;
+      background:#FCFAF6;
+      color:var(--dark);
+      border:1px solid #DED8CD;
       padding:12px 18px;
-      border-radius:4px;
+      border-radius:999px;
       font-size:12px;
       font-weight:800;
+      box-shadow:0 8px 22px rgba(11,11,11,.06);
     }
 
     /* HERO */
@@ -732,7 +750,7 @@
     /* PRICE */
 
     .price-section{
-      background:var(--off);
+      background:var(--bg);
     }
 
     .price-grid{
@@ -743,7 +761,7 @@
     }
 
     .price-card{
-      background:var(--white);
+      background:#FCFAF6;
       padding:45px;
       border:1px solid var(--border);
       box-shadow:0 15px 40px rgba(0,0,0,.06);
@@ -852,7 +870,7 @@
     /* AMENITIES */
 
     .amenities{
-      background:var(--off);
+      background:var(--bg);
     }
 
     .amenities-grid{
@@ -863,7 +881,7 @@
     }
 
     .amenity{
-      background:var(--white);
+      background:#FCFAF6;
       padding:25px;
       border:1px solid var(--border);
       font-weight:700;
@@ -953,7 +971,7 @@
     /* FORM */
 
     .contact{
-      background:var(--off);
+      background:var(--bg);
     }
 
     .contact-grid{
@@ -969,7 +987,7 @@
     }
 
     .form{
-      background:var(--white);
+      background:#FCFAF6;
       padding:40px;
       border:1px solid var(--border);
     }
@@ -992,13 +1010,13 @@
       border:1px solid #ddd;
       padding:0 14px;
       font-family:inherit;
-      background:var(--white);
+      background:#FCFAF6;
     }
 
     .field input:focus,
     .field select:focus{
       outline:none;
-      border-color:var(--gold);
+      border-color:var(--orange);
     }
 
     .form .btn{
@@ -1040,25 +1058,27 @@
 
     .app-filter-float{
       position:fixed;
-      right:20px;
-      bottom:86px;
-      z-index:99;
+      top:18px;
+      right:18px;
+      bottom:auto;
+      z-index:120;
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:9px;
-      min-height:48px;
-      padding:0 18px;
+      min-height:46px;
+      padding:0 17px;
       border-radius:999px;
-      background:var(--gold-light);
-      color:#1c1b18;
-      border:1px solid rgba(183,154,102,.55);
-      box-shadow:0 10px 30px rgba(0,0,0,.22);
+      background:#FCFAF6;
+      color:var(--dark);
+      border:1px solid #DED8CD;
+      box-shadow:0 10px 28px rgba(11,11,11,.12);
       font-size:11px;
       font-weight:900;
-      letter-spacing:.35px;
+      letter-spacing:.25px;
       text-transform:uppercase;
       transition:.2s;
+      white-space:nowrap;
     }
 
     .app-filter-float:hover{
@@ -1081,16 +1101,25 @@
 
     .whatsapp{
       position:fixed;
-      right:20px;
-      bottom:20px;
-      z-index:100;
-      background:var(--gold-light);
-      color:#1c1b18;
-      padding:15px 20px;
-      border-radius:40px;
-      font-size:12px;
-      font-weight:800;
-      box-shadow:0 10px 30px rgba(0,0,0,.25);
+      right:18px;
+      bottom:18px;
+      z-index:120;
+      min-height:52px;
+      padding:0 20px;
+      border-radius:999px;
+      background:var(--orange2);
+      color:var(--dark);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.35px;
+      text-transform:uppercase;
+      box-shadow:0 10px 28px rgba(11,11,11,.14);
+      border:1px solid rgba(198,167,107,.45);
+      transition:.3s;
+      white-space:nowrap;
     }
 
     /* WHATSAPP LEAD MODAL */
@@ -1113,7 +1142,7 @@
 
     .wa-modal-card{
       width:min(100%,430px);
-      background:var(--white);
+      background:#FCFAF6;
       color:var(--text);
       border-radius:16px;
       padding:26px;
@@ -1129,8 +1158,8 @@
       height:36px;
       border:0;
       border-radius:50%;
-      background:#f0f0f0;
-      color:#222;
+      background:#F0ECE3;
+      color:var(--dark);
       font-size:21px;
       cursor:pointer;
     }
@@ -1171,18 +1200,18 @@
     .wa-modal-form input{
       width:100%;
       height:50px;
-      border:1px solid #d8d8d8;
+      border:1px solid #DED8CD;
       border-radius:8px;
       padding:0 13px;
       font-family:inherit;
       font-size:15px;
-      background:var(--white);
+      background:#FCFAF6;
       color:var(--text);
       outline:none;
     }
 
     .wa-modal-form input:focus{
-      border-color:var(--gold);
+      border-color:var(--orange);
       box-shadow:0 0 0 3px rgba(199,166,106,.12);
     }
 
@@ -1191,7 +1220,7 @@
       min-height:52px;
       border:0;
       border-radius:8px;
-      background:var(--gold-light);
+      background:var(--orange2);
       color:#07160d;
       font-family:inherit;
       font-weight:900;
@@ -1366,6 +1395,32 @@
         text-align:center;
       }
 
+    }
+
+  
+    @media(max-width:600px){
+      .app-filter-float{
+        top:12px !important;
+        right:12px !important;
+        left:auto !important;
+        bottom:auto !important;
+        width:auto !important;
+        min-height:42px !important;
+        padding:0 13px !important;
+        font-size:10px !important;
+        max-width:calc(100vw - 24px);
+      }
+
+      .whatsapp{
+        left:auto !important;
+        right:12px !important;
+        bottom:max(12px, env(safe-area-inset-bottom)) !important;
+        width:auto !important;
+        min-height:50px !important;
+        padding:0 16px !important;
+        font-size:10px !important;
+        max-width:calc(100vw - 24px);
+      }
     }
 
   </style>
@@ -1862,7 +1917,7 @@
 
   <!-- NEARBY -->
 
-  <section class="section" style="background:var(--off);">
+  <section class="section" style="background:var(--bg);">
 
     <div class="container">
 
@@ -2510,10 +2565,10 @@
   href="https://app.yincorp.com.br/"
   target="_blank"
   rel="noopener"
-  aria-label="Abrir filtros de imóveis no app Ynteligencia"
+  aria-label="Conheça outras oportunidades no app Ynteligencia"
 >
   <span class="filter-icon">☰</span>
-  FILTRAR IMÓVEIS
+  CONHEÇA OUTRAS OPORTUNIDADES
 </a>
 
 
@@ -2527,7 +2582,7 @@
   aria-controls="whatsappLeadModal"
   aria-haspopup="dialog"
 >
-  FALAR COM ESPECIALISTA NO WHATSAPP
+  FALAR COM O ESPECIALISTA
 </a>
 
 
@@ -2795,7 +2850,7 @@
       function(){
 
         trackGA(
-          'app_filter_click',
+          'other_opportunities_click',
           {
             source:'villa-pompeia'
           }
