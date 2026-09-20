@@ -37,10 +37,29 @@ fbq("track","ViewContent",{content_name:"Welconx Pinheiros",content_category:"Ap
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-:root{--bg:#0f1115;--soft:#171b22;--card:#1b2029;--gold:#c8a96b;--gold2:#ecd397;--text:#fff;--muted:#adb6c3;--line:rgba(200,169,107,.20);--green:#25d366;--max:1140px}
+:root{
+      --bg:#F7F4ED;
+      --soft:#FCFAF6;
+      --card:#FFFFFF;
+      --gold:#C6A76B;
+      --gold2:#E4D0A3;
+      --text:#4A443C;
+      --muted:#7D776E;
+      --line:rgba(74,68,60,.12);
+      --green:#25D366;
+      --max:1140px;
+      --taupe:#6A635A;
+      --taupe2:#8A8379;
+    }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Montserrat,Arial,sans-serif;background:radial-gradient(circle at 50% 0,rgba(200,169,107,.12),transparent 32%),var(--bg);color:var(--text);line-height:1.6}
+body{
+      font-family:Montserrat,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
 a{text-decoration:none;color:inherit}img,video{max-width:100%;display:block}
 .container{width:min(calc(100% - 32px),var(--max));margin:auto}
 .section{padding:82px 0;border-top:1px solid var(--line)}
@@ -51,51 +70,174 @@ h1,h2,h3{line-height:1.13}
 h2{font-size:clamp(29px,4vw,43px);letter-spacing:-1.1px;margin-bottom:15px}
 .lead{color:var(--muted);max-width:760px;font-size:15px}
 .btn{border:0;min-height:48px;padding:0 21px;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;font:800 11px Montserrat;letter-spacing:.35px;transition:.22s;text-align:center}
-.primary{color:#12161c;background:linear-gradient(135deg,var(--gold),var(--gold2));box-shadow:0 8px 25px rgba(200,169,107,.18)}
+.primary{color:var(--text);background:var(--gold2);box-shadow:none;border-radius:12px}
 .primary:hover{transform:translateY(-3px)}
-.secondary{color:var(--gold2);background:transparent;border:1px solid var(--gold)}
+.secondary{color:var(--text);background:#FCFAF6;border:1px solid #DED8CD}
 .secondary:hover{background:rgba(200,169,107,.10);transform:translateY(-3px)}
 .small{min-height:42px;font-size:10px}
-header{height:76px;display:flex;align-items:center;position:sticky;top:0;z-index:50;background:rgba(15,17,21,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+header{
+      height:76px;
+      display:flex;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(247,244,237,.95);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--line);
+    }
 .nav{width:min(calc(100% - 32px),var(--max));margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px}
-.brand-logo{font-size:16px;font-weight:900;letter-spacing:2px}.brand-logo span{color:var(--gold2)}
-.nav ul{list-style:none;display:flex;gap:27px}.nav li a{font-size:10px;color:var(--muted);font-weight:800;letter-spacing:.75px}.nav li a:hover{color:var(--gold2)}
-.nav-cta{font-size:10px;padding:10px 15px;border-radius:30px;border:1px solid var(--gold);color:var(--gold2);font-weight:800}
+.brand-logo{
+      font-size:16px;
+      font-weight:900;
+      letter-spacing:2px;
+      color:var(--text);
+    }.brand-logo span{color:var(--gold2)}
+.nav ul{list-style:none;display:flex;gap:27px}.nav li a{font-size:10px;color:var(--text);font-weight:800;letter-spacing:.75px}.nav li a:hover{color:var(--gold2)}
+.nav-cta{
+      font-size:10px;
+      padding:10px 15px;
+      border-radius:30px;
+      border:1px solid #DED8CD;
+      background:#FCFAF6;
+      color:var(--text);
+      font-weight:800;
+      box-shadow:0 8px 22px rgba(74,68,60,.06);
+    }
 
-.hero{min-height:720px;display:grid;place-items:center;position:relative;overflow:hidden;text-align:center}
-.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(200,169,107,.13);border-radius:50%;pointer-events:none}
+.hero{
+      min-height:720px;
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+      text-align:center;
+      background:
+        radial-gradient(circle at 50% 0,rgba(198,167,107,.14),transparent 32%),
+        var(--bg);
+    }
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(198,167,107,.15);border-radius:50%;pointer-events:none}
 .hero:before{width:620px;height:620px}.hero:after{width:850px;height:850px}
 .hero-content{position:relative;z-index:1;padding:70px 0 55px}
 .hero h1{max-width:960px;margin:0 auto 22px;font-size:clamp(39px,6vw,68px);font-weight:900;letter-spacing:-2.2px}
 .hero h1 span{display:block;color:var(--gold2)}
-.hero-sub{max-width:800px;margin:0 auto 27px;color:var(--muted);font-size:clamp(15px,2vw,19px)}.hero-sub strong{color:#fff}
-.offer{width:min(620px,100%);margin:0 auto 29px;padding:21px 24px;border:1px solid rgba(200,169,107,.45);border-radius:14px;background:linear-gradient(145deg,rgba(200,169,107,.13),rgba(23,27,34,.88))}
+.hero-sub{max-width:800px;margin:0 auto 27px;color:var(--muted);font-size:clamp(15px,2vw,19px)}.hero-sub strong{color:var(--text)}
+.offer{width:min(620px,100%);margin:0 auto 29px;padding:21px 24px;border:1px solid rgba(200,169,107,.45);border-radius:14px;background:#F7F0E1}
 .offer-label{color:var(--gold2);font-size:9px;font-weight:900;letter-spacing:1.5px}.offer-price{font-size:clamp(31px,5vw,48px);line-height:1;font-weight:900;letter-spacing:-1.7px}.offer-note{color:var(--muted);font-size:10px;margin-top:8px}
 .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 .hero-numbers{margin:48px auto 0;display:flex;justify-content:center;max-width:780px}.hero-numbers div{padding:0 27px;border-right:1px solid var(--line)}.hero-numbers div:last-child{border:0}.hero-numbers strong{display:block;color:var(--gold2);font-size:22px}.hero-numbers span{font-size:9px;color:var(--muted);font-weight:700;letter-spacing:.6px}
 
-.video-box{margin-top:34px;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:#080a0d;box-shadow:0 20px 55px rgba(0,0,0,.30)}
-.video-box video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#080a0d}
-.video-caption{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:17px 20px;background:rgba(18,24,32,.95)}.video-caption strong{font-size:13px}.video-caption span{font-size:10px;color:var(--muted)}
+.video-box{margin-top:34px;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:#F0ECE3;box-shadow:0 20px 55px rgba(0,0,0,.30)}
+.video-box video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#F0ECE3}
+.video-caption{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:17px 20px;background:#FCFAF6}.video-caption strong{font-size:13px}.video-caption span{font-size:10px;color:var(--muted)}
 
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:35px}.fact{padding:23px;border-radius:11px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(34,40,51,.97),rgba(21,25,33,.97))}.fact strong{display:block;color:var(--gold2);font-size:24px;line-height:1.1;margin-bottom:7px}.fact span{color:var(--muted);font-size:10px;font-weight:700}
-.two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:stretch;margin-top:38px}.panel{padding:30px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,rgba(34,40,51,.97),rgba(21,25,33,.97))}.panel h3{margin-bottom:17px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:35px}.fact{padding:23px;border-radius:11px;border:1px solid var(--line);background:#FCFAF6}.fact strong{display:block;color:var(--gold2);font-size:24px;line-height:1.1;margin-bottom:7px}.fact span{color:var(--muted);font-size:10px;font-weight:700}
+.two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:stretch;margin-top:38px}.panel{padding:30px;border:1px solid var(--line);border-radius:15px;background:#FCFAF6}.panel h3{margin-bottom:17px}
 .check-list{list-style:none;display:grid;gap:12px}.check-list li{color:var(--muted);font-size:12px;padding-left:23px;position:relative}.check-list li:before{content:"✓";position:absolute;left:0;color:var(--gold2);font-weight:900}
-.highlight{border-color:rgba(200,169,107,.45);background:linear-gradient(145deg,rgba(200,169,107,.14),rgba(21,25,33,.97))}.highlight .big{color:var(--gold2);font-size:37px;font-weight:900;letter-spacing:-1.5px;line-height:1.1;margin:8px 0}.muted{color:var(--muted);font-size:12px}
+.highlight{border-color:rgba(200,169,107,.45);background:#F7F0E1}.highlight .big{color:var(--gold2);font-size:37px;font-weight:900;letter-spacing:-1.5px;line-height:1.1;margin:8px 0}.muted{color:var(--muted);font-size:12px}
 
-.amenities{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:35px}.amenity{min-height:94px;padding:20px;border-radius:11px;border:1px solid rgba(255,255,255,.07);background:var(--soft)}.amenity strong{display:block;font-size:13px;margin-bottom:5px}.amenity span{color:var(--muted);font-size:10px}
-.location-box{margin-top:38px;padding:34px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(135deg,#172027,#10141a);display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.amenities{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:35px}.amenity{min-height:94px;padding:20px;border-radius:11px;border:1px solid var(--line);background:#FCFAF6}.amenity strong{display:block;font-size:13px;margin-bottom:5px}.amenity span{color:var(--muted);font-size:10px}
+.location-map{min-height:300px;border-radius:12px;overflow:hidden;border:1px solid #DED8CD}.location-map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.location-box{margin-top:38px;padding:34px;border:1px solid var(--line);border-radius:15px;background:#FCFAF6;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
 .location-visual{min-height:300px;border-radius:12px;border:1px solid rgba(200,169,107,.22);background:radial-gradient(circle at 54% 46%,rgba(236,211,151,.25) 0 4px,transparent 5px),repeating-linear-gradient(30deg,transparent 0 34px,rgba(200,169,107,.08) 35px 37px),repeating-linear-gradient(-48deg,transparent 0 48px,rgba(139,185,168,.08) 49px 51px);position:relative}
-.location-visual:after{content:"PINHEIROS";position:absolute;right:20px;bottom:18px;color:var(--gold2);font-size:10px;font-weight:900;letter-spacing:1.5px}.location-pin{position:absolute;width:17px;height:17px;border-radius:50%;background:var(--gold2);box-shadow:0 0 0 9px rgba(200,169,107,.16);top:44%;left:51%}.location-pin:after{content:"Welconx Pinheiros";position:absolute;top:25px;left:-35px;white-space:nowrap;font-size:10px;font-weight:800;color:#fff}
-.location-list{list-style:none;margin-top:18px;display:grid;gap:11px}.location-list li{color:var(--muted);font-size:12px;padding-left:23px;position:relative}.location-list li:before{content:"✓";position:absolute;left:0;color:var(--gold2);font-weight:900}.address{margin-top:18px;padding:14px;border-left:2px solid var(--gold);background:rgba(255,255,255,.03);color:#fff;font-size:12px}
+.location-visual:after{content:"PINHEIROS";position:absolute;right:20px;bottom:18px;color:var(--gold2);font-size:10px;font-weight:900;letter-spacing:1.5px}.location-pin{position:absolute;width:17px;height:17px;border-radius:50%;background:var(--gold2);box-shadow:0 0 0 9px rgba(200,169,107,.16);top:44%;left:51%}.location-pin:after{content:"Welconx Pinheiros";position:absolute;top:25px;left:-35px;white-space:nowrap;font-size:10px;font-weight:800;color:var(--text)}
+.location-list{list-style:none;margin-top:18px;display:grid;gap:11px}.location-list li{color:var(--muted);font-size:12px;padding-left:23px;position:relative}.location-list li:before{content:"✓";position:absolute;left:0;color:var(--gold2);font-weight:900}.address{margin-top:18px;padding:14px;border-left:2px solid var(--gold);background:rgba(255,255,255,.03);color:var(--text);font-size:12px}
 
-.condition-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:35px}.condition-card{padding:25px;border:1px solid var(--line);border-radius:13px;background:var(--soft)}.condition-card strong{color:var(--gold2);font-size:22px;display:block;margin-bottom:6px}.condition-card span{color:var(--muted);font-size:11px}.legal-note{margin-top:19px;color:#8f99a7;font-size:9px;line-height:1.7}
-.faq{max-width:850px;margin:35px auto 0;display:grid;gap:10px}details{border:1px solid rgba(255,255,255,.08);border-radius:10px;background:var(--soft);overflow:hidden}summary{cursor:pointer;padding:18px 20px;font-size:12px;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"+";float:right;color:var(--gold2);font-size:18px}details[open] summary:after{content:"−"}details p{padding:0 20px 19px;color:var(--muted);font-size:11px}
-#contato{text-align:center}.form-box{max-width:700px;margin:35px auto 0;padding:32px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(34,40,51,.97),rgba(21,25,33,.97));text-align:left}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:14px}.field label{display:block;color:var(--gold2);font-size:10px;font-weight:800;margin-bottom:6px}.field input,.field select{width:100%;height:47px;padding:0 13px;border-radius:7px;border:1px solid #303947;background:#121820;color:#fff;font:12px Montserrat;outline:0}.field input:focus,.field select:focus{border-color:var(--gold)}.form-box .btn{width:100%;margin-top:4px}.notice{color:#8f99a7;font-size:9px;text-align:center;margin-top:13px;line-height:1.6}.success{display:none;text-align:center;color:var(--gold2);font-size:13px;font-weight:700;margin-top:14px}.error{color:#ffb4b4;font-size:10px;text-align:center;margin-top:12px;display:none}
-.whatsapp{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;z-index:40;background:var(--green);display:grid;place-items:center;color:#fff;font-size:25px;font-family:Arial;font-weight:bold;box-shadow:0 10px 27px rgba(0,0,0,.4)}
+.condition-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:35px}.condition-card{padding:25px;border:1px solid var(--line);border-radius:13px;background:#FCFAF6}.condition-card strong{color:var(--gold2);font-size:22px;display:block;margin-bottom:6px}.condition-card span{color:var(--muted);font-size:11px}.legal-note{margin-top:19px;color:var(--muted);font-size:9px;line-height:1.7}
+.faq{max-width:850px;margin:35px auto 0;display:grid;gap:10px}details{border:1px solid var(--line);border-radius:10px;background:#FCFAF6;overflow:hidden}summary{cursor:pointer;padding:18px 20px;font-size:12px;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"+";float:right;color:var(--gold2);font-size:18px}details[open] summary:after{content:"−"}details p{padding:0 20px 19px;color:var(--muted);font-size:11px}
+#contato{text-align:center}.form-box{max-width:700px;margin:35px auto 0;padding:32px;border-radius:16px;border:1px solid var(--line);background:#FCFAF6;text-align:left}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:14px}.field label{display:block;color:var(--gold2);font-size:10px;font-weight:800;margin-bottom:6px}.field input,.field select{width:100%;height:47px;padding:0 13px;border-radius:10px;border:1px solid #DED8CD;background:#FFFFFF;color:var(--text);font:12px Montserrat;outline:0}.field input:focus,.field select:focus{border-color:var(--gold)}.form-box .btn{width:100%;margin-top:4px}.notice{color:var(--muted);font-size:9px;text-align:center;margin-top:13px;line-height:1.6}.success{display:none;text-align:center;color:var(--gold2);font-size:13px;font-weight:700;margin-top:14px}.error{color:#ffb4b4;font-size:10px;text-align:center;margin-top:12px;display:none}
+.whatsapp{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;z-index:40;background:var(--green);display:grid;place-items:center;color:var(--text);font-size:25px;font-family:Arial;font-weight:bold;box-shadow:0 10px 27px rgba(0,0,0,.4)}
 footer{padding:29px 16px 42px;text-align:center;border-top:1px solid var(--line);color:var(--muted);font-size:10px}footer strong{color:var(--gold2)}
 @media(max-width:850px){.nav ul{display:none}.facts{grid-template-columns:repeat(2,1fr)}.two-col,.location-box,.condition-grid{grid-template-columns:1fr}.amenities{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.nav-cta{padding:8px 10px;font-size:8px}.brand-logo{font-size:14px}.section{padding:62px 0}.hero{min-height:680px}.hero h1{letter-spacing:-1.5px}.hero-actions .btn{width:100%}.hero-numbers div{padding:0 12px}.hero-numbers strong{font-size:17px}.hero-numbers span{font-size:8px}.facts,.amenities,.form-grid{grid-template-columns:1fr}.panel,.location-box,.form-box{padding:22px}.video-caption{display:block}.video-caption span{display:block;margin-top:5px}.offer{padding:18px}.offer-price{font-size:34px}}
+
+.app-opportunities{
+  position:fixed;
+  top:18px;
+  right:18px;
+  z-index:120;
+  min-height:46px;
+  padding:0 17px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#FCFAF6;
+  color:var(--text);
+  border:1px solid #DED8CD;
+  box-shadow:0 10px 28px rgba(74,68,60,.12);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.25px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:120;
+  min-height:52px;
+  padding:0 20px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--gold2);
+  color:var(--text);
+  border:1px solid rgba(198,167,107,.45);
+  box-shadow:0 10px 28px rgba(74,68,60,.14);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.35px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.wa-modal{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  background:rgba(74,68,60,.22);
+  backdrop-filter:blur(6px);
+}
+.wa-modal.is-open{display:flex}
+.wa-modal-card{
+  width:min(100%,430px);
+  background:#FCFAF6;
+  color:var(--text);
+  border-radius:18px;
+  padding:26px;
+  box-shadow:0 28px 80px rgba(74,68,60,.18);
+  position:relative;
+  border:1px solid #DED8CD;
+}
+.wa-modal-close{
+  position:absolute;top:12px;right:12px;width:36px;height:36px;border:0;
+  border-radius:50%;background:#F0ECE3;color:var(--text);font-size:21px;cursor:pointer
+}
+.wa-modal-kicker{color:var(--gold);font-size:10px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:8px}
+.wa-modal-card h3{font-size:24px;margin:0 38px 8px 0;line-height:1.15}
+.wa-modal-card>p{color:var(--muted);font-size:13px;margin-bottom:18px}
+.wa-modal-form{display:grid;gap:12px}
+.wa-modal-form label{display:block;font-size:10px;font-weight:800;margin-bottom:6px}
+.wa-modal-form input{width:100%;height:50px;border:1px solid #DED8CD;border-radius:10px;padding:0 13px;font:14px Montserrat;background:#fff;color:var(--text);outline:0}
+.wa-modal-form input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,167,107,.12)}
+.wa-modal-submit{width:100%;min-height:52px;border:0;border-radius:12px;background:var(--gold2);color:var(--text);font-weight:900;cursor:pointer}
+.wa-modal-submit:disabled{opacity:.65;cursor:wait}
+.wa-modal-status{display:none;padding:10px 12px;border-radius:8px;background:#fff4f4;color:#8e2f2f;font-size:11px}
+.wa-modal-note{font-size:9px;color:var(--muted);text-align:center;line-height:1.45}
+@media(max-width:560px){
+  .app-opportunities{top:12px;right:12px;min-height:42px;padding:0 13px;font-size:9px;max-width:calc(100vw - 24px)}
+  .whatsapp{right:12px;bottom:max(12px,env(safe-area-inset-bottom));min-height:50px;padding:0 16px;font-size:9px;max-width:calc(100vw - 24px)}
+}
+
 </style>
 </head>
 
@@ -192,7 +334,7 @@ footer{padding:29px 16px 42px;text-align:center;border-top:1px solid var(--line)
 <div class="amenity"><strong>2 elevadores</strong><span>Infraestrutura do edifício.</span></div>
 </div>
 <div class="video-box" id="video">
-<iframe id="youtubeVideo" src="https://www.youtube.com/embed/SNVUOr4VQls?rel=0&modestbranding=1&playsinline=1" title="Welconx Pinheiros — vídeo do empreendimento" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%;aspect-ratio:9/16;border:0;display:block;background:#080a0d"></iframe>
+<iframe id="youtubeVideo" src="https://www.youtube.com/embed/SNVUOr4VQls?rel=0&modestbranding=1&playsinline=1" title="Welconx Pinheiros — vídeo do empreendimento" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%;aspect-ratio:9/16;border:0;display:block;background:#F0ECE3"></iframe>
 <div class="video-caption"><strong>Welconx Pinheiros</strong><span>Vídeo oficial no YouTube e áreas comuns</span></div>
 </div>
 </div>
@@ -204,7 +346,15 @@ footer{padding:29px 16px 42px;text-align:center;border-top:1px solid var(--line)
 <h2>Mobilidade começa na porta de casa.</h2>
 <p class="lead">O endereço do Welconx Pinheiros coloca o morador próximo de transporte, serviços, comércio, gastronomia e da vida urbana de Pinheiros.</p>
 <div class="location-box">
-<div class="location-visual" aria-label="Representação visual da localização"><div class="location-pin"></div></div>
+<div class="location-map">
+<iframe
+  src="https://www.google.com/maps?q=Rua+Eug%C3%AAnio+de+Medeiros,+345,+Pinheiros,+S%C3%A3o+Paulo,+SP&output=embed"
+  loading="lazy"
+  title="Mapa do Welconx Pinheiros"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+></iframe>
+</div>
 <div>
 <div class="eyebrow">ENDEREÇO</div>
 <h3>Welconx Pinheiros</h3>
@@ -281,7 +431,58 @@ footer{padding:29px 16px 42px;text-align:center;border-top:1px solid var(--line)
 
 </main>
 
-<a class="whatsapp" href="https://wa.me/5511992976368?text=Ol%C3%A1%2C%20vi%20o%20site%20do%20Welconx%20Pinheiros%20e%20quero%20informa%C3%A7%C3%B5es%20sobre%20a%20unidade%20de%20R%24%20383.600." target="_blank" rel="noopener" aria-label="Falar com especialista no WhatsApp" onclick="trackWhatsApp()">◉</a>
+
+
+
+<a
+  class="app-opportunities"
+  id="appOpportunitiesButton"
+  href="https://app.yincorp.com.br/"
+  target="_blank"
+  rel="noopener"
+  aria-label="Conheça outras oportunidades"
+>
+  CONHEÇA OUTRAS OPORTUNIDADES
+</a>
+
+<a
+  class="whatsapp"
+  id="whatsappButton"
+  href="#"
+  role="button"
+  aria-controls="whatsappLeadModal"
+  aria-haspopup="dialog"
+  aria-label="Falar com o especialista"
+>
+  FALAR COM O ESPECIALISTA
+</a>
+
+<div class="wa-modal" id="whatsappLeadModal" role="dialog" aria-modal="true" aria-labelledby="whatsappLeadTitle">
+  <div class="wa-modal-card">
+    <button type="button" class="wa-modal-close" id="whatsappLeadClose" aria-label="Fechar">×</button>
+    <div class="wa-modal-kicker">Atendimento rápido</div>
+    <h3 id="whatsappLeadTitle">Falar sobre o Welconx Pinheiros</h3>
+    <p>Confirme seus dados para continuar no WhatsApp.</p>
+
+    <form class="wa-modal-form" id="whatsappLeadForm" autocomplete="on">
+      <div>
+        <label for="waLeadName">NOME</label>
+        <input id="waLeadName" name="name" type="text" autocomplete="name" placeholder="Seu nome" required>
+      </div>
+      <div>
+        <label for="waLeadPhone">WHATSAPP</label>
+        <input id="waLeadPhone" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999" required>
+      </div>
+      <div>
+        <label for="waLeadEmail">E-MAIL</label>
+        <input id="waLeadEmail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@email.com" required>
+      </div>
+      <button class="wa-modal-submit" id="whatsappLeadSubmit" type="submit">CONTINUAR NO WHATSAPP</button>
+      <div class="wa-modal-status" id="whatsappLeadStatus" role="alert"></div>
+      <div class="wa-modal-note">Seus dados são registrados antes de abrir a conversa.</div>
+    </form>
+  </div>
+</div>
 
 <footer>
 <p><strong>YINCORP GROUP</strong> · Inteligência imobiliária para decisões mais seguras.</p>
@@ -326,6 +527,7 @@ function getTrackingData(){
  }
 }
 const tracking=getTrackingData();
+
 
 
 /* REPASSA TRACKING PARA OUTRAS PÁGINAS YINCORP */
@@ -383,6 +585,161 @@ function trackCTA(action){
 
 gaEvent("view_item",{items:[{item_id:PROJECT.slug,item_name:PROJECT.name,item_category:PROJECT.category,price:PROJECT.price,currency:"BRL"}]});
 gaEvent("landing_page_view",{landing_page:PROJECT.slug,lead_source:tracking.utm_source||PROJECT.source});
+
+
+const appOpportunitiesButton=document.getElementById("appOpportunitiesButton");
+if(appOpportunitiesButton){
+  appOpportunitiesButton.addEventListener("click",function(){
+    gaEvent("other_opportunities_click",{source:PROJECT.source});
+    metaCustom("OtherOpportunitiesClick",{source:PROJECT.source});
+  });
+}
+
+const whatsappButton=document.getElementById("whatsappButton");
+const whatsappLeadModal=document.getElementById("whatsappLeadModal");
+const whatsappLeadClose=document.getElementById("whatsappLeadClose");
+const whatsappLeadForm=document.getElementById("whatsappLeadForm");
+const whatsappLeadSubmit=document.getElementById("whatsappLeadSubmit");
+const whatsappLeadStatus=document.getElementById("whatsappLeadStatus");
+const waLeadName=document.getElementById("waLeadName");
+const waLeadPhone=document.getElementById("waLeadPhone");
+const waLeadEmail=document.getElementById("waLeadEmail");
+
+function openWhatsAppLeadModal(){
+  const mainName=document.getElementById("nome");
+  const mainPhone=document.getElementById("telefone");
+  const mainEmail=document.getElementById("email");
+
+  if(!waLeadName.value){
+    waLeadName.value=(mainName&&mainName.value.trim())||localStorage.getItem("yincorp_contact_name")||"";
+  }
+  if(!waLeadPhone.value){
+    waLeadPhone.value=(mainPhone&&mainPhone.value.trim())||localStorage.getItem("yincorp_contact_phone")||"";
+  }
+  if(!waLeadEmail.value){
+    waLeadEmail.value=(mainEmail&&mainEmail.value.trim())||localStorage.getItem("yincorp_contact_email")||"";
+  }
+
+  whatsappLeadStatus.style.display="none";
+  whatsappLeadModal.classList.add("is-open");
+  document.body.style.overflow="hidden";
+}
+
+function closeWhatsAppLeadModal(){
+  whatsappLeadModal.classList.remove("is-open");
+  document.body.style.overflow="";
+}
+
+if(whatsappButton){
+  whatsappButton.addEventListener("click",function(e){
+    e.preventDefault();
+    trackWhatsApp();
+    openWhatsAppLeadModal();
+  });
+}
+whatsappLeadClose.addEventListener("click",closeWhatsAppLeadModal);
+whatsappLeadModal.addEventListener("click",function(e){
+  if(e.target===whatsappLeadModal)closeWhatsAppLeadModal();
+});
+document.addEventListener("keydown",function(e){
+  if(e.key==="Escape"&&whatsappLeadModal.classList.contains("is-open"))closeWhatsAppLeadModal();
+});
+
+whatsappLeadForm.addEventListener("submit",async function(e){
+  e.preventDefault();
+
+  const nome=waLeadName.value.trim();
+  const telefone=waLeadPhone.value.trim();
+  const email=waLeadEmail.value.trim();
+  const digits=telefone.replace(/\D/g,"");
+
+  if(!nome||digits.length<10||!email){
+    whatsappLeadStatus.textContent="Confirme nome, WhatsApp e e-mail para continuar.";
+    whatsappLeadStatus.style.display="block";
+    return;
+  }
+
+  whatsappLeadSubmit.disabled=true;
+  whatsappLeadSubmit.textContent="REGISTRANDO...";
+  whatsappLeadStatus.style.display="none";
+
+  const payload={
+    nome,
+    telefone,
+    email,
+    perfil:"whatsapp",
+    origem:PROJECT.source,
+    source:PROJECT.source,
+    empreendimento:PROJECT.name,
+    property:PROJECT.name,
+    propertyName:PROJECT.name,
+    propertyType:PROJECT.type,
+    property_value:PROJECT.price,
+    neighborhood:"Pinheiros",
+    pagina:window.location.href,
+    page:window.location.href,
+    mensagem:"Lead iniciado pelo botão WhatsApp da LP Welconx Pinheiros.",
+    gclid:tracking.gclid||"",
+    gbraid:tracking.gbraid||"",
+    wbraid:tracking.wbraid||"",
+    utm_source:tracking.utm_source||"",
+    utm_medium:tracking.utm_medium||"",
+    utm_campaign:tracking.utm_campaign||"",
+    utm_content:tracking.utm_content||"",
+    utm_term:tracking.utm_term||""
+  };
+
+  try{
+    const response=await fetch("https://app.yincorp.com.br/api/lead",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(payload)
+    });
+
+    const data=await response.json().catch(()=>({}));
+
+    if(
+      !response.ok ||
+      data.success!==true ||
+      (data.praedium!==true && data.supabase!==true)
+    ){
+      throw new Error(data.error||"A API não confirmou o armazenamento do lead.");
+    }
+
+    localStorage.setItem("yincorp_contact_name",nome);
+    localStorage.setItem("yincorp_contact_phone",telefone);
+    localStorage.setItem("yincorp_contact_email",email);
+
+    if(typeof window.gtag==="function"){
+      window.gtag("event","conversion",{"send_to":"AW-18371236623/Icu-CMS18_ccEI-mi7hE"});
+    }
+    gaEvent("generate_lead",{
+      form_name:"welconx_pinheiros_whatsapp",
+      lead_source:"whatsapp_button",
+      property:PROJECT.name,
+      value:PROJECT.price,
+      currency:"BRL"
+    });
+    if(typeof window.fbq==="function"){
+      window.fbq("track","Lead",{
+        content_name:PROJECT.name,
+        content_category:PROJECT.category,
+        value:PROJECT.price,
+        currency:"BRL"
+      });
+    }
+
+    const text="Olá, meu nome é "+nome+". Vim pelo site da Yincorp e quero receber informações do Welconx Pinheiros.";
+    window.location.href="https://wa.me/5511992976368?text="+encodeURIComponent(text);
+
+  }catch(error){
+    console.error("Erro no double check do WhatsApp:",error);
+    whatsappLeadStatus.textContent="Não conseguimos registrar seus dados. Tente novamente para continuar no WhatsApp.";
+    whatsappLeadStatus.style.display="block";
+    whatsappLeadSubmit.disabled=false;
+    whatsappLeadSubmit.textContent="TENTAR NOVAMENTE";
+  }
+});
 
 const form=document.getElementById("leadForm");
 const success=document.getElementById("success");
