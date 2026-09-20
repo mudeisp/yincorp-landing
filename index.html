@@ -26,7 +26,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-2ZD-JCLSSDN');
+  gtag('config', 'G-2ZDJCLSSDN');
   gtag('config', 'AW-18371236623');
 </script>
 
@@ -745,39 +745,157 @@
   </a>
 
   <script>
-    document.querySelectorAll('[data-track]').forEach(function(el){
-      el.addEventListener('click', function(){
-        var eventName = el.getAttribute('data-track');
-        if(typeof gtag === 'function'){
-          gtag('event', eventName, {page_location: window.location.href});
+    /* =========================================================
+       ATRIBUIÇÃO YINCORP
+       Preserva Google Ads + UTMs ao navegar da Home para
+       Zona Oeste / LPs / Ynteligencia.
+    ========================================================= */
+
+    const YINCORP_TRACKING_KEYS = [
+      'gclid',
+      'gbraid',
+      'wbraid',
+      'utm_source',
+      'utm_medium',
+      'utm_campaign',
+      'utm_content',
+      'utm_term'
+    ];
+
+    function getYincorpTrackingData() {
+      const params = new URLSearchParams(window.location.search);
+      const tracking = {};
+
+      YINCORP_TRACKING_KEYS.forEach(function(key) {
+        const incoming = params.get(key);
+
+        if (incoming) {
+          localStorage.setItem('yincorp_' + key, incoming);
         }
-        if(typeof fbq === 'function'){
+
+        tracking[key] =
+          incoming ||
+          localStorage.getItem('yincorp_' + key) ||
+          '';
+      });
+
+      return tracking;
+    }
+
+    const YINCORP_TRACKING = getYincorpTrackingData();
+
+    function appendTrackingToUrl(rawUrl) {
+      try {
+        const url = new URL(rawUrl, window.location.origin);
+
+        const isYincorpDestination =
+          url.hostname === 'www.yincorp.com.br' ||
+          url.hostname === 'yincorp.com.br' ||
+          url.hostname === 'app.yincorp.com.br';
+
+        if (!isYincorpDestination) {
+          return rawUrl;
+        }
+
+        YINCORP_TRACKING_KEYS.forEach(function(key) {
+          if (
+            YINCORP_TRACKING[key] &&
+            !url.searchParams.get(key)
+          ) {
+            url.searchParams.set(
+              key,
+              YINCORP_TRACKING[key]
+            );
+          }
+        });
+
+        return url.toString();
+      } catch (error) {
+        return rawUrl;
+      }
+    }
+
+    /* Atualiza links internos e o link para o app */
+    document.querySelectorAll('a[href]').forEach(function(link) {
+      const href = link.getAttribute('href');
+
+      if (
+        !href ||
+        href.startsWith('#') ||
+        href.startsWith('mailto:') ||
+        href.startsWith('tel:') ||
+        href.includes('wa.me') ||
+        href.includes('maps.app.goo.gl')
+      ) {
+        return;
+      }
+
+      link.setAttribute(
+        'href',
+        appendTrackingToUrl(href)
+      );
+    });
+
+    /* =========================================================
+       EVENTOS
+    ========================================================= */
+
+    document.querySelectorAll('[data-track]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var eventName = el.getAttribute('data-track');
+
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, {
+            page_location: window.location.href,
+            gclid_present: !!YINCORP_TRACKING.gclid,
+            utm_source: YINCORP_TRACKING.utm_source || ''
+          });
+        }
+
+        if (typeof fbq === 'function') {
           fbq('trackCustom', eventName);
         }
       });
     });
 
-    (function(){
-      var fired25=false, fired50=false, fired75=false;
-      window.addEventListener('scroll', function(){
+    /* =========================================================
+       SCROLL
+    ========================================================= */
+
+    (function() {
+      var fired25 = false;
+      var fired50 = false;
+      var fired75 = false;
+
+      window.addEventListener('scroll', function() {
         var doc = document.documentElement;
         var max = doc.scrollHeight - window.innerHeight;
-        if(max <= 0) return;
+
+        if (max <= 0) return;
+
         var pct = (window.scrollY / max) * 100;
 
-        if(pct >= 25 && !fired25){
-          fired25=true;
-          if(typeof gtag === 'function') gtag('event','scroll_25');
+        if (pct >= 25 && !fired25) {
+          fired25 = true;
+          if (typeof gtag === 'function') {
+            gtag('event', 'scroll_25');
+          }
         }
-        if(pct >= 50 && !fired50){
-          fired50=true;
-          if(typeof gtag === 'function') gtag('event','scroll_50');
+
+        if (pct >= 50 && !fired50) {
+          fired50 = true;
+          if (typeof gtag === 'function') {
+            gtag('event', 'scroll_50');
+          }
         }
-        if(pct >= 75 && !fired75){
-          fired75=true;
-          if(typeof gtag === 'function') gtag('event','scroll_75');
+
+        if (pct >= 75 && !fired75) {
+          fired75 = true;
+          if (typeof gtag === 'function') {
+            gtag('event', 'scroll_75');
+          }
         }
-      }, {passive:true});
+      }, { passive: true });
     })();
   </script>
 
