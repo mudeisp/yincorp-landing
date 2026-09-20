@@ -1052,6 +1052,135 @@
       box-shadow:0 10px 30px rgba(0,0,0,.25);
     }
 
+    /* WHATSAPP LEAD MODAL */
+
+    .wa-modal{
+      position:fixed;
+      inset:0;
+      z-index:1000;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      background:rgba(0,0,0,.72);
+      backdrop-filter:blur(6px);
+    }
+
+    .wa-modal.is-open{
+      display:flex;
+    }
+
+    .wa-modal-card{
+      width:min(100%,430px);
+      background:#fff;
+      color:#222;
+      border-radius:16px;
+      padding:26px;
+      box-shadow:0 28px 80px rgba(0,0,0,.35);
+      position:relative;
+    }
+
+    .wa-modal-close{
+      position:absolute;
+      top:12px;
+      right:12px;
+      width:36px;
+      height:36px;
+      border:0;
+      border-radius:50%;
+      background:#f0f0f0;
+      color:#222;
+      font-size:21px;
+      cursor:pointer;
+    }
+
+    .wa-modal-kicker{
+      color:var(--gold);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:1.4px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    .wa-modal-card h3{
+      font-size:24px;
+      margin:0 38px 8px 0;
+      line-height:1.15;
+    }
+
+    .wa-modal-card > p{
+      color:#666;
+      font-size:13px;
+      margin-bottom:18px;
+    }
+
+    .wa-modal-form{
+      display:grid;
+      gap:12px;
+    }
+
+    .wa-modal-form label{
+      display:block;
+      font-size:11px;
+      font-weight:800;
+      margin-bottom:6px;
+    }
+
+    .wa-modal-form input{
+      width:100%;
+      height:50px;
+      border:1px solid #d8d8d8;
+      border-radius:8px;
+      padding:0 13px;
+      font-family:inherit;
+      font-size:15px;
+      background:#fff;
+      color:#222;
+      outline:none;
+    }
+
+    .wa-modal-form input:focus{
+      border-color:var(--gold);
+      box-shadow:0 0 0 3px rgba(199,166,106,.12);
+    }
+
+    .wa-modal-submit{
+      width:100%;
+      min-height:52px;
+      border:0;
+      border-radius:8px;
+      background:var(--green);
+      color:#07160d;
+      font-family:inherit;
+      font-weight:900;
+      cursor:pointer;
+      margin-top:4px;
+    }
+
+    .wa-modal-submit:disabled{
+      opacity:.65;
+      cursor:wait;
+    }
+
+    .wa-modal-note{
+      font-size:10px;
+      color:#777;
+      line-height:1.45;
+      text-align:center;
+    }
+
+    .wa-modal-status{
+      display:none;
+      font-size:12px;
+      line-height:1.45;
+      padding:10px 12px;
+      border-radius:7px;
+      background:#fff4f4;
+      color:#8e2f2f;
+    }
+
+
     /* MOBILE */
 
     @media(max-width:900px){
@@ -2204,6 +2333,7 @@
               id="name"
               name="name"
               type="text"
+              autocomplete="name"
               placeholder="Como podemos chamar você?"
               required
             >
@@ -2221,6 +2351,8 @@
               id="phone"
               name="phone"
               type="tel"
+              autocomplete="tel"
+              inputmode="tel"
               placeholder="(11) 99999-9999"
               required
             >
@@ -2326,12 +2458,124 @@
 <a
   class="whatsapp"
   id="whatsappButton"
-  href="https://wa.me/5511992976368?text=Ol%C3%A1%2C%20vi%20o%20site%20do%20Villa%20Pompeia%20e%20quero%20receber%20as%20condi%C3%A7%C3%B5es."
-  target="_blank"
-  rel="noopener"
+  href="#"
+  role="button"
+  aria-controls="whatsappLeadModal"
+  aria-haspopup="dialog"
 >
   FALAR COM ESPECIALISTA NO WHATSAPP
 </a>
+
+
+<!-- MODAL DE CAPTURA ANTES DO WHATSAPP -->
+
+<div
+  class="wa-modal"
+  id="whatsappLeadModal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="whatsappLeadTitle"
+>
+
+  <div class="wa-modal-card">
+
+    <button
+      type="button"
+      class="wa-modal-close"
+      id="whatsappLeadClose"
+      aria-label="Fechar"
+    >
+      ×
+    </button>
+
+    <div class="wa-modal-kicker">
+      Atendimento rápido
+    </div>
+
+    <h3 id="whatsappLeadTitle">
+      Falar sobre o Villa Pompeia
+    </h3>
+
+    <p>
+      Confirme seus dados para continuar no WhatsApp.
+    </p>
+
+    <form
+      class="wa-modal-form"
+      id="whatsappLeadForm"
+      autocomplete="on"
+    >
+
+      <div>
+        <label for="waLeadName">
+          NOME
+        </label>
+
+        <input
+          id="waLeadName"
+          name="name"
+          type="text"
+          autocomplete="name"
+          placeholder="Seu nome"
+          required
+        >
+      </div>
+
+      <div>
+        <label for="waLeadPhone">
+          WHATSAPP
+        </label>
+
+        <input
+          id="waLeadPhone"
+          name="tel"
+          type="tel"
+          inputmode="tel"
+          autocomplete="tel"
+          placeholder="(11) 99999-9999"
+          required
+        >
+      </div>
+
+      <div>
+        <label for="waLeadEmail">
+          E-MAIL
+        </label>
+
+        <input
+          id="waLeadEmail"
+          name="email"
+          type="email"
+          inputmode="email"
+          autocomplete="email"
+          placeholder="voce@email.com"
+          required
+        >
+      </div>
+
+      <button
+        class="wa-modal-submit"
+        id="whatsappLeadSubmit"
+        type="submit"
+      >
+        CONTINUAR NO WHATSAPP
+      </button>
+
+      <div
+        class="wa-modal-status"
+        id="whatsappLeadStatus"
+        role="alert"
+      ></div>
+
+      <div class="wa-modal-note">
+        Seus dados são registrados para o atendimento imobiliário antes de abrir a conversa.
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
 
 
 <script>
@@ -2557,13 +2801,127 @@
   }
 
 
-  /* WHATSAPP */
+  /* WHATSAPP DOUBLE CHECK */
 
-  document
-    .getElementById('whatsappButton')
-    .addEventListener('click',function(){
+  const whatsappButton =
+    document.getElementById('whatsappButton');
 
-      trackCTA('whatsapp_fixed');
+  const whatsappLeadModal =
+    document.getElementById('whatsappLeadModal');
+
+  const whatsappLeadClose =
+    document.getElementById('whatsappLeadClose');
+
+  const whatsappLeadForm =
+    document.getElementById('whatsappLeadForm');
+
+  const whatsappLeadSubmit =
+    document.getElementById('whatsappLeadSubmit');
+
+  const whatsappLeadStatus =
+    document.getElementById('whatsappLeadStatus');
+
+  const waLeadName =
+    document.getElementById('waLeadName');
+
+  const waLeadPhone =
+    document.getElementById('waLeadPhone');
+
+  const waLeadEmail =
+    document.getElementById('waLeadEmail');
+
+
+  function openWhatsAppLeadModal(){
+
+    const mainName =
+      document.getElementById('name');
+
+    const mainPhone =
+      document.getElementById('phone');
+
+
+    if(!waLeadName.value){
+
+      waLeadName.value =
+        (mainName && mainName.value.trim()) ||
+        localStorage.getItem('yincorp_contact_name') ||
+        '';
+
+    }
+
+
+    if(!waLeadPhone.value){
+
+      waLeadPhone.value =
+        (mainPhone && mainPhone.value.trim()) ||
+        localStorage.getItem('yincorp_contact_phone') ||
+        '';
+
+    }
+
+
+    if(!waLeadEmail.value){
+
+      waLeadEmail.value =
+        localStorage.getItem('yincorp_contact_email') ||
+        '';
+
+    }
+
+
+    whatsappLeadStatus.style.display =
+      'none';
+
+    whatsappLeadModal.classList.add(
+      'is-open'
+    );
+
+    document.body.style.overflow =
+      'hidden';
+
+
+    setTimeout(function(){
+
+      if(!waLeadName.value){
+
+        waLeadName.focus();
+
+      }else if(!waLeadPhone.value){
+
+        waLeadPhone.focus();
+
+      }else{
+
+        waLeadEmail.focus();
+
+      }
+
+    },50);
+
+  }
+
+
+  function closeWhatsAppLeadModal(){
+
+    whatsappLeadModal.classList.remove(
+      'is-open'
+    );
+
+    document.body.style.overflow =
+      '';
+
+  }
+
+
+  whatsappButton.addEventListener(
+    'click',
+    function(event){
+
+      event.preventDefault();
+
+      trackCTA(
+        'whatsapp_fixed'
+      );
 
       if(window.fbq){
 
@@ -2574,7 +2932,333 @@
 
       }
 
-    });
+      openWhatsAppLeadModal();
+
+    }
+  );
+
+
+  whatsappLeadClose.addEventListener(
+    'click',
+    closeWhatsAppLeadModal
+  );
+
+
+  whatsappLeadModal.addEventListener(
+    'click',
+    function(event){
+
+      if(
+        event.target ===
+        whatsappLeadModal
+      ){
+
+        closeWhatsAppLeadModal();
+
+      }
+
+    }
+  );
+
+
+  document.addEventListener(
+    'keydown',
+    function(event){
+
+      if(
+        event.key === 'Escape' &&
+        whatsappLeadModal.classList.contains(
+          'is-open'
+        )
+      ){
+
+        closeWhatsAppLeadModal();
+
+      }
+
+    }
+  );
+
+
+  whatsappLeadForm.addEventListener(
+    'submit',
+    async function(event){
+
+      event.preventDefault();
+
+
+      const nome =
+        waLeadName.value.trim();
+
+      const telefone =
+        waLeadPhone.value.trim();
+
+      const email =
+        waLeadEmail.value.trim();
+
+      const phoneDigits =
+        telefone.replace(/\D/g,'');
+
+
+      if(
+        !nome ||
+        phoneDigits.length < 10 ||
+        !email
+      ){
+
+        whatsappLeadStatus.textContent =
+          'Confirme nome, WhatsApp e e-mail para continuar.';
+
+        whatsappLeadStatus.style.display =
+          'block';
+
+        return;
+
+      }
+
+
+      whatsappLeadSubmit.disabled =
+        true;
+
+      whatsappLeadSubmit.textContent =
+        'REGISTRANDO...';
+
+      whatsappLeadStatus.style.display =
+        'none';
+
+
+      try{
+
+        const response =
+          await fetch(
+            'https://app.yincorp.com.br/api/lead',
+            {
+
+              method:'POST',
+
+              headers:{
+                'Content-Type':
+                  'application/json'
+              },
+
+              body:JSON.stringify({
+
+                nome:nome,
+
+                telefone:telefone,
+
+                email:email,
+
+                perfil:'whatsapp',
+
+                origem:'villa-pompeia',
+
+                empreendimento:
+                  'Villa Pompeia Welconx',
+
+                property:
+                  'Villa Pompeia Welconx',
+
+                property_value:
+                  470000,
+
+                neighborhood:
+                  'Pompéia',
+
+                pagina:
+                  window.location.href,
+
+                page:
+                  window.location.href,
+
+                mensagem:
+                  'Lead iniciado pelo botão WhatsApp da LP Villa Pompeia.',
+
+                gclid:
+                  YINCORP_TRACKING.gclid,
+
+                gbraid:
+                  YINCORP_TRACKING.gbraid,
+
+                wbraid:
+                  YINCORP_TRACKING.wbraid,
+
+                utm_source:
+                  YINCORP_TRACKING.utm_source,
+
+                utm_medium:
+                  YINCORP_TRACKING.utm_medium,
+
+                utm_campaign:
+                  YINCORP_TRACKING.utm_campaign,
+
+                utm_content:
+                  YINCORP_TRACKING.utm_content,
+
+                utm_term:
+                  YINCORP_TRACKING.utm_term
+
+              })
+
+            }
+          );
+
+
+        const data =
+          await response
+            .json()
+            .catch(
+              () => ({})
+            );
+
+
+        if(
+          !response.ok ||
+          data.success !== true ||
+          (
+            data.praedium !== true &&
+            data.supabase !== true
+          )
+        ){
+
+          throw new Error(
+            data.error ||
+            'A API não confirmou o armazenamento do lead.'
+          );
+
+        }
+
+
+        localStorage.setItem(
+          'yincorp_contact_name',
+          nome
+        );
+
+        localStorage.setItem(
+          'yincorp_contact_phone',
+          telefone
+        );
+
+        localStorage.setItem(
+          'yincorp_contact_email',
+          email
+        );
+
+
+        console.log(
+          'WHATSAPP_LEAD_VILLA_POMPEIA_OK',
+          data
+        );
+
+
+        if(
+          typeof gtag === 'function'
+        ){
+
+          gtag(
+            'event',
+            'conversion',
+            {
+              'send_to':
+                'AW-18371236623/Icu-CMS18_ccEI-mi7hE'
+            }
+          );
+
+
+          gtag(
+            'event',
+            'generate_lead',
+            {
+              property:
+                'villa-pompeia',
+
+              lead_source:
+                'whatsapp_button',
+
+              value:
+                470000,
+
+              currency:
+                'BRL'
+            }
+          );
+
+        }
+
+
+        if(
+          typeof fbq === 'function'
+        ){
+
+          fbq(
+            'track',
+            'Lead',
+            {
+              content_name:
+                'Villa Pompeia Welconx',
+
+              content_category:
+                'WhatsApp',
+
+              value:
+                470000,
+
+              currency:
+                'BRL'
+            }
+          );
+
+        }
+
+
+        const whatsappText =
+          'Olá, meu nome é ' +
+          nome +
+          '. Vim pelo site da Yincorp e quero receber as condições do Villa Pompeia.';
+
+
+        const whatsappUrl =
+          'https://wa.me/' +
+          WA +
+          '?text=' +
+          encodeURIComponent(
+            whatsappText
+          );
+
+
+        whatsappLeadSubmit.textContent =
+          'ABRINDO WHATSAPP...';
+
+
+        window.location.href =
+          whatsappUrl;
+
+
+      }catch(error){
+
+        console.error(
+          'Erro no double check do WhatsApp:',
+          error
+        );
+
+
+        whatsappLeadStatus.textContent =
+          'Não conseguimos registrar seus dados. Tente novamente para continuar no WhatsApp.';
+
+        whatsappLeadStatus.style.display =
+          'block';
+
+
+        whatsappLeadSubmit.disabled =
+          false;
+
+        whatsappLeadSubmit.textContent =
+          'TENTAR NOVAMENTE';
+
+      }
+
+    }
+  );
 
 
   /* FORM */
