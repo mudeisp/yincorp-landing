@@ -236,25 +236,27 @@
   <style>
 
     :root {
-      --bg-dark: #0f1115;
-      --bg-soft: #171b22;
-      --card-bg: rgba(28, 34, 44, 0.88);
+      --bg-dark:#F7F4ED;
+      --bg-soft:#FCFAF6;
+      --card-bg:#FFFFFF;
 
-      --gold: #c8a96b;
-      --gold-light: #e2c48a;
-      --gold-soft: rgba(200, 169, 107, 0.12);
+      --gold:#C6A76B;
+      --gold-light:#E4D0A3;
+      --gold-soft:rgba(198,167,107,.12);
 
-      --emerald: #8bb9a8;
-      --emerald-glow: rgba(139, 185, 168, 0.18);
+      --emerald:#8BB9A8;
+      --emerald-glow:rgba(139,185,168,.18);
 
-      --border-color: rgba(200, 169, 107, 0.18);
+      --border-color:rgba(74,68,60,.12);
 
-      --text-main: #ffffff;
-      --text-muted: #b6beca;
+      --text-main:#4A443C;
+      --text-muted:#7D776E;
 
-      --green-bright: #25d366;
+      --green-bright:#25D366;
+      --taupe:#6A635A;
+      --taupe-soft:#8A8379;
 
-      --max: 1120px;
+      --max:1120px;
     }
 
     * {
@@ -268,12 +270,11 @@
     }
 
     body {
-      font-family: 'Montserrat', Arial, sans-serif;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(200,169,107,.08), transparent 32%),
-        var(--bg-dark);
-      color: var(--text-main);
-      line-height: 1.65;
+      font-family:'Montserrat',-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Arial,sans-serif;
+      background:var(--bg-dark);
+      color:var(--text-main);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
     }
 
     a {
@@ -312,18 +313,19 @@
     }
 
     p {
-      color: var(--text-muted);
+      color:var(--text-muted);
     }
 
     /* HEADER */
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(15, 17, 21, .94);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-color);
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(247,244,237,.95);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border-color);
     }
 
     .nav {
@@ -350,7 +352,7 @@
     .nav-links a {
       font-size: 12px;
       font-weight: 700;
-      color: var(--text-muted);
+      color:var(--text-muted);
       transition: .2s;
     }
 
@@ -359,15 +361,16 @@
     }
 
     .nav-cta {
-      border: 1px solid var(--gold);
-      color: var(--gold-light);
-      background: var(--gold-soft);
-      padding: 11px 16px;
-      border-radius: 8px;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .5px;
-      transition: .2s;
+      border:1px solid #DED8CD;
+      color:var(--text-main);
+      background:#FCFAF6;
+      padding:11px 16px;
+      border-radius:999px;
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.5px;
+      transition:.2s;
+      box-shadow:0 8px 22px rgba(74,68,60,.06);
     }
 
     .nav-cta:hover {
@@ -378,12 +381,15 @@
     /* HERO */
 
     .hero {
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      padding: 100px 0 90px;
-      border-bottom: 1px solid rgba(200,169,107,.08);
+      min-height:650px;
+      display:flex;
+      align-items:center;
+      text-align:center;
+      padding:100px 0 90px;
+      border-bottom:1px solid rgba(198,167,107,.12);
+      background:
+        radial-gradient(circle at 50% 0,rgba(198,167,107,.14),transparent 34rem),
+        #F7F4ED;
     }
 
     .hero h1 {
@@ -432,9 +438,10 @@
     }
 
     .btn-gold {
-      background: linear-gradient(135deg, #c8a96b, #e2c48a);
-      color: #161616;
-      box-shadow: 0 8px 25px rgba(200,169,107,.14);
+      background:var(--gold-light);
+      color:var(--text-main);
+      box-shadow:none;
+      border-radius:12px;
     }
 
     .btn-gold:hover {
@@ -443,9 +450,10 @@
     }
 
     .btn-dark {
-      background: rgba(20,24,31,.8);
-      border: 1px solid var(--gold);
-      color: var(--gold-light);
+      background:#FCFAF6;
+      border:1px solid #DED8CD;
+      color:var(--text-main);
+      border-radius:12px;
     }
 
     .btn-dark:hover {
@@ -473,8 +481,7 @@
     }
 
     .fact {
-      background:
-        linear-gradient(145deg, rgba(34,39,49,.95), rgba(22,26,34,.95));
+      background:#FCFAF6;
       border: 1px solid var(--border-color);
       border-radius: 14px;
       padding: 25px;
@@ -489,7 +496,7 @@
 
     .fact span {
       display: block;
-      color: var(--text-muted);
+      color:var(--text-muted);
       font-size: 13px;
     }
 
@@ -503,12 +510,11 @@
     }
 
     .content-card {
-      background:
-        linear-gradient(145deg, rgba(34,39,49,.95), rgba(22,26,34,.95));
+      background:#FCFAF6;
       border: 1px solid var(--border-color);
       border-radius: 16px;
       padding: 34px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.18);
+      box-shadow:0 18px 45px rgba(74,68,60,.08);
     }
 
     .content-card p + p {
@@ -533,7 +539,7 @@
     }
 
     .bullet-list li {
-      color: var(--text-muted);
+      color:var(--text-muted);
       font-size: 14px;
       padding-left: 22px;
       position: relative;
@@ -557,8 +563,7 @@
     }
 
     .analysis-card {
-      background:
-        linear-gradient(145deg, rgba(34,39,49,.95), rgba(22,26,34,.95));
+      background:#FCFAF6;
       border: 1px solid var(--border-color);
       border-radius: 14px;
       padding: 26px;
@@ -586,7 +591,7 @@
       overflow-x: auto;
       border: 1px solid var(--border-color);
       border-radius: 14px;
-      background: rgba(20,24,31,.75);
+      background:#FCFAF6;
     }
 
     table {
@@ -612,11 +617,11 @@
     }
 
     td {
-      color: var(--text-muted);
+      color:var(--text-muted);
     }
 
     td:first-child {
-      color: #fff;
+      color: var(--text-main);
       font-weight: 700;
     }
 
@@ -636,7 +641,7 @@
       border-radius: 14px;
       overflow: hidden;
       border: 1px solid var(--border-color);
-      background: var(--bg-soft);
+      background:#FCFAF6;
     }
 
     .media-card iframe {
@@ -648,7 +653,7 @@
 
     .media-caption {
       padding: 15px;
-      color: var(--text-muted);
+      color:var(--text-muted);
       font-size: 12px;
     }
 
@@ -683,8 +688,7 @@
     }
 
     .location-card {
-      background:
-        linear-gradient(145deg, rgba(34,39,49,.95), rgba(22,26,34,.95));
+      background:#FCFAF6;
       border: 1px solid var(--border-color);
       border-radius: 16px;
       padding: 30px;
@@ -705,15 +709,14 @@
     }
 
     .price-main {
-      background:
-        linear-gradient(145deg, rgba(34,39,49,.95), rgba(22,26,34,.95));
+      background:#FCFAF6;
       border: 1px solid var(--border-color);
       border-radius: 16px;
       padding: 35px;
     }
 
     .price-main .label {
-      color: var(--text-muted);
+      color:var(--text-muted);
       font-size: 12px;
       margin-bottom: 8px;
     }
@@ -732,7 +735,7 @@
     }
 
     .price-info {
-      background: rgba(28,34,44,.8);
+      background:#FCFAF6;
       border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 20px;
@@ -740,13 +743,13 @@
 
     .price-info strong {
       display: block;
-      color: #fff;
+      color: var(--text-main);
       font-size: 13px;
       margin-bottom: 5px;
     }
 
     .price-info span {
-      color: var(--text-muted);
+      color:var(--text-muted);
       font-size: 12px;
     }
 
@@ -765,7 +768,7 @@
     summary {
       cursor: pointer;
       list-style: none;
-      color: #fff;
+      color: var(--text-main);
       font-weight: 700;
       font-size: 15px;
       padding-right: 30px;
@@ -799,9 +802,7 @@
     /* CONTACT */
 
     .contact-section {
-      background:
-        radial-gradient(circle at 50% 0%, rgba(200,169,107,.08), transparent 35%),
-        #11151b;
+      background:#F7F4ED;
     }
 
     .contact-grid {
@@ -812,8 +813,7 @@
     }
 
     .contact-card {
-      background:
-        linear-gradient(145deg, rgba(34,39,49,.95), rgba(22,26,34,.95));
+      background:#FCFAF6;
       border: 1px solid var(--border-color);
       border-radius: 16px;
       padding: 32px;
@@ -831,7 +831,7 @@
     }
 
     label {
-      color: var(--text-muted);
+      color:var(--text-muted);
       font-size: 11px;
       font-weight: 700;
       display: block;
@@ -840,15 +840,15 @@
 
     input,
     select {
-      width: 100%;
-      min-height: 48px;
-      background: #121821;
-      border: 1px solid #2a3340;
-      border-radius: 8px;
-      padding: 12px 13px;
-      color: #fff;
-      outline: none;
-      font-family: inherit;
+      width:100%;
+      min-height:48px;
+      background:#FFFFFF;
+      border:1px solid #DED8CD;
+      border-radius:10px;
+      padding:12px 13px;
+      color:var(--text-main);
+      outline:none;
+      font-family:inherit;
     }
 
     input:focus,
@@ -882,7 +882,7 @@
       border-radius: 999px;
       font-size: 10px;
       font-weight: 900;
-      box-shadow: 0 12px 30px rgba(0,0,0,.3);
+      box-shadow:0 12px 30px rgba(74,68,60,.14);
     }
 
     .wa-icon {
@@ -892,10 +892,11 @@
     /* FOOTER */
 
     footer {
-      padding: 45px 0 80px;
-      text-align: center;
-      border-top: 1px solid var(--border-color);
-      background: #0b0d10;
+      padding:45px 0 80px;
+      text-align:center;
+      border-top:1px solid var(--border-color);
+      background:#F0ECE3;
+      color:var(--text-muted);
     }
 
     footer strong {
@@ -1005,6 +1006,167 @@
         right: 12px;
         bottom: 12px;
         text-align: center;
+      }
+    }
+
+  
+    .well-map{
+      margin:0 0 24px;
+      min-height:430px;
+      border:1px solid #DED8CD;
+      border-radius:16px;
+      overflow:hidden;
+      background:#FCFAF6;
+    }
+    .well-map iframe{
+      width:100%;
+      min-height:430px;
+      height:100%;
+      border:0;
+      display:block;
+    }
+
+  
+    .app-opportunities{
+      position:fixed;
+      top:18px;
+      right:18px;
+      z-index:150;
+      min-height:46px;
+      padding:0 17px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#FCFAF6;
+      color:var(--text-main);
+      border:1px solid #DED8CD;
+      box-shadow:0 10px 28px rgba(74,68,60,.12);
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.25px;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:150;
+      min-height:52px;
+      padding:0 20px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--gold-light);
+      color:var(--text-main);
+      border:1px solid rgba(198,167,107,.45);
+      box-shadow:0 10px 28px rgba(74,68,60,.14);
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.35px;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .wa-modal{
+      position:fixed;
+      inset:0;
+      z-index:1000;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      background:rgba(74,68,60,.22);
+      backdrop-filter:blur(6px);
+    }
+    .wa-modal.is-open{display:flex}
+    .wa-modal-card{
+      width:min(100%,430px);
+      background:#FCFAF6;
+      color:var(--text-main);
+      border:1px solid #DED8CD;
+      border-radius:18px;
+      padding:26px;
+      position:relative;
+      box-shadow:0 28px 80px rgba(74,68,60,.18);
+    }
+    .wa-modal-close{
+      position:absolute;
+      top:12px;
+      right:12px;
+      width:36px;
+      height:36px;
+      border:0;
+      border-radius:50%;
+      background:#F0ECE3;
+      color:var(--text-main);
+      font-size:21px;
+      cursor:pointer;
+    }
+    .wa-modal-kicker{
+      color:var(--gold);
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:1.4px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+    .wa-modal-card h3{font-size:24px;margin:0 38px 8px 0;line-height:1.15}
+    .wa-modal-card>p{color:var(--text-muted);font-size:13px;margin-bottom:18px}
+    .wa-modal-form{display:grid;gap:12px}
+    .wa-modal-form label{font-size:10px;font-weight:800}
+    .wa-modal-form input{
+      width:100%;
+      height:50px;
+      background:#FFFFFF;
+      border:1px solid #DED8CD;
+      border-radius:10px;
+      padding:0 13px;
+      color:var(--text-main);
+      font-family:inherit;
+    }
+    .wa-modal-submit{
+      width:100%;
+      min-height:52px;
+      border:0;
+      border-radius:12px;
+      background:var(--gold-light);
+      color:var(--text-main);
+      font-weight:900;
+      cursor:pointer;
+    }
+    .wa-modal-submit:disabled{opacity:.65;cursor:wait}
+    .wa-modal-status{
+      display:none;
+      padding:10px 12px;
+      border-radius:8px;
+      background:#fff4f4;
+      color:#8e2f2f;
+      font-size:11px;
+    }
+    .wa-modal-note{font-size:9px;color:var(--text-muted);text-align:center}
+
+    @media(max-width:600px){
+      .app-opportunities{
+        top:12px;
+        right:12px;
+        min-height:42px;
+        padding:0 13px;
+        font-size:9px;
+        max-width:calc(100vw - 24px);
+      }
+      .whatsapp{
+        left:auto !important;
+        right:12px !important;
+        bottom:max(12px,env(safe-area-inset-bottom)) !important;
+        width:auto !important;
+        min-height:50px;
+        padding:0 16px;
+        font-size:9px;
+        max-width:calc(100vw - 24px);
       }
     }
 
@@ -1867,6 +2029,17 @@
         </div>
 
 
+        
+        <div class="well-map">
+          <iframe
+            src="https://www.google.com/maps?q=Rua+Cardoso+de+Almeida,+Perdizes,+São+Paulo,+SP&output=embed"
+            loading="lazy"
+            title="Mapa do Well Perdizes"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
         <div class="location-box">
 
           <div class="location-card">
@@ -2302,6 +2475,57 @@
 
   </main>
 
+  <a
+    class="app-opportunities"
+    id="appOpportunitiesButton"
+    href="https://app.yincorp.com.br/"
+    target="_blank"
+    rel="noopener"
+    aria-label="Conheça outras oportunidades"
+  >
+    CONHEÇA OUTRAS OPORTUNIDADES
+  </a>
+
+  <a
+    class="whatsapp"
+    id="whatsappButton"
+    href="#"
+    role="button"
+    aria-controls="whatsappLeadModal"
+    aria-haspopup="dialog"
+    aria-label="Falar com o especialista"
+  >
+    FALAR COM O ESPECIALISTA
+  </a>
+
+  <div class="wa-modal" id="whatsappLeadModal" role="dialog" aria-modal="true" aria-labelledby="whatsappLeadTitle">
+    <div class="wa-modal-card">
+      <button type="button" class="wa-modal-close" id="whatsappLeadClose" aria-label="Fechar">×</button>
+      <div class="wa-modal-kicker">Atendimento rápido</div>
+      <h3 id="whatsappLeadTitle">Falar sobre o Well Perdizes</h3>
+      <p>Confirme seus dados para continuar no WhatsApp.</p>
+
+      <form class="wa-modal-form" id="whatsappLeadForm" autocomplete="on">
+        <div>
+          <label for="waLeadName">NOME</label>
+          <input id="waLeadName" name="name" type="text" autocomplete="name" placeholder="Seu nome" required>
+        </div>
+        <div>
+          <label for="waLeadPhone">WHATSAPP</label>
+          <input id="waLeadPhone" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999" required>
+        </div>
+        <div>
+          <label for="waLeadEmail">E-MAIL</label>
+          <input id="waLeadEmail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@email.com" required>
+        </div>
+        <button class="wa-modal-submit" id="whatsappLeadSubmit" type="submit">CONTINUAR NO WHATSAPP</button>
+        <div class="wa-modal-status" id="whatsappLeadStatus" role="alert"></div>
+        <div class="wa-modal-note">Seus dados são registrados antes de abrir a conversa.</div>
+      </form>
+    </div>
+  </div>
+
+
 
   <!-- FOOTER -->
   <footer>
@@ -2322,16 +2546,7 @@
 
 
   <!-- WHATSAPP -->
-  <a
-    class="whatsapp"
-    id="whatsappButton"
-    href="https://wa.me/5511992976368?text=Ol%C3%A1%2C%20vi%20o%20site%20do%20Well%20Perdizes%20e%20quero%20receber%20as%20condi%C3%A7%C3%B5es."
-    target="_blank"
-    rel="noopener"
-  >
-    <span class="wa-icon">◉</span>
-    FALAR COM ESPECIALISTA NO WHATSAPP
-  </a>
+  
 
 
   <script>
@@ -2729,10 +2944,7 @@
 
             setTimeout(function() {
 
-              window.open(
-                'https://wa.me/5511992976368?text=Ol%C3%A1%2C%20acabei%20de%20preencher%20o%20formul%C3%A1rio%20do%20Well%20Perdizes%20e%20quero%20receber%20as%20condi%C3%A7%C3%B5es.',
-                '_blank'
-              );
+              
 
             }, 700);
 
@@ -2752,8 +2964,7 @@
 
             if (success) {
 
-              success.textContent =
-                'Não foi possível confirmar o envio agora. Você pode falar diretamente pelo WhatsApp.';
+              success.textContent='Não foi possível confirmar o envio agora. Tente novamente.';
 
               success.style.display =
                 'block';
@@ -2772,10 +2983,7 @@
             }
 
 
-            window.open(
-              'https://wa.me/5511992976368?text=Ol%C3%A1%2C%20vi%20o%20site%20do%20Well%20Perdizes%20e%20quero%20receber%20as%20condi%C3%A7%C3%B5es.',
-              '_blank'
-            );
+            
 
           }
 
@@ -2874,7 +3082,157 @@
   <script
     src="/_vercel/speed-insights/script.js"
     defer>
-  </script>
+  
+
+    const appOpportunitiesButton=document.getElementById("appOpportunitiesButton");
+    if(appOpportunitiesButton){
+      appOpportunitiesButton.addEventListener("click",function(){
+        if(typeof window.gtag==="function"){
+          window.gtag("event","other_opportunities_click",{source:"well_perdizes"});
+        }
+        if(typeof window.fbq==="function"){
+          window.fbq("trackCustom","OtherOpportunitiesClick",{source:"well_perdizes"});
+        }
+      });
+    }
+
+    const waButton=document.getElementById("whatsappButton");
+    const waModal=document.getElementById("whatsappLeadModal");
+    const waClose=document.getElementById("whatsappLeadClose");
+    const waForm=document.getElementById("whatsappLeadForm");
+    const waSubmit=document.getElementById("whatsappLeadSubmit");
+    const waStatus=document.getElementById("whatsappLeadStatus");
+    const waName=document.getElementById("waLeadName");
+    const waPhone=document.getElementById("waLeadPhone");
+    const waEmail=document.getElementById("waLeadEmail");
+
+    function openWaModal(){
+      const mainName=document.getElementById("nome");
+      const mainPhone=document.getElementById("whatsapp");
+      if(!waName.value) waName.value=(mainName&&mainName.value.trim())||localStorage.getItem("yincorp_contact_name")||"";
+      if(!waPhone.value) waPhone.value=(mainPhone&&mainPhone.value.trim())||localStorage.getItem("yincorp_contact_phone")||"";
+      if(!waEmail.value) waEmail.value=localStorage.getItem("yincorp_contact_email")||"";
+      waStatus.style.display="none";
+      waModal.classList.add("is-open");
+      document.body.style.overflow="hidden";
+    }
+
+    function closeWaModal(){
+      waModal.classList.remove("is-open");
+      document.body.style.overflow="";
+    }
+
+    if(waButton){
+      waButton.addEventListener("click",function(e){
+        e.preventDefault();
+        if(typeof window.gtag==="function"){
+          window.gtag("event","whatsapp_click",{source:"well_perdizes",location:"floating"});
+        }
+        if(typeof window.fbq==="function"){
+          window.fbq("track","Contact",{content_name:"Well Perdizes",contact_method:"whatsapp"});
+        }
+        openWaModal();
+      });
+    }
+
+    if(waClose) waClose.addEventListener("click",closeWaModal);
+    if(waModal) waModal.addEventListener("click",function(e){
+      if(e.target===waModal) closeWaModal();
+    });
+
+    if(waForm){
+      waForm.addEventListener("submit",async function(e){
+        e.preventDefault();
+
+        const nome=waName.value.trim();
+        const telefone=waPhone.value.trim();
+        const email=waEmail.value.trim();
+        const digits=telefone.replace(/\D/g,"");
+
+        if(!nome || digits.length<10 || !email){
+          waStatus.textContent="Confirme nome, WhatsApp e e-mail para continuar.";
+          waStatus.style.display="block";
+          return;
+        }
+
+        waSubmit.disabled=true;
+        waSubmit.textContent="REGISTRANDO...";
+        waStatus.style.display="none";
+
+        const payload={
+          nome,
+          telefone,
+          email,
+          perfil:"whatsapp",
+          origem:"well-perdizes",
+          source:"well-perdizes",
+          empreendimento:"Well Perdizes",
+          property:"Well Perdizes",
+          property_name:"Well Perdizes",
+          property_value:340000,
+          neighborhood:"Perdizes",
+          pagina:window.location.href,
+          page:window.location.href,
+          mensagem:"Lead iniciado pelo botão WhatsApp da LP Well Perdizes.",
+          gclid:YINCORP_TRACKING?.gclid||"",
+          gbraid:YINCORP_TRACKING?.gbraid||"",
+          wbraid:YINCORP_TRACKING?.wbraid||"",
+          utm_source:YINCORP_TRACKING?.utm_source||"",
+          utm_medium:YINCORP_TRACKING?.utm_medium||"",
+          utm_campaign:YINCORP_TRACKING?.utm_campaign||"",
+          utm_content:YINCORP_TRACKING?.utm_content||"",
+          utm_term:YINCORP_TRACKING?.utm_term||""
+        };
+
+        try{
+          const response=await fetch("https://app.yincorp.com.br/api/lead",{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(payload)
+          });
+
+          const data=await response.json().catch(()=>({}));
+
+          if(
+            !response.ok ||
+            data.success!==true ||
+            (data.praedium!==true && data.supabase!==true)
+          ){
+            throw new Error(data.error||"A API não confirmou o armazenamento do lead");
+          }
+
+          localStorage.setItem("yincorp_contact_name",nome);
+          localStorage.setItem("yincorp_contact_phone",telefone);
+          localStorage.setItem("yincorp_contact_email",email);
+
+          if(typeof window.gtag==="function"){
+            window.gtag("event","conversion",{
+              send_to:"AW-18371236623/Icu-CMS18_ccEI-mi7hE"
+            });
+            window.gtag("event","generate_lead",{
+              source:"well_perdizes_whatsapp",
+              property:"Well Perdizes"
+            });
+          }
+
+          if(typeof window.fbq==="function"){
+            window.fbq("track","Lead",{content_name:"Well Perdizes"});
+          }
+
+          const msg="Olá, meu nome é "+nome+". Vim pelo site da Yincorp e quero informações sobre o Well Perdizes.";
+          window.location.href="https://wa.me/5511992976368?text="+encodeURIComponent(msg);
+
+        }catch(err){
+          console.error("Erro no double check WhatsApp:",err);
+          waStatus.textContent="Não conseguimos registrar seus dados. Tente novamente para continuar no WhatsApp.";
+          waStatus.style.display="block";
+          waSubmit.disabled=false;
+          waSubmit.textContent="TENTAR NOVAMENTE";
+        }
+      });
+    }
+
+</script>
 
 </body>
 </html>
