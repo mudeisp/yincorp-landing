@@ -3,84 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-
 <title>Well Perdizes | 2 dormitórios em Perdizes | Yincorp</title>
+<meta name="description" content="Conheça o Well Perdizes: apresentação, decorado e informações completas do empreendimento.">
+<link rel="canonical" href="https://www.yincorp.com.br/well-perdizes">
 
-<meta
-  name="description"
-  content="Conheça o Well Perdizes em Perdizes: apartamentos de 2 dormitórios, plantas de 34 e 37 m², lazer, decorado e condições."
->
-
-<link
-  rel="canonical"
-  href="https://www.yincorp.com.br/well-perdizes"
->
-
-<!-- =========================================================
-     GA4 + GOOGLE ADS
-========================================================= -->
-
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-Y2W11SX5VV">
-</script>
-
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2W11SX5VV"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-
-function gtag(){
-  dataLayer.push(arguments);
-}
-
-gtag("js", new Date());
-
-gtag("config", "G-Y2W11SX5VV");
-
-gtag("config", "AW-18371236623");
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());
+gtag('config','G-Y2W11SX5VV');
+gtag('config','AW-18371236623');
 </script>
-
-<!-- =========================================================
-     META PIXEL
-========================================================= -->
 
 <script>
 !function(f,b,e,v,n,t,s){
+ if(f.fbq)return;
+ n=f.fbq=function(){
+   n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+ };
+ if(!f._fbq)f._fbq=n;
+ n.push=n;
+ n.loaded=!0;
+ n.version='2.0';
+ n.queue=[];
+ t=b.createElement(e);
+ t.async=!0;
+ t.src=v;
+ s=b.getElementsByTagName(e)[0];
+ s.parentNode.insertBefore(t,s)
+}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-  if(f.fbq)return;
-
-  n=f.fbq=function(){
-    n.callMethod
-      ? n.callMethod.apply(n,arguments)
-      : n.queue.push(arguments);
-  };
-
-  if(!f._fbq)f._fbq=n;
-
-  n.push=n;
-  n.loaded=!0;
-  n.version="2.0";
-  n.queue=[];
-
-  t=b.createElement(e);
-  t.async=!0;
-  t.src=v;
-
-  s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s);
-
-}(
-  window,
-  document,
-  "script",
-  "https://connect.facebook.net/en_US/fbevents.js"
-);
-
-fbq("init","1552958819302786");
-fbq("track","PageView");
+fbq('init','1552958819302786');
+fbq('track','PageView');
 </script>
 
 <style>
-
 :root{
   --bg:#F7F4ED;
   --surface:#FCFAF6;
@@ -126,8 +84,8 @@ button{
 }
 
 a{
-  color:inherit;
   text-decoration:none;
+  color:inherit;
 }
 
 .container{
@@ -167,8 +125,8 @@ a{
   inset:0;
   width:100%!important;
   height:100%!important;
-  border:0;
   background:#000;
+  border:0;
 }
 
 .feed-overlay{
@@ -214,9 +172,9 @@ a{
       var(--gold),
       var(--gold2)
     );
-  color:#211B14;
+  color:#211b14;
   font-weight:950;
-  border:2px solid rgba(255,255,255,.90);
+  border:2px solid rgba(255,255,255,.9);
 }
 
 .profile strong{
@@ -303,7 +261,7 @@ a{
   padding:0 10px;
   border-radius:999px;
   background:rgba(255,255,255,.92);
-  color:#221D17;
+  color:#221d17;
   font-size:11px;
   font-weight:900;
   text-shadow:none;
@@ -385,7 +343,7 @@ a{
 ========================================================= */
 
 .transition{
-  padding:66px 0 34px;
+  padding:66px 0 30px;
   text-align:center;
   background:
     linear-gradient(
@@ -477,9 +435,8 @@ a{
 .amenity-card{
   background:var(--surface);
   border:1px solid var(--line);
-  border-radius:22px;
+  border-radius:20px;
   overflow:hidden;
-  box-shadow:0 8px 28px rgba(74,68,60,.06);
 }
 
 .amenity-card.featured{
@@ -494,12 +451,12 @@ a{
 }
 
 .amenity-copy{
-  padding:18px 20px 21px;
+  padding:18px 20px 20px;
 }
 
 .amenity-copy strong{
   display:block;
-  font-size:19px;
+  font-size:18px;
   margin-bottom:5px;
 }
 
@@ -514,7 +471,9 @@ a{
 
 .floorplan-wrap{
   display:grid;
-  grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);
+  grid-template-columns:
+    minmax(0,1.25fr)
+    minmax(280px,.75fr);
   gap:22px;
   align-items:center;
 }
@@ -711,7 +670,7 @@ footer{
 }
 
 /* =========================================================
-   CTAs FIXOS
+   CTAS
 ========================================================= */
 
 .floating-top{
@@ -728,7 +687,6 @@ footer{
   font-weight:900;
   display:flex;
   align-items:center;
-  backdrop-filter:blur(10px);
 }
 
 .floating-bottom{
@@ -823,7 +781,7 @@ footer{
   display:none;
   padding:10px 12px;
   border-radius:9px;
-  background:#FFF2F2;
+  background:#fff2f2;
   color:#8B3030;
   font-size:11px;
 }
@@ -853,10 +811,6 @@ footer{
     aspect-ratio:4/3;
   }
 
-  .section{
-    padding:54px 0;
-  }
-
   .reveal-left{
     transform:translateX(-45px);
   }
@@ -879,16 +833,14 @@ footer{
      FEED 1
 ========================================================= -->
 
-<section
-  class="feed-stage"
-  id="feed1">
+<section class="feed-stage" id="feed1">
 
   <div class="feed-shell">
 
     <div
       id="yt1"
       class="feed-video"
-      aria-label="Vídeo principal do Well Perdizes">
+      aria-label="Vídeo 1 - Well Perdizes">
     </div>
 
     <div class="feed-overlay"></div>
@@ -911,13 +863,15 @@ footer{
         </div>
 
         <div>
+
           <strong>
             Yincorp · Perdizes
           </strong>
 
           <span>
-            Well Perdizes
+            Novo vídeo
           </span>
+
         </div>
 
       </div>
@@ -926,7 +880,9 @@ footer{
         class="sound"
         id="sound1"
         type="button">
+
         🔇
+
       </button>
 
     </div>
@@ -938,8 +894,13 @@ footer{
         id="interest1"
         type="button">
 
-        <span class="icon">♡</span>
-        <small>Conhecer</small>
+        <span class="icon">
+          ♡
+        </span>
+
+        <small>
+          Conhecer
+        </small>
 
       </button>
 
@@ -948,8 +909,13 @@ footer{
         id="share1"
         type="button">
 
-        <span class="icon">↗</span>
-        <small>Compartilhar</small>
+        <span class="icon">
+          ↗
+        </span>
+
+        <small>
+          Compartilhar
+        </small>
 
       </button>
 
@@ -957,8 +923,13 @@ footer{
         class="feed-action"
         href="#feed2">
 
-        <span class="icon">⌄</span>
-        <small>Próximo</small>
+        <span class="icon">
+          ⌄
+        </span>
+
+        <small>
+          Próximo
+        </small>
 
       </a>
 
@@ -997,16 +968,14 @@ footer{
      FEED 2
 ========================================================= -->
 
-<section
-  class="feed-stage"
-  id="feed2">
+<section class="feed-stage" id="feed2">
 
   <div class="feed-shell">
 
     <div
       id="yt2"
       class="feed-video"
-      aria-label="Decorado do Well Perdizes">
+      aria-label="Vídeo 2 - Decorado Well Perdizes">
     </div>
 
     <div class="feed-overlay"></div>
@@ -1046,7 +1015,9 @@ footer{
         class="sound"
         id="sound2"
         type="button">
+
         🔇
+
       </button>
 
     </div>
@@ -1058,8 +1029,13 @@ footer{
         id="interest2"
         type="button">
 
-        <span class="icon">♡</span>
-        <small>Conhecer</small>
+        <span class="icon">
+          ♡
+        </span>
+
+        <small>
+          Conhecer
+        </small>
 
       </button>
 
@@ -1068,8 +1044,13 @@ footer{
         id="share2"
         type="button">
 
-        <span class="icon">↗</span>
-        <small>Compartilhar</small>
+        <span class="icon">
+          ↗
+        </span>
+
+        <small>
+          Compartilhar
+        </small>
 
       </button>
 
@@ -1077,8 +1058,13 @@ footer{
         class="feed-action"
         href="#detalhes">
 
-        <span class="icon">⌄</span>
-        <small>Detalhes</small>
+        <span class="icon">
+          ⌄
+        </span>
+
+        <small>
+          Detalhes
+        </small>
 
       </a>
 
@@ -1092,7 +1078,7 @@ footer{
 
       <p>
         Entre nos ambientes antes
-        de avançar para os detalhes.
+        de avançar para os detalhes da oferta.
       </p>
 
       <span class="feed-price">
@@ -1134,10 +1120,10 @@ footer{
     </h1>
 
     <p>
-      Conheça o condomínio,
-      a planta,
-      a localização
-      e as condições atuais.
+      Apresentação,
+      decorado
+      e toda a estrutura
+      do empreendimento.
     </p>
 
   </div>
@@ -1167,23 +1153,51 @@ footer{
     <div class="facts">
 
       <article class="fact">
-        <strong>2 dormitórios</strong>
-        <span>Tipologia em destaque.</span>
+
+        <strong>
+          2 dormitórios
+        </strong>
+
+        <span>
+          Tipologia em destaque.
+        </span>
+
       </article>
 
       <article class="fact">
-        <strong>34 e 37 m²</strong>
-        <span>Plantas disponíveis.</span>
+
+        <strong>
+          34 e 37 m²
+        </strong>
+
+        <span>
+          Plantas apresentadas.
+        </span>
+
       </article>
 
       <article class="fact">
-        <strong>Perdizes</strong>
-        <span>Zona Oeste de São Paulo.</span>
+
+        <strong>
+          Perdizes
+        </strong>
+
+        <span>
+          Zona Oeste de São Paulo.
+        </span>
+
       </article>
 
       <article class="fact">
-        <strong>R$ 340 mil</strong>
-        <span>A partir de.</span>
+
+        <strong>
+          R$ 340 mil
+        </strong>
+
+        <span>
+          Preço anunciado a partir de.
+        </span>
+
       </article>
 
     </div>
@@ -1209,12 +1223,14 @@ footer{
       </div>
 
       <h2>
-        Um condomínio pensado
-        para rotina, bem-estar e convivência.
+        Um condomínio pensado para rotina,
+        bem-estar e convivência.
       </h2>
 
       <p>
-        Veja alguns dos principais ambientes
+        Depois dos vídeos,
+        a navegação continua visual:
+        veja alguns dos principais ambientes
         do Well Perdizes.
       </p>
 
@@ -1229,7 +1245,7 @@ footer{
         id="lobbyCard">
 
         <img
-          src="/well-lobby.jpg"
+          src="well-lobby.jpg"
           alt="Lobby do Well Perdizes"
           loading="lazy">
 
@@ -1240,7 +1256,7 @@ footer{
           </strong>
 
           <span>
-            Uma recepção contemporânea
+            Uma recepção contemporânea,
             integrada ao paisagismo
             e às áreas de convivência.
           </span>
@@ -1256,7 +1272,7 @@ footer{
         id="poolCard">
 
         <img
-          src="/well-piscina.jpg"
+          src="well-piscina.jpg"
           alt="Piscina com raia de 25 metros do Well Perdizes"
           loading="lazy">
 
@@ -1282,7 +1298,7 @@ footer{
         id="fitnessCard">
 
         <img
-          src="/well-fitness.jpg"
+          src="well-fitness.jpg"
           alt="Fitness do Well Perdizes"
           loading="lazy">
 
@@ -1308,7 +1324,7 @@ footer{
         id="rooftopCard">
 
         <img
-          src="/well-rooftop.jpg"
+          src="well-rooftop.jpg"
           alt="Rooftop do Well Perdizes"
           loading="lazy">
 
@@ -1335,7 +1351,7 @@ footer{
         id="beachCard">
 
         <img
-          src="/well-beach-sports.jpg"
+          src="well-beach-sports.jpg"
           alt="Quadra de beach sports do Well Perdizes"
           loading="lazy">
 
@@ -1348,7 +1364,7 @@ footer{
           <span>
             Mais uma opção de esporte
             e convivência
-            dentro do empreendimento.
+            no próprio empreendimento.
           </span>
 
         </div>
@@ -1382,7 +1398,7 @@ footer{
       </h2>
 
       <p>
-        Uma planta compacta
+        Uma planta compacta,
         com dois dormitórios
         e ambientes integrados.
       </p>
@@ -1395,7 +1411,7 @@ footer{
         class="floorplan-media reveal reveal-scale">
 
         <img
-          src="/well-planta-34m2.jpg"
+          src="well-planta-34m2.jpg"
           alt="Planta de 34 m² com 2 dormitórios do Well Perdizes"
           loading="lazy">
 
@@ -1416,13 +1432,21 @@ footer{
 
         <ul class="floorplan-list">
 
-          <li>2 dormitórios</li>
+          <li>
+            2 dormitórios
+          </li>
 
-          <li>Sala integrada</li>
+          <li>
+            Sala integrada
+          </li>
 
-          <li>Cozinha funcional</li>
+          <li>
+            Cozinha funcional
+          </li>
 
-          <li>Banheiro</li>
+          <li>
+            Banheiro
+          </li>
 
           <li>
             Planta otimizada para o dia a dia
@@ -1678,13 +1702,11 @@ footer{
 
     <form
       class="form"
-      id="leadForm"
-      autocomplete="on">
+      id="leadForm">
 
       <input
         id="leadName"
         class="field"
-        type="text"
         autocomplete="name"
         placeholder="Seu nome"
         required>
@@ -1732,7 +1754,7 @@ footer{
    ATRIBUIÇÃO
 ========================================================= */
 
-const TRACKING_KEYS = [
+const KEYS=[
   "gclid",
   "gbraid",
   "wbraid",
@@ -1743,60 +1765,61 @@ const TRACKING_KEYS = [
   "utm_term"
 ];
 
-const ATTR = {};
+const ATTR={};
 
-const urlParams =
+const qs=
   new URLSearchParams(
-    window.location.search
+    location.search
   );
 
-TRACKING_KEYS.forEach(key=>{
+KEYS.forEach(k=>{
 
-  const incoming =
-    urlParams.get(key);
+  const x=
+    qs.get(k);
 
-  if(incoming){
+  if(x){
 
     localStorage.setItem(
-      "yincorp_" + key,
-      incoming
+      "yincorp_"+k,
+      x
     );
 
   }
 
-  ATTR[key] =
-    incoming ||
+  ATTR[k]=
+    x ||
     localStorage.getItem(
-      "yincorp_" + key
+      "yincorp_"+k
     ) ||
     "";
 
 });
 
 /* =========================================================
-   SESSION ID
+   SESSION + BEHAVIOR TRACKING
 ========================================================= */
 
 function getOrCreateSessionId(){
 
-  const key =
+  const key=
     "yincorp_session_id";
 
-  let id =
+  let id=
     sessionStorage.getItem(key);
 
   if(!id){
 
-    id =
-      window.crypto &&
-      crypto.randomUUID
-
-      ? crypto.randomUUID()
-
+    id=
+      (
+        window.crypto &&
+        crypto.randomUUID
+      )
+      ?
+      crypto.randomUUID()
       :
-      "sess_" +
-      Date.now() +
-      "_" +
+      "sess_"+
+      Date.now()+
+      "_"+
       Math.random()
         .toString(36)
         .slice(2,10);
@@ -1811,60 +1834,66 @@ function getOrCreateSessionId(){
   return id;
 }
 
-const SESSION_ID =
+const SESSION_ID=
   getOrCreateSessionId();
 
-/* =========================================================
-   JORNADA
-========================================================= */
-
-const JOURNEY = {
-
+const JOURNEY={
   feed1_max:0,
-
   feed2_max:0,
-
   feed1_complete:false,
-
   feed2_complete:false,
-
   audio_enabled:false,
-
   lp_reached:false,
-
   offer_view:false
-
 };
 
-const EVENT_ONCE =
+const EVENT_ONCE=
   new Set();
+
+window.testYincorpTelemetry=
+function(){
+
+  sendBehaviorEvent(
+    "telemetry_test",
+    {
+      manual_test:true,
+      timestamp:
+        Date.now()
+    }
+  );
+
+  return
+    "telemetry_test enviado";
+
+};
 
 /* =========================================================
    TELEMETRIA
 ========================================================= */
 
-const TELEMETRY_ENDPOINT =
+const TELEMETRY_ENDPOINT=
   "https://app.yincorp.com.br/api/event";
 
-function sendToTelemetryApi(payload){
+function sendToTelemetryApi(
+  payload
+){
 
-  const body =
-    JSON.stringify(payload);
+  const body=
+    JSON.stringify(
+      payload
+    );
 
   if(
     navigator.sendBeacon &&
     (
-      document.visibilityState ===
-        "hidden"
-      ||
-      payload.event_name ===
-        "session_summary"
+      document.visibilityState==="hidden" ||
+      payload.event_name==="session_summary"
     )
   ){
 
     try{
 
-      const blob =
+      const blob=
         new Blob(
           [body],
           {
@@ -1879,7 +1908,7 @@ function sendToTelemetryApi(payload){
 
       return;
 
-    }catch(error){}
+    }catch(e){}
 
   }
 
@@ -1898,7 +1927,9 @@ function sendToTelemetryApi(payload){
       keepalive:true
     }
   )
-  .catch(()=>{});
+  .catch(
+    ()=>{}
+  );
 
 }
 
@@ -1907,9 +1938,10 @@ function sendBehaviorEvent(
   params={}
 ){
 
-  const payload = {
+  const payload={
 
-    event_name:name,
+    event_name:
+      name,
 
     session_id:
       SESSION_ID,
@@ -1961,8 +1993,7 @@ function sendBehaviorEvent(
   };
 
   if(
-    typeof gtag ===
-    "function"
+    typeof gtag==="function"
   ){
 
     gtag(
@@ -1974,8 +2005,7 @@ function sendBehaviorEvent(
   }
 
   if(
-    typeof fbq ===
-    "function"
+    typeof fbq==="function"
   ){
 
     fbq(
@@ -1986,7 +2016,7 @@ function sendBehaviorEvent(
 
   }
 
-  window.dataLayer =
+  window.dataLayer=
     window.dataLayer || [];
 
   window.dataLayer.push({
@@ -2021,25 +2051,7 @@ function trackOnce(
 }
 
 /* =========================================================
-   TESTE MANUAL
-========================================================= */
-
-window.testYincorpTelemetry =
-  function(){
-
-    sendBehaviorEvent(
-      "telemetry_test",
-      {
-        manual_test:true
-      }
-    );
-
-    return "telemetry_test enviado";
-
-  };
-
-/* =========================================================
-   INÍCIO DA SESSÃO
+   LANDING SESSION
 ========================================================= */
 
 trackOnce(
@@ -2047,6 +2059,9 @@ trackOnce(
   {
     entry_path:
       location.pathname,
+
+    referrer:
+      document.referrer || "",
 
     screen_width:
       window.innerWidth,
@@ -2057,55 +2072,209 @@ trackOnce(
 );
 
 /* =========================================================
-   YOUTUBE
+   VIDEO TRACKING
 ========================================================= */
 
-const tap1 =
-  document.getElementById("tap1");
+function trackVideoQuartiles(
+  feedNumber,
+  percent
+){
 
-const tap2 =
-  document.getElementById("tap2");
+  const rounded=
+    Math.max(
+      0,
+      Math.min(
+        100,
+        Math.floor(percent)
+      )
+    );
 
-const sound1 =
-  document.getElementById("sound1");
+  if(feedNumber===1){
 
-const sound2 =
-  document.getElementById("sound2");
+    JOURNEY.feed1_max=
+      Math.max(
+        JOURNEY.feed1_max,
+        rounded
+      );
 
-const progress1 =
-  document.getElementById("progress1");
+    if(rounded>=25){
 
-const progress2 =
-  document.getElementById("progress2");
+      trackOnce(
+        "feed_1_video_25",
+        {
+          video_percent:25
+        }
+      );
 
-const feed1 =
-  document.getElementById("feed1");
+    }
 
-const feed2 =
-  document.getElementById("feed2");
+    if(rounded>=50){
 
-let yt1 = null;
-let yt2 = null;
+      trackOnce(
+        "feed_1_video_50",
+        {
+          video_percent:50
+        }
+      );
 
-let yt1Ready = false;
-let yt2Ready = false;
+    }
 
-let audioUnlocked = false;
+    if(rounded>=75){
 
-const VIDEO_1_ID =
+      trackOnce(
+        "feed_1_video_75",
+        {
+          video_percent:75
+        }
+      );
+
+    }
+
+    if(rounded>=95){
+
+      JOURNEY.feed1_complete=
+        true;
+
+      trackOnce(
+        "feed_1_video_complete",
+        {
+          video_percent:100
+        }
+      );
+
+    }
+
+  }
+
+  if(feedNumber===2){
+
+    JOURNEY.feed2_max=
+      Math.max(
+        JOURNEY.feed2_max,
+        rounded
+      );
+
+    if(rounded>=25){
+
+      trackOnce(
+        "feed_2_video_25",
+        {
+          video_percent:25
+        }
+      );
+
+    }
+
+    if(rounded>=50){
+
+      trackOnce(
+        "feed_2_video_50",
+        {
+          video_percent:50
+        }
+      );
+
+    }
+
+    if(rounded>=75){
+
+      trackOnce(
+        "feed_2_video_75",
+        {
+          video_percent:75
+        }
+      );
+
+    }
+
+    if(rounded>=95){
+
+      JOURNEY.feed2_complete=
+        true;
+
+      trackOnce(
+        "feed_2_video_complete",
+        {
+          video_percent:100
+        }
+      );
+
+    }
+
+  }
+
+}
+
+/* =========================================================
+   ELEMENTOS
+========================================================= */
+
+const tap1=
+  document.getElementById(
+    "tap1"
+  );
+
+const tap2=
+  document.getElementById(
+    "tap2"
+  );
+
+const sound1=
+  document.getElementById(
+    "sound1"
+  );
+
+const sound2=
+  document.getElementById(
+    "sound2"
+  );
+
+const progress1=
+  document.getElementById(
+    "progress1"
+  );
+
+const progress2=
+  document.getElementById(
+    "progress2"
+  );
+
+const feed1=
+  document.getElementById(
+    "feed1"
+  );
+
+const feed2=
+  document.getElementById(
+    "feed2"
+  );
+
+let yt1=null;
+let yt2=null;
+
+let yt1Ready=false;
+let yt2Ready=false;
+
+let audioUnlocked=false;
+
+const VIDEO_1_ID=
   "0Bpx87BMuck";
 
-const VIDEO_2_ID =
+const VIDEO_2_ID=
   "RCHJn8uGTp4";
+
+/* =========================================================
+   AUDIO
+========================================================= */
 
 function updateAudioUI(){
 
-  sound1.textContent =
+  sound1.textContent=
     audioUnlocked
       ? "🔊"
       : "🔇";
 
-  sound2.textContent =
+  sound2.textContent=
     audioUnlocked
       ? "🔊"
       : "🔇";
@@ -2129,8 +2298,8 @@ function setPlayerAudio(
 ){
 
   if(
-    !player ||
-    !ready
+    !ready ||
+    !player
   ){
     return;
   }
@@ -2138,13 +2307,17 @@ function setPlayerAudio(
   if(enabled){
 
     player.unMute();
-    player.setVolume(100);
+
+    player.setVolume(
+      100
+    );
 
   }else{
 
     player.mute();
 
   }
+
 }
 
 function playPlayer(
@@ -2153,15 +2326,18 @@ function playPlayer(
 ){
 
   if(
-    player &&
-    ready
+    ready &&
+    player
   ){
 
     try{
+
       player.playVideo();
-    }catch(error){}
+
+    }catch(e){}
 
   }
+
 }
 
 function pausePlayer(
@@ -2170,326 +2346,184 @@ function pausePlayer(
 ){
 
   if(
-    player &&
-    ready
+    ready &&
+    player
   ){
 
     try{
+
       player.pauseVideo();
-    }catch(error){}
+
+    }catch(e){}
 
   }
+
 }
 
 /* =========================================================
-   QUARTIS
+   YOUTUBE API
 ========================================================= */
 
-function trackVideoQuartiles(
-  feedNumber,
-  percent
-){
+window.onYouTubeIframeAPIReady=
+function(){
 
-  const rounded =
-    Math.max(
-      0,
-      Math.min(
-        100,
-        Math.floor(percent)
-      )
-    );
+  yt1=
+    new YT.Player(
+      "yt1",
+      {
+        videoId:
+          VIDEO_1_ID,
 
-  if(feedNumber === 1){
-
-    JOURNEY.feed1_max =
-      Math.max(
-        JOURNEY.feed1_max,
-        rounded
-      );
-
-    if(rounded >= 25){
-
-      trackOnce(
-        "feed_1_video_25",
-        {
-          video_percent:25
-        }
-      );
-
-    }
-
-    if(rounded >= 50){
-
-      trackOnce(
-        "feed_1_video_50",
-        {
-          video_percent:50
-        }
-      );
-
-    }
-
-    if(rounded >= 75){
-
-      trackOnce(
-        "feed_1_video_75",
-        {
-          video_percent:75
-        }
-      );
-
-    }
-
-    if(rounded >= 95){
-
-      JOURNEY.feed1_complete =
-        true;
-
-      trackOnce(
-        "feed_1_video_complete",
-        {
-          video_percent:100
-        }
-      );
-
-    }
-
-  }
-
-  if(feedNumber === 2){
-
-    JOURNEY.feed2_max =
-      Math.max(
-        JOURNEY.feed2_max,
-        rounded
-      );
-
-    if(rounded >= 25){
-
-      trackOnce(
-        "feed_2_video_25",
-        {
-          video_percent:25
-        }
-      );
-
-    }
-
-    if(rounded >= 50){
-
-      trackOnce(
-        "feed_2_video_50",
-        {
-          video_percent:50
-        }
-      );
-
-    }
-
-    if(rounded >= 75){
-
-      trackOnce(
-        "feed_2_video_75",
-        {
-          video_percent:75
-        }
-      );
-
-    }
-
-    if(rounded >= 95){
-
-      JOURNEY.feed2_complete =
-        true;
-
-      trackOnce(
-        "feed_2_video_complete",
-        {
-          video_percent:100
-        }
-      );
-
-    }
-
-  }
-}
-
-/* =========================================================
-   CRIA PLAYERS
-========================================================= */
-
-window.onYouTubeIframeAPIReady =
-  function(){
-
-    yt1 =
-      new YT.Player(
-        "yt1",
-        {
-          videoId:
+        playerVars:{
+          autoplay:1,
+          mute:1,
+          controls:0,
+          loop:1,
+          playlist:
             VIDEO_1_ID,
+          playsinline:1,
+          rel:0,
+          fs:0,
+          modestbranding:1
+        },
 
-          playerVars:{
-            autoplay:1,
-            mute:1,
-            controls:0,
-            loop:1,
-            playlist:
-              VIDEO_1_ID,
-            playsinline:1,
-            rel:0,
-            fs:0,
-            modestbranding:1
-          },
+        events:{
+          onReady:function(e){
 
-          events:{
+            yt1Ready=true;
 
-            onReady:function(event){
+            e.target.mute();
 
-              yt1Ready =
-                true;
-
-              event.target.mute();
-
-              event.target.playVideo();
-
-            }
+            e.target.playVideo();
 
           }
         }
-      );
-
-    yt2 =
-      new YT.Player(
-        "yt2",
-        {
-          videoId:
-            VIDEO_2_ID,
-
-          playerVars:{
-            autoplay:0,
-            mute:1,
-            controls:0,
-            loop:1,
-            playlist:
-              VIDEO_2_ID,
-            playsinline:1,
-            rel:0,
-            fs:0,
-            modestbranding:1
-          },
-
-          events:{
-
-            onReady:function(event){
-
-              yt2Ready =
-                true;
-
-              event.target.mute();
-
-            }
-
-          }
-        }
-      );
-
-    setInterval(
-      ()=>{
-
-        if(
-          yt1Ready &&
-          yt1
-        ){
-
-          const duration =
-            yt1.getDuration?.() || 0;
-
-          const current =
-            yt1.getCurrentTime?.() || 0;
-
-          if(duration > 0){
-
-            const percent =
-              (
-                current /
-                duration
-              ) * 100;
-
-            progress1.style.width =
-              percent + "%";
-
-            trackVideoQuartiles(
-              1,
-              percent
-            );
-
-          }
-
-        }
-
-        if(
-          yt2Ready &&
-          yt2
-        ){
-
-          const duration =
-            yt2.getDuration?.() || 0;
-
-          const current =
-            yt2.getCurrentTime?.() || 0;
-
-          if(duration > 0){
-
-            const percent =
-              (
-                current /
-                duration
-              ) * 100;
-
-            progress2.style.width =
-              percent + "%";
-
-            trackVideoQuartiles(
-              2,
-              percent
-            );
-
-          }
-
-        }
-
-      },
-      500
+      }
     );
 
-  };
+  yt2=
+    new YT.Player(
+      "yt2",
+      {
+        videoId:
+          VIDEO_2_ID,
 
-const youtubeApi =
-  document.createElement("script");
+        playerVars:{
+          autoplay:0,
+          mute:1,
+          controls:0,
+          loop:1,
+          playlist:
+            VIDEO_2_ID,
+          playsinline:1,
+          rel:0,
+          fs:0,
+          modestbranding:1
+        },
 
-youtubeApi.src =
+        events:{
+          onReady:function(e){
+
+            yt2Ready=true;
+
+            e.target.mute();
+
+          }
+        }
+      }
+    );
+
+  setInterval(
+    ()=>{
+
+      if(
+        yt1Ready &&
+        yt1
+      ){
+
+        const d=
+          yt1.getDuration?.() || 0;
+
+        const c=
+          yt1.getCurrentTime?.() || 0;
+
+        if(d>0){
+
+          const pct=
+            (c/d)*100;
+
+          progress1.style.width=
+            pct+"%";
+
+          trackVideoQuartiles(
+            1,
+            pct
+          );
+
+        }
+
+      }
+
+      if(
+        yt2Ready &&
+        yt2
+      ){
+
+        const d=
+          yt2.getDuration?.() || 0;
+
+        const c=
+          yt2.getCurrentTime?.() || 0;
+
+        if(d>0){
+
+          const pct=
+            (c/d)*100;
+
+          progress2.style.width=
+            pct+"%";
+
+          trackVideoQuartiles(
+            2,
+            pct
+          );
+
+        }
+
+      }
+
+    },
+    250
+  );
+
+};
+
+const ytApi=
+  document.createElement(
+    "script"
+  );
+
+ytApi.src=
   "https://www.youtube.com/iframe_api";
 
 document.head.appendChild(
-  youtubeApi
+  ytApi
 );
 
 /* =========================================================
-   ÁUDIO
+   HABILITAR AUDIO
 ========================================================= */
 
 function enableAudioFor(
   feedNumber
 ){
 
-  audioUnlocked =
-    true;
+  audioUnlocked=true;
 
-  JOURNEY.audio_enabled =
-    true;
+  JOURNEY.audio_enabled=true;
 
   trackOnce(
-    feedNumber === 1
+    feedNumber===1
       ? "feed_1_audio_on"
       : "feed_2_audio_on",
     {
@@ -2512,7 +2546,7 @@ function enableAudioFor(
 
   updateAudioUI();
 
-  if(feedNumber === 1){
+  if(feedNumber===1){
 
     playPlayer(
       yt1,
@@ -2527,62 +2561,98 @@ function enableAudioFor(
     );
 
   }
+
 }
 
 tap1.addEventListener(
   "click",
-  ()=>enableAudioFor(1)
+  ()=>{
+    enableAudioFor(1);
+  }
 );
 
 tap2.addEventListener(
   "click",
-  ()=>enableAudioFor(2)
+  ()=>{
+    enableAudioFor(2);
+  }
 );
 
-function toggleSound(
-  feedNumber
-){
+sound1.addEventListener(
+  "click",
+  ()=>{
 
-  audioUnlocked =
-    !audioUnlocked;
+    audioUnlocked=
+      !audioUnlocked;
 
-  setPlayerAudio(
-    yt1,
-    yt1Ready,
-    audioUnlocked
-  );
-
-  setPlayerAudio(
-    yt2,
-    yt2Ready,
-    audioUnlocked
-  );
-
-  updateAudioUI();
-
-  if(audioUnlocked){
-
-    JOURNEY.audio_enabled =
-      true;
-
-    trackOnce(
-      feedNumber === 1
-        ? "feed_1_audio_on"
-        : "feed_2_audio_on",
-      {
-        feed_number:
-          feedNumber
-      }
+    setPlayerAudio(
+      yt1,
+      yt1Ready,
+      audioUnlocked
     );
 
-    if(feedNumber === 1){
+    setPlayerAudio(
+      yt2,
+      yt2Ready,
+      audioUnlocked
+    );
+
+    updateAudioUI();
+
+    if(audioUnlocked){
+
+      JOURNEY.audio_enabled=
+        true;
+
+      trackOnce(
+        "feed_1_audio_on",
+        {
+          feed_number:1
+        }
+      );
 
       playPlayer(
         yt1,
         yt1Ready
       );
 
-    }else{
+    }
+
+  }
+);
+
+sound2.addEventListener(
+  "click",
+  ()=>{
+
+    audioUnlocked=
+      !audioUnlocked;
+
+    setPlayerAudio(
+      yt1,
+      yt1Ready,
+      audioUnlocked
+    );
+
+    setPlayerAudio(
+      yt2,
+      yt2Ready,
+      audioUnlocked
+    );
+
+    updateAudioUI();
+
+    if(audioUnlocked){
+
+      JOURNEY.audio_enabled=
+        true;
+
+      trackOnce(
+        "feed_2_audio_on",
+        {
+          feed_number:2
+        }
+      );
 
       playPlayer(
         yt2,
@@ -2592,23 +2662,13 @@ function toggleSound(
     }
 
   }
-}
-
-sound1.addEventListener(
-  "click",
-  ()=>toggleSound(1)
-);
-
-sound2.addEventListener(
-  "click",
-  ()=>toggleSound(2)
 );
 
 /* =========================================================
-   TROCA AUTOMÁTICA ENTRE VÍDEOS
+   TROCA AUTOMÁTICA DOS FEEDS
 ========================================================= */
 
-const videoObserver =
+const observer=
   new IntersectionObserver(
     entries=>{
 
@@ -2616,14 +2676,12 @@ const videoObserver =
         entry=>{
 
           if(
-            entry.target.id ===
-            "feed1"
+            entry.target.id==="feed1"
           ){
 
             if(
               entry.isIntersecting &&
-              entry.intersectionRatio >=
-                .45
+              entry.intersectionRatio>=.45
             ){
 
               trackOnce(
@@ -2654,14 +2712,12 @@ const videoObserver =
           }
 
           if(
-            entry.target.id ===
-            "feed2"
+            entry.target.id==="feed2"
           ){
 
             if(
               entry.isIntersecting &&
-              entry.intersectionRatio >=
-                .30
+              entry.intersectionRatio>=.30
             ){
 
               trackOnce(
@@ -2715,27 +2771,93 @@ const videoObserver =
     }
   );
 
-videoObserver.observe(feed1);
-videoObserver.observe(feed2);
+observer.observe(feed1);
+observer.observe(feed2);
 
 /* =========================================================
-   SECTION TRACKING
+   SESSION SUMMARY
+========================================================= */
+
+let sessionSummarySent=false;
+
+function sendSessionSummary(){
+
+  if(
+    sessionSummarySent
+  ){
+    return;
+  }
+
+  sessionSummarySent=true;
+
+  sendBehaviorEvent(
+    "session_summary",
+    {
+      feed1_percent:
+        JOURNEY.feed1_max,
+
+      feed2_percent:
+        JOURNEY.feed2_max,
+
+      feed1_complete:
+        JOURNEY.feed1_complete,
+
+      feed2_complete:
+        JOURNEY.feed2_complete,
+
+      audio_enabled:
+        JOURNEY.audio_enabled,
+
+      lp_reached:
+        JOURNEY.lp_reached,
+
+      offer_view:
+        JOURNEY.offer_view
+    }
+  );
+
+}
+
+document.addEventListener(
+  "visibilitychange",
+  ()=>{
+
+    if(
+      document.visibilityState==="hidden"
+    ){
+
+      sendSessionSummary();
+
+    }
+
+  }
+);
+
+window.addEventListener(
+  "pagehide",
+  sendSessionSummary
+);
+
+/* =========================================================
+   TRACKING DAS SEÇÕES
 ========================================================= */
 
 function observeSection(
   id,
   eventName,
-  ratio=.30
+  ratio=.35
 ){
 
-  const element =
-    document.getElementById(id);
+  const el=
+    document.getElementById(
+      id
+    );
 
-  if(!element){
+  if(!el){
     return;
   }
 
-  const observer =
+  const obs=
     new IntersectionObserver(
       entries=>{
 
@@ -2744,26 +2866,23 @@ function observeSection(
 
             if(
               entry.isIntersecting &&
-              entry.intersectionRatio >=
-                ratio
+              entry.intersectionRatio>=ratio
             ){
 
               if(
-                eventName ===
-                "lp_reached"
+                eventName==="lp_reached"
               ){
 
-                JOURNEY.lp_reached =
+                JOURNEY.lp_reached=
                   true;
 
               }
 
               if(
-                eventName ===
-                "offer_view"
+                eventName==="offer_view"
               ){
 
-                JOURNEY.offer_view =
+                JOURNEY.offer_view=
                   true;
 
               }
@@ -2782,7 +2901,7 @@ function observeSection(
                 }
               );
 
-              observer.disconnect();
+              obs.disconnect();
 
             }
 
@@ -2797,9 +2916,7 @@ function observeSection(
       }
     );
 
-  observer.observe(
-    element
-  );
+  obs.observe(el);
 
 }
 
@@ -2812,67 +2929,67 @@ observeSection(
 observeSection(
   "amenitiesSection",
   "amenities_section_view",
-  .20
+  .25
 );
 
 observeSection(
   "lobbyCard",
   "lobby_view",
-  .35
+  .45
 );
 
 observeSection(
   "poolCard",
   "pool_view",
-  .35
+  .45
 );
 
 observeSection(
   "fitnessCard",
   "fitness_view",
-  .35
+  .45
 );
 
 observeSection(
   "rooftopCard",
   "rooftop_view",
-  .35
+  .45
 );
 
 observeSection(
   "beachCard",
   "beach_sports_view",
-  .35
+  .45
 );
 
 observeSection(
   "floorplanSection",
   "floorplan_view",
-  .25
+  .30
 );
 
 observeSection(
   "locationSection",
   "location_view",
-  .25
+  .30
 );
 
 observeSection(
   "offerSection",
   "offer_view",
-  .25
+  .30
 );
 
 /* =========================================================
-   SCROLL REVEAL
+   REVEAL DAS IMAGENS
 ========================================================= */
 
-const revealElements =
+const revealElements=
   document.querySelectorAll(
     ".reveal"
   );
 
-const revealObserver =
+const revealObserver=
   new IntersectionObserver(
     entries=>{
 
@@ -2901,9 +3018,10 @@ const revealObserver =
 
     },
     {
-      threshold:.15,
+      threshold:.18,
+
       rootMargin:
-        "0px 0px -5% 0px"
+        "0px 0px -8% 0px"
     }
   );
 
@@ -2921,7 +3039,7 @@ revealElements.forEach(
    COMPARTILHAR
 ========================================================= */
 
-function sharePage(text){
+function share(text){
 
   sendBehaviorEvent(
     "share_click",
@@ -2931,10 +3049,10 @@ function sharePage(text){
   );
 
   window.open(
-    "https://wa.me/?text=" +
+    "https://wa.me/?text="+
     encodeURIComponent(
-      text +
-      "\n" +
+      text+
+      "\n"+
       location.href
     ),
     "_blank",
@@ -2944,20 +3062,24 @@ function sharePage(text){
 }
 
 document
-  .getElementById("share1")
+  .getElementById(
+    "share1"
+  )
   .addEventListener(
     "click",
-    ()=>sharePage(
+    ()=>share(
       "Well Perdizes · 2 dormitórios em Perdizes · a partir de R$ 340 mil"
     )
   );
 
 document
-  .getElementById("share2")
+  .getElementById(
+    "share2"
+  )
   .addEventListener(
     "click",
-    ()=>sharePage(
-      "Veja o decorado do Well Perdizes"
+    ()=>share(
+      "Well Perdizes · veja o decorado"
     )
   );
 
@@ -2965,42 +3087,42 @@ document
    MODAL
 ========================================================= */
 
-const modal =
+const modal=
   document.getElementById(
     "leadModal"
   );
 
-const closeModalButton =
+const close=
   document.getElementById(
     "leadClose"
   );
 
-const form =
+const form=
   document.getElementById(
     "leadForm"
   );
 
-const submitButton =
+const submit=
   document.getElementById(
     "leadSubmit"
   );
 
-const statusBox =
+const status=
   document.getElementById(
     "leadStatus"
   );
 
-const nameInput =
+const nameInput=
   document.getElementById(
     "leadName"
   );
 
-const phoneInput =
+const phoneInput=
   document.getElementById(
     "leadPhone"
   );
 
-const emailInput =
+const emailInput=
   document.getElementById(
     "leadEmail"
   );
@@ -3027,35 +3149,35 @@ function openLead(){
     }
   );
 
-  nameInput.value =
+  nameInput.value=
     nameInput.value ||
     localStorage.getItem(
       "yincorp_contact_name"
     ) ||
     "";
 
-  phoneInput.value =
+  phoneInput.value=
     phoneInput.value ||
     localStorage.getItem(
       "yincorp_contact_phone"
     ) ||
     "";
 
-  emailInput.value =
+  emailInput.value=
     emailInput.value ||
     localStorage.getItem(
       "yincorp_contact_email"
     ) ||
     "";
 
-  statusBox.style.display =
+  status.style.display=
     "none";
 
   modal.classList.add(
     "open"
   );
 
-  document.body.style.overflow =
+  document.body.style.overflow=
     "hidden";
 
 }
@@ -3066,12 +3188,16 @@ function closeLead(){
     "open"
   );
 
-  document.body.style.overflow =
+  document.body.style.overflow=
     "";
 
 }
 
-function trackSpecialistClick(
+/* =========================================================
+   CTAS
+========================================================= */
+
+function specialistClick(
   placement
 ){
 
@@ -3093,52 +3219,64 @@ function trackSpecialistClick(
 }
 
 document
-  .getElementById("interest1")
+  .getElementById(
+    "interest1"
+  )
   .addEventListener(
     "click",
-    ()=>trackSpecialistClick(
+    ()=>specialistClick(
       "feed_1"
     )
   );
 
 document
-  .getElementById("interest2")
+  .getElementById(
+    "interest2"
+  )
   .addEventListener(
     "click",
-    ()=>trackSpecialistClick(
+    ()=>specialistClick(
       "feed_2"
     )
   );
 
 document
-  .getElementById("floorplanInterest")
+  .getElementById(
+    "floorplanInterest"
+  )
   .addEventListener(
     "click",
-    ()=>trackSpecialistClick(
+    ()=>specialistClick(
       "floorplan"
     )
   );
 
 document
-  .getElementById("offerInterest")
+  .getElementById(
+    "offerInterest"
+  )
   .addEventListener(
     "click",
-    ()=>trackSpecialistClick(
+    ()=>specialistClick(
       "offer"
     )
   );
 
 document
-  .getElementById("floatingInterest")
+  .getElementById(
+    "floatingInterest"
+  )
   .addEventListener(
     "click",
-    ()=>trackSpecialistClick(
+    ()=>specialistClick(
       "floating_bottom"
     )
   );
 
 document
-  .getElementById("otherOpportunities")
+  .getElementById(
+    "otherOpportunities"
+  )
   .addEventListener(
     "click",
     ()=>{
@@ -3160,19 +3298,17 @@ document
     }
   );
 
-closeModalButton
-  .addEventListener(
-    "click",
-    closeLead
-  );
+close.addEventListener(
+  "click",
+  closeLead
+);
 
 modal.addEventListener(
   "click",
-  event=>{
+  e=>{
 
     if(
-      event.target ===
-      modal
+      e.target===modal
     ){
 
       closeLead();
@@ -3186,7 +3322,7 @@ modal.addEventListener(
    FORM START
 ========================================================= */
 
-let formStarted = false;
+let formStarted=false;
 
 [
   nameInput,
@@ -3204,8 +3340,7 @@ let formStarted = false;
           return;
         }
 
-        formStarted =
-          true;
+        formStarted=true;
 
         sendBehaviorEvent(
           "lead_form_start",
@@ -3225,26 +3360,26 @@ let formStarted = false;
 );
 
 /* =========================================================
-   SUBMIT
+   FORM SUBMIT
 ========================================================= */
 
 form.addEventListener(
   "submit",
-  async event=>{
+  async e=>{
 
-    event.preventDefault();
+    e.preventDefault();
 
-    const nome =
+    const nome=
       nameInput
         .value
         .trim();
 
-    const telefone =
+    const telefone=
       phoneInput
         .value
         .trim();
 
-    const email =
+    const email=
       emailInput
         .value
         .trim();
@@ -3257,13 +3392,14 @@ form.addEventListener(
       !email
     ){
 
-      statusBox.textContent =
+      status.textContent=
         "Confirme nome, WhatsApp e e-mail para continuar.";
 
-      statusBox.style.display =
+      status.style.display=
         "block";
 
       return;
+
     }
 
     sendBehaviorEvent(
@@ -3286,18 +3422,17 @@ form.addEventListener(
       }
     );
 
-    submitButton.disabled =
-      true;
+    submit.disabled=true;
 
-    submitButton.textContent =
+    submit.textContent=
       "REGISTRANDO...";
 
-    statusBox.style.display =
+    status.style.display=
       "none";
 
     try{
 
-      const response =
+      const response=
         await fetch(
           "https://app.yincorp.com.br/api/lead",
           {
@@ -3358,7 +3493,7 @@ form.addEventListener(
                     JOURNEY.offer_view,
 
                   mensagem:
-                    "Lead gerado pela LP do Well Perdizes.",
+                    "Lead gerado pela LP de dois feeds do Well Perdizes.",
 
                   ...ATTR
                 }
@@ -3366,7 +3501,7 @@ form.addEventListener(
           }
         );
 
-      const data =
+      const data=
         await response
           .json()
           .catch(
@@ -3375,10 +3510,10 @@ form.addEventListener(
 
       if(
         !response.ok ||
-        data.success !== true ||
+        data.success!==true ||
         (
-          data.praedium !== true &&
-          data.supabase !== true
+          data.praedium!==true &&
+          data.supabase!==true
         )
       ){
 
@@ -3389,18 +3524,18 @@ form.addEventListener(
 
       }
 
-      /* ===============================================
+      /* =====================================================
          LEAD CONFIRMADO
-      =============================================== */
+      ====================================================== */
 
       sendBehaviorEvent(
         "lead_stored",
         {
           storage_praedium:
-            data.praedium === true,
+            data.praedium===true,
 
           storage_supabase:
-            data.supabase === true,
+            data.supabase===true,
 
           feed1_percent:
             JOURNEY.feed1_max,
@@ -3434,13 +3569,12 @@ form.addEventListener(
         email
       );
 
-      /* ===============================================
-         GOOGLE ADS
-      =============================================== */
+      /* =====================================================
+         GOOGLE ADS + GA4
+      ====================================================== */
 
       if(
-        typeof gtag ===
-        "function"
+        typeof gtag==="function"
       ){
 
         gtag(
@@ -3463,13 +3597,12 @@ form.addEventListener(
 
       }
 
-      /* ===============================================
-         META LEAD
-      =============================================== */
+      /* =====================================================
+         META
+      ====================================================== */
 
       if(
-        typeof fbq ===
-        "function"
+        typeof fbq==="function"
       ){
 
         fbq(
@@ -3483,11 +3616,11 @@ form.addEventListener(
 
       }
 
-      /* ===============================================
+      /* =====================================================
          WHATSAPP
-      =============================================== */
+      ====================================================== */
 
-      const whatsappMessage = [
+      const msg=[
         `Olá, meu nome é ${nome}.`,
         "Vim pela página do Well Perdizes.",
         "Quero conhecer as unidades disponíveis e as condições atuais."
@@ -3516,99 +3649,30 @@ form.addEventListener(
         }
       );
 
-      window.location.href =
-        "https://wa.me/5511992976368?text=" +
+      location.href=
+        "https://wa.me/5511992976368?text="+
         encodeURIComponent(
-          whatsappMessage
+          msg
         );
 
-    }catch(error){
+    }catch(err){
 
-      console.error(error);
+      console.error(err);
 
-      statusBox.textContent =
+      status.textContent=
         "Não conseguimos registrar seus dados. Tente novamente.";
 
-      statusBox.style.display =
+      status.style.display=
         "block";
 
-      submitButton.disabled =
-        false;
+      submit.disabled=false;
 
-      submitButton.textContent =
+      submit.textContent=
         "TENTAR NOVAMENTE";
 
     }
 
   }
-);
-
-/* =========================================================
-   RESUMO DE SESSÃO
-========================================================= */
-
-let lastSummaryTime = 0;
-
-function sendSessionSummary(){
-
-  const now = Date.now();
-
-  if(
-    now - lastSummaryTime <
-    3000
-  ){
-    return;
-  }
-
-  lastSummaryTime = now;
-
-  sendBehaviorEvent(
-    "session_summary",
-    {
-      feed1_percent:
-        JOURNEY.feed1_max,
-
-      feed2_percent:
-        JOURNEY.feed2_max,
-
-      feed1_complete:
-        JOURNEY.feed1_complete,
-
-      feed2_complete:
-        JOURNEY.feed2_complete,
-
-      audio_enabled:
-        JOURNEY.audio_enabled,
-
-      lp_reached:
-        JOURNEY.lp_reached,
-
-      offer_view:
-        JOURNEY.offer_view
-    }
-  );
-
-}
-
-document.addEventListener(
-  "visibilitychange",
-  ()=>{
-
-    if(
-      document.visibilityState ===
-      "hidden"
-    ){
-
-      sendSessionSummary();
-
-    }
-
-  }
-);
-
-window.addEventListener(
-  "pagehide",
-  sendSessionSummary
 );
 
 </script>
