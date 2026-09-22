@@ -607,8 +607,19 @@
         muted
         loop
         playsinline
-        preload="auto">
+        webkit-playsinline
+        preload="metadata">
       </video>
+
+      <iframe
+        id="youtubeFallback"
+        class="feed-video"
+        src="https://www.youtube.com/embed/9RDOf2jGbJg?autoplay=1&mute=1&controls=0&loop=1&playlist=9RDOf2jGbJg&playsinline=1&rel=0"
+        title="Well Perdizes"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen
+        style="display:none;border:0;">
+      </iframe>
 
       <div class="feed-overlay"></div>
 
@@ -847,17 +858,57 @@
     const TRACKING=captureTracking();
 
     const video=document.getElementById("heroVideo");
+    const youtubeFallback=document.getElementById("youtubeFallback");
     const soundToggle=document.getElementById("soundToggle");
     const progress=document.getElementById("videoProgress");
+    let usingYoutubeFallback=false;
+
+    function activateYoutubeFallback(){
+      if(usingYoutubeFallback) return;
+      usingYoutubeFallback=true;
+      video.style.display="none";
+      youtubeFallback.style.display="block";
+      soundToggle.style.display="none";
+      progress.style.width="100%";
+    }
+
+    function tryLocalVideo(){
+      if(!video) return;
+      video.muted=true;
+      const attempt=video.play();
+
+      if(attempt && typeof attempt.catch==="function"){
+        attempt.catch(activateYoutubeFallback);
+      }
+
+      setTimeout(()=>{
+        if(
+          video.error ||
+          video.readyState===0 ||
+          (video.paused && video.currentTime===0)
+        ){
+          activateYoutubeFallback();
+        }
+      },1800);
+    }
+
+    video.addEventListener("error",activateYoutubeFallback);
+    video.addEventListener("stalled",()=>{
+      if(video.readyState===0) activateYoutubeFallback();
+    });
+
+    window.addEventListener("DOMContentLoaded",tryLocalVideo);
+    window.addEventListener("pageshow",tryLocalVideo);
 
     soundToggle.addEventListener("click",()=>{
+      if(usingYoutubeFallback) return;
       video.muted=!video.muted;
       soundToggle.textContent=video.muted ? "🔇" : "🔊";
-      if(video.paused) video.play().catch(()=>{});
+      if(video.paused) video.play().catch(activateYoutubeFallback);
     });
 
     video.addEventListener("timeupdate",()=>{
-      if(!video.duration) return;
+      if(!video.duration || usingYoutubeFallback) return;
       progress.style.width=((video.currentTime/video.duration)*100)+"%";
     });
 
