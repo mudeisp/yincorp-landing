@@ -42,7 +42,7 @@
   >
   <meta
     property="og:image"
-    content="https://conx.com.br/wp-content/uploads/2023/06/fachada-1.jpg"
+    content="https://www.yincorp.com.br/villa-pompeia/hall.jpg"
   >
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Yincorp">
@@ -59,7 +59,7 @@
   >
   <meta
     name="twitter:image"
-    content="https://conx.com.br/wp-content/uploads/2023/06/fachada-1.jpg"
+    content="https://www.yincorp.com.br/villa-pompeia/hall.jpg"
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -443,7 +443,7 @@
 
     header{
       position:absolute;
-      top:0;
+      top:200svh;
       left:0;
       width:100%;
       z-index:20;
@@ -508,7 +508,7 @@
       color:#fff;
       background:
         linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.48)),
-        url('https://conx.com.br/wp-content/uploads/2023/06/fachada-1.jpg')
+        url('https://www.yincorp.com.br/villa-pompeia/hall.jpg')
         center/cover no-repeat;
     }
 
@@ -1423,10 +1423,711 @@
       }
     }
 
-  </style>
+  
+    /* =========================================================
+       FEED FULL SCREEN — VILLA POMPEIA
+    ========================================================= */
+
+    .villa-feed-stage{
+      min-height:100svh;
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+      background:#111;
+      color:#fff;
+    }
+
+    .villa-feed-shell{
+      width:min(100%,470px);
+      height:100svh;
+      max-height:940px;
+      position:relative;
+      overflow:hidden;
+      background:#000;
+    }
+
+    .villa-feed-video,
+    .villa-feed-video iframe{
+      position:absolute;
+      inset:0;
+      width:100%!important;
+      height:100%!important;
+      border:0;
+      background:#000;
+    }
+
+    .villa-feed-overlay{
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.42),
+          transparent 24%,
+          transparent 56%,
+          rgba(0,0,0,.78)
+        );
+    }
+
+    .villa-feed-top{
+      position:absolute;
+      top:max(14px,env(safe-area-inset-top));
+      left:14px;
+      right:14px;
+      z-index:5;
+    }
+
+    .villa-feed-profile{
+      display:flex;
+      align-items:center;
+      gap:9px;
+    }
+
+    .villa-feed-avatar{
+      width:38px;
+      height:38px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--gold),var(--gold-light));
+      color:#211B14;
+      font-weight:900;
+      border:2px solid rgba(255,255,255,.9);
+    }
+
+    .villa-feed-profile strong{
+      display:block;
+      font-size:13px;
+    }
+
+    .villa-feed-profile span{
+      display:block;
+      font-size:11px;
+      opacity:.85;
+    }
+
+    .villa-tap-audio{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      z-index:8;
+      min-height:50px;
+      padding:0 18px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.38);
+      background:rgba(0,0,0,.52);
+      color:#fff;
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.6px;
+      cursor:pointer;
+    }
+
+    .villa-tap-audio.hidden{
+      display:none;
+    }
+
+    .villa-feed-side{
+      position:absolute;
+      right:12px;
+      bottom:150px;
+      z-index:6;
+      display:grid;
+      gap:18px;
+    }
+
+    .villa-feed-action{
+      border:0;
+      background:none;
+      color:#fff;
+      width:54px;
+      display:grid;
+      justify-items:center;
+      gap:4px;
+      text-shadow:0 1px 8px rgba(0,0,0,.75);
+      cursor:pointer;
+    }
+
+    .villa-feed-action .icon{
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:rgba(0,0,0,.34);
+      border:1px solid rgba(255,255,255,.18);
+      font-size:21px;
+    }
+
+    .villa-feed-action small{
+      font-size:9px;
+      font-weight:900;
+    }
+
+    .villa-feed-copy{
+      position:absolute;
+      left:16px;
+      right:78px;
+      bottom:max(30px,env(safe-area-inset-bottom));
+      z-index:6;
+      text-shadow:0 1px 9px rgba(0,0,0,.75);
+    }
+
+    .villa-feed-copy strong{
+      display:block;
+      font-size:18px;
+      margin-bottom:5px;
+    }
+
+    .villa-feed-copy p{
+      margin:0 0 10px;
+      color:#fff;
+      font-size:13px;
+    }
+
+    .villa-feed-price{
+      display:inline-flex;
+      align-items:center;
+      min-height:30px;
+      padding:0 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.94);
+      color:#221D17;
+      font-size:11px;
+      font-weight:900;
+      text-shadow:none;
+    }
+
+    .villa-feed-details-link{
+      display:block;
+      width:max-content;
+      max-width:100%;
+      margin-top:12px;
+      color:#fff;
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.55px;
+      border-bottom:1px solid rgba(255,255,255,.72);
+      padding-bottom:3px;
+    }
+
+    .villa-feed-progress{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      height:3px;
+      background:rgba(255,255,255,.18);
+      z-index:8;
+    }
+
+    .villa-feed-progress span{
+      display:block;
+      height:100%;
+      width:0;
+      background:#fff;
+    }
+
+    .villa-scroll-hint{
+      position:absolute;
+      left:50%;
+      bottom:14px;
+      transform:translateX(-50%);
+      z-index:7;
+      font-size:9px;
+      letter-spacing:1.1px;
+      text-transform:uppercase;
+      opacity:.78;
+      white-space:nowrap;
+    }
+
+    @media(min-width:800px){
+      .villa-feed-stage{
+        padding:30px;
+        background:
+          radial-gradient(
+            circle at 50% 10%,
+            rgba(198,167,107,.15),
+            transparent 28rem
+          ),
+          #171513;
+      }
+
+      .villa-feed-shell{
+        height:min(92vh,900px);
+        border-radius:30px;
+        box-shadow:0 30px 100px rgba(0,0,0,.42);
+      }
+    }
+
+
+    /* =========================================================
+       GALERIA / PLANTA / SCROLL REVEAL — VILLA POMPEIA
+    ========================================================= */
+
+    .villa-gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:16px;
+      margin-top:34px;
+    }
+
+    .villa-gallery-card{
+      position:relative;
+      overflow:hidden;
+      background:#FCFAF6;
+      border:1px solid #DED8CD;
+      border-radius:20px;
+      min-height:320px;
+    }
+
+    .villa-gallery-card.large{
+      grid-column:span 7;
+      min-height:440px;
+    }
+
+    .villa-gallery-card.side{
+      grid-column:span 5;
+      min-height:440px;
+    }
+
+    .villa-gallery-card.half{
+      grid-column:span 6;
+      min-height:340px;
+    }
+
+    .villa-gallery-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform 1.25s cubic-bezier(.22,.61,.36,1);
+    }
+
+    .villa-gallery-card.is-visible img{
+      transform:scale(1);
+    }
+
+    .villa-gallery-card:not(.is-visible) img{
+      transform:scale(1.055);
+    }
+
+    .villa-gallery-label{
+      position:absolute;
+      left:16px;
+      bottom:16px;
+      padding:8px 11px;
+      border-radius:999px;
+      background:rgba(252,250,246,.92);
+      color:#4A443C;
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.4px;
+      backdrop-filter:blur(6px);
+    }
+
+    .villa-floorplan-wrap{
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);
+      gap:24px;
+      align-items:center;
+      margin-top:30px;
+    }
+
+    .villa-floorplan-media,
+    .villa-floorplan-copy{
+      background:#FCFAF6;
+      border:1px solid #DED8CD;
+      border-radius:20px;
+    }
+
+    .villa-floorplan-media{
+      overflow:hidden;
+    }
+
+    .villa-floorplan-media img{
+      width:100%;
+      height:auto;
+    }
+
+    .villa-floorplan-copy{
+      padding:30px;
+    }
+
+    .villa-floorplan-copy h3{
+      font-size:28px;
+      margin-bottom:12px;
+    }
+
+    .villa-floorplan-copy p{
+      color:#77736B;
+      margin-bottom:18px;
+    }
+
+    .villa-floorplan-copy ul{
+      padding-left:18px;
+      color:#77736B;
+    }
+
+    .villa-floorplan-copy li{
+      margin:7px 0;
+    }
+
+    .villa-reveal{
+      opacity:0;
+      will-change:transform,opacity;
+      transition:
+        opacity .78s ease,
+        transform .95s cubic-bezier(.22,.61,.36,1);
+    }
+
+    .villa-reveal-left{transform:translate3d(-105px,0,0)}
+    .villa-reveal-right{transform:translate3d(105px,0,0)}
+    .villa-reveal-up{transform:translate3d(0,82px,0)}
+    .villa-reveal-scale{transform:translate3d(0,55px,0) scale(.93)}
+
+    .villa-reveal.is-visible{
+      opacity:1;
+      transform:translate3d(0,0,0) scale(1);
+    }
+
+    .villa-delay-1{transition-delay:.10s}
+    .villa-delay-2{transition-delay:.20s}
+    .villa-delay-3{transition-delay:.30s}
+
+    @media(max-width:760px){
+      .villa-gallery-grid,
+      .villa-floorplan-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .villa-gallery-card.large,
+      .villa-gallery-card.side,
+      .villa-gallery-card.half{
+        grid-column:1 / -1;
+        min-height:auto;
+      }
+
+      .villa-gallery-card img{
+        aspect-ratio:4/3;
+      }
+
+      .villa-reveal-left{transform:translate3d(-72px,0,0)}
+      .villa-reveal-right{transform:translate3d(72px,0,0)}
+      .villa-reveal-up{transform:translate3d(0,62px,0)}
+      .villa-reveal-scale{transform:translate3d(0,48px,0) scale(.94)}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      .villa-reveal{
+        opacity:1;
+        transform:none;
+        transition:none;
+      }
+
+      .villa-gallery-card img{
+        transform:none!important;
+        transition:none;
+      }
+    }
+
+
+    .villa-material-block{
+      background:#F7F4ED;
+      padding:72px 0;
+      border-bottom:1px solid #DED8CD;
+    }
+
+    .villa-material-final{
+      background:#F0ECE3;
+    }
+
+    .villa-material-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .villa-material-copy,
+    .villa-material-card{
+      background:#FCFAF6;
+      border:1px solid #DED8CD;
+      border-radius:20px;
+      padding:30px;
+    }
+
+    .villa-material-copy h2{
+      margin-bottom:14px;
+    }
+
+    .villa-material-copy p{
+      color:#77736B;
+      margin:0;
+    }
+
+    .villa-material-card span{
+      display:block;
+      color:#9A7440;
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    }
+
+    .villa-material-card ul{
+      margin:0;
+      padding-left:18px;
+      color:#77736B;
+    }
+
+    .villa-material-card li{
+      margin:8px 0;
+    }
+
+    @media(max-width:760px){
+      .villa-material-block{
+        padding:54px 0;
+      }
+
+      .villa-material-grid{
+        grid-template-columns:1fr;
+      }
+
+      .villa-material-copy,
+      .villa-material-card{
+        padding:24px;
+      }
+    }
+
+</style>
 </head>
 
 <body>
+
+
+
+<!-- =========================================================
+     ABERTURA EM TRÊS VÍDEOS — VILLA POMPEIA
+========================================================= -->
+
+<section class="villa-feed-stage" id="villaFeed1">
+  <div class="villa-feed-shell">
+    <div id="villaYt1" class="villa-feed-video"></div>
+    <div class="villa-feed-overlay"></div>
+
+    <button class="villa-tap-audio" id="villaTap1" type="button">
+      🔊 TOQUE PARA OUVIR
+    </button>
+
+    <div class="villa-feed-top">
+      <div class="villa-feed-profile">
+        <div class="villa-feed-avatar">Y</div>
+        <div>
+          <strong>Yincorp · Pompéia</strong>
+          <span>Villa Pompeia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="villa-feed-side">
+      <button class="villa-feed-action" id="villaInterest1" type="button">
+        <span class="icon">♡</span><small>Conhecer</small>
+      </button>
+      <button class="villa-feed-action" id="villaShare1" type="button">
+        <span class="icon">↗</span><small>Compartilhar</small>
+      </button>
+      <a class="villa-feed-action" href="#material1">
+        <span class="icon">⌄</span><small>Próximo</small>
+      </a>
+    </div>
+
+    <div class="villa-feed-copy">
+      <strong>Villa Pompeia</strong>
+      <p>35 m² · 2 dormitórios · varanda.</p>
+      <span class="villa-feed-price">R$ 470 mil</span>
+      <a class="villa-feed-details-link" href="#material1">
+        VER ESPAÇO E MATERIAIS ↓
+      </a>
+    </div>
+
+    <div class="villa-scroll-hint">role para continuar</div>
+    <div class="villa-feed-progress"><span id="villaProgress1"></span></div>
+  </div>
+</section>
+
+<section class="villa-material-block" id="material1">
+  <div class="container">
+    <div class="villa-material-grid">
+      <div class="villa-material-copy villa-reveal villa-reveal-left">
+        <div class="eyebrow">ESPAÇO 01</div>
+        <h2>Planta compacta, com uso inteligente dos ambientes.</h2>
+        <p>
+          A unidade destacada possui 35 m², dois dormitórios, varanda e integração
+          entre sala e cozinha.
+        </p>
+      </div>
+
+      <div class="villa-material-card villa-reveal villa-reveal-right villa-delay-1">
+        <span>MATERIAIS E ENTREGA</span>
+        <ul>
+          <li>Varanda integrada ao living</li>
+          <li>Infraestrutura para ar-condicionado</li>
+          <li>Esquadrias e acabamentos entregues conforme memorial</li>
+          <li>Planta pensada para rotina compacta</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="villa-feed-stage" id="villaFeed2">
+  <div class="villa-feed-shell">
+    <div id="villaYt2" class="villa-feed-video"></div>
+    <div class="villa-feed-overlay"></div>
+
+    <button class="villa-tap-audio" id="villaTap2" type="button">
+      🔊 TOQUE PARA OUVIR
+    </button>
+
+    <div class="villa-feed-top">
+      <div class="villa-feed-profile">
+        <div class="villa-feed-avatar">Y</div>
+        <div>
+          <strong>Yincorp · Villa Pompeia</strong>
+          <span>Segundo vídeo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="villa-feed-side">
+      <button class="villa-feed-action" id="villaInterest2" type="button">
+        <span class="icon">♡</span><small>Conhecer</small>
+      </button>
+      <button class="villa-feed-action" id="villaShare2" type="button">
+        <span class="icon">↗</span><small>Compartilhar</small>
+      </button>
+      <a class="villa-feed-action" href="#material2">
+        <span class="icon">⌄</span><small>Próximo</small>
+      </a>
+    </div>
+
+    <div class="villa-feed-copy">
+      <strong>Mais detalhes do Villa Pompeia.</strong>
+      <p>Veja o projeto e continue para os espaços do condomínio.</p>
+      <span class="villa-feed-price">2 dormitórios · 35 m²</span>
+      <a class="villa-feed-details-link" href="#material2">
+        VER ESPAÇO E MATERIAIS ↓
+      </a>
+    </div>
+
+    <div class="villa-scroll-hint">role para continuar</div>
+    <div class="villa-feed-progress"><span id="villaProgress2"></span></div>
+  </div>
+</section>
+
+<section class="villa-material-block" id="material2">
+  <div class="container">
+    <div class="villa-material-grid">
+      <div class="villa-material-card villa-reveal villa-reveal-left">
+        <span>ESPAÇOS DE CONVIVÊNCIA</span>
+        <ul>
+          <li>Hall</li>
+          <li>Salão de festas</li>
+          <li>Churrasqueira</li>
+          <li>Lavanderia</li>
+        </ul>
+      </div>
+
+      <div class="villa-material-copy villa-reveal villa-reveal-right villa-delay-1">
+        <div class="eyebrow">MATERIAL 02</div>
+        <h2>Áreas comuns pensadas para uso real.</h2>
+        <p>
+          Ambientes entregues para apoiar a rotina, receber pessoas e ampliar a
+          experiência do apartamento além dos 35 m² privativos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="villa-feed-stage" id="villaFeed3">
+  <div class="villa-feed-shell">
+    <div id="villaYt3" class="villa-feed-video"></div>
+    <div class="villa-feed-overlay"></div>
+
+    <button class="villa-tap-audio" id="villaTap3" type="button">
+      🔊 TOQUE PARA OUVIR
+    </button>
+
+    <div class="villa-feed-top">
+      <div class="villa-feed-profile">
+        <div class="villa-feed-avatar">Y</div>
+        <div>
+          <strong>Yincorp · Villa Pompeia</strong>
+          <span>Terceiro vídeo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="villa-feed-side">
+      <button class="villa-feed-action" id="villaInterest3" type="button">
+        <span class="icon">♡</span><small>Conhecer</small>
+      </button>
+      <button class="villa-feed-action" id="villaShare3" type="button">
+        <span class="icon">↗</span><small>Compartilhar</small>
+      </button>
+      <a class="villa-feed-action" href="#material3">
+        <span class="icon">⌄</span><small>Próximo</small>
+      </a>
+    </div>
+
+    <div class="villa-feed-copy">
+      <strong>Lazer e estrutura.</strong>
+      <p>Depois deste vídeo, veja preço, planta, fotos e localização.</p>
+      <span class="villa-feed-price">Pompéia · Zona Oeste</span>
+      <a class="villa-feed-details-link" href="#material3">
+        VER ESPAÇO E MATERIAIS ↓
+      </a>
+    </div>
+
+    <div class="villa-scroll-hint">role para ver os detalhes</div>
+    <div class="villa-feed-progress"><span id="villaProgress3"></span></div>
+  </div>
+</section>
+
+<section class="villa-material-block villa-material-final" id="material3">
+  <div class="container">
+    <div class="villa-material-grid">
+      <div class="villa-material-copy villa-reveal villa-reveal-left">
+        <div class="eyebrow">ESPAÇO 03</div>
+        <h2>Lazer para complementar a rotina.</h2>
+        <p>
+          Piscina e ambientes de convivência fecham a experiência antes de você
+          seguir para os dados completos da oferta.
+        </p>
+      </div>
+
+      <div class="villa-material-card villa-reveal villa-reveal-right villa-delay-1">
+        <span>MATERIAL 03</span>
+        <ul>
+          <li>Piscina</li>
+          <li>Churrasqueira</li>
+          <li>Salão de festas</li>
+          <li>Ambientes de apoio ao dia a dia</li>
+        </ul>
+
+        <a href="#top" class="btn btn-primary" style="margin-top:18px">
+          VER PREÇO, PLANTA E LOCALIZAÇÃO
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <header>
 
@@ -1690,105 +2391,7 @@
 
   </section>
 
-
-  <!-- VIDEOS -->
-
-  <section class="section video-section" id="videos">
-
-    <div class="container">
-
-      <div class="eyebrow">
-        CONHEÇA O VILLA POMPEIA
-      </div>
-
-      <h2>
-        Veja o empreendimento em vídeo
-      </h2>
-
-      <p class="video-intro">
-        Conheça melhor o projeto através dos vídeos de apresentação
-        e conteúdo visual do Villa Pompeia.
-      </p>
-
-
-      <!-- VIDEO HORIZONTAL -->
-
-      <div
-        class="video-main"
-        onclick="trackVideo('video_horizontal')"
-      >
-
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/8zGdmVkuSpU?rel=0&modestbranding=1"
-          title="Villa Pompeia Welconx — apresentação"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-
-      </div>
-
-
-      <!-- VIDEOS VERTICAIS -->
-
-      <div class="vertical-grid">
-
-        <div
-          class="vertical-video"
-          onclick="trackVideo('video_vertical_01')"
-        >
-
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/7SaA2zwEXwQ?rel=0&modestbranding=1"
-            title="Villa Pompeia Welconx — vídeo vertical"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-
-        </div>
-
-
-        <div
-          class="vertical-video"
-          onclick="trackVideo('video_vertical_02')"
-        >
-
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/31_veZh8PRI?rel=0&modestbranding=1"
-            title="Villa Pompeia Welconx — vídeo vertical"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-
-        </div>
-
-      </div>
-
-
-      <div class="video-cta">
-
-        <p>
-          Gostou do Villa Pompeia?
-        </p>
-
-        <a
-          href="#contato"
-          class="btn btn-primary"
-          onclick="trackCTA('video')"
-        >
-          CONSULTAR DISPONIBILIDADE
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PRICE -->
+<!-- PRICE -->
 
   <section class="section price-section">
 
@@ -1974,6 +2577,152 @@
             Restaurantes, mercados, farmácias, serviços e comércio
             de bairro.
           </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- GALERIA REAL DO CONDOMÍNIO -->
+
+  <section class="section" id="galeria-villa">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        FOTOS REAIS DO CONDOMÍNIO
+      </div>
+
+      <h2>
+        Veja os ambientes do Villa Pompeia
+      </h2>
+
+      <p style="max-width:760px;color:#666;">
+        Hall, lavanderia, salão, churrasqueira, piscina e áreas de convivência
+        para você entender melhor a estrutura do empreendimento.
+      </p>
+
+      <div class="villa-gallery-grid">
+
+        <article class="villa-gallery-card large villa-reveal villa-reveal-left">
+          <img
+            src="/villa-pompeia/hall.jpg"
+            alt="Hall do Villa Pompeia"
+            loading="lazy"
+          >
+          <span class="villa-gallery-label">HALL</span>
+        </article>
+
+        <article class="villa-gallery-card side villa-reveal villa-reveal-right villa-delay-1">
+          <img
+            src="/villa-pompeia/piscina.jpg"
+            alt="Piscina do Villa Pompeia"
+            loading="lazy"
+          >
+          <span class="villa-gallery-label">PISCINA</span>
+        </article>
+
+        <article class="villa-gallery-card half villa-reveal villa-reveal-left villa-delay-1">
+          <img
+            src="/villa-pompeia/festas.jpg"
+            alt="Área de festas do Villa Pompeia"
+            loading="lazy"
+          >
+          <span class="villa-gallery-label">ÁREA DE FESTAS</span>
+        </article>
+
+        <article class="villa-gallery-card half villa-reveal villa-reveal-right villa-delay-2">
+          <img
+            src="/villa-pompeia/churrasqueira.jpg"
+            alt="Churrasqueira do Villa Pompeia"
+            loading="lazy"
+          >
+          <span class="villa-gallery-label">CHURRASQUEIRA</span>
+        </article>
+
+        <article class="villa-gallery-card half villa-reveal villa-reveal-left villa-delay-2">
+          <img
+            src="/villa-pompeia/salao.jpg"
+            alt="Salão do Villa Pompeia"
+            loading="lazy"
+          >
+          <span class="villa-gallery-label">SALÃO</span>
+        </article>
+
+        <article class="villa-gallery-card half villa-reveal villa-reveal-right villa-delay-3">
+          <img
+            src="/villa-pompeia/lavanderia.jpg"
+            alt="Lavanderia do Villa Pompeia"
+            loading="lazy"
+          >
+          <span class="villa-gallery-label">LAVANDERIA</span>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PLANTA -->
+
+  <section class="section" id="planta-villa" style="background:#F0ECE3;">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        PLANTA
+      </div>
+
+      <h2>
+        35 m² · 2 dormitórios
+      </h2>
+
+      <div class="villa-floorplan-wrap">
+
+        <div class="villa-floorplan-media villa-reveal villa-reveal-scale">
+
+          <img
+            src="/villa-pompeia/planta.png"
+            alt="Planta de 35 m² e 2 dormitórios do Villa Pompeia"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="villa-floorplan-copy villa-reveal villa-reveal-right villa-delay-1">
+
+          <h3>
+            Planta funcional e compacta
+          </h3>
+
+          <p>
+            A planta apresentada possui 35 m², dois dormitórios e varanda,
+            com integração entre sala e cozinha.
+          </p>
+
+          <ul>
+            <li>35 m²</li>
+            <li>2 dormitórios</li>
+            <li>Varanda</li>
+            <li>Sala integrada à cozinha</li>
+            <li>Infraestrutura para ar-condicionado</li>
+          </ul>
+
+          <a
+            href="#contato"
+            class="btn btn-primary"
+            style="margin-top:20px"
+            onclick="trackCTA('floorplan')"
+          >
+            CONSULTAR DISPONIBILIDADE
+          </a>
+
         </div>
 
       </div>
@@ -3727,8 +4476,7 @@
   /* SECTION VIEWS */
 
   const sectionsToTrack = [
-    ['videos','view_videos'],
-    ['localizacao','view_location'],
+        ['localizacao','view_location'],
     ['faq','view_faq'],
     ['contato','view_contact']
   ];
@@ -3782,6 +4530,354 @@
 
   });
 
+
+
+
+  /* =========================================================
+     FEEDS FULL SCREEN — VILLA POMPEIA
+  ========================================================= */
+
+  const VILLA_VIDEO_1_ID = '8zGdmVkuSpU';
+  const VILLA_VIDEO_2_ID = '7SaA2zwEXwQ';
+  const VILLA_VIDEO_3_ID = '31_veZh8PRI';
+
+  let villaYt1=null, villaYt2=null, villaYt3=null;
+  let villaYt1Ready=false, villaYt2Ready=false, villaYt3Ready=false;
+  let villaAudioUnlocked=false;
+
+  const villaTap1=document.getElementById('villaTap1');
+  const villaTap2=document.getElementById('villaTap2');
+  const villaTap3=document.getElementById('villaTap3');
+  const villaProgress1=document.getElementById('villaProgress1');
+  const villaProgress2=document.getElementById('villaProgress2');
+  const villaProgress3=document.getElementById('villaProgress3');
+
+  const villaFeedJourney={
+    feed1_max:0,
+    feed2_max:0,
+    feed3_max:0,
+    feed1_complete:false,
+    feed2_complete:false,
+    feed3_complete:false,
+    audio_enabled:false
+  };
+
+  const villaFeedEvents=new Set();
+
+  function villaTrackOnce(name,params){
+    if(villaFeedEvents.has(name)) return;
+    villaFeedEvents.add(name);
+    trackGA(name,params||{});
+    trackMeta(name,params||{});
+  }
+
+  function villaPlay(player,ready){
+    if(player&&ready){try{player.playVideo()}catch(error){}}
+  }
+
+  function villaPause(player,ready){
+    if(player&&ready){try{player.pauseVideo()}catch(error){}}
+  }
+
+  function villaSetAudio(player,ready,active){
+    if(!player||!ready) return;
+    if(active){
+      player.unMute();
+      player.setVolume(100);
+    }else{
+      player.mute();
+    }
+  }
+
+  function villaUpdateAudioUI(){
+    [villaTap1,villaTap2,villaTap3].forEach(btn=>{
+      if(btn) btn.classList.toggle('hidden',villaAudioUnlocked);
+    });
+  }
+
+  function villaEnableAudio(feed){
+    villaAudioUnlocked=true;
+    villaFeedJourney.audio_enabled=true;
+
+    villaTrackOnce(`feed_${feed}_audio_on`,{
+      property:'Villa Pompeia Welconx'
+    });
+
+    villaSetAudio(villaYt1,villaYt1Ready,true);
+    villaSetAudio(villaYt2,villaYt2Ready,true);
+    villaSetAudio(villaYt3,villaYt3Ready,true);
+    villaUpdateAudioUI();
+
+    if(feed===1) villaPlay(villaYt1,villaYt1Ready);
+    if(feed===2) villaPlay(villaYt2,villaYt2Ready);
+    if(feed===3) villaPlay(villaYt3,villaYt3Ready);
+  }
+
+  villaTap1.addEventListener('click',()=>villaEnableAudio(1));
+  villaTap2.addEventListener('click',()=>villaEnableAudio(2));
+  villaTap3.addEventListener('click',()=>villaEnableAudio(3));
+
+  function villaTrackVideoProgress(feed,percent){
+    const p=Math.max(0,Math.min(100,Math.floor(percent)));
+    const maxKey=`feed${feed}_max`;
+    const completeKey=`feed${feed}_complete`;
+
+    villaFeedJourney[maxKey]=Math.max(villaFeedJourney[maxKey],p);
+
+    if(p>=25) villaTrackOnce(`feed_${feed}_video_25`,{video_percent:25});
+    if(p>=50) villaTrackOnce(`feed_${feed}_video_50`,{video_percent:50});
+    if(p>=75) villaTrackOnce(`feed_${feed}_video_75`,{video_percent:75});
+    if(p>=95){
+      villaFeedJourney[completeKey]=true;
+      villaTrackOnce(`feed_${feed}_video_complete`,{video_percent:100});
+    }
+  }
+
+  const previousYouTubeReady=window.onYouTubeIframeAPIReady;
+
+  window.onYouTubeIframeAPIReady=function(){
+    if(typeof previousYouTubeReady==='function'){
+      previousYouTubeReady();
+    }
+
+    const commonVars=(videoId,autoplay)=>({
+      videoId,
+      playerVars:{
+        autoplay,
+        mute:1,
+        controls:0,
+        loop:1,
+        playlist:videoId,
+        playsinline:1,
+        rel:0,
+        fs:0,
+        modestbranding:1
+      }
+    });
+
+    villaYt1=new YT.Player('villaYt1',{
+      ...commonVars(VILLA_VIDEO_1_ID,1),
+      events:{onReady:e=>{villaYt1Ready=true;e.target.mute();e.target.playVideo();}}
+    });
+
+    villaYt2=new YT.Player('villaYt2',{
+      ...commonVars(VILLA_VIDEO_2_ID,0),
+      events:{onReady:e=>{villaYt2Ready=true;e.target.mute();}}
+    });
+
+    villaYt3=new YT.Player('villaYt3',{
+      ...commonVars(VILLA_VIDEO_3_ID,0),
+      events:{onReady:e=>{villaYt3Ready=true;e.target.mute();}}
+    });
+
+    setInterval(()=>{
+      [
+        [1,villaYt1,villaYt1Ready,villaProgress1],
+        [2,villaYt2,villaYt2Ready,villaProgress2],
+        [3,villaYt3,villaYt3Ready,villaProgress3]
+      ].forEach(([feed,player,ready,progress])=>{
+        if(!ready||!player) return;
+        const d=player.getDuration?.()||0;
+        const c=player.getCurrentTime?.()||0;
+        if(d<=0) return;
+        const pct=c/d*100;
+        progress.style.width=pct+'%';
+        villaTrackVideoProgress(feed,pct);
+      });
+    },400);
+  };
+
+  if(!document.querySelector('script[src*="youtube.com/iframe_api"]')){
+    const villaYoutubeScript=document.createElement('script');
+    villaYoutubeScript.src='https://www.youtube.com/iframe_api';
+    document.head.appendChild(villaYoutubeScript);
+  }
+
+  const villaFeedObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      const id=entry.target.id;
+
+      if(id==='villaFeed1'&&entry.isIntersecting&&entry.intersectionRatio>=.35){
+        villaTrackOnce('feed_1_view',{property:'Villa Pompeia Welconx'});
+        villaPause(villaYt2,villaYt2Ready);
+        villaPause(villaYt3,villaYt3Ready);
+        villaSetAudio(villaYt1,villaYt1Ready,villaAudioUnlocked);
+        villaPlay(villaYt1,villaYt1Ready);
+      }
+
+      if(id==='villaFeed2'&&entry.isIntersecting&&entry.intersectionRatio>=.35){
+        villaTrackOnce('feed_2_view',{property:'Villa Pompeia Welconx'});
+        villaPause(villaYt1,villaYt1Ready);
+        villaPause(villaYt3,villaYt3Ready);
+        villaSetAudio(villaYt2,villaYt2Ready,villaAudioUnlocked);
+        villaPlay(villaYt2,villaYt2Ready);
+      }
+
+      if(id==='villaFeed3'&&entry.isIntersecting&&entry.intersectionRatio>=.35){
+        villaTrackOnce('feed_3_view',{property:'Villa Pompeia Welconx'});
+        villaPause(villaYt1,villaYt1Ready);
+        villaPause(villaYt2,villaYt2Ready);
+        villaSetAudio(villaYt3,villaYt3Ready,villaAudioUnlocked);
+        villaPlay(villaYt3,villaYt3Ready);
+      }
+    });
+  },{threshold:[0,.35,.75,1]});
+
+  ['villaFeed1','villaFeed2','villaFeed3'].forEach(id=>{
+    villaFeedObserver.observe(document.getElementById(id));
+  });
+
+  function villaShare(source){
+    trackGA('share_click',{source});
+    const cleanUrl=window.location.origin+window.location.pathname;
+    const text='Villa Pompeia · 35 m² · 2 dormitórios · varanda · R$ 470 mil\n'+cleanUrl;
+    window.open(
+      'https://wa.me/?text='+encodeURIComponent(text),
+      '_blank',
+      'noopener,noreferrer'
+    );
+  }
+
+  ['1','2','3'].forEach(n=>{
+    document.getElementById(`villaShare${n}`).addEventListener('click',()=>{
+      villaShare(`feed_${n}`);
+    });
+  });
+
+  function openVillaLeadFromFeed(source){
+    trackGA('specialist_click',{source});
+
+    if(typeof openWhatsappLeadModal==='function'){
+      openWhatsappLeadModal();
+      return;
+    }
+
+    const whatsappButton=document.getElementById('whatsappButton');
+    if(whatsappButton) whatsappButton.click();
+  }
+
+  ['1','2','3'].forEach(n=>{
+    document.getElementById(`villaInterest${n}`).addEventListener('click',()=>{
+      openVillaLeadFromFeed(`feed_${n}`);
+    });
+  });
+
+
+
+
+  /* =========================================================
+     SCROLL REVEAL — FOTOS + PLANTA
+  ========================================================= */
+
+  const villaRevealElements =
+    [
+      ...document.querySelectorAll(
+        '.villa-reveal'
+      )
+    ];
+
+  function activateVillaReveal(el){
+
+    if(
+      !el.classList.contains(
+        'is-visible'
+      )
+    ){
+
+      el.classList.add(
+        'is-visible'
+      );
+    }
+  }
+
+  if(
+    'IntersectionObserver' in window
+  ){
+
+    const villaRevealObserver =
+      new IntersectionObserver(
+        function(entries){
+
+          entries.forEach(
+            function(entry){
+
+              if(
+                entry.isIntersecting
+              ){
+
+                requestAnimationFrame(
+                  function(){
+
+                    activateVillaReveal(
+                      entry.target
+                    );
+                  }
+                );
+
+                villaRevealObserver
+                  .unobserve(
+                    entry.target
+                  );
+              }
+            }
+          );
+        },
+        {
+          threshold:.12,
+          rootMargin:
+            '0px 0px -10% 0px'
+        }
+      );
+
+    villaRevealElements
+      .forEach(
+        function(el){
+
+          villaRevealObserver
+            .observe(el);
+        }
+      );
+
+  }else{
+
+    villaRevealElements
+      .forEach(
+        activateVillaReveal
+      );
+  }
+
+  window.addEventListener(
+    'load',
+    function(){
+
+      setTimeout(
+        function(){
+
+          villaRevealElements
+            .forEach(
+              function(el){
+
+                const rect =
+                  el.getBoundingClientRect();
+
+                if(
+                  rect.top <
+                    window.innerHeight *
+                    .88 &&
+                  rect.bottom > 0
+                ){
+
+                  activateVillaReveal(
+                    el
+                  );
+                }
+              }
+            );
+        },
+        180
+      );
+    }
+  );
 
 </script>
 
