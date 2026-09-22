@@ -646,9 +646,9 @@
           <small>Compartilhar</small>
         </button>
 
-        <a class="feed-action" href="#detalhes">
+        <a class="feed-action" href="#feed-decorado">
           <span class="icon">⌄</span>
-          <small>Detalhes</small>
+          <small>Próximo</small>
         </a>
       </div>
 
@@ -658,10 +658,71 @@
         <span class="feed-price">A partir de R$ 340 mil</span>
       </div>
 
-      <div class="scroll-hint">role para conhecer</div>
+      <div class="scroll-hint">role para ver o decorado</div>
 
       <div class="feed-progress">
         <span id="videoProgress"></span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SEGUNDO FEED: DECORADO -->
+  <section class="feed-stage" id="feed-decorado">
+    <div class="feed-shell">
+      <video
+        id="decorVideo"
+        class="feed-video"
+        src="well-perdizes-decorado.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        webkit-playsinline
+        preload="metadata">
+      </video>
+
+      <div class="feed-overlay"></div>
+
+      <div class="feed-top">
+        <div class="profile">
+          <div class="avatar">Y</div>
+          <div class="profile-copy">
+            <strong>Yincorp · Well Perdizes</strong>
+            <span>Veja o decorado</span>
+          </div>
+        </div>
+
+        <button class="sound-toggle" id="decorSoundToggle" type="button" aria-label="Ativar ou desativar som do decorado">🔇</button>
+      </div>
+
+      <div class="feed-side">
+        <button class="feed-action" id="decorInterest" type="button">
+          <span class="icon">♡</span>
+          <small>Conhecer</small>
+        </button>
+
+        <button class="feed-action" id="decorShare" type="button">
+          <span class="icon">↗</span>
+          <small>Compartilhar</small>
+        </button>
+
+        <a class="feed-action" href="#detalhes">
+          <span class="icon">⌄</span>
+          <small>Detalhes</small>
+        </a>
+      </div>
+
+      <div class="feed-copy">
+        <strong>Agora entre no decorado.</strong>
+        <p>Veja os ambientes do Well Perdizes antes de entrar nos detalhes da oferta.</p>
+        <span class="feed-price">2 dormitórios · 34 e 37 m²</span>
+      </div>
+
+      <div class="scroll-hint">role para ver os detalhes</div>
+
+      <div class="feed-progress">
+        <span id="decorProgress"></span>
       </div>
     </div>
   </section>
@@ -670,8 +731,8 @@
   <section class="transition" id="detalhes">
     <div class="container">
       <div class="kicker">WELL PERDIZES</div>
-      <h1>Gostou do que viu?<br>Agora veja o imóvel em detalhes.</h1>
-      <p>A experiência começa como um vídeo no seu feed e continua com todas as informações que ajudam na decisão de compra.</p>
+      <h1>Você já viu a proposta.<br>Agora veja o imóvel em detalhes.</h1>
+      <p>Primeiro a apresentação, depois o decorado. A partir daqui entram preço, plantas, localização, imagens e condições em uma LP completa.</p>
     </div>
   </section>
 
@@ -912,6 +973,33 @@
       progress.style.width=((video.currentTime/video.duration)*100)+"%";
     });
 
+    const decorVideo=document.getElementById("decorVideo");
+    const decorSoundToggle=document.getElementById("decorSoundToggle");
+    const decorProgress=document.getElementById("decorProgress");
+
+    function ensureDecorPlayback(){
+      if(!decorVideo) return;
+      decorVideo.muted=true;
+      const attempt=decorVideo.play();
+      if(attempt && typeof attempt.catch==="function"){
+        attempt.catch(()=>{});
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded",ensureDecorPlayback);
+    window.addEventListener("pageshow",ensureDecorPlayback);
+
+    decorSoundToggle?.addEventListener("click",()=>{
+      decorVideo.muted=!decorVideo.muted;
+      decorSoundToggle.textContent=decorVideo.muted ? "🔇" : "🔊";
+      if(decorVideo.paused) decorVideo.play().catch(()=>{});
+    });
+
+    decorVideo?.addEventListener("timeupdate",()=>{
+      if(!decorVideo.duration) return;
+      decorProgress.style.width=((decorVideo.currentTime/decorVideo.duration)*100)+"%";
+    });
+
     const modal=document.getElementById("leadModal");
     const closeBtn=document.getElementById("leadClose");
     const form=document.getElementById("leadForm");
@@ -937,6 +1025,7 @@
     }
 
     document.getElementById("feedInterest").addEventListener("click",openLead);
+    document.getElementById("decorInterest")?.addEventListener("click",openLead);
     document.getElementById("offerInterest").addEventListener("click",openLead);
     document.getElementById("floatingInterest").addEventListener("click",openLead);
     closeBtn.addEventListener("click",closeLead);
@@ -948,6 +1037,16 @@
     document.getElementById("shareButton").addEventListener("click",()=>{
       const url=location.href;
       const text="Well Perdizes · 2 dormitórios em Perdizes · a partir de R$ 340 mil";
+      window.open(
+        "https://wa.me/?text="+encodeURIComponent(text+"\n"+url),
+        "_blank",
+        "noopener,noreferrer"
+      );
+    });
+
+    document.getElementById("decorShare")?.addEventListener("click",()=>{
+      const url=location.href;
+      const text="Well Perdizes · veja o decorado · 2 dormitórios em Perdizes";
       window.open(
         "https://wa.me/?text="+encodeURIComponent(text+"\n"+url),
         "_blank",
