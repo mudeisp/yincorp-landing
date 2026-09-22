@@ -353,10 +353,6 @@ footer{padding:40px 0 90px;text-align:center;color:var(--muted);font-size:11px}
         <img data-asset="sala" alt="Sala Welconx Perdizes" loading="lazy">
         <span class="gallery-caption">SALA</span>
       </article>
-      <article class="gallery-card half reveal reveal-right delay-2">
-        <img data-asset="varanda" alt="Varanda Welconx Perdizes" loading="lazy">
-        <span class="gallery-caption">VARANDA</span>
-      </article>
       <article class="gallery-card half reveal reveal-left delay-1">
         <img data-asset="vista" alt="Vista do Welconx Perdizes" loading="lazy">
         <span class="gallery-caption">VISTA</span>
@@ -502,18 +498,17 @@ footer{padding:40px 0 90px;text-align:center;color:var(--muted);font-size:11px}
    CONFIGURAÇÃO DE IMAGENS
    Ajuste SOMENTE este mapa caso os nomes no Git sejam diferentes.
 ========================================================= */
-const ASSET_BASE="/assets/welconx-perdizes/";
+const ASSET_BASE="/welconx-perdizes/";
 
 const ASSETS={
   fachada:"fachada.jpg",
   apartamento:"apartamento.jpg",
   quarto:"quarto.jpg",
   sala:"sala.jpg",
-  varanda:"varanda.jpg",
   vista:"vista.jpg",
   piscina:"piscina.jpg",
-  salao:"salao.jpg",
-  planta:"planta.jpg"
+  salao:"salao.jpeg",
+  planta:"planta.png"
 };
 
 document.querySelectorAll("[data-asset]").forEach(img=>{
