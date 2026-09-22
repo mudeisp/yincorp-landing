@@ -236,6 +236,31 @@
       text-shadow:none;
     }
 
+    .tap-audio{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      z-index:9;
+      min-height:48px;
+      padding:0 18px;
+      border:1px solid rgba(255,255,255,.34);
+      border-radius:999px;
+      background:rgba(12,12,12,.52);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.7px;
+      box-shadow:0 12px 32px rgba(0,0,0,.24);
+    }
+    .tap-audio span{font-size:17px}
+    .tap-audio.is-hidden{display:none}
+
     .feed-progress{
       position:absolute;
       left:0;
@@ -622,6 +647,10 @@
       </iframe>
 
       <div class="feed-overlay"></div>
+      <button class="tap-audio" id="tapAudio1" type="button">
+        <span>🔊</span>
+        TOQUE PARA OUVIR
+      </button>
 
       <div class="feed-top">
         <div class="profile">
@@ -683,6 +712,10 @@
       </video>
 
       <div class="feed-overlay"></div>
+      <button class="tap-audio" id="tapAudio2" type="button">
+        <span>🔊</span>
+        TOQUE PARA OUVIR
+      </button>
 
       <div class="feed-top">
         <div class="profile">
@@ -963,9 +996,7 @@
 
     soundToggle.addEventListener("click",()=>{
       if(usingYoutubeFallback) return;
-      video.muted=!video.muted;
-      soundToggle.textContent=video.muted ? "🔇" : "🔊";
-      if(video.paused) video.play().catch(activateYoutubeFallback);
+      setAudioState(!audioUnlocked);
     });
 
     video.addEventListener("timeupdate",()=>{
@@ -976,6 +1007,37 @@
     const decorVideo=document.getElementById("decorVideo");
     const decorSoundToggle=document.getElementById("decorSoundToggle");
     const decorProgress=document.getElementById("decorProgress");
+    const tapAudio1=document.getElementById("tapAudio1");
+    const tapAudio2=document.getElementById("tapAudio2");
+    let audioUnlocked=false;
+
+    function setAudioState(enabled){
+      audioUnlocked=enabled;
+
+      if(video && !usingYoutubeFallback){
+        video.muted=!enabled;
+        if(enabled) video.play().catch(()=>{});
+      }
+
+      if(decorVideo){
+        decorVideo.muted=!enabled;
+        if(enabled) decorVideo.play().catch(()=>{});
+      }
+
+      if(soundToggle){
+        soundToggle.textContent=enabled ? "🔊" : "🔇";
+      }
+
+      if(decorSoundToggle){
+        decorSoundToggle.textContent=enabled ? "🔊" : "🔇";
+      }
+
+      tapAudio1?.classList.toggle("is-hidden",enabled);
+      tapAudio2?.classList.toggle("is-hidden",enabled);
+    }
+
+    tapAudio1?.addEventListener("click",()=>setAudioState(true));
+    tapAudio2?.addEventListener("click",()=>setAudioState(true));
 
     function ensureDecorPlayback(){
       if(!decorVideo) return;
@@ -990,15 +1052,28 @@
     window.addEventListener("pageshow",ensureDecorPlayback);
 
     decorSoundToggle?.addEventListener("click",()=>{
-      decorVideo.muted=!decorVideo.muted;
-      decorSoundToggle.textContent=decorVideo.muted ? "🔇" : "🔊";
-      if(decorVideo.paused) decorVideo.play().catch(()=>{});
+      setAudioState(!audioUnlocked);
     });
 
     decorVideo?.addEventListener("timeupdate",()=>{
       if(!decorVideo.duration) return;
       decorProgress.style.width=((decorVideo.currentTime/decorVideo.duration)*100)+"%";
     });
+    if("IntersectionObserver" in window && decorVideo){
+      const feedObserver=new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting && entry.intersectionRatio>=0.55){
+            decorVideo.muted=!audioUnlocked;
+            decorVideo.play().catch(()=>{});
+          }else if(!entry.isIntersecting){
+            decorVideo.pause();
+          }
+        });
+      },{threshold:[0,.55,1]});
+
+      feedObserver.observe(document.getElementById("feed-decorado"));
+    }
+
 
     const modal=document.getElementById("leadModal");
     const closeBtn=document.getElementById("leadClose");
