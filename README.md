@@ -1,1 +1,0 @@
-# yincorp-landing
