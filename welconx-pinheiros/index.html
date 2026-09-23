@@ -403,7 +403,7 @@ footer{padding:40px 0 90px;text-align:center;color:var(--muted);font-size:11px}
 
 <footer><div class="container">Yincorp · Curadoria imobiliária em São Paulo.</div></footer>
 
-<a class="floating-top" id="otherOpportunities" href="https://app.yincorp.com.br/" target="_blank" rel="noopener">CONHEÇA OUTRAS OPORTUNIDADES</a>
+<a class="floating-top" id="otherOpportunities" href="https://app.yincorp.com.br/?bairro=Pinheiros&dormitorios=1" target="_blank" rel="noopener" aria-label="Ver apartamentos de 1 dormitório em Pinheiros no app">VER 1 DORM EM PINHEIROS</a>
 <button class="floating-bottom" id="floatingInterest" type="button">FALAR COM O ESPECIALISTA</button>
 
 <div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
@@ -457,7 +457,7 @@ function buildAttributedUrl(rawUrl){
 function cleanShareUrl(){return location.origin + location.pathname}
 
 const otherOpportunities=document.getElementById("otherOpportunities");
-otherOpportunities.href=buildAttributedUrl("https://app.yincorp.com.br/");
+otherOpportunities.href=buildAttributedUrl("https://app.yincorp.com.br/?bairro=Pinheiros&dormitorios=1");
 
 function getSessionId(){
   const key="yincorp_session_id";
