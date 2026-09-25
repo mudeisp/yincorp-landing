@@ -163,6 +163,61 @@
       border-radius:999px;padding:8px 12px;font-size:11px;font-weight:700;backdrop-filter:blur(10px)
     }
 
+
+    .floorplan-card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      align-items:center;
+    }
+    .floorplan-media{
+      min-height:520px;
+      background:#fff;
+      display:grid;
+      place-items:center;
+      padding:22px;
+      cursor:pointer;
+    }
+    .floorplan-media img{
+      width:100%;
+      height:100%;
+      max-height:560px;
+      object-fit:contain;
+    }
+    .floorplan-copy{
+      padding:38px;
+    }
+    .floorplan-copy h3{
+      font-family:"Playfair Display",serif;
+      font-size:40px;
+      line-height:1.05;
+      margin:0 0 14px;
+      color:var(--deep);
+    }
+    .floorplan-copy p{
+      margin:0 0 22px;
+      color:var(--muted);
+    }
+    .floorplan-points{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin:20px 0 24px;
+    }
+    .floorplan-points span{
+      background:var(--soft);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:12px;
+      font-size:13px;
+      font-weight:700;
+      color:var(--deep);
+    }
+
     .amenity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .amenity{
       background:var(--card);border:1px solid var(--border);border-radius:24px;overflow:hidden
@@ -388,6 +443,11 @@
         grid-row:auto;
         scroll-snap-align:center;
       }
+      .floorplan-card{grid-template-columns:1fr}
+      .floorplan-media{min-height:360px;padding:12px}
+      .floorplan-copy{padding:26px 20px}
+      .floorplan-copy h3{font-size:34px}
+      .floorplan-points{grid-template-columns:1fr 1fr}
       .amenity-grid{grid-template-columns:1fr}
       .location-card{padding:28px 22px;border-radius:24px}
       .offer-box{padding:34px 20px;border-radius:26px}
@@ -501,6 +561,39 @@
             <img src="./BANHOA.1.jpg" alt="Banheiro">
             <span class="photo-label">Banheiro</span>
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="planta">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Planta</div>
+            <h2>Veja a distribuição dos 57 m²</h2>
+          </div>
+          <p>Abra a planta para visualizar melhor a organização dos ambientes da unidade.</p>
+        </div>
+
+        <div class="floorplan-card reveal">
+          <div class="floorplan-media" data-full="./planta.57m².jpg">
+            <img src="./planta.57m².jpg" alt="Planta de 57 m² do Varanda Botanic">
+          </div>
+
+          <div class="floorplan-copy">
+            <div class="eyebrow">57 m²</div>
+            <h3>Uma planta pensada para o dia a dia</h3>
+            <p>Use a planta para entender a relação entre sala, varanda, dormitórios e áreas de apoio antes da visita.</p>
+
+            <div class="floorplan-points">
+              <span>2 quartos</span>
+              <span>1 suíte</span>
+              <span>2 banheiros</span>
+              <span>1 vaga</span>
+            </div>
+
+            <button class="btn btn-primary js-open-lead" type="button">FALAR COM RAFAEL</button>
+          </div>
         </div>
       </div>
     </section>
@@ -801,6 +894,15 @@
     document.querySelectorAll(".gallery figure").forEach(item=>{
       item.addEventListener("click",()=>{
         $("lightboxImage").src = item.dataset.full;
+        $("lightbox").classList.add("open");
+        $("lightbox").setAttribute("aria-hidden","false");
+      });
+    });
+
+    document.querySelectorAll(".floorplan-media").forEach(item=>{
+      item.addEventListener("click",()=>{
+        $("lightboxImage").src = item.dataset.full;
+        $("lightboxImage").alt = "Planta de 57 m² do Varanda Botanic";
         $("lightbox").classList.add("open");
         $("lightbox").setAttribute("aria-hidden","false");
       });
