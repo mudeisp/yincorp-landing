@@ -172,6 +172,37 @@
     .amenity-copy strong{display:block;color:var(--deep)}
     .amenity-copy span{font-size:13px;color:var(--muted)}
 
+
+    /* Scroll reveal */
+    .reveal{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity .65s ease, transform .65s ease;
+      will-change:opacity,transform;
+    }
+    .reveal.is-visible{
+      opacity:1;
+      transform:none;
+    }
+
+    /* Open map */
+    .map-shell{
+      margin-top:18px;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.16);
+      min-height:360px;
+      background:#ddd;
+      position:relative;
+      z-index:1;
+    }
+    .map-shell iframe{
+      width:100%;
+      height:360px;
+      border:0;
+      display:block;
+    }
+
     .location-card{
       background:var(--deep);color:white;border-radius:30px;padding:36px;display:grid;
       grid-template-columns:1.35fr .65fr;gap:28px;align-items:center;overflow:hidden;position:relative
@@ -204,7 +235,7 @@
       left:18px;
       bottom:18px;
       z-index:46;
-      width:118px;
+      width:138px;
       background:rgba(252,250,246,.96);
       border:1px solid var(--border);
       border-radius:22px;
@@ -339,15 +370,31 @@
       .section{padding:36px 0}
       .section-head{display:block}
       .section-head p{margin-top:12px}
-      .gallery{grid-template-columns:1fr;grid-template-rows:380px repeat(4,220px)}
-      .gallery figure:first-child{grid-column:auto}
+      .gallery{
+        display:flex;
+        overflow-x:auto;
+        gap:12px;
+        scroll-snap-type:x mandatory;
+        padding-bottom:8px;
+        scrollbar-width:none;
+        -webkit-overflow-scrolling:touch;
+      }
+      .gallery::-webkit-scrollbar{display:none}
+      .gallery figure,
+      .gallery figure:first-child{
+        flex:0 0 88%;
+        height:420px;
+        grid-column:auto;
+        grid-row:auto;
+        scroll-snap-align:center;
+      }
       .amenity-grid{grid-template-columns:1fr}
       .location-card{padding:28px 22px;border-radius:24px}
       .offer-box{padding:34px 20px;border-radius:26px}
       .broker-float{
         left:10px;
-        bottom:76px;
-        width:96px;
+        bottom:10px;
+        width:112px;
         padding:8px;
         border-radius:18px;
       }
@@ -378,7 +425,7 @@
         <span class="brand-mark">Y</span>
         <span>YINCORP</span>
       </a>
-      <button class="top-cta js-open-lead">CORRETOR RESPONSÁVEL</button>
+      <button class="top-cta js-open-lead">FALAR COM RAFAEL</button>
     </div>
   </header>
 
@@ -398,13 +445,13 @@
           </div>
 
           <div class="hero-actions">
-            <button class="btn btn-primary js-open-lead">QUERO CONHECER ESTE IMÓVEL</button>
+            <button class="btn btn-primary js-open-lead">FALAR COM RAFAEL NO WHATSAPP</button>
             <a class="btn btn-secondary" href="#galeria">VER FOTOS</a>
           </div>
         </div>
 
         <div class="hero-media">
-          <img src="/varanda-botanic/SALA.A.jpg" alt="Sala do apartamento Varanda Botanic" fetchpriority="high">
+          <img src="./SALA.A.jpg" alt="Sala do apartamento Varanda Botanic" fetchpriority="high">
           <div class="hero-badge">
             <strong>57 m² · 2 quartos · 1 suíte</strong>
             <span>1 vaga · Vila da Saúde</span>
@@ -414,7 +461,7 @@
     </section>
 
     <section class="facts">
-      <div class="wrap fact-grid">
+      <div class="wrap fact-grid reveal">
         <div class="fact"><strong>57 m²</strong><span>área útil</span></div>
         <div class="fact"><strong>2</strong><span>quartos</span></div>
         <div class="fact"><strong>1</strong><span>suíte</span></div>
@@ -430,28 +477,28 @@
             <div class="eyebrow">Fotos reais</div>
             <h2>Conheça o apartamento</h2>
           </div>
-          <p>Uma seleção dos ambientes que melhor mostram a distribuição, a sala integrada, a varanda e os espaços internos.</p>
+          <p>Uma seleção dos ambientes que melhor mostram a distribuição, a sala integrada, a varanda e os espaços internos. <strong>No celular, deslize as fotos para o lado.</strong></p>
         </div>
 
-        <div class="gallery">
-          <figure data-full="/varanda-botanic/SALA.A.jpg">
-            <img src="/varanda-botanic/SALA.A.jpg" alt="Sala integrada do apartamento">
+        <div class="gallery reveal">
+          <figure data-full="./SALA.A.jpg">
+            <img src="./SALA.A.jpg" alt="Sala integrada do apartamento">
             <span class="photo-label">Sala</span>
           </figure>
-          <figure data-full="/varanda-botanic/SALA.C.jpg">
-            <img src="/varanda-botanic/SALA.C.jpg" alt="Sala de jantar">
+          <figure data-full="./SALA.C.jpg">
+            <img src="./SALA.C.jpg" alt="Sala de jantar">
             <span class="photo-label">Jantar</span>
           </figure>
-          <figure data-full="/varanda-botanic/SALA.D.jpg">
-            <img src="/varanda-botanic/SALA.D.jpg" alt="Varanda integrada">
+          <figure data-full="./SALA.D.jpg">
+            <img src="./SALA.D.jpg" alt="Varanda integrada">
             <span class="photo-label">Varanda</span>
           </figure>
-          <figure data-full="/varanda-botanic/QUARTO1.B.jpg">
-            <img src="/varanda-botanic/QUARTO1.B.jpg" alt="Quarto">
+          <figure data-full="./QUARTO1.B.jpg">
+            <img src="./QUARTO1.B.jpg" alt="Quarto">
             <span class="photo-label">Quarto</span>
           </figure>
-          <figure data-full="/varanda-botanic/BANHOA.1.jpg">
-            <img src="/varanda-botanic/BANHOA.1.jpg" alt="Banheiro">
+          <figure data-full="./BANHOA.1.jpg">
+            <img src="./BANHOA.1.jpg" alt="Banheiro">
             <span class="photo-label">Banheiro</span>
           </figure>
         </div>
@@ -468,29 +515,29 @@
           <p>Os espaços abaixo aparecem nas fotos fornecidas do condomínio.</p>
         </div>
 
-        <div class="amenity-grid">
+        <div class="amenity-grid reveal">
           <article class="amenity">
-            <img src="/varanda-botanic/LAZER.1.jpg" alt="Piscina do condomínio">
+            <img src="./LAZER.1.jpg" alt="Piscina do condomínio">
             <div class="amenity-copy"><strong>Piscina</strong><span>Área externa do condomínio</span></div>
           </article>
           <article class="amenity">
-            <img src="/varanda-botanic/LAZER.8.jpg" alt="Academia do condomínio">
+            <img src="./LAZER.8.jpg" alt="Academia do condomínio">
             <div class="amenity-copy"><strong>Academia</strong><span>Espaço de treino</span></div>
           </article>
           <article class="amenity">
-            <img src="/varanda-botanic/LAZER.6.jpg" alt="Quadra do condomínio">
+            <img src="./LAZER.6.jpg" alt="Quadra do condomínio">
             <div class="amenity-copy"><strong>Quadra</strong><span>Espaço esportivo</span></div>
           </article>
           <article class="amenity">
-            <img src="/varanda-botanic/LAZER3.jpg" alt="Churrasqueira do condomínio">
+            <img src="./LAZER3.jpg" alt="Churrasqueira do condomínio">
             <div class="amenity-copy"><strong>Churrasqueira</strong><span>Área de convivência</span></div>
           </article>
           <article class="amenity">
-            <img src="/varanda-botanic/LAZER4.jpg" alt="Playground do condomínio">
+            <img src="./LAZER4.jpg" alt="Playground do condomínio">
             <div class="amenity-copy"><strong>Playground</strong><span>Área infantil</span></div>
           </article>
           <article class="amenity">
-            <img src="/varanda-botanic/LAZER.7.jpg" alt="Salão do condomínio">
+            <img src="./LAZER.7.jpg" alt="Salão do condomínio">
             <div class="amenity-copy"><strong>Salão</strong><span>Espaço de convivência</span></div>
           </article>
         </div>
@@ -498,7 +545,7 @@
     </section>
 
     <section class="section">
-      <div class="wrap location-card">
+      <div class="wrap location-card reveal">
         <div>
           <div class="eyebrow" style="color:#d8c7a0">Localização</div>
           <h3>Vila da Saúde</h3>
@@ -506,16 +553,23 @@
           <span class="address-pill">Endereço informado no anúncio</span>
         </div>
         <div>
-          <a class="btn" target="_blank" rel="noopener"
-             href="https://www.google.com/maps/search/?api=1&query=Avenida+Miguel+Estefano+2800+Sao+Paulo">
-            ABRIR NO MAPA
-          </a>
+          <button class="btn btn-primary js-open-lead" type="button">QUERO CONHECER ESTE IMÓVEL</button>
+        </div>
+
+        <div class="map-shell" style="grid-column:1/-1">
+          <iframe
+            title="Mapa do Varanda Botanic - Av. Miguel Estéfano, 2800"
+            src="https://www.google.com/maps?q=Avenida%20Miguel%20Estefano%202800%20Sao%20Paulo&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
     </section>
 
     <section class="offer">
-      <div class="wrap offer-box">
+      <div class="wrap offer-box reveal">
         <div class="eyebrow">Varanda Botanic</div>
         <h2>57 m² com suíte e vaga por R$ 499 mil</h2>
         <p>Preencha seus dados para receber atendimento e combinar os próximos passos para conhecer o imóvel.</p>
@@ -537,7 +591,6 @@
     </button>
   </aside>
 
-  <button class="sticky-cta js-open-lead">CORRETOR RESPONSÁVEL</button>
 
   <div class="modal" id="leadModal" aria-hidden="true">
     <div class="modal-card">
@@ -564,7 +617,7 @@
         </div>
 
         <button class="submit" id="submitLead" type="submit">CONTINUAR ATENDIMENTO</button>
-        <div class="form-note">Seus dados serão usados para atendimento sobre este imóvel.</div>
+        <div class="form-note">Após confirmar os dados, abriremos o WhatsApp para continuar o atendimento.</div>
         <div class="status" id="formStatus" role="status"></div>
       </form>
     </div>
@@ -581,6 +634,7 @@
 
   <script>
     const LEAD_API = "https://app.yincorp.com.br/api/lead";
+    const WA_NUMBER = "5511992976368";
     const PROPERTY_NAME = "Varanda Botanic";
     const PROPERTY_VALUE = 499000;
     const PROPERTY_NEIGHBORHOOD = "Vila da Saúde";
@@ -719,20 +773,22 @@
 
         fireConfirmedConversions();
 
-        formStatus.textContent = "Recebido. Vamos continuar o atendimento.";
-        submitLead.textContent = "DADOS RECEBIDOS";
+        formStatus.textContent = "Dados confirmados. Abrindo o WhatsApp...";
+        submitLead.textContent = "ABRINDO WHATSAPP...";
 
-        /*
-          IMPORTANTE:
-          Se quiser abrir WhatsApp automaticamente após a confirmação,
-          coloque abaixo o número oficial no formato 5511999999999.
+        const whatsappText = [
+          `Olá, meu nome é ${name}.`,
+          `Vim pela página do ${PROPERTY_NAME}.`,
+          `Tenho interesse no apartamento de 57 m², 2 quartos, 1 suíte e 1 vaga por R$ 499 mil.`,
+          `Quero saber mais e agendar uma visita.`
+        ].join(" ");
 
-          const WHATSAPP_NUMBER = "5511999999999";
-          const msg = encodeURIComponent(
-            `Olá! Tenho interesse no ${PROPERTY_NAME}, 57 m², por R$ 499 mil. Meu nome é ${name}.`
-          );
-          window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
-        */
+        const whatsappUrl =
+          `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(whatsappText)}`;
+
+        setTimeout(()=>{
+          window.location.href = whatsappUrl;
+        }, 250);
 
       }catch(error){
         console.error(error);
@@ -769,6 +825,28 @@
     });
 
     captureAttribution();
+
+    // Remove a barra final da URL visual sem recarregar a página.
+    // O canonical acima também aponta para /varanda-botanic sem "/".
+    if(
+      location.pathname.length > 1 &&
+      location.pathname.endsWith("/")
+    ){
+      const cleanPath = location.pathname.replace(/\/+$/, "");
+      history.replaceState(null, "", cleanPath + location.search + location.hash);
+    }
+
+    // Animações suaves de entrada conforme o usuário percorre a página.
+    const revealObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+
+    document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
   </script>
 </body>
 </html>
