@@ -1,1 +1,774 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Varanda Botanic | 57 m², 2 quartos, 1 suíte e 1 vaga | Vila da Saúde</title>
+  <meta name="description" content="Apartamento no Varanda Botanic, na Vila da Saúde: 57 m², 2 quartos, 1 suíte, 2 banheiros e 1 vaga por R$ 499 mil. Veja fotos reais e agende sua visita.">
+  <meta name="theme-color" content="#F7F4ED">
+  <link rel="canonical" href="https://www.yincorp.com.br/varanda-botanic">
+
+  <meta property="og:title" content="Varanda Botanic | Vila da Saúde | R$ 499 mil">
+  <meta property="og:description" content="57 m² • 2 quartos • 1 suíte • 2 banheiros • 1 vaga. Fotos reais do apartamento e do condomínio.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.yincorp.com.br/varanda-botanic">
+  <meta property="og:image" content="https://www.yincorp.com.br/varanda-botanic/SALA.A.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2W11SX5VV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-Y2W11SX5VV');
+    gtag('config', 'AW-18371236623');
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1552958819302786');
+    fbq('track', 'PageView');
+  </script>
+
+  <style>
+    :root{
+      --bg:#F7F4ED;
+      --card:#FCFAF6;
+      --soft:#F0ECE3;
+      --champ:#C6A76B;
+      --champ2:#E4D0A3;
+      --ink:#4A443C;
+      --muted:#7D776E;
+      --taupe:#6A635A;
+      --border:#DED8CD;
+      --deep:#26231F;
+      --green:#27341F;
+      --radius:26px;
+      --shadow:0 18px 50px rgba(54,45,34,.10);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:"DM Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{display:block;max-width:100%}
+    button,input{font:inherit}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(14px);
+      background:rgba(247,244,237,.92);
+      border-bottom:1px solid rgba(222,216,205,.85);
+    }
+    .topbar-inner{
+      min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.08em;font-size:14px
+    }
+    .brand-mark{
+      width:34px;height:34px;border:1px solid var(--champ);border-radius:50%;
+      display:grid;place-items:center;font-family:"Playfair Display",serif;color:var(--deep)
+    }
+    .top-cta{
+      padding:12px 18px;border-radius:999px;background:var(--deep);color:white;font-weight:700;font-size:13px;
+      border:0;cursor:pointer
+    }
+
+    .hero{padding:28px 0 24px}
+    .hero-grid{
+      display:grid;grid-template-columns:1.02fr 1.38fr;gap:24px;align-items:stretch
+    }
+    .hero-copy,.hero-media{
+      min-height:640px;border-radius:32px;overflow:hidden;box-shadow:var(--shadow)
+    }
+    .hero-copy{
+      background:linear-gradient(155deg,#FCFAF6 0%,#F0ECE3 100%);
+      padding:54px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--border)
+    }
+    .eyebrow{
+      text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--taupe)
+    }
+    h1{
+      margin:16px 0 18px;font-family:"Playfair Display",serif;
+      font-size:clamp(48px,6vw,82px);line-height:.96;letter-spacing:-.035em;color:var(--deep)
+    }
+    .hero-sub{font-size:18px;max-width:560px;color:var(--muted)}
+    .price{
+      margin-top:34px;font-family:"Playfair Display",serif;font-size:48px;line-height:1;color:var(--deep)
+    }
+    .price small{display:block;font-family:"DM Sans";font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:8px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{
+      border:0;border-radius:999px;padding:16px 22px;font-weight:700;cursor:pointer;
+      transition:.2s ease;display:inline-flex;align-items:center;justify-content:center;gap:10px
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--deep);color:white}
+    .btn-secondary{background:transparent;color:var(--deep);border:1px solid var(--border)}
+    .hero-media{position:relative;background:#ddd}
+    .hero-media img{width:100%;height:100%;object-fit:cover}
+    .hero-badge{
+      position:absolute;left:22px;bottom:22px;background:rgba(38,35,31,.88);color:white;
+      border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:14px 18px;backdrop-filter:blur(12px)
+    }
+    .hero-badge strong{display:block;font-size:15px}
+    .hero-badge span{font-size:12px;color:#eee}
+
+    .facts{padding:18px 0 42px}
+    .fact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .fact{
+      padding:22px;background:var(--card);border:1px solid var(--border);border-radius:20px
+    }
+    .fact strong{display:block;font-size:23px;color:var(--deep)}
+    .fact span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+    .section{padding:52px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}
+    .section h2{
+      margin:6px 0 0;font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,58px);line-height:1;color:var(--deep)
+    }
+    .section-head p{max-width:520px;color:var(--muted);margin:0}
+
+    .gallery{
+      display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-template-rows:310px 310px;gap:12px
+    }
+    .gallery figure{margin:0;border-radius:24px;overflow:hidden;position:relative;background:#ddd;cursor:pointer}
+    .gallery figure:first-child{grid-row:1/3}
+    .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+    .gallery figure:hover img{transform:scale(1.025)}
+    .photo-label{
+      position:absolute;left:14px;bottom:14px;background:rgba(38,35,31,.78);color:white;
+      border-radius:999px;padding:8px 12px;font-size:11px;font-weight:700;backdrop-filter:blur(10px)
+    }
+
+    .amenity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .amenity{
+      background:var(--card);border:1px solid var(--border);border-radius:24px;overflow:hidden
+    }
+    .amenity img{width:100%;aspect-ratio:4/3;object-fit:cover}
+    .amenity-copy{padding:16px 18px}
+    .amenity-copy strong{display:block;color:var(--deep)}
+    .amenity-copy span{font-size:13px;color:var(--muted)}
+
+    .location-card{
+      background:var(--deep);color:white;border-radius:30px;padding:36px;display:grid;
+      grid-template-columns:1.35fr .65fr;gap:28px;align-items:center;overflow:hidden;position:relative
+    }
+    .location-card:after{
+      content:"";position:absolute;width:240px;height:240px;border-radius:50%;
+      background:radial-gradient(circle,var(--champ) 0%,rgba(198,167,107,0) 68%);right:-60px;top:-80px;opacity:.38
+    }
+    .location-card h3{font-family:"Playfair Display",serif;font-size:38px;margin:0 0 10px}
+    .location-card p{color:#ddd;margin:0}
+    .address-pill{
+      margin-top:20px;display:inline-block;padding:10px 14px;border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;color:#f3ede3;font-size:13px
+    }
+    .location-card .btn{position:relative;z-index:1;background:var(--champ2);color:var(--deep)}
+
+    .offer{
+      padding:66px 0 96px
+    }
+    .offer-box{
+      background:linear-gradient(135deg,#EDE5D4,#F8F4EB);border:1px solid var(--border);
+      border-radius:34px;padding:52px;text-align:center;box-shadow:var(--shadow)
+    }
+    .offer-box h2{margin:10px auto 14px;max-width:800px}
+    .offer-box p{max-width:680px;margin:0 auto 24px;color:var(--muted)}
+
+
+    .broker-float{
+      position:fixed;
+      left:18px;
+      bottom:18px;
+      z-index:46;
+      width:118px;
+      background:rgba(252,250,246,.96);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:10px;
+      box-shadow:0 16px 38px rgba(44,38,31,.18);
+      backdrop-filter:blur(12px);
+      text-align:center;
+    }
+    .broker-photo{
+      width:86px;
+      height:86px;
+      margin:0 auto 8px;
+      border-radius:50%;
+      object-fit:cover;
+      object-position:center top;
+      border:3px solid #fff;
+      box-shadow:0 6px 18px rgba(0,0,0,.14);
+      background:#eee;
+    }
+    .broker-role{
+      display:block;
+      font-size:9px;
+      line-height:1.15;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:2px;
+    }
+    .broker-name{
+      display:block;
+      font-size:12px;
+      line-height:1.15;
+      font-weight:800;
+      color:var(--deep);
+      margin-bottom:8px;
+    }
+    .broker-whatsapp{
+      width:100%;
+      border:0;
+      border-radius:999px;
+      padding:9px 8px;
+      background:#1f7a45;
+      color:white;
+      font-size:10px;
+      line-height:1.15;
+      font-weight:800;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:5px;
+    }
+    .broker-whatsapp svg{
+      width:14px;
+      height:14px;
+      flex:0 0 14px;
+      fill:currentColor;
+    }
+
+    .sticky-cta{
+      position:fixed;right:18px;bottom:18px;z-index:45;
+      border:0;border-radius:999px;background:var(--deep);color:#fff;
+      padding:15px 18px;font-weight:700;box-shadow:0 14px 35px rgba(0,0,0,.22);cursor:pointer
+    }
+
+    .modal{
+      position:fixed;inset:0;background:rgba(24,21,18,.64);z-index:100;
+      display:none;align-items:center;justify-content:center;padding:18px
+    }
+    .modal.open{display:flex}
+    .modal-card{
+      width:min(520px,100%);background:var(--card);border-radius:28px;padding:28px;border:1px solid var(--border);box-shadow:var(--shadow)
+    }
+    .modal-top{display:flex;justify-content:space-between;gap:20px;align-items:start}
+    .modal h3{font-family:"Playfair Display",serif;font-size:34px;margin:0 0 8px;color:var(--deep)}
+    .modal p{margin:0 0 20px;color:var(--muted)}
+    .close{
+      width:38px;height:38px;border-radius:50%;border:1px solid var(--border);background:white;cursor:pointer
+    }
+    .field{margin:12px 0}
+    .field label{display:block;font-size:12px;font-weight:700;margin:0 0 7px;color:var(--taupe)}
+    .field input{
+      width:100%;height:52px;border:1px solid var(--border);border-radius:14px;background:white;padding:0 14px;outline:none;color:var(--deep)
+    }
+    .field input:focus{border-color:var(--champ)}
+    .submit{
+      width:100%;height:54px;margin-top:10px;border:0;border-radius:14px;background:var(--deep);color:white;font-weight:800;cursor:pointer
+    }
+    .form-note{font-size:11px;color:var(--muted);margin-top:10px}
+    .status{font-size:13px;margin-top:12px;min-height:18px}
+
+    .lightbox{
+      position:fixed;inset:0;background:rgba(18,16,14,.93);z-index:120;display:none;
+      align-items:center;justify-content:center;padding:20px
+    }
+    .lightbox.open{display:flex}
+    .lightbox img{max-height:90vh;max-width:94vw;border-radius:18px}
+    .lightbox button{
+      position:absolute;right:18px;top:18px;width:42px;height:42px;border-radius:50%;
+      border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:white;font-size:24px;cursor:pointer
+    }
+
+    footer{padding:28px 0 100px;color:var(--muted);font-size:12px;text-align:center}
+
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero-copy,.hero-media{min-height:auto}
+      .hero-copy{padding:34px 26px}
+      .hero-media{height:64vh;min-height:520px}
+      .fact-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:1fr 1fr;grid-template-rows:360px 240px 240px}
+      .gallery figure:first-child{grid-column:1/3;grid-row:auto}
+      .amenity-grid{grid-template-columns:1fr 1fr}
+      .location-card{grid-template-columns:1fr}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(100% - 20px,1180px)}
+      .topbar-inner{min-height:62px}
+      .brand{font-size:12px}
+      .top-cta{padding:10px 13px;font-size:12px}
+      .hero{padding-top:12px}
+      .hero-copy{border-radius:24px;padding:28px 20px}
+      h1{font-size:50px}
+      .hero-sub{font-size:16px}
+      .price{font-size:42px}
+      .hero-actions .btn{width:100%}
+      .hero-media{height:62vh;min-height:480px;border-radius:24px}
+      .facts{padding-bottom:28px}
+      .fact-grid{grid-template-columns:1fr 1fr;gap:8px}
+      .fact{padding:16px}
+      .fact strong{font-size:19px}
+      .section{padding:36px 0}
+      .section-head{display:block}
+      .section-head p{margin-top:12px}
+      .gallery{grid-template-columns:1fr;grid-template-rows:380px repeat(4,220px)}
+      .gallery figure:first-child{grid-column:auto}
+      .amenity-grid{grid-template-columns:1fr}
+      .location-card{padding:28px 22px;border-radius:24px}
+      .offer-box{padding:34px 20px;border-radius:26px}
+      .broker-float{
+        left:10px;
+        bottom:76px;
+        width:96px;
+        padding:8px;
+        border-radius:18px;
+      }
+      .broker-photo{
+        width:66px;
+        height:66px;
+        margin-bottom:6px;
+      }
+      .broker-role{font-size:8px}
+      .broker-name{font-size:10px;margin-bottom:6px}
+      .broker-whatsapp{
+        padding:8px 6px;
+        font-size:0;
+      }
+      .broker-whatsapp::after{
+        content:"WhatsApp";
+        font-size:9px;
+      }
+      .sticky-cta{left:10px;right:10px;bottom:10px;width:calc(100% - 20px)}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="/" class="brand" aria-label="Yincorp">
+        <span class="brand-mark">Y</span>
+        <span>YINCORP</span>
+      </a>
+      <button class="top-cta js-open-lead">FALAR COM O ESPECIALISTA</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">Vila da Saúde · São Paulo</div>
+            <h1>Varanda<br>Botanic</h1>
+            <p class="hero-sub">Apartamento com 57 m², 2 quartos, 1 suíte, 2 banheiros e 1 vaga. Fotos reais da unidade e do condomínio.</p>
+
+            <div class="price">
+              <small>Valor anunciado</small>
+              R$ 499 mil
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary js-open-lead">QUERO CONHECER ESTE IMÓVEL</button>
+            <a class="btn btn-secondary" href="#galeria">VER FOTOS</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="./SALA.A.jpg" alt="Sala do apartamento Varanda Botanic" fetchpriority="high">
+          <div class="hero-badge">
+            <strong>57 m² · 2 quartos · 1 suíte</strong>
+            <span>1 vaga · Vila da Saúde</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts">
+      <div class="wrap fact-grid">
+        <div class="fact"><strong>57 m²</strong><span>área útil</span></div>
+        <div class="fact"><strong>2</strong><span>quartos</span></div>
+        <div class="fact"><strong>1</strong><span>suíte</span></div>
+        <div class="fact"><strong>2</strong><span>banheiros</span></div>
+        <div class="fact"><strong>1 vaga</strong><span>garagem</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Fotos reais</div>
+            <h2>Conheça o apartamento</h2>
+          </div>
+          <p>Uma seleção dos ambientes que melhor mostram a distribuição, a sala integrada, a varanda e os espaços internos.</p>
+        </div>
+
+        <div class="gallery">
+          <figure data-full="./SALA.A.jpg">
+            <img src="./SALA.A.jpg" alt="Sala integrada do apartamento">
+            <span class="photo-label">Sala</span>
+          </figure>
+          <figure data-full="./SALA.C.jpg">
+            <img src="./SALA.C.jpg" alt="Sala de jantar">
+            <span class="photo-label">Jantar</span>
+          </figure>
+          <figure data-full="./SALA.D.jpg">
+            <img src="./SALA.D.jpg" alt="Varanda integrada">
+            <span class="photo-label">Varanda</span>
+          </figure>
+          <figure data-full="./QUARTO1.B.jpg">
+            <img src="./QUARTO1.B.jpg" alt="Quarto">
+            <span class="photo-label">Quarto</span>
+          </figure>
+          <figure data-full="./BANHOA.1.jpg">
+            <img src="./BANHOA.1.jpg" alt="Banheiro">
+            <span class="photo-label">Banheiro</span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Condomínio</div>
+            <h2>Lazer para a rotina</h2>
+          </div>
+          <p>Os espaços abaixo aparecem nas fotos fornecidas do condomínio.</p>
+        </div>
+
+        <div class="amenity-grid">
+          <article class="amenity">
+            <img src="./LAZER.1.jpg" alt="Piscina do condomínio">
+            <div class="amenity-copy"><strong>Piscina</strong><span>Área externa do condomínio</span></div>
+          </article>
+          <article class="amenity">
+            <img src="./LAZER.8.jpg" alt="Academia do condomínio">
+            <div class="amenity-copy"><strong>Academia</strong><span>Espaço de treino</span></div>
+          </article>
+          <article class="amenity">
+            <img src="./LAZER.6.jpg" alt="Quadra do condomínio">
+            <div class="amenity-copy"><strong>Quadra</strong><span>Espaço esportivo</span></div>
+          </article>
+          <article class="amenity">
+            <img src="./LAZER3.jpg" alt="Churrasqueira do condomínio">
+            <div class="amenity-copy"><strong>Churrasqueira</strong><span>Área de convivência</span></div>
+          </article>
+          <article class="amenity">
+            <img src="./LAZER4.jpg" alt="Playground do condomínio">
+            <div class="amenity-copy"><strong>Playground</strong><span>Área infantil</span></div>
+          </article>
+          <article class="amenity">
+            <img src="./LAZER.7.jpg" alt="Salão do condomínio">
+            <div class="amenity-copy"><strong>Salão</strong><span>Espaço de convivência</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap location-card">
+        <div>
+          <div class="eyebrow" style="color:#d8c7a0">Localização</div>
+          <h3>Vila da Saúde</h3>
+          <p>Av. Miguel Estéfano, 2800 · São Paulo</p>
+          <span class="address-pill">Endereço informado no anúncio</span>
+        </div>
+        <div>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=Avenida+Miguel+Estefano+2800+Sao+Paulo">
+            ABRIR NO MAPA
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer">
+      <div class="wrap offer-box">
+        <div class="eyebrow">Varanda Botanic</div>
+        <h2>57 m² com suíte e vaga por R$ 499 mil</h2>
+        <p>Preencha seus dados para receber atendimento e combinar os próximos passos para conhecer o imóvel.</p>
+        <button class="btn btn-primary js-open-lead">QUERO AGENDAR UMA VISITA</button>
+      </div>
+    </section>
+  </main>
+
+  <aside class="broker-float" aria-label="Corretor responsável">
+    <img class="broker-photo" src="/PERFIL.jfif" alt="Rafael, corretor responsável">
+    <span class="broker-role">Corretor responsável</span>
+    <strong class="broker-name">Rafael</strong>
+    <button class="broker-whatsapp js-open-lead" type="button" aria-label="Falar com Rafael pelo WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M19.11 17.21c-.26-.13-1.54-.76-1.78-.85-.24-.09-.42-.13-.59.13-.17.26-.68.85-.83 1.02-.15.17-.31.2-.57.07-.26-.13-1.1-.4-2.09-1.29-.77-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.15.17-.26.26-.44.09-.17.04-.33-.02-.46-.07-.13-.59-1.43-.81-1.96-.21-.51-.43-.44-.59-.45h-.5c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2s.94 2.55 1.07 2.72c.13.17 1.85 2.83 4.49 3.97.63.27 1.12.43 1.5.55.63.2 1.21.17 1.66.1.51-.08 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.06-.11-.24-.17-.5-.3z"/>
+        <path d="M16.04 3.2c-7.06 0-12.8 5.73-12.8 12.78 0 2.25.59 4.45 1.7 6.39L3.13 29l6.8-1.78a12.78 12.78 0 0 0 6.11 1.56h.01c7.05 0 12.79-5.74 12.79-12.79A12.8 12.8 0 0 0 16.04 3.2zm0 23.42h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-4.04 1.06 1.08-3.94-.25-.4a10.61 10.61 0 1 1 9.01 4.99z"/>
+      </svg>
+      WhatsApp
+    </button>
+  </aside>
+
+  <button class="sticky-cta js-open-lead">FALAR COM O ESPECIALISTA</button>
+
+  <div class="modal" id="leadModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-top">
+        <div>
+          <h3>Conhecer o Varanda Botanic</h3>
+          <p>Deixe seus dados e seguimos com o atendimento.</p>
+        </div>
+        <button class="close" id="closeModal" aria-label="Fechar">×</button>
+      </div>
+
+      <form id="leadForm">
+        <div class="field">
+          <label for="leadName">Nome</label>
+          <input id="leadName" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="leadPhone">WhatsApp</label>
+          <input id="leadPhone" name="phone" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <div class="field">
+          <label for="leadEmail">E-mail</label>
+          <input id="leadEmail" name="email" autocomplete="email" type="email" required>
+        </div>
+
+        <button class="submit" id="submitLead" type="submit">CONTINUAR ATENDIMENTO</button>
+        <div class="form-note">Seus dados serão usados para atendimento sobre este imóvel.</div>
+        <div class="status" id="formStatus" role="status"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button id="closeLightbox" aria-label="Fechar">×</button>
+    <img id="lightboxImage" alt="">
+  </div>
+
+  <footer>
+    <div class="wrap">Informações e disponibilidade sujeitas à confirmação no atendimento.</div>
+  </footer>
+
+  <script>
+    const LEAD_API = "https://app.yincorp.com.br/api/lead";
+    const PROPERTY_NAME = "Varanda Botanic";
+    const PROPERTY_VALUE = 499000;
+    const PROPERTY_NEIGHBORHOOD = "Vila da Saúde";
+
+    const $ = (id) => document.getElementById(id);
+    const leadModal = $("leadModal");
+    const formStatus = $("formStatus");
+    const submitLead = $("submitLead");
+
+    function captureAttribution(){
+      const params = new URLSearchParams(location.search);
+      const keys = ["gclid","gbraid","wbraid","utm_source","utm_medium","utm_campaign","utm_content","utm_term"];
+      const data = {};
+      keys.forEach(key=>{
+        const val = params.get(key);
+        if(val){
+          data[key] = val;
+          try{ localStorage.setItem("yincorp_"+key, val); }catch(e){}
+        }else{
+          try{
+            const stored = localStorage.getItem("yincorp_"+key);
+            if(stored) data[key] = stored;
+          }catch(e){}
+        }
+      });
+      return data;
+    }
+
+    function openLeadModal(){
+      leadModal.classList.add("open");
+      leadModal.setAttribute("aria-hidden","false");
+      document.body.style.overflow = "hidden";
+
+      try{
+        $("leadName").value = localStorage.getItem("yincorp_contact_name") || "";
+        $("leadPhone").value = localStorage.getItem("yincorp_contact_phone") || "";
+        $("leadEmail").value = localStorage.getItem("yincorp_contact_email") || "";
+      }catch(e){}
+
+      setTimeout(()=> $("leadName").focus(), 80);
+    }
+
+    function closeLeadModal(){
+      leadModal.classList.remove("open");
+      leadModal.setAttribute("aria-hidden","true");
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll(".js-open-lead").forEach(btn=>{
+      btn.addEventListener("click", openLeadModal);
+    });
+
+    $("closeModal").addEventListener("click", closeLeadModal);
+    leadModal.addEventListener("click", e=>{
+      if(e.target === leadModal) closeLeadModal();
+    });
+
+    function fireConfirmedConversions(){
+      try{
+        if(typeof gtag === "function"){
+          gtag("event","generate_lead",{
+            property_name:PROPERTY_NAME,
+            property_value:PROPERTY_VALUE,
+            neighborhood:PROPERTY_NEIGHBORHOOD
+          });
+
+          gtag("event","conversion",{
+            "send_to":"AW-18371236623/Icu-CMS18_ccEI-mi7hE"
+          });
+        }
+      }catch(e){}
+
+      try{
+        if(typeof fbq === "function"){
+          fbq("track","Lead",{
+            content_name:PROPERTY_NAME,
+            value:PROPERTY_VALUE,
+            currency:"BRL"
+          });
+        }
+      }catch(e){}
+    }
+
+    $("leadForm").addEventListener("submit", async (event)=>{
+      event.preventDefault();
+      formStatus.textContent = "";
+      submitLead.disabled = true;
+      submitLead.textContent = "ENVIANDO...";
+
+      const name = $("leadName").value.trim();
+      const phone = $("leadPhone").value.trim();
+      const email = $("leadEmail").value.trim();
+
+      const payload = {
+        nome:name,
+        name,
+        telefone:phone,
+        phone,
+        email,
+        origem:"lp_varanda_botanic",
+        source:"lp_varanda_botanic",
+        empreendimento:PROPERTY_NAME,
+        property_name:PROPERTY_NAME,
+        property:PROPERTY_NAME,
+        property_value:PROPERTY_VALUE,
+        neighborhood:PROPERTY_NEIGHBORHOOD,
+        page:location.href,
+        pathname:location.pathname,
+        referrer:document.referrer || "",
+        ...captureAttribution()
+      };
+
+      try{
+        const response = await fetch(LEAD_API,{
+          method:"POST",
+          headers:{"Content-Type":"application/json"},
+          body:JSON.stringify(payload)
+        });
+
+        let data = {};
+        try{ data = await response.json(); }catch(e){}
+
+        if (
+          !response.ok ||
+          data.success !== true ||
+          (data.praedium !== true && data.supabase !== true)
+        ) {
+          throw new Error("A API não confirmou o armazenamento do lead");
+        }
+
+        try{
+          localStorage.setItem("yincorp_contact_name", name);
+          localStorage.setItem("yincorp_contact_phone", phone);
+          localStorage.setItem("yincorp_contact_email", email);
+        }catch(e){}
+
+        fireConfirmedConversions();
+
+        formStatus.textContent = "Recebido. Vamos continuar o atendimento.";
+        submitLead.textContent = "DADOS RECEBIDOS";
+
+        /*
+          IMPORTANTE:
+          Se quiser abrir WhatsApp automaticamente após a confirmação,
+          coloque abaixo o número oficial no formato 5511999999999.
+
+          const WHATSAPP_NUMBER = "5511999999999";
+          const msg = encodeURIComponent(
+            `Olá! Tenho interesse no ${PROPERTY_NAME}, 57 m², por R$ 499 mil. Meu nome é ${name}.`
+          );
+          window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+        */
+
+      }catch(error){
+        console.error(error);
+        formStatus.textContent = "Não conseguimos confirmar o envio. Tente novamente.";
+        submitLead.disabled = false;
+        submitLead.textContent = "CONTINUAR ATENDIMENTO";
+      }
+    });
+
+    document.querySelectorAll(".gallery figure").forEach(item=>{
+      item.addEventListener("click",()=>{
+        $("lightboxImage").src = item.dataset.full;
+        $("lightbox").classList.add("open");
+        $("lightbox").setAttribute("aria-hidden","false");
+      });
+    });
+
+    function closeLightbox(){
+      $("lightbox").classList.remove("open");
+      $("lightbox").setAttribute("aria-hidden","true");
+      $("lightboxImage").src = "";
+    }
+
+    $("closeLightbox").addEventListener("click", closeLightbox);
+    $("lightbox").addEventListener("click", e=>{
+      if(e.target === $("lightbox")) closeLightbox();
+    });
+
+    document.addEventListener("keydown", e=>{
+      if(e.key === "Escape"){
+        closeLeadModal();
+        closeLightbox();
+      }
+    });
+
+    captureAttribution();
+  </script>
+</body>
+</html>
