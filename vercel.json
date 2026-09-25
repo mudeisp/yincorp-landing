@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/varanda-botanic",
+      "destination": "/varanda-botanic/index.html"
+    },
+    {
+      "source": "/varanda-botanic/",
+      "destination": "/varanda-botanic/index.html"
+    }
+  ]
+}
