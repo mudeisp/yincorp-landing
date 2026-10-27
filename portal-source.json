@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "3ef5a7c0085e5fc9bdf7e379eaf4ede95bf0a997",
+  "commit": "8d29804c708d6f1ccdaf528719c50639d960977e",
   "files": [
     {
       "source": "portal/model.js",
@@ -10,7 +10,7 @@
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "gitBlobSha": "7b34939096db951d9e03c431f57c95b0656755ef"
+      "gitBlobSha": "c631a52911d04cb9f7dbfc17387c40521018eb89"
     },
     {
       "source": "portal/router.js",
@@ -60,7 +60,7 @@
     {
       "source": "portal/presentation.js",
       "destination": ".portal-shared/presentation.js",
-      "gitBlobSha": "0949eebdc5da9a445f2b504090e9aa5cf39c0598"
+      "gitBlobSha": "2b80febf95d0a99ac160d39b3bd0b2545284f076"
     },
     {
       "source": "assets/js/portal-gallery.js",
@@ -70,7 +70,7 @@
     {
       "source": "portal/editorial.js",
       "destination": ".portal-shared/editorial.js",
-      "gitBlobSha": "964c8310155650742974530fabbb3ff71f7b3541"
+      "gitBlobSha": "4a53dce8dc6467c89f2efdc70b6ba0d149dedd59"
     },
     {
       "source": "assets/css/portal-editorial.css",
@@ -80,7 +80,7 @@
     {
       "source": "portal/architecture.js",
       "destination": ".portal-shared/architecture.js",
-      "gitBlobSha": "3fc24c646ed927235d6a1a81b012910c8dad4930"
+      "gitBlobSha": "94781fba4d45ee02c5123352bac4610f72ba0384"
     },
     {
       "source": "assets/css/property-story.css",
@@ -95,7 +95,7 @@
     {
       "source": "portal/composition.js",
       "destination": ".portal-shared/composition.js",
-      "gitBlobSha": "098a1de0876c578bea451bddd17f5c6653b494d8"
+      "gitBlobSha": "8a02484562e6607a46961b0a4763d86c78690b16"
     },
     {
       "source": "portal/editorial-sources.js",
@@ -105,7 +105,12 @@
     {
       "source": "portal/floor-plans.js",
       "destination": ".portal-shared/floor-plans.js",
-      "gitBlobSha": "34b88c99b47ad2a128c576eafd7688c48ba636d8"
+      "gitBlobSha": "483a0ec7d74e712c45d63314f971f16019474bb9"
+    },
+    {
+      "source": "portal/semantics.js",
+      "destination": ".portal-shared/semantics.js",
+      "gitBlobSha": "d2e0ecfd7bc6d29bfa5e7b50afcb5300cc70d5d6"
     }
   ]
 }
