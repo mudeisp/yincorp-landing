@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "72572741800e25d8720c8c4a73f7e1edeca1236d",
+  "commit": "3ef5a7c0085e5fc9bdf7e379eaf4ede95bf0a997",
   "files": [
     {
       "source": "portal/model.js",
@@ -10,7 +10,7 @@
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "gitBlobSha": "3b5f60505031ea7a8bf37feb980862b4173a42c2"
+      "gitBlobSha": "7b34939096db951d9e03c431f57c95b0656755ef"
     },
     {
       "source": "portal/router.js",
@@ -75,22 +75,37 @@
     {
       "source": "assets/css/portal-editorial.css",
       "destination": "portal-assets/portal-editorial.css",
-      "gitBlobSha": "6e3a3a5ac9ebef6d4c0352e44278ef9bbb6a9225"
+      "gitBlobSha": "d565e7fb2c9024eb4f6b91ec5ffefc24e2529b25"
     },
     {
       "source": "portal/architecture.js",
       "destination": ".portal-shared/architecture.js",
-      "gitBlobSha": "1638e568f7c737ff63c48afc3c5ab5a7a37359a9"
+      "gitBlobSha": "3fc24c646ed927235d6a1a81b012910c8dad4930"
     },
     {
       "source": "assets/css/property-story.css",
       "destination": "portal-assets/property-story.css",
-      "gitBlobSha": "8f3c5bff02a06d7010e6ac2b1f5757056be82af4"
+      "gitBlobSha": "6496ad51b468a7f17ce908fee8db6efc8266aa1e"
     },
     {
       "source": "assets/js/property-story.js",
       "destination": "portal-assets/property-story.js",
-      "gitBlobSha": "3068422098f350483c642f278c24b33baeb16784"
+      "gitBlobSha": "702de655f643d9ac7f7012cf45b301802dc06f3f"
+    },
+    {
+      "source": "portal/composition.js",
+      "destination": ".portal-shared/composition.js",
+      "gitBlobSha": "098a1de0876c578bea451bddd17f5c6653b494d8"
+    },
+    {
+      "source": "portal/editorial-sources.js",
+      "destination": ".portal-shared/editorial-sources.js",
+      "gitBlobSha": "1755a5b737c29c894f5dc2a60d66ff1ca96f8bc8"
+    },
+    {
+      "source": "portal/floor-plans.js",
+      "destination": ".portal-shared/floor-plans.js",
+      "gitBlobSha": "34b88c99b47ad2a128c576eafd7688c48ba636d8"
     }
   ]
 }
