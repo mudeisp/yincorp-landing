@@ -1,12 +1,23 @@
 {
+  "buildCommand": "node scripts/prepare-portal.mjs",
+  "outputDirectory": ".",
+  "redirects": [
+    { "source": "/", "destination": "/es", "permanent": false }
+  ],
   "rewrites": [
-    {
-      "source": "/varanda-botanic",
-      "destination": "/varanda-botanic/index.html"
-    },
-    {
-      "source": "/varanda-botanic/",
-      "destination": "/varanda-botanic/index.html"
-    }
+    { "source": "/varanda-botanic", "destination": "/varanda-botanic/index.html" },
+    { "source": "/varanda-botanic/", "destination": "/varanda-botanic/index.html" },
+    { "source": "/institucional", "destination": "/index.html" },
+    { "source": "/api/portal/lead", "destination": "https://app.yincorp.com.br/api/lead" },
+    { "source": "/api/ads", "destination": "https://app.yincorp.com.br/api/ads" },
+    { "source": "/sitemap-portal.xml", "destination": "/api/portal?portalPath=/sitemap-portal.xml" },
+    { "source": "/:uf(ac|al|ap|am|ba|ce|df|es|go|ma|mt|ms|mg|pa|pb|pr|pe|pi|rj|rn|rs|ro|rr|sc|sp|se|to)", "destination": "/api/portal?portalPath=/:uf" },
+    { "source": "/:uf(ac|al|ap|am|ba|ce|df|es|go|ma|mt|ms|mg|pa|pb|pr|pe|pi|rj|rn|rs|ro|rr|sc|sp|se|to)/:rest*", "destination": "/api/portal?portalPath=/:uf/:rest*" },
+    { "source": "/assets/css/portal.css", "destination": "/portal-assets/portal.css" },
+    { "source": "/assets/js/portal.js", "destination": "/portal-assets/portal.js" },
+    { "source": "/assets/js/portal-contact.js", "destination": "/portal-assets/portal-contact.js" },
+    { "source": "/assets/js/portal-session.js", "destination": "/portal-assets/portal-session.js" },
+    { "source": "/assets/js/integrations/analytics.js", "destination": "/portal-assets/analytics.js" },
+    { "source": "/icon-192.png", "destination": "/portal-assets/icon-192.png" }
   ]
 }

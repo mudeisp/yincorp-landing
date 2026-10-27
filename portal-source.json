@@ -1,0 +1,61 @@
+{
+  "repository": "mudeisp/ynteligencia",
+  "commit": "8b7093df7cbb27cfc61307043edfb366ffa4fa21",
+  "files": [
+    {
+      "source": "portal/model.js",
+      "destination": ".portal-shared/model.js",
+      "sha256": "f8c17bcf86f94adffa6cd5f15cb25f2c386f2b96bd1112a1f13c003464b6ff73"
+    },
+    {
+      "source": "portal/render.js",
+      "destination": ".portal-shared/render.js",
+      "sha256": "36a035aeeeda50b6a5f018dd812df0e1013ea5eb4cb8e440c3de5a4595aac641"
+    },
+    {
+      "source": "portal/router.js",
+      "destination": ".portal-shared/router.js",
+      "sha256": "785b45f7a1239d7ba23f448aa543afd4d0e18ad24bdb2704106172965743f64e"
+    },
+    {
+      "source": "portal/inventory.js",
+      "destination": ".portal-shared/inventory.js",
+      "sha256": "0aa12ec7cad76d7c23339c03e3b44aeb08fce27bc661049487d4f36dcf268a8f"
+    },
+    {
+      "source": "assets/css/portal.css",
+      "destination": "portal-assets/portal.css",
+      "sha256": "0771f285c9e2706d9711f82b1b53076f19226a231ca62d3c6cfb6f3fe17f3a21"
+    },
+    {
+      "source": "assets/js/portal.js",
+      "destination": "portal-assets/portal.js",
+      "sha256": "919df13789ec98492649a45f3c0e642c5872d962af5747136020bcfd11c8afaf"
+    },
+    {
+      "source": "assets/js/portal-contact.js",
+      "destination": "portal-assets/portal-contact.js",
+      "sha256": "4e2c74c5fe04ffe7db8b0ead596e3969fac6f67f2efe1c05fde4096901644bf7"
+    },
+    {
+      "source": "assets/js/portal-session.js",
+      "destination": "portal-assets/portal-session.js",
+      "sha256": "88c7d5bc0c576aad2a9f09be3d23550b66071ccb23da28f1b7c9c0b61acd513c"
+    },
+    {
+      "source": "assets/js/integrations/analytics.js",
+      "destination": "portal-assets/analytics.js",
+      "sha256": "873de63597d5aad4ea20564bafc309c2d783ed0af40a39bfdceeb6654aa3c921"
+    },
+    {
+      "source": "icon-192.png",
+      "destination": "portal-assets/icon-192.png",
+      "sha256": "7f794c227e1e488823abdbddef9b58b8793d27f7516b78d53c3b69b3e52d7c62"
+    },
+    {
+      "source": "assets/js/delivery-5.js",
+      "destination": ".portal-shared/public-config.source",
+      "sha256": "77603d73dd6943f3b3a51f3ec52205e7c9c19acfcfd74d285e6d579878d6c5ff"
+    }
+  ]
+}
