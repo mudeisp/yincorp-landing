@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "c4a4aa3165a132fe29273ad544eb70edcd894153",
+  "commit": "72572741800e25d8720c8c4a73f7e1edeca1236d",
   "files": [
     {
       "source": "portal/model.js",
@@ -10,7 +10,7 @@
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "gitBlobSha": "6d5046a12192579ccbc6ff50bbbcc9cd35fbcba3"
+      "gitBlobSha": "3b5f60505031ea7a8bf37feb980862b4173a42c2"
     },
     {
       "source": "portal/router.js",
@@ -70,12 +70,27 @@
     {
       "source": "portal/editorial.js",
       "destination": ".portal-shared/editorial.js",
-      "gitBlobSha": "8a59e12b96128434193f5cece3d38af015a35925"
+      "gitBlobSha": "964c8310155650742974530fabbb3ff71f7b3541"
     },
     {
       "source": "assets/css/portal-editorial.css",
       "destination": "portal-assets/portal-editorial.css",
       "gitBlobSha": "6e3a3a5ac9ebef6d4c0352e44278ef9bbb6a9225"
+    },
+    {
+      "source": "portal/architecture.js",
+      "destination": ".portal-shared/architecture.js",
+      "gitBlobSha": "1638e568f7c737ff63c48afc3c5ab5a7a37359a9"
+    },
+    {
+      "source": "assets/css/property-story.css",
+      "destination": "portal-assets/property-story.css",
+      "gitBlobSha": "8f3c5bff02a06d7010e6ac2b1f5757056be82af4"
+    },
+    {
+      "source": "assets/js/property-story.js",
+      "destination": "portal-assets/property-story.js",
+      "gitBlobSha": "3068422098f350483c642f278c24b33baeb16784"
     }
   ]
 }
