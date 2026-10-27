@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "8691f34c5127c7c03478e157b15a144a35acb44d",
+  "commit": "c4a4aa3165a132fe29273ad544eb70edcd894153",
   "files": [
     {
       "source": "portal/model.js",
@@ -10,22 +10,17 @@
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "gitBlobSha": "a67e3014bd1ceb0decf01a90cb3af0af4e2f2ce2"
+      "gitBlobSha": "6d5046a12192579ccbc6ff50bbbcc9cd35fbcba3"
     },
     {
       "source": "portal/router.js",
       "destination": ".portal-shared/router.js",
-      "gitBlobSha": "dd948d60c5646f78d0c3000f735394b38ff763f2"
+      "gitBlobSha": "7a78021d8f5cab6828a6c9af20b9fcc27423f8d8"
     },
     {
       "source": "portal/inventory.js",
       "destination": ".portal-shared/inventory.js",
       "gitBlobSha": "450d3123769aeff33cf8c49b7948e19294d8bdb1"
-    },
-    {
-      "source": "assets/css/portal.css",
-      "destination": "portal-assets/portal.css",
-      "sha256": "0771f285c9e2706d9711f82b1b53076f19226a231ca62d3c6cfb6f3fe17f3a21"
     },
     {
       "source": "assets/js/portal.js",
@@ -65,17 +60,22 @@
     {
       "source": "portal/presentation.js",
       "destination": ".portal-shared/presentation.js",
-      "gitBlobSha": "3b8fae0bcdba7a7fe59bc184a3c6c03f6e13f2a0"
-    },
-    {
-      "source": "assets/css/portal-v3.css",
-      "destination": "portal-assets/portal-v3.css",
-      "gitBlobSha": "56b78dbced71c9c712eacfd770b6558fe38459df"
+      "gitBlobSha": "0949eebdc5da9a445f2b504090e9aa5cf39c0598"
     },
     {
       "source": "assets/js/portal-gallery.js",
       "destination": "portal-assets/portal-gallery.js",
-      "gitBlobSha": "a9c13b78f6c43f6e1bbb445d370c4a0099203597"
+      "gitBlobSha": "5890ad298ac144f50d3184e6d8ab1c55e4a57a81"
+    },
+    {
+      "source": "portal/editorial.js",
+      "destination": ".portal-shared/editorial.js",
+      "gitBlobSha": "8a59e12b96128434193f5cece3d38af015a35925"
+    },
+    {
+      "source": "assets/css/portal-editorial.css",
+      "destination": "portal-assets/portal-editorial.css",
+      "gitBlobSha": "6e3a3a5ac9ebef6d4c0352e44278ef9bbb6a9225"
     }
   ]
 }

@@ -42,10 +42,6 @@
       "destination": "/api/portal?portalPath=/:uf/:rest*"
     },
     {
-      "source": "/assets/css/portal.css",
-      "destination": "/portal-assets/portal.css"
-    },
-    {
       "source": "/assets/js/portal.js",
       "destination": "/portal-assets/portal.js"
     },
@@ -66,12 +62,12 @@
       "destination": "/portal-assets/icon-192.png"
     },
     {
-      "source": "/assets/css/portal-v3.css",
-      "destination": "/portal-assets/portal-v3.css"
-    },
-    {
       "source": "/assets/js/portal-gallery.js",
       "destination": "/portal-assets/portal-gallery.js"
+    },
+    {
+      "source": "/assets/css/portal-editorial.css",
+      "destination": "/portal-assets/portal-editorial.css"
     }
   ]
 }
