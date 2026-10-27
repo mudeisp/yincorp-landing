@@ -1,26 +1,26 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "0a1dee29e90e1eb78524b6f99a6988379dea0331",
+  "commit": "3e9d268ddcd8373f5fa1e4c8e4339c4d8e83a0bd",
   "files": [
     {
       "source": "portal/model.js",
       "destination": ".portal-shared/model.js",
-      "sha256": "f8c17bcf86f94adffa6cd5f15cb25f2c386f2b96bd1112a1f13c003464b6ff73"
+      "gitBlobSha": "84a935daab070ab29343ce56845d79970b55c3c0"
     },
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "gitBlobSha": "aa0b7d868b71b4477c3807b6cf05930792bb13b1"
+      "gitBlobSha": "a67e3014bd1ceb0decf01a90cb3af0af4e2f2ce2"
     },
     {
       "source": "portal/router.js",
       "destination": ".portal-shared/router.js",
-      "gitBlobSha": "92561e4384ee45deb4482a04e55e87fefb429d7f"
+      "gitBlobSha": "dd948d60c5646f78d0c3000f735394b38ff763f2"
     },
     {
       "source": "portal/inventory.js",
       "destination": ".portal-shared/inventory.js",
-      "sha256": "0aa12ec7cad76d7c23339c03e3b44aeb08fce27bc661049487d4f36dcf268a8f"
+      "gitBlobSha": "43208020d052297c8a250070854e4162fd1f9e51"
     },
     {
       "source": "assets/css/portal.css",
@@ -28,19 +28,9 @@
       "sha256": "0771f285c9e2706d9711f82b1b53076f19226a231ca62d3c6cfb6f3fe17f3a21"
     },
     {
-      "source": "assets/css/portal-v2.css",
-      "destination": "portal-assets/portal-v2.css",
-      "gitBlobSha": "03088cb101dbe207477e249a211e1caac4fe8107"
-    },
-    {
       "source": "assets/js/portal.js",
       "destination": "portal-assets/portal.js",
-      "gitBlobSha": "eecce98c4103a38da3fa3a2302ad4f1ba34df2bf"
-    },
-    {
-      "source": "assets/js/portal-v2.js",
-      "destination": "portal-assets/portal-v2.js",
-      "gitBlobSha": "22065c447a74d92ec8da2434f454ecc0991758cc"
+      "gitBlobSha": "608ace292a1729eb33a5e2942ae2ed3da5c96d7d"
     },
     {
       "source": "assets/js/portal-contact.js",
@@ -66,6 +56,26 @@
       "source": "assets/js/delivery-5.js",
       "destination": ".portal-shared/public-config.source",
       "sha256": "77603d73dd6943f3b3a51f3ec52205e7c9c19acfcfd74d285e6d579878d6c5ff"
+    },
+    {
+      "source": "portal/details.js",
+      "destination": ".portal-shared/details.js",
+      "gitBlobSha": "e4920c4faf964a79812660d417332a688cdba3d4"
+    },
+    {
+      "source": "portal/presentation.js",
+      "destination": ".portal-shared/presentation.js",
+      "gitBlobSha": "fa92f3f3c69dfe7ba210598e5e9f20d55a06270a"
+    },
+    {
+      "source": "assets/css/portal-v3.css",
+      "destination": "portal-assets/portal-v3.css",
+      "gitBlobSha": "291da8702b5260f993007574a3d5f16f3539a5a9"
+    },
+    {
+      "source": "assets/js/portal-gallery.js",
+      "destination": "portal-assets/portal-gallery.js",
+      "gitBlobSha": "1fea69c4de9b4bd1a9f3b75626ad3bd51d7476e7"
     }
   ]
 }

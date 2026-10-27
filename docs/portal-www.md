@@ -59,3 +59,7 @@ A consulta real já confirmou 566 registros ativos e 172 empreendimentos em 10 c
 
 A divergência histórica de leads e os timeouts da sincronização já documentados não são resolvidos por esta migração de apresentação. Nenhum contato real deve ser criado apenas para testar a prévia.
 
+
+## V3 — apresentação SSR
+
+O núcleo fixado agora incorpora ficha técnica, todas as fotos, plantas descritivas, configurações detalhadas, relacionados reais e editorial SSR de Vitória. A chamada experimental portal-project-data da V2 foi removida: nenhum novo endpoint comercial ou fonte de inventário é necessário. O cliente e CSS V2 saem do manifesto. Mais detalhes em portal-v3.md.

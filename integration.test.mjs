@@ -3,6 +3,14 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 const root=new URL('./',import.meta.url),read=p=>readFile(new URL(p,root),'utf8');
+test('V3 ships SSR details and resolves gallery assets without experimental client data calls',async()=>{
+  const config=JSON.parse(await read('vercel.json')),manifest=JSON.parse(await read('portal-source.json'));
+  for(const file of ['portal/details.js','portal/presentation.js','assets/css/portal-v3.css','assets/js/portal-gallery.js'])assert.ok(manifest.files.some(f=>f.source===file));
+  for(const source of ['/assets/css/portal-v3.css','/assets/js/portal-gallery.js'])assert.ok(config.rewrites.some(r=>r.source===source));
+  assert.ok(!manifest.files.some(f=>f.source.includes('portal-v2')));
+  assert.doesNotMatch(await read('portal-assets/portal.js'),/portal-v2|portal-project-data/);
+  assert.match(await read('.portal-shared/presentation.js'),/VIVER EM VITÓRIA/);
+});
 test('www routes preserve legacy campaigns and the old lead endpoint',async()=>{
   const config=JSON.parse(await read('vercel.json'));
   assert.ok(config.rewrites.some(r=>r.source==='/varanda-botanic' && r.destination==='/varanda-botanic/index.html'));
