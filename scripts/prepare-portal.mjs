@@ -7,15 +7,19 @@ const manifest=JSON.parse(await readFile(resolve(root,'portal-source.json'),'utf
 if(manifest.repository!=='mudeisp/ynteligencia' || !/^[0-9a-f]{40}$/.test(manifest.commit))throw new Error('Invalid portal source pin');
 await Promise.all(manifest.files.map(async file=>{
   if(!/^(portal\/|assets\/|icon-192\.png$)/.test(file.source) || file.source.includes('..') || !/^(\.portal-shared|portal-assets)\/[a-z0-9.-]+\.(js|css|png|source)$/.test(file.destination))throw new Error('Invalid shared file path');
+  if(file.gitBlobSha && !/^[0-9a-f]{40}$/.test(file.gitBlobSha))throw new Error('Invalid Git blob pin');
+  if(!file.gitBlobSha && !/^[0-9a-f]{64}$/.test(file.sha256 || ''))throw new Error('Invalid SHA-256 pin');
   const target=resolve(root,file.destination);
   if(!target.startsWith(root+sep))throw new Error('Destination outside checkout');
   const response=await fetch(`https://raw.githubusercontent.com/${manifest.repository}/${manifest.commit}/${file.source}`,{signal:AbortSignal.timeout(30000)});
   if(!response.ok)throw new Error(`Shared source unavailable: ${file.source}`);
   const bytes=Buffer.from(await response.arrayBuffer());
-  if(createHash('sha256').update(bytes).digest('hex')!==file.sha256)throw new Error(`Shared source integrity mismatch: ${file.source}`);
+  if(file.gitBlobSha){
+    const blob=createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex');
+    if(blob!==file.gitBlobSha)throw new Error(`Shared Git blob integrity mismatch: ${file.source}`);
+  }else if(createHash('sha256').update(bytes).digest('hex')!==file.sha256)throw new Error(`Shared source integrity mismatch: ${file.source}`);
   await mkdir(dirname(target),{recursive:true});await writeFile(target,bytes);
 }));
-// Only configuration already shipped publicly in the existing browser app.
 const legacy=await readFile(resolve(root,'.portal-shared/public-config.source'),'utf8');
 const url=/const SUPABASE_URL\s*=\s*"([^"]+)"/.exec(legacy)?.[1];
 const key=/const SUPABASE_PUBLISHABLE_KEY\s*=\s*"([^"]+)"/.exec(legacy)?.[1];
