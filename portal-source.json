@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "ba313bc8a95a93d137fb4ec8168a842c76a52d5b",
+  "commit": "8691f34c5127c7c03478e157b15a144a35acb44d",
   "files": [
     {
       "source": "portal/model.js",
@@ -70,7 +70,7 @@
     {
       "source": "assets/css/portal-v3.css",
       "destination": "portal-assets/portal-v3.css",
-      "gitBlobSha": "fd9eb77a0e18265fc4706e7f2b5063369f3da14f"
+      "gitBlobSha": "56b78dbced71c9c712eacfd770b6558fe38459df"
     },
     {
       "source": "assets/js/portal-gallery.js",
