@@ -1,4 +1,13 @@
 {
+  "buildCommand": "node scripts/prepare-portal.mjs",
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/es",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/varanda-botanic",
@@ -7,6 +16,66 @@
     {
       "source": "/varanda-botanic/",
       "destination": "/varanda-botanic/index.html"
+    },
+    {
+      "source": "/institucional",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/api/portal/lead",
+      "destination": "https://app.yincorp.com.br/api/lead"
+    },
+    {
+      "source": "/api/ads",
+      "destination": "https://app.yincorp.com.br/api/ads"
+    },
+    {
+      "source": "/sitemap-portal.xml",
+      "destination": "/api/portal?portalPath=/sitemap-portal.xml"
+    },
+    {
+      "source": "/:uf(ac|al|ap|am|ba|ce|df|es|go|ma|mt|ms|mg|pa|pb|pr|pe|pi|rj|rn|rs|ro|rr|sc|sp|se|to)",
+      "destination": "/api/portal?portalPath=/:uf"
+    },
+    {
+      "source": "/:uf(ac|al|ap|am|ba|ce|df|es|go|ma|mt|ms|mg|pa|pb|pr|pe|pi|rj|rn|rs|ro|rr|sc|sp|se|to)/:rest*",
+      "destination": "/api/portal?portalPath=/:uf/:rest*"
+    },
+    {
+      "source": "/assets/js/portal.js",
+      "destination": "/portal-assets/portal.js"
+    },
+    {
+      "source": "/assets/js/portal-contact.js",
+      "destination": "/portal-assets/portal-contact.js"
+    },
+    {
+      "source": "/assets/js/portal-session.js",
+      "destination": "/portal-assets/portal-session.js"
+    },
+    {
+      "source": "/assets/js/integrations/analytics.js",
+      "destination": "/portal-assets/analytics.js"
+    },
+    {
+      "source": "/icon-192.png",
+      "destination": "/portal-assets/icon-192.png"
+    },
+    {
+      "source": "/assets/js/portal-gallery.js",
+      "destination": "/portal-assets/portal-gallery.js"
+    },
+    {
+      "source": "/assets/css/portal-editorial.css",
+      "destination": "/portal-assets/portal-editorial.css"
+    },
+    {
+      "source": "/assets/css/property-story.css",
+      "destination": "/portal-assets/property-story.css"
+    },
+    {
+      "source": "/assets/js/property-story.js",
+      "destination": "/portal-assets/property-story.js"
     }
   ]
 }
