@@ -68,6 +68,14 @@
     {
       "source": "/assets/css/portal-editorial.css",
       "destination": "/portal-assets/portal-editorial.css"
+    },
+    {
+      "source": "/assets/css/property-story.css",
+      "destination": "/portal-assets/property-story.css"
+    },
+    {
+      "source": "/assets/js/property-story.js",
+      "destination": "/portal-assets/property-story.js"
     }
   ]
 }
