@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "3299eb10fffc630e14f4ee00f708c8322315227d",
+  "commit": "d0bb419262f9120f6825684f44069c6e530a04bd",
   "files": [
     {"source":"portal/model.js","destination":".portal-shared/model.js","gitBlobSha":"41eed76353de5dca413cd1e4ee51a5b2378621f0"},
     {"source":"portal/render.js","destination":".portal-shared/render.js","gitBlobSha":"338005eb985915a872f237b17963ed3c0c0bf48c"},
@@ -17,9 +17,9 @@
     {"source":"assets/js/portal-gallery.js","destination":"portal-assets/portal-gallery.js","gitBlobSha":"5890ad298ac144f50d3184e6d8ab1c55e4a57a81"},
     {"source":"portal/editorial.js","destination":".portal-shared/editorial.js","gitBlobSha":"b2142d7a0f098f97bd44df62d0aadcf7a4f79d78"},
     {"source":"assets/css/portal-editorial.css","destination":"portal-assets/portal-editorial.css","gitBlobSha":"d565e7fb2c9024eb4f6b91ec5ffefc24e2529b25"},
-    {"source":"portal/architecture.js","destination":".portal-shared/architecture.js","gitBlobSha":"94781fba4d45ee02c5123352bac4610f72ba0384"},
+    {"source":"portal/architecture.js","destination":".portal-shared/architecture.js","gitBlobSha":"05ed60305fcf30af49e64bbe6f83d815602c016b"},
     {"source":"assets/css/property-story.css","destination":"portal-assets/property-story.css","gitBlobSha":"6496ad51b468a7f17ce908fee8db6efc8266aa1e"},
-    {"source":"assets/js/property-story.js","destination":"portal-assets/property-story.js","gitBlobSha":"702de655f643d9ac7f7012cf45b301802dc06f3f"},
+    {"source":"assets/js/property-story.js","destination":"portal-assets/property-story.js","gitBlobSha":"81585a79c3406980f22ce00c2333e58ed057e66d"},
     {"source":"portal/composition.js","destination":".portal-shared/composition.js","gitBlobSha":"8a02484562e6607a46961b0a4763d86c78690b16"},
     {"source":"portal/editorial-sources.js","destination":".portal-shared/editorial-sources.js","gitBlobSha":"1755a5b737c29c894f5dc2a60d66ff1ca96f8bc8"},
     {"source":"portal/floor-plans.js","destination":".portal-shared/floor-plans.js","gitBlobSha":"483a0ec7d74e712c45d63314f971f16019474bb9"},
