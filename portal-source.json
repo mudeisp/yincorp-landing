@@ -1,116 +1,28 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "d696358e4adc237e1d6da67086a38d3764825b9b",
+  "commit": "77face27fa1d12183e60ee3ecbd0f7f744052483",
   "files": [
-    {
-      "source": "portal/model.js",
-      "destination": ".portal-shared/model.js",
-      "gitBlobSha": "84a935daab070ab29343ce56845d79970b55c3c0"
-    },
-    {
-      "source": "portal/render.js",
-      "destination": ".portal-shared/render.js",
-      "gitBlobSha": "c631a52911d04cb9f7dbfc17387c40521018eb89"
-    },
-    {
-      "source": "portal/router.js",
-      "destination": ".portal-shared/router.js",
-      "gitBlobSha": "7a78021d8f5cab6828a6c9af20b9fcc27423f8d8"
-    },
-    {
-      "source": "portal/inventory.js",
-      "destination": ".portal-shared/inventory.js",
-      "gitBlobSha": "450d3123769aeff33cf8c49b7948e19294d8bdb1"
-    },
-    {
-      "source": "assets/js/portal.js",
-      "destination": "portal-assets/portal.js",
-      "gitBlobSha": "608ace292a1729eb33a5e2942ae2ed3da5c96d7d"
-    },
-    {
-      "source": "assets/js/portal-contact.js",
-      "destination": "portal-assets/portal-contact.js",
-      "sha256": "4e2c74c5fe04ffe7db8b0ead596e3969fac6f67f2efe1c05fde4096901644bf7"
-    },
-    {
-      "source": "assets/js/portal-session.js",
-      "destination": "portal-assets/portal-session.js",
-      "sha256": "88c7d5bc0c576aad2a9f09be3d23550b66071ccb23da28f1b7c9c0b61acd513c"
-    },
-    {
-      "source": "assets/js/integrations/analytics.js",
-      "destination": "portal-assets/analytics.js",
-      "sha256": "873de63597d5aad4ea20564bafc309c2d783ed0af40a39bfdceeb6654aa3c921"
-    },
-    {
-      "source": "icon-192.png",
-      "destination": "portal-assets/icon-192.png",
-      "sha256": "7f794c227e1e488823abdbddef9b58b8793d27f7516b78d53c3b69b3e52d7c62"
-    },
-    {
-      "source": "assets/js/delivery-5.js",
-      "destination": ".portal-shared/public-config.source",
-      "sha256": "77603d73dd6943f3b3a51f3ec52205e7c9c19acfcfd74d285e6d579878d6c5ff"
-    },
-    {
-      "source": "portal/details.js",
-      "destination": ".portal-shared/details.js",
-      "gitBlobSha": "f08ed7e455676ccfc6f1a625c0073f8b28e1767d"
-    },
-    {
-      "source": "portal/presentation.js",
-      "destination": ".portal-shared/presentation.js",
-      "gitBlobSha": "2b80febf95d0a99ac160d39b3bd0b2545284f076"
-    },
-    {
-      "source": "assets/js/portal-gallery.js",
-      "destination": "portal-assets/portal-gallery.js",
-      "gitBlobSha": "5890ad298ac144f50d3184e6d8ab1c55e4a57a81"
-    },
-    {
-      "source": "portal/editorial.js",
-      "destination": ".portal-shared/editorial.js",
-      "gitBlobSha": "4a53dce8dc6467c89f2efdc70b6ba0d149dedd59"
-    },
-    {
-      "source": "assets/css/portal-editorial.css",
-      "destination": "portal-assets/portal-editorial.css",
-      "gitBlobSha": "d565e7fb2c9024eb4f6b91ec5ffefc24e2529b25"
-    },
-    {
-      "source": "portal/architecture.js",
-      "destination": ".portal-shared/architecture.js",
-      "gitBlobSha": "94781fba4d45ee02c5123352bac4610f72ba0384"
-    },
-    {
-      "source": "assets/css/property-story.css",
-      "destination": "portal-assets/property-story.css",
-      "gitBlobSha": "6496ad51b468a7f17ce908fee8db6efc8266aa1e"
-    },
-    {
-      "source": "assets/js/property-story.js",
-      "destination": "portal-assets/property-story.js",
-      "gitBlobSha": "702de655f643d9ac7f7012cf45b301802dc06f3f"
-    },
-    {
-      "source": "portal/composition.js",
-      "destination": ".portal-shared/composition.js",
-      "gitBlobSha": "8a02484562e6607a46961b0a4763d86c78690b16"
-    },
-    {
-      "source": "portal/editorial-sources.js",
-      "destination": ".portal-shared/editorial-sources.js",
-      "gitBlobSha": "1755a5b737c29c894f5dc2a60d66ff1ca96f8bc8"
-    },
-    {
-      "source": "portal/floor-plans.js",
-      "destination": ".portal-shared/floor-plans.js",
-      "gitBlobSha": "483a0ec7d74e712c45d63314f971f16019474bb9"
-    },
-    {
-      "source": "portal/semantics.js",
-      "destination": ".portal-shared/semantics.js",
-      "gitBlobSha": "d2e0ecfd7bc6d29bfa5e7b50afcb5300cc70d5d6"
-    }
+    {"source":"portal/model.js","destination":".portal-shared/model.js","gitBlobSha":"41eed76353de5dca413cd1e4ee51a5b2378621f0"},
+    {"source":"portal/render.js","destination":".portal-shared/render.js","gitBlobSha":"338005eb985915a872f237b17963ed3c0c0bf48c"},
+    {"source":"portal/router.js","destination":".portal-shared/router.js","gitBlobSha":"05a5db536229c8e97e7c08b40179ea821978cf6f"},
+    {"source":"portal/inventory.js","destination":".portal-shared/inventory.js","gitBlobSha":"38b557ff1e1c2bca89e57345e10ae2194c2a25f7"},
+    {"source":"assets/js/portal.js","destination":"portal-assets/portal.js","gitBlobSha":"608ace292a1729eb33a5e2942ae2ed3da5c96d7d"},
+    {"source":"assets/js/portal-contact.js","destination":"portal-assets/portal-contact.js","sha256":"4e2c74c5fe04ffe7db8b0ead596e3969fac6f67f2efe1c05fde4096901644bf7"},
+    {"source":"assets/js/portal-session.js","destination":"portal-assets/portal-session.js","sha256":"88c7d5bc0c576aad2a9f09be3d23550b66071ccb23da28f1b7c9c0b61acd513c"},
+    {"source":"assets/js/integrations/analytics.js","destination":"portal-assets/analytics.js","sha256":"873de63597d5aad4ea20564bafc309c2d783ed0af40a39bfdceeb6654aa3c921"},
+    {"source":"icon-192.png","destination":"portal-assets/icon-192.png","sha256":"7f794c227e1e488823abdbddef9b58b8793d27f7516b78d53c3b69b3e52d7c62"},
+    {"source":"assets/js/delivery-5.js","destination":".portal-shared/public-config.source","sha256":"77603d73dd6943f3b3a51f3ec52205e7c9c19acfcfd74d285e6d579878d6c5ff"},
+    {"source":"portal/details.js","destination":".portal-shared/details.js","gitBlobSha":"f08ed7e455676ccfc6f1a625c0073f8b28e1767d"},
+    {"source":"portal/presentation.js","destination":".portal-shared/presentation.js","gitBlobSha":"2b80febf95d0a99ac160d39b3bd0b2545284f076"},
+    {"source":"assets/js/portal-gallery.js","destination":"portal-assets/portal-gallery.js","gitBlobSha":"5890ad298ac144f50d3184e6d8ab1c55e4a57a81"},
+    {"source":"portal/editorial.js","destination":".portal-shared/editorial.js","gitBlobSha":"198a5685623dc53182f2a2a81196d089b5d9a3ed"},
+    {"source":"assets/css/portal-editorial.css","destination":"portal-assets/portal-editorial.css","gitBlobSha":"d565e7fb2c9024eb4f6b91ec5ffefc24e2529b25"},
+    {"source":"portal/architecture.js","destination":".portal-shared/architecture.js","gitBlobSha":"94781fba4d45ee02c5123352bac4610f72ba0384"},
+    {"source":"assets/css/property-story.css","destination":"portal-assets/property-story.css","gitBlobSha":"6496ad51b468a7f17ce908fee8db6efc8266aa1e"},
+    {"source":"assets/js/property-story.js","destination":"portal-assets/property-story.js","gitBlobSha":"702de655f643d9ac7f7012cf45b301802dc06f3f"},
+    {"source":"portal/composition.js","destination":".portal-shared/composition.js","gitBlobSha":"8a02484562e6607a46961b0a4763d86c78690b16"},
+    {"source":"portal/editorial-sources.js","destination":".portal-shared/editorial-sources.js","gitBlobSha":"1755a5b737c29c894f5dc2a60d66ff1ca96f8bc8"},
+    {"source":"portal/floor-plans.js","destination":".portal-shared/floor-plans.js","gitBlobSha":"483a0ec7d74e712c45d63314f971f16019474bb9"},
+    {"source":"portal/semantics.js","destination":".portal-shared/semantics.js","gitBlobSha":"d2e0ecfd7bc6d29bfa5e7b50afcb5300cc70d5d6"}
   ]
 }
