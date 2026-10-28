@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "d0bb419262f9120f6825684f44069c6e530a04bd",
+  "commit": "c3d8a64031d4f114fe839dd5a1a5f01b502307c0",
   "files": [
     {"source":"portal/model.js","destination":".portal-shared/model.js","gitBlobSha":"41eed76353de5dca413cd1e4ee51a5b2378621f0"},
     {"source":"portal/render.js","destination":".portal-shared/render.js","gitBlobSha":"338005eb985915a872f237b17963ed3c0c0bf48c"},
@@ -19,10 +19,10 @@
     {"source":"assets/css/portal-editorial.css","destination":"portal-assets/portal-editorial.css","gitBlobSha":"d565e7fb2c9024eb4f6b91ec5ffefc24e2529b25"},
     {"source":"portal/architecture.js","destination":".portal-shared/architecture.js","gitBlobSha":"05ed60305fcf30af49e64bbe6f83d815602c016b"},
     {"source":"assets/css/property-story.css","destination":"portal-assets/property-story.css","gitBlobSha":"6496ad51b468a7f17ce908fee8db6efc8266aa1e"},
-    {"source":"assets/js/property-story.js","destination":"portal-assets/property-story.js","gitBlobSha":"81585a79c3406980f22ce00c2333e58ed057e66d"},
+    {"source":"assets/js/property-story.js","destination":"portal-assets/property-story.js","gitBlobSha":"8d4776c9240ce3dc357f4d9bde49efa5abf90012"},
     {"source":"portal/composition.js","destination":".portal-shared/composition.js","gitBlobSha":"8a02484562e6607a46961b0a4763d86c78690b16"},
     {"source":"portal/editorial-sources.js","destination":".portal-shared/editorial-sources.js","gitBlobSha":"1755a5b737c29c894f5dc2a60d66ff1ca96f8bc8"},
-    {"source":"portal/floor-plans.js","destination":".portal-shared/floor-plans.js","gitBlobSha":"483a0ec7d74e712c45d63314f971f16019474bb9"},
+    {"source":"portal/floor-plans.js","destination":".portal-shared/floor-plans.js","gitBlobSha":"3dff4708cbdbcbdb8836207798df6258b57fa414"},
     {"source":"portal/semantics.js","destination":".portal-shared/semantics.js","gitBlobSha":"d2e0ecfd7bc6d29bfa5e7b50afcb5300cc70d5d6"}
   ]
 }
