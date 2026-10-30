@@ -33,3 +33,10 @@ test('canonical is www; runtime exposes no privileged Supabase credential',async
   assert.match(entry,/canonicalOrigin:'https:\/\/www.yincorp.com.br'/);assert.match(publicConfig,/sb_publishable_/);assert.doesNotMatch(publicConfig,/sb_secret_|service_role/);
   const robots=await read('robots.txt');assert.match(robots,/www.yincorp.com.br\/sitemap.xml/);assert.match(robots,/www.yincorp.com.br\/sitemap-portal.xml/);
 });
+test('primary sitemap is an index that exposes both legacy and dynamic portal URLs',async()=>{
+  const sitemap=await read('sitemap.xml'),legacy=await read('sitemap-static.xml');
+  assert.match(sitemap,/<sitemapindex/);
+  assert.match(sitemap,/https:\/\/www.yincorp.com.br\/sitemap-static.xml/);
+  assert.match(sitemap,/https:\/\/www.yincorp.com.br\/sitemap-portal.xml/);
+  assert.match(legacy,/https:\/\/www.yincorp.com.br\/well-perdizes/);
+});
