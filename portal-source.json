@@ -1,11 +1,11 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "9fd544c3243c6aff8b87e286e2426122184e7188",
+  "commit": "ad1df32647d0c3bd3b1787a3f7fa1ebdb6a5cb2e",
   "files": [
     {"source":"portal/model.js","destination":".portal-shared/model.js","gitBlobSha":"ad574b95b50f78fbf9cb948948e56562a98e0d08"},
     {"source":"portal/render.js","destination":".portal-shared/render.js","gitBlobSha":"34192d4d7589d2355d0695acc01487c1d97f6d1d"},
-    {"source":"portal/router.js","destination":".portal-shared/router.js","gitBlobSha":"66e3eb8cd8232df51f2b524c6609eec77ff60ca1"},
-    {"source":"portal/inventory.js","destination":".portal-shared/inventory.js","gitBlobSha":"38b557ff1e1c2bca89e57345e10ae2194c2a25f7"},
+    {"source":"portal/router.js","destination":".portal-shared/router.js","gitBlobSha":"bb9423d25a2d04c3743962a7dff473a157230cc0"},
+    {"source":"portal/inventory.js","destination":".portal-shared/inventory.js","gitBlobSha":"0e61cebcc7226a0a879f725569b449e20f169ef6"},
     {"source":"assets/js/portal.js","destination":"portal-assets/portal.js","gitBlobSha":"41f3cdd67506c1b019044e843a7c5b4a80b9ecd3"},
     {"source":"assets/js/portal-contact.js","destination":"portal-assets/portal-contact.js","sha256":"4e2c74c5fe04ffe7db8b0ead596e3969fac6f67f2efe1c05fde4096901644bf7"},
     {"source":"assets/js/portal-session.js","destination":"portal-assets/portal-session.js","sha256":"88c7d5bc0c576aad2a9f09be3d23550b66071ccb23da28f1b7c9c0b61acd513c"},
