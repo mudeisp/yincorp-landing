@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "8a24951981d0e902c5bcdc0483b89f11bb158c1a",
+  "commit": "1e1e288008821a7a1448fc35eec14cbb673ea9af",
   "files": [
     {
       "source": "portal/model.js",
@@ -25,7 +25,7 @@
     {
       "source": "assets/js/portal.js",
       "destination": "portal-assets/portal.js",
-      "gitBlobSha": "f2d65d511d296e2609f0d5cc6201da94787759b1"
+      "gitBlobSha": "0c5828454dc423e8c991d7057081798e5f173526"
     },
     {
       "source": "assets/js/portal-contact.js",
@@ -115,7 +115,7 @@
     {
       "source": "portal/investment.js",
       "destination": ".portal-shared/investment.js",
-      "gitBlobSha": "46452db0951c06957c9bc1f6d76a2f1dbf7e0c2b"
+      "gitBlobSha": "d8bee7c65db430a0387397ae2cd2adf5f66eb508"
     },
     {
       "source": "portal/market-guide.js",
@@ -140,12 +140,12 @@
     {
       "source": "assets/js/investment-journey.js",
       "destination": "portal-assets/investment-journey.js",
-      "gitBlobSha": "18badf46178d2ffa0719c35b202b5b865649ce01"
+      "gitBlobSha": "ab0f44daf14038b9e1fdff23946ff6e264aef61f"
     },
     {
       "source": "portal/finance-model.js",
       "destination": ".portal-shared/finance-model.js",
-      "gitBlobSha": "d4f436a6fa355a6d68929359e17c35efd001864d"
+      "gitBlobSha": "32ff2c3cfadaae6169cef17a276c6678fcbd7864"
     },
     {
       "source": "portal/investment-benchmarks.js",
@@ -155,17 +155,17 @@
     {
       "source": "portal/investment-simulator.js",
       "destination": ".portal-shared/investment-simulator.js",
-      "gitBlobSha": "479774619bb9750e9b4f84c81c9f477ea7221cbc"
+      "gitBlobSha": "2ffcc7f25578bf4bc8c8121dfab2f7eed6fb4640"
     },
     {
       "source": "portal/finance-model.js",
       "destination": "portal-assets/finance-model.js",
-      "gitBlobSha": "d4f436a6fa355a6d68929359e17c35efd001864d"
+      "gitBlobSha": "32ff2c3cfadaae6169cef17a276c6678fcbd7864"
     },
     {
       "source": "assets/js/investment-simulator.js",
       "destination": "portal-assets/investment-simulator.js",
-      "gitBlobSha": "5bca29f3cc15812d4b165e63963c8de5e7466b53"
+      "gitBlobSha": "6c5ee54e31293fee360d26af9c06bcea7abd2ed4"
     }
   ]
 }
