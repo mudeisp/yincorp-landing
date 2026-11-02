@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "ddfeca1f07e803efe11610df13193b28f27e1828",
+  "commit": "06df519b26f53d10d6ffb4479f11580db1e69fa2",
   "files": [
     {
       "source": "portal/model.js",
@@ -120,7 +120,7 @@
     {
       "source": "portal/market-guide.js",
       "destination": ".portal-shared/market-guide.js",
-      "gitBlobSha": "fffab9d8902011dd6ddd1d3649cab3d2566f534a"
+      "gitBlobSha": "6ac50176d26ac70484c71321154774b1a165c310"
     }
   ]
 }
