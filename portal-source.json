@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "c28a4044b9f076e8cd644037a9a5d3c82ab7f8da",
+  "commit": "06df519b26f53d10d6ffb4479f11580db1e69fa2",
   "files": [
     {
       "source": "portal/model.js",
@@ -10,12 +10,12 @@
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "gitBlobSha": "34192d4d7589d2355d0695acc01487c1d97f6d1d"
+      "gitBlobSha": "84634598b0cfbb3cffd37c5e6723925106b77c9e"
     },
     {
       "source": "portal/router.js",
       "destination": ".portal-shared/router.js",
-      "gitBlobSha": "22914538711fcabc67ee1b3345d1fc6eeffe601b"
+      "gitBlobSha": "a8ad10bd2615d1f2dc90d02f649641d518bae3de"
     },
     {
       "source": "portal/inventory.js",
@@ -70,12 +70,12 @@
     {
       "source": "portal/editorial.js",
       "destination": ".portal-shared/editorial.js",
-      "gitBlobSha": "2a99f7b08a801813ea16ad17f1b59275f3d81c25"
+      "gitBlobSha": "533fc110d62f83790a49ef3091db69b26b53b79e"
     },
     {
       "source": "assets/css/portal-editorial.css",
       "destination": "portal-assets/portal-editorial.css",
-      "gitBlobSha": "47053a1d55ca1aeb694294224e848738b328d166"
+      "gitBlobSha": "aa099e347d28be0c2bf4cfb71f671138e40a8bb7"
     },
     {
       "source": "portal/architecture.js",
@@ -116,6 +116,11 @@
       "source": "portal/investment.js",
       "destination": ".portal-shared/investment.js",
       "gitBlobSha": "92561c29df2a786e3becd4f96fbc3e98de9160a6"
+    },
+    {
+      "source": "portal/market-guide.js",
+      "destination": ".portal-shared/market-guide.js",
+      "gitBlobSha": "6ac50176d26ac70484c71321154774b1a165c310"
     }
   ]
 }
