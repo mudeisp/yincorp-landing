@@ -3,6 +3,16 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 const root=new URL('./',import.meta.url),read=p=>readFile(new URL(p,root),'utf8');
+test('investment journey ships the same rule module to SSR and browser without new API destinations',async()=>{
+  const manifest=JSON.parse(await read('portal-source.json')),config=JSON.parse(await read('vercel.json'));
+  for(const destination of ['.portal-shared/investment-model.js','.portal-shared/investment-journey.js','portal-assets/investment-model.js','portal-assets/investment-journey.js'])assert.ok(manifest.files.some(f=>f.destination===destination));
+  assert.equal(await read('.portal-shared/investment-model.js'),await read('portal-assets/investment-model.js'));
+  for(const name of ['investment-model','investment-journey'])assert.ok(config.rewrites.some(r=>r.source===`/assets/js/${name}.js` && r.destination===`/portal-assets/${name}.js`));
+  const {createPortalHandler}=await import('./.portal-shared/router.js');
+  let html;const res={setHeader(){},status(n){assert.equal(n,200);return this;},send(s){html=s;},end(){}};
+  await createPortalHandler({preview:true,inventory:async()=>[{id:'unit',building_id:'1',external_id:'orulo:1:1',active:true,state:'ES',city:'Vitória',neighborhood:'Mata da Praia',development_name:'Projeto real',price:600000,area:35,bedrooms:1,typology_type:'Apartamento'}]})({method:'GET',url:'/es/vitoria/investimento-airbnb'},res);
+  assert.match(html,/id="investment-profile"/);assert.match(html,/id="comparador"/);assert.match(html,/noindex,follow/);assert.doesNotMatch(html,/googletagmanager.com/);
+});
 test('V3 ships SSR details and resolves gallery assets without experimental client data calls',async()=>{
   const config=JSON.parse(await read('vercel.json')),manifest=JSON.parse(await read('portal-source.json'));
   for(const file of ['portal/details.js','portal/presentation.js','assets/css/portal-editorial.css','assets/js/portal-gallery.js'])assert.ok(manifest.files.some(f=>f.source===file));
