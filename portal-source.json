@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "ad1df32647d0c3bd3b1787a3f7fa1ebdb6a5cb2e",
+  "commit": "e54385348bed756ef8457f5d89a39cb8248db955",
   "files": [
     {"source":"portal/model.js","destination":".portal-shared/model.js","gitBlobSha":"ad574b95b50f78fbf9cb948948e56562a98e0d08"},
     {"source":"portal/render.js","destination":".portal-shared/render.js","gitBlobSha":"34192d4d7589d2355d0695acc01487c1d97f6d1d"},
@@ -22,7 +22,7 @@
     {"source":"assets/js/property-story.js","destination":"portal-assets/property-story.js","gitBlobSha":"8d4776c9240ce3dc357f4d9bde49efa5abf90012"},
     {"source":"portal/composition.js","destination":".portal-shared/composition.js","gitBlobSha":"8a02484562e6607a46961b0a4763d86c78690b16"},
     {"source":"portal/editorial-sources.js","destination":".portal-shared/editorial-sources.js","gitBlobSha":"1755a5b737c29c894f5dc2a60d66ff1ca96f8bc8"},
-    {"source":"portal/floor-plans.js","destination":".portal-shared/floor-plans.js","gitBlobSha":"3dff4708cbdbcbdb8836207798df6258b57fa414"},
+    {"source":"portal/floor-plans.js","destination":".portal-shared/floor-plans.js","gitBlobSha":"c60c28a8943b5dc8768c4dfc2eb9631cb49c84bf"},
     {"source":"portal/semantics.js","destination":".portal-shared/semantics.js","gitBlobSha":"d2e0ecfd7bc6d29bfa5e7b50afcb5300cc70d5d6"}
   ]
 }
