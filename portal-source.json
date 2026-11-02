@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "06df519b26f53d10d6ffb4479f11580db1e69fa2",
+  "commit": "1e1e288008821a7a1448fc35eec14cbb673ea9af",
   "files": [
     {
       "source": "portal/model.js",
@@ -10,7 +10,7 @@
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "gitBlobSha": "84634598b0cfbb3cffd37c5e6723925106b77c9e"
+      "gitBlobSha": "d817326485c2a919c7025b5d20a57323b296dea0"
     },
     {
       "source": "portal/router.js",
@@ -25,7 +25,7 @@
     {
       "source": "assets/js/portal.js",
       "destination": "portal-assets/portal.js",
-      "gitBlobSha": "41f3cdd67506c1b019044e843a7c5b4a80b9ecd3"
+      "gitBlobSha": "0c5828454dc423e8c991d7057081798e5f173526"
     },
     {
       "source": "assets/js/portal-contact.js",
@@ -75,7 +75,7 @@
     {
       "source": "assets/css/portal-editorial.css",
       "destination": "portal-assets/portal-editorial.css",
-      "gitBlobSha": "aa099e347d28be0c2bf4cfb71f671138e40a8bb7"
+      "gitBlobSha": "8c22400b7f23263fe025183a0278db85afc285d5"
     },
     {
       "source": "portal/architecture.js",
@@ -115,12 +115,57 @@
     {
       "source": "portal/investment.js",
       "destination": ".portal-shared/investment.js",
-      "gitBlobSha": "92561c29df2a786e3becd4f96fbc3e98de9160a6"
+      "gitBlobSha": "d8bee7c65db430a0387397ae2cd2adf5f66eb508"
     },
     {
       "source": "portal/market-guide.js",
       "destination": ".portal-shared/market-guide.js",
       "gitBlobSha": "6ac50176d26ac70484c71321154774b1a165c310"
+    },
+    {
+      "source": "portal/investment-model.js",
+      "destination": ".portal-shared/investment-model.js",
+      "gitBlobSha": "ff8b7e82b439c1e282720609461dd4ff7fca70cc"
+    },
+    {
+      "source": "portal/investment-journey.js",
+      "destination": ".portal-shared/investment-journey.js",
+      "gitBlobSha": "86b9691ad8f791927c54d494b53db05813a0561d"
+    },
+    {
+      "source": "portal/investment-model.js",
+      "destination": "portal-assets/investment-model.js",
+      "gitBlobSha": "ff8b7e82b439c1e282720609461dd4ff7fca70cc"
+    },
+    {
+      "source": "assets/js/investment-journey.js",
+      "destination": "portal-assets/investment-journey.js",
+      "gitBlobSha": "ab0f44daf14038b9e1fdff23946ff6e264aef61f"
+    },
+    {
+      "source": "portal/finance-model.js",
+      "destination": ".portal-shared/finance-model.js",
+      "gitBlobSha": "32ff2c3cfadaae6169cef17a276c6678fcbd7864"
+    },
+    {
+      "source": "portal/investment-benchmarks.js",
+      "destination": ".portal-shared/investment-benchmarks.js",
+      "gitBlobSha": "4a51121e461cfcdeb306755ac770001c388346c4"
+    },
+    {
+      "source": "portal/investment-simulator.js",
+      "destination": ".portal-shared/investment-simulator.js",
+      "gitBlobSha": "2ffcc7f25578bf4bc8c8121dfab2f7eed6fb4640"
+    },
+    {
+      "source": "portal/finance-model.js",
+      "destination": "portal-assets/finance-model.js",
+      "gitBlobSha": "32ff2c3cfadaae6169cef17a276c6678fcbd7864"
+    },
+    {
+      "source": "assets/js/investment-simulator.js",
+      "destination": "portal-assets/investment-simulator.js",
+      "gitBlobSha": "6c5ee54e31293fee360d26af9c06bcea7abd2ed4"
     }
   ]
 }

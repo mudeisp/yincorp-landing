@@ -76,6 +76,22 @@
     {
       "source": "/assets/js/property-story.js",
       "destination": "/portal-assets/property-story.js"
+    },
+    {
+      "source": "/assets/js/investment-model.js",
+      "destination": "/portal-assets/investment-model.js"
+    },
+    {
+      "source": "/assets/js/investment-journey.js",
+      "destination": "/portal-assets/investment-journey.js"
+    },
+    {
+      "source": "/assets/js/finance-model.js",
+      "destination": "/portal-assets/finance-model.js"
+    },
+    {
+      "source": "/assets/js/investment-simulator.js",
+      "destination": "/portal-assets/investment-simulator.js"
     }
   ]
 }
