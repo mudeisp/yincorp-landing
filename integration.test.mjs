@@ -3,6 +3,12 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 const root=new URL('./',import.meta.url),read=p=>readFile(new URL(p,root),'utf8');
+test('financial simulator pins identical browser/server formulas and starts without market estimates',async()=>{
+  assert.equal(await read('.portal-shared/finance-model.js'),await read('portal-assets/finance-model.js'));
+  const {calculate,createScenarios}=await import('./.portal-shared/finance-model.js');
+  const scenarios=createScenarios({price:600000});assert.equal(scenarios.base.nightlyRate,null);assert.equal(calculate(scenarios.base).metrics.netYield,null);
+  const {renderSimulator}=await import('./.portal-shared/investment-simulator.js');const html=renderSimulator([]);assert.match(html,/sim-project" disabled/);assert.match(html,/id="sim-loading"/);assert.match(html,/Esta simulação não constitui promessa de rentabilidade/);
+});
 test('investment journey ships the same rule module to SSR and browser without new API destinations',async()=>{
   const manifest=JSON.parse(await read('portal-source.json')),config=JSON.parse(await read('vercel.json'));
   for(const destination of ['.portal-shared/investment-model.js','.portal-shared/investment-journey.js','portal-assets/investment-model.js','portal-assets/investment-journey.js'])assert.ok(manifest.files.some(f=>f.destination===destination));

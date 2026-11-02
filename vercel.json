@@ -84,6 +84,14 @@
     {
       "source": "/assets/js/investment-journey.js",
       "destination": "/portal-assets/investment-journey.js"
+    },
+    {
+      "source": "/assets/js/finance-model.js",
+      "destination": "/portal-assets/finance-model.js"
+    },
+    {
+      "source": "/assets/js/investment-simulator.js",
+      "destination": "/portal-assets/investment-simulator.js"
     }
   ]
 }
