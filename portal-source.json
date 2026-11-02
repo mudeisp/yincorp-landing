@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "1e1e288008821a7a1448fc35eec14cbb673ea9af",
+  "commit": "6e15e2f1bc52ab9a8d4184f08af32b69d772532f",
   "files": [
     {
       "source": "portal/model.js",
@@ -105,7 +105,7 @@
     {
       "source": "portal/floor-plans.js",
       "destination": ".portal-shared/floor-plans.js",
-      "gitBlobSha": "6ed471923536067caae7b425e7cc3b8fc9fa91a1"
+      "gitBlobSha": "d1994ce409acbad8e26414c34b390d3219a6cadc"
     },
     {
       "source": "portal/semantics.js",
