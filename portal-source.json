@@ -22,7 +22,7 @@
     {"source":"assets/js/property-story.js","destination":"portal-assets/property-story.js","gitBlobSha":"8d4776c9240ce3dc357f4d9bde49efa5abf90012"},
     {"source":"portal/composition.js","destination":".portal-shared/composition.js","gitBlobSha":"8a02484562e6607a46961b0a4763d86c78690b16"},
     {"source":"portal/editorial-sources.js","destination":".portal-shared/editorial-sources.js","gitBlobSha":"1755a5b737c29c894f5dc2a60d66ff1ca96f8bc8"},
-    {"source":"portal/floor-plans.js","destination":".portal-shared/floor-plans.js","gitBlobSha":"c60c28a8943b5dc8768c4dfc2eb9631cb49c84bf"},
+    {"source":"portal/floor-plans.js","destination":".portal-shared/floor-plans.js","gitBlobSha":"6ed471923536067caae7b425e7cc3b8fc9fa91a1"},
     {"source":"portal/semantics.js","destination":".portal-shared/semantics.js","gitBlobSha":"d2e0ecfd7bc6d29bfa5e7b50afcb5300cc70d5d6"}
   ]
 }
