@@ -180,19 +180,19 @@
     {
       "source": "portal/rentals.js",
       "destination": ".portal-shared/rentals.js",
-      "commit": "e42d1168262b330fafd829fe8f5b345d966d2da3",
-      "sha256": "fc6a70b6431d4f784552ab1c959d3ce1b18293a396a5be0895ecc7580c206330"
+      "commit": "4941afde85b7be02839178e38bb83ddf90ed841f",
+      "sha256": "b129ea423224e91c635c5c644d2b86ca092626f9694af887bde8286c44272eae"
     },
     {
       "source": "assets/css/rentals.css",
       "destination": "portal-assets/rentals.css",
-      "commit": "e42d1168262b330fafd829fe8f5b345d966d2da3",
-      "sha256": "29501d11605c2d12f3694e6a8981ca67e3f58530f7783003f26da6de30eec749"
+      "commit": "4941afde85b7be02839178e38bb83ddf90ed841f",
+      "sha256": "ddd508407b2884a14afbd6a4c107e75b0ab5aa1ccca60ab63acc22a6b4fa12fe"
     },
     {
       "source": "assets/js/rentals.js",
       "destination": "portal-assets/rentals.js",
-      "commit": "e42d1168262b330fafd829fe8f5b345d966d2da3",
+      "commit": "4941afde85b7be02839178e38bb83ddf90ed841f",
       "sha256": "a462f7f7f60df884d67cebee36866b1fdcd780f40eb26eb237a532b34f19ced7"
     }
   ]
