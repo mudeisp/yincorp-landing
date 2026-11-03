@@ -92,6 +92,14 @@
     {
       "source": "/assets/js/investment-simulator.js",
       "destination": "/portal-assets/investment-simulator.js"
+    },
+    {
+      "source": "/assets/js/whatsapp-contact.js",
+      "destination": "/portal-assets/whatsapp-contact.js"
+    },
+    {
+      "source": "/assets/css/whatsapp-float.css",
+      "destination": "/portal-assets/whatsapp-float.css"
     }
   ]
 }

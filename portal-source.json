@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "6e15e2f1bc52ab9a8d4184f08af32b69d772532f",
+  "commit": "32e8ae331eee82593fd4f90512c62c330b588a3f",
   "files": [
     {
       "source": "portal/model.js",
@@ -10,7 +10,7 @@
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "gitBlobSha": "d817326485c2a919c7025b5d20a57323b296dea0"
+      "gitBlobSha": "5cc1f5ffa5998e24f37d7a198efbc1724e149d4e"
     },
     {
       "source": "portal/router.js",
@@ -25,7 +25,7 @@
     {
       "source": "assets/js/portal.js",
       "destination": "portal-assets/portal.js",
-      "gitBlobSha": "0c5828454dc423e8c991d7057081798e5f173526"
+      "gitBlobSha": "6c3c3894b5738285a56f1d3032e899b7cb931e3e"
     },
     {
       "source": "assets/js/portal-contact.js",
@@ -35,7 +35,7 @@
     {
       "source": "assets/js/portal-session.js",
       "destination": "portal-assets/portal-session.js",
-      "sha256": "88c7d5bc0c576aad2a9f09be3d23550b66071ccb23da28f1b7c9c0b61acd513c"
+      "sha256": "e4abcb21c6bb001f11184f8895f99e7f827b82d656d01c05f31e4a1e6d37995a"
     },
     {
       "source": "assets/js/integrations/analytics.js",
@@ -166,6 +166,16 @@
       "source": "assets/js/investment-simulator.js",
       "destination": "portal-assets/investment-simulator.js",
       "gitBlobSha": "6c5ee54e31293fee360d26af9c06bcea7abd2ed4"
+    },
+    {
+      "source": "assets/js/whatsapp-contact.js",
+      "destination": "portal-assets/whatsapp-contact.js",
+      "gitBlobSha": "2392a5fc199434c74c87006e9d90da3c5169d660"
+    },
+    {
+      "source": "assets/css/whatsapp-float.css",
+      "destination": "portal-assets/whatsapp-float.css",
+      "gitBlobSha": "964df143a091f6e9a5102da80b1b91a1a2eb958b"
     }
   ]
 }
