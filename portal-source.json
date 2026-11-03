@@ -180,20 +180,20 @@
     {
       "source": "portal/rentals.js",
       "destination": ".portal-shared/rentals.js",
-      "commit": "09b2c862d043876b7b7ddd25949d8e5020782756",
-      "sha256": "18a2f30f7356cf5cdd1e47af02b20de121a141fa975fa831c4534b956731380b"
+      "commit": "e42d1168262b330fafd829fe8f5b345d966d2da3",
+      "sha256": "847a39d4c4adc98cb078ed7d492afebf7a9c3cdce2edc29534ab87290a1878b4"
     },
     {
       "source": "assets/css/rentals.css",
       "destination": "portal-assets/rentals.css",
-      "commit": "09b2c862d043876b7b7ddd25949d8e5020782756",
-      "sha256": "7b20be565862dc0a42c2755d763f525ff8c3095cd28de1a8601059c496eacd89"
+      "commit": "e42d1168262b330fafd829fe8f5b345d966d2da3",
+      "sha256": "6fbc66438c72c7e3db3e4812aa78637cd8e8efe81300a425b64c764a36496dc3"
     },
     {
       "source": "assets/js/rentals.js",
       "destination": "portal-assets/rentals.js",
-      "commit": "09b2c862d043876b7b7ddd25949d8e5020782756",
-      "sha256": "07ddd98218802ef825a938e28bfbd6e399197e4cd4352386ce3af3f5d98db077"
+      "commit": "e42d1168262b330fafd829fe8f5b345d966d2da3",
+      "sha256": "a462f7f7f60df884d67cebee36866b1fdcd780f40eb26eb237a532b34f19ced7"
     }
   ]
 }
