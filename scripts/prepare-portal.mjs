@@ -11,7 +11,9 @@ await Promise.all(manifest.files.map(async file=>{
   if(!file.gitBlobSha && !/^[0-9a-f]{64}$/.test(file.sha256 || ''))throw new Error('Invalid SHA-256 pin');
   const target=resolve(root,file.destination);
   if(!target.startsWith(root+sep))throw new Error('Destination outside checkout');
-  const response=await fetch(`https://raw.githubusercontent.com/${manifest.repository}/${manifest.commit}/${file.source}`,{signal:AbortSignal.timeout(30000)});
+  const commit=file.commit || manifest.commit;
+  if(!/^[0-9a-f]{40}$/.test(commit))throw new Error('Invalid file commit pin');
+  const response=await fetch(`https://raw.githubusercontent.com/${manifest.repository}/${commit}/${file.source}`,{signal:AbortSignal.timeout(30000)});
   if(!response.ok)throw new Error(`Shared source unavailable: ${file.source}`);
   const bytes=Buffer.from(await response.arrayBuffer());
   if(file.gitBlobSha){
