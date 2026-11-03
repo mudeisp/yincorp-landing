@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
+import {createHash} from 'node:crypto';
 const read=p=>readFile(new URL(p,import.meta.url),'utf8');
 
 test('all local module imports and WhatsApp asset URLs resolve through the production manifest',async()=>{
@@ -28,7 +29,8 @@ test('ES development SSR ships the float stylesheet and keeps availability bound
   const path=html.match(/href="([^"]+\/empreendimento\/[^"?]+)"/)[1];
   await handler({method:'GET',url:path},res);
   assert.match(html,/href="\/assets\/css\/whatsapp-float.css"/);
-  assert.match(html,/floating-property-contact[\s\S]*?data-contact=""[^>]*>Consultar disponibilidade/);
+  assert.match(html,/<button class="button primary" data-contact="">Consultar disponibilidade ↗<\/button>/);
+  assert.doesNotMatch(html,/floating-property-contact|data-whatsapp|Prefiro deixar meus dados/);
   assert.match(html,/"preview":false/);
 });
 
@@ -59,4 +61,11 @@ for(const selected of [false,true])test(`generated ES browser mounts one indepen
   icon.listeners.click();await new Promise(r=>setTimeout(r,10));
   assert.deepEqual(events,['whatsapp_cta_clicked','whatsapp_cta_clicked']);assert.equal(dialog.open,false);
   assert.equal(navigations.length,1);assert.match(navigations[0],/^https:\/\/wa.me\//);
+});
+
+test('original availability presentation stays byte-for-byte identical to public production',async()=>{
+  assert.equal(createHash('sha256').update(await read('.portal-shared/architecture.js')).digest('hex'),'269ce85ff1af45201d484d900fd59058ea5de5a1ed5a3edbd99f4d12b7ff7851');
+  assert.equal(createHash('sha256').update(await read('.portal-shared/editorial.js')).digest('hex'),'ba01973c067ca68e27e7df1a3875f83b7469c3ec831c27aa1a8a14ec178814b7');
+  assert.equal(createHash('sha256').update(await read('portal-assets/portal-editorial.css')).digest('hex'),'56f4a49150f6b8633b59db9cffe091e4729998d69100fd6588c2377fdeea4665');
+  assert.equal(createHash('sha256').update(await read('portal-assets/property-story.css')).digest('hex'),'5b2034042b615ed6be5cbd06a19a52d4e75c6608db3692340bbbcca14289c02a');
 });

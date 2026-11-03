@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "fb0686a545d1f5ecfae36f310c8caa2b44f7d0f9",
+  "commit": "32e8ae331eee82593fd4f90512c62c330b588a3f",
   "files": [
     {
       "source": "portal/model.js",
@@ -10,7 +10,7 @@
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "gitBlobSha": "c1bb2c3c60021971fa40ec694f3e258f08c6326f"
+      "gitBlobSha": "5cc1f5ffa5998e24f37d7a198efbc1724e149d4e"
     },
     {
       "source": "portal/router.js",
@@ -25,7 +25,7 @@
     {
       "source": "assets/js/portal.js",
       "destination": "portal-assets/portal.js",
-      "gitBlobSha": "efeaefa59280b66fac97c01a369210e2ba9d939d"
+      "gitBlobSha": "6c3c3894b5738285a56f1d3032e899b7cb931e3e"
     },
     {
       "source": "assets/js/portal-contact.js",
@@ -70,22 +70,22 @@
     {
       "source": "portal/editorial.js",
       "destination": ".portal-shared/editorial.js",
-      "gitBlobSha": "20000dc9fe279ca84aa14f6d4d7e21a37e68b67d"
+      "gitBlobSha": "533fc110d62f83790a49ef3091db69b26b53b79e"
     },
     {
       "source": "assets/css/portal-editorial.css",
       "destination": "portal-assets/portal-editorial.css",
-      "gitBlobSha": "e21b2d9e8c63aa545f9fe407b13f5e76e59967cf"
+      "gitBlobSha": "8c22400b7f23263fe025183a0278db85afc285d5"
     },
     {
       "source": "portal/architecture.js",
       "destination": ".portal-shared/architecture.js",
-      "gitBlobSha": "05b00ba39dac3554dee9e7fea48d5cdd88de1b2c"
+      "gitBlobSha": "05ed60305fcf30af49e64bbe6f83d815602c016b"
     },
     {
       "source": "assets/css/property-story.css",
       "destination": "portal-assets/property-story.css",
-      "gitBlobSha": "942d744f787466cd1b4db2270b39f03b88a61a61"
+      "gitBlobSha": "6496ad51b468a7f17ce908fee8db6efc8266aa1e"
     },
     {
       "source": "assets/js/property-story.js",
@@ -168,11 +168,6 @@
       "gitBlobSha": "6c5ee54e31293fee360d26af9c06bcea7abd2ed4"
     },
     {
-      "source": "portal/contact-actions.js",
-      "destination": ".portal-shared/contact-actions.js",
-      "gitBlobSha": "c427dbb95d6267115b5ab0d7b7f630b1d827c3d3"
-    },
-    {
       "source": "assets/js/whatsapp-contact.js",
       "destination": "portal-assets/whatsapp-contact.js",
       "gitBlobSha": "2392a5fc199434c74c87006e9d90da3c5169d660"
@@ -180,7 +175,7 @@
     {
       "source": "assets/css/whatsapp-float.css",
       "destination": "portal-assets/whatsapp-float.css",
-      "gitBlobSha": "58dd70322525b669c944e1f7130a31abfaa47fd5"
+      "gitBlobSha": "964df143a091f6e9a5102da80b1b91a1a2eb958b"
     }
   ]
 }
