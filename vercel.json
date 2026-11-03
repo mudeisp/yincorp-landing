@@ -100,6 +100,22 @@
     {
       "source": "/assets/css/whatsapp-float.css",
       "destination": "/portal-assets/whatsapp-float.css"
+    },
+    {
+      "source": "/alugar",
+      "destination": "/api/rentals?rentalPath=/alugar"
+    },
+    {
+      "source": "/alugar/:rest*",
+      "destination": "/api/rentals?rentalPath=/alugar/:rest*"
+    },
+    {
+      "source": "/assets/css/rentals.css",
+      "destination": "/portal-assets/rentals.css"
+    },
+    {
+      "source": "/assets/js/rentals.js",
+      "destination": "/portal-assets/rentals.js"
     }
   ]
 }
