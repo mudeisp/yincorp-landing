@@ -1,6 +1,7 @@
 import { createPortalHandler } from '../.portal-shared/router.js';
 import { readInventory } from '../.portal-shared/inventory.js';
 import { publicConfig } from '../.portal-shared/public-config.js';
+import {decorate} from '../lib/intelligence.js';
 
 async function publicInventoryRequest(path,options={}) {
   const headers={apikey:publicConfig.key,'Content-Type':'application/json'};
@@ -20,4 +21,10 @@ const handler=createPortalHandler({
   canonicalOrigin:'https://www.yincorp.com.br',
   inventory:(state,options={})=>readInventory(state,{request:publicInventoryRequest,configured:()=>true,cacheable:true,...options})
 });
-export default handler;
+export default function portal(req,res){
+  const url=new URL(req.url||'/', 'https://www.yincorp.com.br');
+  const path=String(req.query?.portalPath||url.searchParams.get('portalPath')||url.pathname);
+  const send=res.send.bind(res);res.send=body=>send(res.statusCode===200?decorate(body,path):body);
+  return handler(req,res);
+}
+
