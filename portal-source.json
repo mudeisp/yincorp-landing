@@ -1,6 +1,6 @@
 {
   "repository": "mudeisp/ynteligencia",
-  "commit": "6e15e2f1bc52ab9a8d4184f08af32b69d772532f",
+  "commit": "fb0686a545d1f5ecfae36f310c8caa2b44f7d0f9",
   "files": [
     {
       "source": "portal/model.js",
@@ -10,7 +10,7 @@
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "gitBlobSha": "d817326485c2a919c7025b5d20a57323b296dea0"
+      "gitBlobSha": "c1bb2c3c60021971fa40ec694f3e258f08c6326f"
     },
     {
       "source": "portal/router.js",
@@ -25,7 +25,7 @@
     {
       "source": "assets/js/portal.js",
       "destination": "portal-assets/portal.js",
-      "gitBlobSha": "0c5828454dc423e8c991d7057081798e5f173526"
+      "gitBlobSha": "efeaefa59280b66fac97c01a369210e2ba9d939d"
     },
     {
       "source": "assets/js/portal-contact.js",
@@ -35,7 +35,7 @@
     {
       "source": "assets/js/portal-session.js",
       "destination": "portal-assets/portal-session.js",
-      "sha256": "88c7d5bc0c576aad2a9f09be3d23550b66071ccb23da28f1b7c9c0b61acd513c"
+      "sha256": "e4abcb21c6bb001f11184f8895f99e7f827b82d656d01c05f31e4a1e6d37995a"
     },
     {
       "source": "assets/js/integrations/analytics.js",
@@ -70,22 +70,22 @@
     {
       "source": "portal/editorial.js",
       "destination": ".portal-shared/editorial.js",
-      "gitBlobSha": "533fc110d62f83790a49ef3091db69b26b53b79e"
+      "gitBlobSha": "20000dc9fe279ca84aa14f6d4d7e21a37e68b67d"
     },
     {
       "source": "assets/css/portal-editorial.css",
       "destination": "portal-assets/portal-editorial.css",
-      "gitBlobSha": "8c22400b7f23263fe025183a0278db85afc285d5"
+      "gitBlobSha": "e21b2d9e8c63aa545f9fe407b13f5e76e59967cf"
     },
     {
       "source": "portal/architecture.js",
       "destination": ".portal-shared/architecture.js",
-      "gitBlobSha": "05ed60305fcf30af49e64bbe6f83d815602c016b"
+      "gitBlobSha": "05b00ba39dac3554dee9e7fea48d5cdd88de1b2c"
     },
     {
       "source": "assets/css/property-story.css",
       "destination": "portal-assets/property-story.css",
-      "gitBlobSha": "6496ad51b468a7f17ce908fee8db6efc8266aa1e"
+      "gitBlobSha": "942d744f787466cd1b4db2270b39f03b88a61a61"
     },
     {
       "source": "assets/js/property-story.js",
@@ -166,6 +166,21 @@
       "source": "assets/js/investment-simulator.js",
       "destination": "portal-assets/investment-simulator.js",
       "gitBlobSha": "6c5ee54e31293fee360d26af9c06bcea7abd2ed4"
+    },
+    {
+      "source": "portal/contact-actions.js",
+      "destination": ".portal-shared/contact-actions.js",
+      "gitBlobSha": "c427dbb95d6267115b5ab0d7b7f630b1d827c3d3"
+    },
+    {
+      "source": "assets/js/whatsapp-contact.js",
+      "destination": "portal-assets/whatsapp-contact.js",
+      "gitBlobSha": "2392a5fc199434c74c87006e9d90da3c5169d660"
+    },
+    {
+      "source": "assets/css/whatsapp-float.css",
+      "destination": "portal-assets/whatsapp-float.css",
+      "gitBlobSha": "58dd70322525b669c944e1f7130a31abfaa47fd5"
     }
   ]
 }
