@@ -70,18 +70,21 @@ index: its updated_at is not verified as a meaningful content-change date.
 | Neighborhood hubs (developments) | 474 | 474 |
 | Existing Vitória intent pages | 2 | 2 |
 | Developments | 2,287 | 2,287 |
-| Individual resale properties | 0 | 892 |
+| Individual resale properties | 0 | 890 |
 | Resale state hub | 0 | 1 |
 | Resale city hubs | 0 | 4 |
 | Resale neighborhood hubs | 0 | 85 |
-| **Portal total** | **2,815** | **3,797** |
+| **Portal total** | **2,815** | **3,795** |
 
-Delta: +982 (+34.88%), no canonical portal URLs removed in this snapshot.
-Existing 5 static sitemap entries are additional and unchanged.
-SP: 2,586 -> 3,568. ES: 229 -> 229 (including 171 developments).
+Delta: +980 (+34.81%), no canonical portal URLs removed in this snapshot.
+The 5 existing static entries are additional to the portal baseline. The root
+URL is excluded because it redirects to /es; all 4 campaign entries remain.
+No campaign page or route is removed. Combined baseline: 2,820 URLs; candidate:
+3,799 URLs (+979). Portal-only delta remains +980, with no portal removals.
+SP: 2,586 -> 3,566. ES: 229 -> 229 (including 171 developments).
 The present resale source has no eligible ES sale rows: none fabricated.
-Of 904 description-rich candidate rows, 4 lacked explicit sale operation and
-8 belonged to repeated-description pairs. 892 passed all rules.
+Of 904 description-rich candidate rows, 4 lacked explicit sale operation, 2 had unavailable titles, and
+8 belonged to repeated-description pairs. 890 passed all rules.
 The remaining active used inventory does not automatically become SEO pages.
 Numbers change as the live inventory changes; they are not Google counts.
 

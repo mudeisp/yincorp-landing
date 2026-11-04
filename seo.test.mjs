@@ -8,6 +8,7 @@ function response(){return {statusCode:200,headers:{},setHeader(k,v){this.header
 const groups=[{id:id(99),external_id:'orulo:123:1',building_id:'123',source:'novos',state:'ES',city:'Vitória',neighborhood:'Jardim Camburi',development_name:'Projeto real',active:true,price:500000,area:60,typology_stock:1,updated_at:'2026-11-04T10:00:00Z'}];
 test('eligibility rejects empty, inactive, unavailable or non-sale rows and unsafe content',()=>{
   assert.ok(resaleCandidate(row(1)));
+  assert.equal(resaleCandidate(row(1,{title:'Apartamento Indisponível em Perdizes'})),null);
   for(const extra of [{active:false},{source:'novos'},{operation:'LOCACAO'},{area:0},{price:null},{description:'Curta'},{city:''},{image_url:'javascript:alert(1)'},{description:row(1).description+' Ligue (11) 99999-1234'},{description:row(1).description+' test@example.com'}])assert.equal(resaleCandidate(row(1,extra)),null);
   assert.doesNotMatch(RESALE_SELECT,/(?:^|,)raw_data(?:,|$)|user|owner|phone|email|contact/);
 });

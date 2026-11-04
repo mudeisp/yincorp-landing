@@ -59,5 +59,6 @@ test('primary sitemap is an index that exposes both legacy and dynamic portal UR
   const config=JSON.parse(await read('vercel.json'));
   assert.ok(config.rewrites.some(r=>r.source==='/sitemap.xml'&&r.destination==='/api/portal?portalPath=/sitemap.xml'));
   assert.match(legacy,/https:\/\/www.yincorp.com.br\/well-perdizes/);
+  assert.doesNotMatch(legacy,/<loc>https:\/\/www.yincorp.com.br\/<\/loc>/);
 });
 
