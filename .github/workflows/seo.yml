@@ -1,0 +1,35 @@
+name: SEO inventory and route checks
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 11 * * *'
+permissions:
+  contents: read
+jobs:
+  verify:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Build pinned portal presentation
+        run: node scripts/prepare-portal.mjs
+      - name: Syntax and regressions
+        run: |
+          node --check lib/seo-catalog.js
+          node --check api/portal.js
+          node --check scripts/audit-seo.mjs
+          node --test integration.test.mjs intelligence.test.mjs whatsapp-integration.test.mjs seo.test.mjs
+  coverage:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Public sitemap and sample audit (no commercial submissions)
+        run: node scripts/audit-seo.mjs --sample 40 --out seo-audit.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: seo-coverage
+          path: seo-audit.json
+          retention-days: 14
