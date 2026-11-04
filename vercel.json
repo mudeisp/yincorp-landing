@@ -3,12 +3,31 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/sp/empreendimentos/arizona-1002/",
+      "destination": "/sp/empreendimentos/arizona-1002",
+      "permanent": true
+    },
+    {
+      "source": "/arizona-1002",
+      "destination": "/sp/empreendimentos/arizona-1002",
+      "permanent": true
+    },
+    {
+      "source": "/arizona-1002/index.html",
+      "destination": "/sp/empreendimentos/arizona-1002",
+      "permanent": true
+    },
+    {
       "source": "/",
       "destination": "/es",
       "permanent": false
     }
   ],
   "rewrites": [
+    {
+      "source": "/sp/empreendimentos/arizona-1002",
+      "destination": "/arizona-1002/index.html"
+    },
     {
       "source": "/sitemap.xml",
       "destination": "/api/portal?portalPath=/sitemap.xml"
