@@ -3,6 +3,11 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/",
+      "destination": "/es",
+      "permanent": false
+    },
+    {
       "source": "/sp/empreendimentos/arizona-1002/",
       "destination": "/sp/empreendimentos/arizona-1002",
       "permanent": true
@@ -16,11 +21,6 @@
       "source": "/arizona-1002/index.html",
       "destination": "/sp/empreendimentos/arizona-1002",
       "permanent": true
-    },
-    {
-      "source": "/",
-      "destination": "/es",
-      "permanent": false
     }
   ],
   "rewrites": [
