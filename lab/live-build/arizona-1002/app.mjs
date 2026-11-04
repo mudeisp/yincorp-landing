@@ -1,9 +1,15 @@
-import{brl,describe,stages}from'/arizona-1002/model.mjs';
-const $=id=>document.getElementById(id);const sections=['hero','gallery','typology','units','payments','done'];const labels=['Documentos recebidos','Identidade e imagens','Tipologias e plantas','Unidades e preços','Fluxo financeiro','Conferência e prévia'];let units=[],timer=null,step=-1,startTime=0;
-const r=await fetch('/arizona-1002/units.json');if(!r.ok)throw Error('Dados de referência indisponíveis');units=(await r.json()).units;
-for(const u of units){const opt=document.createElement('option');opt.value=u.id;opt.textContent=describe(u)+' · '+brl(u.total);$('unit').append(opt)}
-$('unit').value='4-4';$('unit').addEventListener('change',renderUnit);renderUnit();
-function renderUnit(){const u=units.find(x=>x.id===$('unit').value)||units[0];$('description').textContent=describe(u);$('total').textContent=brl(u.total);$('parking').textContent=u.parking+' vagas';const s=stages(u);$('paymentRows').replaceChildren(...s.map(p=>{const row=document.createElement('div');row.className='payment-row';const name=document.createElement('span');name.textContent=p.label+' · '+p.count+'×';const date=document.createElement('span');date.textContent=p.date;const val=document.createElement('strong');val.textContent=brl(p.total);row.append(name,date,val);return row}));const sum=s.reduce((n,p)=>n+p.total,0);$('check').textContent='Conferência: '+brl(sum)+' / total '+brl(u.total)+(sum===u.total?' · valores conciliados':' · divergência detectada');}
-function reset(){if(timer)clearInterval(timer);timer=null;step=-1;startTime=0;sections.forEach(id=>$(id).classList.add('hidden'));$('bar').style.width='0%';$('percent').textContent='0%';$('status').textContent='Aguardando início';$('clock').textContent='00:00';[...$('steps').children].forEach(li=>li.className='');$('start').disabled=false;}
-function advance(){step++;if(step>=labels.length){clearInterval(timer);timer=null;$('start').disabled=false;return}$(sections[step]).classList.remove('hidden');$('status').textContent=labels[step];$('bar').style.width=((step+1)/labels.length*100)+'%';$('percent').textContent=Math.round((step+1)/labels.length*100)+'%';[...$('steps').children].forEach((li,i)=>li.className=i<step?'done':i===step?'active':'');const elapsed=Math.floor((Date.now()-startTime)/1000);$('clock').textContent=String(Math.floor(elapsed/60)).padStart(2,'0')+':'+String(elapsed%60).padStart(2,'0');if(step===labels.length-1){clearInterval(timer);timer=null;$('start').disabled=false;}}
-$('start').addEventListener('click',()=>{reset();startTime=Date.now();$('start').disabled=true;advance();timer=setInterval(advance,1900)});$('reset').addEventListener('click',reset);
+// V2 visual-only reveal: original Arizona HTML/CSS/JS, no PDF parsing or agent stream.
+const main=document.getElementById('conteudo');
+const nodes=[...main.children,document.querySelector('footer')].filter(Boolean);
+const start=document.getElementById('lab-start');
+const reset=document.getElementById('lab-reset');
+const status=document.getElementById('lab-status');
+const progress=document.getElementById('lab-progress');
+let current=0,interval=null;
+const titles=['Apresentação e fachada','Visão geral','Lazer e galeria','Plantas e tipologias','Seleção, comparação e fluxo financeiro','Atendimento','Informações e fontes'];
+const stages=nodes.map((node,i)=>({node,title:titles[i]||'Seção '+(i+1)}));
+function restore(){if(interval)clearInterval(interval);interval=null;current=0;stages.forEach(s=>{s.node.classList.add('lab-pending');s.node.classList.remove('lab-enter')});status.textContent='Pronto para iniciar';progress.style.width='0%';start.disabled=false}
+function next(){if(current>=stages.length){clearInterval(interval);interval=null;status.textContent='Interface completa · simulação concluída';start.disabled=false;return}const s=stages[current++];s.node.classList.remove('lab-pending');s.node.classList.add('lab-enter');status.textContent=s.title;progress.style.width=Math.round(current/stages.length*100)+'%';if(current===stages.length){clearInterval(interval);interval=null;status.textContent='Interface completa · simulação concluída';start.disabled=false}}
+start.addEventListener('click',()=>{restore();start.disabled=true;next();interval=setInterval(next,1700)});
+reset.addEventListener('click',restore);
+restore();
