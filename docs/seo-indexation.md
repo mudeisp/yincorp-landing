@@ -50,6 +50,9 @@ The /sitemap.xml rewrite generates a primary index containing the existing
 sitemap-static.xml and /sitemap-seo/{state}/{type}-{page}.xml URL sets.
 Types: lugares, empreendimentos, imoveis. Maximum 5,000 entries per child.
 The old /sitemap-portal.xml remains a compatible URL set; indexes are not nested.
+The physical sitemap.xml is removed because Vercel serves a matching static
+file before the rewrite. Its public URL remains available through the dynamic
+handler; sitemap-static.xml and all campaign pages stay unchanged.
 New records/removals are reflected after inventory/CDN cache expiry.
 
 Never use request time or a synchronization heartbeat as lastmod. Resale pages
