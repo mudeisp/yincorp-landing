@@ -10,6 +10,14 @@
   ],
   "rewrites": [
     {
+      "source": "/sitemap.xml",
+      "destination": "/api/portal?portalPath=/sitemap.xml"
+    },
+    {
+      "source": "/sitemap-seo/:rest*",
+      "destination": "/api/portal?portalPath=/sitemap-seo/:rest*"
+    },
+    {
       "source": "/varanda-botanic",
       "destination": "/varanda-botanic/index.html"
     },

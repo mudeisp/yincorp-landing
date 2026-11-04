@@ -50,9 +50,15 @@ test('canonical is www; runtime exposes no privileged Supabase credential',async
   const robots=await read('robots.txt');assert.match(robots,/www.yincorp.com.br\/sitemap.xml/);assert.match(robots,/www.yincorp.com.br\/sitemap-portal.xml/);
 });
 test('primary sitemap is an index that exposes both legacy and dynamic portal URLs',async()=>{
-  const sitemap=await read('sitemap.xml'),legacy=await read('sitemap-static.xml');
+  const {sitemapIndex}=await import('./lib/seo-catalog.js');
+  const sitemap=sitemapIndex(new Map([['/sitemap-static.xml',[]],['/sitemap-seo/es/empreendimentos-1.xml',[]]])),legacy=await read('sitemap-static.xml');
   assert.match(sitemap,/<sitemapindex/);
   assert.match(sitemap,/https:\/\/www.yincorp.com.br\/sitemap-static.xml/);
-  assert.match(sitemap,/https:\/\/www.yincorp.com.br\/sitemap-portal.xml/);
+  assert.match(sitemap,/https:\/\/www.yincorp.com.br\/sitemap-seo\/es\/empreendimentos-1.xml/);
+  await assert.rejects(read('sitemap.xml'),/ENOENT/);
+  const config=JSON.parse(await read('vercel.json'));
+  assert.ok(config.rewrites.some(r=>r.source==='/sitemap.xml'&&r.destination==='/api/portal?portalPath=/sitemap.xml'));
   assert.match(legacy,/https:\/\/www.yincorp.com.br\/well-perdizes/);
+  assert.doesNotMatch(legacy,/<loc>https:\/\/www.yincorp.com.br\/<\/loc>/);
 });
+
