@@ -49,6 +49,8 @@ test('pagination, redirects, errors and HEAD preserve correct HTTP and indexing 
   assert.match(r.body,/href="\/sp\/sao-paulo\/imoveis"/);
   for(const page of ['0','03','100','oops']){const bad=response();await handler({method:'GET',url:'/sp/imoveis?pagina='+page},bad,'/sp/imoveis');assert.equal(bad.statusCode,404);assert.match(bad.headers['X-Robots-Tag'],/noindex/);}
   const filter=response();await handler({method:'GET',url:'/sp/imoveis?quartos=2'},filter,'/sp/imoveis');assert.match(filter.body,/noindex,follow/);
+  const rewritten=response();await handler({method:'GET',url:'/api/portal?portalPath=%2Fsp%2Fimoveis&uf=sp&rest=imoveis'},rewritten,'/sp/imoveis');assert.match(rewritten.body,/content="index,follow"/);
+  const rewrittenFilter=response();await handler({method:'GET',url:'/api/portal?portalPath=%2Fsp%2Fimoveis&uf=sp&rest=imoveis&quartos=2'},rewrittenFilter,'/sp/imoveis');assert.match(rewrittenFilter.body,/content="noindex,follow"/);
   const moved=response(),wrong=rows[0].path.replace('apartamento-','outro-');await handler({method:'GET',url:wrong+'?gclid=abc'},moved,wrong);assert.equal(moved.statusCode,308);assert.equal(moved.headers.Location,rows[0].path+'?gclid=abc');
   const head=response();await handler({method:'HEAD',url:'/sitemap.xml'},head,'/sitemap.xml');assert.equal(head.statusCode,200);assert.equal(head.body,undefined);
   const missing=response();await handler({method:'GET',url:'/sitemap-seo/es/imoveis-1.xml'},missing,'/sitemap-seo/es/imoveis-1.xml');assert.equal(missing.statusCode,404);
