@@ -4,6 +4,7 @@ import { publicConfig } from '../.portal-shared/public-config.js';
 import {decorate,INVESTMENT_PATH} from '../lib/intelligence.js';
 import {investmentPage} from '../lib/investment-page.js';
 import {createSeoHandler,createResaleReader} from '../lib/seo-catalog.js';
+import {withPrivacyFooter} from '../lib/privacy-footer.js';
 
 async function publicInventoryRequest(path,options={}) {
   const headers={apikey:publicConfig.key,'Content-Type':'application/json'};
@@ -30,6 +31,7 @@ const seo=createSeoHandler({
 export default async function portal(req,res){
   const url=new URL(req.url||'/', 'https://www.yincorp.com.br');
   const path=String(req.query?.portalPath||url.searchParams.get('portalPath')||url.pathname);
+  const privacySend=res.send.bind(res);res.send=body=>privacySend(res.statusCode===200?withPrivacyFooter(body):body);
   if(await seo(req,res,path))return;
   const send=res.send.bind(res);res.send=body=>send(res.statusCode===200?decorate(body,path):body);
   // Discovery links are HTML, not JS-only navigation. No commercial flow changes.
