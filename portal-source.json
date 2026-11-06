@@ -5,22 +5,26 @@
     {
       "source": "portal/model.js",
       "destination": ".portal-shared/model.js",
-      "gitBlobSha": "27a118dd99e175ad0dd7e24118210ecc27cf6e05"
+      "commit": "cd387c80342adee9d1a1100d52688ed8425fc762",
+      "gitBlobSha": "657b7ab0838afd05accd4d00580e187ba8a7562a"
     },
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "gitBlobSha": "5cc1f5ffa5998e24f37d7a198efbc1724e149d4e"
+      "commit": "cd387c80342adee9d1a1100d52688ed8425fc762",
+      "gitBlobSha": "634353b0ce2dfb8cbfc4d8f8d4d6a6d9c68a5e2c"
     },
     {
       "source": "portal/router.js",
       "destination": ".portal-shared/router.js",
-      "gitBlobSha": "a8ad10bd2615d1f2dc90d02f649641d518bae3de"
+      "commit": "cd387c80342adee9d1a1100d52688ed8425fc762",
+      "gitBlobSha": "829381adad444a01f34f37150b9d6b130cfb453c"
     },
     {
       "source": "portal/inventory.js",
       "destination": ".portal-shared/inventory.js",
-      "gitBlobSha": "0e61cebcc7226a0a879f725569b449e20f169ef6"
+      "commit": "cd387c80342adee9d1a1100d52688ed8425fc762",
+      "gitBlobSha": "334f7c45f18246a107a5d8ce0d83af1e25e7d567"
     },
     {
       "source": "assets/js/portal.js",
@@ -194,6 +198,12 @@
       "destination": "portal-assets/rentals.js",
       "commit": "4941afde85b7be02839178e38bb83ddf90ed841f",
       "sha256": "a462f7f7f60df884d67cebee36866b1fdcd780f40eb26eb237a532b34f19ced7"
+    },
+    {
+      "source": "portal/eligibility.js",
+      "destination": ".portal-shared/eligibility.js",
+      "commit": "cd387c80342adee9d1a1100d52688ed8425fc762",
+      "gitBlobSha": "b4a8280a28447264e41c0a4425c2d4eccf13ad4c"
     }
   ]
 }

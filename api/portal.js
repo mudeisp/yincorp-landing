@@ -1,3 +1,5 @@
+import {groupEligibleDevelopments} from '../.portal-shared/model.js';
+import {NATIONAL_MARKETS} from '../.portal-shared/eligibility.js';
 import { createPortalHandler } from '../.portal-shared/router.js';
 import { readInventory } from '../.portal-shared/inventory.js';
 import { publicConfig } from '../.portal-shared/public-config.js';
@@ -21,17 +23,23 @@ async function publicInventoryRequest(path,options={}) {
   return result;
 }
 const handler=createPortalHandler({
+  nationalEligibility:true,
   canonicalOrigin:'https://www.yincorp.com.br',
-  inventory:(state,options={})=>readInventory(state,{request:publicInventoryRequest,configured:()=>true,cacheable:true,...options})
+  inventory:(state,options={})=>readInventory(state,{request:publicInventoryRequest,configured:()=>true,cacheable:true,nationalEligibility:true,...options})
 });
 const seo=createSeoHandler({
-  inventory:(state,options={})=>readInventory(state,{request:publicInventoryRequest,configured:()=>true,cacheable:true,...options}),
+  inventory:(state,options={})=>readInventory(state,{request:publicInventoryRequest,configured:()=>true,cacheable:true,nationalEligibility:true,...options}),
   resales:createResaleReader(publicInventoryRequest)
 });
 export default async function portal(req,res){
   const url=new URL(req.url||'/', 'https://www.yincorp.com.br');
   const path=String(req.query?.portalPath||url.searchParams.get('portalPath')||url.pathname);
-  const privacySend=res.send.bind(res);res.send=body=>privacySend(res.statusCode===200?withPrivacyFooter(body):body);
+  const privacySend=res.send.bind(res);res.send=body=>{
+    if(res.statusCode===200&&typeof body==='string'&&body.startsWith('<!doctype html>')&&NATIONAL_MARKETS.some(state=>path===`/${state.toLowerCase()}`)){
+      body=body.replace('</main>',`<nav class="wrap" aria-label="Estados Yincorp">${NATIONAL_MARKETS.map(state=>`<a href="/${state.toLowerCase()}">${state}</a>`).join(' · ')}</nav></main>`);
+    }
+    return privacySend(res.statusCode===200?withPrivacyFooter(body):body);
+  };
   if(await seo(req,res,path))return;
   const send=res.send.bind(res);res.send=body=>send(res.statusCode===200?decorate(body,path):body);
   // Discovery links are HTML, not JS-only navigation. No commercial flow changes.
@@ -39,7 +47,7 @@ export default async function portal(req,res){
     const baseSend=res.send.bind(res);res.send=body=>baseSend(res.statusCode===200&&typeof body==='string'?body.replace('</main>',`<nav class="wrap" aria-label="Catálogo de imóveis"><a href="/${path.split('/')[1]}/imoveis">Explorar imóveis à venda em ${path.split('/')[1].toUpperCase()}</a></nav></main>`):body);
   }
   if(path===INVESTMENT_PATH&&['GET','HEAD'].includes(req.method)){
-    try{const rows=await readInventory('ES',{mode:'listing',request:publicInventoryRequest,configured:()=>true,cacheable:true});const html=investmentPage(rows,{preview:process.env.VERCEL_ENV==='preview'});res.setHeader('Content-Type','text/html; charset=utf-8');res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Cache-Control',process.env.VERCEL_ENV==='preview'?'no-store':'public, max-age=0, s-maxage=60, stale-while-revalidate=120');res.status(200);return req.method==='HEAD'?res.end():res.send(html)}catch{return handler(req,res)}
+    try{const rows=await readInventory('ES',{mode:'listing',request:publicInventoryRequest,configured:()=>true,cacheable:true,nationalEligibility:true});const html=investmentPage(groupEligibleDevelopments(rows).flatMap(g=>g.units),{preview:process.env.VERCEL_ENV==='preview'});res.setHeader('Content-Type','text/html; charset=utf-8');res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Cache-Control',process.env.VERCEL_ENV==='preview'?'no-store':'public, max-age=0, s-maxage=60, stale-while-revalidate=120');res.status(200);return req.method==='HEAD'?res.end():res.send(html)}catch{return handler(req,res)}
   }
   return handler(req,res);
 }
