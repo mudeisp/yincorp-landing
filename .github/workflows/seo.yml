@@ -19,7 +19,7 @@ jobs:
           node --check lib/seo-catalog.js
           node --check api/portal.js
           node --check scripts/audit-seo.mjs
-          node --test integration.test.mjs intelligence.test.mjs whatsapp-integration.test.mjs seo.test.mjs national-seo.test.mjs privacy.test.mjs arizona-1002/model.test.mjs
+          node --test integration.test.mjs intelligence.test.mjs national-comparator.test.mjs whatsapp-integration.test.mjs seo.test.mjs national-seo.test.mjs privacy.test.mjs arizona-1002/model.test.mjs
   coverage:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest

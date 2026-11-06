@@ -7,7 +7,8 @@ root.innerHTML='<div class="ynti-head"><div><small>✳ YINCORP INTELLIGENCE</sma
 anchor.after(root);const content=root.querySelector('.ynti-content'),live=root.querySelector('.ynti-live');
 const num=(v,d=0)=>v==null?'A confirmar':Number(v).toLocaleString('pt-BR',{maximumFractionDigits:d});const cash=v=>v==null?'A confirmar':'R$ '+num(v);
 const text=(tag,value,cls)=>{const e=document.createElement(tag);e.textContent=value;if(cls)e.className=cls;return e};
-const safePath=p=>p==='/es/vitoria/investimento-airbnb'||typeof p==='string'&&/^\/(?:es|sp)\/[a-z0-9-]+\/empreendimento\/[a-z0-9-]+(?:\/tipologia\/[a-f0-9-]{36})?$/.test(p)||typeof p==='string'&&/^\/alugar\/imovel\/[a-f0-9-]{36}$/.test(p);
+const markets=new Set((document.currentScript?.dataset.markets||'').split(','));
+const safePath=p=>{const sale=typeof p==='string'&&/^\/([a-z]{2})\/[a-z0-9-]+\/empreendimento\/[a-z0-9-]+(?:\/tipologia\/[a-f0-9-]{36})?$/.exec(p);return p==='/es/vitoria/investimento-airbnb'||Boolean(sale&&markets.has(sale[1]))||typeof p==='string'&&/^\/alugar\/imovel\/[a-f0-9-]{36}$/.test(p)};
 const path=location.pathname;let payload=null,started=false,paused=false,step=0,elapsed=0,last=0,priority='geral';const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),25000);
 const loading=fetch('/api/intelligence?'+new URLSearchParams({path}),{signal:controller.signal,credentials:'same-origin'}).then(r=>{if(!r.ok)throw Error('unavailable');return r.json()}).then(data=>{if(!data.base||!Array.isArray(data.items))throw Error('invalid');payload=data;return data}).finally(()=>clearTimeout(timeout));loading.catch(()=>{if(!started)root.hidden=true});
