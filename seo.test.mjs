@@ -5,7 +5,7 @@ import {auditSeo} from './scripts/audit-seo.mjs';
 const id=n=>`10000000-0000-4000-8000-${String(n).padStart(12,'0')}`;
 const row=(n,extra={})=>({id:id(n),external_id:`nonstop:${n}`,source:'usados',title:`Apartamento ${n} em Pinheiros`,state:'SP',city:'São Paulo',neighborhood:'Pinheiros',active:true,operation:'VENDA',price:600000,area:70,image_url:'https://images.example.com/1.jpg',description:`Descrição específica do imóvel ${n}. `+'Ambientes bem descritos com características informadas no inventário. '.repeat(4),updated_at:'2026-11-04T10:00:00Z',...extra});
 function response(){return {statusCode:200,headers:{},setHeader(k,v){this.headers[k]=v;},status(n){this.statusCode=n;return this;},send(body){this.body=body;return this;},end(){this.ended=true;return this;}};}
-const groups=[{id:id(99),external_id:'orulo:123:1',building_id:'123',source:'novos',state:'ES',city:'Vitória',neighborhood:'Jardim Camburi',development_name:'Projeto real',active:true,price:500000,area:60,typology_stock:1,updated_at:'2026-11-04T10:00:00Z'}];
+const groups=[{id:id(99),external_id:'orulo:123:1',building_id:'123',source:'novos',state:'ES',city:'Vitória',neighborhood:'Jardim Camburi',development_name:'Projeto real',active:true,price:500000,area:60,typology_stock:1,status:'Pronto novo',stage:'Pronto novo',image_url:'https://images.example.com/development.jpg',updated_at:'2026-11-04T10:00:00Z'}];
 test('eligibility rejects empty, inactive, unavailable or non-sale rows and unsafe content',()=>{
   assert.ok(resaleCandidate(row(1)));
   assert.equal(resaleCandidate(row(1,{title:'Apartamento Indisponível em Perdizes'})),null);
