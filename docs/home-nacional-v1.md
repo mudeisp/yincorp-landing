@@ -62,11 +62,23 @@ das oito rotas estaduais com dados sintéticos. Testes locais não substituem a
 confirmação HTTP dos rewrites no Preview. O Preview continua sujeito à proteção
 e à política de noindex da Vercel, sem alteração dessas configurações.
 
-A tentativa local de renderização em Chrome headless foi bloqueada pelo ambiente
-(`HEADLESS_BROWSER_UNAVAILABLE`); nenhum resultado visual de navegador foi declarado
-aprovado. A navegação mobile tem regressão estrutural automatizada, mas screenshots,
-overflow e interação visual devem ser conferidos no Preview. Não foi alterada a
-segurança do navegador para contornar essa limitação.
+A primeira tentativa de Chrome headless ficou indisponível; a verificação visual
+foi concluída pela alternativa suportada do navegador integrado. Viewports 1440x1000,
+390x844 e 320x780: sem overflow horizontal, imagem carregada e oito links estaduais.
+Menu mobile e FAQ abriram pelo teclado (Enter). Capturas locais de desktop, mobile,
+menu aberto e mobile estreito foram guardadas como evidência da entrega. Apenas
+na resposta do servidor de teste local os snippets de tracking foram removidos,
+para não emitir eventos sintéticos; os arquivos do PR os preservam.
+
+No Preview automático do commit funcional `eebf7e1bfdf9aa706dd386357955de75500e4077`,
+`/`, os oito estados, `/alugar`, `/sitemap.xml`, `/robots.txt` e `/sitemap-static.xml`
+responderam 200. Canonicals mantiveram o domínio www correto. A raiz tem noindex
+no cabeçalho automático da Vercel; o portal e a locação também preservam noindex
+no Preview. O sitemap estático contém a raiz. `/institucional` e `/index.html`
+resolveram para o HTML nacional; a ferramenta autenticada segue redirects internos
+e, por isso, informa o 200 final, não uma captura direta do primeiro 308.
+O 308 é conferido na configuração e no teste HTTP local. A produção continuou
+respondendo 307 para `/es`, sem promoção desta branch.
 
 ## Riscos e rollback
 
