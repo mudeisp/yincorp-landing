@@ -6,7 +6,7 @@ Continuação do PR Draft #36 e da branch existente, sobre `6601f0e7e34f10414937
 
 **Ipiranga/SP: não gerado. Praia do Canto/ES: não gerado.**
 
-A execução `node scripts/run-seo-content-demo.mjs --inference-v3` verificou o ambiente isolado e bloqueou antes do provedor. `OPENAI_API_KEY` e `SEO_CONTENT_EDITORIAL_URL`/token não estão configurados nessa sessão. Também faltam autorização explícita de inferência, teto de gasto, três modelos e respectivas tarifas. A presença de chaves sensíveis em outros projetos, documentada na V2, não as torna acessíveis aqui nem autoriza copiá-las.
+A execução `node scripts/run-seo-content-demo.mjs --inference-v3` verificou o ambiente isolado e bloqueou antes do provedor. `SEO_OPENAI_API_KEY` e `SEO_CONTENT_EDITORIAL_URL`/token não estão configurados nessa sessão. Também faltam autorização explícita de inferência, teto de gasto, três modelos e respectivas tarifas. A presença de chaves sensíveis em outros projetos, documentada na V2, não as torna acessíveis aqui nem autoriza copiá-las.
 
 O relatório [inference.json](evidence/v3/inference.json) contém os nomes faltantes, os dois casos `article:null`, research/write/audit `NOT_EXECUTED`, todos os gates do artigo `UNKNOWN`, zero requests, zero tokens, custo real de inferência USD 0 e zero publicações. Não há texto manual, mock ou fixture apresentado como artigo gerado por IA. As fontes e imóveis da [V2](evidence/v2/editorial-demo.json) são contexto anterior; não foram falsamente marcados como revalidados nesta execução bloqueada.
 
@@ -26,7 +26,7 @@ Quando a configuração estiver pronta, o mesmo runner seleciona exclusivamente 
 
 ## Ação necessária de provisionamento
 
-**Provisionar `OPENAI_API_KEY` diretamente no secret store/sessão do ambiente isolado autorizado e injetá-la apenas nesse processo. Não enviar o valor pelo chat, colocar no repositório nem exportá-la de outro projeto.**
+**Provisionar `SEO_OPENAI_API_KEY` diretamente no secret store/sessão do ambiente isolado autorizado e injetá-la apenas nesse processo. Não enviar o valor pelo chat, colocar no repositório nem exportá-la de outro projeto.**
 
 A configuração exata está em [deploy/seo-content-inference.example.json](../deploy/seo-content-inference.example.json) e `.env.example`. No mesmo ambiente, o responsável deve definir os valores não secretos autorizados:
 
@@ -57,3 +57,13 @@ Não é necessário alterar produção, Supabase remoto ou cron para rodar. O ru
 O workflow existente já inclui `seo-content*.test.mjs`; os testes V3 entram na CI, junto com regressões de home/GEO, gates e PostgreSQL multi-conexão. A checagem de produção continua desativada por padrão para conteúdo. Custo de geração desta execução: USD 0; estimativas futuras por token serão identificadas como estimativas, nunca fatura ou prova de débito.
 
 Referência de contrato verificada na [documentação oficial OpenAI de Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs). Não há PASS editorial real nem conclusão de geração enquanto o bloqueio de provisionamento permanecer.
+
+## Isolamento da credencial SEO — revisão de segurança
+
+O motor usa exclusivamente SEO_OPENAI_API_KEY; não há fallback para OPENAI_API_KEY. A chave compartilhada e suas integrações não foram alteradas. Endpoint, ponte local e runner foram atualizados. O gateway HTTPS opcional deve usar a chave dedicada no proprietário do endpoint; não é permitido encaminhar para integrações comerciais compartilhadas.
+
+Metadados Vercel consultados sem descriptografar valores: SEO_OPENAI_API_KEY é sensitive e Preview-only; OPENAI_API_KEY é sensitive e Production-only. Não foram encontrados modelos/tarifas, autorização de gasto ou credenciais de banco SEO dedicadas na listagem. Portanto, o isolamento físico do banco Preview não está comprovado. Nenhuma geração foi executada. O endpoint agora rejeita run, monitor e rollback em VERCEL_ENV=preview antes de criar o store ou chamar provedores, inclusive com bearer válido. Somente leitura autenticada de preview/report permanece possível. O runner local usa banco isolado e não consulta credenciais de banco remoto para persistência.
+
+A chave Preview não é exportada para o executor local. Para uma geração privada futura: disponibilizar execução autorizada no ambiente proprietário da chave; comprovar banco isolado; escolher modelos com Structured Outputs, auditor solicitado e resolvido diferente do redator; configurar tarifas verificadas, orçamento explícito e autorização de gasto. Manter SEO_CONTENT_AUTOPUBLISH=false, kill switch ativo e engine desabilitado até ativação aprovada. O endpoint Preview permanece bloqueado; esta alteração não o habilita.
+
+Validação: suíte completa local e testes explícitos de ausência de fallback, autenticação pública e bloqueio Preview antes de acesso ao banco. O projeto não possui scripts lint/typecheck/build em package.json; sua apresentação é preparada pelo script existente prepare-portal.mjs, como na CI. Evidências históricas V2/V3 não foram reescritas como se fossem novas execuções.

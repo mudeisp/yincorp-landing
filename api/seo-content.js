@@ -15,6 +15,8 @@ export default async function handler(req,res){
   res.setHeader('Cache-Control','private, no-store');res.setHeader('X-Robots-Tag','noindex, nofollow');res.setHeader('X-Content-Type-Options','nosniff');
   const op=new URL(req.url,'https://www.yincorp.com.br').searchParams.get('op')||'run';
   if(!authorized(req.headers.authorization,op==='preview'?process.env.SEO_CONTENT_PREVIEW_SECRET:(process.env.SEO_CONTENT_CRON_SECRET||process.env.CRON_SECRET)))return res.status(401).json({error:'unauthorized'});
+  // Preview must never mutate a remote content database, even with valid authorization.
+  if(process.env.VERCEL_ENV==='preview'&&!['preview','report'].includes(op))return res.status(503).json({error:'preview_writes_disabled'});
   if(op==='preview'){
     if(req.method!=='GET')return res.status(405).end();
     const id=new URL(req.url,'https://www.yincorp.com.br').searchParams.get('id');if(!/^[0-9a-f-]{36}$/.test(id||''))return res.status(400).end();
@@ -44,7 +46,7 @@ export default async function handler(req,res){
     // Serial states bound concurrency and keep the per-invocation budget predictable.
     for(const state of [requestedState]){
       let activeRun;const wrapped={...store,claim:async p=>{activeRun=await store.claim(p);return activeRun;}};
-      const model=editorial?editorialModel(editorial,store,()=>activeRun):openaiEditorial({apiKey:process.env.OPENAI_API_KEY,models:{research:process.env.SEO_CONTENT_RESEARCH_MODEL,write:process.env.SEO_CONTENT_WRITE_MODEL,audit:process.env.SEO_CONTENT_AUDIT_MODEL},rates:JSON.parse(process.env.SEO_CONTENT_MODEL_RATES||'null'),store,runRef:()=>activeRun});
+      const model=editorial?editorialModel(editorial,store,()=>activeRun):openaiEditorial({apiKey:process.env.SEO_OPENAI_API_KEY,models:{research:process.env.SEO_CONTENT_RESEARCH_MODEL,write:process.env.SEO_CONTENT_WRITE_MODEL,audit:process.env.SEO_CONTENT_AUDIT_MODEL},rates:JSON.parse(process.env.SEO_CONTENT_MODEL_RATES||'null'),store,runRef:()=>activeRun});
       const agents=createEditorialAgents({model,checkLinks:checkPublicLinks,releaseEvidence:()=>/^[a-f0-9]{40}$/.test(process.env.SEO_CONTENT_VERIFIED_RELEASE_SHA||'')&&process.env.SEO_CONTENT_VERIFIED_RELEASE_SHA===process.env.VERCEL_GIT_COMMIT_SHA?{status:'PASS',evidence:'CI verified release '+process.env.SEO_CONTENT_VERIFIED_RELEASE_SHA}:null});
       const supplemental=evidence?evidenceProvider(evidence):null;
       const gsc=process.env.SEO_CONTENT_GSC_ACCESS_TOKEN?searchConsole({accessToken:process.env.SEO_CONTENT_GSC_ACCESS_TOKEN,site:process.env.SEO_CONTENT_GSC_SITE,inventory:contentInventory,relatedQueries:process.env.SEO_CONTENT_ALLOW_RELATED_QUERY_HYPOTHESES==='true'}):null;

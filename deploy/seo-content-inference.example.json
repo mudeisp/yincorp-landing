@@ -1,7 +1,7 @@
 {
   "scope": "isolated session only; no deployment or production changes",
   "secret": {
-    "name": "OPENAI_API_KEY",
+    "name": "SEO_OPENAI_API_KEY",
     "source": "Provision directly into the authorized isolated runtime secret store; never export from another project",
     "persistToRepository": false,
     "print": false
