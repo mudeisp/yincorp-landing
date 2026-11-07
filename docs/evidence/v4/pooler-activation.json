@@ -1,0 +1,46 @@
+{
+  "observedAt": "2026-11-07T22:48:02.164Z",
+  "referenceCommit": "24263042d38c49c188f47414a43e9d4404dc27c1",
+  "mode": "NO_INFERENCE_NO_REMOTE_WRITES",
+  "status": "BLOCKED_RUNTIME_CREDENTIAL_BINDING",
+  "connection": {
+    "directAllowed": true,
+    "sessionPoolerHost": "aws-1-us-west-2.pooler.supabase.com",
+    "port": 5432,
+    "database": "postgres",
+    "poolerUser": "seo_engine_executor.bgggafirdjvxihqselha",
+    "effectiveRole": "seo_engine_executor",
+    "certificateVerification": true,
+    "explicitServername": true,
+    "minTlsVersion": "TLSv1.2",
+    "arbitraryPoolersAllowed": false,
+    "transactionModeAllowed": false
+  },
+  "remoteReadback": {
+    "passwordConfigured": true,
+    "rlsForced": true,
+    "rolePrivileged": false,
+    "publicRoleAccess": false,
+    "ledgerRows": 0
+  },
+  "tests": {
+    "localAllowlistTlsTestsPassed": 2,
+    "realCloudAuthentication": "NOT_EXECUTED",
+    "twoCloudSessions": "NOT_EXECUTED",
+    "dataApiSchemaExposure": "UNKNOWN_REQUIRES_DASHBOARD"
+  },
+  "pendingRuntimeNames": [
+    "SEO_CONTENT_LEDGER_DATABASE_URL",
+    "SEO_CONTENT_LEDGER_TLS_CA",
+    "SEO_CONTENT_LEDGER_KEY",
+    "SEO_CONTENT_OPENAI_PROJECT_ID"
+  ],
+  "currentExecutor": "Windows local, Cloud runtime not attached",
+  "remoteLedgerWrites": 0,
+  "commercialWrites": 0,
+  "providerRequests": 0,
+  "historicalSpend": "UNKNOWN",
+  "availableBalance": "UNKNOWN",
+  "inference": false,
+  "autopublish": false
+}

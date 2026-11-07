@@ -4,7 +4,7 @@ Referência auditada: PR Draft #36, `6855ed3eaa24fda7cb207ca9fbc535a7b5c1de28`.
 Projeto `agente.yincorp` / `bgggafirdjvxihqselha`. Não houve escrita remota,
 alteração de roles/policies, nova migration, inferência, merge ou publicação.
 
-## Readback executado
+## Readback histórico da revisão anterior
 
 A migration V4 consta no histórico remoto como `20261107212405`. O SQL, após
 remoção de comentários e whitespace, tem o mesmo MD5 do arquivo versionado
@@ -38,14 +38,10 @@ schemas expostos permanece **UNKNOWN** até a conferência no Dashboard.
    sem validação. Em **Integrations > Data API > Settings > Exposed schemas**,
    confirmar que `seo_engine` NÃO consta. Não alterar a lista/políticas comerciais
    para viabilizar SEO; se houver exposição, registrar e interromper.
-2. No gerenciador de segredos do responsável, gerar senha forte exclusiva para
-   `seo_engine_executor`. Em um terminal privado do operador autorizado, conectar
-   com seu perfil administrativo seguro e TLS verify-full; executar interativamente
-   `\password seo_engine_executor`. O comando pede a senha sem a colocar em claro
-   no histórico/log SQL. Não colar `ALTER ROLE ... PASSWORD '<valor>'` no SQL Editor,
-   chat, CLI arguments, Git ou logs. Não usar Reset database password: isso muda
-   postgres, que não é a credencial SEO. Credencial administrativa fica somente
-   com o operador, nunca no Cloud/runner. Este passo não foi executado pelo agente.
+2. A senha exclusiva já foi configurada pelo operador. O novo readback consultou
+   apenas `rolpassword IS NOT NULL` e confirmou true. Não gerar outra senha nem
+   repetir a rotação. Reutilizar a referência já existente do gerenciador de segredos;
+   não exportar a senha pelo chat/Git/logs e nunca usar login administrativo no runner.
 3. Provisionar no secret manager/runtime do ambiente Cloud `yincorp-landing`:
 
    | Nome | Conteúdo exigido, nunca valor em chat |
@@ -78,10 +74,11 @@ Nunca usar sslmode=require/no-verify ou rejectUnauthorized=false como contorno.
 Se o Cloud não alcançar IPv6, abrir **Connect > Session pooler** e obter o host
 exato, porta 5432 e ref do projeto. O login é a role dedicada com sufixo do
 projeto, não postgres. Não adivinhar host de pooler, não usar a senha do agente
-e não escolher transaction pooler/6543 silenciosamente. O adapter atual recusa
-poolers: antes de usar, será necessária uma allowlist estreita do endpoint
-oficial confirmado e validação da CA/hostname. Essa configuração ainda não foi
-solicitada ao banco nem habilitada no código por suposição.
+e não escolher transaction pooler/6543 silenciosamente. O adapter agora aceita exclusivamente o Session Pooler confirmado pelo operador:
+`aws-1-us-west-2.pooler.supabase.com:5432`, usuário
+`seo_engine_executor.bgggafirdjvxihqselha`. A role efetiva no PostgreSQL continua
+`seo_engine_executor`; o sufixo seleciona o tenant no Supavisor. Outro pooler,
+projeto, login administrativo ou porta 6543 permanece rejeitado.
 
 ## Teste sintético seguro implementado
 
@@ -151,3 +148,15 @@ Referências oficiais consultadas:
 [SSL](https://supabase.com/docs/guides/platform/ssl-enforcement),
 [psql password](https://www.postgresql.org/docs/18/app-psql.html),
 [schemas expostos](https://supabase.com/docs/guides/api/using-custom-schemas).
+
+## Atualização: Session Pooler IPv4 autorizado
+
+Referência anterior 24263042d38c49c188f47414a43e9d4404dc27c1. Readback atual confirmou senha configurada=true, RLS forçada=true, executor sem privilégios administrativos, roles públicas sem acesso e ledger ainda vazio. O operador informou conexão TLS1.3 bem-sucedida; essa declaração é contexto, não um teste Cloud realizado por esta sessão.
+
+O parser aceita apenas dois pares host/login: direto db.bgggafirdjvxihqselha.supabase.co + seo_engine_executor; ou Session Pooler aws-1-us-west-2.pooler.supabase.com + seo_engine_executor.bgggafirdjvxihqselha. Ambos na porta5432, database postgres, sem parâmetros URL ou fragmento, com CA obrigatória, rejectUnauthorized=true, SNI/hostname explícito e TLS mínimo1.2. Não há wildcard ou descoberta de pooler por hostname arbitrário. As transações BEGIN/SELECT FOR UPDATE/COMMIT e SET LOCAL existentes são compatíveis com session pooling; não se mudou para transaction pooling, nem se depende de estado de sessão entre transações.
+
+No secret manager do executor, SEO_CONTENT_LEDGER_DATABASE_URL deve usar o usuário com sufixo do projeto para o pooler. Não usar postgres.bgggafirdjvxihqselha nem uma senha administrativa. SEO_CONTENT_LEDGER_TLS_CA recebe o PEM da cadeia raiz oficial compatível com esse endpoint; SEO_CONTENT_LEDGER_KEY recebe a mesma chave estável de32bytes/64hex nas duas sessões; SEO_CONTENT_OPENAI_PROJECT_ID deve ser o ID oficial já verificado, nunca um fixture. Não sobrescrever valores existentes nem gerar nova chave AES ao reiniciar.
+
+Nesta sessão Windows, os quatro nomes não estão configurados; readiness no Cloud ainda não foi observada. Portanto, não foi tentada autenticação sem credencial, initialize, checkpoint remoto ou teste entre sessões Cloud. Permanecem pendentes provisionamento/binding seguro das quatro variáveis, política TCP5432 para o pooler e confirmação de que seo_engine não está nos Exposed schemas da Data API. Não pedir que o operador reenvie segredos pelo chat. Não confundir um placeholder HTTP com segredo utilizável pelo cliente pg/TCP.
+
+Depois de o executor receber a configuração, seguir check → initialize UNKNOWN com identidade real somente se vazio → write → encerrar sessãoA → abrir sessãoB → read, conforme procedimento acima. Não executar prepare/reconcile/inferência nesta validação. O probe não cria run/autorização e preserva integralmente reservas e UNKNOWN. Os dois testes novos de allowlist/TLS passaram localmente; testes de integração em CI são separados da prova Cloud real. Nenhuma migration/policy/tabela comercial alterada. Histórico e saldo OpenAI UNKNOWN, autopublish=false e inferência=false.
