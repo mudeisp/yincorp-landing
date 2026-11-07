@@ -12,7 +12,7 @@ A tabela de preços é rasterizada. Todas as 30 linhas das páginas 4 e 5 foram 
 
 ## Arquitetura e captação
 
-Rota pública dedicada: `/sp/empreendimentos/mandarim-the-legend`. Arquivos estáticos próprios, sem modificar o Arizona ou os handlers comerciais. Reutiliza os módulos verificados `portal-contact.js`, `portal-session.js` e `whatsapp-contact.js`; `/api/portal/lead` continua apontando para o mesmo serviço. A captação exige consentimento e resposta `success=true` e `supabase=true` antes de liberar o WhatsApp, com empreendimento/unidade, preço histórico e link. Visitor/session, UTMs, GCLID/GBRAID/WBRAID e touches são reaproveitados.
+Rota pública dedicada: `/sp/empreendimentos/mandarim-the-legend/lucas.schoch`. Arquivos estáticos próprios, sem modificar o Arizona ou os handlers comerciais. Reutiliza os módulos verificados `portal-contact.js`, `portal-session.js` e `whatsapp-contact.js`; `/api/portal/lead` continua apontando para o mesmo serviço. A captação exige consentimento e resposta `success=true` e `supabase=true` antes de liberar o WhatsApp, com empreendimento/unidade, preço histórico e link. Visitor/session, UTMs, GCLID/GBRAID/WBRAID e touches são reaproveitados.
 
 Eventos: property_view, presentation_view, presentation_unit_selected, presentation_comparison, presentation_gallery_interaction, presentation_interest, presentation_lead_created, presentation_whatsapp_click e presentation_share. Classificação VENDA e identificador mandarim-the-legend. Preview/localhost desativam tracking e envios comerciais. Não foram criados leads reais de teste.
 
