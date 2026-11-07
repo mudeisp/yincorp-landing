@@ -13,7 +13,20 @@
     "SEO_CONTENT_RESEARCH_MODEL": "authorized OpenAI model ID",
     "SEO_CONTENT_WRITE_MODEL": "authorized OpenAI model ID",
     "SEO_CONTENT_AUDIT_MODEL": "authorized model ID different from writer",
-    "SEO_CONTENT_MODEL_RATES": {"research":{"input":"USD per million tokens","output":"USD per million tokens"},"write":{"input":"USD per million tokens","output":"USD per million tokens"},"audit":{"input":"USD per million tokens","output":"USD per million tokens"}}
+    "SEO_CONTENT_MODEL_RATES": {
+      "research": {
+        "input": "USD per million tokens",
+        "output": "USD per million tokens"
+      },
+      "write": {
+        "input": "USD per million tokens",
+        "output": "USD per million tokens"
+      },
+      "audit": {
+        "input": "USD per million tokens",
+        "output": "USD per million tokens"
+      }
+    }
   },
   "contract": {
     "urlVariable": "SEO_CONTENT_EDITORIAL_URL",
@@ -28,5 +41,28 @@
   },
   "command": "node scripts/run-seo-content-demo.mjs .seo-test/gsc-live.json --inference-v3",
   "privateDrafts": ".seo-test/articles/ (gitignored)",
-  "report": "docs/evidence/v3/inference.json"
+  "report": "docs/evidence/v3/inference.json",
+  "preparedNonSecretConfiguration": {
+    "SEO_CONTENT_AUTOPUBLISH": "false",
+    "SEO_CONTENT_INFERENCE_AUTHORIZED": "false",
+    "SEO_CONTENT_APPROVED_BUDGET_MICROS": "",
+    "SEO_CONTENT_RESEARCH_MODEL": "gpt-6-luna",
+    "SEO_CONTENT_WRITE_MODEL": "gpt-6-luna",
+    "SEO_CONTENT_AUDIT_MODEL": "gpt-5.4-mini-2026-03-17",
+    "SEO_CONTENT_MODEL_RATES": "{\"research\":{\"input\":0.1,\"output\":0.5},\"write\":{\"input\":0.1,\"output\":0.5},\"audit\":{\"input\":0.75,\"output\":4.5}}"
+  },
+  "preparedConfigurationNotes": {
+    "checkedOn": "2026-11-07",
+    "pricingTier": "Standard, short text context, no tools, no cache discount, no regional surcharge",
+    "sources": [
+      "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+    ],
+    "accountModelAccess": "UNKNOWN until authenticated GET /v1/models from authorized executor",
+    "authorization": false,
+    "perCallLimitMicros": 100000,
+    "twoArticleContractReservationMicros": 600000,
+    "adapterEstimatedMaximumMicros": 123892,
+    "costKind": "conservative estimate from configured rates, not billed cost or spending approval"
+  }
 }

@@ -11,11 +11,16 @@ import {isolatedDatabase} from '../lib/seo-content/isolated.js';
 import {renderArticle} from '../lib/seo-content/render.js';
 import {inferenceReadiness,inferenceSettings} from '../lib/seo-content/inference-config.js';
 import {startEditorialBridge,authenticatedEditorial} from '../lib/seo-content/editorial-bridge.js';
+import {readOnlyPreflightFetch} from '../lib/seo-content/preflight.js';
 
 const v3=process.argv.includes('--inference-v3');
+const preflightOnly=process.argv.includes('--preflight-only');
+if(preflightOnly&&!v3)throw Error('preflight_requires_v3');
+// Hard boundary: preflight can make GET reads only, even if credentials and spending authorization exist.
+if(preflightOnly)globalThis.fetch=readOnlyPreflightFetch();
 if(v3&&process.env.SEO_CONTENT_AUTOPUBLISH===undefined)process.env.SEO_CONTENT_AUTOPUBLISH='false';
 const readiness=v3?inferenceReadiness():null;
-if(v3&&readiness.status==='BLOCKED'){
+if(v3&&readiness.status==='BLOCKED'&&!preflightOnly){
   const report={version:3,observedAt:new Date().toISOString(),commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),status:'BLOCKED',preflight:readiness,secretValuesInspected:false,credentialsCopied:false,providerRequests:0,publications:0,autopublish:false,tokens:{input:0,output:0},cost:{generationActualUSD:0,estimatedUSD:0},states:[['SP','Ipiranga','São Paulo'],['ES','Praia do Canto','Vitória']].map(([state,neighborhood,city])=>({state,city,neighborhood,status:'BLOCKED',article:null,reason:readiness.credentialConfigured?'editorial_inference_configuration_blocked':'editorial_credentials_unavailable',stages:{research:'NOT_EXECUTED',write:'NOT_EXECUTED',audit:'NOT_EXECUTED'},gates:Object.fromEntries(GATES.map(g=>[g,{status:'UNKNOWN',evidence:'Inferência real não executada: preflight bloqueado'}]))})),nextAction:{secret:readiness.mode==='isolated_loopback_bridge'?'Provisionar SEO_OPENAI_API_KEY somente na sessão/secret store do ambiente isolado autorizado; não copiar de outro projeto.':'Provisionar SEO_CONTENT_EDITORIAL_TOKEN somente para o endpoint HTTPS autorizado.',nonSecretRequirements:readiness.missing.filter(k=>!['SEO_OPENAI_API_KEY','SEO_CONTENT_EDITORIAL_TOKEN'].includes(k)),configuration:'deploy/seo-content-inference.example.json'}};
   report.provenance={worktreeDirty:Boolean(execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim()),sourceDigests:{}};
   for(const path of ['lib/seo-content/inference-config.js','lib/seo-content/editorial-bridge.js','lib/seo-content/openai-editorial.js','scripts/run-seo-content-demo.mjs'])report.provenance.sourceDigests[path]=hash(await readFile(path,'utf8'));
@@ -30,7 +35,7 @@ const captured=JSON.parse(await readFile(file,'utf8'));
 if(captured.provider!=='windsor/searchconsole'||captured.account!=='https://www.yincorp.com.br/'||captured.response?.status!=='done'||!Array.isArray(captured.response.data)||!fresh(captured.retrievedAt,Date.now()))throw Error('authenticated_gsc_export_required');
 const isolated=await isolatedDatabase(),{db,store}=isolated;
 let bridge;
-if(v3&&!process.env.SEO_CONTENT_EDITORIAL_URL)bridge=await startEditorialBridge({env:process.env});
+if(v3&&!preflightOnly&&!process.env.SEO_CONTENT_EDITORIAL_URL)bridge=await startEditorialBridge({env:process.env});
 let approvedReservedMicros=0;
 const inferenceStore={...store,rpc:async(action,payload)=>{
   if(action==='spend'&&v3){if(approvedReservedMicros+payload.micros>inferenceSettings().approvedBudgetMicros)return false;approvedReservedMicros+=payload.micros;}
@@ -71,6 +76,7 @@ try{
     const models={research:process.env.SEO_CONTENT_RESEARCH_MODEL,write:process.env.SEO_CONTENT_WRITE_MODEL,audit:process.env.SEO_CONTENT_AUDIT_MODEL};
     let model;
     try{
+      if(preflightOnly)throw Error('preflight_no_inference');
       const onUsage=usage=>{(result.usage??=[]).push(usage);};
       model=v3?authenticatedEditorial({url:bridge?.url||process.env.SEO_CONTENT_EDITORIAL_URL,token:bridge?.token||process.env.SEO_CONTENT_EDITORIAL_TOKEN,store:inferenceStore,runRef:()=>run,models:inferenceSettings().models,allowIsolatedLoopback:Boolean(bridge),onUsage}):openaiEditorial({apiKey:process.env.SEO_OPENAI_API_KEY,models,rates:JSON.parse(process.env.SEO_CONTENT_MODEL_RATES||'null'),store,runRef:()=>run,onUsage});
     }catch(e){result.blockers.push(e.message);}
@@ -91,9 +97,10 @@ try{
   report.publications=Number((await db.query("select count(*) n from seo_articles where status='PUBLISHED'")).rows[0].n);
   if(report.publications!==0)throw Error('undue_publication');
   report.states.forEach(s=>{if(s.usage?.length){report.cost.generationActualUSD=null;report.cost.estimatedGenerationUSD=(report.cost.estimatedGenerationUSD||0)+s.usage.reduce((sum,u)=>sum+u.estimatedMicros/1000000,0);}});
+  if(preflightOnly){report.mode='READ_ONLY_PREFLIGHT';report.integrations.ai={status:'NOT_EXECUTED',reason:'preflight_no_inference'};report.status='BLOCKED';report.generationReadiness=readiness;report.remoteDatabaseWrites=0;report.configuredModels=Object.fromEntries(['research','write','audit'].map(stage=>[stage,process.env['SEO_CONTENT_'+stage.toUpperCase()+'_MODEL']||null]));report.configuredRates=JSON.parse(process.env.SEO_CONTENT_MODEL_RATES||'null');report.modelAccess='UNKNOWN: authenticated account model listing not performed';report.budget={authorized:readiness.budgetAuthorized,contractReservationForSixCallsMicros:600000,maxOutputTokensPerCall:4000,maxInputBytesPerCall:40000,maxCostMicrosPerCall:100000,automaticRetries:0};}
   const out=v3?'docs/evidence/v3':'docs/evidence/v2';
   if(v3){report.gatewayAttempts=report.states.reduce((n,s)=>n+(s.gatewayAttempts||0),0);report.completedProviderReceipts=report.states.reduce((n,s)=>n+(s.usage?.length||0),0);report.providerRequests=bridge?bridge.providerRequests():report.gatewayAttempts?null:0;report.approvedReservedMicros=approvedReservedMicros;report.bridgeReservedMicros=bridge?.reserved()??null;}
-  await mkdir(out,{recursive:true});await writeFile(out+(v3?'/inference.json':'/editorial-demo.json'),JSON.stringify(report,null,2)+'\n');
+  await mkdir(out,{recursive:true});await writeFile(out+(preflightOnly?'/preflight.json':v3?'/inference.json':'/editorial-demo.json'),JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify({states:report.states.map(s=>({state:s.state,status:s.status,query:s.opportunity?.query,blockers:s.blockers})),publications:report.publications}));
 }finally{if(bridge)await bridge.close();await db.close();}
 }

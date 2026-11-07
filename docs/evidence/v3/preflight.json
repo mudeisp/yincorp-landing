@@ -1,0 +1,577 @@
+{
+  "version": 3,
+  "commit": "2604328cd2fa0ebb7d614076480b013a1b29f0ac",
+  "observedAt": "2026-11-07T20:19:00.387Z",
+  "environment": "isolated local PostgreSQL WASM; actual provider reads; no remote database writes",
+  "autopublish": false,
+  "cronActivated": false,
+  "integrations": {
+    "gsc": {
+      "status": "CONNECTED_READ",
+      "transport": "Windsor authenticated connector export",
+      "account": "https://www.yincorp.com.br/",
+      "windowStart": "2026-10-08",
+      "windowEnd": "2026-11-04",
+      "rows": 326,
+      "exportDigest": "1fa9bd4e7ca5584f19c3d22d75fe913cb127fac7334a173669589cec306179ed",
+      "runtimeRefresh": "BLOCKED: no OAuth/export scheduler copied into runtime"
+    },
+    "supabase": {
+      "status": "CONNECTED_READ",
+      "transport": "existing public Supabase reader",
+      "credential": "existing publishable inventory key; no privileged key",
+      "checkedAt": "2026-11-07T20:19:17.088Z"
+    },
+    "research": {
+      "status": "CONNECTED_READ",
+      "transport": "DNS-pinned HTTPS; exact-host/path allowlist; no redirects"
+    },
+    "ai": {
+      "status": "NOT_EXECUTED",
+      "reason": "preflight_no_inference"
+    },
+    "ads": {
+      "provider": "existing MIA Google Ads read-only SSR",
+      "url": "https://media-intelligence-agent-eight.vercel.app/search-terms",
+      "observedAt": "2026-11-07T10:17:17.930Z",
+      "window": "LAST_7_DAYS",
+      "status": "CONNECTED_READ",
+      "termsVisible": 1237,
+      "impressions": 3227,
+      "clicks": 271,
+      "costBRL": 582.99,
+      "conversionsGoogleAds": 0,
+      "htmlDigest": "594fee8706d410906af407560970b3696b99fae1a7c8d2450472960aa9c28511",
+      "limitations": [
+        "Aggregated visible-term metrics, not leads or exhaustive traffic",
+        "No geographic or article attribution inferred from campaign names",
+        "Captured via authenticated Vercel connector; runtime refresh requires scoped read transport"
+      ],
+      "runtimeUse": "Read verified; not used as geographic demand without an exact binding"
+    },
+    "ga4": {
+      "status": "BLOCKED",
+      "reason": "Existing MIA credential owner retained; no authorized aggregate transport to local pipeline"
+    }
+  },
+  "states": [
+    {
+      "state": "SP",
+      "status": "BLOCKED",
+      "article": null,
+      "gates": {
+        "sources": {
+          "status": "PASS",
+          "evidence": "Fetched official city source and current canonical inventory source with byte limits and integrity hashes"
+        },
+        "facts": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "originality": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "cannibalization": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "geography": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "inventory": {
+          "status": "PASS",
+          "evidence": "5 current canonical inventory recommendations; no price copied"
+        },
+        "links": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "editorial": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "security": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "canonical": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "sitemap": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "tests": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        }
+      },
+      "blockers": [
+        "preflight_no_inference"
+      ],
+      "opportunity": {
+        "query": "Como avaliar imóveis em Ipiranga, São Paulo?",
+        "city": "São Paulo",
+        "neighborhood": "Ipiranga",
+        "path": "/sp/conteudos/como-avaliar-imoveis-em-ipiranga-sao-paulo",
+        "score": 73,
+        "justification": {
+          "kind": "related_query_hypothesis",
+          "text": "Consultas reais de páginas comerciais da região justificam pesquisar uma pauta educativa distinta; a demanda por este título não foi medida.",
+          "observedQueries": 3,
+          "observedImpressions": 23
+        },
+        "signals": [
+          {
+            "provider": "gsc",
+            "url": "https://search.google.com/search-console",
+            "query": "ares ipiranga",
+            "page": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/ares-ipiranga--orulo-47224",
+            "impressions": 21,
+            "clicks": 0,
+            "ctr": 0,
+            "position": 9.8095,
+            "windowStart": "2026-10-08",
+            "windowEnd": "2026-11-04",
+            "observedAt": "2026-11-07T20:13:38.438Z",
+            "demandScope": "related_existing_page"
+          },
+          {
+            "provider": "gsc",
+            "url": "https://search.google.com/search-console",
+            "query": "mérito ipiranga",
+            "page": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/merito-ipiranga-fase-1--orulo-84525",
+            "impressions": 1,
+            "clicks": 0,
+            "ctr": 0,
+            "position": 9,
+            "windowStart": "2026-10-08",
+            "windowEnd": "2026-11-04",
+            "observedAt": "2026-11-07T20:13:38.438Z",
+            "demandScope": "related_existing_page"
+          },
+          {
+            "provider": "gsc",
+            "url": "https://search.google.com/search-console",
+            "query": "oli ipiranga",
+            "page": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/oli-ipiranga-residencial--orulo-64292",
+            "impressions": 1,
+            "clicks": 0,
+            "ctr": 0,
+            "position": 9,
+            "windowStart": "2026-10-08",
+            "windowEnd": "2026-11-04",
+            "observedAt": "2026-11-07T20:13:38.438Z",
+            "demandScope": "related_existing_page"
+          }
+        ]
+      },
+      "inventory": [
+        {
+          "id": "orulo-51619",
+          "state": "SP",
+          "city": "São Paulo",
+          "neighborhood": "Ipiranga",
+          "path": "/sp/sao-paulo/empreendimento/villa-arvo--orulo-51619",
+          "name": "Villa Arvo",
+          "checkedAt": "2026-11-07T20:19:04.111Z"
+        },
+        {
+          "id": "orulo-31285",
+          "state": "SP",
+          "city": "São Paulo",
+          "neighborhood": "Ipiranga",
+          "path": "/sp/sao-paulo/empreendimento/versos-ipiranga-residencial--orulo-31285",
+          "name": "Versos Ipiranga - Residencial",
+          "checkedAt": "2026-11-07T20:19:04.111Z"
+        },
+        {
+          "id": "orulo-42654",
+          "state": "SP",
+          "city": "São Paulo",
+          "neighborhood": "Ipiranga",
+          "path": "/sp/sao-paulo/empreendimento/palatium-ipiranga--orulo-42654",
+          "name": "Palatium Ipiranga",
+          "checkedAt": "2026-11-07T20:19:04.111Z"
+        },
+        {
+          "id": "orulo-28641",
+          "state": "SP",
+          "city": "São Paulo",
+          "neighborhood": "Ipiranga",
+          "path": "/sp/sao-paulo/empreendimento/welconx-chacara-klabin-nr--orulo-28641",
+          "name": "Welconx Chácara Klabin - NR",
+          "checkedAt": "2026-11-07T20:19:04.111Z"
+        },
+        {
+          "id": "orulo-76454",
+          "state": "SP",
+          "city": "São Paulo",
+          "neighborhood": "Ipiranga",
+          "path": "/sp/sao-paulo/empreendimento/elev-park-sacoma-iii--orulo-76454",
+          "name": "Elev Park Sacomã III",
+          "checkedAt": "2026-11-07T20:19:04.111Z"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.ibge.gov.br/cidades-e-estados/sp/sao-paulo.html",
+          "status": "BLOCKED",
+          "reason": "source_http_unavailable"
+        },
+        {
+          "url": "https://prefeitura.sp.gov.br/web/ipiranga/w/historico/160",
+          "observedAt": "2026-11-07T20:19:15.870Z",
+          "digest": "56690d7c9618079f3e468aa0af94154e087affc59b822a6c12a565d121b110bf",
+          "bodyDigest": "8ab386596ce9ad352df68eae37591936c5402ff4b4d011c85b01b6c45a736f79",
+          "bytes": 166203,
+          "transport": "https_dns_pinned"
+        },
+        {
+          "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/villa-arvo--orulo-51619",
+          "observedAt": "2026-11-07T20:19:16.014Z",
+          "digest": "462ebc9fe0f180d2eb23f140515b483a392bc436352fd0374641db2729dd2d7b",
+          "bodyDigest": "eabb695321705cdb1a2dbec95491790e67c70ec5a46510d096bc0f4434cc86fe",
+          "bytes": 42986,
+          "transport": "https_dns_pinned"
+        },
+        {
+          "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/versos-ipiranga-residencial--orulo-31285",
+          "observedAt": "2026-11-07T20:19:16.103Z",
+          "digest": "4cfa3ab4ca6ceaf14bbd68098e05e4a61cc9049f941bed3a3e9777cf87a40b13",
+          "bodyDigest": "55418d48227e0c06a332bb4b689484682ac7fa400e5f93c586804226449baf09",
+          "bytes": 33289,
+          "transport": "https_dns_pinned"
+        }
+      ]
+    },
+    {
+      "state": "ES",
+      "status": "BLOCKED",
+      "article": null,
+      "gates": {
+        "sources": {
+          "status": "PASS",
+          "evidence": "Fetched official city source and current canonical inventory source with byte limits and integrity hashes"
+        },
+        "facts": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "originality": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "cannibalization": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "geography": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "inventory": {
+          "status": "PASS",
+          "evidence": "5 current canonical inventory recommendations; no price copied"
+        },
+        "links": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "editorial": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "security": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "canonical": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "sitemap": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        },
+        "tests": {
+          "status": "UNKNOWN",
+          "evidence": "No article generated or independently audited"
+        }
+      },
+      "blockers": [
+        "preflight_no_inference"
+      ],
+      "opportunity": {
+        "query": "Como avaliar imóveis em Praia do Canto, Vitória?",
+        "city": "Vitória",
+        "neighborhood": "Praia do Canto",
+        "path": "/es/conteudos/como-avaliar-imoveis-em-praia-do-canto-vitoria",
+        "score": 74,
+        "justification": {
+          "kind": "related_query_hypothesis",
+          "text": "Consultas reais de páginas comerciais da região justificam pesquisar uma pauta educativa distinta; a demanda por este título não foi medida.",
+          "observedQueries": 7,
+          "observedImpressions": 54
+        },
+        "signals": [
+          {
+            "provider": "gsc",
+            "url": "https://search.google.com/search-console",
+            "query": "soul for life",
+            "page": "https://www.yincorp.com.br/es/vitoria/empreendimento/soul-for-life--orulo-64547",
+            "impressions": 27,
+            "clicks": 2,
+            "ctr": 0.0741,
+            "position": 10.7037,
+            "windowStart": "2026-10-08",
+            "windowEnd": "2026-11-04",
+            "observedAt": "2026-11-07T20:13:38.438Z",
+            "demandScope": "related_existing_page"
+          },
+          {
+            "provider": "gsc",
+            "url": "https://search.google.com/search-console",
+            "query": "soul for life praia do canto",
+            "page": "https://www.yincorp.com.br/es/vitoria/empreendimento/soul-for-life--orulo-64547",
+            "impressions": 6,
+            "clicks": 1,
+            "ctr": 0.1667,
+            "position": 10.8333,
+            "windowStart": "2026-10-08",
+            "windowEnd": "2026-11-04",
+            "observedAt": "2026-11-07T20:13:38.438Z",
+            "demandScope": "related_existing_page"
+          },
+          {
+            "provider": "gsc",
+            "url": "https://search.google.com/search-console",
+            "query": "brettas boutique residence",
+            "page": "https://www.yincorp.com.br/es/vitoria/empreendimento/brettas-boutique-residence--orulo-85087",
+            "impressions": 11,
+            "clicks": 0,
+            "ctr": 0,
+            "position": 2.2727,
+            "windowStart": "2026-10-08",
+            "windowEnd": "2026-11-04",
+            "observedAt": "2026-11-07T20:13:38.438Z",
+            "demandScope": "related_existing_page"
+          },
+          {
+            "provider": "gsc",
+            "url": "https://search.google.com/search-console",
+            "query": "empreendimento soul",
+            "page": "https://www.yincorp.com.br/es/vitoria/empreendimento/soul-for-life--orulo-64547",
+            "impressions": 1,
+            "clicks": 0,
+            "ctr": 0,
+            "position": 7,
+            "windowStart": "2026-10-08",
+            "windowEnd": "2026-11-04",
+            "observedAt": "2026-11-07T20:13:38.438Z",
+            "demandScope": "related_existing_page"
+          },
+          {
+            "provider": "gsc",
+            "url": "https://search.google.com/search-console",
+            "query": "forma praia do canto",
+            "page": "https://www.yincorp.com.br/es/vitoria/empreendimento/forma-praia-do-canto--orulo-85079",
+            "impressions": 1,
+            "clicks": 0,
+            "ctr": 0,
+            "position": 4,
+            "windowStart": "2026-10-08",
+            "windowEnd": "2026-11-04",
+            "observedAt": "2026-11-07T20:13:38.438Z",
+            "demandScope": "related_existing_page"
+          },
+          {
+            "provider": "gsc",
+            "url": "https://search.google.com/search-console",
+            "query": "izza praia do canto",
+            "page": "https://www.yincorp.com.br/es/vitoria/empreendimento/izza-praia-do-canto--orulo-67923",
+            "impressions": 1,
+            "clicks": 0,
+            "ctr": 0,
+            "position": 15,
+            "windowStart": "2026-10-08",
+            "windowEnd": "2026-11-04",
+            "observedAt": "2026-11-07T20:13:38.438Z",
+            "demandScope": "related_existing_page"
+          },
+          {
+            "provider": "gsc",
+            "url": "https://search.google.com/search-console",
+            "query": "singular for life",
+            "page": "https://www.yincorp.com.br/es/vitoria/empreendimento/singular-for-life--orulo-64513",
+            "impressions": 7,
+            "clicks": 0,
+            "ctr": 0,
+            "position": 10.1429,
+            "windowStart": "2026-10-08",
+            "windowEnd": "2026-11-04",
+            "observedAt": "2026-11-07T20:13:38.438Z",
+            "demandScope": "related_existing_page"
+          }
+        ]
+      },
+      "inventory": [
+        {
+          "id": "orulo-72212",
+          "state": "ES",
+          "city": "Vitória",
+          "neighborhood": "Praia do Canto",
+          "path": "/es/vitoria/empreendimento/fit-370--orulo-72212",
+          "name": "FIT@370",
+          "checkedAt": "2026-11-07T20:19:17.006Z"
+        },
+        {
+          "id": "orulo-85087",
+          "state": "ES",
+          "city": "Vitória",
+          "neighborhood": "Praia do Canto",
+          "path": "/es/vitoria/empreendimento/brettas-boutique-residence--orulo-85087",
+          "name": "Brettas Boutique Residence",
+          "checkedAt": "2026-11-07T20:19:17.006Z"
+        },
+        {
+          "id": "orulo-72211",
+          "state": "ES",
+          "city": "Vitória",
+          "neighborhood": "Praia do Canto",
+          "path": "/es/vitoria/empreendimento/air-225--orulo-72211",
+          "name": "AIR@225",
+          "checkedAt": "2026-11-07T20:19:17.006Z"
+        },
+        {
+          "id": "orulo-64547",
+          "state": "ES",
+          "city": "Vitória",
+          "neighborhood": "Praia do Canto",
+          "path": "/es/vitoria/empreendimento/soul-for-life--orulo-64547",
+          "name": "Soul for Life",
+          "checkedAt": "2026-11-07T20:19:17.006Z"
+        },
+        {
+          "id": "orulo-85079",
+          "state": "ES",
+          "city": "Vitória",
+          "neighborhood": "Praia do Canto",
+          "path": "/es/vitoria/empreendimento/forma-praia-do-canto--orulo-85079",
+          "name": "Forma Praia do Canto",
+          "checkedAt": "2026-11-07T20:19:17.006Z"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.ibge.gov.br/cidades-e-estados/es/vitoria.html",
+          "status": "BLOCKED",
+          "reason": "source_http_unavailable"
+        },
+        {
+          "url": "https://www.vitoria.es.gov.br/semc/triangulo-das-bermudas-e-rua-viva",
+          "observedAt": "2026-11-07T20:19:17.628Z",
+          "digest": "1142ea7507575e8ae8a98bb7d91ed4baa03272f4327457b0d06d2f7585734bd6",
+          "bodyDigest": "b26f6caffb9b7cef3277b9d0caa5a0c40abc6d5092c242b009e29fccd5e97f3a",
+          "bytes": 229914,
+          "transport": "https_dns_pinned"
+        },
+        {
+          "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/fit-370--orulo-72212",
+          "observedAt": "2026-11-07T20:19:17.778Z",
+          "digest": "a499e8cbf4776c87f875e7997ac96b67f7c9959a682b92247a130b833edf575e",
+          "bodyDigest": "4b1461b22b8564c32d1bf6a83578161385a94fc6aa27eaafbad20140b9ced0ff",
+          "bytes": 66824,
+          "transport": "https_dns_pinned"
+        },
+        {
+          "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/brettas-boutique-residence--orulo-85087",
+          "observedAt": "2026-11-07T20:19:17.874Z",
+          "digest": "92e162c53f5f8567cf029b1a6623e5cb3f95b6d92b883b173b3daf886a3cd276",
+          "bodyDigest": "63751f887c1d1d63a1308a2659967049129c7747c850bf1f3616fe396685a75b",
+          "bytes": 28561,
+          "transport": "https_dns_pinned"
+        }
+      ]
+    }
+  ],
+  "publications": 0,
+  "cost": {
+    "generationActualUSD": 0,
+    "researchBilling": "No paid research provider used; public HTTPS reads only",
+    "estimatedGenerationUSD": null
+  },
+  "preflight": {
+    "status": "BLOCKED",
+    "mode": "isolated_loopback_bridge",
+    "credentialConfigured": false,
+    "budgetAuthorized": false,
+    "missing": [
+      "SEO_OPENAI_API_KEY",
+      "SEO_CONTENT_INFERENCE_AUTHORIZED",
+      "SEO_CONTENT_APPROVED_BUDGET_MICROS"
+    ]
+  },
+  "providerRequests": 0,
+  "provenance": {
+    "checkoutHead": "2604328cd2fa0ebb7d614076480b013a1b29f0ac",
+    "worktreeDirty": true,
+    "sourceDigests": {
+      "lib/seo-content/discovery.js": "a9ab478ab75edb5837d5f9219f04b4012d763736b05636a5493cc09ba9cf2561",
+      "lib/seo-content/sources.js": "3024491fa4a2c88cb36a657183221e8938ad02698c26330f04b544a7faab616b",
+      "lib/seo-content/openai-editorial.js": "e114c062a9d2a7577887dde29a142b21cc100a748ce7fb0426c21af333a8f84c",
+      "lib/seo-content/inventory.js": "92845738e8fbbd1d41d8386a1685e61bb9e5178b7e352815b0150798b0485cb3",
+      "lib/seo-content/core.js": "0b973acb8801414072acb94cb9fa7881590cc4ec12db05a2505fcf1bc8cfd850",
+      "scripts/run-seo-content-demo.mjs": "e1823376a10db535d4e9a120b77b2f128f5c890d211227e6556b1e5837440bd5"
+    }
+  },
+  "mode": "READ_ONLY_PREFLIGHT",
+  "status": "BLOCKED",
+  "generationReadiness": {
+    "status": "BLOCKED",
+    "mode": "isolated_loopback_bridge",
+    "credentialConfigured": false,
+    "budgetAuthorized": false,
+    "missing": [
+      "SEO_OPENAI_API_KEY",
+      "SEO_CONTENT_INFERENCE_AUTHORIZED",
+      "SEO_CONTENT_APPROVED_BUDGET_MICROS"
+    ]
+  },
+  "remoteDatabaseWrites": 0,
+  "configuredModels": {
+    "research": "gpt-6-luna",
+    "write": "gpt-6-luna",
+    "audit": "gpt-5.4-mini-2026-03-17"
+  },
+  "configuredRates": {
+    "research": {
+      "input": 0.1,
+      "output": 0.5
+    },
+    "write": {
+      "input": 0.1,
+      "output": 0.5
+    },
+    "audit": {
+      "input": 0.75,
+      "output": 4.5
+    }
+  },
+  "modelAccess": "UNKNOWN: authenticated account model listing not performed",
+  "budget": {
+    "authorized": false,
+    "contractReservationForSixCallsMicros": 600000,
+    "maxOutputTokensPerCall": 4000,
+    "maxInputBytesPerCall": 40000,
+    "maxCostMicrosPerCall": 100000,
+    "automaticRetries": 0
+  },
+  "gatewayAttempts": 0,
+  "completedProviderReceipts": 0,
+  "approvedReservedMicros": 0,
+  "bridgeReservedMicros": null
+}
