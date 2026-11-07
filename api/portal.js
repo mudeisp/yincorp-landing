@@ -7,6 +7,7 @@ import {decorate,INVESTMENT_PATH} from '../lib/intelligence.js';
 import {investmentPage} from '../lib/investment-page.js';
 import {createSeoHandler,createResaleReader} from '../lib/seo-catalog.js';
 import {withPrivacyFooter} from '../lib/privacy-footer.js';
+import {linkNationalEntities} from '../lib/geo-national-entities.js';
 
 async function publicInventoryRequest(path,options={}) {
   const headers={apikey:publicConfig.key,'Content-Type':'application/json'};
@@ -41,7 +42,7 @@ export default async function portal(req,res){
     return privacySend(res.statusCode===200?withPrivacyFooter(body):body);
   };
   if(await seo(req,res,path))return;
-  const send=res.send.bind(res);res.send=body=>send(res.statusCode===200?decorate(body,path):body);
+  const send=res.send.bind(res);res.send=body=>send(res.statusCode===200?linkNationalEntities(decorate(body,path),path):body);
   // Discovery links are HTML, not JS-only navigation. No commercial flow changes.
   if(['GET','HEAD'].includes(req.method)&&/^\/sp(?:\/[^/]+)?$/.test(path)){
     const baseSend=res.send.bind(res);res.send=body=>baseSend(res.statusCode===200&&typeof body==='string'?body.replace('</main>',`<nav class="wrap" aria-label="Catálogo de imóveis"><a href="/${path.split('/')[1]}/imoveis">Explorar imóveis à venda em ${path.split('/')[1].toUpperCase()}</a></nav></main>`):body);

@@ -18,8 +18,9 @@ jobs:
         run: |
           node --check lib/seo-catalog.js
           node --check api/portal.js
+          node --check lib/geo-national-entities.js
           node --check scripts/audit-seo.mjs
-          node --test home-national.test.mjs integration.test.mjs intelligence.test.mjs national-comparator.test.mjs whatsapp-integration.test.mjs seo.test.mjs national-seo.test.mjs national-sitemap-isolation.test.mjs privacy.test.mjs arizona-1002/model.test.mjs
+          node --test geo-national-entities.test.mjs home-national.test.mjs integration.test.mjs intelligence.test.mjs national-comparator.test.mjs whatsapp-integration.test.mjs seo.test.mjs national-seo.test.mjs national-sitemap-isolation.test.mjs privacy.test.mjs arizona-1002/model.test.mjs
   coverage:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
