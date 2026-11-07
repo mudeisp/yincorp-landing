@@ -1,0 +1,32 @@
+{
+  "scope": "isolated session only; no deployment or production changes",
+  "secret": {
+    "name": "OPENAI_API_KEY",
+    "source": "Provision directly into the authorized isolated runtime secret store; never export from another project",
+    "persistToRepository": false,
+    "print": false
+  },
+  "requiredNonSecretConfiguration": {
+    "SEO_CONTENT_AUTOPUBLISH": "false",
+    "SEO_CONTENT_INFERENCE_AUTHORIZED": "true only after explicit spending authorization",
+    "SEO_CONTENT_APPROVED_BUDGET_MICROS": "explicit approved integer, 1 to 2000000; no spending default",
+    "SEO_CONTENT_RESEARCH_MODEL": "authorized OpenAI model ID",
+    "SEO_CONTENT_WRITE_MODEL": "authorized OpenAI model ID",
+    "SEO_CONTENT_AUDIT_MODEL": "authorized model ID different from writer",
+    "SEO_CONTENT_MODEL_RATES": {"research":{"input":"USD per million tokens","output":"USD per million tokens"},"write":{"input":"USD per million tokens","output":"USD per million tokens"},"audit":{"input":"USD per million tokens","output":"USD per million tokens"}}
+  },
+  "contract": {
+    "urlVariable": "SEO_CONTENT_EDITORIAL_URL",
+    "localMode": "Generated in memory as http://127.0.0.1:<ephemeral>/editorial with a random bearer token; never externally bound",
+    "externalMode": "Existing authorized HTTPS endpoint plus SEO_CONTENT_EDITORIAL_TOKEN (at least 32 characters); API key stays at endpoint owner",
+    "maxOutputTokens": 4000,
+    "maxCallCostMicros": 100000,
+    "providerTimeoutMs": 60000,
+    "clientTimeoutMs": 75000,
+    "maxConcurrentProviderCalls": 1,
+    "automaticPaidRetries": 0
+  },
+  "command": "node scripts/run-seo-content-demo.mjs .seo-test/gsc-live.json --inference-v3",
+  "privateDrafts": ".seo-test/articles/ (gitignored)",
+  "report": "docs/evidence/v3/inference.json"
+}
