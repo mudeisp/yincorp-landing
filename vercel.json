@@ -26,6 +26,7 @@
     }
   ],
   "rewrites": [
+    {"source":"/sitemap-content-:uf(sp|es).xml","destination":"/api/portal?portalPath=/sitemap-content-:uf.xml"},
     {"source":"/politica-de-privacidade","destination":"/politica-de-privacidade/index.html"},
     {
       "source": "/sp/empreendimentos/arizona-1002",

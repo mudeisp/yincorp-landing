@@ -1,0 +1,9 @@
+{
+  "comment": "Merge into vercel.json only after staging and separate activation approval. Do not deploy this file.",
+  "crons": [
+    {"path": "/api/seo-content?op=run&state=SP", "schedule": "0 10 * * *"},
+    {"path": "/api/seo-content?op=run&state=ES", "schedule": "10 10 * * *"},
+    {"path": "/api/seo-content?op=monitor&state=SP", "schedule": "0 12 * * *"},
+    {"path": "/api/seo-content?op=monitor&state=ES", "schedule": "10 12 * * *"}
+  ]
+}
