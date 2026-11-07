@@ -18,3 +18,13 @@ test('empty and rejected localities do not create sitemap hubs',()=>{
  for(const change of [{active:false},{status:'Usado'},{price:0},{typology_stock:null}])assert.equal(portalEntries([row('RS',change)]).length,0);
  assert.ok(portalEntries([row('SP')]).some(e=>e.path==='/sp/cidade-real/centro'));
 });
+
+test('last complete sitemap is served during a short catalog outage, never indefinitely',async()=>{
+ let clock=0,fail=false;
+ const handler=createSeoHandler({now:()=>clock,preview:true,inventory:async state=>{if(fail)throw Error('temporary_inventory_failure');return [row(state)];},resales:async()=>{if(fail)throw Error('temporary_resale_failure');return [];}});
+ const get=async()=>{const res=response();await handler({method:'GET',url:'/sitemap.xml'},res,'/sitemap.xml');return res;};
+ const initial=await get();assert.equal(initial.statusCode,200);
+ clock=61000;fail=true;const fallback=await get();assert.equal(fallback.statusCode,200);assert.equal(fallback.body,initial.body);
+ clock=3600001;const expired=await get();assert.equal(expired.statusCode,503);
+ fail=false;clock=3601000;const recovered=await get();assert.equal(recovered.statusCode,200);
+});
