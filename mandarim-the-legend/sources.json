@@ -1,0 +1,149 @@
+{
+  "sources": [
+    {
+      "file": "Apresentação.pdf",
+      "sha256": "6313dc8a14319c8122eaad7d676e3a6ae08851bfe3bb862873837c11f5bbcd71"
+    },
+    {
+      "file": "tabela_mandarim_the_legend_outubro_2026.pdf",
+      "sha256": "bffd476c63a23d020c1980f131de6a9fc78e5a0bfcd783acf26d2dddd6056b25"
+    }
+  ],
+  "images": [
+    {
+      "asset": "fachada.webp",
+      "page": 7,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "skydeck.webp",
+      "page": 8,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "skylounge.webp",
+      "page": 9,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "acesso.webp",
+      "page": 11,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "skybridge.webp",
+      "page": 13,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "piscina.webp",
+      "page": 14,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "beach-tennis.webp",
+      "page": 15,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "wellness.webp",
+      "page": 17,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "party.webp",
+      "page": 18,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "gym.webp",
+      "page": 19,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "fitness.webp",
+      "page": 20,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "library.webp",
+      "page": 21,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "spa.webp",
+      "page": 22,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "kids.webp",
+      "page": 23,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "living-144.webp",
+      "page": 26,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "living-88.webp",
+      "page": 27,
+      "kind": "embedded_original"
+    },
+    {
+      "asset": "implantacao-terreo.webp",
+      "page": 28,
+      "kind": "full_page_original_render"
+    },
+    {
+      "asset": "implantacao-lazer.webp",
+      "page": 29,
+      "kind": "full_page_original_render"
+    },
+    {
+      "asset": "implantacao-sky.webp",
+      "page": 30,
+      "kind": "full_page_original_render"
+    },
+    {
+      "asset": "implantacao-skydeck.webp",
+      "page": 31,
+      "kind": "full_page_original_render"
+    },
+    {
+      "asset": "planta-144.webp",
+      "page": 32,
+      "kind": "full_page_original_render"
+    },
+    {
+      "asset": "planta-144-opcao.webp",
+      "page": 33,
+      "kind": "full_page_original_render"
+    },
+    {
+      "asset": "planta-140.webp",
+      "page": 34,
+      "kind": "full_page_original_render"
+    },
+    {
+      "asset": "planta-140-opcao.webp",
+      "page": 35,
+      "kind": "full_page_original_render"
+    },
+    {
+      "asset": "planta-114.webp",
+      "page": 36,
+      "kind": "full_page_original_render"
+    },
+    {
+      "asset": "planta-89.webp",
+      "page": 37,
+      "kind": "full_page_original_render"
+    },
+    {
+      "asset": "planta-88.webp",
+      "page": 38,
+      "kind": "full_page_original_render"
+    }
+  ]
+}
