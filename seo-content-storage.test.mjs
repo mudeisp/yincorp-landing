@@ -56,7 +56,11 @@ test('storage-only checkpoint survives another process without creating a run or
       import {readStorageProbe} from './lib/seo-content/storage-probe.js';
       const pool=new pg.Pool(JSON.parse(process.env.TEST_DB_OPTIONS));
       try{console.log(JSON.stringify(await readStorageProbe(new DurableLedger({pool,key:process.env.TEST_STORAGE_KEY,projectId:'proj_storage_fixture'}),JSON.parse(process.env.TEST_PROOF))));}finally{await pool.end();}
-    `],{encoding:'utf8',timeout:20000,env:{...process.env,TEST_DB_OPTIONS:JSON.stringify(local.pool.options),TEST_STORAGE_KEY:key,TEST_PROOF:JSON.stringify(proof)}});
+    `],{encoding:'utf8',timeout:20000,env:{...process.env,
+      // pg-pool intentionally makes options.password non-enumerable. Explicitly
+      // pass only this synthetic loopback fixture's parameters to the child.
+      TEST_DB_OPTIONS:JSON.stringify({host:'127.0.0.1',port:local.pool.options.port,user:'postgres',password:local.pool.options.password,database:'postgres'}),
+      TEST_STORAGE_KEY:key,TEST_PROOF:JSON.stringify(proof)}});
     assert.equal(child.status,0,'synthetic child reader must succeed');
     assert.equal(JSON.parse(child.stdout).status,'PASS');
     assert.equal((await local.pool.query('select revision from seo_engine.ledger')).rows[0].revision,revision);
@@ -84,3 +88,4 @@ test('storage CLI refuses enabled inference and pool configuration never downgra
   finally{await pool.end();}
   for(const url of ['postgresql://postgres:synthetic@db.bgggafirdjvxihqselha.supabase.co/postgres',env.SEO_CONTENT_LEDGER_DATABASE_URL+'?sslmode=no-verify'])assert.throws(()=>ledgerPool({...env,SEO_CONTENT_LEDGER_DATABASE_URL:url}),/private_ledger_configuration_required/);
 });
+
