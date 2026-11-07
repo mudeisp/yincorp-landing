@@ -2,6 +2,8 @@
 
 Continuação do PR Draft #36, mesma branch `feat/yincorp-seo-content-engine-v1`, a partir de `94362689967c66d4d42b373a337c76c4aac235df`. Não há novo projeto, migration adicional, deploy de produção, cron ativado ou publicação pública. `SEO_CONTENT_AUTOPUBLISH=false` permanece no exemplo e foi imposto na demonstração.
 
+A entrega foi atualizada sobre `af4480e322854938d2fca02ff4a58af1f119076c` para preservar o GEO V2 incorporado à main durante o trabalho. O helper de entidades nacionais, o wrapper SSR e os 13 testes GEO foram mantidos. A suíte completa final passou com **100/100 testes**. As evidências de execução registram o HEAD do checkout e se havia alterações locais; o JSON inclui hashes dos arquivos executados, evitando confundir um baseline Git com código ainda não commitado.
+
 ## O que foi implementado
 
 - Descoberta por clusters geográficos a partir de consultas GSC e correspondência **exata** com URLs canônicas do inventário. A pauta educativa é explicitamente uma hipótese fundamentada em consultas relacionadas, não uma alegação de volume para o título gerado. O timestamp de cache `data_fetched_at` é preservado; reler um export não renova artificialmente a evidência.

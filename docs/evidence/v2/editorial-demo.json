@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "commit": "94362689967c66d4d42b373a337c76c4aac235df",
-  "observedAt": "2026-11-07T10:32:12.529Z",
+  "commit": "26c0f5b5d549c4ebbbaa07b58b897060fa80503f",
+  "observedAt": "2026-11-07T10:50:58.635Z",
   "environment": "isolated local PostgreSQL WASM; actual provider reads; no remote database writes",
   "autopublish": false,
   "cronActivated": false,
@@ -20,7 +20,7 @@
       "status": "CONNECTED_READ",
       "transport": "existing public Supabase reader",
       "credential": "existing publishable inventory key; no privileged key",
-      "checkedAt": "2026-11-07T10:32:30.070Z"
+      "checkedAt": "2026-11-07T10:51:22.198Z"
     },
     "research": {
       "status": "CONNECTED_READ",
@@ -177,7 +177,7 @@
           "neighborhood": "Ipiranga",
           "path": "/sp/sao-paulo/empreendimento/villa-arvo--orulo-51619",
           "name": "Villa Arvo",
-          "checkedAt": "2026-11-07T10:32:16.340Z"
+          "checkedAt": "2026-11-07T10:51:02.194Z"
         },
         {
           "id": "orulo-31285",
@@ -186,7 +186,7 @@
           "neighborhood": "Ipiranga",
           "path": "/sp/sao-paulo/empreendimento/versos-ipiranga-residencial--orulo-31285",
           "name": "Versos Ipiranga - Residencial",
-          "checkedAt": "2026-11-07T10:32:16.340Z"
+          "checkedAt": "2026-11-07T10:51:02.194Z"
         },
         {
           "id": "orulo-42654",
@@ -195,7 +195,7 @@
           "neighborhood": "Ipiranga",
           "path": "/sp/sao-paulo/empreendimento/palatium-ipiranga--orulo-42654",
           "name": "Palatium Ipiranga",
-          "checkedAt": "2026-11-07T10:32:16.340Z"
+          "checkedAt": "2026-11-07T10:51:02.194Z"
         },
         {
           "id": "orulo-28641",
@@ -204,7 +204,7 @@
           "neighborhood": "Ipiranga",
           "path": "/sp/sao-paulo/empreendimento/welconx-chacara-klabin-nr--orulo-28641",
           "name": "Welconx Chácara Klabin - NR",
-          "checkedAt": "2026-11-07T10:32:16.340Z"
+          "checkedAt": "2026-11-07T10:51:02.194Z"
         },
         {
           "id": "orulo-76454",
@@ -213,7 +213,7 @@
           "neighborhood": "Ipiranga",
           "path": "/sp/sao-paulo/empreendimento/elev-park-sacoma-iii--orulo-76454",
           "name": "Elev Park Sacomã III",
-          "checkedAt": "2026-11-07T10:32:16.340Z"
+          "checkedAt": "2026-11-07T10:51:02.194Z"
         }
       ],
       "sources": [
@@ -224,15 +224,15 @@
         },
         {
           "url": "https://prefeitura.sp.gov.br/web/ipiranga/w/historico/160",
-          "observedAt": "2026-11-07T10:32:26.394Z",
+          "observedAt": "2026-11-07T10:51:15.868Z",
           "digest": "56690d7c9618079f3e468aa0af94154e087affc59b822a6c12a565d121b110bf",
-          "bodyDigest": "705a19bd01b0095809910835a020ec856a7af5ab5251ac5f21a2ce06661803aa",
+          "bodyDigest": "56460efc802214821ddf5c27b51380e6aa8b16037fcc8ed1f6c7ec9103a7be16",
           "bytes": 166204,
           "transport": "https_dns_pinned"
         },
         {
           "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/villa-arvo--orulo-51619",
-          "observedAt": "2026-11-07T10:32:28.267Z",
+          "observedAt": "2026-11-07T10:51:19.747Z",
           "digest": "462ebc9fe0f180d2eb23f140515b483a392bc436352fd0374641db2729dd2d7b",
           "bodyDigest": "eabb695321705cdb1a2dbec95491790e67c70ec5a46510d096bc0f4434cc86fe",
           "bytes": 42986,
@@ -240,7 +240,7 @@
         },
         {
           "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/versos-ipiranga-residencial--orulo-31285",
-          "observedAt": "2026-11-07T10:32:29.401Z",
+          "observedAt": "2026-11-07T10:51:21.163Z",
           "digest": "4cfa3ab4ca6ceaf14bbd68098e05e4a61cc9049f941bed3a3e9777cf87a40b13",
           "bodyDigest": "55418d48227e0c06a332bb4b689484682ac7fa400e5f93c586804226449baf09",
           "bytes": 33289,
@@ -426,7 +426,7 @@
           "neighborhood": "Praia do Canto",
           "path": "/es/vitoria/empreendimento/fit-370--orulo-72212",
           "name": "FIT@370",
-          "checkedAt": "2026-11-07T10:32:30.018Z"
+          "checkedAt": "2026-11-07T10:51:22.147Z"
         },
         {
           "id": "orulo-85087",
@@ -435,7 +435,7 @@
           "neighborhood": "Praia do Canto",
           "path": "/es/vitoria/empreendimento/brettas-boutique-residence--orulo-85087",
           "name": "Brettas Boutique Residence",
-          "checkedAt": "2026-11-07T10:32:30.018Z"
+          "checkedAt": "2026-11-07T10:51:22.147Z"
         },
         {
           "id": "orulo-72211",
@@ -444,7 +444,7 @@
           "neighborhood": "Praia do Canto",
           "path": "/es/vitoria/empreendimento/air-225--orulo-72211",
           "name": "AIR@225",
-          "checkedAt": "2026-11-07T10:32:30.018Z"
+          "checkedAt": "2026-11-07T10:51:22.147Z"
         },
         {
           "id": "orulo-64547",
@@ -453,7 +453,7 @@
           "neighborhood": "Praia do Canto",
           "path": "/es/vitoria/empreendimento/soul-for-life--orulo-64547",
           "name": "Soul for Life",
-          "checkedAt": "2026-11-07T10:32:30.018Z"
+          "checkedAt": "2026-11-07T10:51:22.147Z"
         },
         {
           "id": "orulo-85079",
@@ -462,7 +462,7 @@
           "neighborhood": "Praia do Canto",
           "path": "/es/vitoria/empreendimento/forma-praia-do-canto--orulo-85079",
           "name": "Forma Praia do Canto",
-          "checkedAt": "2026-11-07T10:32:30.018Z"
+          "checkedAt": "2026-11-07T10:51:22.147Z"
         }
       ],
       "sources": [
@@ -473,15 +473,15 @@
         },
         {
           "url": "https://www.vitoria.es.gov.br/semc/triangulo-das-bermudas-e-rua-viva",
-          "observedAt": "2026-11-07T10:32:30.575Z",
+          "observedAt": "2026-11-07T10:51:22.739Z",
           "digest": "1142ea7507575e8ae8a98bb7d91ed4baa03272f4327457b0d06d2f7585734bd6",
-          "bodyDigest": "e7b5402707a030750dff240dd8fdc3dba8542fd3230bf21d2507bd9a71597b00",
-          "bytes": 229912,
+          "bodyDigest": "177aa75a8225fd0aad2203d66ca849d33fa00b6abfefb80745a85d7320817eb6",
+          "bytes": 229913,
           "transport": "https_dns_pinned"
         },
         {
           "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/fit-370--orulo-72212",
-          "observedAt": "2026-11-07T10:32:31.233Z",
+          "observedAt": "2026-11-07T10:51:23.692Z",
           "digest": "a499e8cbf4776c87f875e7997ac96b67f7c9959a682b92247a130b833edf575e",
           "bodyDigest": "4b1461b22b8564c32d1bf6a83578161385a94fc6aa27eaafbad20140b9ced0ff",
           "bytes": 66824,
@@ -489,7 +489,7 @@
         },
         {
           "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/brettas-boutique-residence--orulo-85087",
-          "observedAt": "2026-11-07T10:32:31.680Z",
+          "observedAt": "2026-11-07T10:51:24.161Z",
           "digest": "92e162c53f5f8567cf029b1a6623e5cb3f95b6d92b883b173b3daf886a3cd276",
           "bodyDigest": "63751f887c1d1d63a1308a2659967049129c7747c850bf1f3616fe396685a75b",
           "bytes": 28561,
@@ -503,5 +503,17 @@
     "generationActualUSD": 0,
     "researchBilling": "No paid research provider used; public HTTPS reads only",
     "estimatedGenerationUSD": null
+  },
+  "provenance": {
+    "checkoutHead": "26c0f5b5d549c4ebbbaa07b58b897060fa80503f",
+    "worktreeDirty": true,
+    "sourceDigests": {
+      "lib/seo-content/discovery.js": "a9ab478ab75edb5837d5f9219f04b4012d763736b05636a5493cc09ba9cf2561",
+      "lib/seo-content/sources.js": "3024491fa4a2c88cb36a657183221e8938ad02698c26330f04b544a7faab616b",
+      "lib/seo-content/openai-editorial.js": "48910f101d0779e542040788cf1d31b4c5cd9bbc9082c958c49ecc0e5654a75a",
+      "lib/seo-content/inventory.js": "92845738e8fbbd1d41d8386a1685e61bb9e5178b7e352815b0150798b0485cb3",
+      "lib/seo-content/core.js": "0b973acb8801414072acb94cb9fa7881590cc4ec12db05a2505fcf1bc8cfd850",
+      "scripts/run-seo-content-demo.mjs": "f212ce68f0969f6faf749481230740bda061bf149cc3819a989195f2aa7d60e3"
+    }
   }
 }
