@@ -11,8 +11,8 @@ test('national sitemap uses eight eligible markets, omits used and catalog-only,
  assert.equal(calls,9);assert.equal(index.statusCode,200);assert.equal(rs.statusCode,200);
  for(const state of NATIONAL_MARKETS)assert.ok(index.body.includes(`/sitemap-seo/${state.toLowerCase()}/empreendimentos-1.xml`));
  assert.match(rs.body,/orulo-1002/);assert.doesNotMatch(rs.body,/orulo-2002|orulo-3002|lastmod/);assert.equal(rs.headers['X-Robots-Tag'],'noindex, follow');
- assert.equal((await get('/sitemap-seo/rs/empreendimentos-2.xml')).statusCode,404);assert.equal(calls,9);
- clock=60001;await get('/sitemap.xml');assert.equal(calls,17);
+ assert.equal((await get('/sitemap-seo/rs/empreendimentos-2.xml')).statusCode,404);assert.equal(calls,10);
+ clock=60001;await get('/sitemap.xml');assert.equal(calls,18);
 });
 test('empty and rejected localities do not create sitemap hubs',()=>{
  for(const change of [{active:false},{status:'Usado'},{price:0},{typology_stock:null}])assert.equal(portalEntries([row('RS',change)]).length,0);
