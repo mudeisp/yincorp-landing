@@ -1,0 +1,150 @@
+{
+  "observedAt": "2026-11-07T10:27:54.835Z",
+  "method": "Vercel env metadata only, decrypt=false; no secret values retrieved, copied or persisted",
+  "projects": [
+    {
+      "project": "yincorp-landing",
+      "variables": [
+        {
+          "key": "OPENAI_API_KEY",
+          "type": "sensitive",
+          "target": [
+            "production"
+          ],
+          "branch": null
+        }
+      ]
+    },
+    {
+      "project": "ynteligencia",
+      "variables": [
+        {
+          "key": "MIA_READ_TOKEN",
+          "type": "sensitive",
+          "target": [
+            "production",
+            "preview"
+          ],
+          "branch": null
+        },
+        {
+          "key": "OPENAI_API_KEY",
+          "type": "sensitive",
+          "target": [
+            "production",
+            "preview"
+          ],
+          "branch": null
+        }
+      ]
+    },
+    {
+      "project": "media-intelligence-agent",
+      "variables": [
+        {
+          "key": "GA4_REFRESH_TOKEN",
+          "type": "sensitive",
+          "target": [
+            "production",
+            "preview",
+            "development"
+          ],
+          "branch": null
+        },
+        {
+          "key": "GA4_PROPERTY_ID",
+          "type": "encrypted",
+          "target": [
+            "production",
+            "preview",
+            "development"
+          ],
+          "branch": null
+        },
+        {
+          "key": "GOOGLE_ADS_REFRESH_TOKEN",
+          "type": "sensitive",
+          "target": [
+            "production",
+            "preview"
+          ],
+          "branch": null
+        },
+        {
+          "key": "GOOGLE_ADS_CLIENT_SECRET",
+          "type": "sensitive",
+          "target": [
+            "production",
+            "preview"
+          ],
+          "branch": null
+        },
+        {
+          "key": "GOOGLE_ADS_CLIENT_ID",
+          "type": "sensitive",
+          "target": [
+            "production",
+            "preview"
+          ],
+          "branch": null
+        },
+        {
+          "key": "GOOGLE_ADS_CUSTOMER_ID",
+          "type": "sensitive",
+          "target": [
+            "production",
+            "preview"
+          ],
+          "branch": null
+        },
+        {
+          "key": "MIA_READ_TOKEN",
+          "type": "sensitive",
+          "target": [
+            "production",
+            "preview"
+          ],
+          "branch": null
+        }
+      ]
+    },
+    {
+      "project": "agente-yincorp",
+      "variables": [
+        {
+          "key": "OPENAI_MODEL",
+          "type": "sensitive",
+          "target": [
+            "production",
+            "preview"
+          ],
+          "branch": null
+        },
+        {
+          "key": "OPENAI_API_KEY",
+          "type": "sensitive",
+          "target": [
+            "production",
+            "preview"
+          ],
+          "branch": null
+        }
+      ]
+    }
+  ],
+  "localRuntime": {
+    "editorialKeyAvailable": false,
+    "editorialModelsAvailable": false,
+    "readOnlyGscExport": true,
+    "privilegedRemoteDatabaseEnvIgnored": true
+  },
+  "runtimeConnections": {
+    "landingVercelConnectors": 0
+  },
+  "conclusions": {
+    "gsc": "Windsor searchconsole authenticated read succeeds",
+    "ads": "MIA read-only SSR succeeds without OAuth extraction; geographic term bindings remain unavailable",
+    "ga4": "Configured in MIA owner environment; no safe aggregate route available to local runner",
+    "editorial": "Existing sensitive keys are not exported. No local credential or credential-preserving inference endpoint."
+  }
+}

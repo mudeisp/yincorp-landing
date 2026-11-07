@@ -1,2 +1,9 @@
 .portal-shared/
 portal-assets/
+node_modules/
+.env
+.env.*
+!.env.example
+.seo-test/
+.pnpm-store/
+supabase/.temp/

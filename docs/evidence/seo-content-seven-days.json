@@ -1,0 +1,171 @@
+{
+  "environment": "isolated PostgreSQL WASM; synthetic fixtures only; no network or public publication",
+  "days": 7,
+  "quotaPerState": 5,
+  "articles": 70,
+  "published": 0,
+  "duplicates": 0,
+  "reports": [
+    {
+      "day": "2026-11-01",
+      "states": [
+        {
+          "day": "2026-11-01",
+          "state": "SP",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        },
+        {
+          "day": "2026-11-01",
+          "state": "ES",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        }
+      ]
+    },
+    {
+      "day": "2026-11-02",
+      "states": [
+        {
+          "day": "2026-11-02",
+          "state": "SP",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        },
+        {
+          "day": "2026-11-02",
+          "state": "ES",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        }
+      ]
+    },
+    {
+      "day": "2026-11-03",
+      "states": [
+        {
+          "day": "2026-11-03",
+          "state": "SP",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        },
+        {
+          "day": "2026-11-03",
+          "state": "ES",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        }
+      ]
+    },
+    {
+      "day": "2026-11-04",
+      "states": [
+        {
+          "day": "2026-11-04",
+          "state": "SP",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        },
+        {
+          "day": "2026-11-04",
+          "state": "ES",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        }
+      ]
+    },
+    {
+      "day": "2026-11-05",
+      "states": [
+        {
+          "day": "2026-11-05",
+          "state": "SP",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        },
+        {
+          "day": "2026-11-05",
+          "state": "ES",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        }
+      ]
+    },
+    {
+      "day": "2026-11-06",
+      "states": [
+        {
+          "day": "2026-11-06",
+          "state": "SP",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        },
+        {
+          "day": "2026-11-06",
+          "state": "ES",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        }
+      ]
+    },
+    {
+      "day": "2026-11-07",
+      "states": [
+        {
+          "day": "2026-11-07",
+          "state": "SP",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        },
+        {
+          "day": "2026-11-07",
+          "state": "ES",
+          "metrics": [],
+          "statuses": {
+            "NEEDS_REVIEW": 5
+          },
+          "refreshDue": []
+        }
+      ]
+    }
+  ]
+}
