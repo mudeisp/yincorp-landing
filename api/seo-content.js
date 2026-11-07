@@ -1,12 +1,14 @@
 import {timingSafeEqual} from 'node:crypto';
 import {config,dayInBrazil,runState} from '../lib/seo-content/core.js';
 import {createStore} from '../lib/seo-content/store.js';
-import {secureGateway,evidenceProvider,editorialModel,sourceResearch,checkPublicLinks} from '../lib/seo-content/providers.js';
+import {secureGateway,evidenceProvider,editorialModel,checkPublicLinks} from '../lib/seo-content/providers.js';
 import {createEditorialAgents} from '../lib/seo-content/editorial.js';
 import {contentInventory} from '../lib/seo-content/inventory.js';
 import {renderArticle} from '../lib/seo-content/render.js';
 import {monitorState} from '../lib/seo-content/monitor.js';
 import {searchConsole} from '../lib/seo-content/google.js';
+import {openaiEditorial} from '../lib/seo-content/openai-editorial.js';
+import {directResearch} from '../lib/seo-content/research.js';
 export function authorized(header,secret){if(!secret||secret.length<32)return false;const expected=Buffer.from('Bearer '+secret),actual=Buffer.from(header||'');return actual.length===expected.length&&timingSafeEqual(actual,expected);}
 export const getStore=()=>createStore({url:process.env.SEO_CONTENT_SUPABASE_URL,key:process.env.SEO_CONTENT_SUPABASE_SERVICE_KEY});
 export default async function handler(req,res){
@@ -32,22 +34,26 @@ export default async function handler(req,res){
   if(!['SP','ES'].includes(requestedState))return res.status(400).json({error:'state_required'});
   try{
     const cfg=config();if(!cfg.enabled||cfg.kill)return res.status(200).json({status:'DISABLED'});
-    const store=getStore(),evidence=secureGateway(process.env.SEO_CONTENT_EVIDENCE_URL,process.env.SEO_CONTENT_EVIDENCE_TOKEN);
-    if(op==='monitor')return res.status(200).json(await monitorState({state:requestedState,day:dayInBrazil(),store,gateway:evidence}));
-    const editorial=secureGateway(process.env.SEO_CONTENT_EDITORIAL_URL,process.env.SEO_CONTENT_EDITORIAL_TOKEN);
+    const store=getStore(),evidence=process.env.SEO_CONTENT_EVIDENCE_URL?secureGateway(process.env.SEO_CONTENT_EVIDENCE_URL,process.env.SEO_CONTENT_EVIDENCE_TOKEN):null;
+    if(op==='monitor'){
+      if(!evidence)throw Error('monitor_transport_unavailable');
+      return res.status(200).json(await monitorState({state:requestedState,day:dayInBrazil(),store,gateway:evidence}));
+    }
+    const editorial=process.env.SEO_CONTENT_EDITORIAL_URL?secureGateway(process.env.SEO_CONTENT_EDITORIAL_URL,process.env.SEO_CONTENT_EDITORIAL_TOKEN):null;
     const results=[];
     // Serial states bound concurrency and keep the per-invocation budget predictable.
     for(const state of [requestedState]){
       let activeRun;const wrapped={...store,claim:async p=>{activeRun=await store.claim(p);return activeRun;}};
-      const model=editorialModel(editorial,store,()=>activeRun),agents=createEditorialAgents({model,checkLinks:checkPublicLinks,releaseEvidence:()=>/^[a-f0-9]{40}$/.test(process.env.SEO_CONTENT_VERIFIED_RELEASE_SHA||'')&&process.env.SEO_CONTENT_VERIFIED_RELEASE_SHA===process.env.VERCEL_GIT_COMMIT_SHA?{status:'PASS',evidence:'CI verified release '+process.env.SEO_CONTENT_VERIFIED_RELEASE_SHA}:null});
-      const supplemental=evidenceProvider(evidence);
-      const gsc=process.env.SEO_CONTENT_GSC_ACCESS_TOKEN?searchConsole({accessToken:process.env.SEO_CONTENT_GSC_ACCESS_TOKEN,site:process.env.SEO_CONTENT_GSC_SITE,inventory:contentInventory}):null;
+      const model=editorial?editorialModel(editorial,store,()=>activeRun):openaiEditorial({apiKey:process.env.OPENAI_API_KEY,models:{research:process.env.SEO_CONTENT_RESEARCH_MODEL,write:process.env.SEO_CONTENT_WRITE_MODEL,audit:process.env.SEO_CONTENT_AUDIT_MODEL},rates:JSON.parse(process.env.SEO_CONTENT_MODEL_RATES||'null'),store,runRef:()=>activeRun});
+      const agents=createEditorialAgents({model,checkLinks:checkPublicLinks,releaseEvidence:()=>/^[a-f0-9]{40}$/.test(process.env.SEO_CONTENT_VERIFIED_RELEASE_SHA||'')&&process.env.SEO_CONTENT_VERIFIED_RELEASE_SHA===process.env.VERCEL_GIT_COMMIT_SHA?{status:'PASS',evidence:'CI verified release '+process.env.SEO_CONTENT_VERIFIED_RELEASE_SHA}:null});
+      const supplemental=evidence?evidenceProvider(evidence):null;
+      const gsc=process.env.SEO_CONTENT_GSC_ACCESS_TOKEN?searchConsole({accessToken:process.env.SEO_CONTENT_GSC_ACCESS_TOKEN,site:process.env.SEO_CONTENT_GSC_SITE,inventory:contentInventory,relatedQueries:process.env.SEO_CONTENT_ALLOW_RELATED_QUERY_HYPOTHESES==='true'}):null;
       const discover=async(s,d)=>{
-        const sources=await Promise.allSettled([supplemental(s,d),...gsc?[gsc(s,d)]:[]]);
-        if(sources.every(r=>r.status==='rejected'))throw Error('all_evidence_unavailable');
+        const sources=await Promise.allSettled([...supplemental?[supplemental(s,d)]:[],...gsc?[gsc(s,d)]:[]]);
+        if(!sources.length||sources.every(r=>r.status==='rejected'))throw Error('all_evidence_unavailable');
         return sources.flatMap(r=>r.status==='fulfilled'?r.value:[]);
       };
-      results.push(await runState({state,day:dayInBrazil(),store:wrapped,discover,research:sourceResearch(evidence,model),write:agents.write,verify:agents.verify,inventory:contentInventory,existing:s=>store.existing(s),cfg}));
+      results.push(await runState({state,day:dayInBrazil(),store:wrapped,discover,research:directResearch(model),write:agents.write,verify:agents.verify,inventory:contentInventory,existing:s=>store.existing(s),cfg}));
     }
     return res.status(200).json({results});
   }catch{return res.status(503).json({error:'seo_content_unavailable'});}

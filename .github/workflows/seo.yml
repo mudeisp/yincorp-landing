@@ -30,6 +30,14 @@ jobs:
         run: |
           node --test seo-content*.test.mjs national-sitemap-isolation.test.mjs
           node scripts/simulate-seo-content.mjs
+      - name: Native PostgreSQL with independent TCP connections
+        run: node scripts/verify-seo-content-concurrency.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: seo-content-v2-validation
+          path: docs/evidence/v2/postgres-concurrency.json
+          retention-days: 14
   coverage:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
