@@ -32,3 +32,20 @@ test('public SEO requests are unauthorized and Preview rejects every write opera
     }
   }finally{for(const [key,value] of Object.entries(saved)){if(value===undefined)delete process.env[key];else process.env[key]=value;}}
 });
+
+test('legacy generation endpoint cannot bypass the V4 ledger even when engine flags are enabled',async()=>{
+  const names=['VERCEL_ENV','SEO_CONTENT_CRON_SECRET','SEO_CONTENT_ENABLED','SEO_CONTENT_KILL_SWITCH'];
+  const saved=Object.fromEntries(names.map(name=>[name,process.env[name]])),originalFetch=globalThis.fetch;
+  let requests=0;
+  try{
+    process.env.VERCEL_ENV='production';process.env.SEO_CONTENT_CRON_SECRET='fixture-secret-'.repeat(3);
+    process.env.SEO_CONTENT_ENABLED='true';process.env.SEO_CONTENT_KILL_SWITCH='false';
+    globalThis.fetch=async()=>{requests++;throw Error('unexpected_network');};
+    const response={setHeader(){},status(code){this.code=code;return this;},json(body){this.body=body;return this;}};
+    await handler({url:'/?op=run&state=SP',method:'POST',headers:{authorization:'Bearer '+process.env.SEO_CONTENT_CRON_SECRET}},response);
+    assert.equal(response.code,503);assert.equal(response.body.error,'private_durable_runner_required');assert.equal(requests,0);
+  }finally{
+    globalThis.fetch=originalFetch;
+    for(const [name,value] of Object.entries(saved)){if(value===undefined)delete process.env[name];else process.env[name]=value;}
+  }
+});

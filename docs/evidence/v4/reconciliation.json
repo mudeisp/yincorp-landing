@@ -1,0 +1,31 @@
+{
+  "projectName": "yincorp-seo",
+  "status": "UNKNOWN",
+  "reason": "Official project identity, complete historical window and costs not verified",
+  "observedAt": "2026-11-07T20:51:25Z",
+  "checks": [
+    {
+      "endpoint": "/v1/organization/usage/completions",
+      "httpStatus": 403
+    },
+    {
+      "endpoint": "/v1/organization/costs",
+      "httpStatus": 403
+    }
+  ],
+  "paidInferenceRequests": 0,
+  "scope": "historical project consumption",
+  "officialProjectId": "UNKNOWN",
+  "historicalTotalUSD": null,
+  "availableBudgetMicros": null,
+  "approvedCeilingMicros": 600000,
+  "interpretation": "403 does not prove zero cost; single-day probes do not reconcile the historical window",
+  "requests": {
+    "method": "GET",
+    "paidInference": 0
+  },
+  "checkedWindowUTC": {
+    "start": "2026-11-07T00:00:00Z",
+    "end": "2026-11-08T00:00:00Z"
+  }
+}

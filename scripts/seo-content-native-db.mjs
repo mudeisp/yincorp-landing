@@ -25,6 +25,8 @@ export async function nativeDatabase(){
       try{await client.query('begin');await client.query("set local role service_role; set local statement_timeout='15s'; set local lock_timeout='10s'");const r=await client.query('select seo_content_command($1,$2::jsonb) result',[action,JSON.stringify(payload)]);await client.query('commit');return r.rows[0].result;}
       catch(e){await client.query('rollback');throw e;}finally{client.release();}
     };
-    return {pool,store:createCommandStore(rpc),rpc,info:{transport:'TCP loopback only',implementation:'native PostgreSQL, separate backend connections',version:(await pool.query('select version() version')).rows[0].version},close:async()=>{await pool.end();await server.stop();}};
+    return {get pool(){return pool;},store:createCommandStore(rpc),rpc,info:{transport:'TCP loopback only',implementation:'native PostgreSQL, separate backend connections',version:(await pool.query('select version() version')).rows[0].version},
+      restart:async()=>{await pool.end();await server.stop();await server.start();pool=new pg.Pool({host:'127.0.0.1',port,user:'postgres',password,database:'postgres',max:12,connectionTimeoutMillis:5000});},
+      close:async()=>{await pool.end();await server.stop();}};
   }catch(e){if(pool)await pool.end();try{await server.stop();}catch{}throw e;}
 }

@@ -1,5 +1,9 @@
 # SEO Content Engine V3 — contrato de inferência e resultado
 
+Atualização: a persistência e retomada agora seguem a [V4](seo-content-engine-v4.md).
+Este documento preserva evidências históricas; geração exige o ledger privado e
+reconciliação descritos na V4. O saldo atual continua UNKNOWN.
+
 Continuação do PR Draft #36 e da branch existente, sobre `6601f0e7e34f10414937f1163aea65c90fdef964`. Nenhum projeto criado, segredo remoto lido/decriptado, credencial copiada, chamada OpenAI paga executada, migration remota, deploy de produção, cron, merge ou publicação.
 
 ## Resultado real

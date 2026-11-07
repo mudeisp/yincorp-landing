@@ -1,0 +1,72 @@
+{
+  "referenceHead": "72e203815af878d5afdbba9eac1b5a4437198208",
+  "target": {
+    "projectId": "bgggafirdjvxihqselha",
+    "name": "agente.yincorp",
+    "health": "ACTIVE_HEALTHY",
+    "postgresVersion": "17.11.0.003",
+    "schema": "seo_engine",
+    "schemaExistsAtAudit": false
+  },
+  "remoteAccess": "metadata SELECT only; no commercial rows read",
+  "commercialRLS": {
+    "visitors": {
+      "enabled": true,
+      "forced": true
+    },
+    "sessions": {
+      "enabled": true,
+      "forced": true
+    },
+    "conversations": {
+      "enabled": true,
+      "forced": true
+    },
+    "messages": {
+      "enabled": true,
+      "forced": true
+    },
+    "buyer_preferences": {
+      "enabled": true,
+      "forced": true
+    }
+  },
+  "recovery": {
+    "initialPrivateDirectoryPresent": false,
+    "privateReceiptsRecovered": false,
+    "gscExportRecovered": false,
+    "accessibleDirectories": [
+      "workspace checkout",
+      "workspace shared/downloads",
+      "workspace library-files",
+      "workspace scratch"
+    ],
+    "previousWorkflowRun": 42410520503,
+    "previousArtifact": "seo-content-v2-validation",
+    "artifactScope": "synthetic native PostgreSQL concurrency, not private generation receipts",
+    "otherExecutors": "NOT_ACCESSIBLE; no proof of zero prior spend"
+  },
+  "cloudPersistence": "NOT_PROVEN_BETWEEN_CLOUD_SESSIONS",
+  "remoteMigrationApplied": false,
+  "backup": {
+    "organizationPlan": "free",
+    "dailyBackupGuarantee": false,
+    "existingBackupInventory": "UNKNOWN",
+    "restoreTest": "NOT_PERFORMED",
+    "documentation": "https://supabase.com/docs/guides/platform/backups",
+    "requirement": "existing private off-site export plus separate encryption-key escrow, tested restore before activation; no new service purchased"
+  },
+  "dataAPIExposedSchemas": "UNKNOWN: session pgrst.db_schemas returned null; verify management settings before application",
+  "publicDefinerReview": {
+    "ordinaryFunctionsPublicExecute": false,
+    "triggerFunctionPublicExecute": "rls_auto_enable (existing event-trigger helper; no modification)",
+    "runtimePolicy": "block callable ordinary public SECURITY DEFINER functions; trigger/event_trigger return types cannot be invoked as ordinary SQL functions"
+  },
+  "constraints": {
+    "autopublish": false,
+    "paidInference": 0,
+    "remoteWrites": 0,
+    "commercialChanges": 0,
+    "productionDeploys": 0
+  }
+}

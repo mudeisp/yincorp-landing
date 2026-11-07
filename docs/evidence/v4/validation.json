@@ -1,0 +1,20 @@
+{
+  "referenceHead": "72e203815af878d5afdbba9eac1b5a4437198208",
+  "tests": {
+    "command": "node --test *.test.mjs arizona-1002/model.test.mjs",
+    "passed": 131,
+    "failed": 0,
+    "v4Subtests": 17,
+    "nativeEngine": "PostgreSQL 18.6 local loopback",
+    "scope": "synthetic isolated fixtures, including SIGKILL, HTTP disconnect and DB restart"
+  },
+  "nativeConcurrencyScript": "PASS, 8 independent connections; no remote DB",
+  "migrationSHA256": "23f504cd3133a49ceb81772756b96f649944a01b055e7be5d83e74f6034f51cd",
+  "remoteMigration": "NOT_APPLIED",
+  "crossCloudSessionPersistence": "NOT_PROVEN",
+  "officialReconciliation": "UNKNOWN",
+  "backupRestore": "NOT_PROVEN",
+  "autopublish": false,
+  "paidInferenceRequestsThisTask": 0,
+  "remoteWritesThisTask": 0
+}

@@ -5,17 +5,17 @@ import {selectOpportunity} from '../lib/seo-content/discovery.js';
 import {SOURCE_REGISTRY,sourceRetriever} from '../lib/seo-content/sources.js';
 import {GATES,ORIGIN,dayInBrazil,hash,slug,fresh} from '../lib/seo-content/core.js';
 import {createEditorialAgents} from '../lib/seo-content/editorial.js';
-import {openaiEditorial} from '../lib/seo-content/openai-editorial.js';
 import {checkPublicLinks} from '../lib/seo-content/providers.js';
 import {isolatedDatabase} from '../lib/seo-content/isolated.js';
-import {renderArticle} from '../lib/seo-content/render.js';
 import {inferenceReadiness,inferenceSettings} from '../lib/seo-content/inference-config.js';
-import {startEditorialBridge,authenticatedEditorial} from '../lib/seo-content/editorial-bridge.js';
 import {readOnlyPreflightFetch} from '../lib/seo-content/preflight.js';
+import {configuredLedger} from '../lib/seo-content/durable-ledger.js';
+import {durableEditorial} from '../lib/seo-content/durable-editorial.js';
 
 const v3=process.argv.includes('--inference-v3');
 const preflightOnly=process.argv.includes('--preflight-only');
 if(preflightOnly&&!v3)throw Error('preflight_requires_v3');
+if(!v3)throw Error('private_durable_runner_required');
 // Hard boundary: preflight can make GET reads only, even if credentials and spending authorization exist.
 if(preflightOnly)globalThis.fetch=readOnlyPreflightFetch();
 if(v3&&process.env.SEO_CONTENT_AUTOPUBLISH===undefined)process.env.SEO_CONTENT_AUTOPUBLISH='false';
@@ -24,23 +24,33 @@ if(v3&&readiness.status==='BLOCKED'&&!preflightOnly){
   const report={version:3,observedAt:new Date().toISOString(),commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),status:'BLOCKED',preflight:readiness,secretValuesInspected:false,credentialsCopied:false,providerRequests:0,publications:0,autopublish:false,tokens:{input:0,output:0},cost:{generationActualUSD:0,estimatedUSD:0},states:[['SP','Ipiranga','São Paulo'],['ES','Praia do Canto','Vitória']].map(([state,neighborhood,city])=>({state,city,neighborhood,status:'BLOCKED',article:null,reason:readiness.credentialConfigured?'editorial_inference_configuration_blocked':'editorial_credentials_unavailable',stages:{research:'NOT_EXECUTED',write:'NOT_EXECUTED',audit:'NOT_EXECUTED'},gates:Object.fromEntries(GATES.map(g=>[g,{status:'UNKNOWN',evidence:'Inferência real não executada: preflight bloqueado'}]))})),nextAction:{secret:readiness.mode==='isolated_loopback_bridge'?'Provisionar SEO_OPENAI_API_KEY somente na sessão/secret store do ambiente isolado autorizado; não copiar de outro projeto.':'Provisionar SEO_CONTENT_EDITORIAL_TOKEN somente para o endpoint HTTPS autorizado.',nonSecretRequirements:readiness.missing.filter(k=>!['SEO_OPENAI_API_KEY','SEO_CONTENT_EDITORIAL_TOKEN'].includes(k)),configuration:'deploy/seo-content-inference.example.json'}};
   report.provenance={worktreeDirty:Boolean(execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim()),sourceDigests:{}};
   for(const path of ['lib/seo-content/inference-config.js','lib/seo-content/editorial-bridge.js','lib/seo-content/openai-editorial.js','scripts/run-seo-content-demo.mjs'])report.provenance.sourceDigests[path]=hash(await readFile(path,'utf8'));
-  await mkdir('docs/evidence/v3',{recursive:true});await writeFile('docs/evidence/v3/inference.json',JSON.stringify(report,null,2)+'\n');
+  // Never replace historical tracked evidence with a new blocked attempt.
+
   console.log(JSON.stringify({status:report.status,missing:readiness.missing,articlesGenerated:0,providerRequests:0,costUSD:0}));
 }else{
 
-// Never accepts remote database URLs or mutates a provider/project configuration.
+// No legacy remote-store credentials or provider/project mutations.
+// Only the explicitly pinned private SEO ledger is accepted for persistence.
 // GSC input is an authenticated read-only export, NOT synthetic rows or an OAuth key.
 const file=process.argv.slice(2).find(a=>!a.startsWith('--'))||'.seo-test/gsc-live.json';
-const captured=JSON.parse(await readFile(file,'utf8'));
-if(captured.provider!=='windsor/searchconsole'||captured.account!=='https://www.yincorp.com.br/'||captured.response?.status!=='done'||!Array.isArray(captured.response.data)||!fresh(captured.retrievedAt,Date.now()))throw Error('authenticated_gsc_export_required');
-const isolated=await isolatedDatabase(),{db,store}=isolated;
-let bridge;
-if(v3&&!preflightOnly&&!process.env.SEO_CONTENT_EDITORIAL_URL)bridge=await startEditorialBridge({env:process.env});
-let approvedReservedMicros=0;
-const inferenceStore={...store,rpc:async(action,payload)=>{
-  if(action==='spend'&&v3){if(approvedReservedMicros+payload.micros>inferenceSettings().approvedBudgetMicros)return false;approvedReservedMicros+=payload.micros;}
-  return store.rpc(action,payload);
-}};
+let durable, durableRun;
+if(v3&&!preflightOnly){
+  if(process.env.SEO_CONTENT_EDITORIAL_URL)throw Error('private_remote_gateway_not_supported');
+  durable=await configuredLedger();
+  try{
+    const state=await durable.ledger.read();
+    durableRun=state.runs[process.env.SEO_CONTENT_RUN_ID];
+    if(!durableRun)throw Error('private_resume_existing_run_required');
+    if(state.reconciliation.status!=='RECONCILED')throw Error('private_consumption_unknown');
+    if(Object.values(state.calls).some(call=>call.status!=='COMPLETE'))throw Error('private_call_outcome_unknown');
+    const settings=inferenceSettings();
+    if(hash(durableRun.configuration)!==hash(settings))throw Error('private_run_configuration_conflict');
+  }catch(error){await durable.close();throw error;}
+}
+const captured=durableRun?.gsc||JSON.parse(await readFile(file,'utf8'));
+if(captured.provider!=='windsor/searchconsole'||captured.account!=='https://www.yincorp.com.br/'||captured.response?.status!=='done'||!Array.isArray(captured.response.data)||!fresh(captured.retrievedAt,Date.now())){if(durable)await durable.close();throw Error('authenticated_gsc_export_required');}
+const isolated=await isolatedDatabase().catch(async error=>{if(durable)await durable.close();throw error;}),{db,store}=isolated;
+// V3 real inference is exclusively backed by the private durable ledger.
 const report={version:2,commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),observedAt:new Date().toISOString(),environment:'isolated local PostgreSQL WASM; actual provider reads; no remote database writes',autopublish:false,cronActivated:false,integrations:{gsc:{status:'CONNECTED_READ',transport:'Windsor authenticated connector export',account:captured.account,windowStart:captured.windowStart,windowEnd:captured.windowEnd,rows:captured.response.data.length,exportDigest:hash(captured),runtimeRefresh:'BLOCKED: no OAuth/export scheduler copied into runtime'},supabase:{status:'PENDING_LIVE_READ'},research:{status:'PENDING_LIVE_READ'},ai:{status:'BLOCKED',reason:'No local editorial credential/models/rates; configured secrets in existing projects were not decrypted or copied'},ads:{status:'BLOCKED',reason:'Existing MIA credential owner retained; no authorized aggregate transport to local pipeline'},ga4:{status:'BLOCKED',reason:'Existing MIA credential owner retained; no authorized aggregate transport to local pipeline'}},states:[],publications:0,cost:{generationActualUSD:0,researchBilling:'No paid research provider used; public HTTPS reads only',estimatedGenerationUSD:null}};
 try{
   if(v3){report.version=3;report.preflight=readiness;report.providerRequests=0;}
@@ -51,6 +61,7 @@ try{
     const gates=Object.fromEntries(GATES.map(g=>[g,{status:'UNKNOWN',evidence:'No article generated or independently audited'}]));
     const result={state,status:'BLOCKED',article:null,gates,blockers:[]};
     report.states.push(result);
+    if(durableRun?.articles[state]?.status==='NEEDS_REVIEW'){result.status='PRIVATE_DRAFT';result.article={durable:true,runId:durableRun.runId};result.gates=durableRun.articles[state].validations;continue;}
     let inventory;
     try{inventory=await contentInventory(state);report.integrations.supabase={status:'CONNECTED_READ',transport:'existing public Supabase reader',credential:'existing publishable inventory key; no privileged key',checkedAt:new Date().toISOString()};}catch{result.blockers.push('inventory_read_unavailable');continue;}
     const eligible=v3?inventory.filter(p=>slug(p.city)===(state==='SP'?'sao-paulo':'vitoria')&&slug(p.neighborhood)===(state==='SP'?'ipiranga':'praia-do-canto')):inventory;
@@ -78,20 +89,27 @@ try{
     try{
       if(preflightOnly)throw Error('preflight_no_inference');
       const onUsage=usage=>{(result.usage??=[]).push(usage);};
-      model=v3?authenticatedEditorial({url:bridge?.url||process.env.SEO_CONTENT_EDITORIAL_URL,token:bridge?.token||process.env.SEO_CONTENT_EDITORIAL_TOKEN,store:inferenceStore,runRef:()=>run,models:inferenceSettings().models,allowIsolatedLoopback:Boolean(bridge),onUsage}):openaiEditorial({apiKey:process.env.SEO_OPENAI_API_KEY,models,rates:JSON.parse(process.env.SEO_CONTENT_MODEL_RATES||'null'),store,runRef:()=>run,onUsage});
+      model=durableEditorial({ledger:durable.ledger,runId:durableRun.runId,article:state,settings:inferenceSettings(),apiKey:process.env.SEO_OPENAI_API_KEY,onUsage});
     }catch(e){result.blockers.push(e.message);}
     if(result.blockers.length){await store.stage(run,reservation,'FAILED',result.blockers[0]);await store.finish(run,'FAILED',result.blockers[0]);continue;}
-    const callModel=model;model=async(...args)=>{result.generationAttempted=true;result.gatewayAttempts=(result.gatewayAttempts||0)+1;report.cost.generationActualUSD=null;return callModel(...args);};
+    const callModel=model;model=async(...args)=>{result.generationAttempted=true;result.modelInvocations=(result.modelInvocations||0)+1;report.cost.generationActualUSD=null;return callModel(...args);};
     const agents=createEditorialAgents({model,checkLinks:checkPublicLinks,requireAuditReceipt:v3,auditReceipt:()=>result.usage?.filter(u=>u.stage==='audit').at(-1),writerReceipt:()=>result.usage?.filter(u=>u.stage==='write').at(-1),writerModel:models.write});
     try{
-      const context={...await model('research',{opportunity,sources,inventory:stock},'Pesquise somente nas fontes recuperadas. Retorne perguntas, comparação e fatos citados. JSON.'),sources};
-      await store.stage(run,reservation,'DRAFT');const content=await agents.write(opportunity,context);await store.stage(run,reservation,'VERIFYING');
-      const validations=await agents.verify({opportunity,context,content,stock,pages:[]});
-      const article={id:reservation.id,state,path:opportunity.targetCanonical,topicKey:opportunity.topicKey,status:'NEEDS_REVIEW',content,validations,validatedHash:hash(content),verifiedAt:new Date().toISOString(),sources};
-      await store.save(run,article);await store.finish(run,'COMPLETE');
-      const privateDir=v3?`.seo-test/articles/v3/${reservation.id}`:'.seo-test/articles';
-      await mkdir(privateDir,{recursive:true});await writeFile(`${privateDir}/${state}.json`,JSON.stringify(article,null,2));await writeFile(`${privateDir}/${state}.html`,renderArticle(article,{preview:true,stock}));
-      result.status='PRIVATE_DRAFT';result.article={privatePath:`${privateDir}/${state}.html`,contentHash:hash(content)};result.gates=validations;report.integrations.ai={status:'CONNECTED_GENERATION',transport:v3?'authenticated editorial contract → OpenAI Responses':'OpenAI Responses; existing env only'};
+      // Reuse immutable source/inventory inputs on restart; changed live evidence
+      // requires a reviewed new content revision, never another paid call silently.
+      let savedInput={opportunity,sources,inventory:stock};
+      if(durable){
+        const saved=(await durable.ledger.read()).runs[durableRun.runId].checkpoints[state+'/inputs'];
+        if(saved){if(saved.sources.some(source=>!fresh(source.observedAt,Date.now())))throw Error('private_saved_sources_stale');savedInput=saved;}
+        else await durable.ledger.checkpoint(durableRun.runId,state+'/inputs',savedInput);
+      }
+      const context={...await model('research',savedInput,'Pesquise somente nas fontes recuperadas. Retorne perguntas, comparação e fatos citados. JSON.'),sources:savedInput.sources};
+      await store.stage(run,reservation,'DRAFT');const content=await agents.write(savedInput.opportunity,context);await store.stage(run,reservation,'VERIFYING');
+      const validations=await agents.verify({opportunity:savedInput.opportunity,context,content,stock:savedInput.inventory,pages:[]});
+      const article={id:durable?durableRun.articles[state].id:reservation.id,state,path:savedInput.opportunity.targetCanonical,topicKey:savedInput.opportunity.topicKey,status:'NEEDS_REVIEW',content,validations,validatedHash:hash(content),verifiedAt:new Date().toISOString(),sources:savedInput.sources};
+      if(durable)await durable.ledger.article(durableRun.runId,state,article);
+      await store.save(run,{...article,id:reservation.id});await store.finish(run,'COMPLETE');
+      result.status='PRIVATE_DRAFT';result.article={runId:durableRun.runId,state,storage:'seo_engine',contentHash:hash(content)};result.gates=validations;report.integrations.ai={status:'CONNECTED_GENERATION',transport:'private durable ledger → OpenAI Responses'};
     }catch(e){result.blockers.push(/^[a-z_]+$/.test(e.message)?e.message:'editorial_provider_failure');await store.stage(run,reservation,'FAILED',result.blockers.at(-1));await store.finish(run,'FAILED');}
   }
   report.publications=Number((await db.query("select count(*) n from seo_articles where status='PUBLISHED'")).rows[0].n);
@@ -99,8 +117,14 @@ try{
   report.states.forEach(s=>{if(s.usage?.length){report.cost.generationActualUSD=null;report.cost.estimatedGenerationUSD=(report.cost.estimatedGenerationUSD||0)+s.usage.reduce((sum,u)=>sum+u.estimatedMicros/1000000,0);}});
   if(preflightOnly){report.mode='READ_ONLY_PREFLIGHT';report.integrations.ai={status:'NOT_EXECUTED',reason:'preflight_no_inference'};report.status='BLOCKED';report.generationReadiness=readiness;report.remoteDatabaseWrites=0;report.configuredModels=Object.fromEntries(['research','write','audit'].map(stage=>[stage,process.env['SEO_CONTENT_'+stage.toUpperCase()+'_MODEL']||null]));report.configuredRates=JSON.parse(process.env.SEO_CONTENT_MODEL_RATES||'null');report.modelAccess='UNKNOWN: authenticated account model listing not performed';report.budget={authorized:readiness.budgetAuthorized,contractReservationForSixCallsMicros:600000,maxOutputTokensPerCall:4000,maxInputBytesPerCall:40000,maxCostMicrosPerCall:100000,automaticRetries:0};}
   const out=v3?'docs/evidence/v3':'docs/evidence/v2';
-  if(v3){report.gatewayAttempts=report.states.reduce((n,s)=>n+(s.gatewayAttempts||0),0);report.completedProviderReceipts=report.states.reduce((n,s)=>n+(s.usage?.length||0),0);report.providerRequests=bridge?bridge.providerRequests():report.gatewayAttempts?null:0;report.approvedReservedMicros=approvedReservedMicros;report.bridgeReservedMicros=bridge?.reserved()??null;}
-  await mkdir(out,{recursive:true});await writeFile(out+(preflightOnly?'/preflight.json':v3?'/inference.json':'/editorial-demo.json'),JSON.stringify(report,null,2)+'\n');
+  if(v3){report.modelInvocations=report.states.reduce((n,s)=>n+(s.modelInvocations||0),0);report.completedProviderReceipts=report.states.reduce((n,s)=>n+(s.usage?.length||0),0);report.providerRequests=report.modelInvocations?null:0;}
+  if(durable){
+    const persisted=await durable.ledger.read();
+    report.providerRequests=null;report.providerAttemptsUpperBound=Object.keys(persisted.calls).length;
+    report.cost={estimatedRecordedMicros:persisted.estimatedMicros,reservedMicros:persisted.reservedMicros,historicalReconciliation:persisted.reconciliation.status,billedTotalUSD:null};
+    await durable.ledger.checkpoint(durableRun.runId,'report/'+new Date().toISOString(),report);
+  }
+  else {await mkdir(out,{recursive:true});await writeFile(out+(preflightOnly?'/preflight.json':v3?'/inference.json':'/editorial-demo.json'),JSON.stringify(report,null,2)+'\n');}
   console.log(JSON.stringify({states:report.states.map(s=>({state:s.state,status:s.status,query:s.opportunity?.query,blockers:s.blockers})),publications:report.publications}));
-}finally{if(bridge)await bridge.close();await db.close();}
+}finally{await db.close();if(durable)await durable.close();}
 }
