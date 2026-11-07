@@ -54,23 +54,33 @@
     },
     {
       "source": "/sp/empreendimentos/mandarim-the-legend/",
-      "destination": "/sp/empreendimentos/mandarim-the-legend",
+      "destination": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
       "permanent": true
     },
     {
       "source": "/mandarim-the-legend",
-      "destination": "/sp/empreendimentos/mandarim-the-legend",
+      "destination": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
       "permanent": true
     },
     {
       "source": "/mandarim-the-legend/index.html",
-      "destination": "/sp/empreendimentos/mandarim-the-legend",
+      "destination": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
+      "permanent": true
+    },
+    {
+      "source": "/sp/empreendimentos/mandarim-the-legend",
+      "destination": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
+      "permanent": true
+    },
+    {
+      "source": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch/",
+      "destination": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
       "permanent": true
     }
   ],
   "rewrites": [
     {
-      "source": "/sp/empreendimentos/mandarim-the-legend",
+      "source": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
       "destination": "/mandarim-the-legend/index.html"
     },
     {

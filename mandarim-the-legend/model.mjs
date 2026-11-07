@@ -1,4 +1,4 @@
-export const CANONICAL='https://www.yincorp.com.br/sp/empreendimentos/mandarim-the-legend';
+export const CANONICAL='https://www.yincorp.com.br/sp/empreendimentos/mandarim-the-legend/lucas.schoch';
 export const brl=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0}).format(n);
 export const decimal=n=>new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
 export const describe=u=>`${u.floor}º andar · final ${u.final} · ${decimal(u.area)} m²`;
