@@ -9,7 +9,7 @@ import {corpusDigest} from './lib/seo-content/comparison-corpus.js';
 import {runProduction,collectSources} from './lib/seo-content/production.js';
 import {publishedArticles,publishArticle,withdrawArticle} from './lib/seo-content/publication.js';
 import {safeFailure,inspectStorage,inspectClientTls,ledgerConfigurationIssues} from './lib/seo-content/diagnostics.js';
-import {gscSnapshot} from './lib/seo-content/gsc-snapshot.js';
+import {gscSnapshot,safeWindsorHints} from './lib/seo-content/gsc-snapshot.js';
 import {createRunner} from './api/seo-content-runner.js';
 import {createContentHandler} from './lib/seo-content/render.js';
 import {authorizeWeekly,calendar,financialSummary} from './lib/seo-content/weekly-policy.js';
@@ -199,6 +199,7 @@ test('provider preflight validates project without inference and Windsor rejects
   await assert.rejects(gscSnapshot({env:configured,now:when+8*86400000,fetcher}),/gsc_windsor_invalid/);
   await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>new Response('API key not found: '+secret,{status:400})}),e=>e.message==='gsc_windsor_credentials_rejected'&&!e.message.includes(secret));
   await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>Response.json({error:'Not authorized',code:'unauthorized'},{status:400})}),/gsc_windsor_credentials_rejected/);
+  assert.deepEqual(safeWindsorHints('Invalid filter JSON. '+secret+' https://example.invalid/?api_key=abcdef0123456789'),['invalid','filter','json','key','api_key']);
   await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>new Response('Your subscription requires an upgrade. '+secret,{status:400})}),e=>e.message==='gsc_windsor_subscription_required'&&!e.message.includes(secret));
 });
 
