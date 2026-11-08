@@ -33,7 +33,7 @@ test('every missing, FAIL or UNKNOWN gate blocks; revisions, freshness and switc
 });
 test('editorial checks independently reject fabricated facts, source tampering and unsafe links',async()=>{
   const o=opportunity(),a=article(o),agents=createEditorialAgents({model:async()=>passes(),checkLinks:async x=>x.map(()=>true),now:()=>now,releaseEvidence:()=>({status:'PASS',evidence:'isolated CI proof'})});
-  const input={opportunity:{...o,topicKey:topicKey(o)},content:a.content,context:{sources:a.sources},stock:stock(o),pages:[]};
+  const input={opportunity:{...o,topicKey:topicKey(o)},content:a.content,context:{sources:a.sources},stock:stock(o),pages:[{path:'/sp/conteudos/outro-fixture',topicKey:'other-fixture',title:'Outra pauta sintética',text:'Comparação sintética independente para testar a verificação de corpus.'}]};
   assert.ok(Object.values(await agents.verify(input)).every(v=>v.status==='PASS'));
   const tampered=structuredClone(input);tampered.context.sources[0].excerpt='inventado';assert.equal((await agents.verify(tampered)).sources.status,'FAIL');
   const invented=structuredClone(input);invented.content.claims[0].text='Preço sobe 20%';assert.equal((await agents.verify(invented)).facts.status,'FAIL');

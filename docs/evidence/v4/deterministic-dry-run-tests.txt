@@ -1,0 +1,25 @@
+✔ seven-day actual SQL simulation: 35 SP + 35 ES, duplicate workers, no publication (3732.3219ms)
+✔ SQL gates, independent quotas, budget, stale lease fencing, retries, RLS and rollback (1185.1595ms)
+✔ missing comparison corpus cannot turn a model assertion into cannibalization or originality PASS (6.8491ms)
+✔ inventory gate rejects the wrong neighborhood even inside the right city and state (2.591ms)
+✔ deterministic runner refuses enabled inference or publication before reading inputs (722.4936ms)
+✔ only exact direct and session pooler tenant pairs retain verified TLS (4.4345ms)
+✔ pooler rejects other projects, administrative logins, transaction port and TLS overrides (2.1132ms)
+✔ GSC reads final query/page evidence and derives geography only from exact inventory canonical (68.2823ms)
+✔ GA4 request is reporting only and bounds pagination (2.1168ms)
+✔ monitor preserves missing measurements and rejects cross-state attribution (1.0194ms)
+✔ editorial spend is reserved before the model and a rejected budget makes no external call (0.5789ms)
+✔ safe defaults, quotas and credential authorization (7.2978ms)
+✔ score requires real observed demand, inventory and geographic relevance; rejects cannibalization (8.0514ms)
+✔ every missing, FAIL or UNKNOWN gate blocks; revisions, freshness and switches block (6.6902ms)
+✔ editorial checks independently reject fabricated facts, source tampering and unsafe links (7.8182ms)
+✔ external failures, bounded retries, evidence contracts and no credentials in error text (66.1962ms)
+✔ SSR canonical, schemas, escaped content, private preview and sitemap publication filtering (5.5322ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5258.0529

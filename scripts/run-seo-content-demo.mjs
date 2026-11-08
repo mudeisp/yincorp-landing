@@ -1,3 +1,5 @@
+import {randomUUID} from 'node:crypto';
+import {renderArticle} from '../lib/seo-content/render.js';
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {contentInventory} from '../lib/seo-content/inventory.js';
@@ -14,6 +16,9 @@ import {durableEditorial} from '../lib/seo-content/durable-editorial.js';
 
 const v3=process.argv.includes('--inference-v3');
 const preflightOnly=process.argv.includes('--preflight-only');
+const deterministicDryRun=process.argv.includes('--deterministic-dry-run');
+if(deterministicDryRun&&(!preflightOnly||process.env.SEO_CONTENT_INFERENCE_AUTHORIZED!=='false'||process.env.SEO_CONTENT_AUTOPUBLISH!=='false'))throw Error('deterministic_dry_run_requires_private_disabled_inference');
+const dryRunDirectory=deterministicDryRun?'.seo-test/deterministic-dry-run/'+randomUUID():null;
 if(preflightOnly&&!v3)throw Error('preflight_requires_v3');
 if(!v3)throw Error('private_durable_runner_required');
 // Hard boundary: preflight can make GET reads only, even if credentials and spending authorization exist.
@@ -84,6 +89,30 @@ try{
     report.integrations.research={status:sources.length?'CONNECTED_READ':'BLOCKED',transport:'DNS-pinned HTTPS; exact-host/path allowlist; no redirects'};
     if(sources.length<2||!sources.some(s=>new URL(s.url).hostname!=='www.yincorp.com.br'))result.blockers.push('insufficient_independent_primary_sources');
     else result.gates.sources={status:'PASS',evidence:'Fetched official city source and current canonical inventory source with byte limits and integrity hashes'};
+    if(deterministicDryRun){
+      if(result.blockers.length){await store.stage(run,reservation,'FAILED',result.blockers[0]);await store.finish(run,'FAILED');continue;}
+      // Explicit deterministic fixture through the existing editorial ports. No provider adapter.
+      const fixture={title:'Simulação: '+opportunity.query,description:'Simulação técnica privada para '+opportunity.neighborhood+', '+opportunity.city+'. Não é artigo produzido ou aprovado por IA.',
+        introduction:'Esta simulação determinística verifica a integração com o inventário consultado. Não é uma oferta nem um artigo editorial aprovado.',
+        sections:[{heading:'Inventário consultado em '+opportunity.neighborhood,level:2,text:stock.map(p=>p.name).join('; ')+'.',claims:[]},
+          {heading:'Pontos a confirmar no atendimento',level:3,text:'Confirme as condições atuais, a localização exata e as características da unidade antes de decidir. Esta simulação não informa preço, metragem, valorização ou infraestrutura do bairro.',claims:[]}],
+        questions:[{question:'Quais ofertas foram consultadas?',answer:stock.slice(0,2).map(p=>p.name).join('; ')+'.'},{question:'Os dados substituem a confirmação comercial?',answer:'Não. Consulte a equipe para confirmar condições e disponibilidade.'}],
+        internalLinks:[{path:'/'+state.toLowerCase(),label:'Imóveis em '+state},...stock.slice(0,2).map(p=>({path:p.path,label:p.name}))],
+        cta:'Consulte a Yincorp para confirmar as ofertas indicadas no inventário.',
+        claims:stock.flatMap(p=>{const source=sources.find(s=>s.url===ORIGIN+p.path&&s.excerpt.includes(p.name));return source?[{text:p.name,sourceUrl:source.url}]:[];})};
+      const simulatedModel=async(stage)=>stage==='write'?structuredClone(fixture):Object.fromEntries(GATES.map(g=>[g,{status:'UNKNOWN',evidence:'Simulação determinística sem inferência ou auditoria editorial independente'}]));
+      const agents=createEditorialAgents({model:simulatedModel,checkLinks:checkPublicLinks,requireAuditReceipt:true});
+      const context={sources,inventory:stock,simulation:true};
+      await store.stage(run,reservation,'DRAFT');const content=await agents.write(opportunity,context);await store.stage(run,reservation,'VERIFYING');
+      const validations=await agents.verify({opportunity,context,content,stock,pages:[]});
+      const article={id:reservation.id,state,path:opportunity.targetCanonical,topicKey:opportunity.topicKey,status:'NEEDS_REVIEW',content,validations,validatedHash:hash(content),verifiedAt:new Date().toISOString(),sources,simulation:true};
+      await store.save(run,article);await store.finish(run,'COMPLETE');
+      await mkdir(dryRunDirectory,{recursive:true});const privateJson=dryRunDirectory+'/'+state+'.json',privateHtml=dryRunDirectory+'/'+state+'.html';
+      const markup=renderArticle(article,{preview:true,stock});await writeFile(privateJson,JSON.stringify(article,null,2)+'\n');await writeFile(privateHtml,markup);
+      result.status='DETERMINISTIC_SIMULATION';result.article=null;result.gates=validations;
+      result.simulation={privateJson,privateHtml,contentHash:hash(content),title:content.title,headings:content.sections.map(s=>({level:s.level,text:s.heading})),canonical:ORIGIN+article.path,modelCalls:0,notAnEditorialArticle:true,technicalChecks:{oneH1:(markup.match(/<h1\b/g)||[]).length===1,canonical:markup.includes(ORIGIN+article.path),privateNoindex:markup.includes('noindex'),titleLength:content.title.length<=75,descriptionLength:content.description.length<=170,headings:content.sections.every(s=>[2,3].includes(s.level)),exactGeography:stock.every(p=>p.state===state&&slug(p.city)===slug(opportunity.city)&&slug(p.neighborhood)===slug(opportunity.neighborhood)),noPricesOrAreas:!/(?:R\$|m²)\s*\d/.test(JSON.stringify(content))}};
+      continue;
+    }
     const models={research:process.env.SEO_CONTENT_RESEARCH_MODEL,write:process.env.SEO_CONTENT_WRITE_MODEL,audit:process.env.SEO_CONTENT_AUDIT_MODEL};
     let model;
     try{
@@ -124,7 +153,7 @@ try{
     report.cost={estimatedRecordedMicros:persisted.estimatedMicros,reservedMicros:persisted.reservedMicros,historicalReconciliation:persisted.reconciliation.status,billedTotalUSD:null};
     await durable.ledger.checkpoint(durableRun.runId,'report/'+new Date().toISOString(),report);
   }
-  else {await mkdir(out,{recursive:true});await writeFile(out+(preflightOnly?'/preflight.json':v3?'/inference.json':'/editorial-demo.json'),JSON.stringify(report,null,2)+'\n');}
-  console.log(JSON.stringify({states:report.states.map(s=>({state:s.state,status:s.status,query:s.opportunity?.query,blockers:s.blockers})),publications:report.publications}));
+  else {const reportDir=deterministicDryRun?dryRunDirectory:out;await mkdir(reportDir,{recursive:true});await writeFile(reportDir+(deterministicDryRun?'/report.json':preflightOnly?'/preflight.json':v3?'/inference.json':'/editorial-demo.json'),JSON.stringify(report,null,2)+'\n');}
+  console.log(JSON.stringify({states:report.states.map(s=>({state:s.state,status:s.status,query:s.opportunity?.query,blockers:s.blockers})),publications:report.publications,...deterministicDryRun?{privateReport:dryRunDirectory+'/report.json'}:{}}));
 }finally{await db.close();if(durable)await durable.close();}
 }

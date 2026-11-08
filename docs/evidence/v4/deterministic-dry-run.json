@@ -1,0 +1,240 @@
+{
+  "referenceCommit": "e5f35bfe0b63116eaa171d0047bf29ac08a3d23a",
+  "observedAt": "2026-11-08T02:37:31.971Z",
+  "mode": "DETERMINISTIC_SIMULATION_NOT_EDITORIAL_GENERATION",
+  "simulationCompleted": true,
+  "gsc": {
+    "status": "CONNECTED_READ",
+    "transport": "Windsor authenticated connector export",
+    "account": "https://www.yincorp.com.br/",
+    "windowStart": "2026-10-08",
+    "windowEnd": "2026-11-04",
+    "rows": 326,
+    "exportDigest": "1fa9bd4e7ca5584f19c3d22d75fe913cb127fac7334a173669589cec306179ed",
+    "runtimeRefresh": "BLOCKED: no OAuth/export scheduler copied into runtime"
+  },
+  "states": [
+    {
+      "state": "SP",
+      "city": "São Paulo",
+      "neighborhood": "Ipiranga",
+      "proposedCanonical": "https://www.yincorp.com.br/sp/conteudos/como-avaliar-imoveis-em-ipiranga-sao-paulo",
+      "contentHash": "6bd4df4f00159489a539213d2658ef9d947f703ac0607aa24fb5f29139b51bf7",
+      "technicalChecks": {
+        "oneH1": true,
+        "canonical": true,
+        "privateNoindex": true,
+        "titleLength": true,
+        "descriptionLength": true,
+        "headings": true,
+        "exactGeography": true,
+        "noPricesOrAreas": true
+      },
+      "gateStatuses": {
+        "sources": "UNKNOWN",
+        "facts": "UNKNOWN",
+        "originality": "UNKNOWN",
+        "cannibalization": "UNKNOWN",
+        "geography": "UNKNOWN",
+        "inventory": "UNKNOWN",
+        "links": "UNKNOWN",
+        "editorial": "UNKNOWN",
+        "security": "UNKNOWN",
+        "canonical": "UNKNOWN",
+        "sitemap": "UNKNOWN",
+        "tests": "UNKNOWN"
+      },
+      "inventory": [
+        {
+          "name": "Villa Arvo",
+          "path": "/sp/sao-paulo/empreendimento/villa-arvo--orulo-51619",
+          "city": "São Paulo",
+          "neighborhood": "Ipiranga",
+          "checkedAt": "2026-11-08T02:37:35.413Z"
+        },
+        {
+          "name": "Versos Ipiranga - Residencial",
+          "path": "/sp/sao-paulo/empreendimento/versos-ipiranga-residencial--orulo-31285",
+          "city": "São Paulo",
+          "neighborhood": "Ipiranga",
+          "checkedAt": "2026-11-08T02:37:35.413Z"
+        },
+        {
+          "name": "Palatium Ipiranga",
+          "path": "/sp/sao-paulo/empreendimento/palatium-ipiranga--orulo-42654",
+          "city": "São Paulo",
+          "neighborhood": "Ipiranga",
+          "checkedAt": "2026-11-08T02:37:35.413Z"
+        },
+        {
+          "name": "Welconx Chácara Klabin - NR",
+          "path": "/sp/sao-paulo/empreendimento/welconx-chacara-klabin-nr--orulo-28641",
+          "city": "São Paulo",
+          "neighborhood": "Ipiranga",
+          "checkedAt": "2026-11-08T02:37:35.413Z"
+        },
+        {
+          "name": "Elev Park Sacomã III",
+          "path": "/sp/sao-paulo/empreendimento/elev-park-sacoma-iii--orulo-76454",
+          "city": "São Paulo",
+          "neighborhood": "Ipiranga",
+          "checkedAt": "2026-11-08T02:37:35.413Z"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.ibge.gov.br/cidades-e-estados/sp/sao-paulo.html",
+          "status": "BLOCKED",
+          "reason": "source_http_unavailable"
+        },
+        {
+          "url": "https://prefeitura.sp.gov.br/web/ipiranga/w/historico/160",
+          "observedAt": "2026-11-08T02:37:47.725Z",
+          "digest": "56690d7c9618079f3e468aa0af94154e087affc59b822a6c12a565d121b110bf",
+          "bodyDigest": "eab85e3ba29647e15b7203006863517389c9caec5741d5539a8080a293ae5d04",
+          "bytes": 166204,
+          "transport": "https_dns_pinned"
+        },
+        {
+          "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/villa-arvo--orulo-51619",
+          "observedAt": "2026-11-08T02:37:49.137Z",
+          "digest": "462ebc9fe0f180d2eb23f140515b483a392bc436352fd0374641db2729dd2d7b",
+          "bodyDigest": "eabb695321705cdb1a2dbec95491790e67c70ec5a46510d096bc0f4434cc86fe",
+          "bytes": 42986,
+          "transport": "https_dns_pinned"
+        },
+        {
+          "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/versos-ipiranga-residencial--orulo-31285",
+          "observedAt": "2026-11-08T02:37:50.366Z",
+          "digest": "4cfa3ab4ca6ceaf14bbd68098e05e4a61cc9049f941bed3a3e9777cf87a40b13",
+          "bodyDigest": "55418d48227e0c06a332bb4b689484682ac7fa400e5f93c586804226449baf09",
+          "bytes": 33289,
+          "transport": "https_dns_pinned"
+        }
+      ]
+    },
+    {
+      "state": "ES",
+      "city": "Vitória",
+      "neighborhood": "Praia do Canto",
+      "proposedCanonical": "https://www.yincorp.com.br/es/conteudos/como-avaliar-imoveis-em-praia-do-canto-vitoria",
+      "contentHash": "0575f10d4ed617a162f8eec19c450dd4d913fef8dfbff4a4cf03254fc05efece",
+      "technicalChecks": {
+        "oneH1": true,
+        "canonical": true,
+        "privateNoindex": true,
+        "titleLength": true,
+        "descriptionLength": true,
+        "headings": true,
+        "exactGeography": true,
+        "noPricesOrAreas": true
+      },
+      "gateStatuses": {
+        "sources": "UNKNOWN",
+        "facts": "UNKNOWN",
+        "originality": "UNKNOWN",
+        "cannibalization": "UNKNOWN",
+        "geography": "UNKNOWN",
+        "inventory": "UNKNOWN",
+        "links": "UNKNOWN",
+        "editorial": "UNKNOWN",
+        "security": "UNKNOWN",
+        "canonical": "UNKNOWN",
+        "sitemap": "UNKNOWN",
+        "tests": "UNKNOWN"
+      },
+      "inventory": [
+        {
+          "name": "FIT@370",
+          "path": "/es/vitoria/empreendimento/fit-370--orulo-72212",
+          "city": "Vitória",
+          "neighborhood": "Praia do Canto",
+          "checkedAt": "2026-11-08T02:37:53.950Z"
+        },
+        {
+          "name": "Brettas Boutique Residence",
+          "path": "/es/vitoria/empreendimento/brettas-boutique-residence--orulo-85087",
+          "city": "Vitória",
+          "neighborhood": "Praia do Canto",
+          "checkedAt": "2026-11-08T02:37:53.950Z"
+        },
+        {
+          "name": "AIR@225",
+          "path": "/es/vitoria/empreendimento/air-225--orulo-72211",
+          "city": "Vitória",
+          "neighborhood": "Praia do Canto",
+          "checkedAt": "2026-11-08T02:37:53.950Z"
+        },
+        {
+          "name": "Soul for Life",
+          "path": "/es/vitoria/empreendimento/soul-for-life--orulo-64547",
+          "city": "Vitória",
+          "neighborhood": "Praia do Canto",
+          "checkedAt": "2026-11-08T02:37:53.950Z"
+        },
+        {
+          "name": "Forma Praia do Canto",
+          "path": "/es/vitoria/empreendimento/forma-praia-do-canto--orulo-85079",
+          "city": "Vitória",
+          "neighborhood": "Praia do Canto",
+          "checkedAt": "2026-11-08T02:37:53.950Z"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.ibge.gov.br/cidades-e-estados/es/vitoria.html",
+          "status": "BLOCKED",
+          "reason": "source_http_unavailable"
+        },
+        {
+          "url": "https://www.vitoria.es.gov.br/semc/triangulo-das-bermudas-e-rua-viva",
+          "observedAt": "2026-11-08T02:37:54.604Z",
+          "digest": "1142ea7507575e8ae8a98bb7d91ed4baa03272f4327457b0d06d2f7585734bd6",
+          "bodyDigest": "afc067a31fd1aca12803cbf01d02e6076c5404365d618a508bbfeb6ec673a5a8",
+          "bytes": 229913,
+          "transport": "https_dns_pinned"
+        },
+        {
+          "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/fit-370--orulo-72212",
+          "observedAt": "2026-11-08T02:37:55.433Z",
+          "digest": "a499e8cbf4776c87f875e7997ac96b67f7c9959a682b92247a130b833edf575e",
+          "bodyDigest": "4b1461b22b8564c32d1bf6a83578161385a94fc6aa27eaafbad20140b9ced0ff",
+          "bytes": 66824,
+          "transport": "https_dns_pinned"
+        },
+        {
+          "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/brettas-boutique-residence--orulo-85087",
+          "observedAt": "2026-11-08T02:37:55.825Z",
+          "digest": "92e162c53f5f8567cf029b1a6623e5cb3f95b6d92b883b173b3daf886a3cd276",
+          "bodyDigest": "63751f887c1d1d63a1308a2659967049129c7747c850bf1f3616fe396685a75b",
+          "bytes": 28561,
+          "transport": "https_dns_pinned"
+        }
+      ]
+    }
+  ],
+  "providerRequests": 0,
+  "modelCalls": 0,
+  "remoteDatabaseWrites": 0,
+  "publications": 0,
+  "inferenceAuthorized": false,
+  "autopublish": false,
+  "currentInferenceCostUSD": 0,
+  "historicalOpenAISpend": "UNKNOWN",
+  "historicalBalance": "UNKNOWN",
+  "directAuthentication": "Previously validated by operator; not repeated",
+  "pooler28P01": "Authentication rejection; specific cause not established without private routing/encoding metadata",
+  "sharedLedger": "Not connected or initialized by this run; local PGlite persistence only",
+  "sourceCodeProvenance": {
+    "checkoutHead": "2604328cd2fa0ebb7d614076480b013a1b29f0ac",
+    "worktreeDirty": true,
+    "sourceDigests": {
+      "lib/seo-content/discovery.js": "a9ab478ab75edb5837d5f9219f04b4012d763736b05636a5493cc09ba9cf2561",
+      "lib/seo-content/sources.js": "3024491fa4a2c88cb36a657183221e8938ad02698c26330f04b544a7faab616b",
+      "lib/seo-content/openai-editorial.js": "d39e561dff444c6035b0311774d27d2a31b2fa0f0b131c411e29be13dfefc8d5",
+      "lib/seo-content/inventory.js": "92845738e8fbbd1d41d8386a1685e61bb9e5178b7e352815b0150798b0485cb3",
+      "lib/seo-content/core.js": "0b973acb8801414072acb94cb9fa7881590cc4ec12db05a2505fcf1bc8cfd850",
+      "scripts/run-seo-content-demo.mjs": "4eadd11b7a1d4923440388e2e505ab2fa7da877a21336b193f4fe137c9fd75ed"
+    }
+  }
+}
