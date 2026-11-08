@@ -6,7 +6,7 @@ import {PGlite} from '@electric-sql/pglite';
 import {DurableLedger,assertLedgerRole} from './lib/seo-content/durable-ledger.js';
 import {GATES,ORIGIN,hash} from './lib/seo-content/core.js';
 import {corpusDigest} from './lib/seo-content/comparison-corpus.js';
-import {runProduction} from './lib/seo-content/production.js';
+import {runProduction,collectSources} from './lib/seo-content/production.js';
 import {publishedArticles,publishArticle,withdrawArticle} from './lib/seo-content/publication.js';
 import {safeFailure,inspectStorage,inspectClientTls,ledgerConfigurationIssues} from './lib/seo-content/diagnostics.js';
 import {gscSnapshot} from './lib/seo-content/gsc-snapshot.js';
@@ -197,4 +197,10 @@ test('provider preflight validates project without inference and Windsor rejects
   const result=await providerPreflight({env:configured,fetcher,now:when});assert.equal(result.status,'READY');assert.equal(result.gsc.rows,2);assert.doesNotMatch(JSON.stringify(result),new RegExp(secret));assert.equal(requests.length,3);
   await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>{throw Error('https://provider?api_key='+secret);}}),e=>!e.message.includes(secret)&&e.message==='gsc_windsor_unavailable');
   await assert.rejects(gscSnapshot({env:configured,now:when+8*86400000,fetcher}),/gsc_windsor_invalid/);
+});
+
+test('a blocked IBGE source preserves verified municipal and inventory sources, never substitutes unverified evidence',async()=>{
+  const retrieve=()=>async url=>{if(url.includes('ibge.gov.br'))throw Error('source_http_unavailable');return {url,excerpt,observedAt:stamp,digest:hash(excerpt)};};
+  const result=await collectSources({state:'SP',city:'São Paulo'},stock,{retrieve});assert.equal(result.length,2);assert.ok(result.some(s=>s.url.startsWith('https://prefeitura.sp.gov.br/')));assert.ok(result.some(s=>s.url.startsWith(ORIGIN)));
+  await assert.rejects(collectSources({state:'SP',city:'São Paulo'},stock,{retrieve:()=>async url=>{if(!url.startsWith(ORIGIN))throw Error('source_http_unavailable');return {url};}}),/independent_sources_required/);
 });
