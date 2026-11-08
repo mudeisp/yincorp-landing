@@ -3,6 +3,21 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/guilherme-vita",
+      "destination": "/guilherme.vita",
+      "permanent": true
+    },
+    {
+      "source": "/guilherme.vita/",
+      "destination": "/guilherme.vita",
+      "permanent": true
+    },
+    {
+      "source": "/guilherme-vita/",
+      "destination": "/guilherme.vita",
+      "permanent": true
+    },
+    {
       "source": "/institucional",
       "destination": "/",
       "permanent": true
@@ -79,6 +94,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/guilherme.vita",
+      "destination": "/guilherme.vita/index.html"
+    },
     {
       "source": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
       "destination": "/mandarim-the-legend/index.html"
