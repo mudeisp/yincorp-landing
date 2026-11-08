@@ -1,0 +1,1069 @@
+{
+  "version": "4.2",
+  "observedAt": "2026-11-08T03:11:05.435Z",
+  "validationSnapshotBase": "a9d006d944456ca38ac4aaa4148c10e4baed9cf8",
+  "localCheckoutReportedCommit": "2604328cd2fa0ebb7d614076480b013a1b29f0ac",
+  "note": "Isolated validation snapshot with V4.2 patches; report commit refers to old local checkout, not remote PR HEAD.",
+  "autopublish": false,
+  "inferenceAuthorized": false,
+  "newInferenceCostUSD": 0,
+  "historicalSpend": "UNKNOWN",
+  "remainingBudget": "UNKNOWN",
+  "ledger": {
+    "remoteWrites": 0,
+    "maximumRevision": null,
+    "executor": "Windows local; not an observed Cloud session",
+    "cloudPersistence": "UNKNOWN",
+    "configuredNames": [],
+    "missingNames": [
+      "SEO_CONTENT_LEDGER_DATABASE_URL",
+      "SEO_CONTENT_LEDGER_TLS_CA",
+      "SEO_CONTENT_LEDGER_KEY",
+      "SEO_CONTENT_OPENAI_PROJECT_ID"
+    ],
+    "rows": 0
+  },
+  "gsc": {
+    "status": "CONNECTED_READ",
+    "transport": "Windsor authenticated connector export",
+    "account": "https://www.yincorp.com.br/",
+    "windowStart": "2026-10-08",
+    "windowEnd": "2026-11-04",
+    "rows": 326,
+    "exportDigest": "1fa9bd4e7ca5584f19c3d22d75fe913cb127fac7334a173669589cec306179ed",
+    "runtimeRefresh": "BLOCKED: no OAuth/export scheduler copied into runtime"
+  },
+  "states": [
+    {
+      "state": "SP",
+      "status": "DETERMINISTIC_SIMULATION",
+      "corpus": {
+        "snapshotHash": "9782cebbed117a014f123daa2ccd47cd18b1a2273fe67bf6f9e312b358d459de",
+        "coverage": {
+          "scope": "public_sitemap_and_target_inventory",
+          "state": "SP",
+          "city": "São Paulo",
+          "neighborhood": "Ipiranga",
+          "expected": 57,
+          "retrieved": 57,
+          "sitemaps": [
+            {
+              "path": "/sitemap.xml",
+              "hash": "286985e1a3e37de8ce8e5b26da0df93e5b6c03c959c83b39b08f6b6e58500b5c",
+              "urls": 18
+            },
+            {
+              "path": "/sitemap-seo/sp/empreendimentos-1.xml",
+              "hash": "b1db3869df64cf5ea55caf6ea100aa9b7c74c0318810d956355860f19c5baf86",
+              "urls": 2125
+            },
+            {
+              "path": "/sitemap-seo/sp/imoveis-1.xml",
+              "hash": "939ab3e0f687c77b5e2aff133980bc2af0f05d35653a4b0613f35a61ddc10b62",
+              "urls": 890
+            },
+            {
+              "path": "/sitemap-seo/sp/lugares-1.xml",
+              "hash": "339d73767f789e3ec8e7705d3d99899fc106fb5559558e394ddd21727aa59e1c",
+              "urls": 564
+            },
+            {
+              "path": "/sitemap-static.xml",
+              "hash": "0927e63646283cc55c320c3d11a28c157326001db2dcf942485041730b88df18",
+              "urls": 8
+            }
+          ],
+          "failures": [],
+          "complete": true
+        },
+        "pages": [
+          {
+            "url": "https://www.yincorp.com.br/sp",
+            "title": "Empreendimentos em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": null,
+            "neighborhood": null,
+            "development": null,
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "119fb016c1f019c6137ef2114fcd5f9f432d4acc7b4c7140f358e36c393c9097",
+            "textHash": "3a820f9c0056b0f1b621d6944b5ecc00fce09921fb2c55bbca24bd182cc9700f",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo",
+            "title": "Empreendimentos em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": null,
+            "development": null,
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "c8f1d597c6217fc1b647112973eccb34dbf8dae8f3508261eed737551002a3de",
+            "textHash": "4c1d050b9b60555efa3bc0589bd4e14f9712e442c3543feb14f893ad5503af70",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/alma-mater--orulo-81216",
+            "title": "Alma Mater em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Alma Mater",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "3672109de973c88c7eb6f5604cffdb9e3edc5ab9f50ab78ddb3dee11c188fc05",
+            "textHash": "a7c5f8eab4616efc64a38f4036f137b669475d1a2cf2007202df96d2ae4a721e",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/arch-nazare-residence--orulo-57245",
+            "title": "Arch Nazaré Residence em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Arch Nazaré Residence",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "daa776237275acf6dd44c0b14391f2dba73af967c2b56e5dca0835664ac4b221",
+            "textHash": "8a251442ca7e65b06b9c694f170ded7b81ec6cc9fc4f1fc957d6568daeb0b337",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/arch-nazare-urban-residencial--orulo-57849",
+            "title": "Arch Nazaré Urban - Residencial em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Arch Nazaré Urban - Residencial",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "ecf3137d00ea15ae9275ec19bccf2613c80d966ba147ce57d210348c32b4d5a0",
+            "textHash": "6e621ac32fb0a7f180ebf13c8c1d1c03b0ac3f64b61d85f5985c0f9b5a083a35",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/ares-ipiranga--orulo-47224",
+            "title": "Ares Ipiranga em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Ares Ipiranga",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "ad736458f9de3f293338a6f856de5a9979e777c8b5490aaf27be0d84a8833525",
+            "textHash": "2cfb5aeb5ffeec01cba1a74d514038bea10bfeb716c0d048237498e5d3fc349f",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/ayna-ipiranga--orulo-55297",
+            "title": "Ayna Ipiranga em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Ayna Ipiranga",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "743b042827859657b468f99d207f9d5a2ee597aba284149213fed1345484e924",
+            "textHash": "2b49ca33d6677d7085dc3ba3fb8c28ffbf45a151bf48ab54119b4c3c7a80b111",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/bless-rsf-ipiranga--orulo-61968",
+            "title": "Bless RSF Ipiranga em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": null,
+            "neighborhood": null,
+            "development": null,
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "6f0a643cce2bdee57c4902ec25c2c95a0abf03484573b05fb9f9cebe2eff2dee",
+            "textHash": "70711430f4254adfcc7329e42b584c895ecc350bcfc758c56917c7fa11d466d9",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/bosque-ipiranga-residencial-fase-1--orulo-54888",
+            "title": "Bosque Ipiranga - Residencial - Fase 1 em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Bosque Ipiranga - Residencial - Fase 1",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "442aec3439976a97d9abc806971e072eea7ea4facfb482f66f3e0c763a221e05",
+            "textHash": "f5b54eee97e218b0ea5524224052a53394ce0008e6aacfeba13466b1906887d9",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/bosque-ipiranga-residencial-fase-2--orulo-64793",
+            "title": "Bosque Ipiranga - Residencial - Fase 2 em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Bosque Ipiranga - Residencial - Fase 2",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "078dc12e7d21988aa94c0d2ac767d0ae75ee9b841caca909a06f0f9c7360a37a",
+            "textHash": "197e62340998629532c6c47cf32cb0e7be224ff802261bd93ee0deaffc1c8729",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/bosque-ipiranga-residencial-fase-3--orulo-81313",
+            "title": "Bosque Ipiranga - Residencial - Fase 3 em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Bosque Ipiranga - Residencial - Fase 3",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "7c9372b62d81d43f70433ffdeae649e016ef68da839f180ff6ac72ae469041a4",
+            "textHash": "02b7666bc33be8a34ebe29192cd380596fd7b56ffe98a73d96d7829fa3d3d07f",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/dom-ipiranga--orulo-9953",
+            "title": "Dom Ipiranga em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Dom Ipiranga",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "39e714a2b64f0aea704cd08c780a191fcdefd6009ed2ad6f84974edb6df834d5",
+            "textHash": "7b07afea75e7353913aa4a5b22b6443395e0cb5601a945eac6348623ab5ee872",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/dom-ipiranga-apto-41--orulo-61173",
+            "title": "Dom Ipiranga Apto 41 em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Dom Ipiranga Apto 41",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "c23094f73b26e3c5e53d2c027e72e157c41dba0ed4f7f3b39e9eec078856ea02",
+            "textHash": "74c22cb158458e03e0000fa9a430e4e187f7cdf6413d0096ba1b7e119e650378",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/elev-alto-do-ipiranga--orulo-50575",
+            "title": "Elev Alto do Ipiranga em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Elev Alto do Ipiranga",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "6b78769ef99e49c7cffd72fb1565cd16844cee6732013e6d78624a4a4cb046c0",
+            "textHash": "8dede12516b075b3d6720c64cc94cd26b5a2b5ad61a6e8a4391452dd69ea4616",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/elev-park-sacoma-iii--orulo-76454",
+            "title": "Elev Park Sacomã III em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Elev Park Sacomã III",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "37497036017b91b5f5ff7fdb10bc0558aa22569a6c561481e6648dd2c79b8a61",
+            "textHash": "344a476b6c5994a51972d89a61442942439f05408672bb0a7dd04d4129c633d1",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/famile-lino--orulo-43735",
+            "title": "Famile Lino em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Famile Lino",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "4ed4721dccb50cd6c2bc828566c937563acd44a23661afa780fb6d974ffac584",
+            "textHash": "d928bf517f4a4e97439701d44ba7eaaa2f0e20f1ad21f05fc1e155ae5233c23e",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/fit-casa-alto-do-ipiranga--orulo-5040",
+            "title": "Fit Casa Alto do Ipiranga em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Fit Casa Alto do Ipiranga",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "23f42ff842d479f42137fbec34aacef5ef27afa8b48eb9e3ef27bcce2f38337b",
+            "textHash": "723f8d69bc66391f62e6567fdddd43b55ecff1252d288612452a7b6d21244a04",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/flag-ipiranga--orulo-62309",
+            "title": "Flag Ipiranga em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Flag Ipiranga",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "253f641b670653a3a8a34c9b590410acf4c5c8f9ba140328d8929096719e0875",
+            "textHash": "29449db01d7edb9267b9c21ecedfb82cdea04554d6d4da511f598ec40c5e266b",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/fort-ipiranga-nr--orulo-52222",
+            "title": "Fort Ipiranga - NR em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Fort Ipiranga - NR",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "34334101ca056aa6e6d5eaa54b77ddc75b1afb7db75b03f67d5185d260c3509f",
+            "textHash": "1383de17a9cf997f23edec6eba756f4b26b5083722d6b46c56fc187f8bd69b49",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/fort-ipiranga-residencial--orulo-52221",
+            "title": "Fort Ipiranga - Residencial em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Fort Ipiranga - Residencial",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "6c7b5a61d21412cd8c63eaea8d8883a2174bd2fb26275a0bee242201d69aa32d",
+            "textHash": "b766887efface271ed42785a1d7210c6f6c1faa7a972b2be36bf8be96470bb8c",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/home-boutique-by-living-ipiranga-residencial--orulo-60746",
+            "title": "Home Boutique By Living Ipiranga - Residencial em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Home Boutique By Living Ipiranga - Residencial",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "e2b1155d4e36c6d8c908e22707afb21c5994e8eabcc567371f3fb281b039797a",
+            "textHash": "0a4e7e9d476537e106345a1b60fda27202997b7b91ba4088e92b89ff1e75a942",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/imperium-mbigucci--orulo-24014",
+            "title": "Imperium MBigucci em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Imperium MBigucci",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "9bfc88f6b44c4490658ac1429ae86b949bbaaa1d256af474751be7dbce65188c",
+            "textHash": "ba956bff7bda018617a95583fd413e3acbe93d69876edc4379157a2aa263149b",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/in-design-ipiranga--orulo-25147",
+            "title": "In Design Ipiranga em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "In Design Ipiranga",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "c9b9e25d7e25494cef2a144f5e27743add78e44d5421837bbc8c892fa23ee205",
+            "textHash": "ffd0749e5ae64c50f536536230b114b3f30b4257e73584a850b782f88548d0ed",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/landmark-santa-cruz-by-dialogo-smart-spaces--orulo-78430",
+            "title": "Landmark Santa Cruz by Diálogo Smart Spaces em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Landmark Santa Cruz by Diálogo Smart Spaces",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "4a39eb4224b5fd00b92eb5fa17238eff82ec4077de735421e5af688ce0a5fd29",
+            "textHash": "078eb697dc1c9bf032a77ea0ecca4b995f66a054eb7da7282bb53142eef56160",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/living-only-ipiranga--orulo-50106",
+            "title": "Living Only Ipiranga em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Living Only Ipiranga",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "64547b336dcd2135b2be7ef26fc70dabb7abe302cc11d0919f965581493c7604",
+            "textHash": "25269c4b416521e7ad8dee5a98044876b03768fc6acd6fd7b4c0e694bb93052f",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/living-united-ipiranga--orulo-42586",
+            "title": "Living United Ipiranga em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Living United Ipiranga",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "0f27c1d882cbfbd4346803a46d5328fbf4ef334b216b1165154ca811319e2d40",
+            "textHash": "97baea2f6562ba3e95b5d58377611fb0692d994ef2e50be5df8f076e81979462",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/merito-ipiranga-fase-1--orulo-84525",
+            "title": "Mérito Ipiranga - Fase 1 em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Mérito Ipiranga - Fase 1",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "38df4542a545daa3341ffef24efbb78ae32da784d6179530d7be9c7ebe109f52",
+            "textHash": "cf16d8d6da9c662c435a85b6e454b6dac7687756f1a6d29bdbce020ae5b3032a",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/mundo-apto-alto-do-ipiranga-fase-1--orulo-72555",
+            "title": "Mundo Apto Alto do Ipiranga - Fase 1 em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Mundo Apto Alto do Ipiranga - Fase 1",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "956bdfc88f3bbacd4432b48c4bcefffefd17bf05eab709a249db20d8f94d53d0",
+            "textHash": "e9a08d0809979c9a690864d5c4f014c8357098bada80f7793fbe1e11eb529b30",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/my-life-vergueiro--orulo-43122",
+            "title": "My Life Vergueiro em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "My Life Vergueiro",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "a4e1ba8c851e0e37fbbfab4fca39ae7d14e4226d2987b98d1a730f946750bba0",
+            "textHash": "48dd397154070f4c4796b0ba7f374685db681ff104f9173bb6832671bf64aba5",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/oli-ipiranga-nr--orulo-64293",
+            "title": "Oli Ipiranga - NR em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Oli Ipiranga - NR",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "a1723829658eaaccf2e18576fa4634c96e7afba64787f8046231f19b9f4fa7d5",
+            "textHash": "9fc7594373d95e86569f3fdf296f32e6bba6b01a11f898bcd60b206c0f628c14",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/oli-ipiranga-residencial--orulo-64292",
+            "title": "Oli Ipiranga - Residencial em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Oli Ipiranga - Residencial",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "bf412153cf4f38ea510040a0eeb2fa758b54f23ea1fee99a4a6602fee5eb2604",
+            "textHash": "1fa20ba5641ff29877307dfb03c100d41cc57e7d0b299b11c77378df6eae2ea5",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/palatium-ipiranga--orulo-42654",
+            "title": "Palatium Ipiranga em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Palatium Ipiranga",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "615e5ad85dc53815b096c2db03d70d9f4926c3e4820cee90216290f7afd83cfb",
+            "textHash": "931c39590ed82e5688b26718f26fb6e1f5de26f2171197127c40e34c5c0f5a88",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/pleno-sacoma--orulo-56790",
+            "title": "Pleno Sacomã em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Pleno Sacomã",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "08d84f5cd54f5b451e0867a136af41087ea6945fbaf25cfca370459c6ce96e5c",
+            "textHash": "9849008d74308db7c7d78222d1d9a91fca88422f1d97949e9efb923d36d73fc7",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/quinta-do-lago--orulo-21642",
+            "title": "Quinta do Lago em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Quinta do Lago",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "5bf64d1c60f84563da149ed8b6d6b56839b66e2c1b44943eb8c90c8f7875f471",
+            "textHash": "3f284741454a9fd820a920b936bd8126011056ac85cf566851ad3df44fbdd69c",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/side-sacoma--orulo-39907",
+            "title": "Side Sacomã em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Side Sacomã",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "d3ebcd00c3d49e01775fe2488532f21f75a71d0ee57b1ae26eededff24c372a1",
+            "textHash": "9ce4b88c9ea35a81ec5fc7c56f7217356ff4357bad8c7dedb64c8991eebf97f4",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/versos-ipiranga-nr--orulo-31284",
+            "title": "Versos Ipiranga - NR em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Versos Ipiranga - NR",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "479ea6a691b1674c68e4148437fdfa824192868ed78d23a84998a132861ccd7a",
+            "textHash": "bf8e976312c12a13c2d2963dab16f8b298f6369963c40ecbbf2848d7cd0739c0",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/versos-ipiranga-residencial--orulo-31285",
+            "title": "Versos Ipiranga - Residencial em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Versos Ipiranga - Residencial",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "55418d48227e0c06a332bb4b689484682ac7fa400e5f93c586804226449baf09",
+            "textHash": "83827c38011e0fcf5143deaf38b59a60cc9a9eb5a4bb3c87568e402cedabfadb",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/villa-arvo--orulo-51619",
+            "title": "Villa Arvo em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Villa Arvo",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "eabb695321705cdb1a2dbec95491790e67c70ec5a46510d096bc0f4434cc86fe",
+            "textHash": "8e5c7fe8f3b9903912f9a8506a5c1b58c2b8e07194a7cfff12d2ccd694a1555b",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/vintage-500--orulo-83623",
+            "title": "Vintage 500 em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Vintage 500",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "2aec74992ebff533f9cfc39f06aabb8b0d21625fad1f2b15e7aebbe4210c7103",
+            "textHash": "18ec4fb7edc622cd4455a0f773f2cef306177e7bfa4440a0f872d68c304eaa33",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/welconx-chacara-klabin-nr--orulo-28641",
+            "title": "Welconx Chácara Klabin - NR em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Welconx Chácara Klabin - NR",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "f995a9d65265f90be10d2ffcec87bea7c6460723af9ea24f21a97e65b2dcb00e",
+            "textHash": "489481208327626bd0d0e038d9887242ad6a1bc787717dd661f43645b1c5321b",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/wish-residence--orulo-4997",
+            "title": "Wish Residence em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Wish Residence",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "c0919ca2811c2cfa9bb5a19e6e83348fb665f37007a222f2e318876cc67db238",
+            "textHash": "9d7684bbc037b29834e5dad7a393f4539c16b1cc62f43beafe2972a0b3495254",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-1-quarto-sendo-1-suite-42m--a3b977e0-ab1f-4e61-b659-22ea38daab29",
+            "title": "Apartamento para venda em Ipiranga com 1 quarto, sendo 1 suíte, 42m² à venda — 42 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 1 quarto, sendo 1 suíte, 42m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "361d97a0041b9760128f93068ebf1b2f2797f41cca40225587057b77fea64c5a",
+            "textHash": "bb4684b6390b48fe616e764adbf47a83a125f9b2965747e645ae85af318eb143",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-1-quarto-sendo-1-suite-45m--3640ab67-dc41-45b8-ba40-ac1c3bd56182",
+            "title": "Apartamento para venda em Ipiranga com 1 quarto, sendo 1 suíte, 45m² à venda — 45 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 1 quarto, sendo 1 suíte, 45m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "42a7ccdcdabb80928c0a975d8bbbf7d287c81ec10d27bb1043f70f61a10e4e1d",
+            "textHash": "aaaa6d9ba94d8f1929243502fd712ed2aade6dece369f438055697377a70f308",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-2-quartos-sendo-1-suite-54m--ed7cefac-c6df-4f17-97e8-3e9e33a1929b",
+            "title": "Apartamento para venda em Ipiranga com 2 quartos, sendo 1 suíte, 54m² à venda — 54 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 2 quartos, sendo 1 suíte, 54m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "80509b1ddcc8a0fdd8fce6fd8659748fc6c9a2d360ff7e5a8de43a0862d252e5",
+            "textHash": "b3f465bc012f8bcfba292e5466c4fc4570aa39fbbf7e033d17c343262a6c8baa",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-2-quartos-sendo-1-suite-58m--e1249bcf-10dd-4e3f-afff-63f570560d7a",
+            "title": "Apartamento para venda em Ipiranga com 2 quartos, sendo 1 suíte, 58m² à venda — 58 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 2 quartos, sendo 1 suíte, 58m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "79def9ac704a8512c8491fe7b74f3ae57856b346ec48a5b9c334a748153910f2",
+            "textHash": "7b94aab71788f1e2e8a55b72c50c2f8c16951df776b0c32064cfa72966214583",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-2-quartos-sendo-1-suite-66m--5420539f-1282-4f6a-92ac-44e5789597aa",
+            "title": "Apartamento para venda em Ipiranga com 2 quartos, sendo 1 suíte, 66m² à venda — 66 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 2 quartos, sendo 1 suíte, 66m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "aeb4693f2ae8d6b4e1c83446f56a332cede21821cc2bc52f73e5e087f0c7bad9",
+            "textHash": "bd2fd5892fe07cb49777d5b57459da56b274d674454ac3470c7b3c3a98e452ce",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-2-quartos-sendo-2-suites-83m--fae88ad6-8859-46af-88ba-9cf991245d86",
+            "title": "Apartamento para venda em Ipiranga com 2 quartos, sendo 2 suítes, 83m² à venda — 83 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 2 quartos, sendo 2 suítes, 83m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "174c1390aa9cf9000cf2e2278f26a69fd34793ed7427fcaa2bec6f611f119499",
+            "textHash": "9c75b7de05519a7d7343eae53dfdf83212bc0b1c735fc06ab9f28fb616c40481",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-3-quartos-sendo-1-suite-115m--af5fe622-f213-4deb-9a5f-513cbb35c210",
+            "title": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 115m² à venda — 115 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 115m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "4a12a79d1781af6a8af4c1663ff9254a7a785439546c56f4fca328e7b55ed8dc",
+            "textHash": "9c7e6115dfe6297cbcdd8dcede1240ce05568f7bc84986512d816e55b08e8422",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-3-quartos-sendo-1-suite-116m--64d83c46-fb6a-4337-b54e-c9a30a323253",
+            "title": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 116m² à venda — 116 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 116m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "cd1a5670c7c4cc744f090efb4cede27a1e867b51c2b0945420711d13f52c2365",
+            "textHash": "db044ea4950ef5aa28aaacced51664330746fc8e52db66e93178e7dfeff870a7",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-3-quartos-sendo-1-suite-152m--92c053e7-e215-4c4b-83a6-890ac9528a68",
+            "title": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 152m² à venda — 152 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 152m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "fa160007510dd29d5993d0fc8e8d278ee031272d82b45b231433d51e350c11fa",
+            "textHash": "065ef6ee7261025038867bf87390c54306837528f5b75be636df7b83a5193639",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-3-quartos-sendo-1-suite-203m--de7b662a-9af3-492a-b838-b453a532c1b1",
+            "title": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 203m² à venda — 203 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 203m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "c3d01fd0fb3332f86abc5e3fd9b7c92112c5d9ff3f6f41b87ee43366ce234468",
+            "textHash": "5902d502d6061008fdb025035bb65ff8ac5547e06ec833b55c84e6b06b790d23",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-3-quartos-sendo-1-suite-69m--0e2497c2-16f6-4ea2-86b8-07ea99138850",
+            "title": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 69m² à venda — 69 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 69m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "65cfafebc43a107033ffa380e701ac6d27e47fc50ef6fa28b2674b70e2f4e0dc",
+            "textHash": "72043436465305159e631648990c741bc0ae4b489c29cb8c3d54caa65d4938e9",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-3-quartos-sendo-1-suite-84m--0f4003ad-0737-4da1-ad30-365b12b7b042",
+            "title": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 84m² à venda — 84 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 84m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "ab60f23650009d3512b25b0c26c5a672900ad9fff332ccce90b650673e6999c3",
+            "textHash": "0864952a1e15d05980e08905fae960803e8934dba3484819512bb7cdb1ec2c58",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-3-quartos-sendo-1-suite-96m--62cd8739-f9f2-417f-9a2a-341fcd839e62",
+            "title": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 96m² à venda — 96 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 3 quartos, sendo 1 suíte, 96m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "4dba361bc0afa75e64d19134bb96920014fe0b164d8e2df39720aa741859d42c",
+            "textHash": "e5cf5eee3d9f20810ae63b1fd3f7158911c07c1be9f9db03a449eea48b4a2a5c",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-3-quartos-sendo-2-suites-140m--2474d9df-b720-4168-b735-e3c384df07c6",
+            "title": "Apartamento para venda em Ipiranga com 3 quartos, sendo 2 suítes, 140m² à venda — 140 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 3 quartos, sendo 2 suítes, 140m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "88f2b592ae6cd16c5484f509ca6cc3a37e82a2d841ff5104894a06463cd2be2c",
+            "textHash": "e85b97382d0aef93bb766ce980d2dc21eb847bc40d4cd6ee506c66fb1082a555",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/imovel/apartamento-para-venda-em-ipiranga-com-4-quartos-sendo-3-suites-182m--fd003131-296b-4f3c-9480-a5485b21e73b",
+            "title": "Apartamento para venda em Ipiranga com 4 quartos, sendo 3 suítes, 182m² à venda — 182 m² em São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": "Apartamento para venda em Ipiranga com 4 quartos, sendo 3 suítes, 182m²",
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "1bd94826be88bc60798a90174645a29e546a6a1ad92e1d8d6882801d9263280a",
+            "textHash": "70193b5b6a5948bd09832ec781c0a1e834d29e63a227ad354c48e73412bf9c89",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/sp/sao-paulo/ipiranga",
+            "title": "Empreendimentos em Ipiranga, São Paulo | Yincorp",
+            "intent": "transactional",
+            "city": "São Paulo",
+            "neighborhood": "Ipiranga",
+            "development": null,
+            "observedAt": "2026-11-08T03:11:21.09Z",
+            "bodyHash": "e511e8a108372f2eec5443299034b64d1931492a7b8bd8d8c38445929624c6e9",
+            "textHash": "b76dd7c405fa83984be78ffdeea6ed6cfb3a95958a59ec770723ecf5d1e40a35",
+            "verified": true
+          }
+        ],
+        "overlaps": []
+      },
+      "gates": {
+        "sources": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "facts": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "originality": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "cannibalization": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "geography": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "inventory": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "links": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "editorial": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "security": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "canonical": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "sitemap": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "tests": {
+          "status": "UNKNOWN",
+          "evidence": "CI ainda não atestou o commit desta execução"
+        }
+      },
+      "blockers": []
+    },
+    {
+      "state": "ES",
+      "status": "DETERMINISTIC_SIMULATION",
+      "corpus": {
+        "snapshotHash": "c46ee5bb99f9bf83e9e48716f7db24ab98caad6e69d0d515974de5dd2c7f6db9",
+        "coverage": {
+          "scope": "public_sitemap_and_target_inventory",
+          "state": "ES",
+          "city": "Vitória",
+          "neighborhood": "Praia do Canto",
+          "expected": 13,
+          "retrieved": 13,
+          "sitemaps": [
+            {
+              "path": "/sitemap.xml",
+              "hash": "286985e1a3e37de8ce8e5b26da0df93e5b6c03c959c83b39b08f6b6e58500b5c",
+              "urls": 18
+            },
+            {
+              "path": "/sitemap-seo/es/empreendimentos-1.xml",
+              "hash": "a2f4ed0f7b86a143ab595d21ab4fd6bb153765fa586a48692f5a31a8d94c9819",
+              "urls": 158
+            },
+            {
+              "path": "/sitemap-seo/es/lugares-1.xml",
+              "hash": "bb901d07eb5b58389ba755edf333c1716d6ae4690d7c5be691120a8cde4e2dd8",
+              "urls": 57
+            },
+            {
+              "path": "/sitemap-static.xml",
+              "hash": "0927e63646283cc55c320c3d11a28c157326001db2dcf942485041730b88df18",
+              "urls": 8
+            }
+          ],
+          "failures": [],
+          "complete": true
+        },
+        "pages": [
+          {
+            "url": "https://www.yincorp.com.br/es",
+            "title": "Empreendimentos em Espírito Santo | Yincorp",
+            "intent": "transactional",
+            "city": null,
+            "neighborhood": null,
+            "development": null,
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "3cc00306247160dad2b9815bd7e4bcbf23886a864affcb49ea7862120d1cd166",
+            "textHash": "e2447ed3558a32bf0caaa81e533dad7b55d54b0887d9a4e9ae0a39683db73fa8",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria",
+            "title": "Imóveis e lançamentos em Vitória, Espírito Santo | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": null,
+            "development": null,
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "aea57d197a47bcc01e6fbcbc864ddef8d16b8a21ede697b565cee761252f1aa0",
+            "textHash": "635f2852f7d718607bf3574316551db61c053e7c5711446ea7fa234a5f61769a",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/495-joaquim-lirio-carlos-madeira-residences--orulo-68269",
+            "title": "495 Joaquim Lírio Carlos Madeira Residences em Vitória | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": "Praia do Canto",
+            "development": "495 Joaquim Lírio Carlos Madeira Residences",
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "d838b488570edf35b7857e23cebbc34077e42b62f1ab476a907a348c541f7796",
+            "textHash": "5661c7c4905d073b5f274b68f1d485663de6f0d8a5931a0055179622652672b9",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/air-225--orulo-72211",
+            "title": "AIR@225 em Vitória | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": "Praia do Canto",
+            "development": "AIR@225",
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "173af2249a7158351b1375a4b6463a096a429b60c5b81b88248421eac3191ca0",
+            "textHash": "0009b6fce222aa7c7da120491071f3e9fee0601c904b6c0154c6cfa718e4c228",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/brettas-boutique-residence--orulo-85087",
+            "title": "Brettas Boutique Residence em Vitória | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": "Praia do Canto",
+            "development": "Brettas Boutique Residence",
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "63751f887c1d1d63a1308a2659967049129c7747c850bf1f3616fe396685a75b",
+            "textHash": "94d6ad9c07dbe2eef4bfd58855c72a32328518a8550d5fd45fb54013d3bde0bd",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/fit-370--orulo-72212",
+            "title": "FIT@370 em Vitória | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": "Praia do Canto",
+            "development": "FIT@370",
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "4b1461b22b8564c32d1bf6a83578161385a94fc6aa27eaafbad20140b9ced0ff",
+            "textHash": "ca3eae18f219ef6591c83c249ef311f5969c1995407f6b01d6a3fa1eeb478b55",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/forma-praia-do-canto--orulo-85079",
+            "title": "Forma Praia do Canto em Vitória | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": "Praia do Canto",
+            "development": "Forma Praia do Canto",
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "6cb74bec406d9dbec841a50751a18dd2683b4ec26e878c516c4960efa85fef51",
+            "textHash": "a7b345c271c182dc64ee5a6aba9de45e7a099784d62cbca0449f092c9b777081",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/iris-786--orulo-82989",
+            "title": "IRIS@786 em Vitória | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": "Praia do Canto",
+            "development": "IRIS@786",
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "6b693186e79fcf15414643a3ccd5e15a2cfd3f862f849f780a1f5599e55e4b29",
+            "textHash": "5cecfccc06d00a75c4d8ec0f1c04f232fcabddfc15dab67be3377e97ebb94d10",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/izza-praia-do-canto--orulo-67923",
+            "title": "IZZA Praia do Canto em Vitória | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": "Praia do Canto",
+            "development": "IZZA Praia do Canto",
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "4aeefa2b3c8f4bc177761bf64083673ddc2abc93d79585d5bad8af9e975e9f0f",
+            "textHash": "c97f39ba85e4401b51cc089f0728f281e3b336f950030c07333af8c744bdcdf9",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/singular-for-life--orulo-64513",
+            "title": "Singular for Life em Vitória | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": "Praia do Canto",
+            "development": "Singular for Life",
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "12d60c6386051641986c42a3ff5f8b55b31db164ba476ced97c3557de19e7218",
+            "textHash": "216961df3c61543fe808af89b3b92d0c907b595ab64869029978b4ac462fda9a",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/soul-for-life--orulo-64547",
+            "title": "Soul for Life em Vitória | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": "Praia do Canto",
+            "development": "Soul for Life",
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "1652362d48c8fde8ea43a265215c5c8c747a4b129dd24aa8cc9c538b8abf08ac",
+            "textHash": "8f89b8dda6a1728ce897b042f4ce2be43c8d594ebd0eac2c1dbe85ebd4549273",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria/empreendimento/ventanas--orulo-64541",
+            "title": "Ventanas em Vitória | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": "Praia do Canto",
+            "development": "Ventanas",
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "068bba736541d143c35e034df0acf325cc37db71ff1b899b35c7cc59ed53ffe6",
+            "textHash": "f561559a6c66904b229dd1a1654443b86ef9898cf8428a5d81bc00415e48f991",
+            "verified": true
+          },
+          {
+            "url": "https://www.yincorp.com.br/es/vitoria/praia-do-canto",
+            "title": "Empreendimentos em Praia do Canto, Vitória | Yincorp",
+            "intent": "transactional",
+            "city": "Vitória",
+            "neighborhood": "Praia do Canto",
+            "development": null,
+            "observedAt": "2026-11-08T03:11:53.988Z",
+            "bodyHash": "13490b549e10c55a5d6bd047616a53ff59ff55648e023b43205d22031299c73d",
+            "textHash": "5a7587357c023db1cf729308e44d6062d078d355e89025b26c29a05fdd553cca",
+            "verified": true
+          }
+        ],
+        "overlaps": []
+      },
+      "gates": {
+        "sources": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "facts": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "originality": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "cannibalization": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "geography": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "inventory": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "links": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "editorial": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "security": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "canonical": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "sitemap": {
+          "status": "UNKNOWN",
+          "evidence": "Simulação determinística sem inferência ou auditoria editorial independente"
+        },
+        "tests": {
+          "status": "UNKNOWN",
+          "evidence": "CI ainda não atestou o commit desta execução"
+        }
+      },
+      "blockers": []
+    }
+  ]
+}

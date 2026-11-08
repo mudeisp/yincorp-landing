@@ -6,6 +6,18 @@ import {mkdir,mkdtemp,readFile,readdir} from 'node:fs/promises';
 import {resolve,sep} from 'node:path';
 import {createCommandStore} from '../lib/seo-content/store.js';
 
+
+// Test-only pool. pg-pool may emit idle-client errors during server shutdown.
+// Handle them without dumping its Client (which includes connection material).
+// Unexpected idle errors still fail the fixture; cleanup events do not hide them.
+export function nativeTestPool(options){
+  const pool=new pg.Pool(options);let ending=false,unexpected=false,ended;
+  pool.on('error',()=>{if(!ending)unexpected=true;});
+  const end=pool.end.bind(pool);
+  pool.end=()=>ended??=(async()=>{ending=true;await end();if(unexpected)throw Error('native_database_connection_interrupted');})();
+  return pool;
+}
+
 export async function nativeDatabase(){
   const root=resolve('.seo-test');await mkdir(root,{recursive:true});
   const databaseDir=await mkdtemp(root+sep+'postgres-');
@@ -16,7 +28,7 @@ export async function nativeDatabase(){
   let pool;
   try{
     await server.initialise();await server.start();
-    pool=new pg.Pool({host:'127.0.0.1',port,user:'postgres',password,database:'postgres',max:12,connectionTimeoutMillis:5000});
+    pool=nativeTestPool({host:'127.0.0.1',port,user:'postgres',password,database:'postgres',max:12,connectionTimeoutMillis:5000});
     await pool.query('create role anon; create role authenticated; create role service_role bypassrls;');
     const migrationDir=new URL('../supabase/migrations/',import.meta.url);
     for(const file of (await readdir(migrationDir)).filter(f=>f.endsWith('.sql')).sort())await pool.query(await readFile(new URL(file,migrationDir),'utf8'));
@@ -26,7 +38,8 @@ export async function nativeDatabase(){
       catch(e){await client.query('rollback');throw e;}finally{client.release();}
     };
     return {get pool(){return pool;},store:createCommandStore(rpc),rpc,info:{transport:'TCP loopback only',implementation:'native PostgreSQL, separate backend connections',version:(await pool.query('select version() version')).rows[0].version},
-      restart:async()=>{await pool.end();await server.stop();await server.start();pool=new pg.Pool({host:'127.0.0.1',port,user:'postgres',password,database:'postgres',max:12,connectionTimeoutMillis:5000});},
-      close:async()=>{await pool.end();await server.stop();}};
-  }catch(e){if(pool)await pool.end();try{await server.stop();}catch{}throw e;}
+      restart:async()=>{await pool.end();await server.stop();await server.start();pool=nativeTestPool({host:'127.0.0.1',port,user:'postgres',password,database:'postgres',max:12,connectionTimeoutMillis:5000});},
+      close:async()=>{try{await pool.end();}finally{await server.stop();}}};
+  }catch(e){try{if(pool)await pool.end();}catch{}try{await server.stop();}catch{}throw e;}
 }
+

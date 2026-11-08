@@ -1,0 +1,40 @@
+✔ real corpus contract discovers canonical pages and binds integrity, time and bounded coverage (65.8517ms)
+✔ corpus rejects hostile URLs, redirects in canonicals, noindex, missing headings and stale evidence (2.1791ms)
+✔ Portuguese intent and synonym overlap flags semantic review without confusing commercial inventory with an article (1.3482ms)
+✔ strict editorial gate cannot approve a partial or wrong-geography corpus (12.0968ms)
+✔ seven-day actual SQL simulation: 35 SP + 35 ES, duplicate workers, no publication (4479.5349ms)
+✔ SQL gates, independent quotas, budget, stale lease fencing, retries, RLS and rollback (1236.1093ms)
+✔ missing comparison corpus cannot turn a model assertion into cannibalization or originality PASS (12.8057ms)
+✔ inventory gate rejects the wrong neighborhood even inside the right city and state (1.3086ms)
+✔ deterministic runner refuses enabled inference or publication before reading inputs (1126.4587ms)
+✔ native test pool handles shutdown errors without an unhandled credential-bearing Client dump (7.7979ms)
+✔ unexpected idle backend errors fail the fixture with a sanitized message (2.2865ms)
+✔ idle ledger pool errors never dump credentials and block subsequent operations before network dispatch (6.4145ms)
+✔ only exact direct and session pooler tenant pairs retain verified TLS (9.1595ms)
+✔ pooler rejects other projects, administrative logins, transaction port and TLS overrides (5.8029ms)
+✔ GSC reads final query/page evidence and derives geography only from exact inventory canonical (114.8172ms)
+✔ GA4 request is reporting only and bounds pagination (3.8935ms)
+✔ monitor preserves missing measurements and rejects cross-state attribution (3.0223ms)
+✔ editorial spend is reserved before the model and a rejected budget makes no external call (1.0283ms)
+✔ inference preflight reports names only and requires explicit credential, budget, rates and private mode (4.2265ms)
+✔ strict local JSON validation rejects missing keys, extra fields, wrong types and arbitrary PASS values (4.0635ms)
+✔ HTTP is prohibited except an explicitly enabled exact loopback editorial route (1.1355ms)
+✔ real loopback HTTP contract authenticates, calls the adapter with a mocked provider and returns bound usage receipts (159.5796ms)
+✔ server budget rejection never calls even a mocked provider and errors never echo secrets (51.7849ms)
+✔ quality PASS without an independent response receipt is downgraded to UNKNOWN (6.4859ms)
+✔ a failed upstream call preserves its reservation, does not retry and returns no upstream secret (23.8925ms)
+✔ different requested aliases for the same resolved model do not prove independent audit (4.4153ms)
+✔ safe defaults, quotas and credential authorization (9.1954ms)
+✔ score requires real observed demand, inventory and geographic relevance; rejects cannibalization (9.0397ms)
+✔ every missing, FAIL or UNKNOWN gate blocks; revisions, freshness and switches block (11.0294ms)
+✔ editorial checks independently reject fabricated facts, source tampering and unsafe links (17.408ms)
+✔ external failures, bounded retries, evidence contracts and no credentials in error text (100.892ms)
+✔ SSR canonical, schemas, escaped content, private preview and sitemap publication filtering (9.9377ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6215.6872

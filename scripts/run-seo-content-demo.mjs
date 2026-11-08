@@ -1,3 +1,4 @@
+import {comparisonCorpus,validCorpus,compareTopics} from '../lib/seo-content/comparison-corpus.js';
 import {randomUUID} from 'node:crypto';
 import {renderArticle} from '../lib/seo-content/render.js';
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
@@ -60,7 +61,7 @@ const report={version:2,commit:execFileSync('git',['rev-parse','HEAD'],{encoding
 try{
   if(v3){report.version=3;report.preflight=readiness;report.providerRequests=0;}
   report.provenance={checkoutHead:report.commit,worktreeDirty:Boolean(execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim()),sourceDigests:{}};
-  for(const path of ['lib/seo-content/discovery.js','lib/seo-content/sources.js','lib/seo-content/openai-editorial.js','lib/seo-content/inventory.js','lib/seo-content/core.js','scripts/run-seo-content-demo.mjs'])report.provenance.sourceDigests[path]=hash(await readFile(path,'utf8'));
+  for(const path of ['lib/seo-content/comparison-corpus.js','lib/seo-content/discovery.js','lib/seo-content/sources.js','lib/seo-content/openai-editorial.js','lib/seo-content/inventory.js','lib/seo-content/core.js','scripts/run-seo-content-demo.mjs'])report.provenance.sourceDigests[path]=hash(await readFile(path,'utf8'));
   try{const mia=JSON.parse(await readFile('docs/evidence/v2/mia-read.json','utf8'));if(fresh(mia.observedAt,Date.now()))report.integrations.ads={...mia,runtimeUse:'Read verified; not used as geographic demand without an exact binding'};}catch{}
   for(const state of ['SP','ES']){
     const gates=Object.fromEntries(GATES.map(g=>[g,{status:'UNKNOWN',evidence:'No article generated or independently audited'}]));
@@ -74,6 +75,10 @@ try{
     if(!opportunity){result.blockers.push('no_evidenced_opportunity_with_real_inventory');continue;}
     const stock=opportunity.scoring.stock.slice(0,5);
     result.opportunity={query:opportunity.query,city:opportunity.city,neighborhood:opportunity.neighborhood,path:opportunity.targetCanonical,score:opportunity.scoring.value,justification:opportunity.justification,signals:opportunity.evidence.slice(0,10)};
+    const corpus=await comparisonCorpus({opportunity,inventory:eligible,gscRows:captured.response.data});
+    result.corpus={snapshotHash:corpus.snapshotHash,coverage:corpus.coverage,pages:corpus.pages.map(({text,...metadata})=>metadata),overlaps:compareTopics(opportunity,corpus.pages)};
+    if(!preflightOnly&&(!validCorpus(corpus)||!corpus.coverage.complete))result.blockers.push('comparison_corpus_incomplete');
+    if(!preflightOnly&&compareTopics(opportunity,corpus.pages).length)result.blockers.push('comparison_topic_requires_review');
     result.inventory=stock;result.gates.inventory={status:'PASS',evidence:`${stock.length} current canonical inventory recommendations; no price copied`};
     const run=await store.claim({state,day:dayInBrazil(),quota:1,budget:1000000}),reservation=await store.reserve(run,opportunity);
     if(!reservation){result.blockers.push('local_reservation_failed');continue;}
@@ -101,13 +106,13 @@ try{
         cta:'Consulte a Yincorp para confirmar as ofertas indicadas no inventário.',
         claims:stock.flatMap(p=>{const source=sources.find(s=>s.url===ORIGIN+p.path&&s.excerpt.includes(p.name));return source?[{text:p.name,sourceUrl:source.url}]:[];})};
       const simulatedModel=async(stage)=>stage==='write'?structuredClone(fixture):Object.fromEntries(GATES.map(g=>[g,{status:'UNKNOWN',evidence:'Simulação determinística sem inferência ou auditoria editorial independente'}]));
-      const agents=createEditorialAgents({model:simulatedModel,checkLinks:checkPublicLinks,requireAuditReceipt:true});
+      const agents=createEditorialAgents({model:simulatedModel,checkLinks:checkPublicLinks,requireAuditReceipt:true,requireCorpusEvidence:true});
       const context={sources,inventory:stock,simulation:true};
       await store.stage(run,reservation,'DRAFT');const content=await agents.write(opportunity,context);await store.stage(run,reservation,'VERIFYING');
-      const validations=await agents.verify({opportunity,context,content,stock,pages:[]});
+      const validations=await agents.verify({opportunity,context,content,stock,pages:corpus.pages,corpus});
       const article={id:reservation.id,state,path:opportunity.targetCanonical,topicKey:opportunity.topicKey,status:'NEEDS_REVIEW',content,validations,validatedHash:hash(content),verifiedAt:new Date().toISOString(),sources,simulation:true};
       await store.save(run,article);await store.finish(run,'COMPLETE');
-      await mkdir(dryRunDirectory,{recursive:true});const privateJson=dryRunDirectory+'/'+state+'.json',privateHtml=dryRunDirectory+'/'+state+'.html';
+      await mkdir(dryRunDirectory,{recursive:true});await writeFile(dryRunDirectory+'/'+state+'-corpus.json',JSON.stringify(corpus,null,2)+'\n');const privateJson=dryRunDirectory+'/'+state+'.json',privateHtml=dryRunDirectory+'/'+state+'.html';
       const markup=renderArticle(article,{preview:true,stock});await writeFile(privateJson,JSON.stringify(article,null,2)+'\n');await writeFile(privateHtml,markup);
       result.status='DETERMINISTIC_SIMULATION';result.article=null;result.gates=validations;
       result.simulation={privateJson,privateHtml,contentHash:hash(content),title:content.title,headings:content.sections.map(s=>({level:s.level,text:s.heading})),canonical:ORIGIN+article.path,modelCalls:0,notAnEditorialArticle:true,technicalChecks:{oneH1:(markup.match(/<h1\b/g)||[]).length===1,canonical:markup.includes(ORIGIN+article.path),privateNoindex:markup.includes('noindex'),titleLength:content.title.length<=75,descriptionLength:content.description.length<=170,headings:content.sections.every(s=>[2,3].includes(s.level)),exactGeography:stock.every(p=>p.state===state&&slug(p.city)===slug(opportunity.city)&&slug(p.neighborhood)===slug(opportunity.neighborhood)),noPricesOrAreas:!/(?:R\$|m²)\s*\d/.test(JSON.stringify(content))}};
@@ -122,10 +127,12 @@ try{
     }catch(e){result.blockers.push(e.message);}
     if(result.blockers.length){await store.stage(run,reservation,'FAILED',result.blockers[0]);await store.finish(run,'FAILED',result.blockers[0]);continue;}
     const callModel=model;model=async(...args)=>{result.generationAttempted=true;result.modelInvocations=(result.modelInvocations||0)+1;report.cost.generationActualUSD=null;return callModel(...args);};
-    const agents=createEditorialAgents({model,checkLinks:checkPublicLinks,requireAuditReceipt:v3,auditReceipt:()=>result.usage?.filter(u=>u.stage==='audit').at(-1),writerReceipt:()=>result.usage?.filter(u=>u.stage==='write').at(-1),writerModel:models.write});
+    const agents=createEditorialAgents({model,checkLinks:checkPublicLinks,requireAuditReceipt:v3,requireCorpusEvidence:true,auditReceipt:()=>result.usage?.filter(u=>u.stage==='audit').at(-1),writerReceipt:()=>result.usage?.filter(u=>u.stage==='write').at(-1),writerModel:models.write});
     try{
       // Reuse immutable source/inventory inputs on restart; changed live evidence
       // requires a reviewed new content revision, never another paid call silently.
+      let savedCorpus=corpus;
+      if(durable){const old=(await durable.ledger.read()).runs[durableRun.runId].checkpoints[state+'/corpus'];if(old){if(!validCorpus(old)||!old.coverage.complete)throw Error('private_saved_corpus_stale');savedCorpus=old;}else await durable.ledger.checkpoint(durableRun.runId,state+'/corpus',corpus);}
       let savedInput={opportunity,sources,inventory:stock};
       if(durable){
         const saved=(await durable.ledger.read()).runs[durableRun.runId].checkpoints[state+'/inputs'];
@@ -134,7 +141,7 @@ try{
       }
       const context={...await model('research',savedInput,'Pesquise somente nas fontes recuperadas. Retorne perguntas, comparação e fatos citados. JSON.'),sources:savedInput.sources};
       await store.stage(run,reservation,'DRAFT');const content=await agents.write(savedInput.opportunity,context);await store.stage(run,reservation,'VERIFYING');
-      const validations=await agents.verify({opportunity:savedInput.opportunity,context,content,stock:savedInput.inventory,pages:[]});
+      const validations=await agents.verify({opportunity:savedInput.opportunity,context,content,stock:savedInput.inventory,pages:savedCorpus.pages,corpus:savedCorpus});
       const article={id:durable?durableRun.articles[state].id:reservation.id,state,path:savedInput.opportunity.targetCanonical,topicKey:savedInput.opportunity.topicKey,status:'NEEDS_REVIEW',content,validations,validatedHash:hash(content),verifiedAt:new Date().toISOString(),sources:savedInput.sources};
       if(durable)await durable.ledger.article(durableRun.runId,state,article);
       await store.save(run,{...article,id:reservation.id});await store.finish(run,'COMPLETE');
