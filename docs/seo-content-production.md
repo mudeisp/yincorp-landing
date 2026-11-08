@@ -25,6 +25,8 @@ Provisionar pelo gerenciador seguro, nunca pelo chat:
 
 Todos os comandos abaixo usam `Authorization: Bearer <CRON_SECRET>`, sem segredo na URL. Ambiente Preview não pode executar operações mutantes. Não imprimir requests autenticados ou variáveis de ambiente.
 
+A saúde valida TLS no socket real do cliente: cadeia autorizada com CA explícita, hostname, protocolo mínimo1.2 e cifra forte. A observação `databaseLegTls` de pg_stat_ssl é separada: no Session Pooler ela descreve pooler→PostgreSQL e não comprova nem refuta o TLS Vercel→pooler. Se essa perna interna não usa SSL, o relatório a identifica como tal; não declara criptografia de ponta a ponta. Certificado não autorizado, plaintext, hostname divergente, protocolo antigo e verificação desativada continuam bloqueados no cliente.
+
 1. `GET /api/seo-content-runner?op=health`: informa nomes ausentes ou testa TLS, isolamento e decifra o ledger existente. Vazio é NOT_INITIALIZED; não é corrupção nem gasto zero.
 2. Com inferência explicitamente false e publicação desautorizada, `POST ?op=initialize` inicializa a identidade real em UNKNOWN, sem run nem saldo novo. Não reinicializa/resetta uma linha existente.
 3. `GET ?op=review-request` obtém identidade/snapshot para a revisão financeira. Importar via `POST ?op=reconcile` apenas a evidência completa e declaração Ed25519 já revisada. O contrato V4 de janela, identidade, snapshot e assinatura permanece preservado.

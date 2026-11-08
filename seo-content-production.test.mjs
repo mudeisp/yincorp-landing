@@ -8,7 +8,7 @@ import {GATES,ORIGIN,hash} from './lib/seo-content/core.js';
 import {corpusDigest} from './lib/seo-content/comparison-corpus.js';
 import {runProduction} from './lib/seo-content/production.js';
 import {publishedArticles,publishArticle,withdrawArticle} from './lib/seo-content/publication.js';
-import {safeFailure,inspectStorage,ledgerConfigurationIssues} from './lib/seo-content/diagnostics.js';
+import {safeFailure,inspectStorage,inspectClientTls,ledgerConfigurationIssues} from './lib/seo-content/diagnostics.js';
 import {gscSnapshot} from './lib/seo-content/gsc-snapshot.js';
 import {createRunner} from './api/seo-content-runner.js';
 import {createContentHandler} from './lib/seo-content/render.js';
@@ -78,13 +78,26 @@ test('role isolation rejects owner-readable public views and column-only commerc
 test('health decrypts existing checkpoints; wrong keys and identities cannot report integrity PASS',async()=>{
   const f=await fixture();try{
     // Catalog/TLS are mocked; real ciphertext and ledger validation use PGlite.
-    const pool={query:(sql,params)=>sql.includes('current_user AS role')?{rows:[{role:'seo_engine_executor',private_storage:true}]}:sql.includes('pg_stat_ssl')?{rows:[{ssl:true,version:'TLSv1.3',bits:256}]}:f.pool.query(sql,params)};
-    const e={SEO_CONTENT_LEDGER_KEY:f.ledger.key.toString('hex'),SEO_CONTENT_OPENAI_PROJECT_ID:f.ledger.projectId};assert.equal((await inspectStorage(pool,e)).integrity,'PASS');
+    const host='aws-1-us-west-2.pooler.supabase.com';
+    const stream={encrypted:true,authorized:true,getProtocol:()=> 'TLSv1.3',getCipher:()=>({standardName:'TLS_AES_256_GCM_SHA384'}),getPeerCertificate:()=>({subjectaltname:'DNS:'+host})};
+    const client={connection:{stream},connectionParameters:{ssl:{rejectUnauthorized:true,ca:'synthetic'}},release(){},query:(sql,params)=>sql.includes('current_user AS role')?{rows:[{role:'seo_engine_executor',private_storage:true}]}:sql.includes('pg_stat_ssl')?{rows:[{ssl:false,version:null,bits:null}]}:f.pool.query(sql,params)};
+    const pool={connect:async()=>client};
+    const e={SEO_CONTENT_LEDGER_DATABASE_URL:'postgresql://'+host+'/postgres',SEO_CONTENT_LEDGER_KEY:f.ledger.key.toString('hex'),SEO_CONTENT_OPENAI_PROJECT_ID:f.ledger.projectId};const report=await inspectStorage(pool,e);assert.equal(report.integrity,'PASS');assert.equal(report.clientTls.authorized,true);assert.equal(report.databaseLegTls.ssl,false);
     await assert.rejects(inspectStorage(pool,{...e,SEO_CONTENT_LEDGER_KEY:randomBytes(32).toString('hex')}),/integrity_failure/);
     await assert.rejects(inspectStorage(pool,{...e,SEO_CONTENT_OPENAI_PROJECT_ID:'proj_wrong'}),/identity_mismatch/);
     assert.deepEqual(safeFailure({code:'EAI_AGAIN',message:'password=secret'}),{status:'BLOCKED',stage:'dns',reason:'EAI_AGAIN'});
     assert.ok(!JSON.stringify(safeFailure(Error('postgres://secret'))).includes('secret'));
   }finally{await f.db.close();}
+});
+
+test('client TLS rejects untrusted certificates, weak protocols, plaintext, wrong host and disabled verification',()=>{
+  const host='aws-1-us-west-2.pooler.supabase.com';
+  const stream={encrypted:true,authorized:true,getProtocol:()=> 'TLSv1.3',getCipher:()=>({standardName:'TLS_AES_256_GCM_SHA384'}),getPeerCertificate:()=>({subjectaltname:'DNS:'+host})};
+  const client=s=>({connection:{stream:s},connectionParameters:{ssl:{rejectUnauthorized:true,ca:'synthetic'}}});
+  assert.equal(inspectClientTls(client(stream),host).hostnameVerified,true);
+  for(const changes of [{authorized:false},{encrypted:false},{getProtocol:()=> 'TLSv1.1'},{getCipher:()=>({name:'DES-CBC3-SHA'})}])assert.throws(()=>inspectClientTls(client({...stream,...changes}),host),/tls_required/);
+  assert.throws(()=>inspectClientTls(client(stream),'wrong.invalid'),/tls_required/);
+  const disabled=client(stream);disabled.connectionParameters.ssl.rejectUnauthorized=false;assert.throws(()=>inspectClientTls(disabled,host),/tls_required/);
 });
 
 test('runner refuses anonymous requests, preview execution and missing configuration before connecting',async()=>{

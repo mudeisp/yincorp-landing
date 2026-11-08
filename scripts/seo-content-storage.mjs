@@ -1,5 +1,5 @@
 import {readFile,open} from 'node:fs/promises';
-import {DurableLedger,ledgerPool,assertLedgerRole} from '../lib/seo-content/durable-ledger.js';
+import {DurableLedger,ledgerPool} from '../lib/seo-content/durable-ledger.js';
 import {writeStorageProbe,readStorageProbe} from '../lib/seo-content/storage-probe.js';
 import {inspectStorage,safeFailure} from '../lib/seo-content/diagnostics.js';
 
@@ -9,12 +9,9 @@ try{
   const [command,file]=process.argv.slice(2);
   if(!['check','write','read'].includes(command))throw Error('storage_probe_command_invalid');
   if(command!=='check'&&(!file||!/^\.seo-test\/[a-zA-Z0-9_-]+\.json$/.test(file)))throw Error('storage_probe_private_file_required');
-  pool=ledgerPool();await assertLedgerRole(pool);
-  const tls=(await pool.query('SELECT ssl,version,bits FROM pg_stat_ssl WHERE pid=pg_backend_pid()')).rows[0];
-  if(!tls?.ssl||!['TLSv1.2','TLSv1.3'].includes(tls.version)||tls.bits<128)throw Error('storage_probe_tls_required');
-  // pg's TLS stream verifies the chain and the hostname via rejectUnauthorized:true.
+  pool=ledgerPool();const storage=await inspectStorage(pool);
   if(command==='check'){
-    console.log(JSON.stringify(await inspectStorage(pool)));
+    console.log(JSON.stringify(storage));
   }else{
     const ledger=new DurableLedger({pool,key:process.env.SEO_CONTENT_LEDGER_KEY,projectId:process.env.SEO_CONTENT_OPENAI_PROJECT_ID});
     if(command==='write'){
