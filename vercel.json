@@ -248,7 +248,7 @@
   "crons": [
     {
       "path": "/api/seo-content-runner",
-      "schedule": "20 11 * * *"
+      "schedule": "0 12 * * *"
     }
   ]
 }
