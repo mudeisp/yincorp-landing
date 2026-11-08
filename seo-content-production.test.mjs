@@ -196,7 +196,8 @@ test('provider preflight validates project without inference and Windsor rejects
   };
   const result=await providerPreflight({env:configured,fetcher,now:when});assert.equal(result.status,'READY');assert.equal(result.gsc.rows,2);assert.doesNotMatch(JSON.stringify(result),new RegExp(secret));assert.equal(requests.length,3);
   await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>{throw Error('https://provider?api_key='+secret);}}),e=>!e.message.includes(secret)&&e.message==='gsc_windsor_unavailable');
-  await assert.rejects(gscSnapshot({env:configured,now:when+8*86400000,fetcher}),/gsc_windsor_invalid/);
+  await assert.rejects(gscSnapshot({env:configured,now:when+8*86400000,fetcher}),/gsc_windsor_timestamp_stale/);
+  const delayed=await gscSnapshot({env:configured,now:when,fetcher:async url=>{await new Promise(r=>setTimeout(r,30));const state=new URL(url).searchParams.get('filter').includes('/sp/')?'sp':'es';return Response.json({data:[{query:'imóveis',page:ORIGIN+'/'+state+'/synthetic',impressions:1,data_fetched_at:new Date(when+10).toISOString()}]});}});assert.equal(delayed.response.data.length,2);
   await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>new Response('API key not found: '+secret,{status:400})}),e=>e.message==='gsc_windsor_credentials_rejected'&&!e.message.includes(secret));
   await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>Response.json({error:'Not authorized',code:'unauthorized'},{status:400})}),/gsc_windsor_credentials_rejected/);
   assert.deepEqual(safeWindsorHints('Invalid filter JSON. '+secret+' https://example.invalid/?api_key=abcdef0123456789'),['invalid','filter','json','key','api_key']);
