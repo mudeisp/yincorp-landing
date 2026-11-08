@@ -56,7 +56,7 @@ test('a failed upstream call preserves its reservation, does not retry and retur
 test('different requested aliases for the same resolved model do not prove independent audit',async()=>{
   const independent=Object.fromEntries(GATES.map(g=>[g,{status:'PASS',evidence:'fixture inference'}]));
   const content={title:'fixture',description:'fixture',introduction:'fixture',sections:[],claims:[]};
-  const input={opportunity:{state:'SP',city:'fixture',targetCanonical:'/sp/conteudos/fixture'},context:{sources:[]},content,stock:[],pages:[]};
+  const input={opportunity:{state:'SP',city:'fixture',targetCanonical:'/sp/conteudos/fixture'},context:{sources:[]},content,stock:[],pages:[{path:'/sp/conteudos/other-fixture',title:'Other synthetic fixture',text:'Independent synthetic comparison corpus.'}]};
   const audit={provider:'openai',stage:'audit',responseId:'fixture_audit',model:'audit-alias',resolvedModel:'same-resolved-model',inputHash:hash(input),outputHash:hash(independent)};
   const writer={resolvedModel:'same-resolved-model',outputHash:hash(content)};
   const agents=createEditorialAgents({model:async()=>independent,checkLinks:async()=>[],requireAuditReceipt:true,auditReceipt:()=>audit,writerReceipt:()=>writer,writerModel:'writer-alias'});

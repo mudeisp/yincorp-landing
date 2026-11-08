@@ -90,7 +90,7 @@ tratados como artigos publicados. A simulação gravou somente NEEDS_REVIEW no
 PostgreSQL local e comprovou zero publicações.
 
 [Resumo minimizado](evidence/v4/deterministic-dry-run.json) e
-[17 testes locais aprovados](evidence/v4/deterministic-dry-run-tests.txt).
+[25 testes locais aprovados](evidence/v4/deterministic-dry-run-tests.txt).
 Cobrem SQL/quotas/idempotência, SSR/canonical/schema/sitemap, fontes, falhas externas,
 gates, corpus ausente, bairro incorreto e recusa de simulação com flags inseguras.
 A simulação existente de sete dias também passou: 70 fixtures, zero duplicatas,

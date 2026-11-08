@@ -1,25 +1,33 @@
-✔ seven-day actual SQL simulation: 35 SP + 35 ES, duplicate workers, no publication (3732.3219ms)
-✔ SQL gates, independent quotas, budget, stale lease fencing, retries, RLS and rollback (1185.1595ms)
-✔ missing comparison corpus cannot turn a model assertion into cannibalization or originality PASS (6.8491ms)
-✔ inventory gate rejects the wrong neighborhood even inside the right city and state (2.591ms)
-✔ deterministic runner refuses enabled inference or publication before reading inputs (722.4936ms)
-✔ only exact direct and session pooler tenant pairs retain verified TLS (4.4345ms)
-✔ pooler rejects other projects, administrative logins, transaction port and TLS overrides (2.1132ms)
-✔ GSC reads final query/page evidence and derives geography only from exact inventory canonical (68.2823ms)
-✔ GA4 request is reporting only and bounds pagination (2.1168ms)
-✔ monitor preserves missing measurements and rejects cross-state attribution (1.0194ms)
-✔ editorial spend is reserved before the model and a rejected budget makes no external call (0.5789ms)
-✔ safe defaults, quotas and credential authorization (7.2978ms)
-✔ score requires real observed demand, inventory and geographic relevance; rejects cannibalization (8.0514ms)
-✔ every missing, FAIL or UNKNOWN gate blocks; revisions, freshness and switches block (6.6902ms)
-✔ editorial checks independently reject fabricated facts, source tampering and unsafe links (7.8182ms)
-✔ external failures, bounded retries, evidence contracts and no credentials in error text (66.1962ms)
-✔ SSR canonical, schemas, escaped content, private preview and sitemap publication filtering (5.5322ms)
-ℹ tests 17
+✔ seven-day actual SQL simulation: 35 SP + 35 ES, duplicate workers, no publication (3972.4862ms)
+✔ SQL gates, independent quotas, budget, stale lease fencing, retries, RLS and rollback (1144.2697ms)
+✔ missing comparison corpus cannot turn a model assertion into cannibalization or originality PASS (8.6764ms)
+✔ inventory gate rejects the wrong neighborhood even inside the right city and state (1.0668ms)
+✔ deterministic runner refuses enabled inference or publication before reading inputs (806.2945ms)
+✔ only exact direct and session pooler tenant pairs retain verified TLS (4.237ms)
+✔ pooler rejects other projects, administrative logins, transaction port and TLS overrides (2.5658ms)
+✔ GSC reads final query/page evidence and derives geography only from exact inventory canonical (75.8617ms)
+✔ GA4 request is reporting only and bounds pagination (2.5519ms)
+✔ monitor preserves missing measurements and rejects cross-state attribution (1.9641ms)
+✔ editorial spend is reserved before the model and a rejected budget makes no external call (1.063ms)
+✔ inference preflight reports names only and requires explicit credential, budget, rates and private mode (3.8328ms)
+✔ strict local JSON validation rejects missing keys, extra fields, wrong types and arbitrary PASS values (4.0791ms)
+✔ HTTP is prohibited except an explicitly enabled exact loopback editorial route (1.0251ms)
+✔ real loopback HTTP contract authenticates, calls the adapter with a mocked provider and returns bound usage receipts (125.6044ms)
+✔ server budget rejection never calls even a mocked provider and errors never echo secrets (26.5113ms)
+✔ quality PASS without an independent response receipt is downgraded to UNKNOWN (4.6576ms)
+✔ a failed upstream call preserves its reservation, does not retry and returns no upstream secret (16.1767ms)
+✔ different requested aliases for the same resolved model do not prove independent audit (2.6981ms)
+✔ safe defaults, quotas and credential authorization (6.962ms)
+✔ score requires real observed demand, inventory and geographic relevance; rejects cannibalization (6.1803ms)
+✔ every missing, FAIL or UNKNOWN gate blocks; revisions, freshness and switches block (5.2986ms)
+✔ editorial checks independently reject fabricated facts, source tampering and unsafe links (7.4057ms)
+✔ external failures, bounded retries, evidence contracts and no credentials in error text (67.6998ms)
+✔ SSR canonical, schemas, escaped content, private preview and sitemap publication filtering (5.1329ms)
+ℹ tests 25
 ℹ suites 0
-ℹ pass 17
+ℹ pass 25
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 5258.0529
+ℹ duration_ms 5485.2381
