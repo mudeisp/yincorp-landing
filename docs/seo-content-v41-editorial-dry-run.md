@@ -115,6 +115,13 @@ e [roteamento Supavisor](https://supabase.github.io/supavisor/connecting/overvie
 
 ## Condições para o primeiro conteúdo real
 
+A main avançou quatro commits durante a execução e há conflitos no PR em arquivos
+compartilhados (.github/workflows/seo.yml e vercel.json). Não foi feito merge ou
+rebase da main. Para não confundir ausência de execução com CI aprovada, o workflow
+SEO agora verifica também pushes exclusivamente nesta branch. O job coverage
+fica excluído desses pushes, mantendo a validação em testes isolados. Essa CI
+não comprova integração com a main atual nem resolve os conflitos do PR.
+
 Comprovar o binding e persistência do ledger no executor autorizado usando a conexão
 direta já validada; confirmar Data API privada e a mesma chave/identidade entre
 sessões. Recuperar export GSC e fontes atuais no run real. Conectar corpus de

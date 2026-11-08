@@ -1,6 +1,8 @@
 name: SEO inventory and route checks
 on:
   pull_request:
+  push:
+    branches: ['feat/yincorp-seo-content-engine-v1']
   workflow_dispatch:
   schedule:
     - cron: '20 11 * * *'
@@ -8,7 +10,7 @@ permissions:
   contents: read
 jobs:
   verify:
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
@@ -39,7 +41,7 @@ jobs:
           path: docs/evidence/v2/postgres-concurrency.json
           retention-days: 14
   coverage:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
