@@ -1,0 +1,16 @@
+{
+  "compiler": "@vercel/routing-utils",
+  "version": "6.6.1",
+  "compiled": {
+    "src": "^\\/100leads(?:\\/(google-site-verification[^/]*googlec52bf83be63f0cdb\\.html))$",
+    "dest": "/100leads/google-site-verification-legacy.html?legacy=$1",
+    "check": true
+  },
+  "legacyMatches": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "productionHttp": "NOT_EXECUTED_NO_DEPLOY"
+}

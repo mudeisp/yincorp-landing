@@ -40,6 +40,13 @@ jobs:
           name: seo-content-v2-validation
           path: docs/evidence/v2/postgres-concurrency.json
           retention-days: 14
+  windows-checkout:
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify full Windows checkout and preserved verification route
+        run: node --test windows-checkout.test.mjs
   coverage:
     if: github.event_name != 'pull_request' && github.event_name != 'push'
     runs-on: ubuntu-latest

@@ -1,0 +1,211 @@
+{
+  "buildCommand": "node scripts/prepare-portal.mjs",
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/institucional",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/institucional/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/institucional/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/politica-de-privacidade.html",
+      "destination": "/politica-de-privacidade",
+      "permanent": true
+    },
+    {
+      "source": "/politica-de-privacidade/",
+      "destination": "/politica-de-privacidade",
+      "permanent": true
+    },
+    {
+      "source": "/politica-de-privacidade/index.html",
+      "destination": "/politica-de-privacidade",
+      "permanent": true
+    },
+    {
+      "source": "/sp/empreendimentos/arizona-1002/",
+      "destination": "/sp/empreendimentos/arizona-1002",
+      "permanent": true
+    },
+    {
+      "source": "/arizona-1002",
+      "destination": "/sp/empreendimentos/arizona-1002",
+      "permanent": true
+    },
+    {
+      "source": "/arizona-1002/index.html",
+      "destination": "/sp/empreendimentos/arizona-1002",
+      "permanent": true
+    },
+    {
+      "source": "/sp/empreendimentos/mandarim-the-legend/",
+      "destination": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
+      "permanent": true
+    },
+    {
+      "source": "/mandarim-the-legend",
+      "destination": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
+      "permanent": true
+    },
+    {
+      "source": "/mandarim-the-legend/index.html",
+      "destination": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
+      "permanent": true
+    },
+    {
+      "source": "/sp/empreendimentos/mandarim-the-legend",
+      "destination": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
+      "permanent": true
+    },
+    {
+      "source": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch/",
+      "destination": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/sitemap-content-:uf(sp|es).xml",
+      "destination": "/api/portal?portalPath=/sitemap-content-:uf.xml"
+    },
+    {
+      "source": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
+      "destination": "/mandarim-the-legend/index.html"
+    },
+    {
+      "source": "/politica-de-privacidade",
+      "destination": "/politica-de-privacidade/index.html"
+    },
+    {
+      "source": "/sp/empreendimentos/arizona-1002",
+      "destination": "/arizona-1002/index.html"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/portal?portalPath=/sitemap.xml"
+    },
+    {
+      "source": "/sitemap-seo/:rest*",
+      "destination": "/api/portal?portalPath=/sitemap-seo/:rest*"
+    },
+    {
+      "source": "/varanda-botanic",
+      "destination": "/varanda-botanic/index.html"
+    },
+    {
+      "source": "/varanda-botanic/",
+      "destination": "/varanda-botanic/index.html"
+    },
+    {
+      "source": "/api/portal/lead",
+      "destination": "https://app.yincorp.com.br/api/lead"
+    },
+    {
+      "source": "/api/ads",
+      "destination": "https://app.yincorp.com.br/api/ads"
+    },
+    {
+      "source": "/sitemap-portal.xml",
+      "destination": "/api/portal?portalPath=/sitemap-portal.xml"
+    },
+    {
+      "source": "/:uf(ac|al|ap|am|ba|ce|df|es|go|ma|mt|ms|mg|pa|pb|pr|pe|pi|rj|rn|rs|ro|rr|sc|sp|se|to)",
+      "destination": "/api/portal?portalPath=/:uf"
+    },
+    {
+      "source": "/:uf(ac|al|ap|am|ba|ce|df|es|go|ma|mt|ms|mg|pa|pb|pr|pe|pi|rj|rn|rs|ro|rr|sc|sp|se|to)/:rest*",
+      "destination": "/api/portal?portalPath=/:uf/:rest*"
+    },
+    {
+      "source": "/assets/js/portal.js",
+      "destination": "/portal-assets/portal.js"
+    },
+    {
+      "source": "/assets/js/portal-contact.js",
+      "destination": "/portal-assets/portal-contact.js"
+    },
+    {
+      "source": "/assets/js/portal-session.js",
+      "destination": "/portal-assets/portal-session.js"
+    },
+    {
+      "source": "/assets/js/integrations/analytics.js",
+      "destination": "/portal-assets/analytics.js"
+    },
+    {
+      "source": "/icon-192.png",
+      "destination": "/portal-assets/icon-192.png"
+    },
+    {
+      "source": "/assets/js/portal-gallery.js",
+      "destination": "/portal-assets/portal-gallery.js"
+    },
+    {
+      "source": "/assets/css/portal-editorial.css",
+      "destination": "/portal-assets/portal-editorial.css"
+    },
+    {
+      "source": "/assets/css/property-story.css",
+      "destination": "/portal-assets/property-story.css"
+    },
+    {
+      "source": "/assets/js/property-story.js",
+      "destination": "/portal-assets/property-story.js"
+    },
+    {
+      "source": "/assets/js/investment-model.js",
+      "destination": "/portal-assets/investment-model.js"
+    },
+    {
+      "source": "/assets/js/investment-journey.js",
+      "destination": "/portal-assets/investment-journey.js"
+    },
+    {
+      "source": "/assets/js/finance-model.js",
+      "destination": "/portal-assets/finance-model.js"
+    },
+    {
+      "source": "/assets/js/investment-simulator.js",
+      "destination": "/portal-assets/investment-simulator.js"
+    },
+    {
+      "source": "/assets/js/whatsapp-contact.js",
+      "destination": "/portal-assets/whatsapp-contact.js"
+    },
+    {
+      "source": "/assets/css/whatsapp-float.css",
+      "destination": "/portal-assets/whatsapp-float.css"
+    },
+    {
+      "source": "/alugar",
+      "destination": "/api/rentals?rentalPath=/alugar"
+    },
+    {
+      "source": "/alugar/:rest*",
+      "destination": "/api/rentals?rentalPath=/alugar/:rest*"
+    },
+    {
+      "source": "/assets/css/rentals.css",
+      "destination": "/portal-assets/rentals.css"
+    },
+    {
+      "source": "/assets/js/rentals.js",
+      "destination": "/portal-assets/rentals.js"
+    }
+  ]
+}
