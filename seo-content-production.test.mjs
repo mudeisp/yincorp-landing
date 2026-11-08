@@ -24,7 +24,7 @@ const excerpt='A praça consta no inventário municipal.';
 const sources=[{url:'https://www.prefeitura.sp.gov.br/cidade',observedAt:stamp,excerpt,digest:hash(excerpt)}];
 const content={title:'Como avaliar imóveis no Ipiranga',description:'Critérios de avaliação para imóveis no Ipiranga, São Paulo.',introduction:'Compare as opções do bairro com critérios verificáveis.',sections:[{heading:'Fontes da região',level:2,text:excerpt,claims:[0]},{heading:'Como comparar',level:3,text:'Visite o entorno e confirme a disponibilidade.',claims:[]}],questions:[{question:'O que conferir?',answer:'Confirme as condições no atendimento.'}],internalLinks:[{path:stock[0].path,label:'Inventário'}],cta:'Consulte o catálogo.',claims:[{text:excerpt,sourceUrl:sources[0].url}]};
 function corpus(){const p={path:'/sp/sao-paulo',url:ORIGIN+'/sp/sao-paulo',title:'Catálogo de São Paulo',intent:'transactional',text:'SYNTHETIC comparison corpus',observedAt:stamp,verified:true};p.textHash=hash(p.text);const c={pages:[p],coverage:{complete:true,expected:1,retrieved:1,state:'SP',city:'São Paulo',neighborhood:'Ipiranga'},observedAt:stamp};c.snapshotHash=corpusDigest(c);return c;}
-async function fixture(){
+async function fixture({auditOutput=passes()}={}){
   const db=new PGlite();await db.exec('CREATE ROLE anon;CREATE ROLE authenticated;CREATE ROLE service_role;');await db.exec(await readFile('supabase/migrations/20261107205526_seo_engine_private_ledger_v4.sql','utf8'));
   const query=(sql,params)=>!params&&sql.includes(';')?db.exec(sql):db.query(sql,params),pool={query,connect:async()=>({query,release(){}})};
   const ledger=new DurableLedger({pool,key:randomBytes(32).toString('hex'),projectId:'proj_synthetic_production'});await ledger.initialize();
@@ -33,7 +33,7 @@ async function fixture(){
   let dispatches=0;
   const options={ledger,env,now:()=>when,inventory:async()=>stock,corpusReader:async()=>corpus(),sourceReader:async()=>sources,checkLinks:async urls=>urls.map(()=>true),snapshotReader:async()=>({provider:'google/searchconsole',retrievedAt:stamp,windowStart:'2026-10-08',windowEnd:'2026-11-05',response:{data:[{query:'imóveis no ipiranga',page:ORIGIN+stock[0].path,impressions:100,clicks:1,ctr:.01,position:8}]}}),editorialFactory:({ledger,runId,article,settings,onUsage})=>async(stage,input,instructions)=>{
     const result=await ledger.call({runId,article,stage,input,instructions,model:settings.models[stage]},async()=>{
-      dispatches++;const output=stage==='write'?content:stage==='audit'?passes():{questions:['Como avaliar?'],comparison:'SYNTHETIC',claims:content.claims};
+      dispatches++;const output=stage==='write'?content:stage==='audit'?auditOutput:{questions:['Como avaliar?'],comparison:'SYNTHETIC',claims:content.claims};
       return {output,receipt:{provider:'openai',responseId:'resp_synthetic_'+stage,resolvedModel:settings.models[stage],model:settings.models[stage],stage,inputHash:hash(input),outputHash:hash(output),estimatedMicros:10,inputTokens:1,outputTokens:1}};
     });onUsage(result.receipt);return result.output;
   }};
@@ -210,4 +210,10 @@ test('a blocked IBGE source preserves verified municipal and inventory sources, 
   const retrieve=()=>async url=>{if(url.includes('ibge.gov.br'))throw Error('source_http_unavailable');return {url,excerpt,observedAt:stamp,digest:hash(excerpt)};};
   const result=await collectSources({state:'SP',city:'São Paulo'},stock,{retrieve});assert.equal(result.length,2);assert.ok(result.some(s=>s.url.startsWith('https://prefeitura.sp.gov.br/')));assert.ok(result.some(s=>s.url.startsWith(ORIGIN)));
   await assert.rejects(collectSources({state:'SP',city:'São Paulo'},stock,{retrieve:()=>async url=>{if(!url.startsWith(ORIGIN))throw Error('source_http_unavailable');return {url};}}),/independent_sources_required/);
+});
+
+test('real private rendering proves infrastructure UNKNOWN while independent content failures still block publication',async()=>{
+  const audit=passes();for(const g of ['security','canonical','sitemap','links'])audit[g]={status:'UNKNOWN',evidence:'Model has no browser or publication tools'};
+  const f=await fixture({auditOutput:audit});try{const result=await runProduction(f.options);assert.equal(result.status,'PUBLISHED');const [article]=publishedArticles(await f.ledger.read(),'SP');assert.match(article.validations.canonical.evidence,/Renderer real/);assert.match(article.validations.sitemap.evidence,/projeção privada/);assert.match(article.validations.links.evidence,/GET público/);}finally{await f.db.close();}
+  for(const gate of ['facts','security']){const rejected=passes();rejected[gate]={status:'FAIL',evidence:'Independent auditor found a concrete problem'};const f=await fixture({auditOutput:rejected});try{assert.equal((await runProduction(f.options)).status,'NEEDS_REVIEW');assert.equal(publishedArticles(await f.ledger.read(),'SP').length,0);}finally{await f.db.close();}}
 });
