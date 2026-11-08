@@ -3,6 +3,26 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/lucas.schoch/",
+      "destination": "/lucas.schoch",
+      "permanent": true
+    },
+    {
+      "source": "/guilherme-vita",
+      "destination": "/guilherme.vita",
+      "permanent": true
+    },
+    {
+      "source": "/guilherme.vita/",
+      "destination": "/guilherme.vita",
+      "permanent": true
+    },
+    {
+      "source": "/guilherme-vita/",
+      "destination": "/guilherme.vita",
+      "permanent": true
+    },
+    {
       "source": "/institucional",
       "destination": "/",
       "permanent": true
@@ -80,12 +100,12 @@
   ],
   "rewrites": [
     {
-      "source": "/100leads/:legacy(google-site-verification[^/]*googlec52bf83be63f0cdb\\.html)",
-      "destination": "/100leads/google-site-verification-legacy.html"
+      "source": "/lucas.schoch",
+      "destination": "/lucas.schoch/index.html"
     },
     {
-      "source": "/sitemap-content-:uf(sp|es).xml",
-      "destination": "/api/portal?portalPath=/sitemap-content-:uf.xml"
+      "source": "/guilherme.vita",
+      "destination": "/guilherme.vita/index.html"
     },
     {
       "source": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
@@ -210,6 +230,25 @@
     {
       "source": "/assets/js/rentals.js",
       "destination": "/portal-assets/rentals.js"
+    },
+    {
+      "source": "/100leads/:legacy(google-site-verification[^/]*googlec52bf83be63f0cdb\\.html)",
+      "destination": "/100leads/google-site-verification-legacy.html"
+    },
+    {
+      "source": "/sitemap-content-:uf(sp|es).xml",
+      "destination": "/api/portal?portalPath=/sitemap-content-:uf.xml"
+    }
+  ],
+  "functions": {
+    "api/seo-content-runner.js": {
+      "maxDuration": 300
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/seo-content-runner",
+      "schedule": "20 11 * * *"
     }
   ]
 }

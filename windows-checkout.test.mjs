@@ -25,5 +25,7 @@ test('legacy verification URL is rewritten internally, without changing other ro
   for(const separator of [': ',':%20','%3A%20','%3a%20'])assert.ok(pattern.test('/100leads/google-site-verification'+separator+'googlec52bf83be63f0cdb.html'));
   for(const path of ['/sp','/100leads','/100leads/google-site-verification/evil/googlec52bf83be63f0cdb.html'])assert.equal(pattern.test(path),false);
   const before=JSON.parse(await readFile('docs/evidence/windows-checkout/previous-vercel.json','utf8'));
-  assert.deepEqual({...config,rewrites:config.rewrites.filter(r=>r!==rule)},before);
+  // New product routes/cron may be added; every pre-existing rule must survive.
+  for(const kind of ['redirects','rewrites'])for(const original of before[kind])assert.deepEqual(config[kind].find(r=>r.source===original.source),original);
+  assert.equal(config.buildCommand,before.buildCommand);assert.equal(config.outputDirectory,before.outputDirectory);
 });

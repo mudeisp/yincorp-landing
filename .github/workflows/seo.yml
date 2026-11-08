@@ -2,7 +2,7 @@ name: SEO inventory and route checks
 on:
   pull_request:
   push:
-    branches: ['feat/yincorp-seo-content-engine-v1']
+    branches: ['feat/yincorp-seo-content-engine-v1', 'main']
   workflow_dispatch:
   schedule:
     - cron: '20 11 * * *'

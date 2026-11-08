@@ -1,6 +1,7 @@
 import {readFile,open} from 'node:fs/promises';
 import {DurableLedger,ledgerPool,assertLedgerRole} from '../lib/seo-content/durable-ledger.js';
 import {writeStorageProbe,readStorageProbe} from '../lib/seo-content/storage-probe.js';
+import {inspectStorage,safeFailure} from '../lib/seo-content/diagnostics.js';
 
 let pool;
 try{
@@ -13,8 +14,7 @@ try{
   if(!tls?.ssl||!['TLSv1.2','TLSv1.3'].includes(tls.version)||tls.bits<128)throw Error('storage_probe_tls_required');
   // pg's TLS stream verifies the chain and the hostname via rejectUnauthorized:true.
   if(command==='check'){
-    const initialized=Number((await pool.query('SELECT count(*) n FROM seo_engine.ledger')).rows[0].n)===1;
-    console.log(JSON.stringify({connection:'PASS',roleIsolation:'PASS',tls:tls.version,initialized,dataApiExposure:'UNKNOWN_REQUIRES_DASHBOARD_CHECK',autopublish:false,inference:false}));
+    console.log(JSON.stringify(await inspectStorage(pool)));
   }else{
     const ledger=new DurableLedger({pool,key:process.env.SEO_CONTENT_LEDGER_KEY,projectId:process.env.SEO_CONTENT_OPENAI_PROJECT_ID});
     if(command==='write'){
@@ -29,6 +29,5 @@ try{
     }else console.log(JSON.stringify(await readStorageProbe(ledger,JSON.parse(await readFile(file,'utf8')))));
   }
 }catch(error){
-  const safe=new Set(['storage_probe_requires_inference_disabled','storage_probe_command_invalid','storage_probe_private_file_required','private_ledger_configuration_required','private_ledger_identity_required','private_ledger_not_initialized','storage_probe_already_exists','storage_probe_limit','storage_probe_proof_invalid','storage_probe_integrity_failure','private_ledger_integrity_failure','storage_probe_tls_required','private_ledger_role_not_isolated']);
-  console.error(JSON.stringify({status:'BLOCKED',reason:safe.has(error.message)?error.message:'storage_connection_or_checkpoint_unavailable'}));process.exitCode=1;
+  console.error(JSON.stringify(safeFailure(error,'storage')));process.exitCode=1;
 }finally{if(pool)await pool.end();}

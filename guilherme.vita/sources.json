@@ -1,0 +1,42 @@
+[
+  {
+    "file": "arizona-book.pdf",
+    "sha256": "f307bf311979ea237ba73a235216d8e06be3a73a0ad152703cc194a636b304e2",
+    "size": 16071780
+  },
+  {
+    "file": "arizona-tabela.pdf",
+    "sha256": "3cca8526f4e0e132fd2caa81f0d70d38e1a012292a1ea6d4bc816e20d0b08ee0",
+    "size": 1798613
+  },
+  {
+    "file": "brooklin-book.pdf",
+    "sha256": "28a07035a99acc536e245d51cae59aeaae97acb9ce4f5d9cf1c6b1069be065b6",
+    "size": 7169077
+  },
+  {
+    "file": "brooklin-tabela.pdf",
+    "sha256": "11eeec076fa595db34639a018003a3bb250ce571fbea82ac06087e401939c4ec",
+    "size": 5227562
+  },
+  {
+    "file": "haus-book.pdf",
+    "sha256": "e474628062a5dd26c29f76c670f25225f7475eef201827b7901eb21013e86e6d",
+    "size": 16505374
+  },
+  {
+    "file": "haus-tabela.pdf",
+    "sha256": "2d27c630ce1b646677636a241f0880456a1fe75262528a3f83c9a04782862d76",
+    "size": 5165938
+  },
+  {
+    "file": "mandarim-book.pdf",
+    "sha256": "6313dc8a14319c8122eaad7d676e3a6ae08851bfe3bb862873837c11f5bbcd71",
+    "size": 15649159
+  },
+  {
+    "file": "mandarim-tabela.pdf",
+    "sha256": "bffd476c63a23d020c1980f131de6a9fc78e5a0bfcd783acf26d2dddd6056b25",
+    "size": 1816818
+  }
+]

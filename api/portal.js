@@ -11,7 +11,9 @@ import {linkNationalEntities} from '../lib/geo-national-entities.js';
 import {createContentHandler,visible} from '../lib/seo-content/render.js';
 import {contentInventory} from '../lib/seo-content/inventory.js';
 import {getStore} from './seo-content.js';
-const content=createContentHandler({store:{published:state=>getStore().published(state)},inventory:contentInventory});
+import {productionStore} from '../lib/seo-content/production-store.js';
+const published=state=>process.env.SEO_CONTENT_STORAGE==='private-ledger'?productionStore.published(state):getStore().published(state);
+const content=createContentHandler({store:{published},inventory:contentInventory});
 
 async function publicInventoryRequest(path,options={}) {
   const headers={apikey:publicConfig.key,'Content-Type':'application/json'};
@@ -49,7 +51,7 @@ export default async function portal(req,res){
   if(process.env.SEO_CONTENT_ENABLED==='true'&&['GET','HEAD'].includes(req.method)&&/^\/(sp|es)(?:\/|$)/.test(path)){
     const state=path.split('/')[1].toUpperCase();
     try{
-      const articles=(await getStore().published(state)).filter(visible),root=path===`/${state.toLowerCase()}`;
+      const articles=(await published(state)).filter(visible),root=path===`/${state.toLowerCase()}`;
       const related=articles.filter(a=>a.content.internalLinks?.some(l=>l.path===path)).slice(0,3);
       if(articles.length&&(root||related.length)){
         const baseSend=res.send.bind(res);res.send=body=>baseSend(res.statusCode===200&&typeof body==='string'?body.replace('</main>',`<nav class="wrap" aria-label="Guias da região">${root?`<a href="/${state.toLowerCase()}/conteudos">Conteúdos de ${state}</a>`:related.map(a=>`<a href="${h(a.path)}">${h(a.content.title)}</a>`).join(' · ')}</nav></main>`):body);
