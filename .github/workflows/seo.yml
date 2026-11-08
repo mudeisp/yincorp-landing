@@ -1,6 +1,8 @@
 name: SEO inventory and route checks
 on:
   pull_request:
+  push:
+    branches: ['feat/yincorp-seo-content-engine-v1', 'main']
   workflow_dispatch:
   schedule:
     - cron: '20 11 * * *'
@@ -8,7 +10,7 @@ permissions:
   contents: read
 jobs:
   verify:
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
@@ -21,8 +23,32 @@ jobs:
           node --check lib/geo-national-entities.js
           node --check scripts/audit-seo.mjs
           node --test geo-national-entities.test.mjs home-national.test.mjs integration.test.mjs intelligence.test.mjs national-comparator.test.mjs whatsapp-integration.test.mjs seo.test.mjs national-seo.test.mjs national-sitemap-isolation.test.mjs privacy.test.mjs arizona-1002/model.test.mjs mandarim-the-legend/model.test.mjs
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - name: Install isolated SQL test engine
+        run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Content engine gates, SQL and seven-day simulation
+        run: |
+          node --test seo-content*.test.mjs national-sitemap-isolation.test.mjs
+          node scripts/simulate-seo-content.mjs
+      - name: Native PostgreSQL with independent TCP connections
+        run: node scripts/verify-seo-content-concurrency.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: seo-content-v2-validation
+          path: docs/evidence/v2/postgres-concurrency.json
+          retention-days: 14
+  windows-checkout:
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify full Windows checkout and preserved verification route
+        run: node --test windows-checkout.test.mjs
   coverage:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683

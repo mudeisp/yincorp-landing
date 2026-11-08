@@ -1,0 +1,2 @@
+# Preserve the legacy Google verification payload byte-for-byte on every OS.
+100leads/google-site-verification-legacy.html -text

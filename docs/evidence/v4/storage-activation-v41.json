@@ -1,0 +1,97 @@
+{
+  "version": "4.1",
+  "observedAt": "2026-11-07T21:37:36.680Z",
+  "referenceCommit": "6855ed3eaa24fda7cb207ca9fbc535a7b5c1de28",
+  "status": "BLOCKED_HUMAN_SECRET_PROVISIONING",
+  "target": {
+    "project": "bgggafirdjvxihqselha",
+    "schema": "seo_engine",
+    "table": "ledger",
+    "role": "seo_engine_executor"
+  },
+  "migration": {
+    "source": "supabase/migrations/20261107205526_seo_engine_private_ledger_v4.sql",
+    "registeredVersion": "20261107212405",
+    "normalizedSqlMd5": "b2d24a2bb6260fda6befa20757309e22",
+    "normalizedSqlMatchesSource": true,
+    "historicalMigrationsModified": false
+  },
+  "role": {
+    "login": true,
+    "passwordConfigured": false,
+    "superuser": false,
+    "inherit": false,
+    "bypassRls": false,
+    "createRole": false,
+    "createDatabase": false,
+    "replication": false,
+    "memberships": [],
+    "connectionLimit": 4,
+    "ledgerSelect": true,
+    "ledgerInsert": true,
+    "ledgerUpdateColumns": [
+      "revision",
+      "ciphertext"
+    ],
+    "ledgerDelete": false,
+    "ledgerTruncate": false,
+    "publicTableAccess": false,
+    "publicDefinerAccess": false
+  },
+  "isolation": {
+    "rlsEnabled": true,
+    "rlsForced": true,
+    "publicRolesDenied": [
+      "anon",
+      "authenticated",
+      "service_role"
+    ],
+    "dataApiExposure": "UNKNOWN: no pgrst.db_schemas setting visible; Dashboard verification required",
+    "remoteLedgerRows": 0,
+    "remoteSyntheticWrites": 0,
+    "remoteCommercialWrites": 0
+  },
+  "executor": {
+    "current": "Windows local",
+    "cloudEnvironment": "yincorp-landing",
+    "cloudRunnable": true,
+    "cloudSecretReadiness": "NOT_OBSERVED",
+    "pendingLocalConfiguration": [
+      "SEO_CONTENT_LEDGER_DATABASE_URL",
+      "SEO_CONTENT_LEDGER_TLS_CA",
+      "SEO_CONTENT_LEDGER_KEY",
+      "SEO_CONTENT_OPENAI_PROJECT_ID"
+    ]
+  },
+  "network": {
+    "directHost": "db.bgggafirdjvxihqselha.supabase.co",
+    "port": 5432,
+    "dnsA": "NOT_FOUND",
+    "dnsAAAA": "FOUND",
+    "tcpFromLocal": "CONNECTED",
+    "tlsCertificateValidation": "NOT_EXECUTED: trusted CA/runtime credentials missing",
+    "cloudTcp": "NOT_OBSERVED",
+    "pooler": "Official session pooler documented; exact Dashboard endpoint not selected; current adapter rejects unpinned poolers"
+  },
+  "tests": {
+    "focusedLocal": {
+      "passed": 2,
+      "failed": 0,
+      "engine": "PGlite + CLI fail-closed checks"
+    },
+    "nativeLocal": {
+      "status": "BLOCKED_RUNTIME",
+      "error": "uv_os_get_passwd returned ENOMEM before starting PostgreSQL"
+    },
+    "twoCloudSessions": "NOT_EXECUTED",
+    "nativeCi": "PENDING"
+  },
+  "financial": {
+    "historicalSpend": "UNKNOWN",
+    "availableBalance": "UNKNOWN",
+    "newAuthorizationCreated": false,
+    "inferenceEnabled": false,
+    "autopublish": false,
+    "providerRequests": 0
+  }
+}

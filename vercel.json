@@ -230,6 +230,25 @@
     {
       "source": "/assets/js/rentals.js",
       "destination": "/portal-assets/rentals.js"
+    },
+    {
+      "source": "/100leads/:legacy(google-site-verification[^/]*googlec52bf83be63f0cdb\\.html)",
+      "destination": "/100leads/google-site-verification-legacy.html"
+    },
+    {
+      "source": "/sitemap-content-:uf(sp|es).xml",
+      "destination": "/api/portal?portalPath=/sitemap-content-:uf.xml"
+    }
+  ],
+  "functions": {
+    "api/seo-content-runner.js": {
+      "maxDuration": 300
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/seo-content-runner",
+      "schedule": "20 11 * * *"
     }
   ]
 }

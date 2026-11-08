@@ -1,0 +1,18 @@
+{
+  "provider": "existing MIA Google Ads read-only SSR",
+  "url": "https://media-intelligence-agent-eight.vercel.app/search-terms",
+  "observedAt": "2026-11-07T10:17:17.930Z",
+  "window": "LAST_7_DAYS",
+  "status": "CONNECTED_READ",
+  "termsVisible": 1237,
+  "impressions": 3227,
+  "clicks": 271,
+  "costBRL": 582.99,
+  "conversionsGoogleAds": 0,
+  "htmlDigest": "594fee8706d410906af407560970b3696b99fae1a7c8d2450472960aa9c28511",
+  "limitations": [
+    "Aggregated visible-term metrics, not leads or exhaustive traffic",
+    "No geographic or article attribution inferred from campaign names",
+    "Captured via authenticated Vercel connector; runtime refresh requires scoped read transport"
+  ]
+}

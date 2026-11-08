@@ -1,0 +1,85 @@
+{
+  "observedAt": "2026-11-07T09:47:04.874Z",
+  "readOnly": true,
+  "results": [
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "location": null,
+      "canonical": null,
+      "robots": null,
+      "body": "User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: https://www.yincorp.com.br/sitemap.xml\nSitemap: https://www.yincorp.com.br/sitemap-portal.xml\n"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "location": null,
+      "canonical": null,
+      "robots": "all",
+      "sitemaps": [
+        "https://www.yincorp.com.br/sitemap-seo/es/empreendimentos-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/es/lugares-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/pb/empreendimentos-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/pb/lugares-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/pe/empreendimentos-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/pe/lugares-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/pr/empreendimentos-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/pr/lugares-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/rj/empreendimentos-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/rj/lugares-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/rs/empreendimentos-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/rs/lugares-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/sc/empreendimentos-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/sc/lugares-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/sp/empreendimentos-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/sp/imoveis-1.xml",
+        "https://www.yincorp.com.br/sitemap-seo/sp/lugares-1.xml",
+        "https://www.yincorp.com.br/sitemap-static.xml"
+      ]
+    },
+    {
+      "path": "/sp",
+      "status": 200,
+      "location": null,
+      "canonical": "https://www.yincorp.com.br/sp",
+      "robots": "all"
+    },
+    {
+      "path": "/es",
+      "status": 200,
+      "location": null,
+      "canonical": "https://www.yincorp.com.br/es",
+      "robots": "all"
+    }
+  ],
+  "inventory": [
+    {
+      "state": "SP",
+      "status": 206,
+      "contentRange": "0-0/2125",
+      "sample": [
+        {
+          "id": "8d9f2e5f-140d-46c8-aef8-1840b6715bd6",
+          "state": "SP",
+          "city": "São Paulo",
+          "neighborhood": "Higienópolis",
+          "building_id": "11120"
+        }
+      ]
+    },
+    {
+      "state": "ES",
+      "status": 206,
+      "contentRange": "0-0/172",
+      "sample": [
+        {
+          "id": "262fcbca-5bfb-49a3-b685-8f8e44c5d09a",
+          "state": "ES",
+          "city": "Serra",
+          "neighborhood": "Planalto de Carapina",
+          "building_id": "60481"
+        }
+      ]
+    }
+  ]
+}

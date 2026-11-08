@@ -1,0 +1,183 @@
+{
+  "version": 3,
+  "observedAt": "2026-11-07T11:06:03.473Z",
+  "commit": "6601f0e7e34f10414937f1163aea65c90fdef964",
+  "status": "BLOCKED",
+  "preflight": {
+    "status": "BLOCKED",
+    "mode": "isolated_loopback_bridge",
+    "credentialConfigured": false,
+    "budgetAuthorized": false,
+    "missing": [
+      "OPENAI_API_KEY",
+      "SEO_CONTENT_INFERENCE_AUTHORIZED",
+      "SEO_CONTENT_APPROVED_BUDGET_MICROS",
+      "SEO_CONTENT_RESEARCH_MODEL",
+      "SEO_CONTENT_WRITE_MODEL",
+      "SEO_CONTENT_AUDIT_MODEL",
+      "SEO_CONTENT_MODEL_RATES"
+    ]
+  },
+  "secretValuesInspected": false,
+  "credentialsCopied": false,
+  "providerRequests": 0,
+  "publications": 0,
+  "autopublish": false,
+  "tokens": {
+    "input": 0,
+    "output": 0
+  },
+  "cost": {
+    "generationActualUSD": 0,
+    "estimatedUSD": 0
+  },
+  "states": [
+    {
+      "state": "SP",
+      "city": "São Paulo",
+      "neighborhood": "Ipiranga",
+      "status": "BLOCKED",
+      "article": null,
+      "reason": "editorial_credentials_unavailable",
+      "stages": {
+        "research": "NOT_EXECUTED",
+        "write": "NOT_EXECUTED",
+        "audit": "NOT_EXECUTED"
+      },
+      "gates": {
+        "sources": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "facts": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "originality": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "cannibalization": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "geography": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "inventory": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "links": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "editorial": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "security": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "canonical": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "sitemap": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "tests": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        }
+      }
+    },
+    {
+      "state": "ES",
+      "city": "Vitória",
+      "neighborhood": "Praia do Canto",
+      "status": "BLOCKED",
+      "article": null,
+      "reason": "editorial_credentials_unavailable",
+      "stages": {
+        "research": "NOT_EXECUTED",
+        "write": "NOT_EXECUTED",
+        "audit": "NOT_EXECUTED"
+      },
+      "gates": {
+        "sources": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "facts": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "originality": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "cannibalization": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "geography": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "inventory": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "links": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "editorial": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "security": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "canonical": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "sitemap": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        },
+        "tests": {
+          "status": "UNKNOWN",
+          "evidence": "Inferência real não executada: preflight bloqueado"
+        }
+      }
+    }
+  ],
+  "nextAction": {
+    "secret": "Provisionar OPENAI_API_KEY somente na sessão/secret store do ambiente isolado autorizado; não copiar de outro projeto.",
+    "nonSecretRequirements": [
+      "SEO_CONTENT_INFERENCE_AUTHORIZED",
+      "SEO_CONTENT_APPROVED_BUDGET_MICROS",
+      "SEO_CONTENT_RESEARCH_MODEL",
+      "SEO_CONTENT_WRITE_MODEL",
+      "SEO_CONTENT_AUDIT_MODEL",
+      "SEO_CONTENT_MODEL_RATES"
+    ],
+    "configuration": "deploy/seo-content-inference.example.json"
+  },
+  "provenance": {
+    "worktreeDirty": true,
+    "sourceDigests": {
+      "lib/seo-content/inference-config.js": "8ab9731bdc50a802c9e5006257d2d7706cf18673a439642aa6cd3121772e03c3",
+      "lib/seo-content/editorial-bridge.js": "337d04ad64e5190eb9414f825c467d8a26e9820588a526337848ed767c45357f",
+      "lib/seo-content/openai-editorial.js": "d06e9a913461532a04548a2f30622524c5cf364974530fa64d5f54cbdf532a51",
+      "scripts/run-seo-content-demo.mjs": "e4a89779ac06302d06ee6d0eb66e5368c106ae922d0ab010832e97aac22329dd"
+    }
+  }
+}

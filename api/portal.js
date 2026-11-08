@@ -1,4 +1,4 @@
-import {groupEligibleDevelopments} from '../.portal-shared/model.js';
+import {groupEligibleDevelopments,html as h} from '../.portal-shared/model.js';
 import {NATIONAL_MARKETS} from '../.portal-shared/eligibility.js';
 import { createPortalHandler } from '../.portal-shared/router.js';
 import { readInventory } from '../.portal-shared/inventory.js';
@@ -8,6 +8,12 @@ import {investmentPage} from '../lib/investment-page.js';
 import {createSeoHandler,createResaleReader} from '../lib/seo-catalog.js';
 import {withPrivacyFooter} from '../lib/privacy-footer.js';
 import {linkNationalEntities} from '../lib/geo-national-entities.js';
+import {createContentHandler,visible} from '../lib/seo-content/render.js';
+import {contentInventory} from '../lib/seo-content/inventory.js';
+import {getStore} from './seo-content.js';
+import {productionStore} from '../lib/seo-content/production-store.js';
+const published=state=>process.env.SEO_CONTENT_STORAGE==='private-ledger'?productionStore.published(state):getStore().published(state);
+const content=createContentHandler({store:{published},inventory:contentInventory});
 
 async function publicInventoryRequest(path,options={}) {
   const headers={apikey:publicConfig.key,'Content-Type':'application/json'};
@@ -41,6 +47,20 @@ export default async function portal(req,res){
     }
     return privacySend(res.statusCode===200?withPrivacyFooter(body):body);
   };
+  if(await content(req,res,path))return;
+  if(process.env.SEO_CONTENT_ENABLED==='true'&&['GET','HEAD'].includes(req.method)&&/^\/(sp|es)(?:\/|$)/.test(path)){
+    const state=path.split('/')[1].toUpperCase();
+    try{
+      const articles=(await published(state)).filter(visible),root=path===`/${state.toLowerCase()}`;
+      const related=articles.filter(a=>a.content.internalLinks?.some(l=>l.path===path)).slice(0,3);
+      if(articles.length&&(root||related.length)){
+        const baseSend=res.send.bind(res);res.send=body=>baseSend(res.statusCode===200&&typeof body==='string'?body.replace('</main>',`<nav class="wrap" aria-label="Guias da região">${root?`<a href="/${state.toLowerCase()}/conteudos">Conteúdos de ${state}</a>`:related.map(a=>`<a href="${h(a.path)}">${h(a.content.title)}</a>`).join(' · ')}</nav></main>`):body);
+      }
+    }catch{/* Optional editorial links never take the existing commercial portal offline. */}
+  }
+  if(process.env.SEO_CONTENT_ENABLED==='true'&&['GET','HEAD'].includes(req.method)&&path==='/sitemap.xml'){
+    const sitemapSend=res.send.bind(res);res.send=body=>sitemapSend(res.statusCode===200&&typeof body==='string'?body.replace('</sitemapindex>','<sitemap><loc>https://www.yincorp.com.br/sitemap-content-sp.xml</loc></sitemap><sitemap><loc>https://www.yincorp.com.br/sitemap-content-es.xml</loc></sitemap></sitemapindex>'):body);
+  }
   if(await seo(req,res,path))return;
   const send=res.send.bind(res);res.send=body=>send(res.statusCode===200?linkNationalEntities(decorate(body,path),path):body);
   // Discovery links are HTML, not JS-only navigation. No commercial flow changes.
