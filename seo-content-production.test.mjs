@@ -197,6 +197,8 @@ test('provider preflight validates project without inference and Windsor rejects
   const result=await providerPreflight({env:configured,fetcher,now:when});assert.equal(result.status,'READY');assert.equal(result.gsc.rows,2);assert.doesNotMatch(JSON.stringify(result),new RegExp(secret));assert.equal(requests.length,3);
   await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>{throw Error('https://provider?api_key='+secret);}}),e=>!e.message.includes(secret)&&e.message==='gsc_windsor_unavailable');
   await assert.rejects(gscSnapshot({env:configured,now:when+8*86400000,fetcher}),/gsc_windsor_invalid/);
+  await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>new Response('API key not found: '+secret,{status:400})}),e=>e.message==='gsc_windsor_credentials_rejected'&&!e.message.includes(secret));
+  await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>new Response('Your subscription requires an upgrade. '+secret,{status:400})}),e=>e.message==='gsc_windsor_subscription_required'&&!e.message.includes(secret));
 });
 
 test('a blocked IBGE source preserves verified municipal and inventory sources, never substitutes unverified evidence',async()=>{
