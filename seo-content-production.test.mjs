@@ -8,7 +8,7 @@ import {GATES,ORIGIN,hash} from './lib/seo-content/core.js';
 import {corpusDigest} from './lib/seo-content/comparison-corpus.js';
 import {runProduction} from './lib/seo-content/production.js';
 import {publishedArticles,publishArticle,withdrawArticle} from './lib/seo-content/publication.js';
-import {safeFailure,inspectStorage} from './lib/seo-content/diagnostics.js';
+import {safeFailure,inspectStorage,ledgerConfigurationIssues} from './lib/seo-content/diagnostics.js';
 import {gscSnapshot} from './lib/seo-content/gsc-snapshot.js';
 import {createRunner} from './api/seo-content-runner.js';
 import {createContentHandler} from './lib/seo-content/render.js';
@@ -99,4 +99,17 @@ test('GSC refresh stays server-side and captures bounded authenticated rows with
     requests++;if(url==='https://oauth2.googleapis.com/token'){assert.match(String(options.body),/grant_type=refresh_token/);return Response.json({access_token:'fixture-access'});}
     assert.equal(options.headers.Authorization,'Bearer fixture-access');return Response.json({rows:[]});
   }});assert.equal(requests,3);assert.equal(snapshot.provider,'google/searchconsole');assert.doesNotMatch(JSON.stringify(snapshot),/fixture-(?:refresh|secret|access)/);
+});
+
+test('configuration diagnostics distinguish field errors without exposing secret values or making a connection',async()=>{
+  const valid={...env,CRON_SECRET:'s'.repeat(32),SEO_CONTENT_LEDGER_DATABASE_URL:'postgresql://seo_engine_executor.bgggafirdjvxihqselha:synthetic-password@aws-1-us-west-2.pooler.supabase.com:5432/postgres',SEO_CONTENT_LEDGER_KEY:'b'.repeat(64),SEO_CONTENT_LEDGER_TLS_CA:'synthetic-ca',SEO_CONTENT_OPENAI_PROJECT_ID:'proj_synthetic'};
+  assert.deepEqual(ledgerConfigurationIssues(valid),[]);
+  const broken={...valid,SEO_CONTENT_LEDGER_DATABASE_URL:'postgresql://postgres:synthetic-password@aws-1-us-west-2.pooler.supabase.com:6543/wrong?sslmode=require#bad',SEO_CONTENT_OPENAI_PROJECT_ID:'sk-synthetic-private'};
+  const expected=['database_url_username','database_url_port','database_url_database','database_url_query_not_allowed','database_url_fragment_not_allowed','openai_project_id_format'];
+  assert.deepEqual(ledgerConfigurationIssues(broken),expected);
+  assert.doesNotMatch(JSON.stringify(ledgerConfigurationIssues(broken)),/synthetic-password|sk-synthetic-private|sslmode/);
+  let connections=0;const res={setHeader(){},status(n){this.code=n;return this;},json(body){this.body=body;return this;}};
+  await createRunner({env:broken,connect:()=>{connections++;}})({method:'GET',headers:{authorization:'Bearer '+valid.CRON_SECRET},url:'/?op=health'},res);
+  assert.equal(res.code,503);assert.deepEqual(res.body.configurationIssues,expected);assert.equal(connections,0);
+  assert.deepEqual(ledgerConfigurationIssues({...valid,SEO_CONTENT_LEDGER_DATABASE_URL:'synthetic-password'}),['database_url_format']);
 });

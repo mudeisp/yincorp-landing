@@ -1,6 +1,6 @@
 import {authorized} from './seo-content.js';
 import {ledgerPool,assertLedgerRole,DurableLedger} from '../lib/seo-content/durable-ledger.js';
-import {inspectStorage,safeFailure} from '../lib/seo-content/diagnostics.js';
+import {inspectStorage,safeFailure,ledgerConfigurationIssues} from '../lib/seo-content/diagnostics.js';
 import {productionReadiness,runProduction} from '../lib/seo-content/production.js';
 import {withdrawArticle} from '../lib/seo-content/publication.js';
 import {hash} from '../lib/seo-content/core.js';
@@ -17,6 +17,8 @@ export function createRunner({env=process.env,connect=ledgerPool,run=runProducti
     if(['initialize','reconcile'].includes(op)&&(env.SEO_CONTENT_INFERENCE_AUTHORIZED!=='false'||env.SEO_CONTENT_PUBLICATION_AUTHORIZED==='true'))return res.status(409).json({error:'production_provisioning_requires_inference_disabled'});
     const readiness=productionReadiness(env);
     if(readiness.status==='BLOCKED')return res.status(503).json(readiness);
+    const configurationIssues=ledgerConfigurationIssues(env);
+    if(configurationIssues.length)return res.status(503).json({status:'BLOCKED',stage:'configuration',reason:'private_ledger_configuration_required',configurationIssues});
     let pool,stage='configuration';
     try{
       pool=connect(env);stage='connection';await assertLedgerRole(pool);
