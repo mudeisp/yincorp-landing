@@ -3,6 +3,11 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/lucas.schoch/",
+      "destination": "/lucas.schoch",
+      "permanent": true
+    },
+    {
       "source": "/guilherme-vita",
       "destination": "/guilherme.vita",
       "permanent": true
@@ -94,6 +99,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/lucas.schoch",
+      "destination": "/lucas.schoch/index.html"
+    },
     {
       "source": "/guilherme.vita",
       "destination": "/guilherme.vita/index.html"
