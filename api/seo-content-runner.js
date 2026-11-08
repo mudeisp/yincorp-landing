@@ -27,7 +27,7 @@ export function createRunner({env=process.env,connect=ledgerPool,run=runProducti
       const ledger=new DurableLedger({pool,key:env.SEO_CONTENT_LEDGER_KEY,projectId:env.SEO_CONTENT_OPENAI_PROJECT_ID});
       stage='storage';
       if(op==='health')return res.status(200).json({readiness,storage:await inspectStorage(pool,env)});
-      if(op==='providers')return res.status(200).json(await providerPreflight({env}));
+      if(op==='providers'){stage='providers';return res.status(200).json(await providerPreflight({env}));}
       if(op==='authorize-weekly')return res.status(200).json(await authorizeWeekly(ledger));
       if(op==='status'){const data=await ledger.read();return res.status(200).json({...financialSummary(data),jobs:Object.values(data.runs).map(r=>({runId:r.runId,schedule:r.schedule,publication:r.publication,articles:Object.entries(r.articles).map(([state,a])=>({state,status:a.status,path:a.path,gates:a.validations}))}))});}
       if(op==='review-request'){const data=await ledger.read();return res.status(200).json({snapshotHash:hash(data),scope:data.scope,projectId:data.projectId,authorizationMicros:600000,reconciliation:data.reconciliation.status,ledgerCalls:Object.keys(data.calls).length});}
