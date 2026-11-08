@@ -12,6 +12,9 @@ import {safeFailure,inspectStorage,inspectClientTls,ledgerConfigurationIssues} f
 import {gscSnapshot} from './lib/seo-content/gsc-snapshot.js';
 import {createRunner} from './api/seo-content-runner.js';
 import {createContentHandler} from './lib/seo-content/render.js';
+import {authorizeWeekly,calendar,financialSummary} from './lib/seo-content/weekly-policy.js';
+import {WeeklyLedger} from './lib/seo-content/weekly-ledger.js';
+import {providerPreflight} from './lib/seo-content/provider-preflight.js';
 
 const when=Date.parse('2026-11-08T12:00:00Z'),stamp=new Date(when).toISOString();
 const env={VERCEL_ENV:'production',VERCEL_GIT_COMMIT_SHA:'a'.repeat(40),SEO_CONTENT_VERIFIED_RELEASE_SHA:'a'.repeat(40),SEO_CONTENT_ENABLED:'true',SEO_CONTENT_KILL_SWITCH:'false',SEO_CONTENT_AUTOPUBLISH:'false',SEO_CONTENT_PUBLICATION_AUTHORIZED:'true',SEO_CONTENT_INFERENCE_AUTHORIZED:'true',SEO_OPENAI_API_KEY:'synthetic-only',SEO_CONTENT_APPROVED_BUDGET_MICROS:'600000',SEO_CONTENT_RESEARCH_MODEL:'fixture-research',SEO_CONTENT_WRITE_MODEL:'fixture-writer',SEO_CONTENT_AUDIT_MODEL:'fixture-auditor',SEO_CONTENT_MODEL_RATES:JSON.stringify(Object.fromEntries(['research','write','audit'].map(s=>[s,{input:.1,output:.2}])))};
@@ -125,4 +128,73 @@ test('configuration diagnostics distinguish field errors without exposing secret
   await createRunner({env:broken,connect:()=>{connections++;}})({method:'GET',headers:{authorization:'Bearer '+valid.CRON_SECRET},url:'/?op=health'},res);
   assert.equal(res.code,503);assert.deepEqual(res.body.configurationIssues,expected);assert.equal(connections,0);
   assert.deepEqual(ledgerConfigurationIssues({...valid,SEO_CONTENT_LEDGER_DATABASE_URL:'synthetic-password'}),['database_url_format']);
+});
+
+test('weekly authorization preserves unknown history, budgets survive month rollover and unknown calls block future cycles',async()=>{
+  const f=await fixture();let clock=when;
+  try{
+    await f.ledger.transaction(d=>{d.reconciliation={status:'UNKNOWN'};});
+    await authorizeWeekly(f.ledger,{now:Date.parse('2026-10-31T12:00:00Z')});assert.equal((await f.ledger.read()).reconciliation.status,'UNKNOWN');
+    const weekly=new WeeklyLedger(f.ledger,()=>clock);
+    const execute=async(state,weekIndex,fail=false)=>{
+      const runId=await weekly.createJob({state,gsc:{},configuration:{},opportunity:{targetCanonical:`/${state.toLowerCase()}/conteudos/test-${weekIndex}`}});
+      for(const stage of ['research','write','audit']){
+        const input={weekIndex,state,stage};
+        const call=()=>weekly.call({runId,article:state,stage,input,instructions:'fixture',model:'fixture'},async()=>{
+          if(fail)throw Error('editorial_provider_unavailable');
+          const output={fixture:true};return {output,receipt:{responseId:'synthetic',resolvedModel:'fixture',model:'fixture',stage,inputHash:hash(input),outputHash:hash(output),estimatedMicros:1,inputTokens:1,outputTokens:1}};
+        });
+        if(fail){await assert.rejects(call(),/provider_unavailable/);return;}
+        await call();await call(); // Cached receipts never reserve again.
+      }
+    };
+    // Five distinct November weeks exhaust the independent monthly ceiling.
+    for(let i=0;i<5;i++){clock=Date.parse(['2026-11-01','2026-11-03','2026-11-10','2026-11-17','2026-11-24'][i]+'T12:00:00Z');await execute('SP',i);await execute('ES',i);}
+    assert.equal(financialSummary(await f.ledger.read(),clock).monthlyReservedMicros,3000000);
+    clock=Date.parse('2026-11-30T12:00:00Z');await assert.rejects(execute('SP',5),/budget_exhausted/);
+    clock=Date.parse('2026-12-01T12:00:00Z');await execute('SP',5);await execute('ES',5);
+    assert.equal(financialSummary(await f.ledger.read(),clock).weeklyReservedMicros,600000);
+    assert.equal(financialSummary(await f.ledger.read(),clock).monthlyReservedMicros,600000);
+    clock=Date.parse('2026-12-08T12:00:00Z');await execute('SP',6,true);
+    clock=Date.parse('2026-12-15T12:00:00Z');await assert.rejects(execute('ES',7),/outcome_unknown/);
+    assert.equal(financialSummary(await f.ledger.read(),clock).unknownCalls,1);
+    assert.equal((await authorizeWeekly(f.ledger,{now:clock})).status,'ALREADY_AUTHORIZED');
+  }finally{await f.db.close();}
+});
+
+test('weekly runner publishes once per state, observes local schedule and preserves a new topic next week',async()=>{
+  const f=await fixture();let clock=when;
+  try{
+    await authorizeWeekly(f.ledger,{now:clock});
+    const options={...f.options,env:{...env,SEO_CONTENT_SCHEDULE_MODE:'weekly-v1'},now:()=>clock,
+      inventory:async state=>[{...stock[0],state,city:state==='SP'?'São Paulo':'Vitória',neighborhood:state==='SP'?'Ipiranga':'Praia do Canto',path:state==='SP'?stock[0].path:'/es/synthetic',checkedAt:new Date(clock).toISOString()}],
+      snapshotReader:async()=>({provider:'windsor/searchconsole',retrievedAt:new Date(clock).toISOString(),windowStart:'2026-10-08',windowEnd:'2026-11-05',response:{data:['SP','ES'].map(state=>({query:'imóveis',page:ORIGIN+(state==='SP'?stock[0].path:'/es/synthetic'),impressions:100,clicks:1,ctr:.01,position:8}))}}),
+      sourceReader:async()=>[{...sources[0],observedAt:new Date(clock).toISOString()},{...sources[0],url:ORIGIN+'/sp',observedAt:new Date(clock).toISOString()}],
+      corpusReader:async({opportunity})=>{const c=corpus();c.observedAt=new Date(clock).toISOString();c.coverage={...c.coverage,state:opportunity.state,city:opportunity.city,neighborhood:opportunity.neighborhood};c.pages[0].observedAt=c.observedAt;c.snapshotHash=corpusDigest(c);return c;}};
+    clock=Date.parse('2026-11-09T12:00:00Z');assert.equal((await runProduction(options)).status,'WAITING_NEXT_SLOT');assert.equal(f.dispatches,0);
+    clock=Date.parse('2026-11-10T11:59:00Z');assert.equal((await runProduction(options)).status,'WAITING_NEXT_SLOT');
+    clock=Date.parse('2026-11-10T12:00:00Z');assert.equal((await runProduction(options)).status,'PUBLISHED');assert.equal(f.dispatches,3);
+    assert.equal((await runProduction(options)).status,'WAITING_NEXT_SLOT');assert.equal(f.dispatches,3);
+    // Fixture ES content references SP inventory: it must remain private.
+    clock=Date.parse('2026-11-12T12:00:00Z');assert.equal((await runProduction(options)).status,'NEEDS_REVIEW');assert.equal(f.dispatches,6);
+    assert.equal((await runProduction(options)).status,'WAITING_NEXT_SLOT');assert.equal(f.dispatches,6);
+    clock=Date.parse('2026-11-17T12:00:00Z');const next=await runProduction(options);assert.ok(['PUBLISHED','NEEDS_REVIEW'].includes(next.status));
+    const runs=Object.values((await f.ledger.read()).runs);assert.equal(runs.length,3);assert.equal(new Set(runs.map(r=>r.opportunity.targetCanonical)).size,3);
+    assert.equal(publishedArticles(await f.ledger.read(),'SP').length>=1,true);
+    assert.equal(calendar(Date.parse('2026-11-10T02:00:00Z')).weekday,0);
+  }finally{await f.db.close();}
+});
+
+test('provider preflight validates project without inference and Windsor rejects stale data and redacts URLs',async()=>{
+  const secret='synthetic-private-key',requests=[];
+  const configured={...env,SEO_CONTENT_OPENAI_PROJECT_ID:'proj_synthetic',SEO_CONTENT_WINDSOR_API_KEY:secret};
+  const fetcher=async(url,options)=>{
+    requests.push(String(url));
+    if(String(url).includes('openai.com')){assert.equal(options.headers['OpenAI-Project'],'proj_synthetic');return new Response(JSON.stringify({data:Object.values({r:env.SEO_CONTENT_RESEARCH_MODEL,w:env.SEO_CONTENT_WRITE_MODEL,a:env.SEO_CONTENT_AUDIT_MODEL}).map(id=>({id}))}));}
+    const u=new URL(url);assert.deepEqual(JSON.parse(u.searchParams.get('filter'))[0].slice(0,2),['page','contains']);const state=u.searchParams.get('filter').includes('/sp/')?'sp':'es';
+    return new Response(JSON.stringify({data:[{query:'imóveis',page:ORIGIN+'/'+state+'/synthetic',impressions:100,clicks:1,ctr:.01,position:8,data_fetched_at:stamp}]}));
+  };
+  const result=await providerPreflight({env:configured,fetcher,now:when});assert.equal(result.status,'READY');assert.equal(result.gsc.rows,2);assert.doesNotMatch(JSON.stringify(result),new RegExp(secret));assert.equal(requests.length,3);
+  await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>{throw Error('https://provider?api_key='+secret);}}),e=>!e.message.includes(secret)&&e.message==='gsc_windsor_unavailable');
+  await assert.rejects(gscSnapshot({env:configured,now:when+8*86400000,fetcher}),/gsc_windsor_invalid/);
 });
