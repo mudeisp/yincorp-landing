@@ -198,6 +198,7 @@ test('provider preflight validates project without inference and Windsor rejects
   await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>{throw Error('https://provider?api_key='+secret);}}),e=>!e.message.includes(secret)&&e.message==='gsc_windsor_unavailable');
   await assert.rejects(gscSnapshot({env:configured,now:when+8*86400000,fetcher}),/gsc_windsor_invalid/);
   await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>new Response('API key not found: '+secret,{status:400})}),e=>e.message==='gsc_windsor_credentials_rejected'&&!e.message.includes(secret));
+  await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>Response.json({error:'Not authorized',code:'unauthorized'},{status:400})}),/gsc_windsor_credentials_rejected/);
   await assert.rejects(gscSnapshot({env:configured,now:when,fetcher:async()=>new Response('Your subscription requires an upgrade. '+secret,{status:400})}),e=>e.message==='gsc_windsor_subscription_required'&&!e.message.includes(secret));
 });
 
