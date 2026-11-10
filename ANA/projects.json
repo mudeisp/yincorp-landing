@@ -1,0 +1,809 @@
+[
+  {
+    "key": "fonte",
+    "project": "Fonte Casa Caiada",
+    "short": "Fonte Casa Caiada",
+    "developer": "Oliva Inc. / Trio",
+    "neighborhood": "Casa Caiada · Olinda",
+    "referenceLabel": "10/09/2026",
+    "delivery": "31 de março de 2027",
+    "address": "Esquina da Rua Marly Figueiredo com a Rua Carlos Leite Moreira, Olinda – PE",
+    "hero": "/ANA/assets/p3.jpg",
+    "highlights": [
+      "Piscina",
+      "Áreas de convivência"
+    ],
+    "areaNote": "Áreas de construção conforme a tabela. As unidades térreas 02 e 03 têm metragens adicionais indicadas na coluna de vagas do PDF.",
+    "tableNote": "A seleção reúne as linhas com preço publicado na tabela fornecida. Confirme as condições atuais.",
+    "paymentNote": "FGTS + 12 parcelas é o valor agregado publicado. O PDF não discrimina o valor individual das parcelas.",
+    "tableUrl": "/ANA/tabela.pdf",
+    "plans": [
+      {
+        "page": 5,
+        "label": "Planta térrea",
+        "src": "/ANA/assets/p5.jpg"
+      },
+      {
+        "page": 10,
+        "label": "Pavimento tipo",
+        "src": "/ANA/assets/p10.jpg"
+      },
+      {
+        "page": 11,
+        "label": "Plantas de apartamento",
+        "src": "/ANA/assets/p11.jpg"
+      },
+      {
+        "page": 12,
+        "label": "Plantas de apartamento",
+        "src": "/ANA/assets/p12.jpg"
+      },
+      {
+        "page": 13,
+        "label": "Plantas de apartamento",
+        "src": "/ANA/assets/p13.jpg"
+      },
+      {
+        "page": 14,
+        "label": "Plantas de apartamento",
+        "src": "/ANA/assets/p14.jpg"
+      }
+    ],
+    "leisure": [
+      {
+        "page": 15,
+        "label": "Piscina",
+        "src": "/ANA/assets/p15.jpg"
+      },
+      {
+        "page": 16,
+        "label": "Espaços de convivência",
+        "src": "/ANA/assets/p16.jpg"
+      },
+      {
+        "page": 4,
+        "label": "Diferenciais do edifício",
+        "src": "/ANA/assets/p4.jpg"
+      }
+    ],
+    "units": [
+      {
+        "id": "102",
+        "area": 63.2,
+        "total": 410800,
+        "entrance": 41080,
+        "installments": 0,
+        "keys": 0,
+        "principal": 369720,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "104",
+        "area": 63.2,
+        "total": 410800,
+        "entrance": 41080,
+        "installments": 0,
+        "keys": 0,
+        "principal": 369720,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "202",
+        "area": 63.2,
+        "total": 410800,
+        "entrance": 41080,
+        "installments": 0,
+        "keys": 0,
+        "principal": 369720,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "204",
+        "area": 63.2,
+        "total": 410800,
+        "entrance": 41080,
+        "installments": 0,
+        "keys": 0,
+        "principal": 369720,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "302",
+        "area": 63.2,
+        "total": 423440,
+        "entrance": 42344,
+        "installments": 11376,
+        "keys": 0,
+        "principal": 369720,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "101",
+        "area": 66.71,
+        "total": 433615,
+        "entrance": 43362,
+        "installments": 0,
+        "keys": 0,
+        "principal": 390254,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "301",
+        "area": 66.71,
+        "total": 446957,
+        "entrance": 44696,
+        "installments": 12008,
+        "keys": 0,
+        "principal": 390254,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "Térreo 02",
+        "area": 63.61,
+        "total": 463465,
+        "entrance": 46347,
+        "installments": 44766,
+        "keys": 0,
+        "principal": 372353,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "502",
+        "area": 63.2,
+        "total": 474000,
+        "entrance": 47400,
+        "installments": 56880,
+        "keys": 0,
+        "principal": 369720,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "103",
+        "area": 74.14,
+        "total": 481910,
+        "entrance": 48191,
+        "installments": 0,
+        "keys": 0,
+        "principal": 433719,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "203",
+        "area": 74.14,
+        "total": 481910,
+        "entrance": 48191,
+        "installments": 0,
+        "keys": 0,
+        "principal": 433719,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "501",
+        "area": 66.71,
+        "total": 486983,
+        "entrance": 48698,
+        "installments": 48031,
+        "keys": 0,
+        "principal": 390254,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "601",
+        "area": 66.71,
+        "total": 486983,
+        "entrance": 48698,
+        "installments": 48031,
+        "keys": 0,
+        "principal": 390254,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "701",
+        "area": 66.71,
+        "total": 486983,
+        "entrance": 48698,
+        "installments": -667,
+        "keys": 48698,
+        "principal": 390254,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "303",
+        "area": 74.14,
+        "total": 496738,
+        "entrance": 49674,
+        "installments": 13345,
+        "keys": 0,
+        "principal": 433719,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "1001",
+        "area": 66.71,
+        "total": 500325,
+        "entrance": 50033,
+        "installments": 10006,
+        "keys": 50033,
+        "principal": 390254,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "702",
+        "area": 63.2,
+        "total": 524560,
+        "entrance": 52456,
+        "installments": 49928,
+        "keys": 52456,
+        "principal": 369720,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "804",
+        "area": 63.2,
+        "total": 524560,
+        "entrance": 52456,
+        "installments": 49928,
+        "keys": 52456,
+        "principal": 369720,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "904",
+        "area": 63.2,
+        "total": 524560,
+        "entrance": 52456,
+        "installments": 49928,
+        "keys": 52456,
+        "principal": 369720,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "Térreo 03",
+        "area": 74.88,
+        "total": 526720,
+        "entrance": 52672,
+        "installments": 40329,
+        "keys": 0,
+        "principal": 433719,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "603",
+        "area": 74.14,
+        "total": 600534,
+        "entrance": 60053,
+        "installments": 46708,
+        "keys": 60053,
+        "principal": 433719,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "703",
+        "area": 74.14,
+        "total": 615362,
+        "entrance": 61536,
+        "installments": 58571,
+        "keys": 61536,
+        "principal": 433719,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "803",
+        "area": 74.14,
+        "total": 615362,
+        "entrance": 61536,
+        "installments": 58571,
+        "keys": 61536,
+        "principal": 433719,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "903",
+        "area": 74.14,
+        "total": 615362,
+        "entrance": 61536,
+        "installments": 58571,
+        "keys": 61536,
+        "principal": 433719,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "1003",
+        "area": 74.14,
+        "total": 630190,
+        "entrance": 63019,
+        "installments": 70433,
+        "keys": 63019,
+        "principal": 433719,
+        "typology": "3 quartos (1 suíte)",
+        "parking": 1,
+        "sourcePage": 1
+      }
+    ]
+  },
+  {
+    "key": "vivar",
+    "project": "Vivar Atlântico",
+    "short": "Vivar Atlântico",
+    "developer": "A. B. Côrte Real",
+    "neighborhood": "Olinda",
+    "referenceLabel": "novembro/2026",
+    "delivery": "Consultar previsão de entrega",
+    "address": "Olinda – PE",
+    "hero": "/ANA/assets/v6.jpg",
+    "highlights": [
+      "Piscina",
+      "Rooftop",
+      "Espaço fitness"
+    ],
+    "areaNote": "Área privativa conforme a tabela comercial.",
+    "tableNote": "Tabela de novembro/2026, com preços e sinais indicados como válidos até 30/11/2026, sujeitos a alterações.",
+    "paymentNote": "Valores nominais. A tabela prevê correção pelo INCC até as chaves ou o habite-se, o que ocorrer primeiro, e depois IGP-M + 1% ao mês. Crédito sujeito à análise da Caixa.",
+    "tableUrl": "/ANA/vivar-tabela.pdf",
+    "plans": [
+      {
+        "page": 23,
+        "label": "Implantação",
+        "src": "/ANA/assets/v23.jpg"
+      },
+      {
+        "page": 28,
+        "label": "Planta ilustrada 1",
+        "src": "/ANA/assets/v28.jpg"
+      },
+      {
+        "page": 29,
+        "label": "Planta ilustrada 2",
+        "src": "/ANA/assets/v29.jpg"
+      },
+      {
+        "page": 30,
+        "label": "Planta ilustrada 3",
+        "src": "/ANA/assets/v30.jpg"
+      },
+      {
+        "page": 31,
+        "label": "Planta ilustrada 4",
+        "src": "/ANA/assets/v31.jpg"
+      },
+      {
+        "page": 32,
+        "label": "Planta ilustrada 5",
+        "src": "/ANA/assets/v32.jpg"
+      },
+      {
+        "page": 33,
+        "label": "Planta ilustrada 6",
+        "src": "/ANA/assets/v33.jpg"
+      },
+      {
+        "page": 34,
+        "label": "Planta ilustrada 7",
+        "src": "/ANA/assets/v34.jpg"
+      },
+      {
+        "page": 35,
+        "label": "Planta ilustrada 8",
+        "src": "/ANA/assets/v35.jpg"
+      },
+      {
+        "page": 36,
+        "label": "Planta ilustrada 9",
+        "src": "/ANA/assets/v36.jpg"
+      }
+    ],
+    "leisure": [
+      {
+        "page": 13,
+        "label": "Piscina",
+        "src": "/ANA/assets/v13.jpg"
+      },
+      {
+        "page": 14,
+        "label": "Rooftop",
+        "src": "/ANA/assets/v14.jpg"
+      },
+      {
+        "page": 17,
+        "label": "Área externa",
+        "src": "/ANA/assets/v17.jpg"
+      },
+      {
+        "page": 19,
+        "label": "Salão",
+        "src": "/ANA/assets/v19.jpg"
+      },
+      {
+        "page": 20,
+        "label": "Espaço fitness",
+        "src": "/ANA/assets/v20.jpg"
+      }
+    ],
+    "units": [
+      {
+        "id": "1",
+        "area": 48.27,
+        "garage": 70,
+        "total": 325986.13,
+        "entrance": 6519.72,
+        "monthly": 1667.05,
+        "principal": 260788.9,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "3",
+        "area": 48.14,
+        "garage": 72,
+        "total": 335998.42,
+        "entrance": 6719.97,
+        "monthly": 1731.42,
+        "principal": 268798.74,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "7",
+        "area": 48.27,
+        "garage": 76,
+        "total": 349348.13,
+        "entrance": 6986.96,
+        "monthly": 1817.24,
+        "principal": 279478.5,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "8",
+        "area": 48.27,
+        "garage": 77,
+        "total": 345911.57,
+        "entrance": 6918.23,
+        "monthly": 1795.15,
+        "principal": 276729.26,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "107",
+        "area": 48.27,
+        "garage": 63,
+        "total": 352819.06,
+        "entrance": 7056.38,
+        "monthly": 1839.55,
+        "principal": 282255.25,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "108",
+        "area": 48.27,
+        "garage": 62,
+        "total": 349348.13,
+        "entrance": 6986.96,
+        "monthly": 1817.24,
+        "principal": 279478.5,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "203",
+        "area": 48.14,
+        "garage": 59,
+        "total": 342673.28,
+        "entrance": 6853.47,
+        "monthly": 1774.33,
+        "principal": 274138.62,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "206",
+        "area": 48.11,
+        "garage": 31,
+        "total": 339302.8,
+        "entrance": 6786.06,
+        "monthly": 1752.66,
+        "principal": 271442.24,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "207",
+        "area": 48.27,
+        "garage": 32,
+        "total": 356168.02,
+        "entrance": 7123.36,
+        "monthly": 1861.08,
+        "principal": 284934.42,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "208",
+        "area": 48.27,
+        "garage": 33,
+        "total": 352784.68,
+        "entrance": 7055.69,
+        "monthly": 1839.33,
+        "principal": 282227.74,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "304",
+        "area": 40.33,
+        "garage": 1,
+        "total": 342607.19,
+        "entrance": 6852.14,
+        "monthly": 1773.9,
+        "principal": 274085.75,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "306",
+        "area": 48.11,
+        "garage": 3,
+        "total": 342607.19,
+        "entrance": 6852.14,
+        "monthly": 1773.9,
+        "principal": 274085.75,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "308",
+        "area": 48.27,
+        "garage": 5,
+        "total": 356221.25,
+        "entrance": 7124.43,
+        "monthly": 1861.42,
+        "principal": 284977,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "403",
+        "area": 48.14,
+        "garage": 14,
+        "total": 349348.13,
+        "entrance": 6986.96,
+        "monthly": 1817.24,
+        "principal": 279478.5,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "501",
+        "area": 48.27,
+        "garage": 8,
+        "total": 342172.65,
+        "entrance": 6843.45,
+        "monthly": 1771.11,
+        "principal": 273738.12,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 1
+      },
+      {
+        "id": "503",
+        "area": 48.14,
+        "garage": 6,
+        "total": 352685.55,
+        "entrance": 7053.71,
+        "monthly": 1838.69,
+        "principal": 282148.44,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "504",
+        "area": 48.14,
+        "garage": 55,
+        "total": 349215.95,
+        "entrance": 6984.32,
+        "monthly": 1816.39,
+        "principal": 279372.76,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "507",
+        "area": 48.27,
+        "garage": 52,
+        "total": 366260.38,
+        "entrance": 7325.21,
+        "monthly": 1925.96,
+        "principal": 293008.3,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "601",
+        "area": 48.27,
+        "garage": 30,
+        "total": 345409.97,
+        "entrance": 6908.2,
+        "monthly": 1791.92,
+        "principal": 276327.98,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "603",
+        "area": 48.14,
+        "garage": 50,
+        "total": 356022.99,
+        "entrance": 7120.46,
+        "monthly": 1860.15,
+        "principal": 284818.39,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "701",
+        "area": 48.27,
+        "garage": 42,
+        "total": 348647.28,
+        "entrance": 6972.95,
+        "monthly": 1812.73,
+        "principal": 278917.82,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "702",
+        "area": 48.27,
+        "garage": 43,
+        "total": 345217.65,
+        "entrance": 6904.35,
+        "monthly": 1790.69,
+        "principal": 276174.12,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "801",
+        "area": 48.27,
+        "garage": 26,
+        "total": 355121.89,
+        "entrance": 7102.44,
+        "monthly": 1854.36,
+        "principal": 284097.51,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "802",
+        "area": 48.27,
+        "garage": 27,
+        "total": 351628.16,
+        "entrance": 7032.56,
+        "monthly": 1831.9,
+        "principal": 281302.53,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "803",
+        "area": 48.14,
+        "garage": 28,
+        "total": 366035.27,
+        "entrance": 7320.71,
+        "monthly": 1924.51,
+        "principal": 292828.22,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "804",
+        "area": 48.11,
+        "garage": 29,
+        "total": 362433.49,
+        "entrance": 7248.67,
+        "monthly": 1901.36,
+        "principal": 289946.79,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "806",
+        "area": 48.11,
+        "garage": 20,
+        "total": 362433.49,
+        "entrance": 7248.67,
+        "monthly": 1901.36,
+        "principal": 289946.79,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      },
+      {
+        "id": "901",
+        "area": 48.27,
+        "garage": 24,
+        "total": 355813.45,
+        "entrance": 7116.27,
+        "monthly": 1858.8,
+        "principal": 284650.76,
+        "typology": "2 quartos, conforme o book",
+        "parking": 1,
+        "sourcePage": 2
+      }
+    ]
+  }
+]

@@ -99,6 +99,8 @@
     }
   ],
   "rewrites": [
+    { "source": "/ANA/", "destination": "/ANA/index.html" },
+    { "source": "/ANA", "destination": "/ANA/index.html" },
     {
       "source": "/guilherme.vita2",
       "destination": "/guilherme.vita2/index.html"
