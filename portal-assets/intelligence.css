@@ -29,3 +29,71 @@
   .ynti-gallery-nav button:disabled{opacity:.5}
 }
 @media(prefers-reduced-motion:reduce){.ynti-gallery-item a:hover img{transform:none}}
+
+
+/* Intelligence V2 — frames aprovados: B desktop / A mobile. */
+.ynti.ynti-premium{padding:38px 3.5% 28px;background:#faf9f5;border:0;border-radius:0;box-shadow:none}
+.ynti-premium .ynti-head{padding:0 0 20px;border-bottom:1px solid #c9d3c5}
+.ynti-premium .ynti-head h2{font-size:clamp(30px,3.1vw,48px);color:#17392a;line-height:1.1;letter-spacing:-1px}
+.ynti-premium .ynti-head p{font-size:13px}
+.ynti-premium .ynti-reference{display:grid;grid-template-columns:21% minmax(0,1.2fr) minmax(0,1.5fr) auto;align-items:center;gap:0;background:#183c2a;color:#f8f8f2;min-height:102px;margin:22px 0 23px;padding:0;border:0;border-radius:8px;overflow:hidden}
+.ynti-reference-photo{height:100%;min-height:102px;position:relative;overflow:hidden;background:#274936;display:grid;place-items:center}
+.ynti-reference-photo img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+.ynti-reference-fallback{font-size:12px;letter-spacing:.18em;color:#e3e9da}
+.ynti-reference-identity{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:16px 24px}
+.ynti-reference-identity small{color:#bfd1bb;font-size:10px;letter-spacing:.16em;font-weight:600}
+.ynti-reference-identity strong{color:#fff;font:400 clamp(19px,2.1vw,28px)/1.15 'DM Serif Display',Georgia,serif;margin:5px 0}
+.ynti-reference-identity span{font-size:12px;color:#e3eee0}
+.ynti-reference-specs{display:flex;align-items:center;justify-content:center;gap:0;border-left:1px solid #6d8775;border-right:1px solid #6d8775;min-height:42px}
+.ynti-reference-specs span{font-size:13px;text-align:center;padding:6px 20px;white-space:nowrap}
+.ynti-reference-price{font:600 clamp(16px,1.8vw,25px)/1.2 Georgia,serif;padding:14px 22px;text-align:center;white-space:nowrap}
+.ynti-premium .ynti-priorities{margin:16px 0 23px}
+.ynti-premium .ynti-priorities button{font-size:12px;min-height:34px;padding:7px 15px;background:#faf9f5;border-color:#d6ddcc;color:#3a513e;transition:background .18s ease,color .18s ease}
+.ynti-premium .ynti-priorities button[aria-pressed=true]{background:#214630;border-color:#214630;color:#fff}
+.ynti-gallery-label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:6px 0 12px;font-size:11px;color:#53664e;letter-spacing:.14em;font-weight:600}
+.ynti-premium .ynti-gallery{margin:0 0 24px;gap:18px}
+.ynti-premium .ynti-gallery-item{border:1px solid #e0e5d9;border-radius:11px;overflow:hidden;box-shadow:0 4px 12px #172e2310;transition:box-shadow .25s ease,transform .25s ease}
+.ynti-premium .ynti-gallery-item .ynti-link{display:flex;flex-direction:column}
+.ynti-premium .ynti-photo{aspect-ratio:2.45/1;background:#e7ede5}
+.ynti-premium .ynti-card-body{flex:1;display:flex;flex-direction:column;min-height:117px;padding:12px 48px 14px 16px}
+.ynti-premium .ynti-card-body .ynti-location{font-size:10px;letter-spacing:.04em;text-transform:none;margin:0}
+.ynti-premium .ynti-card-body h3{font-size:clamp(17px,1.45vw,21px);line-height:1.18;margin:5px 0 6px}
+.ynti-premium .ynti-card-body p{font-size:11px;margin:2px 0}
+.ynti-premium .ynti-price{font:600 15px/1.2 Georgia,serif;margin-top:auto;padding-top:10px}
+.ynti-premium .ynti-arrow{right:15px;bottom:18px;background:#e9efe3;color:#1e3e2b;width:31px;height:31px;border-radius:50%;display:grid;place-items:center;font-size:18px}
+.ynti-premium .ynti-insight{border:0;border-radius:10px;background:#ecf1e4;font-size:13px;line-height:1.65;padding:20px 24px}
+.ynti-premium .ynti-insight strong{font-family:Georgia,serif;font-size:18px}
+@media(hover:hover){.ynti-premium .ynti-gallery-item:hover{box-shadow:0 11px 25px #172e2324;transform:translateY(-2px)}}
+@media(min-width:741px) and (max-width:1060px){.ynti-premium .ynti-reference{grid-template-columns:22% 1fr 1fr}.ynti-reference-specs{border-right:0}.ynti-reference-price{grid-column:2 / 4;padding:0 20px 12px;text-align:left}.ynti-premium .ynti-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:740px){
+ .ynti.ynti-premium{margin:28px 0;padding:26px 20px 28px;overflow:hidden}
+ .ynti-premium .ynti-head{border:0;padding-bottom:12px}
+ .ynti-premium .ynti-head h2{font-size:clamp(29px,8vw,39px);margin-top:12px}
+ .ynti-premium .ynti-head p{font-size:13px}
+ .ynti-premium .ynti-head .ynti-live{font-size:10px;margin-top:10px}
+ .ynti-premium .ynti-reference{display:grid;grid-template-columns:82px minmax(0,1fr);grid-template-rows:auto auto;min-height:110px;margin:18px 0 24px;background:#edf0e4;color:#203a2b;border-radius:13px}
+ .ynti-reference-photo{grid-row:1 / 3;min-height:110px}
+ .ynti-reference-identity{padding:13px 14px 2px}
+ .ynti-reference-identity small{font-size:9px;color:#637c65}
+ .ynti-reference-identity strong{color:#1d3f2e;font-size:22px;margin:4px 0}
+ .ynti-reference-identity span{color:#556b56;font-size:11px}
+ .ynti-reference-specs{display:none}
+ .ynti-reference-price{color:#1d3f2e;grid-column:2;text-align:left;padding:2px 14px 13px;font:600 14px/1.2 Georgia,serif}
+ .ynti-premium .ynti-priorities{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:15px -20px 30px;padding:0 20px;gap:8px}
+ .ynti-premium .ynti-priorities::-webkit-scrollbar{display:none}
+ .ynti-premium .ynti-priorities button{flex:0 0 auto;font-size:12px;min-height:42px}
+ .ynti-gallery-label{font-size:10px;margin-bottom:14px}
+ .ynti-premium .ynti-gallery{display:flex;margin:0 -20px 9px;padding:0 20px 12px;gap:15px;scroll-padding-inline:20px;overscroll-behavior-x:contain}
+ .ynti-premium .ynti-gallery-item{flex:0 0 87%;border-radius:17px;scroll-snap-align:start;box-shadow:0 9px 20px #172e231a}
+ .ynti-premium .ynti-gallery-item:last-child{margin-right:13%}
+ .ynti-premium .ynti-photo{aspect-ratio:1.15/1}
+ .ynti-premium .ynti-card-body{min-height:170px;padding:18px 56px 18px 18px}
+ .ynti-premium .ynti-card-body .ynti-location{font-size:12px}
+ .ynti-premium .ynti-card-body h3{font-size:24px;margin:7px 0 13px}
+ .ynti-premium .ynti-card-body p{font-size:13px}
+ .ynti-premium .ynti-price{font-size:22px;padding-top:17px}
+ .ynti-premium .ynti-arrow{width:40px;height:40px;bottom:18px;right:14px}
+ .ynti-premium .ynti-gallery-nav{margin:3px 0 20px}
+ .ynti-premium .ynti-insight{font-size:13px;padding:18px}
+}
+@media(prefers-reduced-motion:reduce){.ynti-premium .ynti-gallery-item{transition:none!important}.ynti-premium .ynti-gallery-item:hover{transform:none!important}}
