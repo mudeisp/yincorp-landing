@@ -100,6 +100,10 @@
   ],
   "rewrites": [
     {
+      "source": "/guilherme.vita2",
+      "destination": "/guilherme.vita2/index.html"
+    },
+    {
       "source": "/lucas.schoch",
       "destination": "/lucas.schoch/index.html"
     },
