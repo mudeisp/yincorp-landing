@@ -46,17 +46,44 @@ progress.firstChild.style.width=Math.min(100,(step+1)/6*100)+'%';live.textConten
 function buildGallery(){
   content.hidden=false;
   root.classList.add('ynti-premium','ynti-active');
-  live.textContent='Sua análise está pronta';
+  live.textContent='Explorando opções semelhantes';
+  root.querySelector('.ynti-head h2').textContent='Outras perspectivas para sua escolha';
+  root.querySelector('.ynti-head p').textContent='Conectamos alternativas para ampliar sua perspectiva.';
   const base=payload.base;
   const rent=payload.kind==='rent';
   const reference=text('div','','ynti-reference');
-  reference.append(text('small','IMÓVEL DE REFERÊNCIA'),text('strong',base.name),
-    text('span',[base.neighborhood,base.city,cash(base.price)+(rent?' / mês':'')].filter(Boolean).join(' · ')));
+  const refPhoto=text('div','','ynti-reference-photo');
+  const refFallback=text('span','YINCORP','ynti-reference-fallback');
+  refPhoto.append(refFallback);
+  try{
+    const url=new URL(base.image);
+    if(url.protocol==='https:'&&!url.username&&!url.password){
+      const img=document.createElement('img');
+      img.alt='';
+      img.loading='lazy';
+      img.decoding='async';
+      img.width=400;
+      img.height=250;
+      img.onerror=()=>img.remove();
+      img.src=url.href;
+      refPhoto.append(img);
+    }
+  }catch{}
+  const refIdentity=text('div','','ynti-reference-identity');
+  refIdentity.append(text('small','IMÓVEL EM ANÁLISE'),text('strong',base.name),
+    text('span',[base.neighborhood,base.city].filter(Boolean).join(' · ')));
+  const refSpecs=text('div','','ynti-reference-specs');
+  refSpecs.append(text('span',base.area==null?'Área a confirmar':num(base.area,2)+' m²'),
+    text('span',base.bedrooms==null?'Dormitórios a confirmar':num(base.bedrooms)+(base.bedrooms===1?' quarto':' quartos')));
+  const refPrice=text('strong',cash(base.price)+(rent?' / mês':''),'ynti-reference-price');
+  reference.append(refPhoto,refIdentity,refSpecs,refPrice);
   content.append(reference);
   const filters=text('div','','ynti-priorities');
   filters.setAttribute('aria-label','Ordenar alternativas');
   const viewport=text('ul','','ynti-gallery');
   viewport.id='ynti-gallery';
+  const galleryLabel=text('div','','ynti-gallery-label');
+  galleryLabel.append(text('span','ALTERNATIVAS RECOMENDADAS'),text('span',String(payload.items.length).padStart(2,'0')+' OPÇÕES'));
   const navigation=text('div','','ynti-gallery-nav');
   const position=text('span','1/'+payload.items.length);
   const previous=text('button','←');
@@ -147,7 +174,7 @@ function buildGallery(){
       };
       filters.append(button);
     }
-    content.append(filters,viewport);
+    content.append(filters,galleryLabel,viewport);
     if(payload.items.length>1)content.append(navigation);
   }
   content.append(explanation);
