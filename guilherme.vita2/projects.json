@@ -1,0 +1,653 @@
+[
+  {
+    "key": "skyline",
+    "project": "Skyline",
+    "short": "Skyline",
+    "developer": "Exkalla",
+    "address": "Rua João de Lacerda Soares, 110 · Brooklin Novo",
+    "reference": "nov/2026",
+    "hero": "https://static.orulo.com.br/images/properties/large/2308262.jpg",
+    "catalog": "https://www.yincorp.com.br/sp/sao-paulo/empreendimento/skyline--orulo-72365",
+    "areaNote": "Planta de referência de 131 m². Confirme a configuração da unidade selecionada.",
+    "tableNote": "29 unidades na tabela de novembro/2026.",
+    "highlights": [
+      "Lazer no rooftop",
+      "Piscina",
+      "Academia",
+      "Coworking"
+    ],
+    "plans": [
+      {
+        "src": "https://static.orulo.com.br/images/properties/xlarge/2308231.jpg",
+        "label": "Planta de referência · 131 m²"
+      }
+    ],
+    "leisure": [
+      {
+        "src": "https://static.orulo.com.br/images/properties/xlarge/2308230.png",
+        "label": "Implantação do rooftop"
+      },
+      {
+        "src": "https://static.orulo.com.br/images/properties/large/2308261.jpg",
+        "label": "Skyline · imagem do catálogo"
+      },
+      {
+        "src": "https://static.orulo.com.br/images/properties/large/2308235.jpg",
+        "label": "Skyline · imagem do catálogo"
+      }
+    ],
+    "paymentNote": "A data da intermediária consta como 00/00/0000 na tabela. Confirme o vencimento e as condições.",
+    "units": [
+      {
+        "id": "21",
+        "unitLabel": "Unidade 21",
+        "area": 130.81,
+        "total": 2127213.56,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": [
+          [
+            "Ato",
+            "30/11/2026",
+            1,
+            212471.35
+          ],
+          [
+            "Mensais",
+            "A partir de 30/12/2026",
+            2,
+            159541.02
+          ],
+          [
+            "Intermediária",
+            "Data a confirmar",
+            1,
+            106360.68
+          ],
+          [
+            "Única",
+            "30/01/2027",
+            1,
+            106360.68
+          ],
+          [
+            "Financiamento",
+            "28/02/2027",
+            1,
+            1382688.81
+          ],
+          [
+            "Periodicidade",
+            "31/12/2030",
+            1,
+            250
+          ]
+        ]
+      },
+      {
+        "id": "32",
+        "unitLabel": "Unidade 32",
+        "area": 130.795,
+        "total": 2149323.74,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "31",
+        "unitLabel": "Unidade 31",
+        "area": 130.81,
+        "total": 2149488.06,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "62",
+        "unitLabel": "Unidade 62",
+        "area": 130.795,
+        "total": 2187187.46,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "61",
+        "unitLabel": "Unidade 61",
+        "area": 130.81,
+        "total": 2187354.68,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "72",
+        "unitLabel": "Unidade 72",
+        "area": 130.795,
+        "total": 2205005.69,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "71",
+        "unitLabel": "Unidade 71",
+        "area": 130.81,
+        "total": 2205174.27,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "82",
+        "unitLabel": "Unidade 82",
+        "area": 130.795,
+        "total": 2209460.23,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "81",
+        "unitLabel": "Unidade 81",
+        "area": 130.81,
+        "total": 2209629.16,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "92",
+        "unitLabel": "Unidade 92",
+        "area": 130.795,
+        "total": 2216142.08,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "91",
+        "unitLabel": "Unidade 91",
+        "area": 130.81,
+        "total": 2216311.52,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "101",
+        "unitLabel": "Unidade 101",
+        "area": 130.81,
+        "total": 2227448.75,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "112",
+        "unitLabel": "Unidade 112",
+        "area": 130.795,
+        "total": 2249551.25,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "111",
+        "unitLabel": "Unidade 111",
+        "area": 130.81,
+        "total": 2249723.24,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "122",
+        "unitLabel": "Unidade 122",
+        "area": 130.06,
+        "total": 2271824.05,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "131",
+        "unitLabel": "Unidade 131",
+        "area": 130.81,
+        "total": 2305409.46,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "142",
+        "unitLabel": "Unidade 142",
+        "area": 130.795,
+        "total": 2316369.61,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "152",
+        "unitLabel": "Unidade 152",
+        "area": 130.795,
+        "total": 2327506.01,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "162",
+        "unitLabel": "Unidade 162",
+        "area": 130.795,
+        "total": 2338642.4,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "151",
+        "unitLabel": "Unidade 151",
+        "area": 131.45,
+        "total": 2339072.35,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "172",
+        "unitLabel": "Unidade 172",
+        "area": 130.795,
+        "total": 2349778.53,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "171",
+        "unitLabel": "Unidade 171",
+        "area": 131.45,
+        "total": 2361455.82,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "202",
+        "unitLabel": "Unidade 202",
+        "area": 130.795,
+        "total": 2383187.96,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "191",
+        "unitLabel": "Unidade 191",
+        "area": 131.45,
+        "total": 2383839.3,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "212",
+        "unitLabel": "Unidade 212",
+        "area": 130.795,
+        "total": 2387642.52,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "222",
+        "unitLabel": "Unidade 222",
+        "area": 130.795,
+        "total": 2392097.08,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "181",
+        "unitLabel": "Unidade 181",
+        "area": 131.45,
+        "total": 2536878.27,
+        "sourcePage": 2,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "11",
+        "unitLabel": "Unidade 11",
+        "area": 130.81,
+        "total": 2627644.23,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      },
+      {
+        "id": "12",
+        "unitLabel": "Unidade 12",
+        "area": 217.325,
+        "total": 2728746.35,
+        "sourcePage": 1,
+        "parking": 2,
+        "flow": []
+      }
+    ]
+  },
+  {
+    "key": "joaquim",
+    "project": "Joaquim",
+    "short": "Joaquim",
+    "developer": "Even",
+    "address": "Rua Joaquim Guarani, 322 · Brooklin",
+    "reference": "out/2026",
+    "hero": "/guilherme.vita2/joaquim-42.webp",
+    "areaNote": "A área varia conforme o andar e o final.",
+    "tableNote": "Valores promocionais da Torre 1.",
+    "highlights": [
+      "Piscina coberta com raia de 25 m"
+    ],
+    "plans": [],
+    "leisure": [
+      {
+        "src": "/guilherme.vita2/joaquim-53.webp",
+        "label": "Piscina coberta com raia de 25 m"
+      }
+    ],
+    "paymentNote": "O fluxo impresso usa o preço antes do desconto. Confirme como o desconto promocional se aplica ao pagamento.",
+    "units": [
+      {
+        "id": "4-2",
+        "unitLabel": "4º andar · final 2",
+        "area": 171.88,
+        "total": 2389486,
+        "sourcePage": 4,
+        "parking": 2,
+        "flow": [
+          [
+            "Ato",
+            "out/2026",
+            1,
+            1306250
+          ],
+          [
+            "Única FD",
+            "dez/2026",
+            1,
+            1959370
+          ]
+        ],
+        "typology": "4 dormitórios · referência do projeto"
+      },
+      {
+        "id": "5-1",
+        "unitLabel": "5º andar · final 1",
+        "area": 168.58,
+        "total": 2445717,
+        "sourcePage": 4,
+        "parking": 2,
+        "flow": [
+          [
+            "Ato",
+            "out/2026",
+            1,
+            1336990
+          ],
+          [
+            "Única FD",
+            "dez/2026",
+            1,
+            2005480
+          ]
+        ]
+      },
+      {
+        "id": "12-1",
+        "unitLabel": "12º andar · final 1",
+        "area": 168.68,
+        "total": 2578195,
+        "sourcePage": 4,
+        "parking": 2,
+        "flow": [
+          [
+            "Ato",
+            "out/2026",
+            1,
+            1409410
+          ],
+          [
+            "Única FD",
+            "dez/2026",
+            1,
+            2114110
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "key": "mac",
+    "project": "MAC Brooklin",
+    "short": "MAC Brooklin",
+    "developer": "MAC",
+    "address": "Brooklin · São Paulo",
+    "reference": "nov/2026",
+    "hero": "/guilherme.vita2/mac-11.webp",
+    "areaNote": "O book apresenta uma opção de 138,74 m² para o final 3.",
+    "tableNote": "Recorte da tabela financiada de novembro/2026.",
+    "highlights": [
+      "Piscina coberta com raia de 25 m",
+      "Fitness na cobertura"
+    ],
+    "plans": [
+      {
+        "src": "/guilherme.vita2/mac-44.webp",
+        "label": "138,74 m² · opção de 3 suítes"
+      }
+    ],
+    "leisure": [
+      {
+        "src": "/guilherme.vita2/mac-31.webp",
+        "label": "Piscina coberta"
+      }
+    ],
+    "paymentNote": "A coluna de financiamento de dezembro/2028 é uma leitura alternativa ao principal.",
+    "units": [
+      {
+        "id": "1-3",
+        "unitLabel": "1º andar · final 3",
+        "area": 138.74,
+        "total": 2487920.4,
+        "sourcePage": 4,
+        "parking": null,
+        "flow": [
+          [
+            "Sinal",
+            "nov/2026",
+            1,
+            124396.02
+          ],
+          [
+            "Iniciais",
+            "30/60/90/120 dias",
+            4,
+            31099.01
+          ],
+          [
+            "Mensais",
+            "A partir de abr/2027",
+            18,
+            11057.42
+          ],
+          [
+            "Anuais",
+            "A partir de mai/2027",
+            2,
+            99516.82
+          ],
+          [
+            "Única",
+            "out/2028",
+            1,
+            223912.84
+          ],
+          [
+            "Principal",
+            "set/2028",
+            1,
+            1617148.3
+          ]
+        ],
+        "financing": 1647983.47
+      },
+      {
+        "id": "1-2",
+        "unitLabel": "1º andar · final 2",
+        "area": 138.74,
+        "total": 2540350.53,
+        "sourcePage": 4,
+        "parking": null,
+        "flow": [
+          [
+            "Sinal",
+            "nov/2026",
+            1,
+            127017.52
+          ],
+          [
+            "Iniciais",
+            "30/60/90/120 dias",
+            4,
+            31754.38
+          ],
+          [
+            "Mensais",
+            "A partir de abr/2027",
+            18,
+            11290.45
+          ],
+          [
+            "Anuais",
+            "A partir de mai/2027",
+            2,
+            101614.02
+          ],
+          [
+            "Única",
+            "out/2028",
+            1,
+            228631.54
+          ],
+          [
+            "Principal",
+            "set/2028",
+            1,
+            1651227.81
+          ]
+        ],
+        "financing": 1682712.8
+      }
+    ]
+  },
+  {
+    "key": "infinity",
+    "project": "Infinity Brooklin",
+    "short": "Infinity Brooklin",
+    "developer": "Teixeira Duarte",
+    "address": "Brooklin · São Paulo",
+    "reference": "nov/2026",
+    "hero": "/guilherme.vita2/infinity-43.webp",
+    "areaNote": "A apresentação ilustra o living de 143 m² da Torre West.",
+    "tableNote": "Referências das torres West e East.",
+    "highlights": [
+      "Piscina descoberta",
+      "Piscina coberta",
+      "Espaço wellness"
+    ],
+    "plans": [
+      {
+        "src": "/guilherme.vita2/infinity-60.webp",
+        "label": "Living ilustrativo de 143 m²"
+      }
+    ],
+    "leisure": [
+      {
+        "src": "/guilherme.vita2/infinity-43.webp",
+        "label": "Piscina descoberta"
+      }
+    ],
+    "paymentNote": "Financiamento sujeito às condições da tabela e do contrato.",
+    "units": [
+      {
+        "id": "west-8-3",
+        "unitLabel": "West · 8º andar · final 3",
+        "area": 143,
+        "total": 2697018,
+        "sourcePage": 7,
+        "parking": 2,
+        "flow": [
+          [
+            "Ato",
+            "nov/2026",
+            1,
+            539404
+          ],
+          [
+            "Financiamento",
+            "31/12/2026",
+            1,
+            2157614
+          ]
+        ]
+      },
+      {
+        "id": "west-19-3",
+        "unitLabel": "West · 19º andar · final 3",
+        "area": 143,
+        "total": 2909590,
+        "sourcePage": 7,
+        "parking": 2,
+        "flow": [
+          [
+            "Ato",
+            "nov/2026",
+            1,
+            581918
+          ],
+          [
+            "Financiamento",
+            "31/12/2026",
+            1,
+            2327672
+          ]
+        ]
+      },
+      {
+        "id": "east-2-1",
+        "unitLabel": "East · 2º andar · final 1",
+        "area": 187,
+        "total": 3518530,
+        "sourcePage": 5,
+        "parking": 2,
+        "flow": [
+          [
+            "Ato",
+            "nov/2026",
+            1,
+            703706
+          ],
+          [
+            "Financiamento",
+            "31/12/2026",
+            1,
+            2814824
+          ]
+        ]
+      }
+    ]
+  }
+]
