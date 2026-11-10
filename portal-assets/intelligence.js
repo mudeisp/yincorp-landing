@@ -42,7 +42,124 @@ function updateInsight(){insight.textContent=conclusion();if(!reduced)insight.an
 function render(){const rent=payload.kind==='rent',all=[payload.base,...payload.items],count=Math.min(all.length,step+1);for(let i=tbody.children.length;i<count;i++){const item=all[i],tr=document.createElement('tr');if(i===0)tr.className='ynti-current';const first=document.createElement('td');first.append(text('strong',item.name),text('small',(rent?item.neighborhood:(item.type+(item.reference?' · ref. '+item.reference:'')))||'Referência do catálogo'));tr.append(first);for(let k=0;k<4;k++)tr.append(text('td','—'));tbody.append(tr);if(!reduced)tr.animate([{opacity:0,transform:'translateX(25px)'},{opacity:1,transform:'none'}],{duration:800});}
   [...tbody.children].forEach((row,i)=>{const item=all[i];const cells=[cash(item.price),...(rent?[cash(item.condo),cash(item.subtotal),num(item.area,2)+' m²']:[num(item.area,2)+' m²',num(item.bedrooms),/pronto|entregue|conclu/i.test(item.status)?item.status:item.delivery||item.status||'A confirmar'])];cells.forEach((v,k)=>{const td=row.children[k+1];const ready=k===0||step>=3;if(ready&&td.textContent!==v){td.textContent=v;td.className='ynti-reveal';}})});
 progress.firstChild.style.width=Math.min(100,(step+1)/6*100)+'%';live.textContent=['Conhecendo este imóvel','Encontrando alternativas','Conectando possibilidades','Cruzando os dados','Explicando as diferenças','Sua análise está pronta'][step];if(step>=4){updateInsight();if(!cards.children.length)payload.items.forEach(item=>{const e=explain(item),card=document.createElement('article');card.append(text('h3',item.name),text('p',e.why,'ynti-why'),text('p',e.gain),text('p',e.trade));if(rent)card.append(text('small','IPTU informado: '+cash(item.tax)+' · periodicidade a confirmar'));card.append(link(item,'Conhecer este imóvel ↗'));cards.append(card);if(!reduced)card.animate([{opacity:0,transform:'translateY(18px)'},{opacity:1,transform:'none'}],{duration:700,delay:cards.children.length*150,fill:'both'});});}}
-async function start(){if(started)return;started=true;live.textContent='Conectando outras possibilidades…';try{await loading;build();requestAnimationFrame(tick)}catch{live.textContent='Você pode continuar conhecendo este imóvel';content.hidden=false;content.append(text('p','A comparação está temporariamente indisponível. Explore as configurações e consulte o atendimento.','ynti-note'))}}
+
+function buildGallery(){
+  content.hidden=false;
+  root.classList.add('ynti-premium','ynti-active');
+  live.textContent='Sua análise está pronta';
+  const base=payload.base;
+  const rent=payload.kind==='rent';
+  const reference=text('div','','ynti-reference');
+  reference.append(text('small','IMÓVEL DE REFERÊNCIA'),text('strong',base.name),
+    text('span',[base.neighborhood,base.city,cash(base.price)+(rent?' / mês':'')].filter(Boolean).join(' · ')));
+  content.append(reference);
+  const filters=text('div','','ynti-priorities');
+  filters.setAttribute('aria-label','Ordenar alternativas');
+  const viewport=text('ul','','ynti-gallery');
+  viewport.id='ynti-gallery';
+  const navigation=text('div','','ynti-gallery-nav');
+  const position=text('span','1/'+payload.items.length);
+  const previous=text('button','←');
+  const next=text('button','→');
+  for(const [button,label] of [[previous,'Alternativa anterior'],[next,'Próxima alternativa']]){
+    button.type='button';
+    button.setAttribute('aria-label',label);
+    button.setAttribute('aria-controls',viewport.id);
+  }
+  navigation.append(previous,position,next);
+  let current=0;
+  function sync(){
+    const items=[...viewport.children];
+    if(!items.length)return;
+    const left=viewport.getBoundingClientRect().left;
+    current=items.reduce((best,item,index)=>Math.abs(item.getBoundingClientRect().left-left)<Math.abs(items[best].getBoundingClientRect().left-left)?index:best,0);
+    position.textContent=(current+1)+'/'+items.length;
+    previous.disabled=current===0;
+    next.disabled=current===items.length-1;
+  }
+  function move(offset){
+    const item=viewport.children[current+offset];
+    if(item)viewport.scrollTo({left:viewport.scrollLeft+item.getBoundingClientRect().left-viewport.getBoundingClientRect().left,behavior:reduced?'instant':'smooth'});
+  }
+  previous.onclick=()=>move(-1);
+  next.onclick=()=>move(1);
+  viewport.addEventListener('scroll',sync,{passive:true});
+  const explanation=text('div','','ynti-insight');
+  explanation.setAttribute('aria-live','polite');
+  function card(item){
+    const cell=text('li','','ynti-gallery-item');
+    const anchor=safePath(item.path)?link(item,''):text('div','','ynti-link');
+    if(anchor.tagName==='A')anchor.setAttribute('aria-label','Conhecer '+item.name+' · '+cash(item.price));
+    const media=text('div','','ynti-photo');
+    const fallback=text('span','Imagem indisponível');
+    media.append(fallback);
+    try{
+      const url=new URL(item.image);
+      if(url.protocol==='https:'&&!url.username&&!url.password){
+        const image=document.createElement('img');
+        image.alt='';
+        image.loading='lazy';
+        image.decoding='async';
+        image.width=640;
+        image.height=480;
+        image.addEventListener('error',()=>image.remove(),{once:true});
+        image.src=url.href;
+        media.append(image);
+      }
+    }catch{}
+    const body=text('div','','ynti-card-body');
+    body.append(text('p',[item.neighborhood,item.city].filter(Boolean).join(' · '),'ynti-location'),
+      text('h3',item.name),text('p',[item.area==null?'Área a confirmar':num(item.area,2)+' m²',item.bedrooms==null?'Dormitórios a confirmar':num(item.bedrooms)+(item.bedrooms===1?' dormitório':' dormitórios')].join(' · ')),
+      text('strong',cash(item.price)+(rent?' / mês':''),'ynti-price'));
+    if(rent)body.append(text('p','Condomínio '+cash(item.condo)+' · Subtotal '+cash(item.subtotal)),text('p','IPTU '+cash(item.tax)+' · periodicidade a confirmar'));
+    if(anchor.tagName==='A'){
+      const arrow=text('span','↗','ynti-arrow');
+      arrow.setAttribute('aria-hidden','true');
+      body.append(arrow);
+    }
+    anchor.append(media,body);
+    cell.append(anchor);
+    return cell;
+  }
+  function update(){
+    const ordered=payload.items.slice();
+    const cost=item=>rent?(item.subtotal??Infinity):item.price;
+    if(priority==='custo')ordered.sort((a,b)=>cost(a)-cost(b));
+    if(priority==='espaco')ordered.sort((a,b)=>(b.area??-1)-(a.area??-1));
+    if(priority==='quartos')ordered.sort((a,b)=>(b.bedrooms??-1)-(a.bedrooms??-1));
+    viewport.replaceChildren(...ordered.map(card));
+    viewport.scrollTo({left:0,behavior:'instant'});
+    sync();
+    const message=conclusion();
+    explanation.textContent=message;
+    const match=ordered.find(item=>message.startsWith('Vale conhecer '+item.name+'.'));
+    if(match)explanation.replaceChildren(text('strong','Vale conhecer '+match.name+'.'),document.createTextNode(message.slice(('Vale conhecer '+match.name+'.').length)));
+  }
+  if(payload.items.length){
+    for(const [key,label] of [['geral','Visão geral'],['custo',rent?'Menor subtotal':'Menor preço'],['espaco','Mais espaço'],['quartos','Mais quartos']]){
+      const button=text('button',label);
+      button.type='button';
+      button.setAttribute('aria-pressed',String(key===priority));
+      button.onclick=()=>{
+        priority=key;
+        for(const option of filters.children)option.setAttribute('aria-pressed',String(option===button));
+        update();
+      };
+      filters.append(button);
+    }
+    content.append(filters,viewport);
+    if(payload.items.length>1)content.append(navigation);
+  }
+  content.append(explanation);
+  const details=text('details','','ynti-method');
+  details.append(text('summary','Como esta comparação foi construída'),text('p',payload.criteria),
+    text('p','Consulta: '+new Date(payload.checkedAt).toLocaleString('pt-BR')+'. Preços e áreas pertencem à configuração indicada. Valores e disponibilidade sujeitos a confirmação.'));
+  if(rent)details.append(text('p','Subtotal é aluguel + condomínio. IPTU sem periodicidade confirmada fica separado. Outros encargos não estão incluídos.'));
+  content.append(details);
+  update();
+}
+
+async function start(){if(started)return;started=true;live.textContent='Conectando outras possibilidades…';try{await loading;if(investment){build();requestAnimationFrame(tick)}else buildGallery()}catch{live.textContent='Você pode continuar conhecendo este imóvel';content.hidden=false;content.append(text('p','A comparação está temporariamente indisponível. Explore as configurações e consulte o atendimento.','ynti-note'))}}
 function tick(now){if(last&&!paused&&!document.hidden&&step<5){elapsed+=Math.min(100,now-last);if(elapsed>(step===4?4500:1800)){elapsed=0;step++;render()}}last=now;if(step<5)requestAnimationFrame(tick)}
 const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){start();observer.disconnect()}},{threshold:.15});observer.observe(root);window.addEventListener('scroll',()=>{if(!started&&root.getBoundingClientRect().top<innerHeight*.85){start();observer.disconnect()}},{passive:true});if(location.hash==='#yincorp-intelligence')start();
 })();
