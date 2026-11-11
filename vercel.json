@@ -2,6 +2,7 @@
   "buildCommand": "node scripts/prepare-portal.mjs",
   "outputDirectory": ".",
   "redirects": [
+    { "source": "/guilherme.vita3", "destination": "/guilherme.vita3/", "permanent": false },
     {
       "source": "/lucas.schoch/",
       "destination": "/lucas.schoch",
@@ -99,6 +100,7 @@
     }
   ],
   "rewrites": [
+    { "source": "/guilherme.vita3/", "destination": "/guilherme.vita3/index.html" },
     { "source": "/ANA/", "destination": "/ANA/index.html" },
     { "source": "/ANA", "destination": "/ANA/index.html" },
     {
