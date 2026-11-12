@@ -13,6 +13,11 @@
       "permanent": true
     },
     {
+      "source": "/bruno/",
+      "destination": "/bruno",
+      "permanent": true
+    },
+    {
       "source": "/guilherme-vita",
       "destination": "/guilherme.vita",
       "permanent": true
@@ -123,6 +128,10 @@
     {
       "source": "/lucas.schoch",
       "destination": "/lucas.schoch/index.html"
+    },
+    {
+      "source": "/bruno",
+      "destination": "/bruno/index.html"
     },
     {
       "source": "/guilherme.vita",
