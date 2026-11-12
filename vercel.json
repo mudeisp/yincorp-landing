@@ -1,8 +1,12 @@
 {
-  "buildCommand": "node scripts/prepare-portal.mjs",
+  "buildCommand": "node scripts/prepare-portal.mjs && node scripts/materialize-renata-pdfs.mjs",
   "outputDirectory": ".",
   "redirects": [
-    { "source": "/guilherme.vita3", "destination": "/guilherme.vita3/", "permanent": false },
+    {
+      "source": "/guilherme.vita3",
+      "destination": "/guilherme.vita3/",
+      "permanent": false
+    },
     {
       "source": "/lucas.schoch/",
       "destination": "/lucas.schoch",
@@ -100,9 +104,18 @@
     }
   ],
   "rewrites": [
-    { "source": "/guilherme.vita3/", "destination": "/guilherme.vita3/index.html" },
-    { "source": "/ANA/", "destination": "/ANA/index.html" },
-    { "source": "/ANA", "destination": "/ANA/index.html" },
+    {
+      "source": "/guilherme.vita3/",
+      "destination": "/guilherme.vita3/index.html"
+    },
+    {
+      "source": "/ANA/",
+      "destination": "/ANA/index.html"
+    },
+    {
+      "source": "/ANA",
+      "destination": "/ANA/index.html"
+    },
     {
       "source": "/guilherme.vita2",
       "destination": "/guilherme.vita2/index.html"
@@ -246,6 +259,10 @@
     {
       "source": "/sitemap-content-:uf(sp|es).xml",
       "destination": "/api/portal?portalPath=/sitemap-content-:uf.xml"
+    },
+    {
+      "source": "/renata.bonilha",
+      "destination": "/renata.bonilha/index.html"
     }
   ],
   "functions": {
