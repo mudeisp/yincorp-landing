@@ -1,4 +1,4 @@
-import { readdir, readFile, writeFile, rm } from "node:fs/promises";
+import { readdir, readFile, writeFile, rm, mkdir } from "node:fs/promises";
 import { resolve, basename } from "node:path";
 
 const root = process.cwd();
@@ -17,6 +17,7 @@ for (const name of names) {
   groups.set(pdfName, group);
 }
 
+await mkdir(outputDir, { recursive: true });
 for (const [pdfName, parts] of groups) {
   parts.sort((a, b) => a.partNumber - b.partNumber);
   const base64 = (await Promise.all(parts.map(({ path }) => readFile(path, "utf8")))).join("");
