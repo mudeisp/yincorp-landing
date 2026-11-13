@@ -62,7 +62,7 @@ $("float").hidden=pick.size===0;$("float-count").textContent=pick.size+" selecio
 function render(){
 renderCards();
 const list=ordered();
-const rows=[["Endereço",p=>esc(p.address)],["Área",p=>nf.format(p.area)+" m²"],["Dormitórios",p=>p.beds],["Suítes",p=>p.suites],["Vagas",p=>p.parking],["Preço anunciado",p=>'<span class="price">'+fmt.format(p.price)+'</span>'],["Preço por m²",p=>unit(p)],["Detalhes",p=>'<a href="/renata.bonilha?imovel='+code(p)+'" data-detail="'+esc(p.id)+'">Ver detalhes ↗</a>']];
+const rows=[["Endereço",p=>esc(p.address)],["Área",p=>nf.format(p.area)+" m²"],["Dormitórios",p=>p.beds],["Suítes",p=>p.suites??"a confirmar"],["Vagas",p=>p.parking],["Preço anunciado",p=>'<span class="price">'+fmt.format(p.price)+'</span>'],["Preço por m²",p=>unit(p)],["Detalhes",p=>'<a href="/renata.bonilha?imovel='+code(p)+'" data-detail="'+esc(p.id)+'">Ver detalhes ↗</a>']];
 $("comparison").innerHTML=list.length?'<div class="table-scroller" tabindex="0" role="region" aria-label="Comparativo selecionado"><table><thead><tr><th>Comparativo</th>'+list.map(p=>'<th>'+esc(p.name)+'</th>').join("")+'</tr></thead><tbody>'+rows.map(row=>'<tr><th>'+row[0]+'</th>'+list.map(p=>'<td>'+row[1](p)+'</td>').join("")+'</tr>').join("")+'</tbody></table></div>':'<div class="empty">Selecione até 3 imóveis para montar o comparativo lado a lado.</div>';
 $("contact-summary").textContent=list.length?"Renata, sua seleção: "+list.map(p=>p.name+" · "+nf.format(p.area)+" m²").join(" / "):"Escolha os imóveis que deseja conhecer para enviar sua seleção.";
 const txt="Olá, equipe Yincorp! Gostaria de consultar os imóveis usados do Brooklin para Renata Bonilha.\n"+list.map(p=>"• "+p.name+" · "+nf.format(p.area)+" m² · "+fmt.format(p.price)).join("\n")+"\n"+shareUrl();
