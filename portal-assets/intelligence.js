@@ -89,6 +89,8 @@ function buildGallery(){
   filters.setAttribute('role','group');
   filters.setAttribute('aria-label','O que pesa mais na sua escolha?');
   const gallery=text('ul','','ynti-gallery');
+  const overview=text('div','','ynti-overview');
+  const galleryHeading=text('h3','Compare com outra opção','ynti-gallery-heading');
   const comparison=text('div','','ynti-comparison');
   comparison.id='ynti-comparison';
   const announcement=text('p','','ynti-guided-announcement');
@@ -96,7 +98,7 @@ function buildGallery(){
   const method=text('details','','ynti-method');
   method.append(text('summary','Como selecionamos estas alternativas?'),text('p',payload.criteria));
   const caption=rent?'Custo mensal comparável = aluguel + condomínio. IPTU e outros encargos ficam fora desse cálculo.':'Preço, área e R$/m² se referem à configuração indicada de cada empreendimento.';
-  content.append(text('h3','O que pesa mais na sua escolha?','ynti-question'),filters,gallery,comparison,announcement,
+  content.append(text('h3','O que pesa mais na sua escolha?','ynti-question'),filters,overview,galleryHeading,gallery,comparison,announcement,
     text('p',caption+' Valores e disponibilidade sujeitos a confirmação.','ynti-note'),method);
 
   function orderedItems(){
@@ -126,10 +128,6 @@ function buildGallery(){
       ['Bairro',value=>value.neighborhood||'A confirmar'],
       ...(rent?[]:[['Estágio da obra',value=>value.status||'A confirmar'],['Entrega informada',value=>value.delivery||'A confirmar']]),
     ];
-    const changes=[
-      priceDelta(item)&&((rent?'Aluguel + condomínio: ':'Preço: ')+priceDelta(item)),
-      areaDelta(item)&&('Área: '+areaDelta(item).replace('Mesmo valor','mesma metragem')),
-    ].filter(Boolean);
     const context=sameArea(item,base)&&base.neighborhood?'Os dois ficam em '+base.neighborhood+'.':'Veja os bairros na comparação abaixo.';
     const opening={
       geral:context,
@@ -162,7 +160,20 @@ function buildGallery(){
       body.append(row);
     }
     table.append(thead,body);
-    comparison.replaceChildren(text('h3',base.name+' × '+item.name),text('p',opening+' '+timingLine+changes.join(' · ')+(changes.length?'.':'')+advantage,'ynti-insight'),table);
+    const heading=text('h3',base.name+' × '+item.name);
+    const metrics=text('div','','ynti-overview-metrics');
+    const priceMetric=[rent?'Aluguel + condomínio':'Preço da configuração',priceDelta(item)];
+    const areaMetric=['Área privativa',areaDelta(item)?.replace('Mesmo valor','Mesma metragem')];
+    const timeMetric=['Entrega da alternativa',timing(item)];
+    const metricsToShow=priority==='prazo'?[timeMetric,priceMetric]:[priceMetric,areaMetric];
+    for(const [label,value] of metricsToShow){
+      const tile=text('div','','ynti-overview-metric');
+      tile.append(text('span',label),text('strong',value||'A confirmar'));
+      metrics.append(tile);
+    }
+    overview.replaceChildren(heading,metrics,text('p',opening+' '+timingLine+advantage,'ynti-overview-note'));
+    table.append(text('caption','Comparação em detalhe'));
+    comparison.replaceChildren(table);
     const actions=text('div','','ynti-comparison-actions');
     for(const property of [base,item]){
       if(safePath(property.path))actions.append(link(property,(rent?'Ver imóvel: ':'Ver configuração: ')+property.name+' ↗',property!==base));
@@ -196,7 +207,7 @@ function buildGallery(){
         }
       }catch{}
       const label=text('span','','ynti-option-label');
-      label.append(text('strong',item.name),text('span',highlight(item)));
+      label.append(text('strong',item.name),text('span',highlight(item)),text('span','✓ Em comparação','ynti-option-current'));
       button.append(media,label);
       button.onclick=()=>{
         for(const option of buttons)option.setAttribute('aria-pressed',String(option===button));
