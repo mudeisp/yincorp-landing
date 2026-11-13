@@ -176,8 +176,8 @@
     {
       "source": "assets/js/whatsapp-contact.js",
       "destination": "portal-assets/whatsapp-contact.js",
-      "gitBlobSha": "6b346409ffd2374b90d155bd5fd15fe096356675",
-      "commit": "7ed1612b8c36ac85ea0e37fa0ba0bfe094c2395a"
+      "gitBlobSha": "323371c64ac4f95a8d5da002ae1249c925a66700",
+      "commit": "2c1e4f8ed76e1a86828b26d7cef2863b68f21432"
     },
     {
       "source": "assets/css/whatsapp-float.css",
