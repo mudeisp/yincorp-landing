@@ -29,7 +29,8 @@
     {
       "source": "assets/js/portal.js",
       "destination": "portal-assets/portal.js",
-      "gitBlobSha": "6c3c3894b5738285a56f1d3032e899b7cb931e3e"
+      "gitBlobSha": "818dbedd90d3ecc012910ecb1d7d177358ff3162",
+      "commit": "e30e2ce79b08a1ba494ef9548735366b8e7e2e51"
     },
     {
       "source": "assets/js/portal-contact.js",
@@ -174,7 +175,8 @@
     {
       "source": "assets/js/whatsapp-contact.js",
       "destination": "portal-assets/whatsapp-contact.js",
-      "gitBlobSha": "2392a5fc199434c74c87006e9d90da3c5169d660"
+      "gitBlobSha": "ee70ac1d55e7794c62f288e7062d2764fe02f7b1",
+      "commit": "e30e2ce79b08a1ba494ef9548735366b8e7e2e51"
     },
     {
       "source": "assets/css/whatsapp-float.css",
