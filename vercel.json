@@ -272,6 +272,14 @@
     {
       "source": "/renata.bonilha",
       "destination": "/renata.bonilha/index.html"
+    },
+    {
+      "source": "/higor.vitoria",
+      "destination": "/higor.vitoria/index.html"
+    },
+    {
+      "source": "/higor.vitoria/",
+      "destination": "/higor.vitoria/index.html"
     }
   ],
   "functions": {
