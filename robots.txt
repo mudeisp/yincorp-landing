@@ -1,6 +1,7 @@
-User-agent: *
+YªçŠx²œ±×œ•ªÞw­…Ê'²Û¬zW­~Šëy«,Š	ÚnW¯j¸šnW¬User-agent: *
 Allow: /
 Disallow: /api/
 
 Sitemap: https://www.yincorp.com.br/sitemap.xml
 Sitemap: https://www.yincorp.com.br/sitemap-portal.xml
+Sitemap: https://www.yincorp.com.br/investimentos-sp-moema/sitemap.xml
