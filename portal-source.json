@@ -174,13 +174,14 @@
     {
       "source": "assets/js/whatsapp-contact.js",
       "destination": "portal-assets/whatsapp-contact.js",
-      "gitBlobSha": "5fc3115cfc5def2e3e0f3160f68315be82fd2957",
-      "commit": "10de26e4235c45a72a8b5d8e223c8f7dd2db992c"
+      "gitBlobSha": "6b346409ffd2374b90d155bd5fd15fe096356675",
+      "commit": "7ed1612b8c36ac85ea0e37fa0ba0bfe094c2395a"
     },
     {
       "source": "assets/css/whatsapp-float.css",
       "destination": "portal-assets/whatsapp-float.css",
-      "gitBlobSha": "964df143a091f6e9a5102da80b1b91a1a2eb958b"
+      "gitBlobSha": "752b34f458aad0b80bd56ab25a1ab1baf6dcd3bf",
+      "commit": "7ed1612b8c36ac85ea0e37fa0ba0bfe094c2395a"
     },
     {
       "source": "portal/rentals.js",
