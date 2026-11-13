@@ -280,6 +280,14 @@
     {
       "source": "/higor.vitoria/",
       "destination": "/higor.vitoria/index.html"
+    },
+    {
+      "source": "/guilherme.aguaverde",
+      "destination": "/guilherme.aguaverde/index.html"
+    },
+    {
+      "source": "/guilherme.aguaverde/",
+      "destination": "/guilherme.aguaverde/index.html"
     }
   ],
   "functions": {
