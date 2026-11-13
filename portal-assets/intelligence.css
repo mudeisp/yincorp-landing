@@ -97,3 +97,28 @@
  .ynti-premium .ynti-insight{font-size:13px;padding:18px}
 }
 @media(prefers-reduced-motion:reduce){.ynti-premium .ynti-gallery-item{transition:none!important}.ynti-premium .ynti-gallery-item:hover{transform:none!important}}
+
+/* Comparação guiada de venda e locação. */
+.ynti-guided .ynti-head .ynti-live[hidden]{display:none}
+.ynti-guided .ynti-question{margin:24px 0 8px;font-size:17px}
+.ynti-guided .ynti-priorities{margin:0 0 18px}
+.ynti-guided .ynti-priorities button{font-size:13px;min-height:44px}
+.ynti.ynti-guided .ynti-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 22px;padding:0;overflow:visible}
+.ynti.ynti-guided .ynti-gallery-item:last-child{margin:0}
+.ynti-guided .ynti-option{display:block;width:100%;height:100%;padding:0;text-align:left;color:inherit;border:0;background:#fff}
+.ynti-guided .ynti-option[aria-pressed=true]{background:#e9efe1;box-shadow:inset 0 0 0 2px #31543b}
+.ynti-guided .ynti-option:focus-visible{outline:2px solid #31543b;outline-offset:-3px}
+.ynti-guided .ynti-photo{aspect-ratio:16/9}
+.ynti-guided .ynti-option-label{display:grid;gap:6px;padding:12px;font-size:13px;overflow-wrap:anywhere}
+.ynti-guided .ynti-option-label span{color:#405f4b}
+.ynti-guided .ynti-comparison{background:#fff;border:1px solid #dce0d7;border-radius:12px;padding:clamp(12px,3vw,30px)}
+.ynti-guided .ynti-comparison h3{font:400 clamp(21px,3vw,34px)/1.15 Georgia,serif;margin:0}
+.ynti-guided .ynti-comparison .ynti-insight{min-height:0;line-height:1.55;padding:14px}
+.ynti-guided table.ynti-guided-table{table-layout:fixed;white-space:normal;border-collapse:collapse;font-size:13px}
+.ynti-guided .ynti-guided-table th,.ynti-guided .ynti-guided-table td{text-align:left;color:inherit;overflow-wrap:anywhere;border:0;border-bottom:1px solid #e2e7dc;padding:9px 7px;background:none;border-radius:0}
+.ynti-guided .ynti-guided-table thead th{font-size:13px;font-weight:700;background:#edf1e8}
+.ynti-guided .ynti-guided-table tbody th{font-size:12px}
+.ynti-guided .ynti-comparison-actions{display:flex;flex-wrap:wrap;gap:8px 22px}
+.ynti-guided .ynti-comparison-actions a{font-size:13px}
+.ynti-guided .ynti-guided-announcement{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:740px){.ynti.ynti-guided .ynti-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ynti-guided .ynti-option-label{padding:9px}}
