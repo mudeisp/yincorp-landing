@@ -11,8 +11,8 @@
     {
       "source": "portal/render.js",
       "destination": ".portal-shared/render.js",
-      "commit": "cd387c80342adee9d1a1100d52688ed8425fc762",
-      "gitBlobSha": "634353b0ce2dfb8cbfc4d8f8d4d6a6d9c68a5e2c"
+      "commit": "fb5772aaaeefe7fd82a3aa168f2500bedee0a8ca",
+      "gitBlobSha": "080cc282e9c387583d642f34a6aeef03f4beba0f"
     },
     {
       "source": "portal/router.js",
@@ -29,7 +29,8 @@
     {
       "source": "assets/js/portal.js",
       "destination": "portal-assets/portal.js",
-      "gitBlobSha": "6c3c3894b5738285a56f1d3032e899b7cb931e3e"
+      "gitBlobSha": "b92f1ffce2c97340373c86db2d0940017ee8af47",
+      "commit": "fb5772aaaeefe7fd82a3aa168f2500bedee0a8ca"
     },
     {
       "source": "assets/js/portal-contact.js",
@@ -44,7 +45,8 @@
     {
       "source": "assets/js/integrations/analytics.js",
       "destination": "portal-assets/analytics.js",
-      "sha256": "873de63597d5aad4ea20564bafc309c2d783ed0af40a39bfdceeb6654aa3c921"
+      "commit": "fb5772aaaeefe7fd82a3aa168f2500bedee0a8ca",
+      "gitBlobSha": "1292fdc78063ff57221186e4e970ef0af4f78701"
     },
     {
       "source": "icon-192.png",
@@ -198,8 +200,8 @@
     {
       "source": "assets/js/rentals.js",
       "destination": "portal-assets/rentals.js",
-      "commit": "4941afde85b7be02839178e38bb83ddf90ed841f",
-      "sha256": "a462f7f7f60df884d67cebee36866b1fdcd780f40eb26eb237a532b34f19ced7"
+      "commit": "fb5772aaaeefe7fd82a3aa168f2500bedee0a8ca",
+      "gitBlobSha": "36a7a941c9a035ca76b06ea929c3266e5e7e1c3f"
     },
     {
       "source": "portal/eligibility.js",
