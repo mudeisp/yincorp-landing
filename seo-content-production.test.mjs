@@ -110,6 +110,38 @@ test('runner refuses anonymous requests, preview execution and missing configura
   }assert.equal(connections,0);
 });
 
+test('authenticated cron under kill switch reads verified ledger and logs only sanitized status without writes',async()=>{
+  const f=await fixture();
+  try{
+    const secret='s'.repeat(32),vars={...env,CRON_SECRET:secret,SEO_CONTENT_KILL_SWITCH:'true',
+      SEO_CONTENT_LEDGER_DATABASE_URL:'postgresql://seo_engine_executor.bgggafirdjvxihqselha:fixture@aws-1-us-west-2.pooler.supabase.com:5432/postgres',
+      SEO_CONTENT_LEDGER_TLS_CA:'synthetic-ca',SEO_CONTENT_LEDGER_KEY:f.ledger.key.toString('hex'),
+      SEO_CONTENT_OPENAI_PROJECT_ID:f.ledger.projectId};
+    const conn={query:(sql,params)=>sql.includes('SELECT current_user AS role')?
+      Promise.resolve({rows:[{role:'seo_engine_executor',privileged_role:false,private_storage:true,
+        public_schema_access:false,commercial_access:false,public_definer_access:false}]}):
+      f.pool.query(sql,params),end:async()=>{}};
+    const response=()=>({setHeader(){},status(n){this.code=n;return this;},json(v){this.body=v;return this;}});
+    const before=await f.db.query('SELECT revision FROM seo_engine.ledger');
+    const logs=[],old=console.info;let result;
+    try{
+      console.info=(...args)=>logs.push(args.join(' '));
+      result=response();
+      await createRunner({env:vars,connect:()=>conn,run:()=>{throw Error('must_not_generate');}})(
+        {method:'GET',headers:{authorization:'Bearer '+secret},url:'/api/seo-content-runner'},result);
+    }finally{console.info=old;}
+    assert.equal(result.code,200);
+    assert.deepEqual(result.body,{status:'DISABLED',diagnostic:'READONLY_LOGGED'});
+    assert.equal(logs.length,1);
+    const event=JSON.parse(logs[0]);assert.equal(event.event,'KILL_SWITCH_LEDGER_READONLY');
+    assert.equal(event.integrity,'PASS');assert.equal(event.reconciliation,'RECONCILED');
+    assert.equal(event.weeklyAuthorization,'NOT_CONFIGURED');assert.equal(event.pendingReservationCalls,0);
+    assert.equal(event.unknownCalls,0);
+    assert.doesNotMatch(logs[0],new RegExp(secret+'|synthetic-ca|fixture@'));
+    assert.equal((await f.db.query('SELECT revision FROM seo_engine.ledger')).rows[0].revision,before.rows[0].revision);
+  }finally{await f.db.close();}
+});
+
 test('GSC refresh stays server-side and captures bounded authenticated rows without persisting credentials',async()=>{
   let requests=0;const snapshot=await gscSnapshot({now:when,env:{SEO_CONTENT_GSC_REFRESH_TOKEN:'fixture-refresh',SEO_CONTENT_GSC_CLIENT_ID:'fixture-id',SEO_CONTENT_GSC_CLIENT_SECRET:'fixture-secret'},fetcher:async(url,options)=>{
     requests++;if(url==='https://oauth2.googleapis.com/token'){assert.match(String(options.body),/grant_type=refresh_token/);return Response.json({access_token:'fixture-access'});}
