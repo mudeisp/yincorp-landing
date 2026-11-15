@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
-import {createHash} from 'node:crypto';
+import {createHash,webcrypto} from 'node:crypto';
 const read=p=>readFile(new URL(p,import.meta.url),'utf8');
 
 test('all local module imports and WhatsApp asset URLs resolve through the production manifest',async()=>{
@@ -44,7 +44,7 @@ for(const selected of [false,true])test(`generated ES browser mounts one indepen
   nodes['portal-data']={textContent:JSON.stringify({kind:selected?'unit':'development',project:{name:'Projeto real',city:'Vitória',token:'orulo-1',units:[unit]},selectedUnit:selected?'unit':''})};
   nodes['contact-dialog']=dialog;nodes['portal-lead']=form;nodes['contact-feedback']=element();
   const storage={getItem:()=>null,setItem(){}};
-  const context=vm.createContext({console,URL,URLSearchParams,Date,Promise,setTimeout,clearTimeout,localStorage:storage,sessionStorage:storage,
+  const context=vm.createContext({console,URL,URLSearchParams,Date,Promise,setTimeout,clearTimeout,crypto:webcrypto,localStorage:storage,sessionStorage:storage,
     window:{},location:{pathname:'/es/serra/empreendimento/projeto',search:'',hostname:'www.yincorp.com.br',href:'https://www.yincorp.com.br/es/serra/empreendimento/projeto',assign:u=>navigations.push(u)},
     document:{body:{appendChild:e=>nodes[e.id]=e},referrer:'',createElement:element,getElementById:id=>nodes[id],querySelector:s=>s.startsWith('dialog[open]')&&dialog.open?dialog:null,querySelectorAll:s=>s==='[data-contact]'?[availability]:[],addEventListener(){}},
     __tracking:{sessionId:'test',track:n=>events.push(n),adsTrack:n=>events.push(n),touch(){}},submitInterest(){throw Error('Unexpected lead submission');}
