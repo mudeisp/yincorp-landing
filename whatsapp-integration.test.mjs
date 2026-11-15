@@ -46,7 +46,7 @@ for(const selected of [false,true])test(`generated ES browser mounts one indepen
   const storage={getItem:()=>null,setItem(){}};
   const context=vm.createContext({console,URL,URLSearchParams,Date,Promise,setTimeout,clearTimeout,crypto:webcrypto,localStorage:storage,sessionStorage:storage,
     window:{},location:{pathname:'/es/serra/empreendimento/projeto',search:'',hostname:'www.yincorp.com.br',href:'https://www.yincorp.com.br/es/serra/empreendimento/projeto',assign:u=>navigations.push(u)},
-    document:{body:{appendChild:e=>nodes[e.id]=e},referrer:'',createElement:element,getElementById:id=>nodes[id],querySelector:s=>s.startsWith('dialog[open]')&&dialog.open?dialog:null,querySelectorAll:s=>s==='[data-contact]'?[availability]:[],addEventListener(){}},
+    document:{body:{appendChild:e=>nodes[e.id]=e},referrer:'',createElement:tag=>{const el=element();if(tag==='dialog'){el.showModal=()=>el.open=true;el.close=()=>el.open=false;}return el;},getElementById:id=>nodes[id],querySelector:s=>s.startsWith('dialog[open]')&&dialog.open?dialog:null,querySelectorAll:s=>s==='[data-contact]'?[availability]:[],addEventListener(){}},
     __tracking:{sessionId:'test',track:n=>events.push(n),adsTrack:n=>events.push(n),touch(){}},submitInterest(){throw Error('Unexpected lead submission');}
   });
   vm.runInContext(await read('portal-assets/whatsapp-contact.js'),context);
