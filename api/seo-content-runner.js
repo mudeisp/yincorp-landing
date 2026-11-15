@@ -37,6 +37,21 @@ export function createRunner({env=process.env,connect=ledgerPool,run=runProducti
         await ledger.reconcileReviewed(req.body,env.SEO_CONTENT_RECONCILIATION_REVIEW_PUBLIC_KEY);return res.status(200).json({status:'RECONCILED'});
       }
       if(op==='withdraw')return res.status(200).json(await withdrawArticle(ledger,req.body||{}));
+      // With the emergency switch active, the existing authenticated cron performs
+      // a strictly read-only ledger integrity/financial diagnostic. Do not write
+      // checkpoints, change authorization, invoke providers or expose credentials.
+      if(op==='run'&&env.SEO_CONTENT_KILL_SWITCH==='true'){
+        const data=await ledger.read(); // AES-GCM, identity, history and budget validation.
+        const summary=financialSummary(data);
+        const pending=[...Object.values(data.calls),...Object.values(data.recurring?.calls||{})]
+          .filter(call=>call.status==='UNKNOWN').length;
+        console.info(JSON.stringify({component:'seo-content-runner',event:'KILL_SWITCH_LEDGER_READONLY',
+          integrity:'PASS',reconciliation:summary.historicalReconciliation,
+          weeklyAuthorization:summary.policy,unknownCalls:summary.unknownCalls,
+          pendingReservationCalls:pending,weeklyReservedMicros:summary.weeklyReservedMicros,
+          monthlyReservedMicros:summary.monthlyReservedMicros,legacyReservedMicros:data.reservedMicros}));
+        return res.status(200).json({status:'DISABLED',diagnostic:'READONLY_LOGGED'});
+      }
       stage='generation';return res.status(200).json(await run({ledger,env}));
     }catch(error){const failure=safeFailure(error,stage);console.error(JSON.stringify({component:'seo-content-runner',...failure}));return res.status(503).json(failure);}
     finally{if(pool)await pool.end();}
