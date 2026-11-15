@@ -42,6 +42,19 @@ export default async function portal(req,res){
   const url=new URL(req.url||'/', 'https://www.yincorp.com.br');
   const path=String(req.query?.portalPath||url.searchParams.get('portalPath')||url.pathname);
   const privacySend=res.send.bind(res);res.send=body=>{
+    // The /sp state landing page uses a fixed, verified Órulo hero; other
+    // listings, search results, property pages and media are untouched.
+    if(path==='/sp'&&res.statusCode===200&&typeof body==='string'&&body.startsWith('<!doctype html>')){
+      const hero='<figure class="hero-photograph">';
+      const start=body.indexOf(hero);
+      const end=start<0?-1:body.indexOf('</figure>',start);
+      if(end>start){
+        const image='https://static.orulo.com.br/images/properties/large/xyg3f7pmhaewwcp8ycxqludbi68i.jpg';
+        const link='/sp/sao-paulo/empreendimento/horacio-lafer-autoria--orulo-82914';
+        const replacement=hero+'<a href="'+link+'" aria-label="Conhecer o Horácio Lafer Autoria no Itaim Bibi"><img src="'+image+'" alt="Horácio Lafer Autoria — empreendimento no Itaim Bibi, São Paulo" width="1600" height="1000" loading="eager" fetchpriority="high" decoding="async"></a><figcaption>Horácio Lafer Autoria · Itaim Bibi · <a href="'+link+'">Conhecer empreendimento ↗</a> · imagem do catálogo Órulo</figcaption></figure>';
+        body=body.slice(0,start)+replacement+body.slice(end+'</figure>'.length);
+      }
+    }
     if(res.statusCode===200&&typeof body==='string'&&body.startsWith('<!doctype html>')&&NATIONAL_MARKETS.some(state=>path===`/${state.toLowerCase()}`)){
       body=body.replace('</main>',`<nav class="wrap" aria-label="Estados Yincorp">${NATIONAL_MARKETS.map(state=>`<a href="/${state.toLowerCase()}">${state}</a>`).join(' · ')}</nav></main>`);
     }
