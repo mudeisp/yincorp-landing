@@ -2,6 +2,7 @@ import { readFile,writeFile,mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { resolve,dirname,sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { trackingOverlay } from './yincorp-tracking-overlay.mjs';
 const root=resolve(fileURLToPath(new URL('../',import.meta.url)));
 const manifest=JSON.parse(await readFile(resolve(root,'portal-source.json'),'utf8'));
 if(manifest.repository!=='mudeisp/ynteligencia' || !/^[0-9a-f]{40}$/.test(manifest.commit))throw new Error('Invalid portal source pin');
@@ -20,7 +21,9 @@ await Promise.all(manifest.files.map(async file=>{
     const blob=createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex');
     if(blob!==file.gitBlobSha)throw new Error(`Shared Git blob integrity mismatch: ${file.source}`);
   }else if(createHash('sha256').update(bytes).digest('hex')!==file.sha256)throw new Error(`Shared source integrity mismatch: ${file.source}`);
-  await mkdir(dirname(target),{recursive:true});await writeFile(target,bytes);
+  const tracked = ['.portal-shared/render.js','portal-assets/analytics.js'].includes(file.destination);
+  const output = tracked ? Buffer.from(trackingOverlay(file.destination,bytes.toString('utf8'))) : bytes;
+  await mkdir(dirname(target),{recursive:true});await writeFile(target,output);
 }));
 const legacy=await readFile(resolve(root,'.portal-shared/public-config.source'),'utf8');
 const url=/const SUPABASE_URL\s*=\s*"([^"]+)"/.exec(legacy)?.[1];
