@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
-import {createHash} from 'node:crypto';
+import {createHash,webcrypto} from 'node:crypto';
 const read=p=>readFile(new URL(p,import.meta.url),'utf8');
 
 test('all local module imports and WhatsApp asset URLs resolve through the production manifest',async()=>{
@@ -36,7 +36,7 @@ test('ES development SSR ships the float stylesheet and keeps availability bound
 
 for(const selected of [false,true])test(`generated ES browser mounts one independent icon (${selected?'unit':'development'})`,async()=>{
   const nodes={},events=[],navigations=[];
-  const element=()=>({hidden:false,listeners:{},dataset:{},addEventListener(n,fn){this.listeners[n]=fn;},setAttribute(){},querySelector(){return element();},replaceChildren(){}});
+  const element=()=>({hidden:false,listeners:{},dataset:{},addEventListener(n,fn){this.listeners[n]=fn;},setAttribute(){},focus(){},querySelector(){return element();},replaceChildren(){}});
   const dialog=element();dialog.showModal=()=>dialog.open=true;dialog.close=()=>dialog.open=false;
   const form=element();form.elements={unit:{value:''}};
   const availability=element();availability.dataset.contact='';
@@ -44,9 +44,9 @@ for(const selected of [false,true])test(`generated ES browser mounts one indepen
   nodes['portal-data']={textContent:JSON.stringify({kind:selected?'unit':'development',project:{name:'Projeto real',city:'Vitória',token:'orulo-1',units:[unit]},selectedUnit:selected?'unit':''})};
   nodes['contact-dialog']=dialog;nodes['portal-lead']=form;nodes['contact-feedback']=element();
   const storage={getItem:()=>null,setItem(){}};
-  const context=vm.createContext({console,URL,URLSearchParams,Date,Promise,setTimeout,clearTimeout,localStorage:storage,sessionStorage:storage,
+  const context=vm.createContext({console,URL,URLSearchParams,Date,Promise,setTimeout,clearTimeout,crypto:webcrypto,localStorage:storage,sessionStorage:storage,
     window:{},location:{pathname:'/es/serra/empreendimento/projeto',search:'',hostname:'www.yincorp.com.br',href:'https://www.yincorp.com.br/es/serra/empreendimento/projeto',assign:u=>navigations.push(u)},
-    document:{body:{appendChild:e=>nodes[e.id]=e},referrer:'',createElement:element,getElementById:id=>nodes[id],querySelector:s=>s.startsWith('dialog[open]')&&dialog.open?dialog:null,querySelectorAll:s=>s==='[data-contact]'?[availability]:[],addEventListener(){}},
+    document:{body:{appendChild:e=>nodes[e.id]=e},referrer:'',createElement:tag=>{const el=element();if(tag==='dialog'){const parts={};el.querySelector=selector=>parts[selector]??=element();el.showModal=()=>el.open=true;el.close=()=>el.open=false;}return el;},getElementById:id=>nodes[id],querySelector:s=>s.startsWith('dialog[open]')&&dialog.open?dialog:null,querySelectorAll:s=>s==='[data-contact]'?[availability]:[],addEventListener(){}},
     __tracking:{sessionId:'test',track:n=>events.push(n),adsTrack:n=>events.push(n),touch(){}},submitInterest(){throw Error('Unexpected lead submission');}
   });
   vm.runInContext(await read('portal-assets/whatsapp-contact.js'),context);
@@ -58,7 +58,11 @@ for(const selected of [false,true])test(`generated ES browser mounts one indepen
   icon.yntContact.getOptions=()=>({track:n=>events.push(n),adsTrack:n=>events.push(n)});
   availability.listeners.click();assert.equal(dialog.open,true);icon.yntRefresh();assert.equal(icon.hidden,true);
   dialog.close();icon.yntRefresh();assert.equal(icon.hidden,false);events.length=0;
-  icon.listeners.click();await new Promise(r=>setTimeout(r,10));
+  icon.listeners.click();
+   const registration=nodes['ynt-whatsapp-registration'];assert.ok(registration);assert.equal(registration.open,true);
+   assert.deepEqual(events,[]);assert.equal(navigations.length,0);
+   registration.querySelector('.wa-registration-skip').listeners.click();
+   await new Promise(r=>setTimeout(r,10));
   assert.deepEqual(events,['whatsapp_cta_clicked','whatsapp_cta_clicked']);assert.equal(dialog.open,false);
   assert.equal(navigations.length,1);assert.match(navigations[0],/^https:\/\/wa.me\//);
 });
