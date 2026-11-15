@@ -194,3 +194,55 @@ h1,h2,h3,.brand strong,.state strong{
 @media (prefers-reduced-motion:reduce){
   .path-card,.button,.desktop-nav .nav-contact{transition:none}
 }
+
+/* Yincorp Visual 5K V2 — wide-gamut accents & OLED-aware presentation.
+   Preserve the existing light palette, dimensions, layout and all image sources.
+   Wide-gamut colours are enhancements, not dependencies; sRGB stays the fallback. */
+:root{
+  color-scheme:light;
+  --ui-accent-wide:var(--champagne);
+  --ui-ink-wide:var(--ink);
+  --ui-line-wide:var(--ui-hairline);
+}
+@supports (color:color(display-p3 1 1 1)){
+  @media (color-gamut:p3){
+    :root{
+      --ui-accent-wide:color(display-p3 .765 .636 .394);
+      --ui-ink-wide:color(display-p3 .19 .167 .139);
+      --ui-line-wide:color-mix(in display-p3,var(--ui-ink-wide) 15%,var(--paper));
+    }
+    .header,.section,.footer-bottom,.places,.place,.faq-list details,
+    .path-card,.mobile-menu nav,.desktop-nav .nav-contact{
+      border-color:var(--ui-line-wide);
+    }
+    .eyebrow,.path-card .number,.steps li::before{
+      color:color(display-p3 .43 .32 .17);
+    }
+    .contact .button{border-color:var(--ui-accent-wide)}
+    .contact .button:hover{
+      background:var(--ui-accent-wide);
+      color:var(--ui-ink-wide);
+    }
+  }
+}
+/* High-density panels render all typography and CSS edges natively.
+   Do not rasterize icons or upscale property images for device DPR. */
+@media (min-resolution:2dppx){
+  .button,.path-card,.state,.nav-contact{
+    backface-visibility:hidden;
+  }
+}
+@media (prefers-contrast:more){
+  .path-card,.header,.section,.place,.faq-list details{
+    border-color:var(--ink);
+  }
+  .eyebrow{color:var(--ink)}
+}
+@media (forced-colors:active){
+  .path-card,.button,.state,.desktop-nav .nav-contact{
+    border:1px solid ButtonText;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .button,.path-card,.state,.place{animation:none;transition:none}
+}
