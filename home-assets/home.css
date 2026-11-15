@@ -141,3 +141,56 @@ p{max-width:64ch}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
 }
 
+
+/* Yincorp Visual 5K V1 — presentation-only finish.
+   Native CSS/text remain resolution-independent; no photo upscale, network, layout or tracking changes. */
+:root{
+  --ui-hairline:color-mix(in srgb,var(--ink) 15%,var(--paper));
+  --ui-focus:#805d2b;
+  --ui-elevation:0 1px 2px rgb(53 47 40 / .035),0 16px 38px rgb(53 47 40 / .065);
+}
+body{
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+h1,h2,h3,.brand strong,.state strong{
+  font-kerning:normal;
+  font-optical-sizing:auto;
+}
+.brand strong,.hero h1,h2,h3{
+  text-wrap:balance;
+}
+.header,.section,.footer-bottom,.places,.place,.faq-list details{
+  border-color:var(--ui-hairline);
+}
+.path-card,.mobile-menu nav,.desktop-nav .nav-contact{
+  border-color:var(--ui-hairline);
+}
+.path-card{
+  box-shadow:0 1px 0 rgb(255 255 255 / .75) inset,0 3px 15px rgb(53 47 40 / .025);
+  transition:box-shadow .22s ease,border-color .22s ease;
+}
+.path-card:hover{
+  border-color:color-mix(in srgb,var(--ink) 25%,var(--paper));
+  box-shadow:var(--ui-elevation);
+}
+.button,.desktop-nav .nav-contact{
+  transition:background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.button:focus-visible,.desktop-nav a:focus-visible,.state:focus-visible,
+.place:focus-visible,.text-link:focus-visible,.regional-links a:focus-visible{
+  outline:2px solid var(--ui-focus);
+  outline-offset:4px;
+}
+.button:hover,.button:focus-visible{
+  box-shadow:0 2px 9px rgb(53 47 40 / .1);
+}
+.hero-image-label,.state,.states,.hero-figure figcaption{
+  -webkit-font-smoothing:antialiased;
+}
+.hero-figure img{
+  image-rendering:auto;
+}
+@media (prefers-reduced-motion:reduce){
+  .path-card,.button,.desktop-nav .nav-contact{transition:none}
+}
