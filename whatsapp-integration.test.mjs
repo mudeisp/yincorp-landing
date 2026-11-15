@@ -36,7 +36,7 @@ test('ES development SSR ships the float stylesheet and keeps availability bound
 
 for(const selected of [false,true])test(`generated ES browser mounts one independent icon (${selected?'unit':'development'})`,async()=>{
   const nodes={},events=[],navigations=[];
-  const element=()=>({hidden:false,listeners:{},dataset:{},addEventListener(n,fn){this.listeners[n]=fn;},setAttribute(){},querySelector(){return element();},replaceChildren(){}});
+  const element=()=>({hidden:false,listeners:{},dataset:{},addEventListener(n,fn){this.listeners[n]=fn;},setAttribute(){},focus(){},querySelector(){return element();},replaceChildren(){}});
   const dialog=element();dialog.showModal=()=>dialog.open=true;dialog.close=()=>dialog.open=false;
   const form=element();form.elements={unit:{value:''}};
   const availability=element();availability.dataset.contact='';
