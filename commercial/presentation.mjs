@@ -57,7 +57,7 @@ async function initializeFinance(root) {
       const details = [
         unit.area == null ? null : decimal.format(unit.area) + ' m²',
         unit.coveredArea == null ? null : decimal.format(unit.coveredArea) + ' m² de área coberta',
-        unit.totalArea == null || unit.coveredArea == null ? null : decimal.format(unit.totalArea) + ' m² de área total',
+        unit.totalArea == null || (unit.coveredArea == null && unit.area != null) ? null : decimal.format(unit.totalArea) + ' m² de área total',
         unit.terraceArea == null ? null : decimal.format(unit.terraceArea) + ' m² de terraço',
         unit.typology ?? (unit.bedrooms == null ? null : unit.bedrooms + ' dorm.'),
         unit.suites == null ? null : unit.suites + ' suítes',
