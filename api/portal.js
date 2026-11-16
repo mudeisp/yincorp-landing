@@ -117,7 +117,8 @@ export default async function portal(req,res){
   res.send=body=>{
     const rendered=res.statusCode===200?(path===MANDARIM_PATH?enrichMandarim(linkNationalEntities(decorate(body,path),path)):enrichCommercialPresentation(linkNationalEntities(decorate(body,path),path),path)):body;
     // Explicit URL opt-in canary in preview or production. Default traffic unchanged until regression checks pass.
-    const isGlobalPilot=new URL(req.url,'https://www.yincorp.com.br').searchParams.get('yincorp_experience')==='1'&&/^\/(sp|es|rj|sc|rs|pr|pb|pe)\//.test(path);
+    const experienceRequested=[new URL(req.url,'https://www.yincorp.com.br').searchParams.get('yincorp_experience'),req.query?.yincorp_experience].includes('1');
+    const isGlobalPilot=/^\/(sp|es|rj|sc|rs|pr|pb|pe)\//.test(path)&&(experienceRequested||rendered?.includes('class="commercial-book"'));
     const enhanced=isGlobalPilot&&typeof rendered==='string'&&rendered.includes('</body>')
       ?rendered.replace('</body>','<link rel="stylesheet" href="/global-experience.css"><script defer src="/global-experience.js"></script></body>')
       :rendered;
