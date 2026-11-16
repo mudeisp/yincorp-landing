@@ -1,0 +1,1152 @@
+{
+  "project": "Macan Residence",
+  "reference": "2026-11",
+  "source": "tabela_macan_residence_novembro_2026.pdf",
+  "sourceSha256": "13049d0c38eb049f80e04455d216bdd8b6820317df9cf4b37e39d5fd7de549e0",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "A · 704",
+      "tower": "A",
+      "area": 59.83,
+      "parking": 1,
+      "parkingIds": [
+        "P29"
+      ],
+      "totalCents": 82940800,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 82940800
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 403",
+      "tower": "A",
+      "area": 60.04,
+      "parking": 1,
+      "parkingIds": [
+        "P24"
+      ],
+      "totalCents": 83105700,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83105700
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 804",
+      "tower": "A",
+      "area": 59.83,
+      "parking": 1,
+      "parkingIds": [
+        "P28"
+      ],
+      "totalCents": 83270600,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83270600
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 408",
+      "tower": "A",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P68"
+      ],
+      "totalCents": 83389700,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83389700
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 904",
+      "tower": "A",
+      "area": 59.83,
+      "parking": 1,
+      "parkingIds": [
+        "P27"
+      ],
+      "totalCents": 83598700,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83598700
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 603",
+      "tower": "A",
+      "area": 60.04,
+      "parking": 1,
+      "parkingIds": [
+        "P22"
+      ],
+      "totalCents": 83734600,
+      "sourceStatus": "Reservada",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83734600
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 905",
+      "tower": "A",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P36"
+      ],
+      "totalCents": 83754900,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83754900
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 1004",
+      "tower": "A",
+      "area": 59.83,
+      "parking": 1,
+      "parkingIds": [
+        "P26"
+      ],
+      "totalCents": 83927700,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83927700
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 1005",
+      "tower": "A",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P34"
+      ],
+      "totalCents": 84083000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84083000
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 407",
+      "tower": "A",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P08"
+      ],
+      "totalCents": 84138500,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84138500
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 708",
+      "tower": "A",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P50"
+      ],
+      "totalCents": 84367800,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84367800
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 1105",
+      "tower": "A",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P33"
+      ],
+      "totalCents": 84421600,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84421600
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 507",
+      "tower": "A",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P13"
+      ],
+      "totalCents": 84467500,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84467500
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 406",
+      "tower": "A",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P62"
+      ],
+      "totalCents": 84679200,
+      "sourceStatus": "Reservada",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84679200
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 808",
+      "tower": "A",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P49"
+      ],
+      "totalCents": 84703900,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84703900
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 908",
+      "tower": "A",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P48"
+      ],
+      "totalCents": 85043500,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 85043500
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 707",
+      "tower": "A",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P11"
+      ],
+      "totalCents": 85126300,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 85126300
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 1008",
+      "tower": "A",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P47"
+      ],
+      "totalCents": 85381300,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 85381300
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 807",
+      "tower": "A",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P10"
+      ],
+      "totalCents": 85465100,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 85465100
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 1108",
+      "tower": "A",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P46"
+      ],
+      "totalCents": 85720000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 85720000
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 907",
+      "tower": "A",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P09"
+      ],
+      "totalCents": 85802000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 85802000
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 806",
+      "tower": "A",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P54"
+      ],
+      "totalCents": 85994200,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 85994200
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 1007",
+      "tower": "A",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P72"
+      ],
+      "totalCents": 86139800,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 86139800
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 906",
+      "tower": "A",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P53"
+      ],
+      "totalCents": 86330300,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 86330300
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "A · 1107",
+      "tower": "A",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P71"
+      ],
+      "totalCents": 86479400,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 86479400
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 508",
+      "tower": "B",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P83"
+      ],
+      "totalCents": 82895800,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 82895800
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 608",
+      "tower": "B",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P84"
+      ],
+      "totalCents": 83215100,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83215100
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 407",
+      "tower": "B",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P39"
+      ],
+      "totalCents": 83316400,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83316400
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 708",
+      "tower": "B",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P85"
+      ],
+      "totalCents": 83534300,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83534300
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 507",
+      "tower": "B",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P40"
+      ],
+      "totalCents": 83637600,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83637600
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 808",
+      "tower": "B",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P86"
+      ],
+      "totalCents": 83865100,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83865100
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 607",
+      "tower": "B",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P41"
+      ],
+      "totalCents": 83957700,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 83957700
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 908",
+      "tower": "B",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P45"
+      ],
+      "totalCents": 84193200,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84193200
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 707",
+      "tower": "B",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P42"
+      ],
+      "totalCents": 84284900,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84284900
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 1008",
+      "tower": "B",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P44"
+      ],
+      "totalCents": 84531900,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84531900
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 807",
+      "tower": "B",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P91"
+      ],
+      "totalCents": 84622800,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84622800
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 1108",
+      "tower": "B",
+      "area": 59.03,
+      "parking": 1,
+      "parkingIds": [
+        "P43"
+      ],
+      "totalCents": 84869700,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84869700
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 907",
+      "tower": "B",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P90"
+      ],
+      "totalCents": 84960600,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 84960600
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 1007",
+      "tower": "B",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P89"
+      ],
+      "totalCents": 85299200,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 85299200
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 406",
+      "tower": "B",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P15"
+      ],
+      "totalCents": 85536500,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 85536500
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 1107",
+      "tower": "B",
+      "area": 59.58,
+      "parking": 1,
+      "parkingIds": [
+        "P88"
+      ],
+      "totalCents": 85637000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 85637000
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 506",
+      "tower": "B",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P16"
+      ],
+      "totalCents": 85865400,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 85865400
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 706",
+      "tower": "B",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P18"
+      ],
+      "totalCents": 86523500,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 86523500
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 806",
+      "tower": "B",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P76"
+      ],
+      "totalCents": 86862100,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 86862100
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 906",
+      "tower": "B",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P77"
+      ],
+      "totalCents": 87211400,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 87211400
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 504",
+      "tower": "B",
+      "area": 59.83,
+      "parking": 1,
+      "parkingIds": [
+        "T05"
+      ],
+      "totalCents": 87329600,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 87329600
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 1006",
+      "tower": "B",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P78"
+      ],
+      "totalCents": 87558900,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 87558900
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 503",
+      "tower": "B",
+      "area": 60.04,
+      "parking": 1,
+      "parkingIds": [
+        "T12"
+      ],
+      "totalCents": 87629500,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 87629500
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 604",
+      "tower": "B",
+      "area": 59.83,
+      "parking": 1,
+      "parkingIds": [
+        "T06"
+      ],
+      "totalCents": 87668300,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 87668300
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 1106",
+      "tower": "B",
+      "area": 60.58,
+      "parking": 1,
+      "parkingIds": [
+        "P92"
+      ],
+      "totalCents": 87905600,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 87905600
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 804",
+      "tower": "B",
+      "area": 59.83,
+      "parking": 1,
+      "parkingIds": [
+        "T32"
+      ],
+      "totalCents": 88361600,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 88361600
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 904",
+      "tower": "B",
+      "area": 59.83,
+      "parking": 1,
+      "parkingIds": [
+        "T33"
+      ],
+      "totalCents": 88708200,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 88708200
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 903",
+      "tower": "B",
+      "area": 60.04,
+      "parking": 1,
+      "parkingIds": [
+        "T24"
+      ],
+      "totalCents": 89002800,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 89002800
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 1004",
+      "tower": "B",
+      "area": 59.83,
+      "parking": 1,
+      "parkingIds": [
+        "T36"
+      ],
+      "totalCents": 89056600,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 89056600
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "B · 1104",
+      "tower": "B",
+      "area": 59.83,
+      "parking": 1,
+      "parkingIds": [
+        "T37"
+      ],
+      "totalCents": 89405000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 89405000
+        }
+      ],
+      "bedrooms": 2
+    },
+    {
+      "id": "GARD-A · GA302",
+      "tower": "GARD-A",
+      "area": 144.08,
+      "parking": 2,
+      "parkingIds": [
+        "T18",
+        "T18A"
+      ],
+      "totalCents": 125464500,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 125464500
+        }
+      ],
+      "typology": "Garden"
+    },
+    {
+      "id": "GARD-B · GA301",
+      "tower": "GARD-B",
+      "area": 174.56,
+      "parking": 2,
+      "parkingIds": [
+        "T19",
+        "T19A"
+      ],
+      "totalCents": 144682500,
+      "sourceStatus": "Disponível",
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "À vista (sinal integral)",
+          "count": 1,
+          "amountCents": 144682500
+        }
+      ],
+      "typology": "Garden"
+    }
+  ],
+  "notes": "Tabela à vista de 06/11/2026, com sinal integral. O documento cita alternativas de financiamento bancário ou direto em suas observações gerais. Confirme condições e disponibilidade atuais. A entrega estava prevista para julho de 2030."
+}
