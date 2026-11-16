@@ -22,6 +22,13 @@ const dialog=document.createElement('dialog');dialog.className='yg-lightbox';dia
 const candidates=[...root.querySelectorAll('article img,section img,figure img')].filter(i=>!i.closest('#mandarim-book,form,a,button,[role="button"]')&&!i.closest('header,nav,footer')&&!i.closest('[class*="avatar"],[class*="logo"]')).slice(0,35);
 candidates.forEach(img=>{img.classList.add('yg-zoomable');img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','Ampliar fotografia: '+(img.alt||'imagem do imóvel'));const open=()=>{dialog.querySelector('img').src=img.currentSrc||img.src;dialog.querySelector('img').alt=img.alt||'Fotografia do imóvel';dialog.showModal()};img.addEventListener('click',open);img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}})});
 
+/* Progressive imagery for ordinary property detail pages, without altering links or contact controls. */
+if(!reduced&&'IntersectionObserver' in window&&!root.querySelector('.commercial-book')){
+ const visual=[...root.querySelectorAll('figure')].filter(fig=>fig.querySelector('img')&&!fig.closest('header,nav,footer,form,[role="button"],.yg-lightbox')).slice(0,30);
+ const visualObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('yg-image-visible');visualObserver.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -4% 0px'});
+ visual.forEach(fig=>{fig.classList.add('yg-image-stage');visualObserver.observe(fig)});
+}
+
 /* Full editorial chapters for all structured commercial presentations. */
 const book=root.querySelector('.commercial-book');
 if(book){
