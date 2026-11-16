@@ -45,7 +45,7 @@ function enrichMandarim(body){
     +'</section>';
   // The existing Órulo listing stays on its canonical URL. Insert before its first
   // content section rather than after the listing, and do not replace its contact UI.
-  const main=/<main\\b[^>]*>/i.exec(body);
+  const main=/<main\b[^>]*>/i.exec(body);
   if(!main)return body;
   const insertion=main.index+main[0].length;
   const script='<script type="module" src="/mandarim-the-legend/finance-portal.mjs"></script>';
