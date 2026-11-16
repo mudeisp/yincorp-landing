@@ -2,7 +2,7 @@
 (()=>{
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const root=document.querySelector('main');if(!root)return;
-const targets=[...root.querySelectorAll('section,article')].filter(n=>!n.closest('#mandarim-book')&&!n.closest('form')&&n.querySelector('h2,h3')&&n.getBoundingClientRect().height>120).slice(0,18);
+const targets=[...root.querySelectorAll('section,article')].filter(n=>!n.closest('#mandarim-book,.commercial-book,form')&&n.querySelector('h2,h3')&&n.getBoundingClientRect().height>120).slice(0,18);
 if(!reduced&&'IntersectionObserver' in window){
  const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('yg-visible');observer.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -8% 0px'});
  targets.forEach(n=>{n.classList.add('yg-stage');observer.observe(n)});
