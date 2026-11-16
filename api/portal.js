@@ -99,7 +99,7 @@ export default async function portal(req,res){
     if(res.statusCode===200&&typeof body==='string'&&/<html\\b/i.test(body)&&/<\\/head>/i.test(body)&&NATIONAL_MARKETS.some(state=>path===`/${state.toLowerCase()}`||path.startsWith(`/${state.toLowerCase()}/`))){
       // A single shared stylesheet covers state, city, listing and property routes.
       // It does not rewrite canonical tags, forms, search/filter behavior or analytics.
-      body=body.replace(/<html\\b([^>]*)>/i,(tag,attrs)=>/<html\\b[^>]*class=/i.test(tag)?tag.replace(/class=(["'])(.*?)\\1/i,(_m,q,classes)=>`class=${q}${classes} yincorp-editorial${q}`):`<html${attrs} class="yincorp-editorial">`);
+      body=body.replace(/<html\b([^>]*)>/i,(tag,attrs)=>/<html\b[^>]*class=/i.test(tag)?tag.replace(/class=(["'])(.*?)\1/i,(_m,q,classes)=>`class=${q}${classes} yincorp-editorial${q}`):`<html${attrs} class="yincorp-editorial">`);
       body=body.replace('</head>','<link rel="stylesheet" href="/portal-assets/mandarim-editorial-global.css?v=20261116"></head>');
     }
     return privacySend(res.statusCode===200?withPrivacyFooter(body):body);
