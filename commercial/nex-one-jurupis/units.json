@@ -1,0 +1,550 @@
+{
+  "project": "Nex One Jurupis — Residencial",
+  "reference": "2026-11",
+  "source": "nexone-tabela.pdf",
+  "sourceSha256": "e889ef4c8530c58dbe4a953c72dc1d4ddb126d3d4c8e740ea076e3236cf75582",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "TA · 112",
+      "tower": "TA",
+      "typology": "Garden",
+      "area": 37.2,
+      "totalCents": 56748400,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 115",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 36.0,
+      "totalCents": 54901600,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 116",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 122",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 123",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 29.6,
+      "totalCents": 45117900,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 201",
+      "tower": "TA",
+      "typology": "Apartamento",
+      "area": 32.5,
+      "totalCents": 49635800,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 206",
+      "tower": "TA",
+      "typology": "Apartamento",
+      "area": 29.2,
+      "totalCents": 44522600,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 211",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.1,
+      "totalCents": 41378400,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 216",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 222",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 308",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.1,
+      "totalCents": 41378400,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 310",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.1,
+      "totalCents": 41378400,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 320",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 411",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.1,
+      "totalCents": 41378400,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 422",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 506",
+      "tower": "TA",
+      "typology": "Apartamento",
+      "area": 29.2,
+      "totalCents": 44522600,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 509",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.1,
+      "totalCents": 41378400,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 510",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.1,
+      "totalCents": 41378400,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 521",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 523",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 29.6,
+      "totalCents": 45133200,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 604",
+      "tower": "TA",
+      "typology": "Apartamento",
+      "area": 29.2,
+      "totalCents": 44598900,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 607",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.4,
+      "totalCents": 41882100,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 609",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.1,
+      "totalCents": 41378400,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 614",
+      "tower": "TA",
+      "typology": "Apartamento",
+      "area": 30.9,
+      "totalCents": 47193700,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 618",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 619",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 708",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.1,
+      "totalCents": 41378400,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 713",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.4,
+      "totalCents": 41775300,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 721",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 722",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 807",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.4,
+      "totalCents": 41882100,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 810",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.1,
+      "totalCents": 41378400,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 817",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 918",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 920",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 922",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 28.8,
+      "totalCents": 43973200,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 1009",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.1,
+      "totalCents": 41378400,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 1103",
+      "tower": "TA",
+      "typology": "Apartamento",
+      "area": 32.7,
+      "totalCents": 49849500,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 1104",
+      "tower": "TA",
+      "typology": "Apartamento",
+      "area": 32.6,
+      "totalCents": 49727400,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 1107",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 27.4,
+      "totalCents": 41882100,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 1122",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 29.8,
+      "totalCents": 45530000,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 1210",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 34.3,
+      "totalCents": 52398400,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 1304",
+      "tower": "TA",
+      "typology": "Apartamento",
+      "area": 32.6,
+      "totalCents": 49727400,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 1310",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 34.3,
+      "totalCents": 52398400,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 1510",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 34.3,
+      "totalCents": 52398400,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 1706",
+      "tower": "TA",
+      "typology": "Apartamento",
+      "area": 29.3,
+      "totalCents": 44736300,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TA · 1722",
+      "tower": "TA",
+      "typology": "Studio",
+      "area": 29.8,
+      "totalCents": 45530000,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 601",
+      "tower": "TB",
+      "typology": "Studio",
+      "area": 36.1,
+      "totalCents": 55038900,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 603",
+      "tower": "TB",
+      "typology": "Studio",
+      "area": 34.8,
+      "totalCents": 53054700,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 701",
+      "tower": "TB",
+      "typology": "Studio",
+      "area": 36.1,
+      "totalCents": 55038900,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 708",
+      "tower": "TB",
+      "typology": "Garden",
+      "area": 45.5,
+      "totalCents": 69432100,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 709",
+      "tower": "TB",
+      "typology": "Apartamento",
+      "area": 31.3,
+      "totalCents": 47819500,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 710",
+      "tower": "TB",
+      "typology": "Apartamento",
+      "area": 30.6,
+      "totalCents": 46644200,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 801",
+      "tower": "TB",
+      "typology": "Studio",
+      "area": 36.1,
+      "totalCents": 55038900,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 803",
+      "tower": "TB",
+      "typology": "Studio",
+      "area": 34.8,
+      "totalCents": 53054700,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 805",
+      "tower": "TB",
+      "typology": "Apartamento",
+      "area": 27.9,
+      "totalCents": 42630000,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 901",
+      "tower": "TB",
+      "typology": "Studio",
+      "area": 36.1,
+      "totalCents": 55038900,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 1010",
+      "tower": "TB",
+      "typology": "Apartamento",
+      "area": 27.9,
+      "totalCents": 42630000,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 1505",
+      "tower": "TB",
+      "typology": "Apartamento",
+      "area": 27.9,
+      "totalCents": 42630000,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "TB · 1611",
+      "tower": "TB",
+      "typology": "Apartamento",
+      "area": 28.5,
+      "totalCents": 43469500,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível"
+    }
+  ],
+  "notes": "Tabela digital atualizada em 10/11/2026. O documento apresenta os preços por unidade das torres TA e TB."
+}
