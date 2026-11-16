@@ -1,0 +1,15 @@
+/* Opt-in scroll storytelling pilot; canonical content and forms stay untouched. */
+#mandarim-book.mandarim-story{--story-ink:#20362d;--story-gold:#a68c5b;scroll-margin-top:90px}
+.mandarim-story #mandarim-book-title{max-width:780px;font-family:Georgia,serif;letter-spacing:-.04em;font-weight:400}
+.mandarim-story .mandarim-story-skip{display:inline-flex;align-items:center;margin:12px 0 18px;color:var(--story-ink);border-bottom:1px solid var(--story-gold);padding:8px 0;font-size:.9rem;font-weight:600}
+.mandarim-story .mandarim-story-gallery{display:grid!important;grid-template-columns:1fr!important;gap:clamp(30px,7vw,100px)!important}
+.mandarim-story .mandarim-story-panel{position:relative;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(220px,.6fr);align-items:center;gap:clamp(18px,4vw,65px);min-height:min(78vh,720px);margin:0!important}
+.mandarim-story .mandarim-story-panel:nth-child(even) img{order:2}
+.mandarim-story .mandarim-story-panel:nth-child(even) a{order:2}
+.mandarim-story .mandarim-story-panel a{display:block;min-width:0}
+.mandarim-story .mandarim-story-panel img{width:100%;height:clamp(320px,66vh,650px);aspect-ratio:auto!important;object-fit:cover;border-radius:20px!important}
+.mandarim-story .mandarim-story-panel figcaption{font-family:Georgia,serif;font-size:clamp(20px,2.5vw,34px)!important;color:var(--story-ink)!important;line-height:1.25}
+.mandarim-story .mandarim-story-kicker{display:block;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:var(--story-gold);margin-bottom:20px}
+.mandarim-story .mandarim-story-finance{scroll-margin-top:32px}
+@media(prefers-reduced-motion:no-preference){.mandarim-story .mandarim-story-panel,.mandarim-story .mandarim-story-finance{opacity:.3;transform:translateY(32px);transition:opacity .65s ease,transform .65s ease}.mandarim-story .is-visible{opacity:1;transform:none}}
+@media(max-width:720px){.mandarim-story .mandarim-story-panel{grid-template-columns:1fr;min-height:0;gap:12px}.mandarim-story .mandarim-story-panel a,.mandarim-story .mandarim-story-panel:nth-child(even) a{order:0}.mandarim-story .mandarim-story-panel img{height:clamp(280px,53vh,480px)}.mandarim-story .mandarim-story-panel figcaption{padding:8px 4px 0!important}}
