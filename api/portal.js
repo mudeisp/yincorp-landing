@@ -49,7 +49,7 @@ function enrichMandarim(body){
   const main=/<main\b[^>]*>/i.exec(body);
   if(!main)return body;
   const insertion=main.index+main[0].length;
-  const script='<link rel="stylesheet" href="/mandarim-the-legend/finance-portal.css"><script type="module" src="/mandarim-the-legend/finance-portal.mjs"></script>';
+  const script='<link rel="stylesheet" href="/mandarim-the-legend/finance-portal.css"><script type="module" src="/mandarim-the-legend/finance-portal.mjs"></script><link rel="stylesheet" href="/mandarim-the-legend/scroll-story.css"><script type="module" src="/mandarim-the-legend/scroll-story.mjs"></script>';
   return body.slice(0,insertion)+section+body.slice(insertion).replace('</body>',script+'</body>');
 }
 
