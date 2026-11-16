@@ -56,6 +56,8 @@ async function initializeFinance(root) {
       const total = element('strong', formatCents(unit.totalCents));
       const details = [
         unit.area == null ? null : decimal.format(unit.area) + ' m²',
+        unit.coveredArea == null ? null : decimal.format(unit.coveredArea) + ' m² de área coberta',
+        unit.totalArea == null || unit.coveredArea == null ? null : decimal.format(unit.totalArea) + ' m² de área total',
         unit.terraceArea == null ? null : decimal.format(unit.terraceArea) + ' m² de terraço',
         unit.typology ?? (unit.bedrooms == null ? null : unit.bedrooms + ' dorm.'),
         unit.suites == null ? null : unit.suites + ' suítes',
@@ -69,11 +71,12 @@ async function initializeFinance(root) {
       table.tabIndex = 0;
       table.setAttribute('role', 'region');
       table.setAttribute('aria-label', 'Parcelas por etapa');
+      if (unit.valuationCents != null) overview.append(element('span', 'Avaliação indicada no PDF: ' + formatCents(unit.valuationCents)));
       if (unit.listCents != null) {
         overview.append(element('span', 'Preço de tabela: ' + formatCents(unit.listCents) + ' · Desconto: ' + formatCents(unit.discountCents)));
       }
       if (unit.stages?.length) table.append(paymentTable(unit.stages));
-      const payment = unit.stages?.length ? table : element('p', 'A tabela de referência informa o preço final. Consulte a Yincorp sobre as condições de pagamento.');
+      const payment = unit.stages?.length ? table : element('p', 'A tabela de referência informa o preço, sem detalhar as parcelas. Consulte a Yincorp sobre as condições de pagamento.');
       output.replaceChildren(overview, payment, element('p', 'Referência: ' + formatPeriod(data.reference) + ' · ' + data.source + ', p. ' + unit.sourcePage + '.'));
       if (unit.sourceStatus) output.append(element('p', 'Situação registrada na data da tabela: ' + unit.sourceStatus + '.'));
       if (data.notes) output.append(element('p', data.notes));
