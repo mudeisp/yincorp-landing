@@ -1,0 +1,206 @@
+{
+  "project": "Existence 332",
+  "reference": "2026-10",
+  "source": "tabela_existence_332_outubro_2026.pdf",
+  "sourceSha256": "c85a77984aaec668d21c935fa83d0927f631218ce23590d4cfba70f3cf37cc00",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "101",
+      "typology": "Studio Garden (1Q)",
+      "coveredArea": 26.76,
+      "totalCents": 33450000,
+      "valuationCents": 34788000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "terraceArea": 22.36,
+      "totalArea": 49.12
+    },
+    {
+      "id": "102",
+      "typology": "Studio Garden (1Q)",
+      "coveredArea": 27.01,
+      "totalCents": 32074375,
+      "valuationCents": 36463500,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "terraceArea": 18.26,
+      "totalArea": 45.27
+    },
+    {
+      "id": "103",
+      "typology": "Apartamento Garden (2Q)",
+      "coveredArea": 42.52,
+      "totalCents": 55276000,
+      "valuationCents": 51300000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "terraceArea": 20.29,
+      "totalArea": 62.81
+    },
+    {
+      "id": "201",
+      "typology": "Apartamento (2Q)",
+      "coveredArea": 36.57,
+      "totalCents": 43152600,
+      "valuationCents": 39400000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1
+    },
+    {
+      "id": "203",
+      "typology": "Studio (1Q)",
+      "coveredArea": 26.76,
+      "totalCents": 34788000,
+      "valuationCents": 32400000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1
+    },
+    {
+      "id": "206",
+      "typology": "Studio (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 38500000,
+      "valuationCents": 38900000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1
+    },
+    {
+      "id": "301",
+      "typology": "Studio Garden (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 45500000,
+      "valuationCents": 40000000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "terraceArea": 19.74,
+      "totalArea": 54.74
+    },
+    {
+      "id": "303",
+      "typology": "Studio Garden (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 45500000,
+      "valuationCents": 40000000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "terraceArea": 22.73,
+      "totalArea": 57.73
+    },
+    {
+      "id": "304",
+      "typology": "Studio Garden (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 45500000,
+      "valuationCents": 40000000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "terraceArea": 21.38,
+      "totalArea": 56.38
+    },
+    {
+      "id": "403",
+      "typology": "Studio (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 36750000,
+      "valuationCents": 38900000,
+      "sourceStatus": "Reservada",
+      "sourcePage": 1
+    },
+    {
+      "id": "404",
+      "typology": "Studio (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 38500000,
+      "valuationCents": 38900000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1
+    },
+    {
+      "id": "501",
+      "typology": "Studio (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 40250000,
+      "valuationCents": 38900000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1
+    },
+    {
+      "id": "502",
+      "typology": "Studio (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 43750000,
+      "valuationCents": 38900000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1
+    },
+    {
+      "id": "503",
+      "typology": "Studio (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 41300000,
+      "valuationCents": 38900000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1
+    },
+    {
+      "id": "504",
+      "typology": "Studio (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 41300000,
+      "valuationCents": 38900000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1
+    },
+    {
+      "id": "602",
+      "typology": "Studio (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 43400000,
+      "valuationCents": 38900000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1
+    },
+    {
+      "id": "603",
+      "typology": "Studio (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 41650000,
+      "valuationCents": 38500000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1
+    },
+    {
+      "id": "604",
+      "typology": "Studio (2Q)",
+      "coveredArea": 35.0,
+      "totalCents": 41650000,
+      "valuationCents": 38900000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1
+    },
+    {
+      "id": "701",
+      "typology": "Studio (1Q) + sacada",
+      "coveredArea": 35.0,
+      "totalCents": 43750000,
+      "valuationCents": 40000000,
+      "sourceStatus": "Disponível",
+      "sourcePage": 1,
+      "terraceArea": 11.32,
+      "totalArea": 46.32
+    },
+    {
+      "id": "703",
+      "typology": "Studio (1Q) + sacada",
+      "coveredArea": 19.32,
+      "totalCents": 24150000,
+      "valuationCents": 26082000,
+      "sourceStatus": "Reservada",
+      "sourcePage": 1,
+      "terraceArea": 2.29,
+      "totalArea": 21.61
+    }
+  ],
+  "notes": "A tabela informa o valor da unidade e o valor de avaliação em colunas distintas. A obra tinha conclusão prevista para o primeiro semestre de 2028. A tabela menciona atualização pelo INCC, sem discriminar as parcelas por unidade."
+}
