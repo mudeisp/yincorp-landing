@@ -28,6 +28,7 @@ if(book){
  book.classList.add('yg-cinematic');
  const gallery=book.querySelector('.commercial-gallery');
  const figures=[...(gallery?.querySelectorAll('figure')||[])];
+ gallery?.addEventListener('click',e=>{const link=e.target.closest('figure a');if(!link)return;const img=link.querySelector('img');if(!img)return;e.preventDefault();dialog.querySelector('img').src=img.currentSrc||img.src;dialog.querySelector('img').alt=img.alt||'Imagem do empreendimento';dialog.showModal()});
  const elements=[book.querySelector('#commercial-book-title'),book.querySelector('.commercial-kicker'),book.querySelector(':scope > p:not(.commercial-kicker)')].filter(Boolean);
  const typeText=el=>{
   if(reduced||el.dataset.ygTyped||el.children.length)return;
