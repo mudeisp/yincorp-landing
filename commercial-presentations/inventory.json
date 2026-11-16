@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "policy": "Only apply to development pages after matching exact canonical URL and validating book/table source; historical values never imply available inventory.",
+  "projects": [
+    {
+      "key": "mandarim",
+      "name": "Mandarim The Legend",
+      "reference": "2026-10",
+      "status": "published_pilot",
+      "canonical": "/sp/sao-paulo/empreendimento/mandarim-the-legend--orulo-46939",
+      "book": "/mandarim-the-legend/",
+      "table": "/mandarim-the-legend/units.json",
+      "unit_count": 30
+    },
+    {
+      "key": "arizona",
+      "name": "Arizona 1002",
+      "reference": "2026-08",
+      "status": "ready_existing_dedicated_page",
+      "canonical": "/sp/empreendimentos/arizona-1002",
+      "book": "/arizona-1002/",
+      "table": "/arizona-1002/units.json",
+      "unit_count": 94,
+      "portal_catalog_url": "UNVERIFIED"
+    },
+    {
+      "key": "haus",
+      "name": "Haus Mitre Edition NY",
+      "reference": "2026-10",
+      "status": "source_verified_route_pending",
+      "book": "/guilherme.vita/pdfs/haus-book.pdf",
+      "table": "/guilherme.vita/pdfs/haus-tabela.pdf",
+      "data": "/guilherme.vita/haus.json",
+      "unit_count": 16,
+      "portal_catalog_url": "UNVERIFIED"
+    },
+    {
+      "key": "brooklin",
+      "name": "Brooklin Senses by Cyrela",
+      "reference": "2026-10",
+      "status": "source_verified_route_pending",
+      "book": "/guilherme.vita/pdfs/brooklin-book.pdf",
+      "table": "/guilherme.vita/pdfs/brooklin-tabela.pdf",
+      "data": "/guilherme.vita/brooklin.json",
+      "unit_count": 37,
+      "portal_catalog_url": "UNVERIFIED"
+    }
+  ]
+}
