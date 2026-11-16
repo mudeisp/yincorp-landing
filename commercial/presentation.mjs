@@ -81,6 +81,10 @@ async function initializeFinance(root) {
       if (unit.financingReference) {
         output.append(element('p', 'Financiamento indicado separadamente no PDF em ' + formatDueDate(unit.financingReference.date) + ': ' + formatCents(unit.financingReference.amountCents) + '.'));
       }
+      if (unit.financingSimulation) {
+        const { method, count, firstCents, lastCents } = unit.financingSimulation;
+        output.append(element('p', 'Simulação histórica do PDF: ' + method + ' · ' + count + ' parcelas · primeira de ' + formatCents(firstCents) + ' · última de ' + formatCents(lastCents) + '.'));
+      }
       if (unit.sourceStatus) output.append(element('p', 'Situação registrada na data da tabela: ' + unit.sourceStatus + '.'));
       if (data.notes) output.append(element('p', data.notes));
       if (unit.roundingCents) {
