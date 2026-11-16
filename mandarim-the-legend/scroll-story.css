@@ -1,15 +1,20 @@
-/* Yincorp Mandarim: editorial typewriter and complete horizontal floorplan reveal. */
-#mandarim-book.mandarim-typewriter{color:#203329;scroll-margin-top:24px}
-.mandarim-typewriter #mandarim-book-title{font-family:Georgia,serif;font-size:clamp(38px,6vw,72px)!important;font-weight:400;letter-spacing:-.045em;line-height:1.08;min-height:2.1em}
-.mandarim-typewriter .mtw-writing:after{content:'|';color:#a28d63;animation:mtw-blink .75s steps(1) infinite}
-@keyframes mtw-blink{50%{opacity:0}}
-.mandarim-typewriter .mtw-skip{display:inline-flex;margin:10px 0 22px;padding:10px 0;border-bottom:1px solid #a28d63;color:#234331;font-size:14px;font-weight:600}
-.mandarim-typewriter .mtw-panel{background:#f6f6f2;border:1px solid #e0e4dd;border-radius:18px;padding:clamp(12px,2.5vw,26px)!important;overflow:hidden;min-width:0}
-.mandarim-typewriter .mtw-kicker{font-family:Georgia,serif;font-weight:400;font-size:clamp(22px,3vw,34px);min-height:1.5em;margin:0 0 16px;color:#233e30}
-.mandarim-typewriter .mtw-panel figcaption{min-height:2em;line-height:1.5}
-.mandarim-typewriter .mtw-panel img:not(.mtw-pan-image){width:100%;height:auto!important;max-height:80vh;object-fit:contain!important;aspect-ratio:auto!important}
-.mandarim-typewriter .mtw-pan{width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#a6b6a6 transparent;border-radius:12px;touch-action:pan-x pan-y}
-.mandarim-typewriter .mtw-pan a{display:block;width:max-content;max-width:none}
-.mandarim-typewriter .mtw-pan img.mtw-pan-image{display:block;width:auto!important;max-width:none!important;height:clamp(280px,55vw,550px)!important;aspect-ratio:auto!important;object-fit:contain!important;border-radius:0!important}
-@media(max-width:720px){.mandarim-typewriter .mtw-pan img.mtw-pan-image{height:clamp(310px,95vw,480px)!important}.mandarim-typewriter .mtw-panel{padding:12px!important}.mandarim-typewriter #mandarim-book-title{min-height:2.3em}}
-@media(prefers-reduced-motion:reduce){.mandarim-typewriter .mtw-writing:after{animation:none}}
+/* Mandarim premium construction: no code panel, no giant image sections. */
+#mandarim-book.mandarim-assembled{color:#24392f;overflow:hidden;scroll-margin-top:20px}
+.mandarim-assembled #mandarim-book-title{font:400 clamp(38px,6vw,76px)/1.1 Georgia,serif!important;letter-spacing:-.045em;min-height:2.15em}
+.mandarim-assembled .ma-typing:after{content:'|';color:#b19a6c;animation:ma-blink .7s steps(1) infinite}
+@keyframes ma-blink{50%{opacity:0}}
+.mandarim-assembled .ma-skip{display:inline-block;margin:12px 0 25px;padding:9px 0;color:#274c38;border-bottom:1px solid #a9996d;font-weight:650}
+.mandarim-assembled .ma-gallery{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:clamp(16px,3vw,32px)!important;align-items:start}
+.mandarim-assembled .ma-card{box-sizing:border-box;min-width:0;max-width:100%;overflow:hidden;background:#f6f5f0;border:1px solid #dce3d9;border-radius:18px;padding:clamp(12px,2vw,22px)!important;margin:0!important}
+.mandarim-assembled .ma-card-title{font:400 clamp(23px,3vw,35px)/1.2 Georgia,serif;min-height:1.3em;margin:0 0 14px;color:#253c2e}
+.mandarim-assembled .ma-image-frame{width:100%;max-width:100%;height:clamp(220px,30vw,370px);overflow:hidden;border-radius:10px;background:#eaece7;position:relative}
+.mandarim-assembled .ma-image-frame a{display:block;width:100%;height:100%}
+.mandarim-assembled .ma-image-frame img{display:block;width:100%!important;height:100%!important;max-width:100%!important;object-fit:contain!important;aspect-ratio:auto!important;border-radius:0!important}
+.mandarim-assembled .ma-floorplan .ma-image-frame{overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#9baa9d transparent;touch-action:pan-x pan-y}
+.mandarim-assembled .ma-floorplan .ma-image-frame a{width:max-content;max-width:none}
+.mandarim-assembled .ma-floorplan .ma-image-frame img.ma-pan-img{width:auto!important;max-width:none!important;height:100%!important;object-fit:contain!important}
+.mandarim-assembled .ma-card figcaption{font-size:13px!important;min-height:2em;padding:12px 0 0!important}
+.ma-original-image-hidden{display:none!important}
+@media(prefers-reduced-motion:no-preference){.mandarim-assembled .ma-card,.mandarim-assembled .ma-finance{opacity:.15;transform:translateY(55px) scale(.96);filter:blur(5px);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.75,.2,1),filter .85s ease}.mandarim-assembled .ma-built{opacity:1;transform:none;filter:none}.mandarim-assembled .ma-card .ma-image-frame{clip-path:inset(0 100% 0 0);transition:clip-path 1.2s cubic-bezier(.2,.7,.2,1) .15s}.mandarim-assembled .ma-card.ma-built .ma-image-frame{clip-path:inset(0 0 0 0)}}
+@media(max-width:720px){.mandarim-assembled .ma-gallery{grid-template-columns:1fr!important}.mandarim-assembled .ma-image-frame{height:clamp(220px,62vw,370px)}.mandarim-assembled #mandarim-book-title{min-height:2.3em}.mandarim-assembled .ma-card{padding:14px!important}}
+@media(prefers-reduced-motion:reduce){.mandarim-assembled .ma-typing:after{animation:none}}
