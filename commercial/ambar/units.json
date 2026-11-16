@@ -1,0 +1,283 @@
+{
+  "project": "Âmbar",
+  "reference": "2026-11",
+  "source": "BLACK NOVEMBER ÂMBAR.pdf",
+  "sourceSha256": "81baa753ba5a79e85ac99549e4f27ced09b85f8e24325ff531e8802ee36dff29",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "101",
+      "floor": 1,
+      "typology": "Garden",
+      "area": 20.6,
+      "totalCents": 39248000,
+      "listCents": 41313684,
+      "discountCents": 2065684,
+      "stages": [
+        {
+          "label": "Entrada",
+          "count": 1,
+          "amountCents": 3924800
+        },
+        {
+          "label": "Parcelas",
+          "count": 24,
+          "amountCents": 130827
+        },
+        {
+          "label": "Balões",
+          "count": 4,
+          "amountCents": 1177440
+        },
+        {
+          "label": "Saldo",
+          "count": 1,
+          "amountCents": 27473600
+        }
+      ],
+      "roundingCents": -8,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "terraceArea": 22.94
+    },
+    {
+      "id": "204",
+      "floor": 2,
+      "typology": "Studio",
+      "area": 21.92,
+      "totalCents": 30918737,
+      "listCents": 32546039,
+      "discountCents": 1627302,
+      "stages": [
+        {
+          "label": "Entrada",
+          "count": 1,
+          "amountCents": 3091874
+        },
+        {
+          "label": "Parcelas",
+          "count": 24,
+          "amountCents": 103062
+        },
+        {
+          "label": "Balões",
+          "count": 4,
+          "amountCents": 927562
+        },
+        {
+          "label": "Saldo",
+          "count": 1,
+          "amountCents": 21643116
+        }
+      ],
+      "roundingCents": 11,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "301",
+      "floor": 3,
+      "typology": "1 Quarto",
+      "area": 23.25,
+      "totalCents": 33284211,
+      "listCents": 35036011,
+      "discountCents": 1751800,
+      "stages": [
+        {
+          "label": "Entrada",
+          "count": 1,
+          "amountCents": 3328421
+        },
+        {
+          "label": "Parcelas",
+          "count": 24,
+          "amountCents": 110947
+        },
+        {
+          "label": "Balões",
+          "count": 4,
+          "amountCents": 998526
+        },
+        {
+          "label": "Saldo",
+          "count": 1,
+          "amountCents": 23298948
+        }
+      ],
+      "roundingCents": 10,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "304",
+      "floor": 3,
+      "typology": "Studio",
+      "area": 21.92,
+      "totalCents": 31380211,
+      "listCents": 33031801,
+      "discountCents": 1651590,
+      "stages": [
+        {
+          "label": "Entrada",
+          "count": 1,
+          "amountCents": 3138021
+        },
+        {
+          "label": "Parcelas",
+          "count": 24,
+          "amountCents": 104601
+        },
+        {
+          "label": "Balões",
+          "count": 4,
+          "amountCents": 941406
+        },
+        {
+          "label": "Saldo",
+          "count": 1,
+          "amountCents": 21966148
+        }
+      ],
+      "roundingCents": -6,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "307",
+      "floor": 3,
+      "typology": "1 Quarto",
+      "area": 20.23,
+      "totalCents": 28960842,
+      "listCents": 30485097,
+      "discountCents": 1524255,
+      "stages": [
+        {
+          "label": "Entrada",
+          "count": 1,
+          "amountCents": 2896084
+        },
+        {
+          "label": "Parcelas",
+          "count": 24,
+          "amountCents": 96536
+        },
+        {
+          "label": "Balões",
+          "count": 4,
+          "amountCents": 868825
+        },
+        {
+          "label": "Saldo",
+          "count": 1,
+          "amountCents": 20272589
+        }
+      ],
+      "roundingCents": 5,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "404",
+      "floor": 4,
+      "typology": "Studio",
+      "area": 21.92,
+      "totalCents": 31841684,
+      "listCents": 33517562,
+      "discountCents": 1675878,
+      "stages": [
+        {
+          "label": "Entrada",
+          "count": 1,
+          "amountCents": 3184168
+        },
+        {
+          "label": "Parcelas",
+          "count": 24,
+          "amountCents": 106139
+        },
+        {
+          "label": "Balões",
+          "count": 4,
+          "amountCents": 955251
+        },
+        {
+          "label": "Saldo",
+          "count": 1,
+          "amountCents": 22289179
+        }
+      ],
+      "roundingCents": -3,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "406",
+      "floor": 4,
+      "typology": "Studio",
+      "area": 22.5,
+      "totalCents": 32684211,
+      "listCents": 34404432,
+      "discountCents": 1720221,
+      "stages": [
+        {
+          "label": "Entrada",
+          "count": 1,
+          "amountCents": 3268421
+        },
+        {
+          "label": "Parcelas",
+          "count": 24,
+          "amountCents": 108947
+        },
+        {
+          "label": "Balões",
+          "count": 4,
+          "amountCents": 980526
+        },
+        {
+          "label": "Saldo",
+          "count": 1,
+          "amountCents": 22878948
+        }
+      ],
+      "roundingCents": 10,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "504",
+      "floor": 5,
+      "typology": "1 Quarto",
+      "area": 21.98,
+      "totalCents": 32391579,
+      "listCents": 34096399,
+      "discountCents": 1704820,
+      "stages": [
+        {
+          "label": "Entrada",
+          "count": 1,
+          "amountCents": 3239158
+        },
+        {
+          "label": "Parcelas",
+          "count": 24,
+          "amountCents": 107972
+        },
+        {
+          "label": "Balões",
+          "count": 4,
+          "amountCents": 971747
+        },
+        {
+          "label": "Saldo",
+          "count": 1,
+          "amountCents": 22674105
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    }
+  ],
+  "notes": "Campanha histórica Black November com fluxo 30/70. A fonte registra correção mensal pelo INCC durante a obra e condições de pós-obra com a Caixa. Confirme eventuais condições atuais com a Yincorp."
+}

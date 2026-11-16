@@ -1,0 +1,20 @@
+{
+  "project": "Ateliê 365",
+  "reference": "2026-11",
+  "source": "tabela_atelie_365_novembro_2026(1).pdf",
+  "sourceSha256": "56733fef5967765958d0e0f94afa4bb169b9b031a086b4de40fe7cd3c126dfe1",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "32TA",
+      "area": 194.06,
+      "bedrooms": 4,
+      "suites": 4,
+      "parking": 3,
+      "totalCents": 357000000,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível"
+    }
+  ],
+  "notes": "Tabela residencial atualizada em 05/11/2026. A campanha de lojas da incorporadora refere-se a outras unidades e condições."
+}
