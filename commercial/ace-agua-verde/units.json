@@ -1,0 +1,1396 @@
+{
+  "project": "ACE Água Verde",
+  "reference": "2026-11",
+  "source": "tabela_ace_agua_verde_novembro_2026.pdf",
+  "sourceSha256": "baee28d1ca963d1609558547be42fad33618630629dac199a11e73affab22150",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "101",
+      "area": 20.26,
+      "typology": "Garden",
+      "totalCents": 39052125,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3905213
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 35146913
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "102",
+      "area": 25.76,
+      "typology": "Garden",
+      "totalCents": 59288687,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 5928869
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 53359818
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "103",
+      "area": 25.76,
+      "typology": "Garden",
+      "totalCents": 47726315,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4772632
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 42953684
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "104",
+      "area": 26.94,
+      "typology": "Garden",
+      "totalCents": 59984470,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 5998447
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 53986023
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "105",
+      "area": 26.25,
+      "typology": "Garden",
+      "totalCents": 57612161,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 5761216
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 51850945
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "106",
+      "area": 26.29,
+      "typology": "Garden",
+      "totalCents": 55895035,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 5589504
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 50305532
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "107",
+      "area": 25.49,
+      "typology": "Garden",
+      "totalCents": 50651545,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 5065155
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 45586391
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "202",
+      "area": 25.76,
+      "typology": "Apartamento tipo",
+      "totalCents": 26146400,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 2614640
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 23531760
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "203",
+      "area": 25.76,
+      "typology": "Apartamento tipo",
+      "totalCents": 28761040,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 2876104
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 25884936
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "204",
+      "area": 26.94,
+      "typology": "Apartamento tipo",
+      "totalCents": 31445715,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3144572
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 28301144
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "205",
+      "area": 26.26,
+      "typology": "Apartamento tipo",
+      "totalCents": 30651985,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3065199
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 27586787
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "206",
+      "area": 26.29,
+      "typology": "Apartamento tipo",
+      "totalCents": 33355437,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3335544
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 30019893
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "207",
+      "area": 25.25,
+      "typology": "Apartamento tipo",
+      "totalCents": 32035937,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3203594
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 28832343
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "208",
+      "area": 24.29,
+      "typology": "Apartamento tipo",
+      "totalCents": 30817937,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3081794
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 27736143
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "209",
+      "area": 23.93,
+      "typology": "Apartamento tipo",
+      "totalCents": 30361187,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3036119
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 27325068
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "210",
+      "area": 23.96,
+      "typology": "Apartamento tipo",
+      "totalCents": 29183280,
+      "sourcePage": 1,
+      "sourceStatus": "Vendida",
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 2918328
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 26264952
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "211",
+      "area": 23.96,
+      "typology": "Apartamento tipo",
+      "totalCents": 29183280,
+      "sourcePage": 1,
+      "sourceStatus": "Vendida",
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 2918328
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 26264952
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "212",
+      "area": 24.56,
+      "typology": "Apartamento tipo",
+      "totalCents": 29914080,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 2991408
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 26922672
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "213",
+      "area": 28.94,
+      "typology": "Apartamento tipo",
+      "totalCents": 29374100,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 2937410
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 26436690
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "214",
+      "area": 25.42,
+      "typology": "Apartamento tipo",
+      "totalCents": 25801300,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 2580130
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 23221170
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "401",
+      "area": 17.37,
+      "typology": "Apartamento tipo",
+      "totalCents": 19107000,
+      "sourcePage": 1,
+      "sourceStatus": "Vendida",
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 1910700
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 17196300
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "402",
+      "area": 25.76,
+      "typology": "Apartamento tipo",
+      "totalCents": 28761040,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 2876104
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 25884936
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "403",
+      "area": 25.76,
+      "typology": "Apartamento tipo",
+      "totalCents": 31375680,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3137568
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 28238112
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "404",
+      "area": 26.94,
+      "typology": "Apartamento tipo",
+      "totalCents": 34180125,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3418013
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 30762113
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "405",
+      "area": 26.26,
+      "typology": "Apartamento tipo",
+      "totalCents": 33317375,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3331738
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 29985638
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "406",
+      "area": 26.29,
+      "typology": "Apartamento tipo",
+      "totalCents": 36023873,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3602387
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 32421486
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "407",
+      "area": 25.25,
+      "typology": "Apartamento tipo",
+      "totalCents": 34598812,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3459881
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 31138931
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "408",
+      "area": 24.29,
+      "typology": "Apartamento tipo",
+      "totalCents": 33283373,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3328337
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 29955036
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "409",
+      "area": 23.93,
+      "typology": "Apartamento tipo",
+      "totalCents": 32790082,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3279008
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 29511074
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "410",
+      "area": 23.96,
+      "typology": "Apartamento tipo",
+      "totalCents": 31615220,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3161522
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 28453698
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "411",
+      "area": 23.96,
+      "typology": "Apartamento tipo",
+      "totalCents": 31615220,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3161522
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 28453698
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "412",
+      "area": 24.56,
+      "typology": "Apartamento tipo",
+      "totalCents": 32406920,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3240692
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 29166228
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "413",
+      "area": 28.94,
+      "typology": "Apartamento tipo",
+      "totalCents": 32311510,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3231151
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 29080359
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "414",
+      "area": 25.42,
+      "typology": "Apartamento tipo",
+      "totalCents": 28381430,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 2838143
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 25543287
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "503",
+      "area": 24.74,
+      "typology": "Apartamento Plex",
+      "totalCents": 36906415,
+      "sourcePage": 1,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3690642
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 33215774
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "504",
+      "area": 26.94,
+      "typology": "Apartamento Plex",
+      "totalCents": 41340443,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4134044
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 37206399
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "505",
+      "area": 26.26,
+      "typology": "Apartamento Plex",
+      "totalCents": 40408672,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4040867
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 36367805
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "506",
+      "area": 26.29,
+      "typology": "Apartamento Plex",
+      "totalCents": 41947920,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4194792
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 37753128
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "512",
+      "area": 24.56,
+      "typology": "Apartamento Plex",
+      "totalCents": 38079248,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3807925
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 34271323
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "513",
+      "area": 28.94,
+      "typology": "Apartamento Plex",
+      "totalCents": 40815687,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4081569
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 36734118
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "514",
+      "area": 25.42,
+      "typology": "Apartamento Plex",
+      "totalCents": 36349687,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3634969
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 32714718
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "601",
+      "area": 17.37,
+      "typology": "Apartamento Plex",
+      "totalCents": 26763520,
+      "sourcePage": 2,
+      "sourceStatus": "Vendida",
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 2676352
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 24087168
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "602",
+      "area": 24.74,
+      "typology": "Apartamento Plex",
+      "totalCents": 36338624,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3633862
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 32704762
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "603",
+      "area": 23.43,
+      "typology": "Apartamento Plex",
+      "totalCents": 35989667,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3598967
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 32390700
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "604",
+      "area": 26.94,
+      "typology": "Apartamento Plex",
+      "totalCents": 42259119,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4225912
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 38033207
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "605",
+      "area": 26.26,
+      "typology": "Apartamento Plex",
+      "totalCents": 41306643,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4130664
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 37175979
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "606",
+      "area": 26.29,
+      "typology": "Apartamento Plex",
+      "totalCents": 42846804,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4284680
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 38562124
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "607",
+      "area": 22.14,
+      "typology": "Apartamento Plex",
+      "totalCents": 36823286,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3682329
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 33140957
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "608",
+      "area": 24.29,
+      "typology": "Apartamento Plex",
+      "totalCents": 39943904,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3994390
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 35949514
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "609",
+      "area": 23.93,
+      "typology": "Apartamento Plex",
+      "totalCents": 39421382,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3942138
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 35479244
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "610",
+      "area": 23.96,
+      "typology": "Apartamento Plex",
+      "totalCents": 38085033,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3808503
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 34276530
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "611",
+      "area": 23.96,
+      "typology": "Apartamento Plex",
+      "totalCents": 38085033,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3808503
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 34276530
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "612",
+      "area": 24.56,
+      "typology": "Apartamento Plex",
+      "totalCents": 38925453,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3892545
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 35032908
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "613",
+      "area": 26.86,
+      "typology": "Apartamento Plex",
+      "totalCents": 39092928,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3909293
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 35183635
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "614",
+      "area": 25.42,
+      "typology": "Apartamento Plex",
+      "totalCents": 37222080,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3722208
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 33499872
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "701",
+      "area": 17.37,
+      "typology": "Apartamento Plex",
+      "totalCents": 27509545,
+      "sourcePage": 2,
+      "sourceStatus": "Vendida",
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 2750955
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 24758591
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "702",
+      "area": 24.74,
+      "typology": "Apartamento Plex",
+      "totalCents": 37234260,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3723426
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 33510834
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "703",
+      "area": 20.62,
+      "typology": "Apartamento Plex",
+      "totalCents": 32680462,
+      "sourcePage": 2,
+      "sourceStatus": "Vendida",
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3268046
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 29412416
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "704",
+      "area": 26.59,
+      "typology": "Apartamento Plex",
+      "totalCents": 42374220,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4237422
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 38136798
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "705",
+      "area": 26.26,
+      "typology": "Apartamento Plex",
+      "totalCents": 41905290,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4190529
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 37714761
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "706",
+      "area": 24.51,
+      "typology": "Apartamento Plex",
+      "totalCents": 40826345,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4082635
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 36743711
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "707",
+      "area": 20.27,
+      "typology": "Apartamento Plex",
+      "totalCents": 34586125,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3458613
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 31127513
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "708",
+      "area": 24.29,
+      "typology": "Apartamento Plex",
+      "totalCents": 40502560,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4050256
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 36452304
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "709",
+      "area": 23.93,
+      "typology": "Apartamento Plex",
+      "totalCents": 39972730,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3997273
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 35975457
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "710",
+      "area": 23.96,
+      "typology": "Apartamento Plex",
+      "totalCents": 38636990,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3863699
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 34773291
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "711",
+      "area": 23.96,
+      "typology": "Apartamento Plex",
+      "totalCents": 38636990,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3863699
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 34773291
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "712",
+      "area": 24.56,
+      "typology": "Apartamento Plex",
+      "totalCents": 39489590,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3948959
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 35540631
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "713",
+      "area": 25.1,
+      "typology": "Apartamento Plex",
+      "totalCents": 37381435,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3738144
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 33643292
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "714",
+      "area": 24.49,
+      "typology": "Apartamento Plex",
+      "totalCents": 36576540,
+      "sourcePage": 2,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3657654
+        },
+        {
+          "label": "Saldo total",
+          "count": 1,
+          "amountCents": 32918886
+        }
+      ],
+      "roundingCents": 0
+    }
+  ],
+  "notes": "O PDF indica 36 meses no cabeçalho do saldo, mas o valor impresso da parcela não fecha com essa quantidade. O quadro apresenta o ato e o saldo total verificados. Consulte a Yincorp para confirmar prazo e valor das mensalidades. A fonte prevê correção conforme o contrato."
+}
