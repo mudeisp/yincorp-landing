@@ -157,3 +157,32 @@
 @media(min-width:741px) and (max-width:1060px){.ynti-premium .ynti-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:740px){.ynti-premium .ynti-gallery{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory}.ynti-premium .ynti-gallery-item{flex:0 0 84%;scroll-snap-align:start}.ynti-premium .ynti-option-label{padding:15px 17px}.ynti-premium .ynti-option-label strong{font-size:23px}}
 @media(prefers-reduced-motion:reduce){.ynti-premium .ynti-gallery-item .ynti-photo img{transition:none}}
+
+/* Canva/Mandarim parity — scoped to the Intelligence component only.
+   No changes to layout mechanics, filtering, API, selection or table data. */
+.ynti{
+  --ynti-paper:#faf7f1;--ynti-ink:#28251f;--ynti-muted:#716b62;
+  --ynti-line:#ded5c7;--ynti-bronze:#a48154;--ynti-surface:#fffdfa;
+  background:var(--ynti-paper);border-color:var(--ynti-line);
+  color:var(--ynti-ink);font-family:'Plus Jakarta Sans',Arial,sans-serif
+}
+.ynti :is(h2,h3,.ynti-option-label strong,.ynti-reference-identity strong,.ynti-overview h3,.ynti-comparison h3){
+  font-family:'Cormorant Garamond',Georgia,serif;color:var(--ynti-ink);font-weight:500
+}
+.ynti :is(.ynti-head small,.ynti-note,.ynti-overview-note,.ynti-option-specs,.ynti-option-difference,.ynti-location){
+  color:var(--ynti-muted)
+}
+.ynti :is(.ynti-guided .ynti-overview,.ynti-overview,.ynti-progress,.ynti-insight){
+  background:#eee6da;border-color:var(--ynti-line);color:var(--ynti-ink)
+}
+.ynti :is(.ynti-guided .ynti-comparison,.ynti-comparison,.ynti-overview-metric,.ynti-guided-table thead th){
+  background:var(--ynti-surface);border-color:var(--ynti-line);color:var(--ynti-ink)
+}
+.ynti :is(.ynti-guided-table th,.ynti-guided-table td,.ynti-table th,.ynti-table td){
+  border-color:var(--ynti-line);color:var(--ynti-ink)
+}
+.ynti :is(.ynti-option[aria-pressed=true],.ynti-premium .ynti-option[aria-pressed=true]){
+  background:#f5eee4;outline-color:var(--ynti-bronze)
+}
+.ynti :is(button,a):focus-visible{outline-color:var(--ynti-bronze)}
+.ynti .ynti-option-current{color:var(--ynti-bronze)}
