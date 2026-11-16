@@ -1,0 +1,1102 @@
+{
+  "project": "Vivar Atlântico",
+  "reference": "2026-11",
+  "source": "tabela_vivar_atlantico_novembro_2026(1).pdf",
+  "sourceSha256": "f368e0e7e48a4fdf13e7ea7bf1f9e49df8d30b92ef343cf60c21f8edbac644b9",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "1",
+      "sourcePage": 1,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "70"
+      ],
+      "valuationCents": 29138614,
+      "totalCents": 32598613,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 651972,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 166705,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 26078890,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 11
+    },
+    {
+      "id": "3",
+      "sourcePage": 1,
+      "area": 48.14,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "72"
+      ],
+      "valuationCents": 29138614,
+      "totalCents": 33599842,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 671997,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 173142,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 26879874,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -5
+    },
+    {
+      "id": "7",
+      "sourcePage": 1,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "76"
+      ],
+      "valuationCents": 29712871,
+      "totalCents": 34934813,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 698696,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 181724,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27947850,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -5
+    },
+    {
+      "id": "8",
+      "sourcePage": 1,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "77"
+      ],
+      "valuationCents": 29712871,
+      "totalCents": 34591157,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 691823,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 179515,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27672926,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -12
+    },
+    {
+      "id": "107",
+      "sourcePage": 1,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "63"
+      ],
+      "valuationCents": 30287129,
+      "totalCents": 35281906,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 705638,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 183955,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28225525,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 3
+    },
+    {
+      "id": "108",
+      "sourcePage": 1,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "62"
+      ],
+      "valuationCents": 30287129,
+      "totalCents": 34934813,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 698696,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 181724,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27947850,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -5
+    },
+    {
+      "id": "203",
+      "sourcePage": 1,
+      "area": 48.14,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "59"
+      ],
+      "valuationCents": 29712871,
+      "totalCents": 34267328,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 685347,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 177433,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27413862,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -5
+    },
+    {
+      "id": "206",
+      "sourcePage": 1,
+      "area": 48.11,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "31"
+      ],
+      "valuationCents": 29712871,
+      "totalCents": 33930280,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 678606,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 175266,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27144224,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 2
+    },
+    {
+      "id": "207",
+      "sourcePage": 1,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "32"
+      ],
+      "valuationCents": 30287129,
+      "totalCents": 35616802,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 712336,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 186108,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28493442,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "208",
+      "sourcePage": 1,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "33"
+      ],
+      "valuationCents": 30287129,
+      "totalCents": 35278468,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 705569,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 183933,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28222774,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 1
+    },
+    {
+      "id": "304",
+      "sourcePage": 1,
+      "area": 40.33,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "1"
+      ],
+      "valuationCents": 30287129,
+      "totalCents": 34260719,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 685214,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 177390,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27408575,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 10
+    },
+    {
+      "id": "306",
+      "sourcePage": 1,
+      "area": 48.11,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "3"
+      ],
+      "valuationCents": 30287129,
+      "totalCents": 34260719,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 685214,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 177390,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27408575,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 10
+    },
+    {
+      "id": "308",
+      "sourcePage": 1,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "5"
+      ],
+      "valuationCents": 30861386,
+      "totalCents": 35622125,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 712443,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 186142,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28497700,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 6
+    },
+    {
+      "id": "403",
+      "sourcePage": 1,
+      "area": 48.14,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "14"
+      ],
+      "valuationCents": 30287129,
+      "totalCents": 34934813,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 698696,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 181724,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27947850,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -5
+    },
+    {
+      "id": "501",
+      "sourcePage": 1,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "8"
+      ],
+      "valuationCents": 30861386,
+      "totalCents": 34217265,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 684345,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 177111,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27373812,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "503",
+      "sourcePage": 2,
+      "area": 48.14,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "6"
+      ],
+      "valuationCents": 30861386,
+      "totalCents": 35268555,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 705371,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 183869,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28214844,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 8
+    },
+    {
+      "id": "504",
+      "sourcePage": 2,
+      "area": 48.14,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "55"
+      ],
+      "valuationCents": 30861386,
+      "totalCents": 34921595,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 698432,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 181639,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27937276,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -5
+    },
+    {
+      "id": "507",
+      "sourcePage": 2,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "52"
+      ],
+      "valuationCents": 31435644,
+      "totalCents": 36626038,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 732521,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 192596,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 29300830,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -1
+    },
+    {
+      "id": "601",
+      "sourcePage": 2,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "30"
+      ],
+      "valuationCents": 30861386,
+      "totalCents": 34540997,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 690820,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 179192,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27632798,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 3
+    },
+    {
+      "id": "603",
+      "sourcePage": 2,
+      "area": 48.14,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "50"
+      ],
+      "valuationCents": 30861386,
+      "totalCents": 35602299,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 712046,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 186015,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28481839,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -6
+    },
+    {
+      "id": "701",
+      "sourcePage": 2,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "42"
+      ],
+      "valuationCents": 31435644,
+      "totalCents": 34864728,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 697295,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 181273,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27891782,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 7
+    },
+    {
+      "id": "702",
+      "sourcePage": 2,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "43"
+      ],
+      "valuationCents": 31435644,
+      "totalCents": 34521765,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 690435,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 179069,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27617412,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -14
+    },
+    {
+      "id": "801",
+      "sourcePage": 2,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "26"
+      ],
+      "valuationCents": 31435644,
+      "totalCents": 35512189,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 710244,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 185436,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28409751,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -14
+    },
+    {
+      "id": "802",
+      "sourcePage": 2,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "27"
+      ],
+      "valuationCents": 31435644,
+      "totalCents": 35162816,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 703256,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 183190,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28130253,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -13
+    },
+    {
+      "id": "803",
+      "sourcePage": 2,
+      "area": 48.14,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "28"
+      ],
+      "valuationCents": 31435644,
+      "totalCents": 36603527,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 732071,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 192451,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 29282822,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 6
+    },
+    {
+      "id": "804",
+      "sourcePage": 2,
+      "area": 48.11,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "29"
+      ],
+      "valuationCents": 31435644,
+      "totalCents": 36243349,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 724867,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 190136,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28994679,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -5
+    },
+    {
+      "id": "806",
+      "sourcePage": 2,
+      "area": 48.11,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "20"
+      ],
+      "valuationCents": 31435644,
+      "totalCents": 36243349,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 724867,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 190136,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28994679,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": -5
+    },
+    {
+      "id": "901",
+      "sourcePage": 2,
+      "area": 48.27,
+      "sourceStatus": "Disponível",
+      "parking": 1,
+      "parkingIds": [
+        "24"
+      ],
+      "valuationCents": 32009901,
+      "totalCents": 35581345,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 711627,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 28,
+          "amountCents": 185880,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 600000,
+          "firstDue": "2027-12-20"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28465076,
+          "firstDue": "2029-03-30"
+        }
+      ],
+      "roundingCents": 2
+    }
+  ],
+  "notes": "A tabela indica validade até 30/11/2026. Crédito sujeito à análise da Caixa. A fonte prevê INCC até as chaves ou o Habite-se, o que ocorrer primeiro, e IGP-M mais 1% ao mês após essa etapa."
+}
