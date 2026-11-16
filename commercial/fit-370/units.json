@@ -1,0 +1,1414 @@
+{
+  "project": "FIT@370",
+  "reference": "2026-11",
+  "source": "tabela_fit370_novembro_2026.pdf",
+  "sourceSha256": "904d2dfc9bc16a1d13c4def6fb5232555c4a62bcb9840c276e1bd85e61983007",
+  "units": [
+    {
+      "id": "202 · Fluxo 30%",
+      "unitNumber": "202",
+      "area": 59.82,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 140740457,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 14074046,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 1005289,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 3518511,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 7037023
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 98518320
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "202 · Fluxo 35%",
+      "unitNumber": "202",
+      "area": 59.82,
+      "sourcePage": 7,
+      "sourceStatus": "Disponível",
+      "totalCents": 140740457,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 14074043,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 1206347,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 5629618,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 7037023
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 91481297
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "204 · Fluxo 30%",
+      "unitNumber": "204",
+      "area": 49.54,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 114522266,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 11452229,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 818016,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2863057,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5726113
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 80165586
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "204 · Fluxo 35%",
+      "unitNumber": "204",
+      "area": 49.54,
+      "sourcePage": 7,
+      "sourceStatus": "Disponível",
+      "totalCents": 114522266,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 11452232,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 981619,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 4580891,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5726113
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 74439473
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "206 · Fluxo 30%",
+      "unitNumber": "206",
+      "area": 56.47,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 130503725,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 13050379,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 932169,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 3262593,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6525186
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 91352608
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "206 · Fluxo 35%",
+      "unitNumber": "206",
+      "area": 56.47,
+      "sourcePage": 7,
+      "sourceStatus": "Disponível",
+      "totalCents": 130503725,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 13050378,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 1118603,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 5220149,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6525186
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 84827421
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "207 · Fluxo 30%",
+      "unitNumber": "207",
+      "area": 50.07,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 106758770,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 10675872,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 762563,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2668969,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5337939
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 74731139
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "207 · Fluxo 35%",
+      "unitNumber": "207",
+      "area": 50.07,
+      "sourcePage": 7,
+      "sourceStatus": "Disponível",
+      "totalCents": 106758770,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 10675878,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 915075,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 4270351,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5337939
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 69393201
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "208 · Fluxo 30%",
+      "unitNumber": "208",
+      "area": 43.1,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 98386681,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 9838668,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 702762,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2459667,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 4919334
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 68870677
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "208 · Fluxo 35%",
+      "unitNumber": "208",
+      "area": 43.1,
+      "sourcePage": 7,
+      "sourceStatus": "Disponível",
+      "totalCents": 98386681,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 9838674,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 843314,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 3935467,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 4919334
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 63951343
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "209 · Fluxo 30%",
+      "unitNumber": "209",
+      "area": 40.99,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 93154047,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 9315406,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 665386,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2328851,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 4657702
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 65207833
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "209 · Fluxo 35%",
+      "unitNumber": "209",
+      "area": 40.99,
+      "sourcePage": 7,
+      "sourceStatus": "Disponível",
+      "totalCents": 93154047,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 9315408,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 798463,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 3726162,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 4657702
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 60550131
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "302 · Fluxo 30%",
+      "unitNumber": "302",
+      "area": 41.23,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 114268222,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 11426816,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 816202,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2856706,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5713411
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 79987755
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "302 · Fluxo 35%",
+      "unitNumber": "302",
+      "area": 41.23,
+      "sourcePage": 8,
+      "sourceStatus": "Disponível",
+      "totalCents": 114268222,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 11426821,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 979442,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 4570729,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5713411
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 74274344
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "312 · Fluxo 30%",
+      "unitNumber": "312",
+      "area": 23.26,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 72386396,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7238635,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 517046,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 1809660,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 3619320
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 50670477
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "312 · Fluxo 35%",
+      "unitNumber": "312",
+      "area": 23.26,
+      "sourcePage": 8,
+      "sourceStatus": "Disponível",
+      "totalCents": 72386396,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7238637,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 620455,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2895456,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 3619320
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 47051157
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "403 · Fluxo 30%",
+      "unitNumber": "403",
+      "area": 33.22,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 88847337,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8884732,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 634624,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2221183,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 4442367
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 62193136
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "403 · Fluxo 35%",
+      "unitNumber": "403",
+      "area": 33.22,
+      "sourcePage": 9,
+      "sourceStatus": "Disponível",
+      "totalCents": 88847337,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8884729,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 761549,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 3553893,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 4442367
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 57750769
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "407 · Fluxo 30%",
+      "unitNumber": "407",
+      "area": 23.4,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 71952053,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7195209,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 513943,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 1798801,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 3597603
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 50366437
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "407 · Fluxo 35%",
+      "unitNumber": "407",
+      "area": 23.4,
+      "sourcePage": 9,
+      "sourceStatus": "Disponível",
+      "totalCents": 71952053,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7195204,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 616732,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2878082,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 3597603
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 46768834
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "408 · Fluxo 30%",
+      "unitNumber": "408",
+      "area": 24.12,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 75199370,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7519942,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 537138,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 1879984,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 3759969
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 52639559
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "408 · Fluxo 35%",
+      "unitNumber": "408",
+      "area": 24.12,
+      "sourcePage": 9,
+      "sourceStatus": "Disponível",
+      "totalCents": 75199370,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7519937,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 644566,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 3007975,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 3759969
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 48879590
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "409 · Fluxo 30%",
+      "unitNumber": "409",
+      "area": 24.12,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 73144122,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7314413,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 522458,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 1828603,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 3657206
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 51200885
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "409 · Fluxo 35%",
+      "unitNumber": "409",
+      "area": 24.12,
+      "sourcePage": 9,
+      "sourceStatus": "Disponível",
+      "totalCents": 73144122,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7314407,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 626950,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2925765,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 3657206
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 47543679
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "512 · Fluxo 30%",
+      "unitNumber": "512",
+      "area": 37.37,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível",
+      "totalCents": 112930842,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 11293083,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 806649,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2823271,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5646542
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 79051589
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "512 · Fluxo 35%",
+      "unitNumber": "512",
+      "area": 37.37,
+      "sourcePage": 10,
+      "sourceStatus": "Disponível",
+      "totalCents": 112930842,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 11293079,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 967979,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 4517234,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5646542
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 73405047
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "601 · Fluxo 30%",
+      "unitNumber": "601",
+      "area": 38.42,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível",
+      "totalCents": 121212036,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 12121207,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 865800,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 3030301,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6060602
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 84848425
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "601 · Fluxo 35%",
+      "unitNumber": "601",
+      "area": 38.42,
+      "sourcePage": 10,
+      "sourceStatus": "Disponível",
+      "totalCents": 121212036,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 12121209,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 1038960,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 4848481,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6060602
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 78787823
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "604 · Fluxo 30%",
+      "unitNumber": "604",
+      "area": 23.87,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível",
+      "totalCents": 79831367,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7983138,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 570224,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 1995784,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 3991568
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 55881957
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "604 · Fluxo 35%",
+      "unitNumber": "604",
+      "area": 23.87,
+      "sourcePage": 11,
+      "sourceStatus": "Disponível",
+      "totalCents": 79831367,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7983134,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 684269,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 3193255,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 3991568
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 51890389
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "606 · Fluxo 30%",
+      "unitNumber": "606",
+      "area": 30.73,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível",
+      "totalCents": 100047970,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 10004803,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 714628,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2501199,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5002398
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 70033579
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "606 · Fluxo 35%",
+      "unitNumber": "606",
+      "area": 30.73,
+      "sourcePage": 11,
+      "sourceStatus": "Disponível",
+      "totalCents": 100047970,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 10004798,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 857554,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 4001919,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5002398
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 65031180
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "608 · Fluxo 30%",
+      "unitNumber": "608",
+      "area": 27.36,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível",
+      "totalCents": 88645907,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8864591,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 633185,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2216148,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 4432295
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 62052135
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "608 · Fluxo 35%",
+      "unitNumber": "608",
+      "area": 27.36,
+      "sourcePage": 11,
+      "sourceStatus": "Disponível",
+      "totalCents": 88645907,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8864592,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 759822,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 3545836,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 4432295
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 57619840
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "610 · Fluxo 30%",
+      "unitNumber": "610",
+      "area": 27.09,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível",
+      "totalCents": 87738713,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8773872,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 626705,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 2193468,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 4386936
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 61417099
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "610 · Fluxo 35%",
+      "unitNumber": "610",
+      "area": 27.09,
+      "sourcePage": 11,
+      "sourceStatus": "Disponível",
+      "totalCents": 87738713,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8773872,
+          "firstDue": "2026-11-05"
+        },
+        {
+          "label": "Mensais",
+          "count": 14,
+          "amountCents": 752046,
+          "firstDue": "2026-12-05"
+        },
+        {
+          "label": "Semestrais",
+          "count": 2,
+          "amountCents": 3509549,
+          "firstDue": "2027-05-05"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 4386936
+        },
+        {
+          "label": "Parcela final",
+          "count": 1,
+          "amountCents": 57030163
+        }
+      ],
+      "roundingCents": 0
+    }
+  ],
+  "status": "historical_reference",
+  "notes": "São 18 unidades, com dois fluxos históricos por unidade tal como no PDF, de 30% e 35%. O quadro exibe as referências com preço positivo. Confirme condições e disponibilidade atuais."
+}

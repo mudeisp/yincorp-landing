@@ -1,0 +1,1872 @@
+{
+  "project": "Monte Athos — Fase 2",
+  "reference": "2026-10",
+  "source": "tabela_monte_athos_-_fase_2_outubro_2026(1).pdf",
+  "sourceSha256": "6ae46dc82ca8c119fac5fd86fc1303ab05257cc780eca52759bf27f1593a02b4",
+  "units": [
+    {
+      "id": "310B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 48600000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3888000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 172125,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 607500,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34020000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "402B",
+      "tower": "B",
+      "area": 53.71,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 61450000,
+      "valuationCents": 46600000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4916020,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 217635,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 768125,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 43015000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "408B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 47400000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3792000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 167875,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 592500,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 33180000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "412B",
+      "tower": "B",
+      "area": 47.56,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 52900000,
+      "valuationCents": 41860000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4232008,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 187354,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 661250,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 37030000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "503B",
+      "tower": "B",
+      "area": 48.35,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 56250000,
+      "valuationCents": 42150000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4499988,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 199219,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 703125,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 39375000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "506B",
+      "tower": "B",
+      "area": 47.69,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível",
+      "totalCents": 51250000,
+      "valuationCents": 38790000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4100020,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 181510,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 640625,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35875000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "514B",
+      "tower": "B",
+      "area": 53.67,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível",
+      "totalCents": 59250000,
+      "valuationCents": 46140000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4739988,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 209844,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 740625,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 41475000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "803B",
+      "tower": "B",
+      "area": 48.35,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 7,
+      "sourceStatus": "Disponível",
+      "totalCents": 56600000,
+      "valuationCents": 42150000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4528016,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 200458,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 707500,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 39620000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1202B",
+      "tower": "B",
+      "area": 53.71,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 12,
+      "sourceStatus": "Disponível",
+      "totalCents": 62150000,
+      "valuationCents": 46600000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4971980,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 220115,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 776875,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 43505000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1207B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 13,
+      "sourceStatus": "Disponível",
+      "totalCents": 48600000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3888000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 172125,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 607500,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34020000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1209B",
+      "tower": "B",
+      "area": 46.04,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 13,
+      "sourceStatus": "Disponível",
+      "totalCents": 49450000,
+      "valuationCents": 37930000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3956020,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 175135,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 618125,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34615000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1305B",
+      "tower": "B",
+      "area": 45.62,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 14,
+      "sourceStatus": "Disponível",
+      "totalCents": 50300000,
+      "valuationCents": 38020000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4023992,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 178146,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 628750,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35210000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1309B",
+      "tower": "B",
+      "area": 46.04,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 14,
+      "sourceStatus": "Disponível",
+      "totalCents": 49800000,
+      "valuationCents": 37930000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3984000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 176375,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 622500,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34860000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1402B",
+      "tower": "B",
+      "area": 53.71,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 15,
+      "sourceStatus": "Disponível",
+      "totalCents": 62850000,
+      "valuationCents": 46600000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 5027988,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 222594,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 785625,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 43995000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1404B",
+      "tower": "B",
+      "area": 47.85,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 15,
+      "sourceStatus": "Disponível",
+      "totalCents": 53300000,
+      "valuationCents": 42980000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4263992,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 188771,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 666250,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 37310000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1407B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 15,
+      "sourceStatus": "Disponível",
+      "totalCents": 49300000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3944008,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 174604,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 616250,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34510000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1408B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 15,
+      "sourceStatus": "Reservada",
+      "totalCents": 48800000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3904016,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 172833,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 610000,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34160000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1412B",
+      "tower": "B",
+      "area": 47.56,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 16,
+      "sourceStatus": "Disponível",
+      "totalCents": 54300000,
+      "valuationCents": 41860000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4343976,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 192313,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 678750,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 38010000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1502B",
+      "tower": "B",
+      "area": 53.71,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 16,
+      "sourceStatus": "Disponível",
+      "totalCents": 63200000,
+      "valuationCents": 46600000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 5056016,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 223833,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 790000,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 44240000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1504B",
+      "tower": "B",
+      "area": 47.85,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 16,
+      "sourceStatus": "Disponível",
+      "totalCents": 53650000,
+      "valuationCents": 42980000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4292020,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 190010,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 670625,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 37555000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1506B",
+      "tower": "B",
+      "area": 45.49,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 16,
+      "sourceStatus": "Disponível",
+      "totalCents": 52650000,
+      "valuationCents": 38570000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4211988,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 186469,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 658125,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 36855000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1507B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 16,
+      "sourceStatus": "Disponível",
+      "totalCents": 49650000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3971988,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 175844,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 620625,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34755000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1508B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 16,
+      "sourceStatus": "Disponível",
+      "totalCents": 49150000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3931996,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 174073,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 614375,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34405000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1511B",
+      "tower": "B",
+      "area": 46.71,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 17,
+      "sourceStatus": "Disponível",
+      "totalCents": 50650000,
+      "valuationCents": 38450000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4052020,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 179385,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 633125,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35455000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1604B",
+      "tower": "B",
+      "area": 47.85,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 17,
+      "sourceStatus": "Disponível",
+      "totalCents": 54000000,
+      "valuationCents": 42980000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4320000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 191250,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 675000,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 37800000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1605B",
+      "tower": "B",
+      "area": 45.62,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 17,
+      "sourceStatus": "Disponível",
+      "totalCents": 51000000,
+      "valuationCents": 38020000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4080000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 180625,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 637500,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35700000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1606B",
+      "tower": "B",
+      "area": 45.49,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 18,
+      "sourceStatus": "Disponível",
+      "totalCents": 53000000,
+      "valuationCents": 38570000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4240016,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 187708,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 662500,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 37100000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1607B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 18,
+      "sourceStatus": "Disponível",
+      "totalCents": 50000000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4000016,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 177083,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 625000,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35000000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1608B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 18,
+      "sourceStatus": "Disponível",
+      "totalCents": 49500000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3959976,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 175313,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 618750,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34650000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1609B",
+      "tower": "B",
+      "area": 46.04,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 18,
+      "sourceStatus": "Disponível",
+      "totalCents": 50500000,
+      "valuationCents": 37930000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4040008,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 178854,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 631250,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35350000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1610B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 18,
+      "sourceStatus": "Disponível",
+      "totalCents": 50000000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4000016,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 177083,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 625000,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35000000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1611B",
+      "tower": "B",
+      "area": 46.71,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 18,
+      "sourceStatus": "Disponível",
+      "totalCents": 51000000,
+      "valuationCents": 38450000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4080000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 180625,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 637500,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35700000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1614B",
+      "tower": "B",
+      "area": 53.67,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 18,
+      "sourceStatus": "Disponível",
+      "totalCents": 61000000,
+      "valuationCents": 47870000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4879984,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 216042,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 762500,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 42700000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1704B",
+      "tower": "B",
+      "area": 47.85,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 19,
+      "sourceStatus": "Disponível",
+      "totalCents": 54350000,
+      "valuationCents": 42980000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4347980,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 192490,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 679375,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 38045000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1705B",
+      "tower": "B",
+      "area": 45.62,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 19,
+      "sourceStatus": "Disponível",
+      "totalCents": 51350000,
+      "valuationCents": 38020000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4107980,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 181865,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 641875,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35945000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1707B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 19,
+      "sourceStatus": "Disponível",
+      "totalCents": 50350000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4027996,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 178323,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 629375,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35245000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1708B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 19,
+      "sourceStatus": "Disponível",
+      "totalCents": 49850000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 3988004,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 176552,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 623125,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34895000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1709B",
+      "tower": "B",
+      "area": 46.04,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 19,
+      "sourceStatus": "Disponível",
+      "totalCents": 50850000,
+      "valuationCents": 37930000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4067988,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 180094,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 635625,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35595000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1710B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 19,
+      "sourceStatus": "Disponível",
+      "totalCents": 50350000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4027996,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 178323,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 629375,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35245000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1711B",
+      "tower": "B",
+      "area": 46.71,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 19,
+      "sourceStatus": "Disponível",
+      "totalCents": 51350000,
+      "valuationCents": 38450000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4107980,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 181865,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 641875,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35945000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1712B",
+      "tower": "B",
+      "area": 47.56,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 19,
+      "sourceStatus": "Disponível",
+      "totalCents": 55350000,
+      "valuationCents": 41860000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4428012,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 196031,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 691875,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 38745000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1714B",
+      "tower": "B",
+      "area": 53.67,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 20,
+      "sourceStatus": "Disponível",
+      "totalCents": 61350000,
+      "valuationCents": 47870000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4908012,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 217281,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 766875,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 42945000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1804B",
+      "tower": "B",
+      "area": 47.85,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 20,
+      "sourceStatus": "Disponível",
+      "totalCents": 54700000,
+      "valuationCents": 42980000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4376008,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 193729,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 683750,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 38290000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1805B",
+      "tower": "B",
+      "area": 45.62,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 20,
+      "sourceStatus": "Disponível",
+      "totalCents": 51700000,
+      "valuationCents": 38020000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4136008,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 183104,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 646250,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 36190000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1806B",
+      "tower": "B",
+      "area": 45.49,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 20,
+      "sourceStatus": "Disponível",
+      "totalCents": 53700000,
+      "valuationCents": 38570000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4295976,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 190188,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 671250,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 37590000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1808B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 20,
+      "sourceStatus": "Disponível",
+      "totalCents": 50200000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4015984,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 177792,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 627500,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35140000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1809B",
+      "tower": "B",
+      "area": 46.04,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 20,
+      "sourceStatus": "Disponível",
+      "totalCents": 51200000,
+      "valuationCents": 37930000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4096016,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 181333,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 640000,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35840000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1810B",
+      "tower": "B",
+      "area": 45.47,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 20,
+      "sourceStatus": "Disponível",
+      "totalCents": 50700000,
+      "valuationCents": 37480000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4055976,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 179563,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 633750,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35490000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1812B",
+      "tower": "B",
+      "area": 47.56,
+      "bedrooms": 2,
+      "parking": 1,
+      "sourcePage": 21,
+      "sourceStatus": "Disponível",
+      "totalCents": 55700000,
+      "valuationCents": 41860000,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 4455992,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensais",
+          "count": 48,
+          "amountCents": 197271,
+          "firstDue": "2026-12-10"
+        },
+        {
+          "label": "Anuais",
+          "count": 4,
+          "amountCents": 696250,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 38990000,
+          "firstDue": "2029-08-30"
+        }
+      ],
+      "roundingCents": 0
+    }
+  ],
+  "status": "historical_reference",
+  "notes": "Referências residenciais da Torre B com situação histórica disponível ou reservada. Os subtotais mensais e anuais foram conferidos a partir das quantidades de parcelas da fonte. Confirme disponibilidade atual."
+}
