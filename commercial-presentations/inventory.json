@@ -45,5 +45,234 @@
       "unit_count": 37,
       "portal_catalog_url": "UNVERIFIED"
     }
+  ],
+  "rollout_target": 20,
+  "candidates": [
+    {
+      "batch": 1,
+      "name": "Ledge Brooklin",
+      "state": "SP",
+      "evidence": "book + tabela outubro/2026",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 1,
+      "name": "O Parque Cipó",
+      "state": "SP",
+      "evidence": "apresentação + tabela outubro/2026",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 1,
+      "name": "Monte Athos fase 2",
+      "state": "ES",
+      "evidence": "book + tabela outubro/2026",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 1,
+      "name": "Haus Linhares",
+      "state": "ES",
+      "evidence": "book + tabela novembro/2026",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 1,
+      "name": "ITA Living",
+      "state": "ES",
+      "evidence": "book + tabela outubro/2026",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 2,
+      "name": "Infinity Brooklin",
+      "state": "SP",
+      "evidence": "book + tabela novembro/2026",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 2,
+      "name": "Ateliê 365",
+      "state": "SP",
+      "evidence": "book + tabela novembro/2026; promoção separada",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 2,
+      "name": "Vivar Atlântico",
+      "state": "PE",
+      "evidence": "book + tabela",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 2,
+      "name": "Fonte Casa Caiada",
+      "state": "PE",
+      "evidence": "apresentação + tabela",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 2,
+      "name": "Skyline Brooklin",
+      "state": "SP",
+      "evidence": "book + tabela + vídeo",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 3,
+      "name": "MAC Brooklin",
+      "state": "SP",
+      "evidence": "book + tabela",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 3,
+      "name": "ACE Água Verde",
+      "state": "PR",
+      "evidence": "book + tabela",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 3,
+      "name": "Âmbar",
+      "state": "UNKNOWN",
+      "evidence": "book + promoção Black November",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 3,
+      "name": "Existence 332",
+      "state": "UNKNOWN",
+      "evidence": "book + tabela",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 3,
+      "name": "Macan Residence",
+      "state": "ES",
+      "evidence": "book + tabela novembro/2026",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 4,
+      "name": "FIT@370",
+      "state": "UNKNOWN",
+      "evidence": "book + tabela",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 4,
+      "name": "GS Stay Mata da Praia",
+      "state": "ES",
+      "evidence": "apresentação + tabela novembro/2026",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 4,
+      "name": "Nex One Jurupis",
+      "state": "SP",
+      "evidence": "apresentação + tabela",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 4,
+      "name": "Haute Brooklin by EZ",
+      "state": "SP",
+      "evidence": "book + tabela novembro/2026; relatório EZTEC multiempreendimentos",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    },
+    {
+      "batch": 4,
+      "name": "O Parque Torre Folhagem",
+      "state": "SP",
+      "evidence": "apresentação + tabela outubro/2026",
+      "source": "conversation_uploads",
+      "canonical_url": null,
+      "source_verified_in_repository": false,
+      "financial_rows_verified": false,
+      "status": "pending_document_and_canonical_validation"
+    }
+  ],
+  "notes": [
+    "The 20 entries are candidates, not 20 live deployments.",
+    "Do not count O Parque towers or duplicated PDF copies as separate developments without verifying their canonical catalog entries.",
+    "Do not expose historical stock as live availability.",
+    "Other uploaded candidates remain in backlog; target list can change after deduplication."
   ]
 }
