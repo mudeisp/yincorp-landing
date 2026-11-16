@@ -120,7 +120,7 @@ export default async function portal(req,res){
     const experienceRequested=[url.searchParams.get('yincorp_experience'),req.query?.yincorp_experience].includes('1');
     const isMarketRoute=NATIONAL_MARKETS.some(state=>path.startsWith(`/${state.toLowerCase()}/`));
     const enhanced=res.statusCode===200&&typeof rendered==='string'&&rendered.includes('</body>')&&
-      (rendered.includes('class="commercial-book"')||(experienceRequested&&isMarketRoute))
+      (rendered.includes('class="commercial-book"')||(isMarketRoute&&/\/(?:empreendimento|imovel)\//.test(path))||(experienceRequested&&isMarketRoute))
       ?rendered.replace('</body>','<link rel="stylesheet" href="/portal-assets/global-experience.css"><script defer src="/portal-assets/global-experience.js"></script></body>')
       :rendered;
     return send(enhanced);
