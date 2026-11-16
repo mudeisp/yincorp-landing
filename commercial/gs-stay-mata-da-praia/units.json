@@ -1,0 +1,996 @@
+{
+  "project": "GS Stay Mata da Praia",
+  "reference": "2026-11",
+  "source": "tabela_gs_stay_mata_da_praia_novembro_2026.pdf",
+  "sourceSha256": "eddeb4418840c73b9ebd486c7980ac9845a33d42723fbb0f2687025e842ab0d3",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "202",
+      "totalArea": 25.94,
+      "totalCents": 67842466,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6784247
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 471128
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2035274
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6784247
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27136986
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 8
+    },
+    {
+      "id": "203",
+      "totalArea": 25.5,
+      "totalCents": 67842466,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6784247
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 471128
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2035274
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6784247
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27136986
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 8
+    },
+    {
+      "id": "204",
+      "totalArea": 25.49,
+      "totalCents": 67842466,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6784247
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 471128
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2035274
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6784247
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27136986
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 8
+    },
+    {
+      "id": "205",
+      "totalArea": 25.5,
+      "totalCents": 67842466,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6784247
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 471128
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2035274
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6784247
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27136986
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 8
+    },
+    {
+      "id": "206",
+      "totalArea": 26.15,
+      "totalCents": 69483817,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6948382
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 482527
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2084515
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6948382
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27793527
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -21
+    },
+    {
+      "id": "207",
+      "totalArea": 25.9,
+      "totalCents": 69483817,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6948382
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 482527
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2084515
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6948382
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27793527
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -21
+    },
+    {
+      "id": "305",
+      "totalArea": 25.49,
+      "totalCents": 68936700,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6893670
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 478727
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2068101
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6893670
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27574680
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 3
+    },
+    {
+      "id": "306",
+      "totalArea": 26.15,
+      "totalCents": 70578051,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7057805
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 490125
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2117342
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 7057805
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28231220
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 11
+    },
+    {
+      "id": "307",
+      "totalArea": 25.91,
+      "totalCents": 70578051,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7057805
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 490125
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2117342
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 7057805
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28231220
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 11
+    },
+    {
+      "id": "310",
+      "totalArea": 28.9,
+      "totalCents": 59088600,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5908860
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 410337
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1772658
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5908860
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 23635440
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 18
+    },
+    {
+      "id": "311",
+      "totalArea": 34.84,
+      "totalCents": 73313633,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7331363
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 509122
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2199409
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 7331363
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 29325453
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 17
+    },
+    {
+      "id": "312",
+      "totalArea": 29.99,
+      "totalCents": 63052461,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6305246
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 437864
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1891574
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6305246
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 25220984
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 11
+    },
+    {
+      "id": "316",
+      "totalArea": 29.49,
+      "totalCents": 59635717,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5963572
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 414137
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1789072
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5963572
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 23854287
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -6
+    },
+    {
+      "id": "322",
+      "totalArea": 29.53,
+      "totalCents": 61824183,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6182418
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 429335
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1854726
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6182418
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 24729673
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -16
+    },
+    {
+      "id": "403",
+      "totalArea": 25.49,
+      "totalCents": 70030933,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7003093
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 486326
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2100928
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 7003093
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28012373
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -2
+    },
+    {
+      "id": "407",
+      "totalArea": 25.91,
+      "totalCents": 71672284,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7167228
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 497724
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2150169
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 7167228
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28668914
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 5
+    },
+    {
+      "id": "410",
+      "totalArea": 28.9,
+      "totalCents": 60182833,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6018283
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 417936
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1805485
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6018283
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 24073133
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 13
+    },
+    {
+      "id": "412",
+      "totalArea": 29.99,
+      "totalCents": 64012650,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6401265
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 444532
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1920379
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6401265
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 25605060
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 13
+    },
+    {
+      "id": "416",
+      "totalArea": 29.49,
+      "totalCents": 60729950,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6072995
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 421736
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1821899
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6072995
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 24291980
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -11
+    },
+    {
+      "id": "422",
+      "totalArea": 29.53,
+      "totalCents": 62918417,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6291842
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 436933
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1887553
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6291842
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 25167367
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 13
+    },
+    {
+      "id": "604",
+      "totalArea": 25.49,
+      "totalCents": 72219401,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7221940
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 501524
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2166582
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 7221940
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28887760
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -13
+    },
+    {
+      "id": "605",
+      "totalArea": 25.49,
+      "totalCents": 72219401,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7221940
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 501524
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2166582
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 7221940
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28887760
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -13
+    },
+    {
+      "id": "606",
+      "totalArea": 26.15,
+      "totalCents": 73860749,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7386075
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 512922
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2215822
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 7386075
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 29544300
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -3
+    },
+    {
+      "id": "607",
+      "totalArea": 25.91,
+      "totalCents": 73860749,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7386075
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 512922
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 2215822
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 7386075
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 29544300
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -3
+    },
+    {
+      "id": "610",
+      "totalArea": 28.9,
+      "totalCents": 62371300,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6237130
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 433134
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1871139
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6237130
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 24948520
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 1
+    },
+    {
+      "id": "616",
+      "totalArea": 29.49,
+      "totalCents": 62918417,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6291842
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 436933
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1887553
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6291842
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 25167367
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 13
+    },
+    {
+      "id": "617",
+      "totalArea": 28.95,
+      "totalCents": 61824183,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6182418
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 429335
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1854726
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6182418
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 24729673
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -16
+    },
+    {
+      "id": "619",
+      "totalArea": 26.45,
+      "totalCents": 59042320,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5904232
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 410016
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1771270
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 5904232
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 23616928
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": 2
+    },
+    {
+      "id": "622",
+      "totalArea": 29.53,
+      "totalCents": 65544576,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6554458
+        },
+        {
+          "label": "Mensais",
+          "count": 36,
+          "amountCents": 455171
+        },
+        {
+          "label": "Semestrais",
+          "count": 5,
+          "amountCents": 1966337
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 6554458
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 26217830
+        }
+      ],
+      "sourcePage": 1,
+      "roundingCents": -11
+    }
+  ],
+  "notes": "Tabela com validade indicada de 30/11/2026 e entrega prevista em dezembro de 2029. Parcelas corrigidas pelo CUB/ES até o Habite-se e, depois, pelo IGP-M acrescido de 1% ao mês. A metragem é a área total conforme o cabeçalho da tabela."
+}
