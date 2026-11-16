@@ -108,7 +108,7 @@ function buildGallery(){
       quartos:(a,b)=>(b.bedrooms??-1)-(a.bedrooms??-1),
       prazo:(a,b)=>deliveryOrder(a)-deliveryOrder(b),
     }[priority];
-    return (order?items.slice().sort(order):items).slice(0,4);
+    return (order?items.slice().sort(order):items).slice(0,6);
   }
   function highlight(item){
     if(priority==='prazo')return timing(item);
@@ -193,21 +193,21 @@ function buildGallery(){
       button.setAttribute('aria-pressed',String(index===0));
       buttons.push(button);
       const media=text('span','','ynti-photo');
-      media.append(text('span','Imagem indisponível'));
+      const fallback=text('span','Fachada / imagem não disponível','ynti-photo-fallback');media.append(fallback);
       try{
         const url=new URL(item.image);
         if(url.protocol==='https:'&&!url.username&&!url.password){
           const image=document.createElement('img');
-          image.alt='';
+          image.alt='Imagem de divulgação do empreendimento '+item.name;
           image.loading='lazy';
           image.decoding='async';
-          image.addEventListener('error',()=>image.remove(),{once:true});
+          image.addEventListener('error',()=>image.remove(),{once:true});image.addEventListener('load',()=>{fallback.hidden=true},{once:true});
           image.src=url.href;
           media.append(image);
         }
       }catch{}
       const label=text('span','','ynti-option-label');
-      label.append(text('strong',item.name),text('span',highlight(item)),text('span','✓ Em comparação','ynti-option-current'));
+      label.append(text('small',[item.neighborhood,item.city].filter(Boolean).join(' · '),'ynti-option-location'),text('strong',item.name),text('span',money(item.price),'ynti-option-price'),text('span',[area(item.area),item.bedrooms==null?'':num(item.bedrooms)+' dorm.'].filter(Boolean).join(' · '),'ynti-option-specs'),text('span',highlight(item),'ynti-option-difference'),text('span','✓ Em comparação','ynti-option-current'));
       button.append(media,label);
       button.onclick=()=>{
         for(const option of buttons)option.setAttribute('aria-pressed',String(option===button));
