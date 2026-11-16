@@ -1,20 +1,15 @@
-/* Mandarim premium construction: no code panel, no giant image sections. */
-#mandarim-book.mandarim-assembled{color:#24392f;overflow:hidden;scroll-margin-top:20px}
-.mandarim-assembled #mandarim-book-title{font:400 clamp(38px,6vw,76px)/1.1 Georgia,serif!important;letter-spacing:-.045em;min-height:2.15em}
-.mandarim-assembled .ma-typing:after{content:'|';color:#b19a6c;animation:ma-blink .7s steps(1) infinite}
-@keyframes ma-blink{50%{opacity:0}}
-.mandarim-assembled .ma-skip{display:inline-block;margin:12px 0 25px;padding:9px 0;color:#274c38;border-bottom:1px solid #a9996d;font-weight:650}
-.mandarim-assembled .ma-gallery{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:clamp(16px,3vw,32px)!important;align-items:start}
-.mandarim-assembled .ma-card{box-sizing:border-box;min-width:0;max-width:100%;overflow:hidden;background:#f6f5f0;border:1px solid #dce3d9;border-radius:18px;padding:clamp(12px,2vw,22px)!important;margin:0!important}
-.mandarim-assembled .ma-card-title{font:400 clamp(23px,3vw,35px)/1.2 Georgia,serif;min-height:1.3em;margin:0 0 14px;color:#253c2e}
-.mandarim-assembled .ma-image-frame{width:100%;max-width:100%;height:clamp(220px,30vw,370px);overflow:hidden;border-radius:10px;background:#eaece7;position:relative}
-.mandarim-assembled .ma-image-frame a{display:block;width:100%;height:100%}
-.mandarim-assembled .ma-image-frame img{display:block;width:100%!important;height:100%!important;max-width:100%!important;object-fit:contain!important;aspect-ratio:auto!important;border-radius:0!important}
-.mandarim-assembled .ma-floorplan .ma-image-frame{overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#9baa9d transparent;touch-action:pan-x pan-y}
-.mandarim-assembled .ma-floorplan .ma-image-frame a{width:max-content;max-width:none}
-.mandarim-assembled .ma-floorplan .ma-image-frame img.ma-pan-img{width:auto!important;max-width:none!important;height:100%!important;object-fit:contain!important}
-.mandarim-assembled .ma-card figcaption{font-size:13px!important;min-height:2em;padding:12px 0 0!important}
-.ma-original-image-hidden{display:none!important}
-@media(prefers-reduced-motion:no-preference){.mandarim-assembled .ma-card,.mandarim-assembled .ma-finance{opacity:.15;transform:translateY(55px) scale(.96);filter:blur(5px);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.75,.2,1),filter .85s ease}.mandarim-assembled .ma-built{opacity:1;transform:none;filter:none}.mandarim-assembled .ma-card .ma-image-frame{clip-path:inset(0 100% 0 0);transition:clip-path 1.2s cubic-bezier(.2,.7,.2,1) .15s}.mandarim-assembled .ma-card.ma-built .ma-image-frame{clip-path:inset(0 0 0 0)}}
-@media(max-width:720px){.mandarim-assembled .ma-gallery{grid-template-columns:1fr!important}.mandarim-assembled .ma-image-frame{height:clamp(220px,62vw,370px)}.mandarim-assembled #mandarim-book-title{min-height:2.3em}.mandarim-assembled .ma-card{padding:14px!important}}
-@media(prefers-reduced-motion:reduce){.mandarim-assembled .ma-typing:after{animation:none}}
+#mandarim-book.mexp{display:block;width:100%;max-width:none;margin:0;padding:0;background:#f6f4ef;color:#23362b;overflow:hidden;font-family:Arial,sans-serif}
+.mexp *{box-sizing:border-box}.mexp-intro{min-height:80svh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(35px,8vw,125px);background:#f6f4ef}
+.mexp-eyebrow{font:11px/1.6 Arial,sans-serif;letter-spacing:.19em;text-transform:uppercase;color:#788573}
+.mexp #mandarim-book-title{font:400 clamp(52px,9vw,136px)/1.03 Georgia,serif!important;letter-spacing:-.065em;max-width:1100px;min-height:1.2em;margin:20px 0}
+.mexp-intro>p:not(.mexp-eyebrow){font-size:clamp(16px,2vw,23px);line-height:1.6;max-width:670px;min-height:3em}
+.mexp-skip{color:#234832;text-decoration:none;border-bottom:1px solid #aa9465;padding:12px 0;margin-top:20px;font-weight:600}
+.mexp-chapter{min-height:95svh;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:clamp(22px,5vw,90px);padding:clamp(25px,6vw,95px);border-top:1px solid #e0e1da}
+.mexp-chapter:nth-child(even){background:#ecefe9}.mexp-visual{height:min(72vh,680px);overflow:hidden;border-radius:8px;background:#d6dcd4;position:relative}.mexp-visual img{display:block;width:100%;height:100%;object-fit:contain;max-width:none!important;border-radius:0!important}
+.mexp-copy{max-width:470px}.mexp-copy h3{font:400 clamp(40px,5.4vw,83px)/1.08 Georgia,serif;letter-spacing:-.05em;min-height:1.2em;margin:20px 0}.mexp-copy p:last-child{line-height:1.65;color:#5c6c5e;min-height:2em}
+.mexp-wide .mexp-visual{overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;touch-action:pan-x pan-y}.mexp-wide .mexp-visual img{width:auto;height:100%;max-width:none!important}
+.mexp-finance-wrap{padding:clamp(30px,6vw,95px);background:#e9eee8}.mexp-finance-wrap #mandarim-finance{max-width:1180px;margin:auto}.mexp-disclaimer{max-width:1180px;margin:24px auto;font-size:12px;line-height:1.7;color:#526357}
+.mexp-cursor:after{content:'|';color:#a99363;animation:mexp-blink .7s steps(1) infinite}@keyframes mexp-blink{50%{opacity:0}}
+@media(prefers-reduced-motion:no-preference){.mexp-chapter .mexp-visual:before{content:'';position:absolute;inset:0;background:#f6f4ef;z-index:1;transform-origin:right;transition:transform 1.25s cubic-bezier(.2,.75,.2,1)}.mexp-chapter.mexp-visible .mexp-visual:before{transform:scaleX(0)}.mexp-chapter .mexp-copy{opacity:.12;transform:translateY(60px);transition:opacity .9s,transform .9s}.mexp-chapter.mexp-visible .mexp-copy{opacity:1;transform:none}}
+@media(max-width:740px){.mexp-chapter{grid-template-columns:1fr;min-height:0;padding:35px 20px 75px}.mexp-copy{order:-1}.mexp-visual{height:55svh}.mexp-intro{padding:30px;min-height:72svh}.mexp #mandarim-book-title{font-size:clamp(48px,12vw,85px)!important}}
+@media(prefers-reduced-motion:reduce){.mexp-cursor:after{animation:none}}
