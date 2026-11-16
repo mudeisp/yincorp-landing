@@ -158,31 +158,49 @@
 @media(max-width:740px){.ynti-premium .ynti-gallery{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory}.ynti-premium .ynti-gallery-item{flex:0 0 84%;scroll-snap-align:start}.ynti-premium .ynti-option-label{padding:15px 17px}.ynti-premium .ynti-option-label strong{font-size:23px}}
 @media(prefers-reduced-motion:reduce){.ynti-premium .ynti-gallery-item .ynti-photo img{transition:none}}
 
-/* Canva/Mandarim parity — scoped to the Intelligence component only.
-   No changes to layout mechanics, filtering, API, selection or table data. */
+
+/* Canva/Mandarim exact dark Intelligence palette; isolated to .ynti. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 .ynti{
-  --ynti-paper:#faf7f1;--ynti-ink:#28251f;--ynti-muted:#716b62;
-  --ynti-line:#ded5c7;--ynti-bronze:#a48154;--ynti-surface:#fffdfa;
-  background:var(--ynti-paper);border-color:var(--ynti-line);
-  color:var(--ynti-ink);font-family:'Plus Jakarta Sans',Arial,sans-serif
+  --mi-ink:#28251f;--mi-paper:#faf7f1;--mi-card:#39352e;
+  --mi-border:#766959;--mi-bronze:#c6a47c;--mi-muted:#d7cbb9;
+  background:var(--mi-ink);border-color:#62594b;color:var(--mi-paper);
+  font-family:'Plus Jakarta Sans',sans-serif
 }
-.ynti :is(h2,h3,.ynti-option-label strong,.ynti-reference-identity strong,.ynti-overview h3,.ynti-comparison h3){
-  font-family:'Cormorant Garamond',Georgia,serif;color:var(--ynti-ink);font-weight:500
+.ynti h2,.ynti h3,.ynti .ynti-option-label strong,.ynti .ynti-reference-identity strong,
+.ynti .ynti-comparison h3,.ynti .ynti-overview h3{
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;color:var(--mi-paper)
 }
-.ynti :is(.ynti-head small,.ynti-note,.ynti-overview-note,.ynti-option-specs,.ynti-option-difference,.ynti-location){
-  color:var(--ynti-muted)
+.ynti h2{font-size:clamp(48px,6vw,88px);line-height:.95}
+.ynti :is(p,.ynti-note,.ynti-option-specs,.ynti-option-difference,.ynti-location,.ynti-overview-note){
+  color:var(--mi-muted)
 }
-.ynti :is(.ynti-guided .ynti-overview,.ynti-overview,.ynti-progress,.ynti-insight){
-  background:#eee6da;border-color:var(--ynti-line);color:var(--ynti-ink)
+.ynti :is(.ynti-head small,.ynti-option-current,.ynti-gallery-heading){color:var(--mi-bronze)}
+.ynti :is(.ynti-guided .ynti-overview,.ynti-overview,.ynti-progress,.ynti-insight,
+.ynti-guided .ynti-comparison,.ynti-comparison,.ynti-overview-metric,
+.ynti-guided .ynti-comparison .ynti-insight){
+  background:var(--mi-card);border-color:var(--mi-border);color:var(--mi-paper)
 }
-.ynti :is(.ynti-guided .ynti-comparison,.ynti-comparison,.ynti-overview-metric,.ynti-guided-table thead th){
-  background:var(--ynti-surface);border-color:var(--ynti-line);color:var(--ynti-ink)
+.ynti :is(.ynti-gallery-item,.ynti-premium .ynti-gallery-item,.ynti-card,.ynti-option,
+.ynti-premium .ynti-gallery-item .ynti-option){
+  background:var(--mi-card);border-color:var(--mi-border);color:var(--mi-paper)
 }
+.ynti .ynti-premium .ynti-gallery-item .ynti-photo,
+.ynti .ynti-photo{background:linear-gradient(140deg,#706453,#39352e)}
+.ynti .ynti-premium .ynti-option-label strong{font:500 27px/1.04 'Cormorant Garamond',Georgia,serif;color:var(--mi-paper)}
+.ynti .ynti-premium .ynti-option-price,.ynti .ynti-price{
+  font-family:'Cormorant Garamond',Georgia,serif;color:#fff
+}
+.ynti .ynti-premium .ynti-option-location,.ynti .ynti-premium .ynti-option-specs,
+.ynti .ynti-premium .ynti-option-difference{color:#d9cbb8}
+.ynti .ynti-premium .ynti-option-current{color:#d8b88c;border-color:#756b5d}
+.ynti .ynti-option[aria-pressed=true],.ynti .ynti-premium .ynti-option[aria-pressed=true]{
+  background:#67513a;outline-color:#d4ae7c;border-color:#d4ae7c
+}
+.ynti :is(button,a,select,input):focus-visible{outline-color:#d4ae7c}
+.ynti :is(.ynti-guided-table,.ynti-table){color:var(--mi-paper)}
 .ynti :is(.ynti-guided-table th,.ynti-guided-table td,.ynti-table th,.ynti-table td){
-  border-color:var(--ynti-line);color:var(--ynti-ink)
+  color:var(--mi-paper);border-color:#62594b;background:transparent
 }
-.ynti :is(.ynti-option[aria-pressed=true],.ynti-premium .ynti-option[aria-pressed=true]){
-  background:#f5eee4;outline-color:var(--ynti-bronze)
-}
-.ynti :is(button,a):focus-visible{outline-color:var(--ynti-bronze)}
-.ynti .ynti-option-current{color:var(--ynti-bronze)}
+.ynti .ynti-guided-table thead th,.ynti .ynti-table thead th{background:#39352e;color:#d6b58a}
+.ynti .ynti-guided .ynti-option-label span{color:#d9cbb8}
