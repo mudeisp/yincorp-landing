@@ -1,0 +1,1344 @@
+{
+  "project": "Skyline Brooklin",
+  "reference": "2026-11",
+  "source": "tabela_skyline_novembro_2026.pdf",
+  "sourceSha256": "8be4e3bf3db4baef9bdbc48b441ae8f6cafc098923092aea6a063183cb4bd607",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "11",
+      "sourcePage": 1,
+      "area": 130.81,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 262764423,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 26251442,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 19707332,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 13138221
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 13138221,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 170796875,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "12",
+      "sourcePage": 1,
+      "area": 217.325,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 272874635,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 27262462,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 20465598,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 13643732
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 13643732,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 177368513,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "21",
+      "sourcePage": 1,
+      "area": 130.81,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 212721356,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 21247135,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 15954102,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 10636068
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 10636068,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 138268881,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "31",
+      "sourcePage": 1,
+      "area": 130.81,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 214948806,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 21469882,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16121160,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 10747440
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 10747440,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 139716724,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "32",
+      "sourcePage": 1,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 214932374,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 21468237,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16119928,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 10746619
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 10746619,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 139706043,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "61",
+      "sourcePage": 1,
+      "area": 130.81,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 218735468,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 21848548,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16405160,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 10936773
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 10936773,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 142178054,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "62",
+      "sourcePage": 1,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 218718746,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 21846875,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16403906,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 10935937
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 10935937,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 142167185,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "71",
+      "sourcePage": 1,
+      "area": 130.81,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 220517427,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 22026743,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16538807,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11025871
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11025871,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 143336328,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "72",
+      "sourcePage": 1,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 220500569,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 22025057,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16537543,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11025028
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11025028,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 143325370,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "81",
+      "sourcePage": 1,
+      "area": 130.81,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 220962916,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 22071291,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16572219,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11048146
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11048146,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 143625895,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "82",
+      "sourcePage": 1,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 220946023,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 22069602,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16570952,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11047301
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11047301,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 143614915,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "91",
+      "sourcePage": 1,
+      "area": 130.81,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 221631152,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 22138115,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16622336,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11081558
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11081558,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 144060249,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "92",
+      "sourcePage": 1,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 221614208,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 22136421,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16621066,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11080710
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11080710,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 144049235,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "101",
+      "sourcePage": 1,
+      "area": 130.81,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 222744875,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 22249486,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16705866,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11137244
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11137244,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 144784169,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "111",
+      "sourcePage": 1,
+      "area": 130.81,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 224972324,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 22472233,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16872924,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11248616
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11248616,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 146232011,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "112",
+      "sourcePage": 2,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 224955125,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 22470514,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 16871634,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11247756
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11247756,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 146220831,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "122",
+      "sourcePage": 2,
+      "area": 130.06,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 227182405,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 22693242,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17038680,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11359120
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11359120,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 147668563,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "131",
+      "sourcePage": 2,
+      "area": 130.81,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 230540946,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23029095,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17290571,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11527047
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11527047,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 149851615,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "142",
+      "sourcePage": 2,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 231636961,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23138696,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17372772,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11581848
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11581848,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 150564025,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "151",
+      "sourcePage": 2,
+      "area": 131.45,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 233907235,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23365722,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17543043,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11695362
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11695362,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 152039703,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "152",
+      "sourcePage": 2,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 232750601,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23250060,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17456295,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11637530
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11637530,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 151287891,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "162",
+      "sourcePage": 2,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 233864240,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23361424,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17539818,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11693212
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11693212,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 152011756,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "171",
+      "sourcePage": 2,
+      "area": 131.45,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 236145582,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23589558,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17710919,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11807279
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11807279,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 153494628,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "172",
+      "sourcePage": 2,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 234977853,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23472785,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17623339,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11748893
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11748893,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 152735604,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "181",
+      "sourcePage": 2,
+      "area": 131.45,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 253687827,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 25343783,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 19026587,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 12684391
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 12684391,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 164897088,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "191",
+      "sourcePage": 2,
+      "area": 131.45,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 238383930,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23813394,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17878795,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11919196
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11919196,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 154949554,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "202",
+      "sourcePage": 2,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 238318796,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23806879,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17873910,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11915940
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11915940,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 154907217,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "212",
+      "sourcePage": 2,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 238764252,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23851424,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17907319,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11938213
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11938213,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 155196764,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "222",
+      "sourcePage": 2,
+      "area": 130.795,
+      "sourceStatus": "Disponível",
+      "parking": 2,
+      "totalCents": 239209708,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23895972,
+          "firstDue": "2026-11-30"
+        },
+        {
+          "label": "Mensais",
+          "count": 2,
+          "amountCents": 17940728,
+          "firstDue": "2026-12-30"
+        },
+        {
+          "label": "Intermediária",
+          "count": 1,
+          "amountCents": 11960485
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 11960485,
+          "firstDue": "2027-01-30"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 155486310,
+          "firstDue": "2027-02-28"
+        },
+        {
+          "label": "Periodicidade",
+          "count": 1,
+          "amountCents": 25000,
+          "firstDue": "2030-12-31"
+        }
+      ],
+      "roundingCents": 0
+    }
+  ],
+  "notes": "O PDF registra parcelas sujeitas à atualização pelo INCC, conforme contrato. O campo de vencimento da intermediária não traz uma data válida na fonte."
+}

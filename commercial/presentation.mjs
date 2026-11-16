@@ -61,7 +61,7 @@ async function initializeFinance(root) {
         unit.terraceArea == null ? null : decimal.format(unit.terraceArea) + ' m² de terraço',
         unit.typology ?? (unit.bedrooms == null ? null : unit.bedrooms + ' dorm.'),
         unit.suites == null ? null : unit.suites + ' suítes',
-        unit.parking == null ? null : unit.parking + ' vagas'
+        unit.parking == null ? null : unit.parking + (unit.parking === 1 ? ' vaga' : ' vagas')
       ].filter(Boolean);
       const overview = element('div');
       overview.className = 'commercial-price';
