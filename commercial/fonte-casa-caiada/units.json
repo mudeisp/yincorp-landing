@@ -1,0 +1,750 @@
+{
+  "project": "Fonte Casa Caiada",
+  "reference": "2026-09",
+  "source": "tabela_fonte_casa_caiada_outubro_2026(1).pdf",
+  "sourceSha256": "b90b711eb45e1b12d8a51159b0595e25396f73b6a9370a6fb0cf4c30f7e45bbf",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "Térreo 02",
+      "coveredArea": 63.61,
+      "parking": 1,
+      "parkingIds": [
+        "5"
+      ],
+      "valuationCents": 41372500,
+      "totalCents": 46346500,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4634700
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 4476600
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 37235300
+        }
+      ],
+      "roundingCents": -100,
+      "sourcePage": 1
+    },
+    {
+      "id": "Térreo 03",
+      "coveredArea": 74.88,
+      "parking": 1,
+      "parkingIds": [
+        "39"
+      ],
+      "valuationCents": 48191000,
+      "totalCents": 52672000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5267200
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 4032900
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 43371900
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "101",
+      "coveredArea": 66.71,
+      "parking": 1,
+      "parkingIds": [
+        "35"
+      ],
+      "valuationCents": 43361500,
+      "totalCents": 43361500,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4336200
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 39025400
+        }
+      ],
+      "roundingCents": -100,
+      "sourcePage": 1
+    },
+    {
+      "id": "102",
+      "coveredArea": 63.2,
+      "parking": 1,
+      "parkingIds": [
+        "15"
+      ],
+      "valuationCents": 41080000,
+      "totalCents": 41080000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4108000
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 36972000
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "103",
+      "coveredArea": 74.14,
+      "parking": 1,
+      "parkingIds": [
+        "36"
+      ],
+      "valuationCents": 48191000,
+      "totalCents": 48191000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4819100
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 43371900
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "104",
+      "coveredArea": 63.2,
+      "parking": 1,
+      "parkingIds": [
+        "18"
+      ],
+      "valuationCents": 41080000,
+      "totalCents": 41080000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4108000
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 36972000
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "202",
+      "coveredArea": 63.2,
+      "parking": 1,
+      "parkingIds": [
+        "14"
+      ],
+      "valuationCents": 41080000,
+      "totalCents": 41080000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4108000
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 36972000
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "203",
+      "coveredArea": 74.14,
+      "parking": 1,
+      "parkingIds": [
+        "37"
+      ],
+      "valuationCents": 48191000,
+      "totalCents": 48191000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4819100
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 43371900
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "204",
+      "coveredArea": 63.2,
+      "parking": 1,
+      "parkingIds": [
+        "19"
+      ],
+      "valuationCents": 41080000,
+      "totalCents": 41080000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4108000
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 36972000
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "301",
+      "coveredArea": 66.71,
+      "parking": 1,
+      "parkingIds": [
+        "23"
+      ],
+      "valuationCents": 43361500,
+      "totalCents": 44695700,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4469600
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 1200800
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 39025400
+        }
+      ],
+      "roundingCents": -100,
+      "sourcePage": 1
+    },
+    {
+      "id": "302",
+      "coveredArea": 63.2,
+      "parking": 1,
+      "parkingIds": [
+        "13"
+      ],
+      "valuationCents": 41080000,
+      "totalCents": 42344000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4234400
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 1137600
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 36972000
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "303",
+      "coveredArea": 74.14,
+      "parking": 1,
+      "parkingIds": [
+        "38"
+      ],
+      "valuationCents": 48191000,
+      "totalCents": 49673800,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4967400
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 1334500
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 43371900
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "501",
+      "coveredArea": 66.71,
+      "parking": 1,
+      "parkingIds": [
+        "25"
+      ],
+      "valuationCents": 43361500,
+      "totalCents": 48698300,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4869800
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 4803100
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 39025400
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "502",
+      "coveredArea": 63.2,
+      "parking": 1,
+      "parkingIds": [
+        "11"
+      ],
+      "valuationCents": 41080000,
+      "totalCents": 47400000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4740000
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 5688000
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 36972000
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "601",
+      "coveredArea": 66.71,
+      "parking": 1,
+      "parkingIds": [
+        "26"
+      ],
+      "valuationCents": 43361500,
+      "totalCents": 48698300,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4869800
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 4803100
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 39025400
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "603",
+      "coveredArea": 74.14,
+      "parking": 1,
+      "parkingIds": [
+        "3"
+      ],
+      "valuationCents": 48191000,
+      "totalCents": 60053400,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6005300
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 4670800
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 6005300
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 43371900
+        }
+      ],
+      "roundingCents": 100,
+      "sourcePage": 1
+    },
+    {
+      "id": "701",
+      "coveredArea": 66.71,
+      "parking": 1,
+      "parkingIds": [
+        "27"
+      ],
+      "valuationCents": 43361500,
+      "totalCents": 48698300,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4869800
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": -66700
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 4869800
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 39025400
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "702",
+      "coveredArea": 63.2,
+      "parking": 1,
+      "parkingIds": [
+        "9"
+      ],
+      "valuationCents": 41080000,
+      "totalCents": 52456000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5245600
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 4992800
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 5245600
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 36972000
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "703",
+      "coveredArea": 74.14,
+      "parking": 1,
+      "parkingIds": [
+        "4"
+      ],
+      "valuationCents": 48191000,
+      "totalCents": 61536200,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6153600
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 5857100
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 6153600
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 43371900
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "803",
+      "coveredArea": 74.14,
+      "parking": 1,
+      "parkingIds": [
+        "42"
+      ],
+      "valuationCents": 48191000,
+      "totalCents": 61536200,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6153600
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 5857100
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 6153600
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 43371900
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "804",
+      "coveredArea": 63.2,
+      "parking": 1,
+      "parkingIds": [
+        "33"
+      ],
+      "valuationCents": 41080000,
+      "totalCents": 52456000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5245600
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 4992800
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 5245600
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 36972000
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "903",
+      "coveredArea": 74.14,
+      "parking": 1,
+      "parkingIds": [
+        "41"
+      ],
+      "valuationCents": 48191000,
+      "totalCents": 61536200,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6153600
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 5857100
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 6153600
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 43371900
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "904",
+      "coveredArea": 63.2,
+      "parking": 1,
+      "parkingIds": [
+        "32"
+      ],
+      "valuationCents": 41080000,
+      "totalCents": 52456000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5245600
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 4992800
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 5245600
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 36972000
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "1001",
+      "coveredArea": 66.71,
+      "parking": 1,
+      "parkingIds": [
+        "30"
+      ],
+      "valuationCents": 43361500,
+      "totalCents": 50032500,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5003300
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 1000600
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 5003300
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 39025400
+        }
+      ],
+      "roundingCents": -100,
+      "sourcePage": 1
+    },
+    {
+      "id": "1003",
+      "coveredArea": 74.14,
+      "parking": 1,
+      "parkingIds": [
+        "40"
+      ],
+      "valuationCents": 48191000,
+      "totalCents": 63019000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6301900
+        },
+        {
+          "label": "FGTS + 12 parcelas (valor agregado)",
+          "count": 1,
+          "amountCents": 7043300
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 6301900
+        },
+        {
+          "label": "Financiamento Caixa",
+          "count": 1,
+          "amountCents": 43371900
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    }
+  ],
+  "notes": "Data impressa de atualização: 10/09/2026. O campo FGTS + 12 parcelas é transcrito como valor agregado, pois o PDF não separa o FGTS das mensalidades. Na unidade 701 o valor agregado é negativo na tabela. Confirme a composição e condições atuais com a Yincorp."
+}
