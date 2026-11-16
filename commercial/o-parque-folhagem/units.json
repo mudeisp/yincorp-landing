@@ -1,0 +1,598 @@
+{
+  "project": "O Parque Folhagem",
+  "reference": "2026-10",
+  "source": "tabela_o_parque_folhagem_outubro_2026.pdf",
+  "sourceSha256": "fbee143a2f73ff7d0f0842f126884c05ecaf0cd8296a5a92d3bfa947b53a252e",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "T5-153",
+      "area": 197.72,
+      "totalArea": 373.27,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 468123471,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 58515434,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 58515434,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 351092603,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-221",
+      "area": 197.72,
+      "totalArea": 370.74,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 431976839,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 323982629,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-231",
+      "area": 197.72,
+      "totalArea": 375.53,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 431976839,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 323982629,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-232",
+      "area": 167.04,
+      "totalArea": 325.94,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 371636373,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 46454547,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 46454547,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 278727280,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-241",
+      "area": 197.72,
+      "totalArea": 372.76,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 431976839,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 323982629,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-251",
+      "area": 197.72,
+      "totalArea": 373.83,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 431976839,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 323982629,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-261",
+      "area": 197.72,
+      "totalArea": 375.53,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 431976839,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 323982629,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-281",
+      "area": 197.72,
+      "totalArea": 365.95,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 431976839,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 53997105,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 323982629,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-321",
+      "area": 197.72,
+      "totalArea": 375.53,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 471868373,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 58983547,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 58983547,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 353901280,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-324",
+      "area": 167.04,
+      "totalArea": 326.2,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 397926234,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 49740779,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 49740779,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 298444676,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-331",
+      "area": 197.72,
+      "totalArea": 374.04,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 471868373,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 58983547,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 58983547,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 353901280,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-334",
+      "area": 167.04,
+      "totalArea": 323.59,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 397926234,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 49740779,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 49740779,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 298444676,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-361",
+      "area": 197.72,
+      "totalArea": 375.53,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 471868373,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 58983547,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 58983547,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 353901280,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-374",
+      "area": 167.04,
+      "totalArea": 321.92,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 397926234,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 49740779,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 49740779,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 298444676,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-381",
+      "area": 197.72,
+      "totalArea": 365.14,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 491546875,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 61443359,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 61443359,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 368660156,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 1,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-394",
+      "area": 167.04,
+      "totalArea": 321.92,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 419568474,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 52446059,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 52446059,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 314676356,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-402",
+      "area": 167.04,
+      "totalArea": 321.92,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 426124619,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 53265577,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 53265577,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 319593464,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 1,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-404",
+      "area": 167.04,
+      "totalArea": 321.92,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 419568474,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 52446059,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 52446059,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 314676356,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    },
+    {
+      "id": "T5-424",
+      "area": 167.04,
+      "totalArea": 340.59,
+      "parking": 3,
+      "sourceStatus": "Disponível",
+      "totalCents": 419568474,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 52446059,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 52446059,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 314676356,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 4
+    }
+  ]
+}

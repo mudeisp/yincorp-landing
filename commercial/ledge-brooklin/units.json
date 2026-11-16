@@ -1,0 +1,850 @@
+{
+  "project": "Ledge Brooklin — Residencial",
+  "reference": "2026-10",
+  "source": "tabela_ledge_brooklin_-_residencial_outubro_2026.pdf",
+  "sourceSha256": "7365fb55d8f0de7429cc72bb57cdac98182b4c5c8452e8b568e4cd259734a2cd",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "U-0122",
+      "area": 93.4,
+      "totalArea": 145.07,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 179020076,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 31328513,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 31328513,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 116363049,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 1,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-0132",
+      "area": 93.4,
+      "totalArea": 145.07,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 180828359,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 31644963,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 31644963,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 117538433,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-0181",
+      "area": 122.45,
+      "totalArea": 207.66,
+      "parking": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 249828955,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 43720067,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 43720067,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 162388821,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-0182",
+      "area": 93.4,
+      "totalArea": 142.6,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 172104438,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 30118277,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 30118277,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 111867885,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-1223",
+      "area": 70.05,
+      "totalArea": 115.14,
+      "parking": 1,
+      "sourceStatus": "Reservada",
+      "totalCents": 136022816,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23803993,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 23803993,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 88414830,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-1232",
+      "area": 80.85,
+      "totalArea": 128.99,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 177253131,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 31019298,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 31019298,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 115214535,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-1242",
+      "area": 80.85,
+      "totalArea": 128.99,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 178983417,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 31322098,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 31322098,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 116339221,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-1262",
+      "area": 80.85,
+      "totalArea": 128.99,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 180731001,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 31627925,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 31627925,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 117475151,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-1271",
+      "area": 122.45,
+      "totalArea": 207.66,
+      "parking": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 275446748,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 48203181,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 48203181,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 179040386,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-1272",
+      "area": 80.85,
+      "totalArea": 128.99,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 180731001,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 31627925,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 31627925,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 117475151,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-1292",
+      "area": 80.85,
+      "totalArea": 128.99,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 182496064,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 31936811,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 31936811,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 118622442,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-1293",
+      "area": 70.05,
+      "totalArea": 115.14,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 140144443,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 24525278,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 24525278,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 91093888,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-1313",
+      "area": 70.05,
+      "totalArea": 115.14,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 141545888,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 24770530,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 24770530,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 92004827,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 1,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-1321",
+      "area": 352.45,
+      "totalArea": 479.01,
+      "parking": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 677055845,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 118484773,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 118484773,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 440086299,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2121",
+      "area": 122.45,
+      "totalArea": 207.66,
+      "parking": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 254774492,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 44585536,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 44585536,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 165603420,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2171",
+      "area": 122.45,
+      "totalArea": 207.66,
+      "parking": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 262381711,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 45916799,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 45916799,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 170548112,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 1,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2191",
+      "area": 122.45,
+      "totalArea": 207.66,
+      "parking": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 264942979,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 46365021,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 46365021,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 172212936,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 1,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2223",
+      "area": 70.05,
+      "totalArea": 115.14,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 136022816,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 23803993,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 23803993,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 88414830,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2241",
+      "area": 122.45,
+      "totalArea": 207.66,
+      "parking": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 272781484,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 47736760,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 47736760,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 177307965,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2243",
+      "area": 70.05,
+      "totalArea": 115.14,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 137383044,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 24042033,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 24042033,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 89298979,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2261",
+      "area": 122.45,
+      "totalArea": 207.66,
+      "parking": 2,
+      "sourceStatus": "Disponível",
+      "totalCents": 275446748,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 48203181,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 48203181,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 179040386,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2262",
+      "area": 80.85,
+      "totalArea": 128.99,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 180731001,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 31627925,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 31627925,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 117475151,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2263",
+      "area": 70.05,
+      "totalArea": 115.14,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 138756875,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 24282453,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 24282453,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 90191969,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2272",
+      "area": 80.85,
+      "totalArea": 128.99,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 180731001,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 31627925,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 31627925,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 117475151,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2273",
+      "area": 70.05,
+      "totalArea": 115.14,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 138756875,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 24282453,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 24282453,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 90191969,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2282",
+      "area": 80.85,
+      "totalArea": 128.99,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 182496064,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 31936811,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 31936811,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 118622442,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2302",
+      "area": 80.85,
+      "totalArea": 128.99,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 184278779,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 32248786,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 32248786,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 119781206,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 1,
+      "sourcePage": 1
+    },
+    {
+      "id": "U-2303",
+      "area": 70.05,
+      "totalArea": 115.14,
+      "parking": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 141545888,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 24770530,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 24770530,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 92004827,
+          "firstDue": "2026-10"
+        }
+      ],
+      "roundingCents": 1,
+      "sourcePage": 2
+    }
+  ],
+  "notes": "A tabela registra correção por IGP-M após dezembro de 2025 e juros de 1% ao mês pela tabela Price para parcelas a partir de janeiro de 2026. Financiamento depende das condições bancárias e das cláusulas contratuais."
+}
