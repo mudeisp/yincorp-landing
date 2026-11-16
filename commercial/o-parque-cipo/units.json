@@ -1,0 +1,257 @@
+{
+  "project": "O Parque Cipó",
+  "reference": "2026-10",
+  "source": "tabela_o_parque_cipo_outubro_2026.pdf",
+  "sourceSha256": "e7bdc63711859aeba4b2874a3552215f279d4aef6219587b13e2a1741a7bc25a",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "T6-323",
+      "tower": "Cipó",
+      "area": 104.6,
+      "bedrooms": 3,
+      "suites": 3,
+      "parking": 2,
+      "totalCents": 222243759,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 27780470,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 27780470,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 166682819,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "T6-333",
+      "tower": "Cipó",
+      "area": 104.6,
+      "bedrooms": 3,
+      "suites": 3,
+      "parking": 2,
+      "totalCents": 222243759,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 27780470,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 27780470,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 166682819,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "T6-343",
+      "tower": "Cipó",
+      "area": 104.6,
+      "bedrooms": 3,
+      "suites": 3,
+      "parking": 2,
+      "totalCents": 229241620,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 28655203,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 28655203,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 171931215,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1
+    },
+    {
+      "id": "T6-363",
+      "tower": "Cipó",
+      "area": 104.6,
+      "bedrooms": 3,
+      "suites": 3,
+      "parking": 2,
+      "totalCents": 264536609,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 33067076,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 33067076,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 198402457,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1
+    },
+    {
+      "id": "T6-364",
+      "tower": "Cipó",
+      "area": 104.6,
+      "bedrooms": 3,
+      "suites": 3,
+      "parking": 2,
+      "totalCents": 230462876,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 28807860,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 28807860,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 172847157,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1
+    },
+    {
+      "id": "T6-373",
+      "tower": "Cipó",
+      "area": 104.6,
+      "bedrooms": 3,
+      "suites": 3,
+      "parking": 2,
+      "totalCents": 234696974,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 29337122,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 29337122,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 176022731,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1
+    },
+    {
+      "id": "T6-383",
+      "tower": "Cipó",
+      "area": 104.6,
+      "bedrooms": 3,
+      "suites": 3,
+      "parking": 2,
+      "totalCents": 239281677,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 29910210,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 29910210,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 179461258,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": -1,
+      "sourcePage": 1
+    },
+    {
+      "id": "T6-384",
+      "tower": "Cipó",
+      "area": 104.6,
+      "bedrooms": 3,
+      "suites": 3,
+      "parking": 2,
+      "totalCents": 237789435,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 29723679,
+          "firstDue": "2026-10"
+        },
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 29723679,
+          "firstDue": "2026-11"
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 178342076,
+          "firstDue": "2026-12"
+        }
+      ],
+      "roundingCents": 1,
+      "sourcePage": 1
+    }
+  ]
+}
