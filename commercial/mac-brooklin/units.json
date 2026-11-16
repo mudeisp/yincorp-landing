@@ -1,0 +1,1186 @@
+{
+  "project": "MAC Brooklin",
+  "reference": "2026-11",
+  "source": "tabela_mac_brooklin_novembro_2026.pdf",
+  "sourceSha256": "e390eb0161b4affe0338b81a5eb007184ea185810a133c57b4e9a64315d8bd2a",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "Andar 1 · Final 2",
+      "floorRange": "1",
+      "final": 2,
+      "area": 138.74,
+      "totalCents": 254035053,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 12701752
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3175438
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1129045,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 10161402,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 22863154,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 165122781,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 168271280,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 1 · Final 3",
+      "floorRange": "1",
+      "final": 3,
+      "area": 138.74,
+      "totalCents": 248792040,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 12439602
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3109901
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1105742,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 9951682,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 22391284,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 161714830,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 164798347,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 2 · Final 2",
+      "floorRange": "2",
+      "final": 2,
+      "area": 138.74,
+      "totalCents": 254035053,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 12701752
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3175438
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1129045,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 10161402,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 22863154,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 165122781,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 168271280,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 2 · Final 3",
+      "floorRange": "2",
+      "final": 3,
+      "area": 138.74,
+      "totalCents": 248792040,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 12439602
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3109901
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1105742,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 9951682,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 22391284,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 161714830,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 164798347,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 2 · Final 5",
+      "floorRange": "2",
+      "final": 5,
+      "area": 80.07,
+      "totalCents": 144369932,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7218497
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 1804624
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 641644,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 5774797,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 12993294,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 93840459,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 95629774,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 3–5 · Final 2",
+      "floorRange": "3–5",
+      "final": 2,
+      "area": 138.74,
+      "totalCents": 257692146,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 12884608
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3221152
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1145298,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 10307686,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 23192294,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 167499900,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 170693725,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 3–5 · Final 3",
+      "floorRange": "3–5",
+      "final": 3,
+      "area": 138.74,
+      "totalCents": 252449147,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 12622458
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3155614
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1121996,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 10097966,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 22720424,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 164091949,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 167220792,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 3–5 · Final 5",
+      "floorRange": "3–5",
+      "final": 5,
+      "area": 80.07,
+      "totalCents": 146119343,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7305967
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 1826492
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 649419,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 5844774,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 13150741,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 94977577,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 96788574,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 6–8 · Final 5",
+      "floorRange": "6–8",
+      "final": 5,
+      "area": 80.07,
+      "totalCents": 147868612,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7393430
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 1848358
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 657194,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 5914744,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 13308175,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 96114595,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 97947272,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 9–11 · Final 3",
+      "floorRange": "9–11",
+      "final": 3,
+      "area": 138.74,
+      "totalCents": 259763368,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 12988168
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3247042
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1154504,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 10390535,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 23378703,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 168846187,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 172065682,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 9–11 · Final 5",
+      "floorRange": "9–11",
+      "final": 5,
+      "area": 80.07,
+      "totalCents": 149618020,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7480901
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 1870225
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 664969,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 5984721,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 13465622,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 97251713,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 99106072,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 12–14 · Final 3",
+      "floorRange": "12–14",
+      "final": 3,
+      "area": 138.74,
+      "totalCents": 263420478,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 13171024
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3292756
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1170758,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 10536819,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 23707842,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 171223306,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 174488127,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 15–17 · Final 3",
+      "floorRange": "15–17",
+      "final": 3,
+      "area": 138.74,
+      "totalCents": 267077571,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 13353879
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3338470
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1187011,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 10683103,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 24036982,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 173600426,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 176910573,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 15–17 · Final 5",
+      "floorRange": "15–17",
+      "final": 5,
+      "area": 80.07,
+      "totalCents": 153116697,
+      "roundingCents": 0,
+      "sourcePage": 4,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7655834
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 1913959
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 680519,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 6124668,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 13780502,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 99525847,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 101423568,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 18–20 · Final 3",
+      "floorRange": "18–20",
+      "final": 3,
+      "area": 138.74,
+      "totalCents": 272350147,
+      "roundingCents": 0,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 13617507
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3404377
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1210445,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 10894006,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 24511513,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 177027597,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 180403092,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 18–20 · Final 5",
+      "floorRange": "18–20",
+      "final": 5,
+      "area": 80.07,
+      "totalCents": 154865942,
+      "roundingCents": 0,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7743297
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 1935824
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 688293,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 6194638,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 13937935,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 100662864,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 102582266,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 21–23 · Final 3",
+      "floorRange": "21–23",
+      "final": 3,
+      "area": 138.74,
+      "totalCents": 279664371,
+      "roundingCents": 0,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 13983218
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3495805
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1242953,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 11186575,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 25169793,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 181781836,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 185247984,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 21–23 · Final 5",
+      "floorRange": "21–23",
+      "final": 5,
+      "area": 80.07,
+      "totalCents": 156615352,
+      "roundingCents": 0,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7830768
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 1957692
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 696068,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 6264614,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 14095382,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 101799982,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 103741066,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 24–26 · Final 3",
+      "floorRange": "24–26",
+      "final": 3,
+      "area": 138.74,
+      "totalCents": 282102339,
+      "roundingCents": 0,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 14105117
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3526279
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1253788,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 11284094,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 25389211,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 183366523,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 186862887,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 27–29 · Final 2",
+      "floorRange": "27–29",
+      "final": 2,
+      "area": 138.74,
+      "totalCents": 289783596,
+      "roundingCents": 0,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 14489180
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3622295
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1287927,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 11591344,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 26080524,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 188359338,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 191950903,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 27–29 · Final 3",
+      "floorRange": "27–29",
+      "final": 3,
+      "area": 138.74,
+      "totalCents": 284540597,
+      "roundingCents": 0,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 14227030
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3556757
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1264625,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 11381624,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 25608654,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 184951387,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 188477970,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 27–29 · Final 5",
+      "floorRange": "27–29",
+      "final": 5,
+      "area": 80.07,
+      "totalCents": 160114028,
+      "roundingCents": 0,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8005701
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 2001425
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 711618,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 6404561,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 14410263,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 104074118,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 106058564,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 30–32 · Final 2",
+      "floorRange": "30–32",
+      "final": 2,
+      "area": 138.74,
+      "totalCents": 292221587,
+      "roundingCents": 0,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 14611079
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3652770
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1298763,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 11688863,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 26299942,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 189944026,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 193565807,
+        "date": "2028-12-01"
+      }
+    },
+    {
+      "id": "Andar 30–32 · Final 3",
+      "floorRange": "30–32",
+      "final": 3,
+      "area": 138.74,
+      "totalCents": 286978570,
+      "roundingCents": 0,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 14348929
+        },
+        {
+          "label": "Mensais · 30/60/90/120 dias",
+          "count": 4,
+          "amountCents": 3587232
+        },
+        {
+          "label": "Mensais",
+          "count": 18,
+          "amountCents": 1275460,
+          "firstDue": "2027-04-01"
+        },
+        {
+          "label": "Anuais",
+          "count": 2,
+          "amountCents": 11479143,
+          "firstDue": "2027-05-01"
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 25828072,
+          "firstDue": "2028-10-01"
+        },
+        {
+          "label": "Pré-financiamento",
+          "count": 1,
+          "amountCents": 186536075,
+          "firstDue": "2028-09-01"
+        }
+      ],
+      "financingReference": {
+        "amountCents": 190092875,
+        "date": "2028-12-01"
+      }
+    }
+  ],
+  "notes": "A tabela agrupa valores por faixa de andares e final e não discrimina estoque por apartamento. O preço total impresso considera o pré-financiamento no fluxo nominal. O valor de financiamento de dezembro consta como referência separada. Correção conforme contrato."
+}

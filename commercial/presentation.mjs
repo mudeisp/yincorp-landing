@@ -78,6 +78,9 @@ async function initializeFinance(root) {
       if (unit.stages?.length) table.append(paymentTable(unit.stages));
       const payment = unit.stages?.length ? table : element('p', 'A tabela de referência informa o preço, sem detalhar as parcelas. Consulte a Yincorp sobre as condições de pagamento.');
       output.replaceChildren(overview, payment, element('p', 'Referência: ' + formatPeriod(data.reference) + ' · ' + data.source + ', p. ' + unit.sourcePage + '.'));
+      if (unit.financingReference) {
+        output.append(element('p', 'Financiamento indicado separadamente no PDF em ' + formatDueDate(unit.financingReference.date) + ': ' + formatCents(unit.financingReference.amountCents) + '.'));
+      }
       if (unit.sourceStatus) output.append(element('p', 'Situação registrada na data da tabela: ' + unit.sourceStatus + '.'));
       if (data.notes) output.append(element('p', data.notes));
       if (unit.roundingCents) {
