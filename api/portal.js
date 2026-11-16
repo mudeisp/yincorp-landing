@@ -34,7 +34,7 @@ function enrichMandarim(body){
     +'<h2 id="mandarim-book-title" style="font-size:clamp(1.8rem,4vw,3rem);line-height:1.15;margin:12px 0">Mandarim The Legend em detalhes</h2>'
     +'<p>Perspectivas, plantas e condições da tabela comercial histórica. Av. Morumbi, 7.395 · Brooklin · São Paulo.</p>'
     +'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;margin:24px 0">'+gallery+'</div>'
-    +'<section id="mandarim-finance" aria-labelledby="mandarim-finance-title" style="margin:32px 0;padding:24px;background:#f6f4ed;border-radius:12px">'
+    +'<section id="mandarim-finance" class="mf" aria-labelledby="mandarim-finance-title" style="margin:32px 0;padding:24px;background:#f6f4ed;border-radius:12px">'
     +'<h3 id="mandarim-finance-title" style="font-size:1.6rem;margin:0 0 12px">Tabela financeira por unidade</h3>'
     +'<p>Selecione andar e final para visualizar preço, entrada, parcelas e saldo da tabela de outubro de 2026.</p>'
     +'<label for="mandarim-unit" style="display:block;font-weight:600;margin:16px 0 6px">Unidade da tabela histórica</label>'
@@ -48,7 +48,7 @@ function enrichMandarim(body){
   const main=/<main\b[^>]*>/i.exec(body);
   if(!main)return body;
   const insertion=main.index+main[0].length;
-  const script='<script type="module" src="/mandarim-the-legend/finance-portal.mjs"></script>';
+  const script='<link rel="stylesheet" href="/mandarim-the-legend/finance-portal.css"><script type="module" src="/mandarim-the-legend/finance-portal.mjs"></script>';
   return body.slice(0,insertion)+section+body.slice(insertion).replace('</body>',script+'</body>');
 }
 
