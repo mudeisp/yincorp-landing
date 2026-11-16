@@ -101,6 +101,7 @@ export default async function portal(req,res){
       // It does not rewrite canonical tags, forms, search/filter behavior or analytics.
       body=body.replace(/<html\b([^>]*)>/i,(tag,attrs)=>/<html\b[^>]*class=/i.test(tag)?tag.replace(/class=(["'])(.*?)\1/i,(_m,q,classes)=>`class=${q}${classes} yincorp-editorial${q}`):`<html${attrs} class="yincorp-editorial">`);
       body=body.replace('</head>','<link rel="stylesheet" href="/portal-assets/mandarim-editorial-global.css?v=20261116"></head>');
+      body=body.replace('</body>','<script defer src="/portal-assets/mandarim-typewriter-global.js?v=20261116"></script></body>');
     }
     return privacySend(res.statusCode===200?withPrivacyFooter(body):body);
   };
