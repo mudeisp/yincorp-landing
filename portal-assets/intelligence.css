@@ -185,16 +185,16 @@
 .ynti-premium .ynti-gallery-item .ynti-option){
   background:var(--mi-card);border-color:var(--mi-border);color:var(--mi-paper)
 }
-.ynti .ynti-premium .ynti-gallery-item .ynti-photo,
+.ynti.ynti-premium .ynti-gallery-item .ynti-photo,
 .ynti .ynti-photo{background:linear-gradient(140deg,#706453,#39352e)}
-.ynti .ynti-premium .ynti-option-label strong{font:500 27px/1.04 'Cormorant Garamond',Georgia,serif;color:var(--mi-paper)}
-.ynti .ynti-premium .ynti-option-price,.ynti .ynti-price{
+.ynti.ynti-premium .ynti-option-label strong{font:500 27px/1.04 'Cormorant Garamond',Georgia,serif;color:var(--mi-paper)}
+.ynti.ynti-premium .ynti-option-price,.ynti .ynti-price{
   font-family:'Cormorant Garamond',Georgia,serif;color:#fff
 }
-.ynti .ynti-premium .ynti-option-location,.ynti .ynti-premium .ynti-option-specs,
-.ynti .ynti-premium .ynti-option-difference{color:#d9cbb8}
-.ynti .ynti-premium .ynti-option-current{color:#d8b88c;border-color:#756b5d}
-.ynti .ynti-option[aria-pressed=true],.ynti .ynti-premium .ynti-option[aria-pressed=true]{
+.ynti.ynti-premium .ynti-option-location,.ynti.ynti-premium .ynti-option-specs,
+.ynti.ynti-premium .ynti-option-difference{color:#d9cbb8}
+.ynti.ynti-premium .ynti-option-current{color:#d8b88c;border-color:#756b5d}
+.ynti .ynti-option[aria-pressed=true],.ynti.ynti-premium .ynti-option[aria-pressed=true]{
   background:#67513a;outline-color:#d4ae7c;border-color:#d4ae7c
 }
 .ynti :is(button,a,select,input):focus-visible{outline-color:#d4ae7c}
