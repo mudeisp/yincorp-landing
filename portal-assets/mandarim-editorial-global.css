@@ -1,0 +1,21 @@
+/* Yincorp editorial global design system — derived from /canva/mandarim-editorial.html. */
+/* Scoped to portal-rendered documents. Existing interaction and tracking remain unchanged. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+html.yincorp-editorial{--yi-paper:#faf7f1;--yi-ink:#28251f;--yi-muted:#716b62;--yi-line:#ded5c7;--yi-bronze:#a48154;--yi-white:#fffdfa}
+html.yincorp-editorial body{background:var(--yi-paper);color:var(--yi-ink);font-family:'Plus Jakarta Sans',Arial,sans-serif}
+html.yincorp-editorial :is(h1,h2,h3){font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;letter-spacing:-.025em}
+html.yincorp-editorial h1{font-size:clamp(3rem,6vw,6.5rem);line-height:1.03}
+html.yincorp-editorial h2{font-size:clamp(2.3rem,4vw,4.6rem);line-height:1.09}
+html.yincorp-editorial h3{font-size:clamp(1.65rem,2.5vw,2.65rem);line-height:1.14}
+html.yincorp-editorial :is(p,li){line-height:1.7}
+html.yincorp-editorial :is(header,nav){--editorial-accent:var(--yi-bronze)}
+html.yincorp-editorial :is(main,section,article){scroll-margin-top:90px}
+html.yincorp-editorial :is(main,section,article) img{max-width:100%;height:auto}
+html.yincorp-editorial :is(main,section,article) img:not([width]):not([height]){object-fit:cover}
+html.yincorp-editorial :is(button,a,input,select,textarea):focus-visible{outline:2px solid var(--yi-bronze);outline-offset:3px}
+html.yincorp-editorial :is(main,section,article) :is(.eyebrow,.kicker){color:var(--yi-bronze);letter-spacing:.15em;text-transform:uppercase}
+html.yincorp-editorial :is(main,section,article) :is(.card,.property-card,.development-card){border-color:var(--yi-line);background:var(--yi-white)}
+html.yincorp-editorial :is(main,section,article) :is(.card,.property-card,.development-card) img{object-fit:cover}
+html.yincorp-editorial #yincorp-intelligence{--yi-paper:#faf7f1;--yi-bronze:#a48154}
+@media(max-width:740px){html.yincorp-editorial h1{font-size:clamp(2.8rem,10vw,4.5rem)}html.yincorp-editorial h2{font-size:clamp(2.1rem,8vw,3.3rem)}}
+@media(prefers-reduced-motion:reduce){html.yincorp-editorial *{scroll-behavior:auto!important}}
