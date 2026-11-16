@@ -1,0 +1,401 @@
+{
+  "project": "Infinity Brooklin",
+  "reference": "2026-11",
+  "source": "tabela_infinity_brooklin_novembro_2026 (2)(1).pdf",
+  "sourceSha256": "e2cc962d8211cc518418a089b4d793b75f7c2965b52ec94bf77fbfd9795ffc68",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "East · 2º andar · Final 1",
+      "tower": "East",
+      "floor": 2,
+      "final": 1,
+      "area": 187.0,
+      "parking": 2,
+      "totalCents": 351853000,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 70370600
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 281482400,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "East · 3º andar · Final 1",
+      "tower": "East",
+      "floor": 3,
+      "final": 1,
+      "area": 187.0,
+      "parking": 2,
+      "totalCents": 351853000,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 70370600
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 281482400,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "East · 6º andar · Final 1",
+      "tower": "East",
+      "floor": 6,
+      "final": 1,
+      "area": 187.0,
+      "parking": 2,
+      "totalCents": 369713100,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 73942600
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 295770500,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "East · 8º andar · Final 1",
+      "tower": "East",
+      "floor": 8,
+      "final": 1,
+      "area": 187.0,
+      "parking": 2,
+      "totalCents": 376905900,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 75381200
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 301524700,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "East · 2º andar · Final 2",
+      "tower": "East",
+      "floor": 2,
+      "final": 2,
+      "area": 187.0,
+      "parking": 2,
+      "totalCents": 365752000,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 73150400
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 292601600,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "East · 4º andar · Final 2",
+      "tower": "East",
+      "floor": 4,
+      "final": 2,
+      "area": 187.0,
+      "parking": 2,
+      "totalCents": 365752000,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 73150400
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 292601600,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "East · 10º andar · Final 2",
+      "tower": "East",
+      "floor": 10,
+      "final": 2,
+      "area": 187.0,
+      "parking": 2,
+      "totalCents": 384046500,
+      "sourcePage": 5,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 76809300
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 307237200,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "West · 22º andar · Final 2",
+      "tower": "West",
+      "floor": 22,
+      "final": 2,
+      "area": 147.0,
+      "parking": 2,
+      "totalCents": 335972900,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 67194600
+        },
+        {
+          "label": "Mensal",
+          "count": 1,
+          "amountCents": 268778300,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "West · 8º andar · Final 3",
+      "tower": "West",
+      "floor": 8,
+      "final": 3,
+      "area": 143.0,
+      "parking": 2,
+      "totalCents": 269701800,
+      "sourcePage": 7,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 53940400
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 215761400,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "West · 19º andar · Final 3",
+      "tower": "West",
+      "floor": 19,
+      "final": 3,
+      "area": 143.0,
+      "parking": 2,
+      "totalCents": 290959000,
+      "sourcePage": 7,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 58191800
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 232767200,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "West · 20º andar · Final 3",
+      "tower": "West",
+      "floor": 20,
+      "final": 3,
+      "area": 143.0,
+      "parking": 2,
+      "totalCents": 290959000,
+      "sourcePage": 7,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 58191800
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 232767200,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "West · 21º andar · Final 3",
+      "tower": "West",
+      "floor": 21,
+      "final": 3,
+      "area": 143.0,
+      "parking": 2,
+      "totalCents": 296273400,
+      "sourcePage": 7,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 59254700
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 237018700,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "West · 22º andar · Final 3",
+      "tower": "West",
+      "floor": 22,
+      "final": 3,
+      "area": 143.0,
+      "parking": 2,
+      "totalCents": 296273400,
+      "sourcePage": 7,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 59254700
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 237018700,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "West · 13º andar · Final 4",
+      "tower": "West",
+      "floor": 13,
+      "final": 4,
+      "area": 186.0,
+      "parking": 2,
+      "totalCents": 318382000,
+      "sourcePage": 7,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 63676400
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 254705600,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "West · 19º andar · Final 4",
+      "tower": "West",
+      "floor": 19,
+      "final": 4,
+      "area": 160.0,
+      "parking": 2,
+      "totalCents": 318116000,
+      "sourcePage": 7,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 63623200
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 254492800,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "West · 21º andar · Final 4",
+      "tower": "West",
+      "floor": 21,
+      "final": 4,
+      "area": 160.0,
+      "parking": 2,
+      "totalCents": 324062000,
+      "sourcePage": 7,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 64812400
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 259249600,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    },
+    {
+      "id": "West · 22º andar · Final 4",
+      "tower": "West",
+      "floor": 22,
+      "final": 4,
+      "area": 160.0,
+      "parking": 2,
+      "totalCents": 324062000,
+      "sourcePage": 7,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 64812400
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 259249600,
+          "firstDue": "2026-12-31"
+        }
+      ]
+    }
+  ],
+  "notes": "Tabela a preço fechado de novembro de 2026. A fonte prevê reajustes conforme contrato e juros após o Habite-se nas condições indicadas. Confirme a planta e eventuais kits por unidade."
+}
