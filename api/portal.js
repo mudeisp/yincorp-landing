@@ -15,6 +15,33 @@ import {productionStore} from '../lib/seo-content/production-store.js';
 const published=state=>process.env.SEO_CONTENT_STORAGE==='private-ledger'?productionStore.published(state):getStore().published(state);
 const content=createContentHandler({store:{published},inventory:contentInventory});
 
+
+const MANDARIM_PATH='/sp/sao-paulo/empreendimento/mandarim-the-legend--orulo-46939';
+function enrichMandarim(body){
+  if(typeof body!=='string'||!body.startsWith('<!doctype html>')||!body.includes('</main>'))return body;
+  const root='/mandarim-the-legend/';
+  const figures=[
+    ['fachada.webp','Perspectiva da fachada · book p. 7'],
+    ['skydeck.webp','Skydeck · book p. 8'],
+    ['piscina.webp','Piscina · book p. 14'],
+    ['wellness.webp','Área wellness · book p. 17'],
+    ['planta-114.webp','Planta ilustrativa · book p. 36'],
+    ['planta-88.webp','Planta ilustrativa · book p. 38']
+  ];
+  const gallery=figures.map(([file,caption])=>'<figure style="margin:0"><a href="'+root+file+'" target="_blank" rel="noopener"><img src="'+root+file+'" alt="'+caption+'" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px"></a><figcaption style="font-size:.8rem;padding:.5rem 0;color:#555">'+caption+'</figcaption></figure>').join('');
+  const section='<section id="mandarim-book" aria-labelledby="mandarim-book-title" style="max-width:1180px;margin:48px auto;padding:32px 20px;color:#252525;font-family:inherit">'
+    +'<p style="letter-spacing:.12em;text-transform:uppercase;font-size:.75rem">Apresentação comercial · Cyrela</p>'
+    +'<h2 id="mandarim-book-title" style="font-size:clamp(1.8rem,4vw,3rem);line-height:1.15;margin:12px 0">Mandarim The Legend em detalhes</h2>'
+    +'<p>Conheça perspectivas e plantas extraídas do book do empreendimento, na Av. Morumbi, 7.395, Brooklin, São Paulo.</p>'
+    +'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;margin:24px 0">'+gallery+'</div>'
+    +'<h3 style="font-size:1.5rem">Referência comercial de outubro de 2026</h3>'
+    +'<p>O documento comercial contém 30 combinações históricas de unidades, com áreas de <strong>88,83 a 145,68 m²</strong> e preços impressos entre <strong>R$ 1.705.325 e R$ 3.036.554</strong>. A previsão de entrega indicada na tabela era outubro de 2027.</p>'
+    +'<p style="font-size:.9rem">Valores, condições e unidades são referências documentais de outubro de 2026, não representam estoque ou preços atuais. Confirme disponibilidade, atualização monetária e condições diretamente com a equipe Yincorp. As plantas são ilustrativas e podem não corresponder a todas as unidades.</p>'
+    +'<p><a href="'+root+'units.json" target="_blank" rel="noopener" style="text-decoration:underline">Consultar dados históricos detalhados das unidades</a></p>'
+    +'</section>';
+  return body.replace('</main>',section+'</main>');
+}
+
 async function publicInventoryRequest(path,options={}) {
   const headers={apikey:publicConfig.key,'Content-Type':'application/json'};
   if(options.prefer)headers.Prefer=options.prefer;
@@ -75,7 +102,7 @@ export default async function portal(req,res){
     const sitemapSend=res.send.bind(res);res.send=body=>sitemapSend(res.statusCode===200&&typeof body==='string'?body.replace('</sitemapindex>','<sitemap><loc>https://www.yincorp.com.br/sitemap-content-sp.xml</loc></sitemap><sitemap><loc>https://www.yincorp.com.br/sitemap-content-es.xml</loc></sitemap></sitemapindex>'):body);
   }
   if(await seo(req,res,path))return;
-  const send=res.send.bind(res);res.send=body=>send(res.statusCode===200?linkNationalEntities(decorate(body,path),path):body);
+  const send=res.send.bind(res);res.send=body=>send(res.statusCode===200?(path===MANDARIM_PATH?enrichMandarim(linkNationalEntities(decorate(body,path),path)):linkNationalEntities(decorate(body,path),path)):body);
   // Discovery links are HTML, not JS-only navigation. No commercial flow changes.
   if(['GET','HEAD'].includes(req.method)&&/^\/sp(?:\/[^/]+)?$/.test(path)){
     const baseSend=res.send.bind(res);res.send=body=>baseSend(res.statusCode===200&&typeof body==='string'?body.replace('</main>',`<nav class="wrap" aria-label="Catálogo de imóveis"><a href="/${path.split('/')[1]}/imoveis">Explorar imóveis à venda em ${path.split('/')[1].toUpperCase()}</a></nav></main>`):body);
