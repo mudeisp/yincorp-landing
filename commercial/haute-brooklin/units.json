@@ -1,0 +1,446 @@
+{
+  "project": "Haute Brooklin by EZ",
+  "reference": "2026-11",
+  "source": "tabela_haute_brooklin_by_ez_novembro_2026.pdf",
+  "sourceSha256": "c392eec86d215ef788003ce1b595ffc2ab2f61e59d6795e33320ecbe0f887509",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "23º andar · Final 4",
+      "floor": 23,
+      "final": 4,
+      "area": 138.24,
+      "parking": 2,
+      "storage": 0,
+      "totalCents": 243574000,
+      "sourcePage": 8,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 73072200
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 170501800,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 2056300,
+        "lastCents": 573300
+      }
+    },
+    {
+      "id": "28º andar · Final 4",
+      "floor": 28,
+      "final": 4,
+      "area": 138.24,
+      "parking": 2,
+      "storage": 0,
+      "totalCents": 254812000,
+      "sourcePage": 8,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 76443600
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 178368400,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 2151200,
+        "lastCents": 599800
+      }
+    },
+    {
+      "id": "29º andar · Final 4",
+      "floor": 29,
+      "final": 4,
+      "area": 138.24,
+      "parking": 2,
+      "storage": 0,
+      "totalCents": 257321000,
+      "sourcePage": 8,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 77196300
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 180124700,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 2172400,
+        "lastCents": 605700
+      }
+    },
+    {
+      "id": "8º andar · Final 3",
+      "floor": 8,
+      "final": 3,
+      "area": 138.24,
+      "parking": 2,
+      "storage": 0,
+      "totalCents": 224407000,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 67322100
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 157084900,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 1894500,
+        "lastCents": 528200
+      }
+    },
+    {
+      "id": "12º andar · Final 3",
+      "floor": 12,
+      "final": 3,
+      "area": 138.24,
+      "parking": 2,
+      "storage": 0,
+      "totalCents": 233084000,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 69925200
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 163158800,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 1967800,
+        "lastCents": 548600
+      }
+    },
+    {
+      "id": "15º andar · Final 3",
+      "floor": 15,
+      "final": 3,
+      "area": 138.24,
+      "parking": 2,
+      "storage": 0,
+      "totalCents": 240203000,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 72060900
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 168142100,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 2027900,
+        "lastCents": 565400
+      }
+    },
+    {
+      "id": "27º andar · Final 3",
+      "floor": 27,
+      "final": 3,
+      "area": 138.24,
+      "parking": 2,
+      "storage": 0,
+      "totalCents": 251925000,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 75577500
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 176347500,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 2126800,
+        "lastCents": 593000
+      }
+    },
+    {
+      "id": "28º andar · Final 3",
+      "floor": 28,
+      "final": 3,
+      "area": 138.24,
+      "parking": 2,
+      "storage": 0,
+      "totalCents": 264720000,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 79416000
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 185304000,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 2234800,
+        "lastCents": 623100
+      }
+    },
+    {
+      "id": "29º andar · Final 3",
+      "floor": 29,
+      "final": 3,
+      "area": 138.24,
+      "parking": 2,
+      "storage": 0,
+      "totalCents": 268962000,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 80688600
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 188273400,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 2270600,
+        "lastCents": 633100
+      }
+    },
+    {
+      "id": "28º andar · Final 1",
+      "floor": 28,
+      "final": 1,
+      "area": 185.11,
+      "parking": 3,
+      "storage": 1,
+      "totalCents": 356093000,
+      "sourcePage": 10,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 106827900
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 249265100,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 3006200,
+        "lastCents": 838100
+      }
+    },
+    {
+      "id": "29º andar · Final 1",
+      "floor": 29,
+      "final": 1,
+      "area": 185.11,
+      "parking": 3,
+      "storage": 1,
+      "totalCents": 369518000,
+      "sourcePage": 10,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 110855400
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 258662600,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 3119600,
+        "lastCents": 869700
+      }
+    },
+    {
+      "id": "4º andar · Final 2",
+      "floor": 4,
+      "final": 2,
+      "area": 199.59,
+      "parking": 3,
+      "storage": 1,
+      "totalCents": 305185000,
+      "sourcePage": 11,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 91555500
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 213629500,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 2576400,
+        "lastCents": 718300
+      },
+      "typology": "Garden"
+    },
+    {
+      "id": "11º andar · Final 2",
+      "floor": 11,
+      "final": 2,
+      "area": 185.11,
+      "parking": 3,
+      "storage": 1,
+      "totalCents": 317039000,
+      "sourcePage": 11,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 95111700
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 221927300,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 2676500,
+        "lastCents": 746200
+      }
+    },
+    {
+      "id": "18º andar · Final 2",
+      "floor": 18,
+      "final": 2,
+      "area": 185.11,
+      "parking": 3,
+      "storage": 1,
+      "totalCents": 351890000,
+      "sourcePage": 11,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 105567000
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 246323000,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 2970700,
+        "lastCents": 828200
+      }
+    },
+    {
+      "id": "28º andar · Final 2",
+      "floor": 28,
+      "final": 2,
+      "area": 185.11,
+      "parking": 3,
+      "storage": 1,
+      "totalCents": 360045000,
+      "sourcePage": 11,
+      "stages": [
+        {
+          "label": "Ato",
+          "count": 1,
+          "amountCents": 108013500
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 252031500,
+          "firstDue": "2026-12-11"
+        }
+      ],
+      "financingSimulation": {
+        "method": "SAC",
+        "count": 300,
+        "firstCents": 3039600,
+        "lastCents": 847400
+      }
+    }
+  ],
+  "notes": "Tabela de novembro de 2026. A simulação SAC é reproduzida como referência histórica do PDF. As notas contratuais mencionam PRICE, juros e correções em condições específicas. Confirme o sistema aplicável e os valores atuais com a Yincorp."
+}
