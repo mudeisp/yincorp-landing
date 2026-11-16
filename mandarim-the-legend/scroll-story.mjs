@@ -12,3 +12,32 @@ if(root){
  };
  if('IntersectionObserver'in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){io.unobserve(e.target);reveal(e.target)}}),{threshold:.12});chapters.forEach(c=>io.observe(c));}else chapters.forEach(reveal);
 }
+
+
+/* Compact oversized editorial photography into an accessible lightbox.
+   Scoped to the Mandarim canonical page; never touches floating CTA icons. */
+(()=>{
+ const main=document.querySelector('main');if(!main)return;
+ const modal=document.createElement('dialog');modal.className='mexp-lightbox';modal.setAttribute('aria-label','Fotografia ampliada');
+ modal.innerHTML='<button type="button" class="mexp-lightbox-close" aria-label="Fechar imagem">×</button><img alt=""><p>Toque fora da imagem ou no × para fechar</p>';
+ document.body.appendChild(modal);
+ const enlarged=modal.querySelector('img'),close=modal.querySelector('button');
+ const dismiss=()=>modal.close();close.addEventListener('click',dismiss);
+ modal.addEventListener('click',e=>{if(e.target===modal)dismiss()});
+ const open=img=>{enlarged.src=img.currentSrc||img.src;enlarged.alt=img.alt||'Fotografia do empreendimento';modal.showModal()};
+ const apply=()=>{
+  const headings=[...main.querySelectorAll('h1,h2,h3,h4')];
+  const target=headings.find(h=>/espaços para o dia a dia/i.test(h.textContent||''));
+  if(!target)return;
+  let container=target.closest('section,article');if(!container)return;
+  let images=[...container.querySelectorAll('img')].filter(i=>!i.closest('#mandarim-book'));
+  if(!images.length){const next=container.nextElementSibling;images=next?[...next.querySelectorAll('img')]:[];}
+  images.forEach(img=>{
+   if(img.dataset.mexpLightbox)return;img.dataset.mexpLightbox='1';
+   img.classList.add('mexp-popup-image');img.style.cursor='zoom-in';img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','Ampliar fotografia: '+(img.alt||'espaços do empreendimento'));
+   img.addEventListener('click',()=>open(img));
+   img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img)}});
+  });
+ };
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+})();
