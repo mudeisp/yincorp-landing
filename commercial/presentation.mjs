@@ -1,0 +1,80 @@
+const currency = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+const decimal = new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2 });
+const period = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+const formatCents = cents => currency.format(cents / 100);
+const formatPeriod = month => period.format(new Date(month + '-01T00:00:00Z'));
+
+function element(tag, value) {
+  const node = document.createElement(tag);
+  if (value !== undefined) node.textContent = value;
+  return node;
+}
+
+function paymentTable(stages) {
+  const table = element('table');
+  table.append(element('caption', 'Fluxo de pagamento da tabela histórica'));
+  const heading = table.createTHead().insertRow();
+  for (const label of ['Etapa', 'Primeiro vencimento', 'Parcelas', 'Valor por parcela']) {
+    const cell = element('th', label);
+    cell.scope = 'col';
+    heading.append(cell);
+  }
+  const body = table.createTBody();
+  for (const stage of stages) {
+    const row = body.insertRow();
+    const label = element('th', stage.label);
+    label.scope = 'row';
+    row.append(label);
+    for (const value of [formatPeriod(stage.firstDue), stage.count, formatCents(stage.amountCents)]) {
+      row.append(element('td', value));
+    }
+  }
+  return table;
+}
+
+async function initializeFinance(root) {
+  const selector = root.querySelector('select');
+  const output = root.querySelector('[data-financial-breakdown]');
+
+  try {
+    const response = await fetch(root.dataset.units);
+    if (!response.ok) throw new Error('Tabela indisponível');
+    const data = await response.json();
+    const units = new Map(data.units.map(unit => [unit.id, unit]));
+    selector.replaceChildren(...data.units.map(unit => new Option(unit.id, unit.id)));
+
+    function render() {
+      const unit = units.get(selector.value);
+      const total = element('strong', formatCents(unit.totalCents));
+      const details = [
+        unit.area == null ? null : decimal.format(unit.area) + ' m²',
+        unit.bedrooms == null ? null : unit.bedrooms + ' dorm.',
+        unit.suites == null ? null : unit.suites + ' suítes',
+        unit.parking == null ? null : unit.parking + ' vagas'
+      ].filter(Boolean);
+      const overview = element('div');
+      overview.className = 'commercial-price';
+      overview.append(element('span', 'Preço total · ' + unit.id), total, element('span', details.join(' · ')));
+      const table = element('div');
+      table.className = 'commercial-table';
+      table.tabIndex = 0;
+      table.setAttribute('role', 'region');
+      table.setAttribute('aria-label', 'Parcelas por etapa');
+      table.append(paymentTable(unit.stages));
+      output.replaceChildren(overview, table, element('p', 'Referência: ' + formatPeriod(data.reference) + ' · ' + data.source + ', p. ' + unit.sourcePage + '.'));
+      if (unit.roundingCents) {
+        output.append(element('p', 'Diferença de arredondamento na fonte: ' + formatCents(Math.abs(unit.roundingCents)) + '.'));
+      }
+    }
+
+    render();
+    selector.addEventListener('change', render);
+    selector.disabled = false;
+  } catch {
+    selector.replaceChildren(new Option('Tabela indisponível'));
+    output.replaceChildren(element('p', 'Não foi possível carregar os valores. Consulte a equipe Yincorp.'));
+  }
+}
+
+for (const root of document.querySelectorAll('.commercial-finance[data-units]')) initializeFinance(root);
