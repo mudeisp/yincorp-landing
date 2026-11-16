@@ -1,4 +1,4 @@
-import { readFile,writeFile,mkdir } from 'node:fs/promises';
+import { readFile,writeFile,mkdir,copyFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { resolve,dirname,sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -22,6 +22,9 @@ await Promise.all(manifest.files.map(async file=>{
   }else if(createHash('sha256').update(bytes).digest('hex')!==file.sha256)throw new Error(`Shared source integrity mismatch: ${file.source}`);
   await mkdir(dirname(target),{recursive:true});await writeFile(target,bytes);
 }));
+await Promise.all(['global-experience.css', 'global-experience.js'].map(file =>
+  copyFile(resolve(root, 'public', file), resolve(root, 'portal-assets', file))
+));
 const legacy=await readFile(resolve(root,'.portal-shared/public-config.source'),'utf8');
 const url=/const SUPABASE_URL\s*=\s*"([^"]+)"/.exec(legacy)?.[1];
 const key=/const SUPABASE_PUBLISHABLE_KEY\s*=\s*"([^"]+)"/.exec(legacy)?.[1];
