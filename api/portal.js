@@ -29,20 +29,24 @@ function enrichMandarim(body){
     ['planta-114.webp','Planta ilustrativa · book p. 36'],
     ['planta-88.webp','Planta ilustrativa · book p. 38']
   ];
-  const gallery=figures.map(([file,caption])=>'<figure style="margin:0"><a href="'+root+file+'" target="_blank" rel="noopener"><img src="'+root+file+'" alt="'+caption+'" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px"></a><figcaption style="font-size:.8rem;padding:.5rem 0;color:#555">'+caption+'</figcaption></figure>').join('');
-  const section='<section id="mandarim-book" aria-labelledby="mandarim-book-title" style="max-width:1180px;margin:0 auto;padding:32px 20px 48px;color:#252525;font-family:inherit">'
-    +'<p style="letter-spacing:.12em;text-transform:uppercase;font-size:.75rem">Apresentação comercial · Cyrela</p>'
-    +'<h2 id="mandarim-book-title" style="font-size:clamp(1.8rem,4vw,3rem);line-height:1.15;margin:12px 0">Mandarim The Legend em detalhes</h2>'
-    +'<p>Perspectivas, plantas e condições da tabela comercial histórica. Av. Morumbi, 7.395 · Brooklin · São Paulo.</p>'
-    +'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;margin:24px 0">'+gallery+'</div>'
-    +'<section id="mandarim-finance" class="mf" aria-labelledby="mandarim-finance-title" style="margin:32px 0;padding:24px;background:#f6f4ed;border-radius:12px">'
-    +'<h3 id="mandarim-finance-title" style="font-size:1.6rem;margin:0 0 12px">Tabela financeira por unidade</h3>'
+  const titles=['Uma presença singular.','Novas perspectivas.','O tempo ganha espaço.','Um novo ritmo.','Desenhado para viver.','Escolhas que fazem sentido.'];
+  const gallery=figures.map(([file,caption],i)=>'<section class="mexp-chapter'+(i>=4?' mexp-wide':'')+'" aria-label="'+caption+'">'
+    +'<div class="mexp-visual"><img src="'+root+file+'" alt="'+caption+'" loading="'+(i===0?'eager':'lazy')+'" decoding="async"></div>'
+    +'<div class="mexp-copy"><p class="mexp-eyebrow">0'+(i+1)+' / '+caption.split(' · ')[0]+'</p><h3 class="mexp-type">'+titles[i]+'</h3><p class="mexp-type">'+caption+'</p></div>'
+    +'</section>').join('');
+  const section='<section id="mandarim-book" class="mexp" aria-labelledby="mandarim-book-title">'
+    +'<div class="mexp-intro"><p class="mexp-eyebrow">Yincorp / Apresentação arquitetônica · Cyrela</p>'
+    +'<h2 id="mandarim-book-title" class="mexp-type">Mandarim The Legend</h2>'
+    +'<p class="mexp-type">Um empreendimento para descobrir em cada detalhe. Av. Morumbi, 7.395 · Brooklin · São Paulo.</p>'
+    +'<a class="mexp-skip" href="#mandarim-finance">Consultar unidades e valores ↓</a></div>'
+    +'<div class="mexp-gallery">'+gallery+'</div>'
+    +'<div class="mexp-finance-wrap"><section id="mandarim-finance" class="mf" aria-labelledby="mandarim-finance-title">'
+    +'<h3 id="mandarim-finance-title" class="mexp-type">Encontre sua unidade.</h3>'
     +'<p>Selecione andar e final para visualizar preço, entrada, parcelas e saldo da tabela de outubro de 2026.</p>'
     +'<label for="mandarim-unit" style="display:block;font-weight:600;margin:16px 0 6px">Unidade da tabela histórica</label>'
     +'<select id="mandarim-unit" style="display:block;width:100%;max-width:650px;padding:12px;border:1px solid #bbb;border-radius:6px;background:white"><option>Carregando tabela…</option></select>'
     +'<div id="mandarim-breakdown" aria-live="polite" style="overflow-x:auto;margin-top:18px">Carregando valores históricos…</div>'
-    +'</section>'
-    +'<p style="font-size:.9rem">As 30 combinações são registros documentais de outubro de 2026, não estoque disponível. Preços, parcelas e condições exigem confirmação. A entrega prevista na tabela era outubro de 2027; as plantas são ilustrativas e variam por unidade.</p>'
+    +'</section><p class="mexp-disclaimer">As 30 combinações são registros documentais de outubro de 2026, não estoque disponível. Preços, parcelas e condições exigem confirmação. A entrega prevista na tabela era outubro de 2027; as plantas são ilustrativas e variam por unidade.</p></div>'
     +'</section>';
   // The existing Órulo listing stays on its canonical URL. Insert before its first
   // content section rather than after the listing, and do not replace its contact UI.
