@@ -136,3 +136,24 @@
 .ynti-guided .ynti-option[aria-pressed=true] .ynti-option-current{visibility:visible}
 .ynti-guided .ynti-guided-table caption{caption-side:top;text-align:left;font-size:15px;font-weight:700;padding:0 0 12px}
 @media(max-width:740px){.ynti-guided .ynti-guided-table thead th{position:sticky;top:var(--ynti-sticky-top,0px);z-index:1}.ynti-guided .ynti-guided-table tbody th,.ynti-guided .ynti-guided-table td{padding-block:12px}}
+
+/* Intelligence V2 — editorial cards with real catalog photography (global). */
+.ynti-premium .ynti-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.ynti-premium .ynti-gallery-item{border:1px solid #ded5c8;border-radius:3px;background:#fffdfa;box-shadow:0 5px 18px #241c1410}
+.ynti-premium .ynti-gallery-item .ynti-option{display:flex;flex-direction:column;width:100%;height:100%;padding:0;text-align:left;border:0;background:transparent;color:#292820;cursor:pointer}
+.ynti-premium .ynti-gallery-item .ynti-photo{display:grid;place-items:center;width:100%;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(145deg,#756a5d,#40382f);color:#eee3d5}
+.ynti-premium .ynti-gallery-item .ynti-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.ynti-premium .ynti-photo-fallback{padding:12px;text-align:center;font-size:11px;letter-spacing:.08em;color:#e7dccf}
+.ynti-premium .ynti-option-label{display:flex;flex:1;flex-direction:column;align-items:flex-start;gap:7px;padding:18px 20px 19px;width:100%;min-width:0}
+.ynti-premium .ynti-option-location{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#817263}
+.ynti-premium .ynti-option-label strong{font:400 clamp(20px,2vw,27px)/1.13 'DM Serif Display',Georgia,serif;color:#2e2922;overflow-wrap:anywhere}
+.ynti-premium .ynti-option-price{font:600 18px/1.3 Georgia,serif;color:#3d3023;margin-top:7px}
+.ynti-premium .ynti-option-specs{font-size:12px;color:#6c6258}
+.ynti-premium .ynti-option-difference{font-size:11px;color:#756454;margin-top:3px}
+.ynti-premium .ynti-option-current{margin-top:auto;padding-top:12px;border-top:1px solid #e6d9c9;width:100%;font-size:10px;letter-spacing:.07em;color:#795a37}
+.ynti-premium .ynti-option[aria-pressed=true]{outline:2px solid #ad895d;outline-offset:-2px;background:#f8f1e7}
+.ynti-premium .ynti-option:focus-visible{outline:3px solid #a77d4b;outline-offset:-3px}
+@media(hover:hover){.ynti-premium .ynti-gallery-item:hover .ynti-photo img{transform:scale(1.035)}}
+@media(min-width:741px) and (max-width:1060px){.ynti-premium .ynti-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:740px){.ynti-premium .ynti-gallery{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory}.ynti-premium .ynti-gallery-item{flex:0 0 84%;scroll-snap-align:start}.ynti-premium .ynti-option-label{padding:15px 17px}.ynti-premium .ynti-option-label strong{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.ynti-premium .ynti-gallery-item .ynti-photo img{transition:none}}
