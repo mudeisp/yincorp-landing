@@ -29,17 +29,27 @@ function enrichMandarim(body){
     ['planta-88.webp','Planta ilustrativa · book p. 38']
   ];
   const gallery=figures.map(([file,caption])=>'<figure style="margin:0"><a href="'+root+file+'" target="_blank" rel="noopener"><img src="'+root+file+'" alt="'+caption+'" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px"></a><figcaption style="font-size:.8rem;padding:.5rem 0;color:#555">'+caption+'</figcaption></figure>').join('');
-  const section='<section id="mandarim-book" aria-labelledby="mandarim-book-title" style="max-width:1180px;margin:48px auto;padding:32px 20px;color:#252525;font-family:inherit">'
+  const section='<section id="mandarim-book" aria-labelledby="mandarim-book-title" style="max-width:1180px;margin:0 auto;padding:32px 20px 48px;color:#252525;font-family:inherit">'
     +'<p style="letter-spacing:.12em;text-transform:uppercase;font-size:.75rem">Apresentação comercial · Cyrela</p>'
     +'<h2 id="mandarim-book-title" style="font-size:clamp(1.8rem,4vw,3rem);line-height:1.15;margin:12px 0">Mandarim The Legend em detalhes</h2>'
-    +'<p>Conheça perspectivas e plantas extraídas do book do empreendimento, na Av. Morumbi, 7.395, Brooklin, São Paulo.</p>'
+    +'<p>Perspectivas, plantas e condições da tabela comercial histórica. Av. Morumbi, 7.395 · Brooklin · São Paulo.</p>'
     +'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;margin:24px 0">'+gallery+'</div>'
-    +'<h3 style="font-size:1.5rem">Referência comercial de outubro de 2026</h3>'
-    +'<p>O documento comercial contém 30 combinações históricas de unidades, com áreas de <strong>88,83 a 145,68 m²</strong> e preços impressos entre <strong>R$ 1.705.325 e R$ 3.036.554</strong>. A previsão de entrega indicada na tabela era outubro de 2027.</p>'
-    +'<p style="font-size:.9rem">Valores, condições e unidades são referências documentais de outubro de 2026, não representam estoque ou preços atuais. Confirme disponibilidade, atualização monetária e condições diretamente com a equipe Yincorp. As plantas são ilustrativas e podem não corresponder a todas as unidades.</p>'
-    +'<p><a href="'+root+'units.json" target="_blank" rel="noopener" style="text-decoration:underline">Consultar dados históricos detalhados das unidades</a></p>'
+    +'<section id="mandarim-finance" aria-labelledby="mandarim-finance-title" style="margin:32px 0;padding:24px;background:#f6f4ed;border-radius:12px">'
+    +'<h3 id="mandarim-finance-title" style="font-size:1.6rem;margin:0 0 12px">Tabela financeira por unidade</h3>'
+    +'<p>Selecione andar e final para visualizar preço, entrada, parcelas e saldo da tabela de outubro de 2026.</p>'
+    +'<label for="mandarim-unit" style="display:block;font-weight:600;margin:16px 0 6px">Unidade da tabela histórica</label>'
+    +'<select id="mandarim-unit" style="display:block;width:100%;max-width:650px;padding:12px;border:1px solid #bbb;border-radius:6px;background:white"><option>Carregando tabela…</option></select>'
+    +'<div id="mandarim-breakdown" aria-live="polite" style="overflow-x:auto;margin-top:18px">Carregando valores históricos…</div>'
+    +'</section>'
+    +'<p style="font-size:.9rem">As 30 combinações são registros documentais de outubro de 2026, não estoque disponível. Preços, parcelas e condições exigem confirmação. A entrega prevista na tabela era outubro de 2027; as plantas são ilustrativas e variam por unidade.</p>'
     +'</section>';
-  return body.replace('</main>',section+'</main>');
+  // The existing Órulo listing stays on its canonical URL. Insert before its first
+  // content section rather than after the listing, and do not replace its contact UI.
+  const main=/<main\\b[^>]*>/i.exec(body);
+  if(!main)return body;
+  const insertion=main.index+main[0].length;
+  const script='<script type="module" src="/mandarim-the-legend/finance-portal.mjs"></script>';
+  return body.slice(0,insertion)+section+body.slice(insertion).replace('</body>',script+'</body>');
 }
 
 async function publicInventoryRequest(path,options={}) {
