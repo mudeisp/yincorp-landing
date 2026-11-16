@@ -19,3 +19,50 @@ html.yincorp-editorial :is(main,section,article) :is(.card,.property-card,.devel
 html.yincorp-editorial #yincorp-intelligence{--yi-paper:#faf7f1;--yi-bronze:#a48154}
 @media(max-width:740px){html.yincorp-editorial h1{font-size:clamp(2.8rem,10vw,4.5rem)}html.yincorp-editorial h2{font-size:clamp(2.1rem,8vw,3.3rem)}}
 @media(prefers-reduced-motion:reduce){html.yincorp-editorial *{scroll-behavior:auto!important}}
+
+/* National editorial shell: scope to portal routes; preserve the dark Intelligence island. */
+html.yincorp-editorial{
+  color-scheme:light;
+  --paper:#faf7f1;--ink:#28251f;--muted:#716b62;
+  --line:#ded5c7;--sand:#eee6da;--gold:#a48154;--white:#fffdfa;
+  --background:#faf7f1;--foreground:#28251f;--surface:#fffdfa;
+  --primary:#28251f;--accent:#a48154;--border:#ded5c7;
+}
+html.yincorp-editorial :is(body,#root,#__next,main){background-color:var(--yi-paper);color:var(--yi-ink)}
+html.yincorp-editorial :is(header,nav,footer):not(.ynti *){
+  border-color:var(--yi-line);color:var(--yi-ink)
+}
+html.yincorp-editorial :is(header,nav) a:not(.button):not(.btn):not([class*=cta]){
+  color:var(--yi-ink)
+}
+html.yincorp-editorial :is(.hero,.page-hero,.state-hero,.city-hero,.listing-hero,
+.search-panel,.search-box,.filter-panel,.filters,.listing-section,.results-section,
+.property-list,.development-list,.catalog,.catalog-section):not(.ynti):not(.ynti *){
+  background-color:var(--yi-paper);color:var(--yi-ink);border-color:var(--yi-line)
+}
+html.yincorp-editorial :is(.property-card,.development-card,.listing-card,.result-card,
+.card,.tile,.filter-card,.search-card):not(.ynti *){
+  background-color:var(--yi-white);color:var(--yi-ink);border-color:var(--yi-line)
+}
+html.yincorp-editorial :is(.property-card,.development-card,.listing-card,.result-card,
+.card,.tile):not(.ynti *) :is(h2,h3,h4,strong){color:var(--yi-ink)}
+html.yincorp-editorial :is(.property-card,.development-card,.listing-card,.result-card,
+.card,.tile):not(.ynti *) :is(p,small,.muted,.meta){color:var(--yi-muted)}
+html.yincorp-editorial :is(.filters,.filter-panel,.search-panel,.search-box):not(.ynti *)
+:is(input,select,textarea){
+  background:var(--yi-white);color:var(--yi-ink);border-color:var(--yi-line)
+}
+html.yincorp-editorial :is(.eyebrow,.kicker,.overline,.section-label):not(.ynti *){
+  color:var(--yi-bronze)
+}
+html.yincorp-editorial :is(.button,.btn,.primary-button):not(.ynti *){
+  border-color:var(--yi-ink)
+}
+html.yincorp-editorial :is(.button,.btn,.primary-button):not(.ynti *):focus-visible{
+  outline-color:var(--yi-bronze)
+}
+/* The Mandarim Intelligence engine must remain dark, not inherit the page shell. */
+html.yincorp-editorial .ynti,html.yincorp-editorial #yincorp-intelligence.ynti{
+  background:#28251f;color:#faf7f1;border-color:#62594b
+}
+html.yincorp-editorial .ynti :is(h2,h3){color:#faf7f1}
