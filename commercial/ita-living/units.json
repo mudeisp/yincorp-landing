@@ -1,0 +1,2489 @@
+{
+  "project": "ITA Living",
+  "reference": "2026-10",
+  "source": "tabela_ita_living_outubro_2026(1).pdf",
+  "sourceSha256": "1fc92b59c20aa6a0a05ed69b64b604de801fe928fe0ef14a0df7f07cafe42bb5",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "306",
+      "area": 26.78,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 57632523,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4610598
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 363995
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1440813
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2881626
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27663611
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "307",
+      "area": 27.02,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 58149022,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4651918
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 367257
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1453726
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2907451
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27911531
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "415",
+      "area": 27.6,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 59388855,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4751092
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 375088
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1484721
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2969443
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28506650
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "416",
+      "area": 26.77,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 57602884,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4608220
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 363808
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1440072
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2880144
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27649384
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "417",
+      "area": 26.94,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 57968685,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4637496
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 366118
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1449217
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2898434
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27824969
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "506",
+      "area": 26.78,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 59471860,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4757742
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 375612
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1486796
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2973593
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28546493
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "507",
+      "area": 27.02,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 60004841,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4800385
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 378978
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1500121
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3000242
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28802324
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "511",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 53364712,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4269186
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 337040
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1334118
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2668236
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 25615062
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "513",
+      "area": 24.33,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 53430594,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4274461
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 337456
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1335765
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2671530
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 25646685
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "516",
+      "area": 26.77,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 58202916,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4656246
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 367597
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1455073
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2910146
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27937400
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "517",
+      "area": 26.94,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 58572527,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4685794
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 369932
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1464313
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2928626
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28114813
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "611",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 54465016,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4357187
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 343990
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1361625
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2723251
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 26143208
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "612",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 54465016,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4357187
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 343990
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1361625
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2723251
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 26143208
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "615",
+      "area": 27.6,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 61244755,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4899579
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 386809
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1531119
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3062238
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 29397482
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "616",
+      "area": 26.77,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 59402975,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4752228
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 375177
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1485074
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2970149
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28513428
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "617",
+      "area": 26.94,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 59780207,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4782426
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 377559
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1494505
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2989010
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 28694499
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "717",
+      "area": 26.94,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 66322441,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5305779
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 418879
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1658061
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3316122
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 31834772
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "805",
+      "area": 27.57,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 68083124,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5446638
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 429999
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1702078
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3404156
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 32679900
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "807",
+      "area": 27.02,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 69342670,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5547414
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 437954
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1733567
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3467134
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 33284482
+        }
+      ],
+      "roundingCents": -14
+    },
+    {
+      "id": "808",
+      "area": 23.7,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 54998186,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4399852
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 347357
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1374955
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2749909
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 26399129
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "809",
+      "area": 24.37,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 56552988,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4524229
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 357177
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1413825
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2827649
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27145434
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "810",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 56390545,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4511234
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 356151
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1409764
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2819527
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27067462
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "811",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 56390545,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4511234
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 356151
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1409764
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2819527
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27067462
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "812",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 56390545,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4511234
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 356151
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1409764
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2819527
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27067462
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "813",
+      "area": 24.33,
+      "typology": "Studio",
+      "parking": 0,
+      "totalCents": 56460164,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4516795
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 356591
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1411504
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 2823008
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 27100879
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "815",
+      "area": 27.6,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 69348367,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5547859
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 437990
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1733709
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3467418
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 33287216
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "816",
+      "area": 26.77,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 67441472,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5395321
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 425946
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1686037
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3372074
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 32371907
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "817",
+      "area": 26.94,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 67832040,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5426559
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 428413
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1695801
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3391602
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 32559379
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "913",
+      "area": 24.33,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 63600868,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5088056
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 401690
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1590022
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3180043
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 30528417
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "915",
+      "area": 27.6,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 70585635,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5646850
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 445804
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1764641
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3529282
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 33881105
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "916",
+      "area": 26.77,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 68641533,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5491342
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 433525
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1716038
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3432077
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 32947936
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "917",
+      "area": 26.94,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 69039722,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5523191
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 436040
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1725993
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3451986
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 33139067
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1005",
+      "area": 27.57,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 73161036,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5852871
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 462070
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1829026
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3658052
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35117297
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1009",
+      "area": 24.37,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 64798977,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5183909
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 409257
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1619974
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3239949
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 31103509
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1010",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 64630195,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5170403
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 408191
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1615755
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3231510
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 31022494
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1011",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 64630195,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5170403
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 408191
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1615755
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3231510
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 31022494
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1012",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 64630195,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5170403
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 408191
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1615755
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3231510
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 31022494
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1013",
+      "area": 24.33,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 64702531,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5176187
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 408648
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1617563
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3235127
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 31057215
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1015",
+      "area": 27.6,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 71822902,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5745842
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 453618
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1795573
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3591145
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34474993
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1016",
+      "area": 26.77,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 69841593,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5587318
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 441105
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1746040
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3492080
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 33523965
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1105",
+      "area": 27.57,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 74423432,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5953863
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 470043
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1860586
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3721172
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35723247
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1106",
+      "area": 26.78,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 72461038,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5796870
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 457649
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1811526
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3623052
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34781298
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1107",
+      "area": 27.02,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 73057208,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5844576
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 461414
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1826430
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3652860
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35067460
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1108",
+      "area": 23.7,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 64256637,
+      "sourcePage": 2,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5140545
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 405831
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1606416
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3212832
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 30843186
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1109",
+      "area": 24.37,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 65902450,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5272197
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 416226
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1647561
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3295123
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 31633176
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1110",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 65730498,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5258442
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 415140
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1643262
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3286525
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 31550639
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1111",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 65730498,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5258442
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 415140
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1643262
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3286525
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 31550639
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1112",
+      "area": 24.3,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 66826006,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5346081
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 422059
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1670650
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3341300
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 32076483
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1113",
+      "area": 24.33,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 65804191,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5264349
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 415605
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1645105
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3290210
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 31586012
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1114",
+      "area": 23.72,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 64305763,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5144449
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 406142
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1607644
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3215288
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 30866766
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1115",
+      "area": 27.6,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 73060171,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5844802
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 461433
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1826504
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3653009
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 35068882
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1116",
+      "area": 26.77,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 71041653,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5683339
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 448684
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1776041
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3552083
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34099993
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1117",
+      "area": 26.94,
+      "typology": "Studio",
+      "parking": 1,
+      "totalCents": 71455084,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5716418
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 451295
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 1786377
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 3572754
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 34298440
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "304",
+      "area": 116.11,
+      "typology": "Dois quartos · Garden",
+      "parking": 2,
+      "totalCents": 134999680,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 10799958
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 852630
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 3374992
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 6749984
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 64799846
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "318",
+      "area": 118.38,
+      "typology": "Dois quartos · Garden",
+      "parking": 2,
+      "totalCents": 136751192,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 10940084
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 863692
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 3418780
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 6837560
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 65640572
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "418",
+      "area": 66.4,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 95842523,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7667410
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 605321
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2396063
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 4792126
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 46004411
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "518",
+      "area": 66.4,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 94313528,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7545099
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 595664
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2357838
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 4715676
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 45270493
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "601",
+      "area": 61.28,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 90269816,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7221593
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 570125
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2256745
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 4513491
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 43329512
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "604",
+      "area": 63.75,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 95370949,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7629668
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 602343
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2384274
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 4768547
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 45778056
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "618",
+      "area": 66.4,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 96248722,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7699885
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 607887
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2406218
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 4812436
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 46199387
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "704",
+      "area": 63.75,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 97288229,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 7783056
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 614452
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2432206
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 4864411
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 46698350
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "818",
+      "area": 66.4,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 104375516,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8350032
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 659214
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2609388
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 5218776
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 50100248
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "918",
+      "area": 66.4,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 106383280,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8510678
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 671894
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2659582
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 5319164
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 51063974
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1004",
+      "area": 63.75,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 107401367,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8592127
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 678324
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2685034
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 5370068
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 51552656
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1018",
+      "area": 66.4,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 108391045,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8671285
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 684575
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2709776
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 5419552
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 52027702
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1104",
+      "area": 63.75,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 109390544,
+      "sourcePage": 3,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8751228
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 690888
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2734764
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 5469527
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 52507461
+        }
+      ],
+      "roundingCents": 0
+    },
+    {
+      "id": "1118",
+      "area": 66.4,
+      "typology": "Dois quartos",
+      "parking": 1,
+      "totalCents": 110398807,
+      "sourcePage": 4,
+      "sourceStatus": "Disponível",
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 8831892
+        },
+        {
+          "label": "Mensais",
+          "count": 38,
+          "amountCents": 697256
+        },
+        {
+          "label": "Semestrais",
+          "count": 6,
+          "amountCents": 2759970
+        },
+        {
+          "label": "Única",
+          "count": 1,
+          "amountCents": 5519940
+        },
+        {
+          "label": "Financiamento",
+          "count": 1,
+          "amountCents": 52991427
+        }
+      ],
+      "roundingCents": 0
+    }
+  ],
+  "notes": "Tabela de lançamento de outubro de 2026. A fonte informa quantidades de parcelas, sem discriminar as datas de vencimento. A entrega estava prevista para fevereiro de 2030."
+}
