@@ -113,7 +113,16 @@ export default async function portal(req,res){
     const sitemapSend=res.send.bind(res);res.send=body=>sitemapSend(res.statusCode===200&&typeof body==='string'?body.replace('</sitemapindex>','<sitemap><loc>https://www.yincorp.com.br/sitemap-content-sp.xml</loc></sitemap><sitemap><loc>https://www.yincorp.com.br/sitemap-content-es.xml</loc></sitemap></sitemapindex>'):body);
   }
   if(await seo(req,res,path))return;
-  const send=res.send.bind(res);res.send=body=>send(res.statusCode===200?(path===MANDARIM_PATH?enrichMandarim(linkNationalEntities(decorate(body,path),path)):enrichCommercialPresentation(linkNationalEntities(decorate(body,path),path),path)):body);
+  const send=res.send.bind(res);
+  res.send=body=>{
+    const rendered=res.statusCode===200?(path===MANDARIM_PATH?enrichMandarim(linkNationalEntities(decorate(body,path),path)):enrichCommercialPresentation(linkNationalEntities(decorate(body,path),path),path)):body;
+    // Preview-only opt-in. Never enable globally until SEO, contact and conversion regression checks pass.
+    const isGlobalPilot=process.env.VERCEL_ENV==='preview'&&req.query?.yincorp_experience==='1'&&/^\/(sp|es|rj|sc|rs|pr|pb|pe)\//.test(path);
+    const enhanced=isGlobalPilot&&typeof rendered==='string'&&rendered.includes('</body>')
+      ?rendered.replace('</body>','<link rel="stylesheet" href="/global-experience.css"><script defer src="/global-experience.js"></script></body>')
+      :rendered;
+    return send(enhanced);
+  };
   // Discovery links are HTML, not JS-only navigation. No commercial flow changes.
   if(['GET','HEAD'].includes(req.method)&&/^\/sp(?:\/[^/]+)?$/.test(path)){
     const baseSend=res.send.bind(res);res.send=body=>baseSend(res.statusCode===200&&typeof body==='string'?body.replace('</main>',`<nav class="wrap" aria-label="Catálogo de imóveis"><a href="/${path.split('/')[1]}/imoveis">Explorar imóveis à venda em ${path.split('/')[1].toUpperCase()}</a></nav></main>`):body);
