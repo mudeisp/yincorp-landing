@@ -1,3 +1,5 @@
 /* Scoped, opt-in global motion: no layout replacement. */
 @media(prefers-reduced-motion:no-preference){.yg-stage{opacity:.3;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.yg-stage.yg-visible{opacity:1;transform:none}}
 .yg-zoomable{cursor:zoom-in}.yg-lightbox{position:fixed;inset:0;width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;padding:65px 15px 25px;border:0;background:#0e1a15f5;text-align:center}.yg-lightbox::backdrop{background:#09130edb}.yg-lightbox img{max-width:100%;max-height:calc(100dvh - 100px);width:auto;height:auto;object-fit:contain}.yg-lightbox button{position:fixed;top:14px;right:18px;background:#183326;color:#fff;border:1px solid #fff8;border-radius:50%;width:44px;height:44px;font-size:30px;cursor:pointer}
+.yg-typing::after{content:'|';display:inline-block;margin-left:2px;animation:yg-blink .8s step-end infinite}@keyframes yg-blink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.yg-typing::after{animation:none}}
