@@ -1,0 +1,1149 @@
+{
+  "project": "Haus Linhares",
+  "reference": "2026-10",
+  "source": "tabela_haus_linhares_novembro_2026(1).pdf",
+  "sourceSha256": "d45d1a94b75ca822300d7618c375abf05e14098bb356e92c0f8ec927f6fc5865",
+  "status": "historical_reference",
+  "units": [
+    {
+      "id": "Apartamento 405",
+      "area": 40.29,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 52972959,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5297296,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 557610,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3972972,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2648648,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 26486481,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 505",
+      "area": 40.29,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 53236506,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5323651,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 560384,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3992738,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2661825,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 26618258,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 605",
+      "area": 40.29,
+      "typology": "Studio",
+      "sourceStatus": "Vendida",
+      "totalCents": 48809700,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4880970,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 513786,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3660728,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2440485,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 24404855,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 705",
+      "area": 40.29,
+      "typology": "Studio",
+      "sourceStatus": "Vendida",
+      "totalCents": 48602388,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4860239,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 511604,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3645179,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2430119,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 24301196,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 805",
+      "area": 40.29,
+      "typology": "Studio",
+      "sourceStatus": "Vendida",
+      "totalCents": 49290585,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4929059,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 518848,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3696794,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2464529,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 24645297,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 907",
+      "area": 30.48,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 43770522,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4377052,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 460742,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3282789,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2188526,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 21885268,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1005",
+      "area": 40.29,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 54554242,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5455424,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 574255,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 4091568,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2727712,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 27277125,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1006",
+      "area": 30.29,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 43787733,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4378773,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 460924,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3284080,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2189387,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 21893857,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1007",
+      "area": 30.48,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 44062400,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4406240,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 463815,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3304680,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2203120,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 22031195,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1105",
+      "area": 40.29,
+      "typology": "Studio",
+      "sourceStatus": "Vendida",
+      "totalCents": 50011911,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5001191,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 526441,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3750893,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2500596,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 25005959,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1107",
+      "area": 30.48,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 44261778,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4426178,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 465913,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3319633,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2213089,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 22130898,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1206",
+      "area": 30.29,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 44184000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4418400,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 465095,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3313800,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2209200,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 22091995,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1207",
+      "area": 30.48,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 44461153,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4446115,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 468012,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3334586,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2223058,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 22230580,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1304",
+      "area": 48.12,
+      "typology": "1 quarto",
+      "sourceStatus": "Disponível",
+      "totalCents": 69043715,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 6904372,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 726776,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 5178279,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 3452186,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 34521855,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 1
+    },
+    {
+      "id": "Apartamento 1305",
+      "area": 40.29,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 55344881,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5534488,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 582578,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 4150866,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2767244,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 27672435,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 1,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1307",
+      "area": 30.48,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 44660531,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4466053,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 470111,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3349540,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2233027,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 22330262,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 2,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1406",
+      "area": 30.29,
+      "typology": "Studio",
+      "sourceStatus": "Vendida",
+      "totalCents": 44580269,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4458027,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 469266,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3343520,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2229013,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 22290135,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 2,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1605",
+      "area": 40.29,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 56135523,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 5613552,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 590900,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 4210164,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2806776,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 28067767,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 2,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1606",
+      "area": 30.29,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 44976540,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4497654,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 473437,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3373241,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2248827,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 22488274,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 2,
+      "bedrooms": 0
+    },
+    {
+      "id": "Apartamento 1607",
+      "area": 30.48,
+      "typology": "Studio",
+      "sourceStatus": "Disponível",
+      "totalCents": 45258663,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 4525866,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Mensal",
+          "count": 19,
+          "amountCents": 476407,
+          "firstDue": "2026-11-15"
+        },
+        {
+          "label": "Anual",
+          "count": 2,
+          "amountCents": 3394400,
+          "firstDue": "2027-01-15"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2262933,
+          "firstDue": "2028-06-30"
+        },
+        {
+          "label": "Chaves",
+          "count": 1,
+          "amountCents": 22629331,
+          "firstDue": "2028-07-31"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 2,
+      "bedrooms": 0
+    },
+    {
+      "id": "Vaga 43",
+      "area": 11.7,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Disponível",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 44",
+      "area": 10.35,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Disponível",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 45",
+      "area": 10.35,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Disponível",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 46",
+      "area": 10.35,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Vendida",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 48",
+      "area": 10.35,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Disponível",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 49",
+      "area": 10.35,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Disponível",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 55",
+      "area": 10.35,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Vendida",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 63",
+      "area": 11.7,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Vendida",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 64",
+      "area": 11.7,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Disponível",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 65",
+      "area": 14.3,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Disponível",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 76",
+      "area": 10.35,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Vendida",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 77",
+      "area": 11.7,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Disponível",
+      "totalCents": 3000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 1500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    },
+    {
+      "id": "Vaga 67/67A",
+      "area": 23.4,
+      "typology": "Vaga avulsa",
+      "sourceStatus": "Disponível",
+      "totalCents": 5000000,
+      "stages": [
+        {
+          "label": "Sinal",
+          "count": 1,
+          "amountCents": 2500000,
+          "firstDue": "2026-10-31"
+        },
+        {
+          "label": "Habite-se",
+          "count": 1,
+          "amountCents": 2500000,
+          "firstDue": "2028-06-30"
+        }
+      ],
+      "roundingCents": 0,
+      "sourcePage": 3
+    }
+  ],
+  "notes": "A tabela registra a entrega prevista para junho de 2028. As parcelas indicadas no PDF são corrigidas pelo CUB/ES durante a obra e, após o Habite-se, pelo IGP-M acrescido de juros de 1% ao mês. Consulte as condições do contrato."
+}

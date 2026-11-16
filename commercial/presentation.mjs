@@ -2,6 +2,8 @@ const currency = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: '
 const decimal = new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2 });
 const period = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric', timeZone: 'UTC' });
 
+const day = new Intl.DateTimeFormat('pt-BR', { timeZone: 'UTC' });
+
 const formatCents = cents => currency.format(cents / 100);
 const formatPeriod = month => period.format(new Date(month + '-01T00:00:00Z'));
 
@@ -26,7 +28,7 @@ function paymentTable(stages) {
     const label = element('th', stage.label);
     label.scope = 'row';
     row.append(label);
-    for (const value of [formatPeriod(stage.firstDue), stage.count, formatCents(stage.amountCents)]) {
+    for (const value of [(stage.firstDue.length === 10 ? day.format(new Date(stage.firstDue)) : formatPeriod(stage.firstDue)), stage.count, formatCents(stage.amountCents)]) {
       row.append(element('td', value));
     }
   }
@@ -49,7 +51,7 @@ async function initializeFinance(root) {
       const total = element('strong', formatCents(unit.totalCents));
       const details = [
         unit.area == null ? null : decimal.format(unit.area) + ' m²',
-        unit.bedrooms == null ? null : unit.bedrooms + ' dorm.',
+        unit.typology ?? (unit.bedrooms == null ? null : unit.bedrooms + ' dorm.'),
         unit.suites == null ? null : unit.suites + ' suítes',
         unit.parking == null ? null : unit.parking + ' vagas'
       ].filter(Boolean);
@@ -63,6 +65,8 @@ async function initializeFinance(root) {
       table.setAttribute('aria-label', 'Parcelas por etapa');
       table.append(paymentTable(unit.stages));
       output.replaceChildren(overview, table, element('p', 'Referência: ' + formatPeriod(data.reference) + ' · ' + data.source + ', p. ' + unit.sourcePage + '.'));
+      if (unit.sourceStatus) output.append(element('p', 'Situação registrada na data da tabela: ' + unit.sourceStatus + '.'));
+      if (data.notes) output.append(element('p', data.notes));
       if (unit.roundingCents) {
         output.append(element('p', 'Diferença de arredondamento na fonte: ' + formatCents(Math.abs(unit.roundingCents)) + '.'));
       }
