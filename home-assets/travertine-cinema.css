@@ -8,7 +8,7 @@ body{background:var(--yi-paper,#faf7f1)}
 .hero h1{font-size:clamp(76px,8.3vw,160px);line-height:.8;letter-spacing:-.063em;max-width:10ch;margin:35px 0 28px;font-weight:400}
 .hero h1 em{font-weight:400;color:#a48154}.hero-copy>p:not(.eyebrow){font-size:14px;max-width:38ch;color:#615a50}
 .hero .actions{margin-top:36px}.hero .button{min-height:48px;font-size:11px;letter-spacing:.07em}
-.hero-figure{height:min(73vh,850px);min-height:480px;margin:0;box-shadow:0 25px 70px #40332925;overflow:hidden}
+.hero-figure{position:relative;height:min(73vh,850px);min-height:480px;margin:0;box-shadow:0 25px 70px #40332925;overflow:hidden}
 .hero-figure>a{position:absolute;inset:0;display:block;overflow:hidden}.hero-figure img{width:116%;max-width:none;height:116%;position:absolute;top:-8%;left:-8%;object-fit:cover;object-position:center;transform:translate3d(var(--yi-home-pan,0px),0,0) scale(1.02);will-change:transform}
 .hero-figure::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#1d1812a6);pointer-events:none}
 .hero-image-label{z-index:2;top:22px;left:24px;background:#faf7f1e8;color:#443627}
