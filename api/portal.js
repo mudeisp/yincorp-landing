@@ -96,11 +96,11 @@ export default async function portal(req,res){
     if(res.statusCode===200&&typeof body==='string'&&body.startsWith('<!doctype html>')&&NATIONAL_MARKETS.some(state=>path===`/${state.toLowerCase()}`)){
       body=body.replace('</main>',`<nav class="wrap" aria-label="Estados Yincorp">${NATIONAL_MARKETS.map(state=>`<a href="/${state.toLowerCase()}">${state}</a>`).join(' · ')}</nav></main>`);
     }
-    if(res.statusCode===200&&typeof body==='string'&&/<html\b/i.test(body)&&/<\/head>/i.test(body)&&NATIONAL_MARKETS.some(state=>path===`/${state.toLowerCase()}`||path.startsWith(`/${state.toLowerCase()}/`))){
-      // A single shared stylesheet covers state, city, listing and property routes.
-      // It does not rewrite canonical tags, forms, search/filter behavior or analytics.
-      body=body.replace(/<html\b([^>]*)>/i,(tag,attrs)=>/<html\b[^>]*class=/i.test(tag)?tag.replace(/class=(["'])(.*?)\1/i,(_m,q,classes)=>`class=${q}${classes} yincorp-editorial${q}`):`<html${attrs} class="yincorp-editorial">`);
-      body=body.replace('</head>','<link rel="stylesheet" href="/portal-assets/mandarim-editorial-global.css?v=20261116"></head>');
+    if(res.statusCode===200&&typeof body==='string'&&body.includes('</head>')&&NATIONAL_MARKETS.some(state=>path===`/${state.toLowerCase()}`||path.startsWith(`/${state.toLowerCase()}/`))){
+      // Shared, opt-in Travertino skin for every national state/city/property page.
+      // Preserve all server-rendered content, links, SEO metadata and interactions.
+      body=body.replace(/<body([^>]*)>/i,(tag,attrs)=>/class\s*=/.test(attrs)?tag.replace(/class=(["'])(.*?)\1/i,(_m,q,classes)=>`class=${q}${classes} yi-travertino-page${q}`):`<body${attrs} class="yi-travertino-page">`);
+      body=body.replace('</head>','<link rel="stylesheet" href="/portal-assets/mandarim-editorial-global.css?v=20261116"><link rel="stylesheet" href="/portal-assets/travertino-global.css?v=20261117"></head>');
       body=body.replace('</body>','<script defer src="/portal-assets/mandarim-typewriter-global.js?v=20261116"></script></body>');
     }
     return privacySend(res.statusCode===200?withPrivacyFooter(body):body);
