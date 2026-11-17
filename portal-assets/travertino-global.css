@@ -1,12 +1,22 @@
-/* Travertino & Ouro — national portal skin; presentation only. */
-@import url('/portal-assets/editorial-tokens.css');
-body.yi-travertino-page{--primary:#a48154;--accent:#a48154;--brand:#a48154;--green:#a48154;--color-primary:#a48154;background:#faf7f1;color:#28251f;font-family:var(--yi-font-body),Arial,sans-serif}
-body.yi-travertino-page :is(h1,h2,h3,.hero-title,.section-title){font-family:var(--yi-font-title),Georgia,serif;font-weight:400;letter-spacing:-.025em;color:#28251f}
-body.yi-travertino-page :is(header,nav,.site-header,.topbar){border-color:#ded5c7}
-body.yi-travertino-page :is(a,button,input,select,textarea){accent-color:#a48154}
-body.yi-travertino-page a:not(.btn):not(.button){text-underline-offset:3px}
-body.yi-travertino-page :is(.eyebrow,.kicker,.overline){color:#98764e;letter-spacing:.12em;text-transform:uppercase}
-body.yi-travertino-page :is(.card,.property-card,.listing-card){border-color:#ded5c7}
-body.yi-travertino-page :is(img,video){max-width:100%}
-@media(max-width:640px){body.yi-travertino-page{overflow-wrap:break-word}body.yi-travertino-page :is(h1,h2){text-wrap:balance}body.yi-travertino-page :is(button,[role=button],.btn,.button){min-height:44px}body.yi-travertino-page :is(.wrap,.container){max-width:100%}}
-@media(prefers-reduced-motion:reduce){body.yi-travertino-page *,body.yi-travertino-page *::before,body.yi-travertino-page *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+/* Portal composition built on the same tokens, mineral surface and hero as the home. */
+body.yi-travertino-page { accent-color: var(--yi-bronze); }
+.yi-property-hero h1 {
+  overflow-wrap: anywhere;
+  font-size: clamp(66px, 7vw, 144px);
+}
+.yi-property-hero .hero-copy .primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 23px;
+  background: var(--yi-ink);
+  color: var(--yi-white);
+}
+.yi-property-hero .hero-copy .primary:hover { background: var(--yi-engine-selected); }
+.yi-property-hero .hero-figure { min-width: 0; }
+.yi-property-hero .hero-figure img { display: block; }
+@media (max-width: 600px) {
+  .yi-property-hero h1 { font-size: clamp(59px, 16vw, 95px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

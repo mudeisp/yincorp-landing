@@ -25,6 +25,11 @@ await Promise.all(manifest.files.map(async file=>{
 await Promise.all(['global-experience.css', 'global-experience.js'].map(file =>
   copyFile(resolve(root, 'public', file), resolve(root, 'portal-assets', file))
 ));
+// Use the home wordmark verbatim in the portal header and footer.
+const home=await readFile(resolve(root,'index.html'),'utf8');
+const homeBrand=home.match(/<a class="brand yi-brand-mark"[^>]*>[^]*?<\/a>/)?.[0];
+if(!homeBrand)throw new Error('Homepage wordmark missing');
+await writeFile(resolve(root,'.portal-shared/home-brand.js'),`export const homeBrand=${JSON.stringify(homeBrand)};\n`);
 const legacy=await readFile(resolve(root,'.portal-shared/public-config.source'),'utf8');
 const url=/const SUPABASE_URL\s*=\s*"([^"]+)"/.exec(legacy)?.[1];
 const key=/const SUPABASE_PUBLISHABLE_KEY\s*=\s*"([^"]+)"/.exec(legacy)?.[1];

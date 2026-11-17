@@ -9,12 +9,6 @@
       "gitBlobSha": "657b7ab0838afd05accd4d00580e187ba8a7562a"
     },
     {
-      "source": "portal/render.js",
-      "destination": ".portal-shared/render.js",
-      "commit": "fb5772aaaeefe7fd82a3aa168f2500bedee0a8ca",
-      "gitBlobSha": "080cc282e9c387583d642f34a6aeef03f4beba0f"
-    },
-    {
       "source": "portal/router.js",
       "destination": ".portal-shared/router.js",
       "commit": "cd387c80342adee9d1a1100d52688ed8425fc762",
@@ -77,26 +71,6 @@
       "source": "portal/editorial.js",
       "destination": ".portal-shared/editorial.js",
       "gitBlobSha": "533fc110d62f83790a49ef3091db69b26b53b79e"
-    },
-    {
-      "source": "assets/css/portal-editorial.css",
-      "destination": "portal-assets/portal-editorial.css",
-      "gitBlobSha": "8c22400b7f23263fe025183a0278db85afc285d5"
-    },
-    {
-      "source": "portal/architecture.js",
-      "destination": ".portal-shared/architecture.js",
-      "gitBlobSha": "05ed60305fcf30af49e64bbe6f83d815602c016b"
-    },
-    {
-      "source": "assets/css/property-story.css",
-      "destination": "portal-assets/property-story.css",
-      "gitBlobSha": "6496ad51b468a7f17ce908fee8db6efc8266aa1e"
-    },
-    {
-      "source": "assets/js/property-story.js",
-      "destination": "portal-assets/property-story.js",
-      "gitBlobSha": "8d4776c9240ce3dc357f4d9bde49efa5abf90012"
     },
     {
       "source": "portal/composition.js",

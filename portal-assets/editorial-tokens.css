@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 :root {
+  --yi-travertine:radial-gradient(ellipse at 15% 16%,#fff9ecb8,transparent 43%),repeating-linear-gradient(174deg,transparent 0 20px,#907a5e0b 21px 22px,transparent 23px 58px),linear-gradient(120deg,#f6efe5,#e7dbca 53%,#f8f0e4);
   --yi-paper: #faf7f1;
   --yi-ink: #28251f;
   --yi-bronze: #a48154;
