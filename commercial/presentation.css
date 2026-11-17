@@ -1,14 +1,15 @@
+@import url('/portal-assets/editorial-tokens.css');
 .commercial-book {
-  --commercial-ink: #243a32;
-  --commercial-line: #dce2d9;
-  --commercial-gold: #ad9361;
+  --commercial-ink: var(--yi-ink);
+  --commercial-line: var(--yi-line);
+  --commercial-gold: var(--yi-bronze);
   max-width: 1180px;
   margin: 0 auto;
   padding: clamp(20px, 4vw, 45px);
   color: var(--commercial-ink);
 }
 .commercial-book h2, .commercial-book h3 {
-  font-family: Georgia, serif;
+  font-family: var(--yi-font-title);
   font-weight: 400;
   line-height: 1.12;
 }
@@ -32,12 +33,12 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: contain;
-  background: #f7f6f1;
+  background: var(--yi-paper);
   border-radius: 12px;
 }
 .commercial-gallery figcaption { padding: .55rem 0; font-size: .85rem; }
 .commercial-finance {
-  background: #f7f6f1;
+  background: var(--yi-paper);
   border: 1px solid var(--commercial-line);
   border-radius: 22px;
   padding: clamp(16px, 4vw, 40px);
@@ -48,7 +49,7 @@
   max-width: 680px;
   min-height: 48px;
   padding: 8px 12px;
-  border: 1px solid #bcc9bf;
+  border: 1px solid var(--yi-line);
   border-radius: 10px;
   color: inherit;
   background: #fff;
