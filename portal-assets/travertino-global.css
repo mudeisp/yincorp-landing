@@ -10,3 +10,71 @@ body.yi-travertino-page :is(.card,.property-card,.listing-card){border-color:#de
 body.yi-travertino-page :is(img,video){max-width:100%}
 @media(max-width:640px){body.yi-travertino-page{overflow-wrap:break-word}body.yi-travertino-page :is(h1,h2){text-wrap:balance}body.yi-travertino-page :is(button,[role=button],.btn,.button){min-height:44px}body.yi-travertino-page :is(.wrap,.container){max-width:100%}}
 @media(prefers-reduced-motion:reduce){body.yi-travertino-page *,body.yi-travertino-page *::before,body.yi-travertino-page *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Universal editorial pilot: scoped to existing portal classes, no DOM rewrites. */
+body.yi-travertino-page{
+  --yi-editorial-paper:#faf7f1;
+  --yi-editorial-stone:#eee7dc;
+  --yi-editorial-rule:#ded5c7;
+  --yi-editorial-ink:#28251f;
+  --yi-editorial-gold:#a48154;
+  background-image:linear-gradient(125deg,rgba(164,129,84,.045),transparent 42%),linear-gradient(180deg,#faf7f1,#f5f0e8);
+}
+body.yi-travertino-page :is(main,article){min-width:0}
+body.yi-travertino-page :is(h1,.hero-title){
+  font-size:clamp(2.35rem,5.6vw,5.8rem);
+  line-height:1.04;
+  letter-spacing:-.045em;
+  overflow-wrap:anywhere;
+}
+body.yi-travertino-page :is(h2,.section-title){
+  line-height:1.14;
+  letter-spacing:-.035em;
+}
+body.yi-travertino-page :is(.hero-photograph,.hero-figure){
+  position:relative;
+  overflow:hidden;
+  background:#e9e0d3;
+}
+body.yi-travertino-page :is(.hero-photograph,.hero-figure) img{
+  display:block;
+  width:100%;
+  height:auto;
+  transform:scale(1.015);
+  animation:yi-portal-hero-drift 22s ease-in-out infinite alternate;
+  will-change:transform;
+}
+body.yi-travertino-page :is(.hero-photograph,.hero-figure) figcaption{
+  font-size:.78rem;
+  letter-spacing:.035em;
+  color:#6e6254;
+}
+body.yi-travertino-page :is(.card,.property-card,.listing-card){
+  background-color:rgba(255,253,249,.88);
+  box-shadow:0 10px 36px rgba(40,37,31,.045);
+}
+body.yi-travertino-page :is(.wrap,.container,main,article,section){
+  min-width:0;
+}
+body.yi-travertino-page :is(.btn,.button,button):not(.whatsapp-float):not([class*="whatsapp"]){
+  transition:transform .28s ease,box-shadow .28s ease;
+}
+@media(hover:hover){
+  body.yi-travertino-page :is(.btn,.button,button):not(.whatsapp-float):not([class*="whatsapp"]):hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 20px rgba(40,37,31,.1);
+  }
+}
+@keyframes yi-portal-hero-drift{
+  from{transform:scale(1.015) translate3d(0,0,0)}
+  to{transform:scale(1.075) translate3d(-.8%,.4%,0)}
+}
+@media(max-width:640px){
+  body.yi-travertino-page :is(h1,.hero-title){font-size:clamp(2rem,9vw,3.2rem);line-height:1.07}
+  body.yi-travertino-page :is(.hero-photograph,.hero-figure) img{will-change:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  body.yi-travertino-page :is(.hero-photograph,.hero-figure) img{
+    animation:none!important;transform:none!important;will-change:auto;
+  }
+}
