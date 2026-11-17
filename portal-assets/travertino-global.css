@@ -78,3 +78,21 @@ body.yi-travertino-page :is(.btn,.button,button):not(.whatsapp-float):not([class
     animation:none!important;transform:none!important;will-change:auto;
   }
 }
+
+/* Phase 2: grounded portal-editorial selectors for the national template. */
+body.yi-travertino-page{--ink:#28251f;--deep:#28251f;--ivory:#faf7f1;--stone:#eee7dc;--line:#ded5c7;--muted:#756f67;--bronze:#a48154;--serif:var(--yi-font-title),Georgia,serif;--sans:var(--yi-font-body),Arial,sans-serif}
+body.yi-travertino-page .breadcrumbs{background:#faf7f1;color:#756f67}
+body.yi-travertino-page .property-opening{background:linear-gradient(145deg,#f4eee5,#eee8df);padding-inline:max(20px,calc((100vw - 1360px)/2));padding-block:clamp(46px,6vw,100px);gap:clamp(20px,5vw,85px)}
+body.yi-travertino-page .property-opening h1{font:400 clamp(2.7rem,6.3vw,6rem)/1.04 var(--serif);letter-spacing:-.05em;color:#28251f;text-wrap:balance}
+body.yi-travertino-page .property-opening .eyebrow{color:#92734e}
+body.yi-travertino-page .property-cover{background:#e5ded3}
+body.yi-travertino-page .property-cover>img{animation:yi-portal-hero-drift 22s ease-in-out infinite alternate;transform-origin:center center}
+body.yi-travertino-page :is(.primary,.button.primary){background:#28251f;color:#faf7f1}
+body.yi-travertino-page :is(.primary,.button.primary):hover{background:#473e34}
+body.yi-travertino-page :is(.secondary,.button.secondary){background:transparent;color:#28251f;border-color:#28251f}
+body.yi-travertino-page :is(.property-keyfacts,.property-overview,.amenities-layout){border-color:#ded5c7}
+body.yi-travertino-page :is(.card-bottom strong,.opening-price>strong,.city-facts strong){color:#a48154}
+body.yi-travertino-page .project-card .card-photo img{transition:transform 1.2s ease}
+@media(hover:hover){body.yi-travertino-page .project-card:hover .card-photo img{transform:scale(1.06)}}
+@media(max-width:640px){body.yi-travertino-page .property-opening{padding:52px 22px 38px}body.yi-travertino-page .property-opening h1{font-size:clamp(2.7rem,9.3vw,4.1rem);line-height:1.07}body.yi-travertino-page .property-cover{width:100%;height:clamp(430px,105vw,660px);min-height:0}}
+@media(prefers-reduced-motion:reduce){body.yi-travertino-page .property-cover>img{animation:none!important;transform:none!important}}
