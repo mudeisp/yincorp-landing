@@ -96,7 +96,7 @@ export default async function portal(req,res){
     if(res.statusCode===200&&typeof body==='string'&&body.startsWith('<!doctype html>')&&NATIONAL_MARKETS.some(state=>path===`/${state.toLowerCase()}`)){
       body=body.replace('</main>',`<nav class="wrap" aria-label="Estados Yincorp">${NATIONAL_MARKETS.map(state=>`<a href="/${state.toLowerCase()}">${state}</a>`).join(' · ')}</nav></main>`);
     }
-    if(res.statusCode===200&&typeof body==='string'&&/<html\b/i.test(body)&&/<\\/head>/i.test(body)&&NATIONAL_MARKETS.some(state=>path===`/${state.toLowerCase()}`||path.startsWith(`/${state.toLowerCase()}/`))){
+    if(res.statusCode===200&&typeof body==='string'&&/<html\b/i.test(body)&&/<\/head>/i.test(body)&&NATIONAL_MARKETS.some(state=>path===`/${state.toLowerCase()}`||path.startsWith(`/${state.toLowerCase()}/`))){
       // A single shared stylesheet covers state, city, listing and property routes.
       // It does not rewrite canonical tags, forms, search/filter behavior or analytics.
       body=body.replace(/<html\b([^>]*)>/i,(tag,attrs)=>/<html\b[^>]*class=/i.test(tag)?tag.replace(/class=(["'])(.*?)\1/i,(_m,q,classes)=>`class=${q}${classes} yincorp-editorial${q}`):`<html${attrs} class="yincorp-editorial">`);
