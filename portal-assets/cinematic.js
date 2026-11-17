@@ -37,7 +37,8 @@
       }
       const image = frames.get(frame);
       const bounds = frame.getBoundingClientRect();
-      const headroom = availableScale(image, image.offsetWidth, image.offsetHeight);
+      const headroom = frame.hasAttribute('data-editorial-limited') ? 1 :
+        availableScale(image, image.offsetWidth, image.offsetHeight);
       const hero = frame.hasAttribute('data-cinematic-hero');
       // Leave a small margin inside the overscan so the edge stays covered throughout.
       const scale = Math.min(mobile ? 1.09 : hero ? 1.24 : 1.18, headroom);
