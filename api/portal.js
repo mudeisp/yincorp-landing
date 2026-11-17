@@ -100,7 +100,13 @@ export default async function portal(req,res){
       // Shared, opt-in Travertino skin for every national state/city/property page.
       // Preserve all server-rendered content, links, SEO metadata and interactions.
       body=body.replace(/<body([^>]*)>/i,(tag,attrs)=>/class\s*=/.test(attrs)?tag.replace(/class=(["'])(.*?)\1/i,(_m,q,classes)=>`class=${q}${classes} yi-travertino-page${q}`):`<body${attrs} class="yi-travertino-page">`);
-      body=body.replace('</head>','<link rel="stylesheet" href="/portal-assets/mandarim-editorial-global.css?v=20261116"><link rel="stylesheet" href="/portal-assets/travertino-global.css?v=20261117"></head>');
+      // Reuse the exact homepage brand/header markup for national portal pages.
+      // Keep the underlying portal navigation, data, SEO and commercial engine intact.
+      if(/<header\\b/i.test(body)&&!body.includes('data-yi-shared-header')){
+        const homeHeader='<header class="yi-shared-header" data-yi-shared-header><div class="yi-shared-header-inner"><a class="yi-shared-brand" href="/" aria-label="Yincorp — início"><strong>yincorp</strong><span>PLACES WORTH LIVING</span></a><nav class="yi-shared-desktop-nav" aria-label="Navegação principal"><a href="/sp">Comprar</a><a href="/alugar">Alugar</a><a href="https://app.yincorp.com.br/?modo=explorar">Explorar a plataforma ↗</a></nav><details class="yi-shared-mobile-menu"><summary>Menu</summary><nav aria-label="Navegação no celular"><a href="/sp">Comprar por estado</a><a href="/alugar">Alugar um imóvel</a><a href="https://app.yincorp.com.br/?modo=explorar">Explorar a plataforma ↗</a></nav></details></div></header>';
+        body=body.replace(/<header\\b[^>]*>[\\s\\S]*?<\\/header>/i,homeHeader);
+      }
+      body=body.replace('</head>','<link rel="stylesheet" href="/portal-assets/mandarim-editorial-global.css?v=20261116"><link rel="stylesheet" href="/portal-assets/travertino-global.css?v=20261117"><link rel="stylesheet" href="/portal-assets/yi-shared-home-header.css?v=20261117"></head>');
       body=body.replace('</body>','<script defer src="/portal-assets/mandarim-typewriter-global.js?v=20261116"></script></body>');
     }
     return privacySend(res.statusCode===200?withPrivacyFooter(body):body);
