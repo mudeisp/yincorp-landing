@@ -1,9 +1,14 @@
+import {editorialPhoto} from '../lib/editorial-photo.js';
 import {productSemantics,semanticTechnicalFields} from './semantics.js';
 import {html as h,money,slug,STATES,bedroomLabel,parkingLabel,range} from './model.js';
 import {delivery,typology,unitLabel,plansBlock,mediaBlock,gallery,VITORIA_IMAGE,vitoriaStory} from './presentation.js';
 import {SP_PRIORITY,marketProfile,renderMarketGuide} from './market-guide.js';
 
-const image=(url,alt,{eager=false,width=1600,height=1000}={})=>url?`<img src="${h(url)}" alt="${h(alt)}" width="${width}" height="${height}" loading="${eager?'eager':'lazy'}" ${eager?'fetchpriority="high"':''} decoding="async">`:'<div class="photo-missing">Imagem em atualização</div>';
+function image(url,alt,{eager=false,width=1600,height=1000,sizes='100vw'}={}) {
+  if (!url) return '<div class="photo-missing">Imagem em atualização</div>';
+  const photo=eager ? editorialPhoto(url,sizes) : null;
+  return `<img src="${h(photo?.src||url)}"${photo?.srcset||''} alt="${h(alt)}" width="${photo?.width||width}" height="${photo?.height||height}" loading="${eager?'eager':'lazy'}" ${eager?'fetchpriority="high"':''} decoding="async">`;
+}
 export function editorialCard(g) {
   return `<article class="project-card"><a class="card-photo" href="${h(g.path)}" tabindex="-1" aria-hidden="true" data-cinematic-pan>${image(g.photos[0],`${g.name} em ${g.neighborhood}, ${g.city}/${g.state}`)}</a><div class="card-copy" data-cinematic-sequence><p class="location">${h(g.neighborhood)} · ${h(g.city)}/${h(g.state)}</p><div class="card-title"><h3><a href="${h(g.path)}">${h(g.name)}</a></h3><span aria-hidden="true">↗</span></div><ul class="facts"><li>${h(g.area)}</li><li>${h(productSemantics(g).cardAttribute)}</li></ul><div class="card-bottom"><p><small>A partir de</small><strong>${h(money(g.price))}</strong></p><span>${h(g.status || delivery(g))}</span></div></div></article>`;
 }
@@ -21,7 +26,7 @@ export function listingComposition({route,filters,cities,results,groups,filtersH
   const cityImage=(route.state==='ES' && (vitoria||home))?VITORIA_IMAGE:fallbackImage;
   const esPhoto=route.state==='ES' && (home||vitoria);
   const heroCopy=spHome?'Descubra empreendimentos a partir dos bairros e endereços que fazem parte da sua rotina.':home?'Entre a cidade e o mar, descubra o endereço<br class="desktop-only"> do seu próximo capítulo.':vitoria&&!n?'A arquitetura, o bairro e as possibilidades de um novo endereço. <a href="/es/vitoria/investimento-airbnb">Comprando para locação curta? Conheça os critérios para avaliar imóveis em Vitória.</a>':'A arquitetura, o bairro e as possibilidades de um novo endereço.';
-  const hero=`<section class="destination-hero ${home?'state-hero':'city-hero'}"><figure class="hero-photograph" data-cinematic-pan>${image(cityImage,esPhoto?'Orla da Praia de Camburi em Vitória, Espírito Santo':`Empreendimento em ${place}`,{eager:true})}${esPhoto?photoCredit():''}</figure><div class="hero-editorial wrap"><p class="eyebrow">${h(home?`${STATES[route.state]} · Brasil`:place)} · PROPERTY &amp; PLACES</p><h1>${heading}</h1><p>${heroCopy}</p><a class="editorial-link" href="#empreendimentos">${home?'Explore a nossa seleção':'Conheça os empreendimentos'} <span>↓</span></a></div><div class="hero-search wrap"><p class="search-caption">SEU PRÓXIMO ENDEREÇO</p>${filtersHTML}</div></section>`;
+  const hero=`<section class="destination-hero ${home?'state-hero':'city-hero'}"><figure class="hero-photograph" data-cinematic-pan data-cinematic-hero>${image(cityImage,esPhoto?'Orla da Praia de Camburi em Vitória, Espírito Santo':`Empreendimento em ${place}`,{eager:true,sizes:home?'(max-width: 760px) 100vw, calc(100vw - 48px)':'(max-width: 760px) 100vw, 52vw'})}${esPhoto?photoCredit():''}</figure><div class="hero-editorial wrap"><p class="eyebrow">${h(home?`${STATES[route.state]} · Brasil`:place)} · PROPERTY &amp; PLACES</p><h1>${heading}</h1><p>${heroCopy}</p><a class="editorial-link" href="#empreendimentos">${home?'Explore a nossa seleção':'Conheça os empreendimentos'} <span>↓</span></a></div><div class="hero-search wrap"><p class="search-caption">SEU PRÓXIMO ENDEREÇO</p>${filtersHTML}</div></section>`;
   const geographyCount=n?1:(spHome?saoPauloCity.neighborhoods.size:(home?cities.length:city?.neighborhoods.size || 0));
   const geographyLabel=n?'bairro selecionado':spHome?'bairros para explorar':home?'cidades para descobrir':'bairros para explorar';
   const metrics=`<div class="catalog-metrics wrap" aria-label="Catálogo atual"><p><strong>${scope.length}</strong><span>empreendimentos</span></p>${stock?`<p><strong>${new Intl.NumberFormat('pt-BR').format(stock)}</strong><span>unidades com estoque informado</span></p>`:`<p><strong>${scope.reduce((s,g)=>s+g.units.length,0)}</strong><span>configurações no catálogo</span></p>`}<p><strong>${geographyCount}</strong><span>${geographyLabel}</span></p><div class="metrics-note">Endereços reais.<br>Novas possibilidades.</div></div>`;

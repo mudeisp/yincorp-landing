@@ -1,3 +1,4 @@
+import {editorialPhoto} from '../lib/editorial-photo.js';
 import {enrichCommercialPresentation} from '../lib/commercial-presentation.js';
 import {groupEligibleDevelopments,html as h} from '../.portal-shared/model.js';
 import {NATIONAL_MARKETS} from '../.portal-shared/eligibility.js';
@@ -83,13 +84,14 @@ export default async function portal(req,res){
     // The /sp state landing page uses a fixed, verified Órulo hero; other
     // listings, search results, property pages and media are untouched.
     if(path==='/sp'&&res.statusCode===200&&typeof body==='string'&&body.startsWith('<!doctype html>')){
-      const hero='<figure class="hero-photograph" data-cinematic-pan>';
+      const hero='<figure class="hero-photograph" data-cinematic-pan data-cinematic-hero>';
       const start=body.indexOf(hero);
       const end=start<0?-1:body.indexOf('</figure>',start);
       if(end>start){
         const image='https://static.orulo.com.br/images/properties/large/xyg3f7pmhaewwcp8ycxqludbi68i.jpg';
+        const photo=editorialPhoto(image,'(max-width: 760px) 100vw, calc(100vw - 48px)');
         const link='/sp/sao-paulo/empreendimento/horacio-lafer-autoria--orulo-82914';
-        const replacement=hero+'<a href="'+link+'" aria-label="Conhecer o Horácio Lafer Autoria no Itaim Bibi"><img src="'+image+'" alt="Horácio Lafer Autoria — empreendimento no Itaim Bibi, São Paulo" width="1600" height="1000" loading="eager" fetchpriority="high" decoding="async"></a><figcaption>Horácio Lafer Autoria · Itaim Bibi · <a href="'+link+'">Conhecer empreendimento ↗</a> · imagem do catálogo Órulo</figcaption></figure>';
+        const replacement=hero+'<a href="'+link+'" aria-label="Conhecer o Horácio Lafer Autoria no Itaim Bibi"><img src="'+photo.src+'"'+photo.srcset+' alt="Horácio Lafer Autoria — empreendimento no Itaim Bibi, São Paulo" width="1920" height="1372" loading="eager" fetchpriority="high" decoding="async"></a><figcaption>Horácio Lafer Autoria · Itaim Bibi · <a href="'+link+'">Conhecer empreendimento ↗</a> · imagem do catálogo Órulo</figcaption></figure>';
         body=body.slice(0,start)+replacement+body.slice(end+'</figure>'.length);
       }
     }

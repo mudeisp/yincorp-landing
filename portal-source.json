@@ -63,11 +63,6 @@
       "gitBlobSha": "5890ad298ac144f50d3184e6d8ab1c55e4a57a81"
     },
     {
-      "source": "assets/js/property-story.js",
-      "destination": "portal-assets/property-story.js",
-      "gitBlobSha": "8d4776c9240ce3dc357f4d9bde49efa5abf90012"
-    },
-    {
       "source": "portal/composition.js",
       "destination": ".portal-shared/composition.js",
       "gitBlobSha": "8a02484562e6607a46961b0a4763d86c78690b16"
