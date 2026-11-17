@@ -1,98 +1,23 @@
-/* Travertino & Ouro — national portal skin; presentation only. */
-@import url('/portal-assets/editorial-tokens.css');
-body.yi-travertino-page{--primary:#a48154;--accent:#a48154;--brand:#a48154;--green:#a48154;--color-primary:#a48154;background:#faf7f1;color:#28251f;font-family:var(--yi-font-body),Arial,sans-serif}
-body.yi-travertino-page :is(h1,h2,h3,.hero-title,.section-title){font-family:var(--yi-font-title),Georgia,serif;font-weight:400;letter-spacing:-.025em;color:#28251f}
-body.yi-travertino-page :is(header,nav,.site-header,.topbar){border-color:#ded5c7}
-body.yi-travertino-page :is(a,button,input,select,textarea){accent-color:#a48154}
-body.yi-travertino-page a:not(.btn):not(.button){text-underline-offset:3px}
-body.yi-travertino-page :is(.eyebrow,.kicker,.overline){color:#98764e;letter-spacing:.12em;text-transform:uppercase}
-body.yi-travertino-page :is(.card,.property-card,.listing-card){border-color:#ded5c7}
-body.yi-travertino-page :is(img,video){max-width:100%}
-@media(max-width:640px){body.yi-travertino-page{overflow-wrap:break-word}body.yi-travertino-page :is(h1,h2){text-wrap:balance}body.yi-travertino-page :is(button,[role=button],.btn,.button){min-height:44px}body.yi-travertino-page :is(.wrap,.container){max-width:100%}}
-@media(prefers-reduced-motion:reduce){body.yi-travertino-page *,body.yi-travertino-page *::before,body.yi-travertino-page *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
-
-/* Universal editorial pilot: scoped to existing portal classes, no DOM rewrites. */
-body.yi-travertino-page{
-  --yi-editorial-paper:#faf7f1;
-  --yi-editorial-stone:#eee7dc;
-  --yi-editorial-rule:#ded5c7;
-  --yi-editorial-ink:#28251f;
-  --yi-editorial-gold:#a48154;
-  background-image:linear-gradient(125deg,rgba(164,129,84,.045),transparent 42%),linear-gradient(180deg,#faf7f1,#f5f0e8);
+/* Portal composition built on the same tokens, mineral surface and hero as the home. */
+body.yi-travertino-page { accent-color: var(--yi-bronze); }
+.yi-property-hero h1 {
+  overflow-wrap: anywhere;
+  font-size: clamp(66px, 7vw, 144px);
 }
-body.yi-travertino-page :is(main,article){min-width:0}
-body.yi-travertino-page :is(h1,.hero-title){
-  font-size:clamp(2.35rem,5.6vw,5.8rem);
-  line-height:1.04;
-  letter-spacing:-.045em;
-  overflow-wrap:anywhere;
+.yi-property-hero .hero-copy .primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 23px;
+  background: var(--yi-ink);
+  color: var(--yi-white);
 }
-body.yi-travertino-page :is(h2,.section-title){
-  line-height:1.14;
-  letter-spacing:-.035em;
+.yi-property-hero .hero-copy .primary:hover { background: var(--yi-engine-selected); }
+.yi-property-hero .hero-figure { min-width: 0; }
+.yi-property-hero .hero-figure img { display: block; }
+.portal-footer .yi-brand-mark { flex-shrink: 0; }
+@media (max-width: 600px) {
+  .yi-property-hero h1 { font-size: clamp(59px, 16vw, 95px); }
 }
-body.yi-travertino-page :is(.hero-photograph,.hero-figure){
-  position:relative;
-  overflow:hidden;
-  background:#e9e0d3;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
-body.yi-travertino-page :is(.hero-photograph,.hero-figure) img{
-  display:block;
-  width:100%;
-  height:auto;
-  transform:scale(1.015);
-  animation:yi-portal-hero-drift 22s ease-in-out infinite alternate;
-  will-change:transform;
-}
-body.yi-travertino-page :is(.hero-photograph,.hero-figure) figcaption{
-  font-size:.78rem;
-  letter-spacing:.035em;
-  color:#6e6254;
-}
-body.yi-travertino-page :is(.card,.property-card,.listing-card){
-  background-color:rgba(255,253,249,.88);
-  box-shadow:0 10px 36px rgba(40,37,31,.045);
-}
-body.yi-travertino-page :is(.wrap,.container,main,article,section){
-  min-width:0;
-}
-body.yi-travertino-page :is(.btn,.button,button):not(.whatsapp-float):not([class*="whatsapp"]){
-  transition:transform .28s ease,box-shadow .28s ease;
-}
-@media(hover:hover){
-  body.yi-travertino-page :is(.btn,.button,button):not(.whatsapp-float):not([class*="whatsapp"]):hover{
-    transform:translateY(-2px);
-    box-shadow:0 6px 20px rgba(40,37,31,.1);
-  }
-}
-@keyframes yi-portal-hero-drift{
-  from{transform:scale(1.015) translate3d(0,0,0)}
-  to{transform:scale(1.075) translate3d(-.8%,.4%,0)}
-}
-@media(max-width:640px){
-  body.yi-travertino-page :is(h1,.hero-title){font-size:clamp(2rem,9vw,3.2rem);line-height:1.07}
-  body.yi-travertino-page :is(.hero-photograph,.hero-figure) img{will-change:auto}
-}
-@media(prefers-reduced-motion:reduce){
-  body.yi-travertino-page :is(.hero-photograph,.hero-figure) img{
-    animation:none!important;transform:none!important;will-change:auto;
-  }
-}
-
-/* Phase 2: grounded portal-editorial selectors for the national template. */
-body.yi-travertino-page{--ink:#28251f;--deep:#28251f;--ivory:#faf7f1;--stone:#eee7dc;--line:#ded5c7;--muted:#756f67;--bronze:#a48154;--serif:var(--yi-font-title),Georgia,serif;--sans:var(--yi-font-body),Arial,sans-serif}
-body.yi-travertino-page .breadcrumbs{background:#faf7f1;color:#756f67}
-body.yi-travertino-page .property-opening{background:linear-gradient(145deg,#f4eee5,#eee8df);padding-inline:max(20px,calc((100vw - 1360px)/2));padding-block:clamp(46px,6vw,100px);gap:clamp(20px,5vw,85px)}
-body.yi-travertino-page .property-opening h1{font:400 clamp(2.7rem,6.3vw,6rem)/1.04 var(--serif);letter-spacing:-.05em;color:#28251f;text-wrap:balance}
-body.yi-travertino-page .property-opening .eyebrow{color:#92734e}
-body.yi-travertino-page .property-cover{background:#e5ded3}
-body.yi-travertino-page .property-cover>img{animation:yi-portal-hero-drift 22s ease-in-out infinite alternate;transform-origin:center center}
-body.yi-travertino-page :is(.primary,.button.primary){background:#28251f;color:#faf7f1}
-body.yi-travertino-page :is(.primary,.button.primary):hover{background:#473e34}
-body.yi-travertino-page :is(.secondary,.button.secondary){background:transparent;color:#28251f;border-color:#28251f}
-body.yi-travertino-page :is(.property-keyfacts,.property-overview,.amenities-layout){border-color:#ded5c7}
-body.yi-travertino-page :is(.card-bottom strong,.opening-price>strong,.city-facts strong){color:#a48154}
-body.yi-travertino-page .project-card .card-photo img{transition:transform 1.2s ease}
-@media(hover:hover){body.yi-travertino-page .project-card:hover .card-photo img{transform:scale(1.06)}}
-@media(max-width:640px){body.yi-travertino-page .property-opening{padding:52px 22px 38px}body.yi-travertino-page .property-opening h1{font-size:clamp(2.7rem,9.3vw,4.1rem);line-height:1.07}body.yi-travertino-page .property-cover{width:100%;height:clamp(430px,105vw,660px);min-height:0}}
-@media(prefers-reduced-motion:reduce){body.yi-travertino-page .property-cover>img{animation:none!important;transform:none!important}}

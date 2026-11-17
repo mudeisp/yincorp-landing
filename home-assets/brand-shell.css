@@ -1,0 +1,90 @@
+/* The home and portal use one wordmark and one header composition. */
+.yi-brand-mark {
+  display: inline-flex;
+  flex-direction: column;
+  color: var(--yi-ink);
+  text-decoration: none;
+  line-height: 1;
+}
+.yi-brand-mark strong {
+  display: block;
+  font: 400 35px/.9 var(--yi-font-title);
+  letter-spacing: -.07em;
+}
+.yi-brand-mark strong::first-letter { color: var(--yi-bronze); }
+.yi-brand-mark span {
+  font: 400 8px/1 var(--yi-font-body);
+  letter-spacing: .22em;
+  margin: 10px 0 0 3px;
+}
+.yi-brand-shell {
+  position: relative;
+  z-index: 3;
+  background: #f3eade;
+  border-bottom: 1px solid #9c86692e;
+  color: var(--yi-ink);
+  font-family: var(--yi-font-body);
+}
+.yi-brand-shell .header-inner {
+  width: min(1240px, calc(100% - 40px));
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.yi-brand-shell .yi-brand-mark strong { font-size: 42px; letter-spacing: -.06em; }
+.yi-brand-shell .desktop-nav { display: none; }
+.yi-brand-shell .mobile-menu summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 12px 2px;
+  font-size: 13px;
+}
+.yi-brand-shell summary::-webkit-details-marker { display: none; }
+.yi-brand-shell .mobile-menu summary::after { content: ' +'; font-size: 18px; }
+.yi-brand-shell .mobile-menu[open] summary::after { content: ' −'; }
+.yi-brand-shell .mobile-menu nav {
+  position: absolute;
+  inset: 100% 20px auto;
+  z-index: 5;
+  background: var(--yi-white);
+  border: 1px solid var(--yi-line);
+  padding: 12px 22px;
+  box-shadow: 0 16px 30px #352f2812;
+}
+.yi-brand-shell .mobile-menu nav a {
+  display: block;
+  padding: 13px 0;
+  text-decoration: none;
+  border-bottom: 1px solid var(--yi-line);
+}
+.yi-brand-shell .mobile-menu nav a:last-child { border: 0; }
+.yi-brand-shell :is(a,summary):focus-visible {
+  outline: 2px solid var(--yi-bronze);
+  outline-offset: 4px;
+}
+@media (min-width: 760px) {
+  .yi-brand-shell .header-inner { width: min(1240px, calc(100% - 80px)); }
+  .yi-brand-shell .mobile-menu { display: none; }
+  .yi-brand-shell .desktop-nav { display: flex; align-items: center; gap: clamp(12px, 2.1vw, 30px); }
+  .yi-brand-shell .desktop-nav a {
+    color: inherit;
+    margin: 0;
+    text-decoration: none;
+    font-size: 12px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .yi-brand-shell .desktop-nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+  .yi-brand-shell .desktop-nav .nav-contact {
+    padding: 0 18px;
+    border: 1px solid color-mix(in srgb,var(--yi-ink) 15%,var(--yi-paper));
+  }
+}
+@media (min-width: 1100px) { .yi-brand-shell .header-inner { min-height: 103px; } }
+@media (max-width: 600px) {
+  .yi-brand-shell .header-inner { min-height: 74px; }
+  .yi-brand-shell .yi-brand-mark strong { font-size: 39px; }
+}
