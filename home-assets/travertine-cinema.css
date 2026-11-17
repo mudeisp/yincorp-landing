@@ -27,3 +27,33 @@ body{background:#faf7f1}
 @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto;padding:65px 22px 45px}.hero-copy{padding:0 0 35px}.hero h1{font-size:clamp(76px,12vw,118px)}.hero-figure{height:60vh;min-height:370px}.hero-figure img{height:116%}.yi-cinema-manifesto{min-height:75svh}}
 @media(max-width:600px){.hero{padding:50px 20px 32px}.hero h1{font-size:clamp(70px,16vw,95px);margin:28px 0}.hero-figure{height:55vh;min-height:340px}.hero-figure figcaption{font-size:9px;gap:8px}.yi-cinema-manifesto{padding:95px 22px}.yi-cinema-manifesto h2{font-size:clamp(52px,12vw,78px)}}
 @media(prefers-reduced-motion:reduce){[data-yi-home-reveal]{opacity:1;transform:none;transition:none}.hero-figure img{transform:none!important;will-change:auto}}
+
+/* Mobile-first editorial refinement: phones are the primary art-direction canvas. */
+@media(max-width:600px){
+  .header-inner{min-height:74px}
+  .header .brand strong{font-size:39px}
+  .hero{padding:42px 0 0;display:flex;flex-direction:column;align-items:stretch;gap:0;overflow:hidden}
+  .hero-copy{padding:0 24px 34px}
+  .hero-copy .eyebrow{font-size:10px;letter-spacing:.19em;margin-bottom:20px}
+  .hero h1{font-size:clamp(76px,17vw,112px);line-height:.83;letter-spacing:-.065em;margin:0 0 24px;max-width:9ch}
+  .hero-copy>p:not(.eyebrow){font-size:14px;line-height:1.8;max-width:35ch;margin-top:0}
+  .hero .actions{gap:10px;margin-top:25px}
+  .hero .button{padding:12px 15px;min-height:50px;letter-spacing:.02em}
+  .hero-figure{width:100%;height:67svh;min-height:430px;max-height:720px;box-shadow:none}
+  .hero-figure>a{inset:0}
+  .hero-figure img{width:112%;height:112%;left:-6%;top:-6%;object-position:50% 45%;transform:translate3d(var(--yi-home-pan,0px),0,0) scale(1.01)}
+  .hero-image-label{left:22px;top:22px;font-size:9px;letter-spacing:.1em}
+  .hero-figure figcaption{left:22px;right:22px;bottom:23px;flex-direction:column;align-items:flex-start;gap:3px;font-size:10px}
+  .yi-cinema-manifesto{min-height:85svh;padding:110px 25px}
+  .yi-cinema-manifesto h2{font-size:clamp(54px,12vw,82px);line-height:.96;letter-spacing:-.035em;margin:30px 0}
+  .yi-cinema-manifesto>p:last-child{font-size:13px;line-height:1.9}
+  #estados{padding-block:85px}
+  .section-heading h2{font-size:clamp(51px,12vw,72px)}
+  .states{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .state{min-height:104px}
+  .state strong{font-size:34px}
+  .path-card{min-height:290px;padding:28px 25px}
+  .about{padding-block:85px}
+  .contact{padding-block:65px}
+}
+@media(max-width:360px){.hero h1{font-size:70px}.hero .actions{flex-direction:column;align-items:stretch}.hero .button{justify-content:center}}
