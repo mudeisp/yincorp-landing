@@ -1,0 +1,17 @@
+/* Motion is opt-in at the template. Frames clip the overscan, never the page. */
+[data-cinematic-pan] {
+  overflow: clip;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-cinematic-pan] > img,
+  [data-cinematic-pan] > :is(a, button, picture) > img {
+    translate: var(--cinematic-x, 0%) 0;
+    scale: var(--cinematic-scale, 1);
+  }
+
+  [data-cinematic-hero] > img,
+  [data-cinematic-hero] > :is(a, picture) > img {
+    animation: mandarimEditorialReveal 1.7s ease-out both;
+  }
+}

@@ -83,7 +83,7 @@ export default async function portal(req,res){
     // The /sp state landing page uses a fixed, verified Órulo hero; other
     // listings, search results, property pages and media are untouched.
     if(path==='/sp'&&res.statusCode===200&&typeof body==='string'&&body.startsWith('<!doctype html>')){
-      const hero='<figure class="hero-photograph">';
+      const hero='<figure class="hero-photograph" data-cinematic-pan>';
       const start=body.indexOf(hero);
       const end=start<0?-1:body.indexOf('</figure>',start);
       if(end>start){
@@ -121,7 +121,7 @@ export default async function portal(req,res){
     const isMarketRoute=NATIONAL_MARKETS.some(state=>path.startsWith(`/${state.toLowerCase()}/`));
     const enhanced=res.statusCode===200&&typeof rendered==='string'&&rendered.includes('</body>')&&
       (rendered.includes('class="commercial-book"')||(isMarketRoute&&/\/(?:empreendimento|imovel)\//.test(path))||(experienceRequested&&isMarketRoute))
-      ?rendered.replace('</body>','<link rel="stylesheet" href="/portal-assets/global-experience.css"><script defer src="/portal-assets/global-experience.js"></script></body>')
+      ?rendered.replace('</head>','<link rel="stylesheet" href="/portal-assets/global-experience.css"><script defer src="/portal-assets/global-experience.js"></script></head>')
       :rendered;
     return send(enhanced);
   };

@@ -3,17 +3,14 @@
 .yg-zoomable{cursor:zoom-in}.yg-lightbox{position:fixed;inset:0;width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;padding:65px 15px 25px;border:0;background:color-mix(in srgb, var(--yi-ink) 96.08%, transparent);text-align:center}.yg-lightbox::backdrop{background:color-mix(in srgb, var(--yi-ink) 85.88%, transparent)}.yg-lightbox img{max-width:100%;max-height:calc(100dvh - 100px);width:auto;height:auto;object-fit:contain}.yg-lightbox button{position:fixed;top:14px;right:18px;background:var(--yi-ink);color:#fff;border:1px solid #fff8;border-radius:50%;width:44px;height:44px;font-size:30px;cursor:pointer}
 
 
-/* Editorial chapter layout: applies only to commercial books in the preview pilot. */
-.yg-cinematic{max-width:1120px;margin:0 auto;padding:clamp(20px,5vw,64px);overflow:clip}
-.yg-cinematic>.commercial-kicker{letter-spacing:.23em;text-transform:uppercase}
-.yg-cinematic>#commercial-book-title{font-family:var(--yi-font-title);font-size:clamp(48px,5.5vw,90px);line-height:1;letter-spacing:-.035em;min-height:1.2em}
-.yg-cinematic>.commercial-gallery{display:block!important}
-.yg-cinematic .yg-chapter{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(14px,4vw,50px);align-items:center;min-height:65vh;padding:clamp(28px,6vw,80px) 0;opacity:1;transform:none}
-.yg-cinematic .yg-chapter-title{font-family:var(--yi-font-title);font-size:clamp(30px,3vw,44px);grid-column:1;grid-row:1;align-self:end;margin:0}
-.yg-cinematic .yg-chapter>a{grid-column:2;grid-row:1 / span 2;display:block;max-width:100%;overflow:hidden;border-radius:14px}
-.yg-cinematic .yg-chapter img{width:100%!important;height:auto!important;max-height:65vh;object-fit:contain!important;display:block}
-.yg-cinematic .yg-chapter figcaption{grid-column:1;grid-row:2;align-self:start}
-@media(prefers-reduced-motion:no-preference){.yg-cinematic .yg-chapter{opacity:1}.yg-cinematic .yg-chapter.yg-visible,.yg-cinematic .yg-chapter:focus-within{opacity:1;transform:none}
-.yg-cinematic .yg-chapter>a{clip-path:inset(0 100% 0 0);transition:clip-path 1.2s cubic-bezier(.2,.7,.2,1) .15s}
-.yg-cinematic .yg-chapter.yg-visible>a,.yg-cinematic .yg-chapter:focus-within>a{clip-path:inset(0)}}
-@media(max-width:700px){.yg-cinematic .yg-chapter{grid-template-columns:minmax(0,1fr);min-height:auto;padding:36px 0}.yg-cinematic .yg-chapter-title,.yg-cinematic .yg-chapter>a,.yg-cinematic .yg-chapter figcaption{grid-column:1;grid-row:auto}.yg-cinematic .yg-chapter img{max-height:52vh}}
+/* Commercial chapter layout is rendered before the client script runs. */
+[data-cinematic-book]{max-width:1120px;margin:0 auto;padding:clamp(20px,5vw,64px);overflow:clip}
+[data-cinematic-book]>.commercial-kicker{letter-spacing:.23em;text-transform:uppercase}
+[data-cinematic-book]>#commercial-book-title{font-family:var(--yi-font-title);font-size:clamp(48px,5.5vw,90px);line-height:1;letter-spacing:-.035em;min-height:1.2em}
+[data-cinematic-book]>.commercial-gallery{display:block!important}
+[data-cinematic-book] .yg-chapter{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(14px,4vw,50px);align-items:center;min-height:65vh;padding:clamp(28px,6vw,80px) 0;opacity:1;transform:none}
+[data-cinematic-book] .yg-chapter-title{font-family:var(--yi-font-title);font-size:clamp(30px,3vw,44px);grid-column:1;grid-row:1;align-self:end;margin:0}
+[data-cinematic-book] .yg-chapter>a{grid-column:2;grid-row:1 / span 2;display:block;max-width:100%;overflow:hidden;border-radius:14px}
+[data-cinematic-book] .yg-chapter img{width:100%!important;height:auto!important;max-height:65vh;object-fit:contain!important;display:block}
+[data-cinematic-book] .yg-chapter figcaption{grid-column:1;grid-row:2;align-self:start}
+@media(max-width:700px){[data-cinematic-book] .yg-chapter{grid-template-columns:minmax(0,1fr);min-height:auto;padding:36px 0}[data-cinematic-book] .yg-chapter-title,[data-cinematic-book] .yg-chapter>a,[data-cinematic-book] .yg-chapter figcaption{grid-column:1;grid-row:auto}[data-cinematic-book] .yg-chapter img{max-height:52vh}}
