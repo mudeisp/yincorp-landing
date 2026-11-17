@@ -91,6 +91,15 @@
   object-fit:cover;
   object-position:center
 }
+.art-cover-image[data-editorial-native] {
+  background: var(--yi-sand);
+}
+.art-cover-image[data-editorial-native] img {
+  margin: auto;
+  max-width: 330px;
+  max-height: 564px;
+  object-fit: contain;
+}
 .art-cover-image figcaption  {
   position:absolute;
   bottom:22px;
