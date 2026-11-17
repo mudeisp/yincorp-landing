@@ -1,10 +1,11 @@
 /* Identidade editorial de canva/mandarim-editorial.html. */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 :root {
   --yi-paper: #faf7f1;
   --yi-ink: #28251f;
   --yi-bronze: #a48154;
+  --yi-eyebrow: #98764e;
   --yi-muted: #716b62;
   --yi-sand: #eee6da;
   --yi-line: #ded5c7;
@@ -12,7 +13,13 @@
   --yi-engine-card: #39352e;
   --yi-engine-border: #766959;
   --yi-engine-accent: #c6a47c;
+  --yi-engine-selected: #67513a;
   --yi-engine-muted: #d7cbb9;
   --yi-font-title: 'Cormorant Garamond', Georgia, serif;
   --yi-font-body: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+@keyframes mandarimEditorialReveal {
+  from { opacity: .6; transform: scale(1.07); }
+  to { opacity: 1; transform: scale(1); }
 }

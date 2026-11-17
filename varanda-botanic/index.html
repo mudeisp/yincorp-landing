@@ -18,7 +18,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2W11SX5VV"></script>
@@ -44,33 +44,31 @@
     fbq('track', 'PageView');
   </script>
 
-  <style>
+  <style>@import url('/portal-assets/editorial-tokens.css');
     :root{
       --bg:#F7F4ED;
       --card:#FCFAF6;
-      --soft:#F0ECE3;
+      --soft:var(--yi-sand);
       --champ:#C6A76B;
       --champ2:#E4D0A3;
-      --ink:#4A443C;
-      --muted:#7D776E;
+      --ink:var(--yi-ink);
+      --muted:var(--yi-muted);
       --taupe:#6A635A;
       --border:#DED8CD;
-      --deep:#26231F;
-      --green:#27341F;
+      --deep:var(--yi-ink);
+      --green:var(--yi-ink);
       --radius:26px;
-      --shadow:0 18px 50px rgba(54,45,34,.10);
-    }
+      --shadow:0 18px 50px rgba(54,45,34,.10);font-family:var(--yi-font-body);}
 
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    html{scroll-behavior:smooth;font-family:var(--yi-font-body);}
     body{
       margin:0;
       background:var(--bg);
       color:var(--ink);
-      font-family:"DM Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+      font-family:var(--yi-font-body);
       line-height:1.45;
-      -webkit-font-smoothing:antialiased;
-    }
+      -webkit-font-smoothing:antialiased;}
     img{display:block;max-width:100%}
     button,input{font:inherit}
     a{color:inherit;text-decoration:none}
@@ -90,7 +88,7 @@
     }
     .brand-mark{
       width:34px;height:34px;border:1px solid var(--champ);border-radius:50%;
-      display:grid;place-items:center;font-family:"Playfair Display",serif;color:var(--deep)
+      display:grid;place-items:center;font-family:var(--yi-font-title);color:var(--deep)
     }
     .top-cta{
       padding:12px 18px;border-radius:999px;background:var(--deep);color:white;font-weight:700;font-size:13px;
@@ -112,12 +110,12 @@
       text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--taupe)
     }
     h1{
-      margin:16px 0 18px;font-family:"Playfair Display",serif;
+      margin:16px 0 18px;font-family:var(--yi-font-title);
       font-size:clamp(48px,6vw,82px);line-height:.96;letter-spacing:-.035em;color:var(--deep)
     }
     .hero-sub{font-size:18px;max-width:560px;color:var(--muted)}
     .price{
-      margin-top:34px;font-family:"Playfair Display",serif;font-size:48px;line-height:1;color:var(--deep)
+      margin-top:34px;font-family:var(--yi-font-title);font-size:48px;line-height:1;color:var(--deep)
     }
     .price small{display:block;font-family:"DM Sans";font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:8px}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
@@ -148,7 +146,7 @@
     .section{padding:52px 0}
     .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}
     .section h2{
-      margin:6px 0 0;font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,58px);line-height:1;color:var(--deep)
+      margin:6px 0 0;font-family:var(--yi-font-title);font-size:clamp(36px,5vw,58px);line-height:1;color:var(--deep)
     }
     .section-head p{max-width:520px;color:var(--muted);margin:0}
 
@@ -193,7 +191,7 @@
       padding:38px;
     }
     .floorplan-copy h3{
-      font-family:"Playfair Display",serif;
+      font-family:var(--yi-font-title);
       font-size:40px;
       line-height:1.05;
       margin:0 0 14px;
@@ -267,7 +265,7 @@
       content:"";position:absolute;width:240px;height:240px;border-radius:50%;
       background:radial-gradient(circle,var(--champ) 0%,rgba(198,167,107,0) 68%);right:-60px;top:-80px;opacity:.38
     }
-    .location-card h3{font-family:"Playfair Display",serif;font-size:38px;margin:0 0 10px}
+    .location-card h3{font-family:var(--yi-font-title);font-size:38px;margin:0 0 10px}
     .location-card p{color:#ddd;margin:0}
     .address-pill{
       margin-top:20px;display:inline-block;padding:10px 14px;border:1px solid rgba(255,255,255,.18);
@@ -333,7 +331,7 @@
       border:0;
       border-radius:999px;
       padding:9px 8px;
-      background:#1f7a45;
+      background:var(--yi-ink);
       color:white;
       font-size:10px;
       line-height:1.15;
@@ -366,7 +364,7 @@
       width:min(520px,100%);background:var(--card);border-radius:28px;padding:28px;border:1px solid var(--border);box-shadow:var(--shadow)
     }
     .modal-top{display:flex;justify-content:space-between;gap:20px;align-items:start}
-    .modal h3{font-family:"Playfair Display",serif;font-size:34px;margin:0 0 8px;color:var(--deep)}
+    .modal h3{font-family:var(--yi-font-title);font-size:34px;margin:0 0 8px;color:var(--deep)}
     .modal p{margin:0 0 20px;color:var(--muted)}
     .close{
       width:38px;height:38px;border-radius:50%;border:1px solid var(--border);background:white;cursor:pointer

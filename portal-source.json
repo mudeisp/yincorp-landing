@@ -79,19 +79,9 @@
       "gitBlobSha": "533fc110d62f83790a49ef3091db69b26b53b79e"
     },
     {
-      "source": "assets/css/portal-editorial.css",
-      "destination": "portal-assets/portal-editorial.css",
-      "gitBlobSha": "8c22400b7f23263fe025183a0278db85afc285d5"
-    },
-    {
       "source": "portal/architecture.js",
       "destination": ".portal-shared/architecture.js",
       "gitBlobSha": "05ed60305fcf30af49e64bbe6f83d815602c016b"
-    },
-    {
-      "source": "assets/css/property-story.css",
-      "destination": "portal-assets/property-story.css",
-      "gitBlobSha": "6496ad51b468a7f17ce908fee8db6efc8266aa1e"
     },
     {
       "source": "assets/js/property-story.js",
@@ -180,22 +170,10 @@
       "commit": "2c1e4f8ed76e1a86828b26d7cef2863b68f21432"
     },
     {
-      "source": "assets/css/whatsapp-float.css",
-      "destination": "portal-assets/whatsapp-float.css",
-      "gitBlobSha": "752b34f458aad0b80bd56ab25a1ab1baf6dcd3bf",
-      "commit": "7ed1612b8c36ac85ea0e37fa0ba0bfe094c2395a"
-    },
-    {
       "source": "portal/rentals.js",
       "destination": ".portal-shared/rentals.js",
       "commit": "4941afde85b7be02839178e38bb83ddf90ed841f",
       "sha256": "b129ea423224e91c635c5c644d2b86ca092626f9694af887bde8286c44272eae"
-    },
-    {
-      "source": "assets/css/rentals.css",
-      "destination": "portal-assets/rentals.css",
-      "commit": "4941afde85b7be02839178e38bb83ddf90ed841f",
-      "sha256": "ddd508407b2884a14afbd6a4c107e75b0ab5aa1ccca60ab63acc22a6b4fa12fe"
     },
     {
       "source": "assets/js/rentals.js",

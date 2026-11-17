@@ -1,0 +1,33 @@
+@import url('/portal-assets/editorial-tokens.css');
+/* Mounted directly on body so transformed content cannot capture fixed positioning. */
+body > .whatsapp-direct-float{
+  position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));
+  width:56px;height:56px;min-width:56px;min-height:56px;padding:0;
+  border:0;border-radius:50%;background:var(--yi-ink);color:#fff;
+  display:grid;place-items:center;box-sizing:border-box;cursor:pointer;
+  box-shadow:0 4px 16px #10252b30;z-index:1000
+}
+body > .whatsapp-direct-float svg{display:block;width:28px;height:28px;pointer-events:none}
+body > .whatsapp-direct-float:hover{background:var(--yi-ink)}
+body > .whatsapp-direct-float:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 6px var(--yi-ink)}
+body > .whatsapp-direct-float[hidden],body:has(dialog[open]) > .whatsapp-direct-float{display:none!important}
+/* Keep the existing availability bar untouched; place the independent icon above it. */
+@media(max-width:768px){body > .whatsapp-direct-float{bottom:calc(88px + env(safe-area-inset-bottom))}}
+.whatsapp-registration{padding:0;border:0;border-radius:18px;width:min(420px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;color:var(--yi-ink);font:16px/1.5 var(--yi-font-body);box-shadow:0 20px 80px #0004}
+.whatsapp-registration::backdrop{background:color-mix(in srgb, var(--yi-ink) 60.0%, transparent)}
+.wa-registration-header{display:flex;align-items:center;gap:12px;background:var(--yi-ink);color:white;padding:18px 20px}
+.wa-registration-avatar{display:grid;place-items:center;border-radius:50%;width:42px;height:42px;background:#ffffff24;font-weight:700;font-size:22px}
+.wa-registration-header strong,.wa-registration-header small{display:block}
+.wa-registration-header small{font-size:12px;opacity:.85}
+.wa-registration-close{margin-left:auto;background:transparent;border:0;color:white;font-size:28px;cursor:pointer;min-width:36px;min-height:36px}
+.wa-registration-chat{padding:24px 20px;background:#f1eee7}
+.wa-registration-bubble{background:white;padding:14px 16px;border-radius:0 14px 14px;margin:0 0 12px;box-shadow:0 1px 2px #0001}
+.wa-registration-property{font-size:13px;color:var(--yi-muted);margin:0 0 20px}
+.wa-registration-chat label{display:block;font-size:14px;font-weight:600;margin-bottom:8px}
+.wa-registration-chat input{display:block;box-sizing:border-box;width:100%;padding:14px;border:1px solid var(--yi-line);border-radius:10px;background:white;font:inherit;color:var(--yi-ink)}
+.wa-registration-chat input:focus-visible{outline:3px solid color-mix(in srgb, var(--yi-ink) 31.37%, transparent);outline-offset:2px}
+.wa-registration-note{font-size:12px;color:var(--yi-muted);line-height:1.5;margin:12px 0}
+.wa-registration-note a{color:var(--yi-ink);text-decoration:underline}
+.wa-registration-status{font-size:13px;min-height:20px;margin:10px 0}
+.wa-registration-submit{display:flex;justify-content:center;gap:12px;align-items:center;width:100%;padding:14px;border:0;border-radius:24px;background:var(--yi-ink);color:white;font:600 15px/1.4 system-ui;cursor:pointer}
+.wa-registration-submit:disabled{opacity:.65;cursor:wait}
