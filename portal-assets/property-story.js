@@ -71,6 +71,17 @@ if(sound && heroVideo){
 const availability=document.querySelector('[data-contact-start]');
 if(availability){let queued=false;const update=()=>{document.body.classList.toggle('art-contact-visible',availability.getBoundingClientRect().top<innerHeight*.7);queued=false;};window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(update);}},{passive:true});update();}
 
+// Use the bar's rendered height, including wrapping and the device safe area.
+const mobileContact=document.querySelector('.mobile-contact');
+if(mobileContact && 'ResizeObserver' in window){
+  const syncContactHeight=()=>{
+    const height=Math.ceil(mobileContact.getBoundingClientRect().height);
+    document.body.style.setProperty('--yi-mobile-contact-height',height+'px');
+  };
+  new ResizeObserver(syncContactHeight).observe(mobileContact);
+  syncContactHeight();
+}
+
 // Intrinsic dimensions are used only when the source has no reviewed orientation metadata.
 const cover=document.querySelector('[data-cover-orientation="auto"]'),coverImage=cover?.querySelector('.art-cover-image img');
 function fitCover(){if(!coverImage?.naturalWidth)return;const ratio=coverImage.naturalWidth/coverImage.naturalHeight;cover.style.setProperty('--photo-ratio',String(ratio));cover.classList.remove('art-cover--auto');cover.classList.add(ratio>1.25?'art-cover--landscape':'art-cover--portrait');cover.dataset.coverOrientation=ratio>1.25?'landscape':'portrait';}
