@@ -157,3 +157,49 @@
 @media(min-width:741px) and (max-width:1060px){.ynti-premium .ynti-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:740px){.ynti-premium .ynti-gallery{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory}.ynti-premium .ynti-gallery-item{flex:0 0 84%;scroll-snap-align:start}.ynti-premium .ynti-option-label{padding:15px 17px}.ynti-premium .ynti-option-label strong{font-size:23px}}
 @media(prefers-reduced-motion:reduce){.ynti-premium .ynti-gallery-item .ynti-photo img{transition:none}}
+
+/* Travertino & Ouro — Intelligence V2 presentation only. Preserve all JS/data semantics. */
+body.yi-travertino-page .ynti{
+ --yi-compare-ink:#28251f;--yi-compare-gold:#a48154;--yi-compare-line:#ded5c7;
+ background:#faf7f1;color:#28251f;border-color:#ded5c7;
+ font-family:var(--yi-font-body),'Plus Jakarta Sans',Arial,sans-serif;
+}
+body.yi-travertino-page .ynti :is(h2,h3,.ynti-reference-identity strong,.ynti-price){
+ font-family:var(--yi-font-title),'Cormorant Garamond',Georgia,serif;
+ font-weight:400;color:#28251f;
+}
+body.yi-travertino-page .ynti-premium .ynti-head{border-color:#ded5c7}
+body.yi-travertino-page .ynti-premium .ynti-head h2{color:#28251f}
+body.yi-travertino-page .ynti :is(.ynti-head small,.ynti-live,.ynti-note,.ynti-method,.ynti-gallery-label,.ynti-location,.ynti-why,.ynti-option-label span){color:#756f67}
+body.yi-travertino-page .ynti .ynti-live:before{color:#a48154}
+body.yi-travertino-page .ynti .ynti-progress{background:#e6ded2}
+body.yi-travertino-page .ynti .ynti-progress i{background:#a48154}
+body.yi-travertino-page .ynti-premium .ynti-reference{background:#28251f;color:#faf7f1;border-radius:0}
+body.yi-travertino-page .ynti .ynti-reference-photo{background:#4c4135}
+body.yi-travertino-page .ynti .ynti-reference-identity :is(strong,span,small){color:#faf7f1}
+body.yi-travertino-page .ynti .ynti-reference-specs{border-color:#756653}
+body.yi-travertino-page .ynti .ynti-reference-price{color:#f1dfc5}
+body.yi-travertino-page .ynti .ynti-priorities button{background:transparent;border-color:#c9bdac;color:#51483d}
+body.yi-travertino-page .ynti .ynti-priorities button[aria-pressed=true]{background:#28251f;border-color:#28251f;color:#fffdfa}
+body.yi-travertino-page .ynti :is(.ynti-insight,.ynti-overview){background:#eee7dc;border-color:#ded5c7;color:#28251f;border-radius:2px}
+body.yi-travertino-page .ynti :is(.ynti-insight strong,.ynti-overview h3){color:#28251f}
+body.yi-travertino-page .ynti .ynti-overview-metric{background:#fffdfa;border-radius:2px}
+body.yi-travertino-page .ynti .ynti-gallery-item{background:#fffdfa;border-color:#ded5c7;border-radius:2px;box-shadow:0 9px 25px #28251f0b}
+body.yi-travertino-page .ynti .ynti-card-body{background:#fffdfa;color:#28251f}
+body.yi-travertino-page .ynti .ynti-price{color:#a48154}
+body.yi-travertino-page .ynti .ynti-arrow{background:#eee7dc;color:#28251f}
+body.yi-travertino-page .ynti-guided .ynti-option{background:#fffdfa;color:#28251f}
+body.yi-travertino-page .ynti-guided .ynti-option[aria-pressed=true]{background:#f0e7d9;box-shadow:inset 0 0 0 2px #a48154}
+body.yi-travertino-page .ynti-guided .ynti-option-label span{color:#756f67}
+body.yi-travertino-page .ynti-guided .ynti-comparison{background:#fffdfa;border-color:#ded5c7;border-radius:2px}
+body.yi-travertino-page .ynti-guided .ynti-guided-table :is(th,td){border-color:#ded5c7}
+body.yi-travertino-page .ynti-guided .ynti-guided-table thead th{background:#eee7dc}
+body.yi-travertino-page .ynti :is(a,button,summary):focus-visible{outline:2px solid #a48154;outline-offset:3px}
+body.yi-travertino-page .ynti .ynti-gallery-nav button{background:#fffdfa;border-color:#a48154;color:#28251f}
+@media(max-width:740px){
+ body.yi-travertino-page .ynti-premium .ynti-reference{background:#eee7dc;color:#28251f}
+ body.yi-travertino-page .ynti .ynti-reference-identity :is(strong,span,small){color:#28251f}
+ body.yi-travertino-page .ynti .ynti-reference-price{color:#28251f}
+ body.yi-travertino-page .ynti-guided .ynti-overview{padding:18px}
+ body.yi-travertino-page .ynti-guided .ynti-overview-metrics{gap:9px}
+}
