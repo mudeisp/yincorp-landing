@@ -46,3 +46,39 @@ body.yi-home-architecture-pilot .hero-stamp{max-width:60%}
 }
 @media(max-width:390px){body.yi-home-architecture-pilot .hero h1{font-size:clamp(60px,15vw,76px)}body.yi-home-architecture-pilot .hero-copy{padding-inline:21px}}
 @media(prefers-reduced-motion:reduce){body.yi-home-architecture-pilot .hero-copy>*,body.yi-home-architecture-pilot .hero-photo>img{animation:none}body.yi-home-architecture-pilot .wide-photo img,body.yi-home-architecture-pilot .amenity img{transition:none}}
+
+/* Shared-home structural components, replacing the Mandarim legacy top bar */
+body.yi-home-architecture-pilot .yi-shared-header{position:relative;z-index:30;background:#f3eade;border-bottom:1px solid #9c86692e}
+body.yi-home-architecture-pilot .yi-shared-header .header-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:105px;max-width:none;padding:15px clamp(22px,5vw,85px)}
+body.yi-home-architecture-pilot .yi-shared-header .brand{display:flex;flex-direction:column;align-items:flex-start;gap:0;text-decoration:none;color:#28251f;white-space:nowrap}
+body.yi-home-architecture-pilot .yi-shared-header .brand strong{font-family:var(--yi-font-title,Georgia,serif);font-size:clamp(42px,4.2vw,64px);line-height:.95;letter-spacing:-.065em;font-weight:400}
+body.yi-home-architecture-pilot .yi-shared-header .brand strong::first-letter{color:#a48154}
+body.yi-home-architecture-pilot .yi-shared-header .brand span{font-size:10px;letter-spacing:.24em;margin-top:12px}
+body.yi-home-architecture-pilot .yi-shared-header .desktop-nav{display:flex;align-items:center;gap:clamp(14px,2vw,34px)}
+body.yi-home-architecture-pilot .yi-shared-header .desktop-nav a{font-size:13px;text-decoration:none;color:#28251f}
+body.yi-home-architecture-pilot .yi-shared-header .desktop-nav .nav-contact{padding:14px 20px;border:1px solid #28251f}
+body.yi-home-architecture-pilot .yi-shared-header .mobile-menu{display:none;position:relative}
+body.yi-home-architecture-pilot .yi-shared-header .mobile-menu summary{list-style:none;cursor:pointer;font-size:17px;color:#28251f}
+body.yi-home-architecture-pilot .yi-shared-header .mobile-menu summary::after{content:' +';font-size:22px}
+body.yi-home-architecture-pilot .yi-shared-header .mobile-menu[open] summary::after{content:' −'}
+body.yi-home-architecture-pilot .yi-shared-header .mobile-menu nav{position:absolute;right:0;top:calc(100% + 20px);width:min(80vw,310px);display:flex;flex-direction:column;background:#f3eade;border:1px solid #cbb89e;box-shadow:0 15px 35px #28251f20;padding:18px;gap:0}
+body.yi-home-architecture-pilot .yi-shared-header .mobile-menu nav a{padding:12px 6px;border-bottom:1px solid #d6c6b1;text-decoration:none;color:#28251f}
+body.yi-home-architecture-pilot .hero{background:radial-gradient(ellipse at 15% 16%,#fff9ecb8,transparent 43%),repeating-linear-gradient(174deg,transparent 0 20px,#907a5e0b 21px 22px,transparent 23px 58px),linear-gradient(120deg,#f6efe5,#e7dbca 53%,#f8f0e4);isolation:isolate;position:relative}
+body.yi-home-architecture-pilot .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.45;background:repeating-linear-gradient(0deg,transparent 0 4px,#fff9ec40 5px 6px,transparent 7px 13px)}
+body.yi-home-architecture-pilot .hero h1 em{color:#a48154}
+body.yi-home-architecture-pilot .yi-home-actions{display:flex;flex-wrap:wrap;gap:12px;width:100%;margin:26px 0}
+body.yi-home-architecture-pilot .yi-home-actions .button{display:flex;align-items:center;justify-content:space-between;gap:22px;min-width:0;flex:1 1 220px;background:#28251f;color:#fffdfa;border:1px solid #28251f;font-size:14px;font-weight:600}
+body.yi-home-architecture-pilot .yi-home-actions .button.yi-outline{background:transparent;color:#28251f}
+body.yi-home-architecture-pilot .yi-home-actions .button:hover{background:#51473b;color:white}
+body.yi-home-architecture-pilot .hero-copy{padding-block:clamp(45px,7vw,105px)}
+@media(max-width:800px){
+body.yi-home-architecture-pilot .yi-shared-header .header-inner{min-height:142px;padding:24px 24px;align-items:center}
+body.yi-home-architecture-pilot .yi-shared-header .brand strong{font-size:clamp(47px,10vw,65px)}
+body.yi-home-architecture-pilot .yi-shared-header .brand span{font-size:10px}
+body.yi-home-architecture-pilot .yi-shared-header .desktop-nav{display:none}
+body.yi-home-architecture-pilot .yi-shared-header .mobile-menu{display:block}
+body.yi-home-architecture-pilot .hero-copy{padding:55px 24px 44px}
+body.yi-home-architecture-pilot .hero h1{font-size:clamp(64px,15vw,105px)}
+body.yi-home-architecture-pilot .yi-home-actions{flex-direction:column;gap:12px;margin:27px 0}
+body.yi-home-architecture-pilot .yi-home-actions .button{flex:none;width:100%;min-height:65px;justify-content:center}
+}
