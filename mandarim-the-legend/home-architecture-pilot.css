@@ -82,3 +82,9 @@ body.yi-home-architecture-pilot .hero h1{font-size:clamp(64px,15vw,105px)}
 body.yi-home-architecture-pilot .yi-home-actions{flex-direction:column;gap:12px;margin:27px 0}
 body.yi-home-architecture-pilot .yi-home-actions .button{flex:none;width:100%;min-height:65px;justify-content:center}
 }
+
+/* The approved home uses a scroll-dependent --yi-home-pan, not a one-time scale animation. */
+body.yi-home-architecture-pilot .hero-photo>img{width:116%;max-width:none;height:116%;min-height:0;position:absolute;left:-8%;top:-8%;object-fit:cover;object-position:center;transform:translate3d(var(--yi-home-pan,0px),0,0) scale(1.02);animation:none;will-change:transform}
+body.yi-home-architecture-pilot .hero-photo{isolation:isolate}
+@media(max-width:800px){body.yi-home-architecture-pilot .hero-photo>img{width:112%;height:112%;left:-6%;top:-6%;transform:translate3d(var(--yi-home-pan,0px),0,0) scale(1.01)}}
+@media(prefers-reduced-motion:reduce){body.yi-home-architecture-pilot .hero-photo>img{transform:none;will-change:auto}}
