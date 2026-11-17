@@ -1,0 +1,13 @@
+/* Motion is opt-in at the template. Frames clip the overscan, never the page. */
+[data-cinematic-pan] {
+  overflow: clip;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-cinematic-pan] > img,
+  [data-cinematic-pan] > :is(a, button, picture) > img {
+    translate: var(--cinematic-x, 0%) 0;
+    scale: var(--cinematic-scale, 1);
+  }
+
+}

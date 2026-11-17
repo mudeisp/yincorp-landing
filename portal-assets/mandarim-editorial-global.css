@@ -1,11 +1,10 @@
 /* Yincorp editorial global design system — derived from /canva/mandarim-editorial.html. */
 /* Scoped to portal-rendered documents. Existing interaction and tracking remain unchanged. */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-html.yincorp-editorial{--yi-paper:#faf7f1;--yi-ink:#28251f;--yi-muted:#716b62;--yi-line:#ded5c7;--yi-bronze:#a48154;--yi-white:#fffdfa}
-html.yincorp-editorial body{background:var(--yi-paper);color:var(--yi-ink);font-family:'Plus Jakarta Sans',Arial,sans-serif}
-html.yincorp-editorial :is(h1,h2,h3){font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;letter-spacing:-.025em}
+@import url('/portal-assets/editorial-tokens.css');
+html.yincorp-editorial body{background:var(--yi-paper);color:var(--yi-ink);font-family:var(--yi-font-body)}
+html.yincorp-editorial :is(h1,h2,h3):not(.ynti *){font-family:var(--yi-font-title);font-weight:500;letter-spacing:-.025em}
 html.yincorp-editorial h1{font-size:clamp(3rem,6vw,6.5rem);line-height:1.03}
-html.yincorp-editorial h2{font-size:clamp(2.3rem,4vw,4.6rem);line-height:1.09}
+html.yincorp-editorial h2:not(.ynti *){font-size:clamp(2.3rem,4vw,4.6rem);line-height:1.09}
 html.yincorp-editorial h3{font-size:clamp(1.65rem,2.5vw,2.65rem);line-height:1.14}
 html.yincorp-editorial :is(p,li){line-height:1.7}
 html.yincorp-editorial :is(header,nav){--editorial-accent:var(--yi-bronze)}
@@ -16,6 +15,86 @@ html.yincorp-editorial :is(button,a,input,select,textarea):focus-visible{outline
 html.yincorp-editorial :is(main,section,article) :is(.eyebrow,.kicker){color:var(--yi-bronze);letter-spacing:.15em;text-transform:uppercase}
 html.yincorp-editorial :is(main,section,article) :is(.card,.property-card,.development-card){border-color:var(--yi-line);background:var(--yi-white)}
 html.yincorp-editorial :is(main,section,article) :is(.card,.property-card,.development-card) img{object-fit:cover}
-html.yincorp-editorial #yincorp-intelligence{--yi-paper:#faf7f1;--yi-bronze:#a48154}
 @media(max-width:740px){html.yincorp-editorial h1{font-size:clamp(2.8rem,10vw,4.5rem)}html.yincorp-editorial h2{font-size:clamp(2.1rem,8vw,3.3rem)}}
 @media(prefers-reduced-motion:reduce){html.yincorp-editorial *{scroll-behavior:auto!important}}
+
+/* National editorial shell: scope to portal routes; preserve the dark Intelligence island. */
+html.yincorp-editorial{
+  color-scheme:light;
+  --paper:var(--yi-paper);--ink:var(--yi-ink);--muted:var(--yi-muted);
+  --line:var(--yi-line);--sand:var(--yi-sand);--gold:var(--yi-bronze);--white:var(--yi-white);
+  --background:var(--yi-paper);--foreground:var(--yi-ink);--surface:var(--yi-white);
+  --primary:var(--yi-ink);--accent:var(--yi-bronze);--border:var(--yi-line);
+}
+html.yincorp-editorial :is(body,#root,#__next,main){background-color:var(--yi-paper);color:var(--yi-ink)}
+html.yincorp-editorial :is(header,nav,footer):not(.ynti *){
+  border-color:var(--yi-line);color:var(--yi-ink)
+}
+html.yincorp-editorial :is(header,nav) a:not(.button):not(.btn):not([class*=cta]){
+  color:var(--yi-ink)
+}
+html.yincorp-editorial :is(.hero,.page-hero,.state-hero,.city-hero,.listing-hero,
+.search-panel,.search-box,.filter-panel,.filters,.listing-section,.results-section,
+.property-list,.development-list,.catalog,.catalog-section):not(.ynti):not(.ynti *){
+  background-color:var(--yi-paper);color:var(--yi-ink);border-color:var(--yi-line)
+}
+html.yincorp-editorial :is(.property-card,.development-card,.listing-card,.result-card,
+.card,.tile,.filter-card,.search-card):not(.ynti *){
+  background-color:var(--yi-white);color:var(--yi-ink);border-color:var(--yi-line)
+}
+html.yincorp-editorial :is(.property-card,.development-card,.listing-card,.result-card,
+.card,.tile):not(.ynti *) :is(h2,h3,h4,strong){color:var(--yi-ink)}
+html.yincorp-editorial :is(.property-card,.development-card,.listing-card,.result-card,
+.card,.tile):not(.ynti *) :is(p,small,.muted,.meta){color:var(--yi-muted)}
+html.yincorp-editorial :is(.filters,.filter-panel,.search-panel,.search-box):not(.ynti *)
+:is(input,select,textarea){
+  background:var(--yi-white);color:var(--yi-ink);border-color:var(--yi-line)
+}
+html.yincorp-editorial :is(.eyebrow,.kicker,.overline,.section-label):not(.ynti *){
+  color:var(--yi-bronze)
+}
+html.yincorp-editorial :is(.button,.btn,.primary-button):not(.ynti *){
+  border-color:var(--yi-ink)
+}
+html.yincorp-editorial :is(.button,.btn,.primary-button):not(.ynti *):focus-visible{
+  outline-color:var(--yi-bronze)
+}
+
+/* Mandarim editorial motion primitives — shared, restrained, and accessible. */
+@keyframes yiMandarimImageReveal{
+ from{opacity:.6;transform:scale(1.07)}
+ to{opacity:1;transform:scale(1)}
+}
+html.yincorp-editorial :is(.hero-photo,.hero-image,.hero-media,.property-hero-image,
+.development-hero-image,.listing-hero-image):not(.ynti *){
+ overflow:hidden
+}
+html.yincorp-editorial :is(.hero-photo,.hero-image,.hero-media,.property-hero-image,
+.development-hero-image,.listing-hero-image):not(.ynti *) > img{
+ animation:yiMandarimImageReveal 1.7s ease-out both;
+ transform-origin:center center
+}
+html.yincorp-editorial :is(.wide-photo,.amenity,.property-card,.development-card,
+.listing-card,.result-card):not(.ynti *) img{
+ transition:transform .7s ease;
+}
+@media(hover:hover) and (pointer:fine){
+ html.yincorp-editorial :is(.wide-photo,.amenity,.property-card,.development-card,
+ .listing-card,.result-card):not(.ynti *):hover img{transform:scale(1.025)}
+ html.yincorp-editorial :is(.property-card,.development-card,.listing-card,.result-card):not(.ynti *){
+  transition:transform .3s ease,box-shadow .3s ease
+ }
+ html.yincorp-editorial :is(.property-card,.development-card,.listing-card,.result-card):not(.ynti *):hover{
+  transform:translateY(-5px);box-shadow:0 20px 40px #3b2e1c14
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ html.yincorp-editorial :is(.hero-photo,.hero-image,.hero-media,.property-hero-image,
+ .development-hero-image,.listing-hero-image):not(.ynti *) > img{
+  animation:none!important;transform:none!important
+ }
+ html.yincorp-editorial :is(.wide-photo,.amenity,.property-card,.development-card,
+ .listing-card,.result-card):not(.ynti *),
+ html.yincorp-editorial :is(.wide-photo,.amenity,.property-card,.development-card,
+ .listing-card,.result-card):not(.ynti *) img{transition:none!important;transform:none!important}
+}
