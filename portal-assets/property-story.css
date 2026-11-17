@@ -123,7 +123,7 @@
 .art-manifesto-copy  {
   font-size:13px;
   line-height:1.95;
-  color:#727976;
+  color:var(--yi-muted);
   max-width:550px;
   margin:auto
 }
@@ -357,7 +357,7 @@
   display:block;
   font-size:9px;
   letter-spacing:.05em;
-  color:#7b8280;
+  color:var(--yi-muted);
   margin-top:20px
 }
 .art-plans  {
@@ -380,7 +380,7 @@
 }
 .art-plans-heading>p:last-child  {
   font-size:10px;
-  color:#7a8280;
+  color:var(--yi-muted);
   padding-bottom:10px
 }
 .art-plan-layout  {
