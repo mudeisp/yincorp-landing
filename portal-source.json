@@ -99,11 +99,6 @@
       "gitBlobSha": "1755a5b737c29c894f5dc2a60d66ff1ca96f8bc8"
     },
     {
-      "source": "portal/floor-plans.js",
-      "destination": ".portal-shared/floor-plans.js",
-      "gitBlobSha": "d1994ce409acbad8e26414c34b390d3219a6cadc"
-    },
-    {
       "source": "portal/semantics.js",
       "destination": ".portal-shared/semantics.js",
       "gitBlobSha": "d2e0ecfd7bc6d29bfa5e7b50afcb5300cc70d5d6"
