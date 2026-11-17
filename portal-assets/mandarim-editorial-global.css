@@ -59,3 +59,42 @@ html.yincorp-editorial :is(.button,.btn,.primary-button):not(.ynti *){
 html.yincorp-editorial :is(.button,.btn,.primary-button):not(.ynti *):focus-visible{
   outline-color:var(--yi-bronze)
 }
+
+/* Mandarim editorial motion primitives — shared, restrained, and accessible. */
+@keyframes yiMandarimImageReveal{
+ from{opacity:.6;transform:scale(1.07)}
+ to{opacity:1;transform:scale(1)}
+}
+html.yincorp-editorial :is(.hero-photo,.hero-image,.hero-media,.property-hero-image,
+.development-hero-image,.listing-hero-image):not(.ynti *){
+ overflow:hidden
+}
+html.yincorp-editorial :is(.hero-photo,.hero-image,.hero-media,.property-hero-image,
+.development-hero-image,.listing-hero-image):not(.ynti *) > img{
+ animation:yiMandarimImageReveal 1.7s ease-out both;
+ transform-origin:center center
+}
+html.yincorp-editorial :is(.wide-photo,.amenity,.property-card,.development-card,
+.listing-card,.result-card):not(.ynti *) img{
+ transition:transform .7s ease;
+}
+@media(hover:hover) and (pointer:fine){
+ html.yincorp-editorial :is(.wide-photo,.amenity,.property-card,.development-card,
+ .listing-card,.result-card):not(.ynti *):hover img{transform:scale(1.025)}
+ html.yincorp-editorial :is(.property-card,.development-card,.listing-card,.result-card):not(.ynti *){
+  transition:transform .3s ease,box-shadow .3s ease
+ }
+ html.yincorp-editorial :is(.property-card,.development-card,.listing-card,.result-card):not(.ynti *):hover{
+  transform:translateY(-5px);box-shadow:0 20px 40px #3b2e1c14
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ html.yincorp-editorial :is(.hero-photo,.hero-image,.hero-media,.property-hero-image,
+ .development-hero-image,.listing-hero-image):not(.ynti *) > img{
+  animation:none!important;transform:none!important
+ }
+ html.yincorp-editorial :is(.wide-photo,.amenity,.property-card,.development-card,
+ .listing-card,.result-card):not(.ynti *),
+ html.yincorp-editorial :is(.wide-photo,.amenity,.property-card,.development-card,
+ .listing-card,.result-card):not(.ynti *) img{transition:none!important;transform:none!important}
+}
