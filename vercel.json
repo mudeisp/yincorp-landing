@@ -1,5 +1,5 @@
 {
-  "buildCommand": "node scripts/prepare-portal.mjs && node scripts/materialize-renata-pdfs.mjs",
+  "buildCommand": "node scripts/prepare-portal.mjs && node scripts/materialize-renata-pdfs.mjs && node scripts/prepare-site-footers.mjs",
   "outputDirectory": ".",
   "redirects": [
     {

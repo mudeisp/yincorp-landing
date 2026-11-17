@@ -1,0 +1,54 @@
+@import url('/portal-assets/editorial-tokens.css');
+@import url('/home-assets/brand-shell.css');
+
+.yi-site-footer {
+  box-sizing: border-box;
+  margin: 0;
+  padding: clamp(36px, 5vw, 64px) 0;
+  background: var(--yi-travertine);
+  border: 0;
+  border-top: 1px solid var(--yi-line);
+  color: var(--yi-ink);
+  font: 400 13px/1.55 var(--yi-font-body);
+  text-align: start;
+}
+.yi-site-footer .yi-footer-wrap {
+  box-sizing: border-box;
+  width: min(1240px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.yi-footer-opening {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 5vw, 72px);
+  margin-block-end: 24px;
+}
+.yi-site-footer .yi-brand-mark { flex-shrink: 0; }
+.yi-site-footer .yi-footer-opening > p {
+  margin: 0;
+  font: 400 clamp(28px, 4vw, 43px)/1.05 var(--yi-font-title);
+}
+.yi-footer-links, .yi-footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 24px;
+}
+.yi-footer-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.yi-site-footer :is(a, summary) { color: inherit; text-underline-offset: 4px; }
+.yi-site-footer a:hover { text-decoration: underline; }
+.yi-site-footer :is(a, summary):focus-visible { outline: 2px solid var(--yi-eyebrow); outline-offset: 4px; }
+.yi-footer-details { margin-block: 12px; }
+.yi-footer-legal {
+  margin-block-start: 14px;
+  padding-block-start: 18px;
+  border-top: 1px solid var(--yi-line);
+  color: var(--yi-muted);
+  font-size: 12px;
+}
+.yi-site-footer .yi-footer-legal p { margin: 0; max-width: 560px; }
+@media (max-width: 760px) {
+  .yi-footer-opening { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .yi-footer-legal { align-items: flex-start; }
+  body.yi-travertino-page:has(.mobile-contact) .yi-footer-wrap { padding-inline-end: 64px; }
+}

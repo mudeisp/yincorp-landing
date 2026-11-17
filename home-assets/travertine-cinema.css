@@ -1,6 +1,6 @@
 /* Yincorp Travertino & Ouro — home-only cinematic art direction */
+@import url('/portal-assets/editorial-tokens.css');
 :root{--yi-cinema-gold:#a48154;--yi-cinema-cream:#faf7f1;--yi-cinema-dark:#28251f}
-:root{--yi-travertine:radial-gradient(ellipse at 15% 16%,#fff9ecb8,transparent 43%),repeating-linear-gradient(174deg,transparent 0 20px,#907a5e0b 21px 22px,transparent 23px 58px),linear-gradient(120deg,#f6efe5,#e7dbca 53%,#f8f0e4)}
 body{background:var(--yi-paper,#faf7f1)}
 .hero{width:100%;max-width:none;min-height:calc(100svh - 92px);display:grid;grid-template-columns:minmax(0,43%) minmax(0,57%);align-items:center;gap:0;padding:clamp(38px,6vw,100px) clamp(22px,5.5vw,100px);position:relative;isolation:isolate;background:var(--yi-travertine)}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.45;background:repeating-linear-gradient(0deg,transparent 0 4px,#fff9ec40 5px 6px,transparent 7px 13px)}

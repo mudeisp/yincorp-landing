@@ -14,7 +14,6 @@ body.yi-travertino-page { accent-color: var(--yi-bronze); }
 .yi-property-hero .hero-copy .primary:hover { background: var(--yi-engine-selected); }
 .yi-property-hero .hero-figure { min-width: 0; }
 .yi-property-hero .hero-figure img { display: block; }
-.portal-footer .yi-brand-mark { flex-shrink: 0; }
 @media (max-width: 600px) {
   .yi-property-hero h1 { font-size: clamp(59px, 16vw, 95px); }
 }

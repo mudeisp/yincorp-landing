@@ -1205,49 +1205,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
   font-size:11px;
   color:var(--muted)
 }
-.portal-footer {
-  background:var(--yi-travertine, var(--ivory));
-  color:var(--ink);
-  border-top:1px solid var(--line);
-  padding-block:clamp(36px,5vw,64px);
-}
-.footer-opening {
-  display:flex;
-  align-items:center;
-  gap:clamp(20px,5vw,72px);
-}
-.footer-opening>p {
-  font:400 clamp(28px,4vw,43px)/1.05 var(--serif);
-}
-.footer-links {
-  display:flex;
-  flex-wrap:wrap;
-  gap:4px 28px;
-  margin-block:24px 18px;
-  font-size:13px;
-}
-.footer-links a {
-  display:inline-flex;
-  align-items:center;
-  min-height:44px;
-}
-.footer-legal {
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px 24px;
-  border-top:1px solid var(--line);
-  padding-top:18px;
-  font-size:12px;
-  line-height:1.55;
-  color:var(--muted);
-}
-.footer-legal p {
-  max-width:560px;
-}
-.portal-footer a:hover {
-  text-decoration:underline;
-  text-underline-offset:4px;
-}
 .mobile-contact {
   display:none
 }
@@ -2031,14 +1988,6 @@ dialog p {
   }
   .detail-section h2 {
     font-size:38px
-  }
-  .footer-opening {
-    flex-direction:column;
-    align-items:flex-start;
-    gap:20px;
-  }
-  body.yi-travertino-page:has(.mobile-contact) .portal-footer>.wrap {
-    padding-inline-end:64px;
   }
   body.yi-travertino-page.art-contact-visible > .whatsapp-direct-float {
     bottom:calc(var(--yi-mobile-contact-height, 86px + env(safe-area-inset-bottom)) + 12px);
