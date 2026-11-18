@@ -59,10 +59,9 @@ for(const selected of [false,true])test(`generated ES browser mounts one indepen
   availability.listeners.click();assert.equal(dialog.open,true);icon.yntRefresh();assert.equal(icon.hidden,true);
   dialog.close();icon.yntRefresh();assert.equal(icon.hidden,false);events.length=0;
   icon.listeners.click();
-   const registration=nodes['ynt-whatsapp-registration'];assert.ok(registration);assert.equal(registration.open,true);
-   assert.deepEqual(events,[]);assert.equal(navigations.length,0);
-   registration.querySelector('.wa-registration-skip').listeners.click();
-   await new Promise(r=>setTimeout(r,10));
+  assert.equal(nodes['ynt-whatsapp-registration'],undefined);
+  assert.equal(navigations.length,1);
+  await new Promise(r=>setTimeout(r,10));
   assert.deepEqual(events,['whatsapp_cta_clicked','whatsapp_cta_clicked']);assert.equal(dialog.open,false);
   assert.equal(navigations.length,1);assert.match(navigations[0],/^https:\/\/wa.me\//);
 });
