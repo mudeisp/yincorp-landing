@@ -1,8 +1,10 @@
-import {brl, decimal} from '/guilherme.vita/model.mjs';
+import {decimal} from '/guilherme.vita/model.mjs';
 import projects from './projects.mjs';
 
 const $ = id => document.getElementById(id);
 const missing = 'A confirmar';
+const currency = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
+const brl = value => currency.format(value);
 const initial = new URL(location.href).searchParams;
 const chosen = Object.fromEntries(projects.map(p => [
   p.key, p.units.find(u => u.id === initial.get(p.key)) ?? p.units.find(u => u.id === p.preferred)
