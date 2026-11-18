@@ -26,7 +26,7 @@ const res=()=>({headers:{},statusCode:200,setHeader(k,v){this.headers[k]=v},stat
 test('live resolver fails closed and redirects only after destination data exists',async()=>{
  for(const data of [[],[row]]){
  const response=res(),handler=createLaunchHandler({request:async()=>({ok:true,data})});
- await handler({method:'GET',url:'/old?utm_source=test'},response,launchPath(p)+'--orulo-'+p.id);
+ await handler({method:'GET',url:'/old?utm_source=test&uf=sp&rest=internal&portalPath=internal'},response,launchPath(p)+'--orulo-'+p.id);
  assert.equal(response.statusCode,data.length?301:404);if(data.length)assert.equal(response.headers.Location,launchPath(p)+'?utm_source=test');
  }
  const response=res();await createLaunchHandler({request:async()=>({ok:false})})({method:'GET',url:launchPath(p)},response,launchPath(p));assert.equal(response.statusCode,503);
