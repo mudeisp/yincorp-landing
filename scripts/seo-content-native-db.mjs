@@ -31,7 +31,9 @@ export async function nativeDatabase(){
     pool=nativeTestPool({host:'127.0.0.1',port,user:'postgres',password,database:'postgres',max:12,connectionTimeoutMillis:5000});
     await pool.query('create role anon; create role authenticated; create role service_role bypassrls;');
     const migrationDir=new URL('../supabase/migrations/',import.meta.url);
-    for(const file of (await readdir(migrationDir)).filter(f=>f.endsWith('.sql')).sort())await pool.query(await readFile(new URL(file,migrationDir),'utf8'));
+    // This fixture owns the SEO ledger only; property catalog migrations require
+    // the real inventory schema and are validated independently.
+    for(const file of (await readdir(migrationDir)).filter(f=>/^\d+_seo_.*\.sql$/.test(f)).sort())await pool.query(await readFile(new URL(file,migrationDir),'utf8'));
     const rpc=async(action,payload={})=>{
       const client=await pool.connect();
       try{await client.query('begin');await client.query("set local role service_role; set local statement_timeout='15s'; set local lock_timeout='10s'");const r=await client.query('select seo_content_command($1,$2::jsonb) result',[action,JSON.stringify(payload)]);await client.query('commit');return r.rows[0].result;}

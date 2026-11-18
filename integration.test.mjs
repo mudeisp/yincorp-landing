@@ -21,7 +21,8 @@ test('investment journey ships the same rule module to SSR and browser without n
 });
 test('V3 ships SSR details and resolves gallery assets without experimental client data calls',async()=>{
   const config=JSON.parse(await read('vercel.json')),manifest=JSON.parse(await read('portal-source.json'));
-  for(const file of ['portal/details.js','portal/presentation.js','assets/css/portal-editorial.css','assets/js/portal-gallery.js'])assert.ok(manifest.files.some(f=>f.source===file));
+  for(const file of ['portal/details.js','portal/presentation.js','assets/js/portal-gallery.js'])assert.ok(manifest.files.some(f=>f.source===file));
+  assert.match(await read('portal-assets/portal-editorial.css'),/hero|art-cover/);
   for(const source of ['/assets/css/portal-editorial.css','/assets/js/portal-gallery.js'])assert.ok(config.rewrites.some(r=>r.source===source));
   assert.ok(!manifest.files.some(f=>f.source.includes('portal-v2')));
   assert.doesNotMatch(await read('portal-assets/portal.js'),/portal-v2|portal-project-data/);

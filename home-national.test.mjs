@@ -9,7 +9,7 @@ const origin='https://www.yincorp.com.br';
 
 test('national home is complete crawlable HTML with one H1 and truthful institutional schema',async()=>{
  const html=await read('index.html'),h1=[...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
- assert.equal(h1.length,1);assert.equal(h1[0][1].replace(/<[^>]*>/g,''),'Seu próximo imóvel começa com uma escolha inteligente.');
+ assert.equal(h1.length,1);assert.equal(h1[0][1].replace(/<br\s*\/?>/g,' ').replace(/<[^>]*>/g,''),'O espaço de viver.');
  assert.match(html,/<html lang="pt-BR">/);assert.match(html,/<main id="conteudo">/);
  assert.match(html,/<link rel="canonical" href="https:\/\/www.yincorp.com.br\/">/);
  assert.match(html,/<meta name="robots" content="index,follow">/);
