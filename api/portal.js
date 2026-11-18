@@ -1,3 +1,4 @@
+import {createLaunchHandler,rewriteLaunchLinks,launches,launchPath} from '../lib/sp-launches.js';
 import {enrichCommercialPresentation} from '../lib/commercial-presentation.js';
 import {groupEligibleDevelopments,html as h} from '../.portal-shared/model.js';
 import {NATIONAL_MARKETS} from '../.portal-shared/eligibility.js';
@@ -67,6 +68,7 @@ async function publicInventoryRequest(path,options={}) {
   if(options.includeContentRange)result.contentRange=response.headers.get('content-range');
   return result;
 }
+const launchHandler=createLaunchHandler({request:publicInventoryRequest});
 const handler=createPortalHandler({
   nationalEligibility:true,
   canonicalOrigin:'https://www.yincorp.com.br',
@@ -95,6 +97,14 @@ export default async function portal(req,res){
     }
     if(res.statusCode===200&&typeof body==='string'&&body.startsWith('<!doctype html>')&&NATIONAL_MARKETS.some(state=>path===`/${state.toLowerCase()}`)){
       body=body.replace('</main>',`<nav class="wrap" aria-label="Estados Yincorp">${NATIONAL_MARKETS.map(state=>`<a href="/${state.toLowerCase()}">${state}</a>`).join(' · ')}</nav></main>`);
+    }
+    if(res.statusCode===200&&typeof body==='string'){
+      body=rewriteLaunchLinks(body);
+      if(path==='/sitemap-portal.xml'){
+        const extra=launches.filter(p=>!body.includes('https://www.yincorp.com.br'+launchPath(p)+'</loc>')).map(p=>'<url><loc>https://www.yincorp.com.br'+launchPath(p)+'</loc></url>').join('');
+        body=body.replace('</urlset>',extra+'</urlset>');
+      }
+      if((path==='/sp'||path==='/sp/sao-paulo')&&body.startsWith('<!doctype html>'))body=body.replace('</main>','<nav class="wrap" aria-label="Empreendimentos selecionados em São Paulo"><h2>Projetos em São Paulo</h2>'+launches.map(p=>'<p><a href="'+launchPath(p)+'">'+h(p.name)+'</a></p>').join('')+'</nav></main>');
     }
     return privacySend(res.statusCode===200?withPrivacyFooter(body):body);
   };
@@ -125,6 +135,7 @@ export default async function portal(req,res){
       :rendered;
     return send(enhanced);
   };
+  if(await launchHandler(req,res,path))return;
   // Discovery links are HTML, not JS-only navigation. No commercial flow changes.
   if(['GET','HEAD'].includes(req.method)&&/^\/sp(?:\/[^/]+)?$/.test(path)){
     const baseSend=res.send.bind(res);res.send=body=>baseSend(res.statusCode===200&&typeof body==='string'?body.replace('</main>',`<nav class="wrap" aria-label="Catálogo de imóveis"><a href="/${path.split('/')[1]}/imoveis">Explorar imóveis à venda em ${path.split('/')[1].toUpperCase()}</a></nav></main>`):body);

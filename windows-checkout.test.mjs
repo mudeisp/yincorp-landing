@@ -27,6 +27,6 @@ test('legacy verification URL is rewritten internally, without changing other ro
   const before=JSON.parse(await readFile('docs/evidence/windows-checkout/previous-vercel.json','utf8'));
   // New product routes/cron may be added; every pre-existing rule must survive.
   for(const kind of ['redirects','rewrites'])for(const original of before[kind])assert.deepEqual(config[kind].find(r=>r.source===original.source),original);
-  assert.equal(config.buildCommand,before.buildCommand+' && node scripts/materialize-renata-pdfs.mjs');
+  assert.equal(config.buildCommand,before.buildCommand+' && node scripts/materialize-renata-pdfs.mjs && node scripts/prepare-site-footers.mjs');
   assert.equal(config.outputDirectory,before.outputDirectory);
 });
