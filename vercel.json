@@ -110,6 +110,14 @@
   ],
   "rewrites": [
     {
+      "source": "/aruan.bufani",
+      "destination": "/aruan.bufani/index.html"
+    },
+    {
+      "source": "/aruan.bufani/",
+      "destination": "/aruan.bufani/index.html"
+    },
+    {
       "source": "/guilherme.vita3/",
       "destination": "/guilherme.vita3/index.html"
     },
