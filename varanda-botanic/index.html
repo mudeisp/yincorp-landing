@@ -785,7 +785,7 @@
       if(e.target === leadModal) closeLeadModal();
     });
 
-    function fireConfirmedConversions(){
+    function fireConfirmedConversions(data){
       try{
         if(typeof gtag === "function"){
           gtag("event","generate_lead",{
@@ -795,7 +795,7 @@
           });
 
           gtag("event","conversion",{
-            "send_to":"AW-18371236623/Icu-CMS18_ccEI-mi7hE"
+            "send_to":"AW-18371236623/Icu-CMS18_ccEI-mi7hE", ...(data.lead_id ? { transaction_id: data.lead_id } : {})
           });
         }
       }catch(e){}
@@ -864,7 +864,7 @@
           localStorage.setItem("yincorp_contact_email", email);
         }catch(e){}
 
-        fireConfirmedConversions();
+        fireConfirmedConversions(data);
 
         formStatus.textContent = "Dados confirmados. Abrindo o WhatsApp...";
         submitLead.textContent = "ABRINDO WHATSAPP...";
