@@ -712,7 +712,7 @@ function bind(form,isWhatsApp){
    // Nothing below is executed unless the API confirms storage.
    let finish;const adsSent=new Promise(resolve=>{finish=resolve;});
    const timer=setTimeout(finish,1500); // bounded wait for tag delivery, never a substitute for API confirmation
-   try{if(typeof window.gtag==='function')window.gtag('event','conversion',{send_to:cfg.ads,event_callback:finish,event_timeout:1500,transport_type:'beacon'});else finish();}catch(_){finish();}
+   try{if(typeof window.gtag==='function')window.gtag('event','conversion',{send_to:cfg.ads,...(data.lead_id?{transaction_id:data.lead_id}:{}),event_callback:finish,event_timeout:1500,transport_type:'beacon'});else finish();}catch(_){finish();}
    ga('generate_lead',{form_name:cfg.slug+(isWhatsApp?'_whatsapp':'_lead'),lead_source:isWhatsApp?'whatsapp_button':cfg.slug,property:cfg.name,property_type:cfg.payload.propertyType||'Imóvel',...(cfg.payload.property_value?{value:cfg.payload.property_value,currency:'BRL'}:{}),gclid_present:!!tracking.gclid});
    meta('Lead',{content_category:isWhatsApp?'WhatsApp':(cfg.payload.propertyType||'Imóvel'),...(cfg.payload.property_value?{value:cfg.payload.property_value,currency:'BRL'}:{})},true);
    if(isWhatsApp)ga('whatsapp_click',{source:cfg.slug,location:'floating'});
