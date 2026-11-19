@@ -64,8 +64,6 @@ document.addEventListener('click',function(event){
  if(link.id==='contact-whatsapp'){
   if(typeof gtag==='function'){
    gtag('event','whatsapp_click',{source:'investimentos_sp_moema'});
-   gtag('event','generate_lead',{source:'investimentos_sp_moema_whatsapp'});
-   gtag('event','conversion',{send_to:'AW-18371236623/Icu-CMS18_ccEI-mi7hE',transport_type:'beacon'});
   }
   if(typeof fbq==='function')fbq('track','Contact',{content_name:'Investimentos em SP - Moema'});
  }
