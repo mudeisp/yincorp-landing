@@ -77,7 +77,7 @@ async function initializeFinance(root) {
       }
       if (unit.stages?.length) table.append(paymentTable(unit.stages));
       const payment = unit.stages?.length ? table : element('p', 'A tabela de referência informa o preço, sem detalhar as parcelas. Consulte a Yincorp sobre as condições de pagamento.');
-      output.replaceChildren(overview, payment, element('p', 'Referência: ' + formatPeriod(data.reference) + ' · ' + data.source + ', p. ' + unit.sourcePage + '.'));
+      output.replaceChildren(overview, payment, element('p', 'Referência: ' + formatPeriod(data.reference) + ' · ' + data.source + (unit.sourcePage == null ? '.' : ', p. ' + unit.sourcePage + '.')));
       if (unit.financingReference) {
         output.append(element('p', 'Financiamento indicado separadamente no PDF em ' + formatDueDate(unit.financingReference.date) + ': ' + formatCents(unit.financingReference.amountCents) + '.'));
       }
@@ -85,6 +85,7 @@ async function initializeFinance(root) {
         const { method, count, firstCents, lastCents } = unit.financingSimulation;
         output.append(element('p', 'Simulação histórica do PDF: ' + method + ' · ' + count + ' parcelas · primeira de ' + formatCents(firstCents) + ' · última de ' + formatCents(lastCents) + '.'));
       }
+      if (unit.alternativePriceCents != null) output.append(element('p', 'Preço associativo na tabela histórica: ' + formatCents(unit.alternativePriceCents) + '.'));
       if (unit.sourceStatus) output.append(element('p', 'Situação registrada na data da tabela: ' + unit.sourceStatus + '.'));
       if (data.notes) output.append(element('p', data.notes));
       if (unit.roundingCents) {
