@@ -53,6 +53,7 @@ function buildCards() {
 
 function render() {
   const url = new URL(location.href);
+  for (const key of ['pintassilgo', 'zip', 'riva']) url.searchParams.delete(key);
   projects.forEach(p => {
     const u = chosen[p.key];
     $('price-' + p.key).textContent = brl(u.total);
@@ -69,7 +70,6 @@ function render() {
     ['Vagas', (_, u) => u.v ?? missing],
     ['Preço de referência', (_, u) => brl(u.total)],
     ['Preço por m²', (_, u) => brl(u.total / u.area)],
-    ['Preço associativo (011)', (_, u) => u.assoc ? brl(u.assoc) : '—'],
     ['Ato / sinal', (_, u) => money(u.stages?.[0][2])],
     ['Entrega / situação', p => p.delivery],
     ['Status informado na tabela', (_, u) => u.status ?? missing]
@@ -87,9 +87,9 @@ function render() {
     const panel = el('article', undefined, 'payment-panel');
     panel.append(el('h3', p.name), el('p', unitLabel(u), 'payment-selection'));
     const list = el('ul', undefined, 'payment-list');
-    const stages = u.stages ?? [[u.assoc ? 'Tabela direta' : 'Valor final', 1, u.total]];
+    const stages = u.stages ?? [['Valor final', 1, u.total]];
     const items = [...stages];
-    if (u.assoc) items.push(['Preço associativo sem correção', 1, u.assoc]);
+    if (u.financiamento) items.push(['Financiamento abr/2029 · alternativa ao principal', 1, u.financiamento]);
     if (u.original) items.push(['Valor sem desconto', 1, u.original]);
     items.forEach(([name, count, each]) => {
       const li = el('li');
@@ -102,10 +102,7 @@ function render() {
       panel.append(el('p', 'Preço da tabela ' + brl(u.total) + ' · Soma nominal ' + brl(sum), 'payment-note'));
     }
     panel.append(el('p', p.note, 'payment-note'));
-    const pdf = link('Conferir tabela ↗', '/aruan.bufani/pdfs/' + p.key + '-tabela.pdf' + (u.page ? '#page=' + u.page : ''));
-    pdf.target = '_blank';
-    pdf.rel = 'noopener';
-    panel.append(pdf);
+    panel.append(el('p', 'Tabela de ' + p.period + (u.page ? ' · p. ' + u.page : ''), 'caption'));
     return panel;
   }));
 
