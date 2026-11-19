@@ -133,7 +133,14 @@ export default async function portal(req,res){
       (rendered.includes('class="commercial-book"')||(isMarketRoute&&/\/(?:empreendimento|imovel)\//.test(path))||(experienceRequested&&isMarketRoute))
       ?rendered.replace('</body>','<link rel="stylesheet" href="/portal-assets/global-experience.css"><script defer src="/portal-assets/global-experience.js"></script></body>')
       :rendered;
-    return send(enhanced);
+    // Brettas-only cinema pilot. Do not alter the Intelligence V2 module or its DOM.
+    const pilotPath='/es/vitoria/empreendimento/brettas-boutique-residence--orulo-85087';
+    const pilotHtml=path===pilotPath&&res.statusCode===200&&typeof enhanced==='string'
+      ?enhanced.replace(/<body([^>]*)>/i,(tag,attrs)=>/class\s*=/.test(attrs)?tag.replace(/class=(["'])(.*?)\1/i,(_m,q,classes)=>'class='+q+classes+' yi-brettas-cinema-pilot'+q):'<body'+attrs+' class="yi-brettas-cinema-pilot">')
+        .replace('</head>','<link rel="stylesheet" href="/portal-assets/brettas-cinema-pilot.css"></head>')
+        .replace('</body>','<script defer src="/portal-assets/brettas-cinema-pilot.js"></script></body>')
+      :enhanced;
+    return send(pilotHtml);
   };
   if(await launchHandler(req,res,path))return;
   // Discovery links are HTML, not JS-only navigation. No commercial flow changes.

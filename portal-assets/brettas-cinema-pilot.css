@@ -1,0 +1,5 @@
+/* Scoped cinema pilot: preserve Intelligence V2 markup, layout and styling. */
+body.yi-brettas-cinema-pilot{--yi-cinema-gold:#a48154;--yi-cinema-paper:#faf7f1}
+body.yi-brettas-cinema-pilot .yi-brettas-cinema-frame{overflow:hidden;position:relative;isolation:isolate}
+body.yi-brettas-cinema-pilot .yi-brettas-cinema-image{display:block;will-change:transform;transform-origin:center center;transition:none}
+@media(prefers-reduced-motion:reduce){body.yi-brettas-cinema-pilot .yi-brettas-cinema-image{transform:none!important;will-change:auto}}
