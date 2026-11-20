@@ -106,9 +106,31 @@
       "source": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch/",
       "destination": "/sp/empreendimentos/mandarim-the-legend/lucas.schoch",
       "permanent": true
+    },
+    {
+      "source": "/arquitetura/",
+      "destination": "/arquitetura",
+      "permanent": true
+    },
+    {
+      "source": "/arquitetura/:escritorio/",
+      "destination": "/arquitetura/:escritorio",
+      "permanent": true
     }
   ],
   "rewrites": [
+    {
+      "source": "/arquitetura",
+      "destination": "/api/portal?portalPath=/arquitetura"
+    },
+    {
+      "source": "/arquitetura/:escritorio",
+      "destination": "/api/portal?portalPath=/arquitetura/:escritorio"
+    },
+    {
+      "source": "/sitemap-arquitetura.xml",
+      "destination": "/api/portal?portalPath=/sitemap-arquitetura.xml"
+    },
     {
       "source": "/aruan.bufani",
       "destination": "/aruan.bufani/index.html"

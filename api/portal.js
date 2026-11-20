@@ -1,3 +1,4 @@
+import {architectureRoot,architectureSitemap,serveArchitecture} from '../lib/architecture.mjs';
 import {createLaunchHandler,rewriteLaunchLinks,launches,launchPath} from '../lib/sp-launches.js';
 import {enrichCommercialPresentation} from '../lib/commercial-presentation.js';
 import {groupEligibleDevelopments,html as h} from '../.portal-shared/model.js';
@@ -81,6 +82,7 @@ const seo=createSeoHandler({
 export default async function portal(req,res){
   const url=new URL(req.url||'/', 'https://www.yincorp.com.br');
   const path=String(req.query?.portalPath||url.searchParams.get('portalPath')||url.pathname);
+  if(serveArchitecture(req,res,path,{preview:process.env.VERCEL_ENV==='preview'}))return;
   const privacySend=res.send.bind(res);res.send=body=>{
     // The /sp state landing page uses a fixed, verified Órulo hero; other
     // listings, search results, property pages and media are untouched.
@@ -100,6 +102,12 @@ export default async function portal(req,res){
     }
     if(res.statusCode===200&&typeof body==='string'){
       body=rewriteLaunchLinks(body);
+      if(path==='/sitemap.xml'&&body.includes('</sitemapindex>')){
+        body=body.replace('</sitemapindex>','<sitemap><loc>https://www.yincorp.com.br'+architectureSitemap+'</loc></sitemap></sitemapindex>');
+      }
+      if((path==='/sp'||path==='/sp/sao-paulo')&&body.startsWith('<!doctype html>')){
+        body=body.replace('</main>','<nav class="wrap" aria-label="Guia de arquitetura"><a href="'+architectureRoot+'">Escritórios de arquitetura e seus projetos</a></nav></main>');
+      }
       if(path==='/sitemap-portal.xml'){
         const extra=launches.filter(p=>!body.includes('https://www.yincorp.com.br'+launchPath(p)+'</loc>')).map(p=>'<url><loc>https://www.yincorp.com.br'+launchPath(p)+'</loc></url>').join('');
         body=body.replace('</urlset>',extra+'</urlset>');
@@ -145,6 +153,3 @@ export default async function portal(req,res){
   }
   return handler(req,res);
 }
-
-
-
