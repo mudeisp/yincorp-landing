@@ -132,6 +132,14 @@
       "destination": "/api/portal?portalPath=/sitemap-arquitetura.xml"
     },
     {
+      "source": "/vanessa.moura",
+      "destination": "/vanessa.moura/index.html"
+    },
+    {
+      "source": "/vanessa.moura/",
+      "destination": "/vanessa.moura/index.html"
+    },
+    {
       "source": "/aruan.bufani",
       "destination": "/aruan.bufani/index.html"
     },
