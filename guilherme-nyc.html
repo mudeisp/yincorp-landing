@@ -178,9 +178,39 @@ h1,h2,h3{font-family:var(--yi-font-title)}
 .gv-intro .button:hover{background:var(--yi-engine-selected)}
 .gv-table tbody tr:first-child,.project-band{background:var(--yi-sand)}
 .yi-brand-shell .header-inner{margin-inline:auto}
+
+html{scroll-padding-top:90px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.gallery-link,.gv-table tbody a{color:inherit;text-underline-offset:4px}
+.nyc-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.nyc-gallery figure{margin:0;min-width:0;background:var(--yi-white)}
+.nyc-gallery a{display:block;color:inherit;text-decoration:none}
+.nyc-gallery img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.nyc-gallery figcaption{padding:12px 15px;font-weight:600}
+.nyc-gallery figcaption small{display:block;color:var(--yi-muted);font-weight:400}
+.gallery-source{margin-top:18px}
+.gallery-source a{color:inherit}
+.gallery-dialog{width:min(940px,94vw);max-height:94vh;padding:12px;background:var(--yi-white);border:0}
+.gallery-dialog::backdrop{background:#171612e0}
+.gallery-dialog form{text-align:right;margin-bottom:8px}
+.gallery-dialog button{min-height:44px;padding:0 16px;background:var(--yi-ink);color:white;border:0;cursor:pointer}
+.gallery-dialog img{display:block;width:100%;max-height:72vh;object-fit:contain;background:var(--yi-ink)}
+.gallery-dialog p{margin:10px 0 0}
+@media(max-width:640px){
+  .gv-intro h1{font-size:clamp(43px,11vw,66px)}
+  .nyc-gallery{gap:10px}
+  .nyc-gallery figcaption{padding:9px;font-size:.82rem}
+  .gv-table-wrap{overflow:visible}
+  .gv-table,.gv-table tbody{display:block;min-width:0;width:100%}
+  .gv-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .gv-table tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 10px;border:1px solid var(--yi-line)}
+  .gv-table tbody th{grid-column:1/-1}
+  .gv-table tbody :is(th,td){padding:9px 7px;font-size:.78rem;text-align:left}
+  .gv-table tbody td::before{content:attr(data-label);display:block;color:var(--yi-muted);font-size:.7rem}
+}
 </style>
 </head>
-<body class="yi-travertino-page"><a class="skip" href="#conteudo">Pular para o conteúdo</a><header class="yi-brand-shell"><div class="header-inner"><a class="yi-brand-mark" href="https://www.yincorp.com.br/" aria-label="Yincorp, início"><strong>yincorp</strong><span>PLACES WORTH LIVING</span></a><nav class="desktop-nav" aria-label="Navegação do comparativo"><a href="#comparativo">Comparar</a><a href="#projetos">Imóveis</a><a href="#documentos">Documentos</a></nav><details class="mobile-menu"><summary>Menu</summary><nav aria-label="Navegação no celular"><a href="#comparativo">Comparar</a><a href="#projetos">Imóveis</a><a href="#documentos">Documentos</a></nav></details></div></header>
+<body class="yi-travertino-page"><a class="skip" href="#conteudo">Pular para o conteúdo</a><header class="yi-brand-shell"><div class="header-inner"><a class="yi-brand-mark" href="https://www.yincorp.com.br/" aria-label="Yincorp, início"><strong>yincorp</strong><span>PLACES WORTH LIVING</span></a><nav class="desktop-nav" aria-label="Navegação do comparativo"><a href="#comparativo">Comparar</a><a href="#projetos">Imóveis</a><a href="#galeria">Galeria</a></nav><details class="mobile-menu"><summary>Menu</summary><nav aria-label="Navegação no celular"><a href="#comparativo">Comparar</a><a href="#projetos">Imóveis</a><a href="#galeria">Galeria</a></nav></details></div></header>
 
 <main id="conteudo">
 <section class="gv-hero">
@@ -188,7 +218,7 @@ h1,h2,h3{font-family:var(--yi-font-title)}
     <p class="eyebrow">Seleção Yincorp para Guilherme</p>
     <h1>NYC Berrini<br><em>e quatro alternativas</em></h1>
     <p class="hero-description">Apartamentos no Brooklin com 1 dormitório e 1 vaga. O NYC Berrini é a referência, com 39,22 m² por R$ 614.000.</p>
-    <a class="button" href="#comparativo">Ver comparativo</a>
+    <div class="hero-actions"><a class="button" href="#comparativo">Ver comparativo</a><a class="gallery-link" href="#galeria">Explorar fotos</a></div>
   </div>
   <figure class="nyc-photo"><img src="https://static.orulo.com.br/images/properties/large/2175563.jpg" alt="Foto de cadastro — NYC Berrini" ></figure>
 </section>
@@ -197,17 +227,53 @@ h1,h2,h3{font-family:var(--yi-font-title)}
   <div class="gv-table-wrap" tabindex="0" role="region" aria-label="Tabela comparativa de imóveis">
     <table class="gv-table"><caption>Comparação de imóveis no Brooklin</caption>
     <thead><tr><th scope="col">Imóvel</th><th scope="col">Estágio</th><th scope="col">Área</th><th scope="col">Preço</th></tr></thead>
-    <tbody><tr><th scope="row">NYC Berrini</th><td>Pronto novo</td><td>39,22 m²</td><td>R$ 614.000</td></tr><tr><th scope="row">Guararapes, 305</th><td>Usado</td><td>38 m²</td><td>R$ 590.000</td></tr><tr><th scope="row">Santo Amaro, 3131</th><td>Usado</td><td>41 m²</td><td>R$ 690.000</td></tr><tr><th scope="row">Barão do Triunfo, 111</th><td>Usado</td><td>46 m²</td><td>R$ 698.000</td></tr><tr><th scope="row">Voga Flórida</th><td>Em construção</td><td>38,49 m²</td><td>R$ 807.255</td></tr></tbody></table>
+    <tbody><tr><th scope="row"><a href="#unidade-104">NYC Berrini</a></th><td data-label="Estágio">Pronto novo</td><td data-label="Área">39,22 m²</td><td data-label="Preço">R$ 614.000</td></tr><tr><th scope="row"><a href="#guararapes">Guararapes, 305</a></th><td data-label="Estágio">Usado</td><td data-label="Área">38 m²</td><td data-label="Preço">R$ 590.000</td></tr><tr><th scope="row"><a href="#santo-amaro">Santo Amaro, 3131</a></th><td data-label="Estágio">Usado</td><td data-label="Área">41 m²</td><td data-label="Preço">R$ 690.000</td></tr><tr><th scope="row"><a href="#barao-do-triunfo">Barão do Triunfo, 111</a></th><td data-label="Estágio">Usado</td><td data-label="Área">46 m²</td><td data-label="Preço">R$ 698.000</td></tr><tr><th scope="row"><a href="#voga">Voga Flórida</a></th><td data-label="Estágio">Em construção</td><td data-label="Área">38,49 m²</td><td data-label="Preço">R$ 807.255</td></tr></tbody></table>
   </div>
   <p class="caption">Preços de referência consultados em 20/11/2026. Valores e disponibilidade sujeitos a confirmação.</p>
 </section>
+<section class="space wrap" id="galeria">
+  <div class="section-head"><div><h2>NYC Berrini e Voga Flórida<br><em>por dentro.</em></h2></div><p>Toque em uma imagem para ampliar. As fotos do NYC mostram áreas comuns do condomínio. As imagens do Voga são perspectivas do projeto.</p></div>
+  <div class="nyc-gallery">
+    <figure><a href="https://5m7fnp.stackhero-network.com/corretoraocubo-production/uploads/properties/3533/1699621998937-piscina.jpg.webp"><img src="https://5m7fnp.stackhero-network.com/corretoraocubo-production/uploads/properties/3533/1699621998937-piscina.jpg.webp" loading="lazy" decoding="async" width="640" height="400" alt="Piscina coberta — NYC Berrini"></a><figcaption>Piscina coberta<small>NYC Berrini</small></figcaption></figure>
+    <figure><a href="https://charlie-images.sfo3.digitaloceanspaces.com/buildings/657b2140bba8a4-593463072023-12-14.jpg"><img src="https://charlie-images.sfo3.digitaloceanspaces.com/buildings/657b2140bba8a4-593463072023-12-14.jpg" loading="lazy" decoding="async" width="640" height="400" alt="Lobby — NYC Berrini"></a><figcaption>Lobby<small>NYC Berrini</small></figcaption></figure>
+    <figure><a href="https://fls-9f17169f-82af-4fb3-b78c-2d026cbbc002.laravel.cloud/cache/images/d9694a282990d7f9ec74d56b3cb272eeede549789274b25927256683cec6ad97w.webp"><img src="https://fls-9f17169f-82af-4fb3-b78c-2d026cbbc002.laravel.cloud/cache/images/d9694a282990d7f9ec74d56b3cb272eeede549789274b25927256683cec6ad97w.webp" loading="lazy" decoding="async" width="640" height="400" alt="Terraço de lazer — Voga Flórida · perspectiva"></a><figcaption>Terraço de lazer<small>Voga Flórida · perspectiva</small></figcaption></figure>
+    <figure><a href="https://fls-9f17169f-82af-4fb3-b78c-2d026cbbc002.laravel.cloud/cache/images/be81d8442924ad8d1e65348d5fbe6e1491dbd9141b985ed58b49e85655c04ed6w.jpg"><img src="https://fls-9f17169f-82af-4fb3-b78c-2d026cbbc002.laravel.cloud/cache/images/be81d8442924ad8d1e65348d5fbe6e1491dbd9141b985ed58b49e85655c04ed6w.jpg" loading="lazy" decoding="async" width="640" height="400" alt="Piscina coberta — Voga Flórida · perspectiva"></a><figcaption>Piscina coberta<small>Voga Flórida · perspectiva</small></figcaption></figure>
+  </div>
+  <p class="caption gallery-source">Fontes das imagens: <a href="https://aocubo.com/imovel/unidade/apartamento-pronto-exclusividade-aocubo-nyc-berrini--sao-paulo-cidade-moncoes-apartamento-2-quartos-apartamento-65m2/7697">AoCubo</a>, <a href="https://www.staycharlie.com.br/charlie-nyc-berrini">Charlie</a> e <a href="https://apto.vc/br/sp/sao-paulo/brooklin/voga-florida">Apto</a>.</p>
+</section>
 <section class="project-band" id="projetos"><div class="wrap section-head"><div><h2>Alternativas ao NYC</h2></div><p>Três usados e um residencial em construção, todos no Brooklin.</p></div></section>
-<section class="space wrap" aria-label="Detalhes das alternativas"><div class="selection-cards"><article class="selection-card"><figure><img src="https://static.orulo.com.br/images/properties/large/8gwy6yqyjhvxvhd4wvfbyfrjhoye.jpeg" alt="Foto de cadastro — Rua Guararapes, 305" loading="lazy"></figure><div class="property-detail"><small>Usado</small><h3>Rua Guararapes, 305</h3><p>Brooklin Novo</p><p>38 m² · 1 dormitório · 1 vaga</p><strong class="selection-price">R$ 590.000</strong><p class="delta">R$ 24.000 abaixo do NYC</p><p>A metragem mais próxima entre os usados, no mesmo bairro.</p></div></article><article class="selection-card"><figure><img src="https://static.orulo.com.br/images/properties/large/crrsq1kog0oqmwexaxwijwj4nzbz.jpeg" alt="Foto de cadastro — Av. Santo Amaro, 3131" loading="lazy"></figure><div class="property-detail"><small>Usado</small><h3>Av. Santo Amaro, 3131</h3><p>Brooklin Paulista</p><p>41 m² · 1 dormitório · 1 vaga</p><strong class="selection-price">R$ 690.000</strong><p class="delta">R$ 76.000 acima do NYC</p><p>Um pouco mais de espaço, com acesso pela Avenida Santo Amaro.</p></div></article><article class="selection-card"><figure><img src="https://static.orulo.com.br/images/properties/large/2313749.jpeg" alt="Foto de cadastro — Rua Barão do Triunfo, 111" loading="lazy"></figure><div class="property-detail"><small>Usado</small><h3>Rua Barão do Triunfo, 111</h3><p>Brooklin Paulista</p><p>46 m² · 1 dormitório · 1 vaga</p><strong class="selection-price">R$ 698.000</strong><p class="delta">R$ 84.000 acima do NYC</p><p>A maior planta da seleção, com quase 7 m² a mais que o NYC.</p></div></article><article class="selection-card"><figure><img src="https://static.orulo.com.br/images/properties/large/2050093.jpg" alt="Foto de cadastro do Voga Flórida" loading="lazy"></figure><div class="property-detail"><small>Em construção</small><h3>Voga Flórida Residencial</h3><p>Rua Flórida, 889 · Brooklin Novo</p><p>38,49 m² · 1 dormitório · 1 vaga</p><strong class="selection-price">R$ 807.255</strong><p class="delta">R$ 193.255 acima do NYC</p><p>Metragem semelhante à do NYC. Entrega prevista na base para janeiro de 2028.</p></div></article></div></section>
-<section class="space docs-section" id="documentos"><div class="wrap">
-  <div class="section-head"><div><h2>Documentos do NYC Berrini</h2></div><p>A unidade 104, com 39,22 m² e 1 vaga, consta como disponível na tabela de novembro por R$ 614.000. Confirme a disponibilidade antes da visita.</p></div>
+<section class="space wrap" aria-label="Detalhes das alternativas"><div class="selection-cards"><article class="selection-card" id="guararapes"><figure><img src="https://static.orulo.com.br/images/properties/large/8gwy6yqyjhvxvhd4wvfbyfrjhoye.jpeg" alt="Foto de cadastro — Rua Guararapes, 305" loading="lazy"></figure><div class="property-detail"><small>Usado</small><h3>Rua Guararapes, 305</h3><p>Brooklin Novo</p><p>38 m² · 1 dormitório · 1 vaga</p><strong class="selection-price">R$ 590.000</strong><p class="delta">R$ 24.000 abaixo do NYC</p><p>A metragem mais próxima entre os usados, no mesmo bairro.</p></div></article><article class="selection-card" id="santo-amaro"><figure><img src="https://static.orulo.com.br/images/properties/large/crrsq1kog0oqmwexaxwijwj4nzbz.jpeg" alt="Foto de cadastro — Av. Santo Amaro, 3131" loading="lazy"></figure><div class="property-detail"><small>Usado</small><h3>Av. Santo Amaro, 3131</h3><p>Brooklin Paulista</p><p>41 m² · 1 dormitório · 1 vaga</p><strong class="selection-price">R$ 690.000</strong><p class="delta">R$ 76.000 acima do NYC</p><p>Um pouco mais de espaço, com acesso pela Avenida Santo Amaro.</p></div></article><article class="selection-card" id="barao-do-triunfo"><figure><img src="https://static.orulo.com.br/images/properties/large/2313749.jpeg" alt="Foto de cadastro — Rua Barão do Triunfo, 111" loading="lazy"></figure><div class="property-detail"><small>Usado</small><h3>Rua Barão do Triunfo, 111</h3><p>Brooklin Paulista</p><p>46 m² · 1 dormitório · 1 vaga</p><strong class="selection-price">R$ 698.000</strong><p class="delta">R$ 84.000 acima do NYC</p><p>A maior planta da seleção, com quase 7 m² a mais que o NYC.</p></div></article><article class="selection-card" id="voga"><figure><img src="https://static.orulo.com.br/images/properties/large/2050093.jpg" alt="Foto de cadastro do Voga Flórida" loading="lazy"></figure><div class="property-detail"><small>Em construção</small><h3>Voga Flórida Residencial</h3><p>Rua Flórida, 889 · Brooklin Novo</p><p>38,49 m² · 1 dormitório · 1 vaga</p><strong class="selection-price">R$ 807.255</strong><p class="delta">R$ 193.255 acima do NYC</p><p>Metragem semelhante à do NYC. Entrega prevista na base para janeiro de 2028.</p></div></article></div></section>
+<section class="space docs-section" id="unidade-104"><div class="wrap">
+  <div class="section-head"><div><h2>Unidade 104 do NYC Berrini</h2></div><p>A unidade 104, com 39,22 m² e 1 vaga, consta como disponível na tabela de novembro por R$ 614.000. Confirme a disponibilidade antes da visita.</p></div><p>O condomínio fica na Rua Sansão Alves dos Santos, 56, e oferece piscina, academia, sauna, espaço gourmet e lavanderia.</p>
 
 </div></section>
 </main>
 <footer><div class="wrap footer-top"><a class="yi-brand-mark" href="https://www.yincorp.com.br/" aria-label="Yincorp, início"><strong>yincorp</strong><span>PLACES WORTH LIVING</span></a><a href="https://www.yincorp.com.br/politica-de-privacidade">Política de Privacidade</a></div></footer>
+<dialog class="gallery-dialog" aria-label="Foto ampliada">
+  <form method="dialog"><button>Fechar</button></form>
+  <img alt="">
+  <p></p>
+</dialog>
+<script>
+const galleryDialog = document.querySelector('.gallery-dialog');
+const galleryImage = galleryDialog.querySelector('img');
+const galleryCaption = galleryDialog.querySelector('p');
+
+document.querySelectorAll('.nyc-gallery a').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    if (typeof galleryDialog.showModal !== 'function' ||
+        event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    galleryImage.src = link.href;
+    galleryImage.alt = link.querySelector('img').alt;
+    galleryCaption.textContent = galleryImage.alt;
+    galleryDialog.showModal();
+  });
+});
+
+document.querySelectorAll('.mobile-menu a').forEach((link) => {
+  link.addEventListener('click', () => link.closest('details').removeAttribute('open'));
+});
+</script>
 </body>
 </html>
