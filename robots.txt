@@ -1,4 +1,4 @@
-YªçŠx²œ±×œ•ªÞw­…Ê'²Û¬zW­~Šëy«,Š	ÚnW¯j¸šnW¬User-agent: *
+User-agent: *
 Allow: /
 Disallow: /api/
 

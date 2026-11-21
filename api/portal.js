@@ -82,7 +82,8 @@ const seo=createSeoHandler({
 export default async function portal(req,res){
   const url=new URL(req.url||'/', 'https://www.yincorp.com.br');
   const path=String(req.query?.portalPath||url.searchParams.get('portalPath')||url.pathname);
-  if(serveArchitecture(req,res,path,{preview:process.env.VERCEL_ENV==='preview'}))return;
+  const architecturePreview=process.env.VERCEL_ENV!=='production'||req.headers?.host!=='www.yincorp.com.br';
+  if(serveArchitecture(req,res,path,{preview:architecturePreview}))return;
   const privacySend=res.send.bind(res);res.send=body=>{
     // The /sp state landing page uses a fixed, verified Órulo hero; other
     // listings, search results, property pages and media are untouched.
