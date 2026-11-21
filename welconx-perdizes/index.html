@@ -979,7 +979,7 @@ leadForm.addEventListener("submit",async e=>{
     }catch(e){}
 
     if(typeof gtag==="function"){
-      gtag("event","conversion",{send_to:"AW-18371236623/Icu-CMS18_ccEI-mi7hE"});
+      gtag("event","conversion",{send_to:"AW-18371236623/Icu-CMS18_ccEI-mi7hE", ...(data.lead_id ? { transaction_id: data.lead_id } : {})});
       gtag("event","generate_lead",{value:PROJECT.price,currency:"BRL"});
     }
 
