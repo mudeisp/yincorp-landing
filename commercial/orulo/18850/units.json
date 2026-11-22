@@ -1,0 +1,57 @@
+{
+  "reference": "2026-11",
+  "source": "Tabela de financiamento bancário",
+  "notes": "Área total inclui o depósito privativo. O PDF prevê reajustes e condições contratuais para o financiamento.",
+  "units": [
+    {
+      "id": "121",
+      "area": 181,
+      "depositArea": 4,
+      "totalArea": 185,
+      "typology": "Final 1",
+      "parking": 3,
+      "totalCents": 806913100,
+      "sourcePage": 3,
+      "roundingCents": 0,
+      "stages": [
+        {
+          "label": "Ato · 30%",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 242073900
+        },
+        {
+          "label": "Principal do financiamento · 70%",
+          "firstDue": "2027-01-15",
+          "count": 1,
+          "amountCents": 564839200
+        }
+      ]
+    },
+    {
+      "id": "201",
+      "area": 181,
+      "depositArea": 4,
+      "totalArea": 185,
+      "typology": "Final 1",
+      "parking": 3,
+      "totalCents": 1001696500,
+      "sourcePage": 3,
+      "roundingCents": 100,
+      "stages": [
+        {
+          "label": "Ato · 30%",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 300508900
+        },
+        {
+          "label": "Principal do financiamento · 70%",
+          "firstDue": "2027-01-15",
+          "count": 1,
+          "amountCents": 701187500
+        }
+      ]
+    }
+  ]
+}

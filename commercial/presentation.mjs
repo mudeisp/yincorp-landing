@@ -57,7 +57,9 @@ async function initializeFinance(root) {
       const details = [
         unit.area == null ? null : decimal.format(unit.area) + ' m²',
         unit.coveredArea == null ? null : decimal.format(unit.coveredArea) + ' m² de área coberta',
-        unit.totalArea == null || (unit.coveredArea == null && unit.area != null) ? null : decimal.format(unit.totalArea) + ' m² de área total',
+        unit.totalArea == null || (!root.dataset.sourceUrl && unit.coveredArea == null && unit.area != null) ? null : decimal.format(unit.totalArea) + ' m² de área total',
+        unit.uncoveredArea == null ? null : decimal.format(unit.uncoveredArea) + ' m² de área descoberta',
+        unit.depositArea == null ? null : decimal.format(unit.depositArea) + ' m² de depósito privativo',
         unit.terraceArea == null ? null : decimal.format(unit.terraceArea) + ' m² de terraço',
         unit.typology ?? (unit.bedrooms == null ? null : unit.bedrooms + ' dorm.'),
         unit.suites == null ? null : unit.suites + ' suítes',
@@ -78,6 +80,15 @@ async function initializeFinance(root) {
       if (unit.stages?.length) table.append(paymentTable(unit.stages));
       const payment = unit.stages?.length ? table : element('p', 'A tabela de referência informa o preço, sem detalhar as parcelas. Consulte a Yincorp sobre as condições de pagamento.');
       output.replaceChildren(overview, payment, element('p', 'Referência: ' + formatPeriod(data.reference) + ' · ' + data.source + (unit.sourcePage == null ? '.' : ', p. ' + unit.sourcePage + '.')));
+      if (root.dataset.sourceUrl && unit.sourcePage != null) {
+        const link = element('a', 'Conferir valores na página ' + unit.sourcePage + ' do PDF ↗');
+        link.href = root.dataset.sourceUrl + '#page=' + unit.sourcePage;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        const paragraph = element('p');
+        paragraph.append(link);
+        output.append(paragraph);
+      }
       if (unit.financingReference) {
         output.append(element('p', 'Financiamento indicado separadamente no PDF em ' + formatDueDate(unit.financingReference.date) + ': ' + formatCents(unit.financingReference.amountCents) + '.'));
       }
@@ -103,3 +114,31 @@ async function initializeFinance(root) {
 }
 
 for (const root of document.querySelectorAll('.commercial-finance[data-units]')) initializeFinance(root);
+
+for (const root of document.querySelectorAll('[data-commercial-editorial]')) {
+  const plans = root.querySelectorAll('[data-commercial-plan]');
+  if (!plans.length || typeof HTMLDialogElement === 'undefined') continue;
+  const dialog = element('dialog');
+  dialog.className = 'commercial-plan-dialog';
+  const form = element('form');
+  form.method = 'dialog';
+  const close = element('button', 'Fechar planta');
+  form.append(close);
+  const image = element('img');
+  const original = element('a', 'Abrir imagem em tamanho original ↗');
+  dialog.append(form, image, original);
+  root.append(dialog);
+
+  for (const plan of plans) {
+    plan.addEventListener('click', event => {
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      image.alt = plan.querySelector('img').alt;
+      image.src = plan.href;
+      original.href = plan.href;
+      dialog.setAttribute('aria-label', image.alt);
+      dialog.showModal();
+      close.focus();
+    });
+  }
+}

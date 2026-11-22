@@ -128,3 +128,55 @@
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+.commercial-chapter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block: 24px;
+}
+.commercial-chapter-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 14px;
+  color: var(--commercial-ink);
+  border: 1px solid var(--commercial-line);
+  border-radius: 24px;
+}
+[data-commercial-editorial] > section { scroll-margin-top: 100px; }
+.commercial-chapter { margin-block: clamp(40px, 7vw, 86px); }
+.commercial-chapter .commercial-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.commercial-chapter--arquitetura figure:first-child { grid-row: span 2; }
+.commercial-chapter--arquitetura figure:first-child img {
+  aspect-ratio: auto;
+  height: clamp(340px, 52vw, 620px);
+}
+.commercial-chapter [data-commercial-plan] {
+  display: block;
+  color: var(--commercial-ink);
+}
+.commercial-chapter [data-commercial-plan] span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+}
+.commercial-plan-dialog {
+  padding: 22px;
+  width: min(94vw, 1100px);
+  max-height: 90dvh;
+  border: 1px solid var(--yi-line);
+  border-radius: 16px;
+  background: white;
+  color: var(--yi-ink);
+}
+.commercial-plan-dialog::backdrop { background: rgb(0 0 0 / .72); }
+.commercial-plan-dialog form { display: flex; justify-content: end; }
+.commercial-plan-dialog button { min-height: 44px; padding: 8px 14px; cursor: pointer; }
+.commercial-plan-dialog img { display: block; width: 100%; max-height: 68dvh; object-fit: contain; }
+@media (max-width: 640px) {
+  .commercial-chapter .commercial-gallery { grid-template-columns: minmax(0, 1fr); }
+  .commercial-chapter--arquitetura figure:first-child { grid-row: auto; }
+  .commercial-chapter--arquitetura figure:first-child img { height: auto; max-height: 75vw; }
+}
