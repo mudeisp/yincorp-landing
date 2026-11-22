@@ -138,6 +138,9 @@ async function initializeFinance(root) {
       if (unit.alternativePriceCents != null) output.append(element('p', 'Preço associativo na tabela histórica: ' + formatCents(unit.alternativePriceCents) + '.'));
       if (unit.sourceStatus) output.append(element('p', 'Situação registrada na data da tabela: ' + unit.sourceStatus + '.'));
       if (data.notes) output.append(element('p', data.notes));
+      if (unit.paymentDifferenceCents) {
+        output.append(element('p', 'Diferença entre o total impresso e a soma das parcelas: ' + formatCents(unit.paymentDifferenceCents) + '.'));
+      }
       if (unit.roundingCents) {
         output.append(element('p', 'Diferença de arredondamento na fonte: ' + formatCents(Math.abs(unit.roundingCents)) + '.'));
       }
