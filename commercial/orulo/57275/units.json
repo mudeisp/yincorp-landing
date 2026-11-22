@@ -1,0 +1,1537 @@
+{
+  "reference": "2026-02",
+  "source": "Espelho de vendas · Subcondomínio residencial",
+  "notes": "A fonte imprime uma parcela final de R$ 1.000,00. O total impresso corresponde às demais etapas, com diferenças de centavos. Confirme o tratamento da parcela final, vagas e condições atuais com a Yincorp.",
+  "units": [
+    {
+      "id": "AP0061",
+      "area": 262.35,
+      "typology": "6º andar",
+      "totalCents": 550818075,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 33049084
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11016361
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5202171
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11016361
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 27540904
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 330490845
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0062",
+      "area": 262.25,
+      "typology": "6º andar",
+      "totalCents": 550818075,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 33049084
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11016361
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5202171
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11016361
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 27540904
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 330490845
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0082",
+      "area": 262.25,
+      "typology": "8º andar",
+      "totalCents": 550818075,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 33049084
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11016361
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5202171
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11016361
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 27540904
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 330490845
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0092",
+      "area": 262.25,
+      "typology": "9º andar",
+      "totalCents": 562270497,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 33736230
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11245410
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5310332
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11245410
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28113525
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 337362298
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0102",
+      "area": 262.25,
+      "typology": "10º andar",
+      "totalCents": 562270497,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 33736230
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11245410
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5310332
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11245410
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28113525
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 337362298
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0112",
+      "area": 262.25,
+      "typology": "11º andar",
+      "totalCents": 562270497,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 33736230
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11245410
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5310332
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11245410
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28113525
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 337362298
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0121",
+      "area": 262.35,
+      "typology": "12º andar",
+      "totalCents": 571000188,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 34260011
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5392780
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28550009
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 342600113
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0122",
+      "area": 262.25,
+      "typology": "12º andar",
+      "totalCents": 571000188,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 34260011
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5392780
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28550009
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 342600113
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0131",
+      "area": 262.35,
+      "typology": "13º andar",
+      "totalCents": 571000188,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 34260011
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5392780
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28550009
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 342600113
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0132",
+      "area": 262.25,
+      "typology": "13º andar",
+      "totalCents": 571000188,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 34260011
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5392780
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28550009
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 342600113
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0141",
+      "area": 262.35,
+      "typology": "14º andar",
+      "totalCents": 571000188,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 34260011
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5392780
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28550009
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 342600113
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0142",
+      "area": 262.25,
+      "typology": "14º andar",
+      "totalCents": 571000188,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 34260011
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5392780
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11420004
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28550009
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 342600113
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0151",
+      "area": 262.35,
+      "typology": "15º andar",
+      "totalCents": 579761662,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 34785700
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11595233
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5475527
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11595233
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28988083
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 347856997
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0152",
+      "area": 262.25,
+      "typology": "15º andar",
+      "totalCents": 579761662,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 34785700
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11595233
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5475527
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11595233
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28988083
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 347856997
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0161",
+      "area": 262.35,
+      "typology": "16º andar",
+      "totalCents": 579761662,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 34785700
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11595233
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5475527
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11595233
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28988083
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 347856997
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0162",
+      "area": 262.25,
+      "typology": "16º andar",
+      "totalCents": 579761662,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 34785700
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 11595233
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5475527
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 11595233
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 28988083
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 347856997
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0171",
+      "area": 262.35,
+      "typology": "17º andar",
+      "totalCents": 608747626,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 36524858
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12174953
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5749283
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12174953
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 30437381
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 365248576
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0172",
+      "area": 262.25,
+      "typology": "17º andar",
+      "totalCents": 608747626,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 36524858
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12174953
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5749283
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12174953
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 30437381
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 365248576
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0181",
+      "area": 262.35,
+      "typology": "18º andar",
+      "totalCents": 617858711,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37071523
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5835332
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 30892936
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 370715227
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0182",
+      "area": 262.25,
+      "typology": "18º andar",
+      "totalCents": 617858711,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37071523
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5835332
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 30892936
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 370715227
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0191",
+      "area": 262.35,
+      "typology": "19º andar",
+      "totalCents": 617858711,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37071523
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5835332
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 30892936
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 370715227
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0192",
+      "area": 262.25,
+      "typology": "19º andar",
+      "totalCents": 617858711,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37071523
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5835332
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 30892936
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 370715227
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0201",
+      "area": 262.35,
+      "typology": "20º andar",
+      "totalCents": 617858711,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37071523
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5835332
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 30892936
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 370715227
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0202",
+      "area": 262.25,
+      "typology": "20º andar",
+      "totalCents": 617858711,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37071523
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5835332
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12357174
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 30892936
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 370715227
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0211",
+      "area": 262.35,
+      "typology": "21º andar",
+      "totalCents": 627001579,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37620095
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5921682
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 31350079
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 376200948
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0212",
+      "area": 262.25,
+      "typology": "21º andar",
+      "totalCents": 627001579,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37620095
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5921682
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 31350079
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 376200948
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0221",
+      "area": 262.35,
+      "typology": "22º andar",
+      "totalCents": 627001579,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37620095
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5921682
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 31350079
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 376200948
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0222",
+      "area": 262.25,
+      "typology": "22º andar",
+      "totalCents": 627001579,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37620095
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5921682
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 31350079
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 376200948
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0231",
+      "area": 262.35,
+      "typology": "23º andar",
+      "totalCents": 627001579,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37620095
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5921682
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 31350079
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 376200948
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    },
+    {
+      "id": "AP0232",
+      "area": 262.25,
+      "typology": "23º andar",
+      "totalCents": 627001579,
+      "sourcePage": 6,
+      "stages": [
+        {
+          "label": "Sinal / ato",
+          "firstDue": "2026-02-25",
+          "count": 1,
+          "amountCents": 37620095
+        },
+        {
+          "label": "Complemento do ato",
+          "firstDue": "2026-04-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2026-07-05",
+          "count": 18,
+          "amountCents": 5921682
+        },
+        {
+          "label": "Semestrais",
+          "firstDue": "2026-08-05",
+          "count": 3,
+          "amountCents": 12540032
+        },
+        {
+          "label": "Parcela única",
+          "firstDue": "2028-01-05",
+          "count": 1,
+          "amountCents": 31350079
+        },
+        {
+          "label": "Financiamento bancário",
+          "firstDue": "2028-02-05",
+          "count": 1,
+          "amountCents": 376200948
+        },
+        {
+          "label": "Parcela final",
+          "firstDue": "2029-03-05",
+          "count": 1,
+          "amountCents": 100000
+        }
+      ]
+    }
+  ]
+}
