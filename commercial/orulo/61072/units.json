@@ -1,0 +1,28 @@
+{
+  "reference": "2026-09",
+  "source": "Lúcio · Tabela de vendas Vizcaya Itaim",
+  "notes": "O PDF disponibilizado contém a página 22 do book de produtos Lúcio, correspondente à tabela do Vizcaya.",
+  "units": [
+    {
+      "id": "24",
+      "area": 541,
+      "parking": 6,
+      "totalCents": 4685000000,
+      "sourcePage": 1
+    },
+    {
+      "id": "5",
+      "area": 541,
+      "parking": 6,
+      "totalCents": 3145000000,
+      "sourcePage": 1
+    },
+    {
+      "id": "4",
+      "area": 541,
+      "parking": 6,
+      "totalCents": 3090000000,
+      "sourcePage": 1
+    }
+  ]
+}
