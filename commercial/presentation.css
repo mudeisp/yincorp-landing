@@ -76,3 +76,55 @@
 }
 .commercial-table td:last-child { white-space: nowrap; }
 .commercial-finance [data-financial-breakdown] > p { overflow-wrap: anywhere; }
+
+.commercial-sources { margin: 32px 0; }
+.commercial-documents {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  align-items: start;
+  gap: 16px;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+.commercial-document {
+  min-width: 0;
+  padding: clamp(16px, 3vw, 28px);
+  border: 1px solid var(--commercial-line);
+  border-radius: 16px;
+  background: var(--yi-paper);
+}
+.commercial-book .commercial-document h3 {
+  margin: 0 0 12px;
+  font-size: clamp(20px, 3vw, 26px);
+}
+.commercial-document-date { margin: 0 0 12px; }
+.commercial-document a,
+.commercial-document summary {
+  display: flex;
+  align-items: center;
+  gap: .4em;
+  min-height: 44px;
+  color: var(--commercial-ink);
+  font-weight: 600;
+}
+.commercial-document summary {
+  display: list-item;
+  cursor: pointer;
+  padding-block: 10px;
+}
+.commercial-document-preview iframe {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 65vh, 680px);
+  border: 1px solid var(--commercial-line);
+  border-radius: 8px;
+}
+.commercial-document-context {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
