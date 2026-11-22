@@ -30,7 +30,7 @@ if(!reduced&&'IntersectionObserver' in window&&!root.querySelector('.commercial-
 }
 
 /* Full editorial chapters for all structured commercial presentations. */
-const book=root.querySelector('.commercial-book');
+const book=root.querySelector('.commercial-book:not([data-commercial-editorial])');
 if(book){
  book.classList.add('yg-cinematic');
  const gallery=book.querySelector('.commercial-gallery');

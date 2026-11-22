@@ -1,0 +1,145 @@
+{
+  "reference": "2026-10",
+  "source": "Tabela de vendas",
+  "notes": "Metragem inclui o depósito (p. 4). Vagas por tipologia na ficha técnica (p. 2) e pavimentos no espelho (p. 3). O PDF prevê reajustes conforme contrato.",
+  "units": [
+    {
+      "id": "41",
+      "totalArea": 472,
+      "typology": "3º pavimento",
+      "parking": 4,
+      "totalCents": 2300000000,
+      "sourcePage": 4,
+      "roundingCents": 0,
+      "stages": [
+        {
+          "label": "Ato · 50%",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 1150000000
+        },
+        {
+          "label": "30 dias · 50%",
+          "firstDue": "2026-11",
+          "count": 1,
+          "amountCents": 1150000000
+        }
+      ]
+    },
+    {
+      "id": "61",
+      "totalArea": 472,
+      "typology": "5º pavimento",
+      "parking": 4,
+      "totalCents": 2748165300,
+      "sourcePage": 4,
+      "roundingCents": 100,
+      "stages": [
+        {
+          "label": "Ato · 50%",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 1374082600
+        },
+        {
+          "label": "30 dias · 50%",
+          "firstDue": "2026-11",
+          "count": 1,
+          "amountCents": 1374082600
+        }
+      ]
+    },
+    {
+      "id": "71",
+      "totalArea": 472,
+      "typology": "6º pavimento",
+      "parking": 4,
+      "totalCents": 2776207800,
+      "sourcePage": 4,
+      "roundingCents": 0,
+      "stages": [
+        {
+          "label": "Ato · 50%",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 1388103900
+        },
+        {
+          "label": "30 dias · 50%",
+          "firstDue": "2026-11",
+          "count": 1,
+          "amountCents": 1388103900
+        }
+      ]
+    },
+    {
+      "id": "81",
+      "totalArea": 472,
+      "typology": "7º pavimento",
+      "parking": 4,
+      "totalCents": 2804250300,
+      "sourcePage": 4,
+      "roundingCents": 100,
+      "stages": [
+        {
+          "label": "Ato · 50%",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 1402125100
+        },
+        {
+          "label": "30 dias · 50%",
+          "firstDue": "2026-11",
+          "count": 1,
+          "amountCents": 1402125100
+        }
+      ]
+    },
+    {
+      "id": "131",
+      "totalArea": 472,
+      "typology": "12º pavimento",
+      "parking": 4,
+      "totalCents": 2916420300,
+      "sourcePage": 4,
+      "roundingCents": -100,
+      "stages": [
+        {
+          "label": "Ato · 50%",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 1458210200
+        },
+        {
+          "label": "30 dias · 50%",
+          "firstDue": "2026-11",
+          "count": 1,
+          "amountCents": 1458210200
+        }
+      ]
+    },
+    {
+      "id": "171",
+      "totalArea": 472,
+      "typology": "16º pavimento",
+      "parking": 4,
+      "totalCents": 3140760300,
+      "sourcePage": 4,
+      "roundingCents": -100,
+      "stages": [
+        {
+          "label": "Ato · 50%",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 1570380200
+        },
+        {
+          "label": "30 dias · 50%",
+          "firstDue": "2026-11",
+          "count": 1,
+          "amountCents": 1570380200
+        }
+      ]
+    }
+  ]
+}

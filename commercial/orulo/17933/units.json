@@ -1,0 +1,89 @@
+{
+  "reference": "2026-11",
+  "source": "Estudo de tabela financiada",
+  "notes": "Áreas e preços da página 5. Situação registrada no espelho de vendas da página 4.",
+  "units": [
+    {
+      "id": "21 · Garden",
+      "coveredArea": 189.4,
+      "totalArea": 366.28,
+      "parking": 3,
+      "totalCents": 1064420000,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível",
+      "uncoveredArea": 173.43
+    },
+    {
+      "id": "31",
+      "coveredArea": 189.4,
+      "totalArea": 192.55,
+      "parking": 3,
+      "totalCents": 764100000,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "32",
+      "coveredArea": 189.4,
+      "totalArea": 191.3,
+      "parking": 2,
+      "totalCents": 749930000,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "41",
+      "coveredArea": 189.4,
+      "totalArea": 192.85,
+      "parking": 3,
+      "totalCents": 768150000,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "192",
+      "coveredArea": 191.65,
+      "totalArea": 194.5,
+      "parking": 3,
+      "totalCents": 882480000,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "202",
+      "coveredArea": 189.4,
+      "totalArea": 192.55,
+      "parking": 3,
+      "totalCents": 888730000,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "232 · Decorado full",
+      "coveredArea": 189.4,
+      "totalArea": 193.9,
+      "parking": 3,
+      "totalCents": 1190200000,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "242",
+      "coveredArea": 188.35,
+      "totalArea": 193.9,
+      "parking": 3,
+      "totalCents": 942150000,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível"
+    },
+    {
+      "id": "252",
+      "coveredArea": 189.4,
+      "totalArea": 193.5,
+      "parking": 3,
+      "totalCents": 948600000,
+      "sourcePage": 5,
+      "sourceStatus": "Disponível"
+    }
+  ]
+}
