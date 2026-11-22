@@ -49,10 +49,49 @@ async function initializeFinance(root) {
     if (!response.ok) throw new Error('Tabela indisponível');
     const data = await response.json();
     const units = new Map(data.units.map(unit => [unit.id, unit]));
-    selector.replaceChildren(...data.units.map(unit => new Option(unit.id, unit.id)));
+    const options = () => data.units.map(unit => new Option(unit.id, unit.id));
+    selector.replaceChildren(...options());
+    const selected = new URLSearchParams(location.search).get('referencia-unidade');
+    if (units.has(selected)) selector.value = selected;
+    const comparison = root.querySelector('.commercial-comparison');
+    const compareSelector = comparison?.querySelector('select');
+    const compareOutput = comparison?.querySelector('[data-commercial-comparison]');
+    const share = root.querySelector('[data-commercial-share]');
+    if (comparison && units.size > 1) {
+      compareSelector.replaceChildren(new Option('Selecione outra unidade', ''), ...options());
+      comparison.hidden = false;
+      compareSelector.addEventListener('change', renderComparison);
+    }
+
+    function renderComparison() {
+      if (comparison?.hidden !== false) return;
+      const primary = units.get(selector.value);
+      for (const option of compareSelector.options) option.disabled = option.value === primary.id;
+      if (compareSelector.value === primary.id) compareSelector.value = '';
+      const secondary = units.get(compareSelector.value);
+      compareOutput.replaceChildren();
+      if (!secondary) return;
+      const diff = secondary.totalCents - primary.totalCents;
+      const area = secondary.area ?? secondary.totalArea;
+      compareOutput.append(
+        element('strong', secondary.id + ' · ' + formatCents(secondary.totalCents)),
+        ...(area == null ? [] : [element('p', decimal.format(area) + ' m²' +
+          (secondary.parking == null ? '' : ' · ' + secondary.parking + (secondary.parking === 1 ? ' vaga' : ' vagas')))]),
+        element('p', diff === 0 ? 'Mesmo preço na tabela de referência.'
+          : formatCents(Math.abs(diff)) + (diff > 0 ? ' a mais na tabela de referência.' : ' a menos na tabela de referência.'))
+      );
+    }
 
     function render() {
       const unit = units.get(selector.value);
+      if (share) {
+        const href = new URL(document.querySelector('link[rel="canonical"]')?.href ?? location.href);
+        href.searchParams.set('referencia-unidade', unit.id);
+        href.hash = 'book-unidades';
+        share.href = href.href;
+        share.hidden = false;
+      }
+      renderComparison();
       const total = element('strong', formatCents(unit.totalCents));
       const details = [
         unit.area == null ? null : decimal.format(unit.area) + ' m²',
@@ -116,7 +155,7 @@ async function initializeFinance(root) {
 for (const root of document.querySelectorAll('.commercial-finance[data-units]')) initializeFinance(root);
 
 for (const root of document.querySelectorAll('[data-commercial-editorial]')) {
-  const plans = root.querySelectorAll('[data-commercial-plan]');
+  const plans = root.querySelectorAll('[data-commercial-image]');
   if (!plans.length || typeof HTMLDialogElement === 'undefined') continue;
   const dialog = element('dialog');
   dialog.className = 'commercial-plan-dialog';
@@ -133,6 +172,7 @@ for (const root of document.querySelectorAll('[data-commercial-editorial]')) {
     plan.addEventListener('click', event => {
       if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
+      close.textContent = plan.hasAttribute('data-commercial-plan') ? 'Fechar planta' : 'Fechar imagem';
       image.alt = plan.querySelector('img').alt;
       image.src = plan.href;
       original.href = plan.href;
