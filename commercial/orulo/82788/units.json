@@ -1,0 +1,457 @@
+{
+  "reference": "2026-11",
+  "source": "Tabela de financiamento bancário",
+  "notes": "Financiamento de fevereiro de 2030 aparece em coluna separada e não integra a soma nominal. Consulte as notas de reajuste no PDF.",
+  "units": [
+    {
+      "id": "34º · Finais 1 e 7",
+      "area": 96.3,
+      "totalCents": 210261700,
+      "sourcePage": 10,
+      "stages": [
+        {
+          "label": "Entrada",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 7359200
+        },
+        {
+          "label": "Iniciais",
+          "firstDue": "2027-01",
+          "count": 2,
+          "amountCents": 7359200
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-03",
+          "count": 33,
+          "amountCents": 1178700
+        },
+        {
+          "label": "Anuais",
+          "firstDue": "2027-11",
+          "count": 3,
+          "amountCents": 6307900
+        },
+        {
+          "label": "Única",
+          "firstDue": "2029-12",
+          "count": 1,
+          "amountCents": 14718300
+        },
+        {
+          "label": "Principal do financiamento",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 115643900
+        }
+      ],
+      "roundingCents": 1100,
+      "typology": "R2V",
+      "financingReference": {
+        "date": "2030-02",
+        "amountCents": 117849000
+      }
+    },
+    {
+      "id": "34º · Finais 2 e 6",
+      "area": 97.7,
+      "totalCents": 225901800,
+      "sourcePage": 10,
+      "stages": [
+        {
+          "label": "Entrada",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 7906600
+        },
+        {
+          "label": "Iniciais",
+          "firstDue": "2027-01",
+          "count": 2,
+          "amountCents": 7906600
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-03",
+          "count": 33,
+          "amountCents": 1266400
+        },
+        {
+          "label": "Anuais",
+          "firstDue": "2027-11",
+          "count": 3,
+          "amountCents": 6777100
+        },
+        {
+          "label": "Única",
+          "firstDue": "2029-12",
+          "count": 1,
+          "amountCents": 15813100
+        },
+        {
+          "label": "Principal do financiamento",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 124246000
+        }
+      ],
+      "roundingCents": 400,
+      "typology": "R2V",
+      "financingReference": {
+        "date": "2030-02",
+        "amountCents": 126615100
+      }
+    },
+    {
+      "id": "34º · Finais 3, 5 e 8",
+      "area": 79.7,
+      "totalCents": 175972500,
+      "sourcePage": 10,
+      "stages": [
+        {
+          "label": "Entrada",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 6159000
+        },
+        {
+          "label": "Iniciais",
+          "firstDue": "2027-01",
+          "count": 2,
+          "amountCents": 6159000
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-03",
+          "count": 33,
+          "amountCents": 986500
+        },
+        {
+          "label": "Anuais",
+          "firstDue": "2027-11",
+          "count": 3,
+          "amountCents": 5279200
+        },
+        {
+          "label": "Única",
+          "firstDue": "2029-12",
+          "count": 1,
+          "amountCents": 12318100
+        },
+        {
+          "label": "Principal do financiamento",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 96784900
+        }
+      ],
+      "roundingCents": 400,
+      "typology": "R2V",
+      "financingReference": {
+        "date": "2030-02",
+        "amountCents": 98630300
+      }
+    },
+    {
+      "id": "34º · Final 10",
+      "area": 80.2,
+      "totalCents": 177076400,
+      "sourcePage": 10,
+      "stages": [
+        {
+          "label": "Entrada",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 6197700
+        },
+        {
+          "label": "Iniciais",
+          "firstDue": "2027-01",
+          "count": 2,
+          "amountCents": 6197700
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-03",
+          "count": 33,
+          "amountCents": 992700
+        },
+        {
+          "label": "Anuais",
+          "firstDue": "2027-11",
+          "count": 3,
+          "amountCents": 5312300
+        },
+        {
+          "label": "Única",
+          "firstDue": "2029-12",
+          "count": 1,
+          "amountCents": 12395300
+        },
+        {
+          "label": "Principal do financiamento",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 97392000
+        }
+      ],
+      "roundingCents": 0,
+      "typology": "R2V",
+      "financingReference": {
+        "date": "2030-02",
+        "amountCents": 99249100
+      }
+    },
+    {
+      "id": "35º · Finais 1 e 7",
+      "area": 97.2,
+      "totalCents": 214376100,
+      "sourcePage": 10,
+      "stages": [
+        {
+          "label": "Entrada",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 7503200
+        },
+        {
+          "label": "Iniciais",
+          "firstDue": "2027-01",
+          "count": 2,
+          "amountCents": 7503200
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-03",
+          "count": 33,
+          "amountCents": 1201800
+        },
+        {
+          "label": "Anuais",
+          "firstDue": "2027-11",
+          "count": 3,
+          "amountCents": 6431300
+        },
+        {
+          "label": "Única",
+          "firstDue": "2029-12",
+          "count": 1,
+          "amountCents": 15006300
+        },
+        {
+          "label": "Principal do financiamento",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 117906900
+        }
+      ],
+      "roundingCents": 0,
+      "typology": "R2V",
+      "financingReference": {
+        "date": "2030-02",
+        "amountCents": 120155100
+      }
+    },
+    {
+      "id": "35º · Final 2",
+      "area": 52.6,
+      "totalCents": 108841000,
+      "sourcePage": 10,
+      "stages": [
+        {
+          "label": "Entrada",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 3809400
+        },
+        {
+          "label": "Iniciais",
+          "firstDue": "2027-01",
+          "count": 2,
+          "amountCents": 3809400
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-03",
+          "count": 33,
+          "amountCents": 610200
+        },
+        {
+          "label": "Anuais",
+          "firstDue": "2027-11",
+          "count": 3,
+          "amountCents": 3265200
+        },
+        {
+          "label": "Única",
+          "firstDue": "2029-12",
+          "count": 1,
+          "amountCents": 7618900
+        },
+        {
+          "label": "Principal do financiamento",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 59862500
+        }
+      ],
+      "roundingCents": -800,
+      "typology": "R2V",
+      "financingReference": {
+        "date": "2030-02",
+        "amountCents": 61004000
+      }
+    },
+    {
+      "id": "35º · Finais 3 e 5",
+      "area": 79.1,
+      "totalCents": 176416500,
+      "sourcePage": 10,
+      "stages": [
+        {
+          "label": "Entrada",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 6174600
+        },
+        {
+          "label": "Iniciais",
+          "firstDue": "2027-01",
+          "count": 2,
+          "amountCents": 6174600
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-03",
+          "count": 33,
+          "amountCents": 989000
+        },
+        {
+          "label": "Anuais",
+          "firstDue": "2027-11",
+          "count": 3,
+          "amountCents": 5292500
+        },
+        {
+          "label": "Única",
+          "firstDue": "2029-12",
+          "count": 1,
+          "amountCents": 12349200
+        },
+        {
+          "label": "Principal do financiamento",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 97029100
+        }
+      ],
+      "roundingCents": -100,
+      "typology": "R2V",
+      "financingReference": {
+        "date": "2030-02",
+        "amountCents": 98879200
+      }
+    },
+    {
+      "id": "35º · Final 8",
+      "area": 84.8,
+      "totalCents": 187553100,
+      "sourcePage": 10,
+      "stages": [
+        {
+          "label": "Entrada",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 6564400
+        },
+        {
+          "label": "Iniciais",
+          "firstDue": "2027-01",
+          "count": 2,
+          "amountCents": 6564400
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-03",
+          "count": 33,
+          "amountCents": 1051400
+        },
+        {
+          "label": "Anuais",
+          "firstDue": "2027-11",
+          "count": 3,
+          "amountCents": 5626600
+        },
+        {
+          "label": "Única",
+          "firstDue": "2029-12",
+          "count": 1,
+          "amountCents": 13128700
+        },
+        {
+          "label": "Principal do financiamento",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 103154200
+        }
+      ],
+      "roundingCents": 1000,
+      "typology": "R2V",
+      "financingReference": {
+        "date": "2030-02",
+        "amountCents": 105121100
+      }
+    },
+    {
+      "id": "35º · Final 10",
+      "area": 85.4,
+      "totalCents": 188880100,
+      "sourcePage": 10,
+      "stages": [
+        {
+          "label": "Entrada",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 6610800
+        },
+        {
+          "label": "Iniciais",
+          "firstDue": "2027-01",
+          "count": 2,
+          "amountCents": 6610800
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-03",
+          "count": 33,
+          "amountCents": 1058900
+        },
+        {
+          "label": "Anuais",
+          "firstDue": "2027-11",
+          "count": 3,
+          "amountCents": 5666400
+        },
+        {
+          "label": "Única",
+          "firstDue": "2029-12",
+          "count": 1,
+          "amountCents": 13221600
+        },
+        {
+          "label": "Principal do financiamento",
+          "firstDue": null,
+          "count": 1,
+          "amountCents": 103884100
+        }
+      ],
+      "roundingCents": -900,
+      "typology": "R2V",
+      "financingReference": {
+        "date": "2030-02",
+        "amountCents": 105864900
+      }
+    }
+  ]
+}

@@ -1,0 +1,663 @@
+{
+  "reference": "2026-10",
+  "source": "Tabela de vendas · Torre Brooklin",
+  "notes": "O valor total inclui corretagem. Consulte as condições de reajuste e financiamento no PDF.",
+  "units": [
+    {
+      "id": "Final 1 · 3º ao 7º andar",
+      "area": 164.33,
+      "totalCents": 297398400,
+      "sourcePage": 8,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 7435000
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 7435000
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 7435000
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 37174800
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 178438600
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 1 · 8º ao 12º andar",
+      "area": 164.33,
+      "totalCents": 300562200,
+      "sourcePage": 8,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 7514100
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 7514100
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 7514100
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 37570300
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 180336800
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 1 · 13º ao 17º andar",
+      "area": 164.33,
+      "totalCents": 303726000,
+      "sourcePage": 8,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 7593200
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 7593200
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 7593200
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 37965800
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 182235000
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 1 · 31º andar",
+      "area": 164.33,
+      "totalCents": 404587800,
+      "sourcePage": 8,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 10114700
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 10114700
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 10114700
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 50573500
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 242752600
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 2 · 3º ao 6º andar",
+      "area": 164.39,
+      "totalCents": 332927100,
+      "sourcePage": 8,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 8323200
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 8323200
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 8323200
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 41615900
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 199756000
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 2 · 7º andar",
+      "area": 164.39,
+      "totalCents": 339606000,
+      "sourcePage": 8,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 8490200
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 8490200
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 8490200
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 42450800
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 203763000
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 2 · 8º ao 12º andar",
+      "area": 164.39,
+      "totalCents": 322826700,
+      "sourcePage": 8,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 8070700
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 8070700
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 8070700
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 40353400
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 193695600
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 3 · 3º ao 5º andar",
+      "area": 164.39,
+      "totalCents": 313331800,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 7833300
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 7833300
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 7833300
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 39166500
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 187999000
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 3 · 6º ao 8º andar",
+      "area": 164.39,
+      "totalCents": 316595700,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 7914900
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 7914900
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 7914900
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 39574500
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 189957300
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 3 · 13º e 16º andar",
+      "area": 164.39,
+      "totalCents": 323123400,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 8078100
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 8078100
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 8078100
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 40390500
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 193873800
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 3 · 17º e 18º andar",
+      "area": 164.39,
+      "totalCents": 326387300,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 8159700
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 8159700
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 8159700
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 40798500
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 195832100
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 3 · 19º ao 22º andar",
+      "area": 164.39,
+      "totalCents": 329651200,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 8241300
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 8241300
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 8241300
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 41206400
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 197790500
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 3 · 23º ao 26º andar",
+      "area": 164.39,
+      "totalCents": 332915000,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 8322900
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 8322900
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 8322900
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 41614400
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 199748700
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 4 · 3º ao 5º andar",
+      "area": 164.33,
+      "totalCents": 303726000,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 7593200
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 7593200
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 7593200
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 37965800
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 182235000
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 4 · 6º ao 8º andar",
+      "area": 164.33,
+      "totalCents": 306889800,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 7672300
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 7672300
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 7672300
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 38361300
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 184133200
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    },
+    {
+      "id": "Final 4 · 9º ao 12º andar",
+      "area": 164.33,
+      "totalCents": 310053600,
+      "sourcePage": 9,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 7751400
+        },
+        {
+          "label": "30, 60, 90, 120 e 150 dias",
+          "firstDue": "2026-11",
+          "count": 5,
+          "amountCents": 7751400
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-04",
+          "count": 5,
+          "amountCents": 7751400
+        },
+        {
+          "label": "Única",
+          "firstDue": "2027-06",
+          "count": 1,
+          "amountCents": 38756800
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-09",
+          "count": 1,
+          "amountCents": 186031400
+        }
+      ],
+      "roundingCents": 0,
+      "bedrooms": 4,
+      "parking": 2
+    }
+  ]
+}
