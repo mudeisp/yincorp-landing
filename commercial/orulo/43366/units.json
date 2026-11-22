@@ -1,101 +1,89 @@
 {
-  "reference": "2026-04",
-  "source": "Tabela de vendas · Isa Brooklin",
-  "notes": "Validade impressa de 01 a 30/04/2026. Consulte as condições de reajuste no PDF.",
+  "reference": "2026-10",
+  "source": "Nortis · Tabela de vendas Isa Brooklin",
+  "notes": "Validade de 01 a 31/10/2026. A situação exibida corresponde à data de referência do PDF.",
   "units": [
-    {
-      "id": "U0112",
-      "area": 219.94,
-      "totalArea": 396.39,
-      "parking": 3,
-      "bedrooms": 4,
-      "sourceStatus": "Disponível",
-      "sourcePage": 1,
-      "totalCents": 504500000,
-      "stages": [
-        {
-          "label": "Ato",
-          "firstDue": "2026-04",
-          "count": 1,
-          "amountCents": 75675000
-        },
-        {
-          "label": "Sinal",
-          "firstDue": "2026-05",
-          "count": 3,
-          "amountCents": 5045000
-        },
-        {
-          "label": "Mensais",
-          "firstDue": "2026-08",
-          "count": 9,
-          "amountCents": 6726700
-        },
-        {
-          "label": "Anual",
-          "firstDue": "2027-04",
-          "count": 1,
-          "amountCents": 25225000
-        },
-        {
-          "label": "Única C",
-          "firstDue": "2027-05",
-          "count": 1,
-          "amountCents": 25225000
-        },
-        {
-          "label": "Financiamento",
-          "firstDue": "2027-07",
-          "count": 1,
-          "amountCents": 302699700
-        }
-      ]
-    },
     {
       "id": "U0132",
       "area": 219.94,
       "totalArea": 396.39,
       "parking": 3,
       "bedrooms": 4,
-      "sourceStatus": "Disponível",
       "sourcePage": 1,
-      "totalCents": 503500000,
+      "sourceStatus": "Disponível",
+      "totalCents": 526500000,
       "stages": [
         {
           "label": "Ato",
-          "firstDue": "2026-04",
+          "firstDue": "2026-10",
           "count": 1,
-          "amountCents": 75525000
+          "amountCents": 78975000
         },
         {
           "label": "Sinal",
-          "firstDue": "2026-05",
+          "firstDue": "2026-11",
           "count": 3,
-          "amountCents": 5035000
+          "amountCents": 5265000
         },
         {
           "label": "Mensais",
-          "firstDue": "2026-08",
-          "count": 9,
-          "amountCents": 6713300
-        },
-        {
-          "label": "Anual",
-          "firstDue": "2027-04",
-          "count": 1,
-          "amountCents": 25175000
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 29835000
         },
         {
           "label": "Única C",
           "firstDue": "2027-05",
           "count": 1,
-          "amountCents": 25175000
+          "amountCents": 26325000
         },
         {
           "label": "Financiamento",
           "firstDue": "2027-07",
           "count": 1,
-          "amountCents": 302100300
+          "amountCents": 315900000
+        }
+      ]
+    },
+    {
+      "id": "U0142",
+      "area": 219.94,
+      "totalArea": 396.39,
+      "parking": 3,
+      "bedrooms": 4,
+      "sourcePage": 1,
+      "sourceStatus": "Disponível",
+      "totalCents": 567100000,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 85065000
+        },
+        {
+          "label": "Sinal",
+          "firstDue": "2026-11",
+          "count": 3,
+          "amountCents": 5671000
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 32135700
+        },
+        {
+          "label": "Única C",
+          "firstDue": "2027-05",
+          "count": 1,
+          "amountCents": 28355000
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-07",
+          "count": 1,
+          "amountCents": 340259900
         }
       ]
     },
@@ -105,141 +93,165 @@
       "totalArea": 396.39,
       "parking": 3,
       "bedrooms": 4,
-      "sourceStatus": "Disponível",
       "sourcePage": 1,
-      "totalCents": 507200000,
+      "sourceStatus": "Disponível",
+      "totalCents": 530300000,
       "stages": [
         {
           "label": "Ato",
-          "firstDue": "2026-04",
+          "firstDue": "2026-10",
           "count": 1,
-          "amountCents": 76080000
+          "amountCents": 79545000
         },
         {
           "label": "Sinal",
-          "firstDue": "2026-05",
+          "firstDue": "2026-11",
           "count": 3,
-          "amountCents": 5072000
+          "amountCents": 5303000
         },
         {
           "label": "Mensais",
-          "firstDue": "2026-08",
-          "count": 9,
-          "amountCents": 6762700
-        },
-        {
-          "label": "Anual",
-          "firstDue": "2027-04",
-          "count": 1,
-          "amountCents": 25360000
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 30050300
         },
         {
           "label": "Única C",
           "firstDue": "2027-05",
           "count": 1,
-          "amountCents": 25360000
+          "amountCents": 26515000
         },
         {
           "label": "Financiamento",
           "firstDue": "2027-07",
           "count": 1,
-          "amountCents": 304319700
+          "amountCents": 318180100
         }
       ]
     },
     {
-      "id": "U0182",
-      "area": 219.94,
-      "totalArea": 396.39,
-      "parking": 3,
+      "id": "U0191",
+      "area": 265.26,
+      "totalArea": 481.84,
+      "parking": 4,
       "bedrooms": 4,
-      "sourceStatus": "Disponível",
       "sourcePage": 1,
-      "totalCents": 516800000,
+      "sourceStatus": "Reservada",
+      "totalCents": 717400000,
       "stages": [
         {
           "label": "Ato",
-          "firstDue": "2026-04",
+          "firstDue": "2026-10",
           "count": 1,
-          "amountCents": 77520000
+          "amountCents": 107610000
         },
         {
           "label": "Sinal",
-          "firstDue": "2026-05",
+          "firstDue": "2026-11",
           "count": 3,
-          "amountCents": 5168000
+          "amountCents": 7174000
         },
         {
           "label": "Mensais",
-          "firstDue": "2026-08",
-          "count": 9,
-          "amountCents": 6890700
-        },
-        {
-          "label": "Anual",
-          "firstDue": "2027-04",
-          "count": 1,
-          "amountCents": 25840000
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 40652700
         },
         {
           "label": "Única C",
           "firstDue": "2027-05",
           "count": 1,
-          "amountCents": 25840000
+          "amountCents": 35870000
         },
         {
           "label": "Financiamento",
           "firstDue": "2027-07",
           "count": 1,
-          "amountCents": 310079700
+          "amountCents": 430439900
         }
       ]
     },
     {
-      "id": "U0212",
+      "id": "U0202",
       "area": 219.94,
       "totalArea": 396.39,
       "parking": 3,
       "bedrooms": 4,
-      "sourceStatus": "Disponível",
       "sourcePage": 1,
-      "totalCents": 528800000,
+      "sourceStatus": "Reservada",
+      "totalCents": 561100000,
       "stages": [
         {
           "label": "Ato",
-          "firstDue": "2026-04",
+          "firstDue": "2026-10",
           "count": 1,
-          "amountCents": 79320000
+          "amountCents": 84165000
         },
         {
           "label": "Sinal",
-          "firstDue": "2026-05",
+          "firstDue": "2026-11",
           "count": 3,
-          "amountCents": 5288000
+          "amountCents": 5611000
         },
         {
           "label": "Mensais",
-          "firstDue": "2026-08",
-          "count": 9,
-          "amountCents": 7050700
-        },
-        {
-          "label": "Anual",
-          "firstDue": "2027-04",
-          "count": 1,
-          "amountCents": 26440000
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 31795700
         },
         {
           "label": "Única C",
           "firstDue": "2027-05",
           "count": 1,
-          "amountCents": 26440000
+          "amountCents": 28055000
         },
         {
           "label": "Financiamento",
           "firstDue": "2027-07",
           "count": 1,
-          "amountCents": 317279700
+          "amountCents": 336659900
+        }
+      ]
+    },
+    {
+      "id": "U0222",
+      "area": 219.94,
+      "totalArea": 396.39,
+      "parking": 3,
+      "bedrooms": 4,
+      "sourcePage": 1,
+      "sourceStatus": "Reservada",
+      "totalCents": 599300000,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 89895000
+        },
+        {
+          "label": "Sinal",
+          "firstDue": "2026-11",
+          "count": 3,
+          "amountCents": 5993000
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 33960300
+        },
+        {
+          "label": "Única C",
+          "firstDue": "2027-05",
+          "count": 1,
+          "amountCents": 29965000
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-07",
+          "count": 1,
+          "amountCents": 359580100
         }
       ]
     },
@@ -249,45 +261,39 @@
       "totalArea": 396.39,
       "parking": 3,
       "bedrooms": 4,
-      "sourceStatus": "Disponível",
       "sourcePage": 1,
-      "totalCents": 536000000,
+      "sourceStatus": "Disponível",
+      "totalCents": 560400000,
       "stages": [
         {
           "label": "Ato",
-          "firstDue": "2026-04",
+          "firstDue": "2026-10",
           "count": 1,
-          "amountCents": 80400000
+          "amountCents": 84060000
         },
         {
           "label": "Sinal",
-          "firstDue": "2026-05",
+          "firstDue": "2026-11",
           "count": 3,
-          "amountCents": 5360000
+          "amountCents": 5604000
         },
         {
           "label": "Mensais",
-          "firstDue": "2026-08",
-          "count": 9,
-          "amountCents": 7146700
-        },
-        {
-          "label": "Anual",
-          "firstDue": "2027-04",
-          "count": 1,
-          "amountCents": 26800000
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 31756000
         },
         {
           "label": "Única C",
           "firstDue": "2027-05",
           "count": 1,
-          "amountCents": 26800000
+          "amountCents": 28020000
         },
         {
           "label": "Financiamento",
           "firstDue": "2027-07",
           "count": 1,
-          "amountCents": 321599700
+          "amountCents": 336240000
         }
       ]
     },
@@ -297,45 +303,39 @@
       "totalArea": 396.39,
       "parking": 3,
       "bedrooms": 4,
-      "sourceStatus": "Disponível",
       "sourcePage": 1,
-      "totalCents": 540800000,
+      "sourceStatus": "Em negociação",
+      "totalCents": 565500000,
       "stages": [
         {
           "label": "Ato",
-          "firstDue": "2026-04",
+          "firstDue": "2026-10",
           "count": 1,
-          "amountCents": 81120000
+          "amountCents": 84825000
         },
         {
           "label": "Sinal",
-          "firstDue": "2026-05",
+          "firstDue": "2026-11",
           "count": 3,
-          "amountCents": 5408000
+          "amountCents": 5655000
         },
         {
           "label": "Mensais",
-          "firstDue": "2026-08",
-          "count": 9,
-          "amountCents": 7210700
-        },
-        {
-          "label": "Anual",
-          "firstDue": "2027-04",
-          "count": 1,
-          "amountCents": 27040000
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 32045000
         },
         {
           "label": "Única C",
           "firstDue": "2027-05",
           "count": 1,
-          "amountCents": 27040000
+          "amountCents": 28275000
         },
         {
           "label": "Financiamento",
           "firstDue": "2027-07",
           "count": 1,
-          "amountCents": 324479700
+          "amountCents": 339300000
         }
       ]
     },
@@ -345,45 +345,39 @@
       "totalArea": 481.84,
       "parking": 4,
       "bedrooms": 4,
-      "sourceStatus": "Disponível",
       "sourcePage": 1,
-      "totalCents": 668200000,
+      "sourceStatus": "Reservada",
+      "totalCents": 698600000,
       "stages": [
         {
           "label": "Ato",
-          "firstDue": "2026-04",
+          "firstDue": "2026-10",
           "count": 1,
-          "amountCents": 100230000
+          "amountCents": 104790000
         },
         {
           "label": "Sinal",
-          "firstDue": "2026-05",
+          "firstDue": "2026-11",
           "count": 3,
-          "amountCents": 6682000
+          "amountCents": 6986000
         },
         {
           "label": "Mensais",
-          "firstDue": "2026-08",
-          "count": 9,
-          "amountCents": 8909300
-        },
-        {
-          "label": "Anual",
-          "firstDue": "2027-04",
-          "count": 1,
-          "amountCents": 33410000
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 39587300
         },
         {
           "label": "Única C",
           "firstDue": "2027-05",
           "count": 1,
-          "amountCents": 33410000
+          "amountCents": 34930000
         },
         {
           "label": "Financiamento",
           "firstDue": "2027-07",
           "count": 1,
-          "amountCents": 400920300
+          "amountCents": 419160100
         }
       ]
     },
@@ -393,45 +387,81 @@
       "totalArea": 396.39,
       "parking": 3,
       "bedrooms": 4,
-      "sourceStatus": "Disponível",
       "sourcePage": 1,
-      "totalCents": 552800000,
+      "sourceStatus": "Disponível",
+      "totalCents": 578000000,
       "stages": [
         {
           "label": "Ato",
-          "firstDue": "2026-04",
+          "firstDue": "2026-10",
           "count": 1,
-          "amountCents": 82920000
+          "amountCents": 86700000
         },
         {
           "label": "Sinal",
-          "firstDue": "2026-05",
+          "firstDue": "2026-11",
           "count": 3,
-          "amountCents": 5528000
+          "amountCents": 5780000
         },
         {
           "label": "Mensais",
-          "firstDue": "2026-08",
-          "count": 9,
-          "amountCents": 7370700
-        },
-        {
-          "label": "Anual",
-          "firstDue": "2027-04",
-          "count": 1,
-          "amountCents": 27640000
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 32753300
         },
         {
           "label": "Única C",
           "firstDue": "2027-05",
           "count": 1,
-          "amountCents": 27640000
+          "amountCents": 28900000
         },
         {
           "label": "Financiamento",
           "firstDue": "2027-07",
           "count": 1,
-          "amountCents": 331679700
+          "amountCents": 346800100
+        }
+      ]
+    },
+    {
+      "id": "U0302",
+      "area": 219.94,
+      "totalArea": 396.39,
+      "parking": 3,
+      "bedrooms": 4,
+      "sourcePage": 1,
+      "sourceStatus": "Reservada",
+      "totalCents": 590500000,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 88575000
+        },
+        {
+          "label": "Sinal",
+          "firstDue": "2026-11",
+          "count": 3,
+          "amountCents": 5905000
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 33461700
+        },
+        {
+          "label": "Única C",
+          "firstDue": "2027-05",
+          "count": 1,
+          "amountCents": 29525000
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-07",
+          "count": 1,
+          "amountCents": 354299900
         }
       ]
     },
@@ -441,45 +471,81 @@
       "totalArea": 396.39,
       "parking": 3,
       "bedrooms": 4,
-      "sourceStatus": "Disponível",
       "sourcePage": 1,
-      "totalCents": 564800000,
+      "sourceStatus": "Disponível",
+      "totalCents": 590500000,
       "stages": [
         {
           "label": "Ato",
-          "firstDue": "2026-04",
+          "firstDue": "2026-10",
           "count": 1,
-          "amountCents": 84720000
+          "amountCents": 88575000
         },
         {
           "label": "Sinal",
-          "firstDue": "2026-05",
+          "firstDue": "2026-11",
           "count": 3,
-          "amountCents": 5648000
+          "amountCents": 5905000
         },
         {
           "label": "Mensais",
-          "firstDue": "2026-08",
-          "count": 9,
-          "amountCents": 7530700
-        },
-        {
-          "label": "Anual",
-          "firstDue": "2027-04",
-          "count": 1,
-          "amountCents": 28240000
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 33461700
         },
         {
           "label": "Única C",
           "firstDue": "2027-05",
           "count": 1,
-          "amountCents": 28240000
+          "amountCents": 29525000
         },
         {
           "label": "Financiamento",
           "firstDue": "2027-07",
           "count": 1,
-          "amountCents": 338879700
+          "amountCents": 354299900
+        }
+      ]
+    },
+    {
+      "id": "U0322",
+      "area": 219.94,
+      "totalArea": 396.39,
+      "parking": 3,
+      "bedrooms": 4,
+      "sourcePage": 1,
+      "sourceStatus": "Reservada",
+      "totalCents": 593100000,
+      "stages": [
+        {
+          "label": "Ato",
+          "firstDue": "2026-10",
+          "count": 1,
+          "amountCents": 88965000
+        },
+        {
+          "label": "Sinal",
+          "firstDue": "2026-11",
+          "count": 3,
+          "amountCents": 5931000
+        },
+        {
+          "label": "Mensais",
+          "firstDue": "2027-02",
+          "count": 3,
+          "amountCents": 33609000
+        },
+        {
+          "label": "Única C",
+          "firstDue": "2027-05",
+          "count": 1,
+          "amountCents": 29655000
+        },
+        {
+          "label": "Financiamento",
+          "firstDue": "2027-07",
+          "count": 1,
+          "amountCents": 355860000
         }
       ]
     }
