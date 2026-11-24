@@ -120,6 +120,18 @@
   ],
   "rewrites": [
     {
+      "source": "/experiencia/:token",
+      "destination": "https://app.yincorp.com.br/experiencia/:token"
+    },
+    {
+      "source": "/studio/studio.css",
+      "destination": "https://app.yincorp.com.br/studio/studio.css"
+    },
+    {
+      "source": "/studio/experience.mjs",
+      "destination": "https://app.yincorp.com.br/studio/experience.mjs"
+    },
+    {
       "source": "/arquitetura",
       "destination": "/api/portal?portalPath=/arquitetura"
     },
