@@ -278,3 +278,31 @@
 [data-commercial-editorial] {
   scroll-margin-top: 90px;
 }
+
+[data-lp-master] {
+  background: #faf7f1;
+  color: #28251f;
+}
+[data-lp-master] .commercial-finance {
+  background: #eee6da;
+  border: 1px solid #a48154;
+  padding: clamp(1rem, 3vw, 2.5rem);
+}
+[data-lp-master] :is(.commercial-selection, .commercial-price) {
+  background: #fffdfa;
+  border-color: #ded5c7;
+}
+figure.hero-figure[data-lp-master-cover] {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  align-self: center;
+}
+figure.hero-figure[data-lp-master-cover] > img {
+  position: static !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  transform: none !important;
+  animation: none !important;
+}

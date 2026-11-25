@@ -1,3 +1,13 @@
+const master = document.querySelector('[data-lp-master]');
+if (master) {
+  const position = () => {
+    const comparison = document.getElementById('yincorp-intelligence');
+    if (comparison && comparison.nextElementSibling !== master) comparison.after(master);
+  };
+  position();
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', position, { once: true });
+}
+
 const currency = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 const decimal = new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2 });
 const period = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -104,6 +114,9 @@ async function initializeFinance(root) {
         unit.suites == null ? null : unit.suites + ' suítes',
         unit.parking == null ? null : unit.parking + (unit.parking === 1 ? ' vaga' : ' vagas')
       ].filter(Boolean);
+      if (root.closest('[data-lp-master]') && Number.isFinite(unit.area) && unit.area > 0) {
+        details.push(formatCents(Math.round(unit.totalCents / unit.area)) + '/m² privativo');
+      }
       const overview = element('div');
       overview.className = 'commercial-price';
       overview.append(element('span', 'Preço total · ' + unit.id), total, element('span', details.join(' · ')));
