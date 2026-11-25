@@ -214,6 +214,14 @@ function buildGallery(){
         renderComparison(item);
       };
       cell.append(button);
+      const projectPath = item.path?.split('/tipologia/')[0];
+      if (document.querySelector('[data-residence-master]') && safePath(projectPath)) {
+        const visit = link({...item, path:projectPath}, 'Visite esse também!');
+        visit.classList.add('ynti-visit-project');
+        visit.setAttribute('aria-label', 'Visite esse também! ' + item.name);
+        cell.classList.add('ynti-gallery-item--visit');
+        cell.append(visit);
+      }
       return cell;
     }));
     renderComparison(options[0]);
