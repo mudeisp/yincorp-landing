@@ -2,7 +2,9 @@
   "version": "1.0.0",
   "reference": "yincorp-lp-master-tabela-premium.html",
   "method": "reference-conditioned image editing",
-  "parameters": { "transparentBackground": false },
+  "parameters": {
+    "transparentBackground": false
+  },
   "recipes": {
     "facade": "Architectural blueprint editorial plate, ivory travertine, discreet antique gold linework",
     "lobby": "Cinematic editorial lighting and realistic materials",
@@ -19,5 +21,26 @@
     "Check room count, doors, circulation and terraces for every floor-plan variant.",
     "Retain distinct originals and treatments. Reject results with invented elements or uncertain geometry.",
     "Check the commercial table separately. Do not infer payment terms or current availability."
-  ]
+  ],
+  "v1.1": {
+    "atmosphere": {
+      "engine": "conditioned relighting with generated tone reference",
+      "transfer": "bounded monotonic RGB curves on source pixels",
+      "maxChannelOffset": 15,
+      "strength": 0.65
+    },
+    "geometry": {
+      "engine": "fixed-grid raster treatment",
+      "styles": [
+        "facade",
+        "blueprint",
+        "maquette",
+        "editorial",
+        "xray"
+      ],
+      "exploded": "translate documented source layers",
+      "cover": "requires complete documented façade"
+    },
+    "activation": "preview only; approved assets and verified financial data selected independently"
+  }
 }

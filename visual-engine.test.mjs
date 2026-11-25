@@ -9,9 +9,9 @@ test('approved modules can render independently of pending modules', () => {
   assert.equal(approvedVisualModules({ assets: [other] }), null);
 });
 
-test('preview exposes six approved geometry studies and the verified table', () => {
+test('preview exposes eleven approved visual studies and the verified table', () => {
   const pilot = visualRelease('17933', 'preview');
-  assert.equal(pilot.assets.length, 6);
+  assert.equal(pilot.assets.length, 11);
   assert.equal(pilot.assets.some(asset => asset.coverEligible), false);
   assert.equal(pilot.commercial.units, 9);
   assert.equal(visualRelease('17933', 'production'), null);

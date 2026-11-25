@@ -271,6 +271,111 @@
       "method": "geometry",
       "recipeVersion": "1.1.0",
       "coverEligible": false
+    },
+    {
+      "key": "lobby-v11",
+      "previous": "lobby",
+      "page": 7,
+      "category": "lobby",
+      "caption": "Lobby",
+      "original": "/visual-engine/17933/original-7.webp",
+      "asset": "/visual-engine/17933/lobby-v11.webp",
+      "status": "approved",
+      "method": "generated-atmosphere-source-locked",
+      "recipeVersion": "1.1.0",
+      "promptVersion": "1.1.0",
+      "prompt": "Relight the original Praça Lindenberg Clodomiro rendering, PDF book page 7. Locked camera, locked composition. Only shift existing light temperature toward warm late-afternoon, subtly increase ambient depth. Match every edge, object silhouette, furniture, fixtures, reflections' source objects, equipment, landscaping and all positions. No added illumination fixtures, no object removal, no redecoration, no new sunlight patterns, no changes to materials. Same crop and framing. This is a conservative relighting pass.",
+      "generatedReferenceSha256": "772b45a19d48cd48f1ad6d1efa83a1665bf15d654a953bbaf65b9b0600d04cc8",
+      "channelOffsets": [
+        -6.1079,
+        -15,
+        -15
+      ],
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição."
+    },
+    {
+      "key": "fitness-v11",
+      "previous": "fitness",
+      "page": 8,
+      "category": "leisure",
+      "caption": "Academia",
+      "original": "/visual-engine/17933/original-8.webp",
+      "asset": "/visual-engine/17933/fitness-v11.webp",
+      "status": "approved",
+      "method": "generated-atmosphere-source-locked",
+      "recipeVersion": "1.1.0",
+      "promptVersion": "1.1.0",
+      "prompt": "Relight the original Praça Lindenberg Clodomiro rendering, PDF book page 8. Locked camera, locked composition. Only shift existing light temperature toward warm late-afternoon, subtly increase ambient depth. Match every edge, object silhouette, furniture, fixtures, reflections' source objects, equipment, landscaping and all positions. No added illumination fixtures, no object removal, no redecoration, no new sunlight patterns, no changes to materials. Same crop and framing. This is a conservative relighting pass.",
+      "generatedReferenceSha256": "ddbe60cdf758371885f582046a2647b81a9a2fdf928d47c74b9f03b93476c9a4",
+      "channelOffsets": [
+        -6.3778,
+        -15,
+        -15
+      ],
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição."
+    },
+    {
+      "key": "festas-v11",
+      "previous": "festas",
+      "page": 9,
+      "category": "leisure",
+      "caption": "Salão de festas",
+      "original": "/visual-engine/17933/original-9.webp",
+      "asset": "/visual-engine/17933/festas-v11.webp",
+      "status": "approved",
+      "method": "generated-atmosphere-source-locked",
+      "recipeVersion": "1.1.0",
+      "promptVersion": "1.1.0",
+      "prompt": "Relight the original Praça Lindenberg Clodomiro rendering, PDF book page 9. Locked camera, locked composition. Only shift existing light temperature toward warm late-afternoon, subtly increase ambient depth. Match every edge, object silhouette, furniture, fixtures, reflections' source objects, equipment, landscaping and all positions. No added illumination fixtures, no object removal, no redecoration, no new sunlight patterns, no changes to materials. Same crop and framing. This is a conservative relighting pass.",
+      "generatedReferenceSha256": "e2a269b489f9969ca46c71484f3ab55eb28fda7cede2d2747b7fe5bb1c1355f2",
+      "channelOffsets": [
+        -4.3223,
+        -15,
+        -15
+      ],
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição."
+    },
+    {
+      "key": "terraco-v11",
+      "previous": "terraco",
+      "page": 10,
+      "category": "leisure",
+      "caption": "Terraço do salão de festas",
+      "original": "/visual-engine/17933/original-10.webp",
+      "asset": "/visual-engine/17933/terraco-v11.webp",
+      "status": "approved",
+      "method": "generated-atmosphere-source-locked",
+      "recipeVersion": "1.1.0",
+      "promptVersion": "1.1.0",
+      "prompt": "Relight the original Praça Lindenberg Clodomiro rendering, PDF book page 10. Locked camera, locked composition. Only shift existing light temperature toward warm late-afternoon, subtly increase ambient depth. Match every edge, object silhouette, furniture, fixtures, reflections' source objects, equipment, landscaping and all positions. No added illumination fixtures, no object removal, no redecoration, no new sunlight patterns, no changes to materials. Same crop and framing. This is a conservative relighting pass.",
+      "generatedReferenceSha256": "44acfd932605f9ae08de6fded7017de4fcd82e37f77db481518ab4660ca0d50a",
+      "channelOffsets": [
+        -4.1867,
+        -15,
+        -15
+      ],
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição."
+    },
+    {
+      "key": "piscina-v11",
+      "previous": "piscina",
+      "page": 11,
+      "category": "leisure",
+      "caption": "Piscina descoberta",
+      "original": "/visual-engine/17933/original-11.webp",
+      "asset": "/visual-engine/17933/piscina-v11.webp",
+      "status": "approved",
+      "method": "generated-atmosphere-source-locked",
+      "recipeVersion": "1.1.0",
+      "promptVersion": "1.1.0",
+      "prompt": "Relight the original Praça Lindenberg Clodomiro rendering, PDF book page 11. Locked camera, locked composition. Only shift existing light temperature toward warm late-afternoon, subtly increase ambient depth. Match every edge, object silhouette, furniture, fixtures, reflections' source objects, equipment, landscaping and all positions. No added illumination fixtures, no object removal, no redecoration, no new sunlight patterns, no changes to materials. Same crop and framing. This is a conservative relighting pass.",
+      "generatedReferenceSha256": "71e85e544351a277f843962d4cb5d6a4460ed1be093ae0f559c38bb0ca904228",
+      "channelOffsets": [
+        2.1757,
+        -10.328,
+        -15
+      ],
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição."
     }
   ],
   "version": "1.1.0"
