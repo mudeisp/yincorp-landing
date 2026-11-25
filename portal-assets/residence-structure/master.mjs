@@ -8,7 +8,7 @@ async function initialize(host) {
   const $ = id => root.getElementById(id);
   for (const anchor of root.querySelectorAll('a[href^="#"]')) {
     anchor.addEventListener('click', event => {
-      const section = anchor.hash === '#plantas' && !$('plantas')
+      const section = anchor.hasAttribute('data-catalog-plans')
         ? document.getElementById('plantas') : $(anchor.hash.slice(1));
       if (!section) return;
       event.preventDefault();
@@ -47,9 +47,11 @@ async function initialize(host) {
   const { units, reference } = await response.json();
   const money = value => (value / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   const area = value => value.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
-  const plan = $('plantas')?.querySelector('img')?.getAttribute('src');
-  const thumb = unit => unit.totalArea === 191.3 && plan
-    ? `<img src="${plan}" alt="Maquete ilustrativa de 191 m²">` : '';
+  const catalog = JSON.parse(document.getElementById('lindenberg-plan-catalog')?.textContent || '{}');
+  const thumb = unit => {
+    const plan = catalog.plans?.[catalog.unitPlanIds?.[unit.id]];
+    return plan ? `<img src="${plan.src}" alt="${plan.caption} · maquete ilustrativa">` : '';
+  };
   const priceArea = unit => money(Math.round(unit.totalCents / unit.totalArea));
   const a = $('a'), b = $('b');
   for (const select of [a,b]) {
