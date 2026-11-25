@@ -1,11 +1,184 @@
 {
   "oruloId": "17933",
   "status": "review",
+  "book": {
+    "filename": "17933-Praca_Lindenberg_Clodomiro_Book.pdf",
+    "pages": 21,
+    "sha256": "0077947f90df4f044965eaede2e31a084cd73cb7925b33f5c9b7ac536aba572b"
+  },
   "commercial": {
     "status": "verified",
     "reference": "2026-11",
     "sourcePage": 5,
+    "units": 9,
+    "sha256": "fb29c9dc45ba4f51dd539480526991f5c8a5348415b2621091ed744924b41826",
+    "unitsSha256": "d49ad31b48b0582562a1a4810afc83f1b826bc53209555fc0a1c2146c74c8533",
     "unitsUrl": "/commercial/orulo/17933/units.json"
   },
-  "assets": []
+  "expectedAssets": [
+    "fachada",
+    "lobby",
+    "fitness",
+    "festas",
+    "piscina",
+    "implantacao",
+    "maquette",
+    "blueprint",
+    "editorial",
+    "xray",
+    "terraco"
+  ],
+  "assets": [
+    {
+      "key": "fachada",
+      "category": "facade",
+      "caption": "Vista aérea da praça e das torres",
+      "status": "rejected",
+      "review": "O original é uma vista aérea parcial e não documenta a fachada inteira. A geração reinterpretou paisagismo e superfícies. Não usar como capa.",
+      "page": 2,
+      "original": "/visual-engine/17933/original-2.webp",
+      "asset": "/visual-engine/17933/fachada.webp",
+      "styleReference": "fachada.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 2 asset. Visual treatment: architectural blueprint editorial plate, ivory travertine, discreet antique gold linework; no invented labels or measurements. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+    },
+    {
+      "key": "lobby",
+      "category": "lobby",
+      "caption": "Lobby",
+      "status": "review",
+      "review": "Conferir aberturas, pilares, forro e elementos decorativos. Uso restrito ao laboratório.",
+      "page": 7,
+      "original": "/visual-engine/17933/original-7.webp",
+      "asset": "/visual-engine/17933/lobby.webp",
+      "styleReference": "lobby.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 7 asset. Visual treatment: cinematic editorial lighting and realistic materials. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+    },
+    {
+      "key": "fitness",
+      "category": "leisure",
+      "caption": "Academia",
+      "status": "rejected",
+      "review": "A perspectiva geral se mantém, mas a geração mudou o destaque e a representação de equipamentos, além da iluminação.",
+      "page": 8,
+      "original": "/visual-engine/17933/original-8.webp",
+      "asset": "/visual-engine/17933/fitness.webp",
+      "styleReference": "lobby.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 8 asset. Visual treatment: cinematic architectural photography, preserve placement and count of gym equipment. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+    },
+    {
+      "key": "festas",
+      "category": "leisure",
+      "caption": "Salão de festas",
+      "status": "review",
+      "review": "O eixo geral se mantém. Acabamentos, reflexos e objetos de decoração precisam de conferência para uso comercial.",
+      "page": 9,
+      "original": "/visual-engine/17933/original-9.webp",
+      "asset": "/visual-engine/17933/festas.webp",
+      "styleReference": "lobby.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 9 asset. Visual treatment: cinematic editorial photograph, retain furniture and exact openings. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+    },
+    {
+      "key": "piscina",
+      "category": "leisure",
+      "caption": "Piscina descoberta",
+      "status": "review",
+      "review": "A raia e os pórticos se reconhecem. A geração alterou iluminação, reflexos e alguns elementos de borda ou mobiliário.",
+      "page": 11,
+      "original": "/visual-engine/17933/original-11.webp",
+      "asset": "/visual-engine/17933/piscina.webp",
+      "styleReference": "piscina.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 11 asset. Visual treatment: cinematic water reflections, preserve pool footprint, landscaping and furniture. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+    },
+    {
+      "key": "implantacao",
+      "category": "site",
+      "caption": "Implantação do térreo e primeiro pavimento",
+      "status": "rejected",
+      "review": "A peça separa dois níveis, mas simplifica ambientes e altera geometria e mobiliário. Não usar como implantação técnica.",
+      "page": 5,
+      "original": "/visual-engine/17933/original-5.webp",
+      "asset": "/visual-engine/17933/implantacao.webp",
+      "originals": [
+        "/visual-engine/17933/original-5.webp",
+        "/visual-engine/17933/original-6.webp"
+      ],
+      "sourcePages": [
+        5,
+        6
+      ],
+      "styleReference": "implantacao.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 5 asset. Visual treatment: illustrative exploded axonometric of ONLY the documented ground and first floors, spaced vertically with no invented layers or equipment. Image 2 is the original first-floor plan. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+    },
+    {
+      "key": "maquette",
+      "category": "maquette",
+      "caption": "Apartamento de 191 m² · vista 1",
+      "status": "rejected",
+      "review": "A maquete redesenha portas na circulação e omite ou modifica detalhes funcionais da área de serviço e da cozinha.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/maquette.webp",
+      "styleReference": "planta-1.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down orthographic dollhouse. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+    },
+    {
+      "key": "blueprint",
+      "category": "blueprint",
+      "caption": "Apartamento de 191 m² · vista 2",
+      "status": "rejected",
+      "review": "A versão mantém o perímetro geral, mas redesenha aberturas e portas, especialmente na transição da circulação para a suíte master.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/blueprint.webp",
+      "styleReference": "planta-2.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: editorial blueprint with clean linework. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+    },
+    {
+      "key": "editorial",
+      "category": "editorial",
+      "caption": "Apartamento de 191 m² · vista 3",
+      "status": "rejected",
+      "review": "O perímetro geral é reconhecível, mas mobiliário, equipamentos e elementos de circulação foram reinterpretados.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/editorial.webp",
+      "styleReference": "planta-3.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down editorial furnished floorplan. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+    },
+    {
+      "key": "xray",
+      "category": "xray",
+      "caption": "Apartamento de 191 m² · vista 4",
+      "status": "rejected",
+      "review": "A geração acrescentou setas de circulação e alterou peças sanitárias e detalhamento de aberturas. Não usar como leitura técnica.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/xray.webp",
+      "styleReference": "planta-4.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down translucent functional zoning, zoning overlay without text. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+    },
+    {
+      "key": "terraco",
+      "category": "leisure",
+      "caption": "Terraço do salão de festas",
+      "status": "review",
+      "review": "A perspectiva central se mantém. A geração reinterpretou a vegetação e a iluminação.",
+      "page": 10,
+      "original": "/visual-engine/17933/original-10.webp",
+      "asset": "/visual-engine/17933/terraco.webp",
+      "styleReference": "gourmet.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Edit image one, the original Praça Lindenberg Clodomiro external party terrace from page 10. Image two is reference only for the approved warm architectural cinema style. Maintain exact landscaping, furniture, materials, architectural boundaries, circulation, camera and framing. Adjust light atmosphere and realism only. No additions or text."
+    }
+  ]
 }
