@@ -1,3 +1,4 @@
+import {compactAmenitiesPreview} from '../lib/compact-amenities-preview.js';
 import {enrichResidenceMaster} from '../lib/residence-master.js';
 import {architectureRoot,architectureSitemap,serveArchitecture} from '../lib/architecture.mjs';
 import {createLaunchHandler,rewriteLaunchLinks,launches,launchPath} from '../lib/sp-launches.js';
@@ -148,7 +149,7 @@ export default async function portal(req,res){
       res.setHeader('X-Robots-Tag','noindex, nofollow');
       res.setHeader('Cache-Control','private, no-store');
     }
-    return send(master);
+    return send(compactAmenitiesPreview(master));
   };
   if(await launchHandler(req,res,path))return;
   // Discovery links are HTML, not JS-only navigation. No commercial flow changes.
