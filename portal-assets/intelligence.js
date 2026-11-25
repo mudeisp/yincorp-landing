@@ -1,17 +1,18 @@
 (()=>{'use strict';
 const context=document.querySelector('#portal-data');let ctx;try{ctx=JSON.parse(context?.textContent||'{}')}catch{return}
 if(!['development','unit','rental_property','investment-story'].includes(ctx.kind))return;
-const anchor=document.querySelector('#investment-motor-anchor,#essencia,.rental-essence,.property-keyfacts,.property-facts');if(!anchor)return;
-const root=document.createElement('section');root.id='yincorp-intelligence';root.className='ynti';root.setAttribute('aria-label','Outras possibilidades para sua escolha');
-root.innerHTML='<div class="ynti-head"><div><small>✳ YINCORP INTELLIGENCE</small><h2>Enquanto você conhece este imóvel…</h2><p>Conectamos alternativas para ampliar sua perspectiva.</p></div><span class="ynti-live">Preparando sua análise</span></div><div class="ynti-content" hidden></div>';
-anchor.after(root);const content=root.querySelector('.ynti-content'),live=root.querySelector('.ynti-live');
+const anchor=document.querySelector('#investment-motor-anchor,#essencia,.rental-essence,.property-keyfacts,.property-facts');const initial=document.querySelector('#yincorp-intelligence.ynti-launch');
+if(!anchor&&!initial)return;
+const root=initial||document.createElement('section');root.id='yincorp-intelligence';if(!initial)root.className='ynti';root.setAttribute('aria-label','Outras possibilidades para sua escolha');
+if(!initial)root.innerHTML='<div class="ynti-head"><div><small>✳ YINCORP INTELLIGENCE</small><h2>Enquanto você conhece este imóvel…</h2><p>Conectamos alternativas para ampliar sua perspectiva.</p></div><span class="ynti-live">Preparando sua análise</span></div><div class="ynti-content" hidden></div>';
+if(!initial)anchor.after(root);const content=root.querySelector('.ynti-content'),live=root.querySelector('.ynti-live');
 const num=(v,d=0)=>v==null?'A confirmar':Number(v).toLocaleString('pt-BR',{maximumFractionDigits:d});const cash=v=>v==null?'A confirmar':'R$ '+num(v);
 const text=(tag,value,cls)=>{const e=document.createElement(tag);e.textContent=value;if(cls)e.className=cls;return e};
 const markets=new Set((document.currentScript?.dataset.markets||'').split(','));
 const safePath=p=>{const sale=typeof p==='string'&&/^\/([a-z]{2})\/[a-z0-9-]+\/empreendimento\/[a-z0-9-]+(?:\/tipologia\/[a-f0-9-]{36})?$/.exec(p);return p==='/es/vitoria/investimento-airbnb'||Boolean(sale&&markets.has(sale[1]))||typeof p==='string'&&/^\/alugar\/imovel\/[a-f0-9-]{36}$/.test(p)};
 const path=location.pathname;let payload=null,started=false,paused=false,step=0,elapsed=0,last=0,priority='geral';const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),25000);
-const loading=fetch('/api/intelligence?'+new URLSearchParams({path}),{signal:controller.signal,credentials:'same-origin'}).then(r=>{if(!r.ok)throw Error('unavailable');return r.json()}).then(data=>{if(!data.base||!Array.isArray(data.items))throw Error('invalid');payload=data;return data}).finally(()=>clearTimeout(timeout));loading.catch(()=>{if(!started)root.hidden=true});
+const loading=initial?Promise.resolve().then(()=>{payload=JSON.parse(initial.querySelector('#ynti-launch-data').textContent)}):fetch('/api/intelligence?'+new URLSearchParams({path}),{signal:controller.signal,credentials:'same-origin'}).then(r=>{if(!r.ok)throw Error('unavailable');return r.json()}).then(data=>{if(!data.base||!Array.isArray(data.items))throw Error('invalid');payload=data;return data}).finally(()=>clearTimeout(timeout));loading.catch(()=>{if(!started)root.hidden=true});
 const investment=ctx.kind==='investment-story';if(investment){root.querySelector('h2').textContent='Uma seleção. Diferentes caminhos para investigar.';root.querySelector('.ynti-head p').textContent='Capital, área e prazo se conectam automaticamente; sem formulário ou simulador.';}
 let back;try{back=JSON.parse(sessionStorage.getItem('ynt-intelligence-return')||'null')}catch{}
 if(back&&back.to===path&&safePath(back.from)&&Date.now()-back.at<1800000){const nav=text('nav','', 'ynti-return');nav.setAttribute('aria-label','Sua comparação');nav.append(text('span','Você veio de '+String(back.name||'outro imóvel').slice(0,100)));const a=text('a','Voltar à comparação ↗');a.href=back.from+'#yincorp-intelligence';nav.append(a);const first=document.querySelector('main');first?.prepend(nav)}
@@ -77,9 +78,10 @@ function buildGallery(){
   root.classList.add('ynti-premium','ynti-guided','ynti-active');
   root.setAttribute('aria-label','Comparação de imóveis');
   live.hidden=true;
-  root.querySelector('h2').textContent='Como '+base.name+' se compara a outros imóveis da região?';
-  root.querySelector('.ynti-head p').textContent='Usamos o imóvel que você abriu como referência. Veja o que muda em '+(rent?'custo mensal, espaço e localização':'preço, espaço e entrega')+' para decidir quais vale a pena visitar.';
+  if(kind!=='launch')root.querySelector('h2').textContent='Como '+base.name+' se compara a outros imóveis da região?';
+  if(kind!=='launch')root.querySelector('.ynti-head p').textContent='Usamos o imóvel que você abriu como referência. Veja o que muda em '+(rent?'custo mensal, espaço e localização':'preço, espaço e entrega')+' para decidir quais vale a pena visitar.';
 
+  if(kind==='launch')content.replaceChildren();
   if(!items.length){
     content.append(text('p',conclusion(),'ynti-insight'));
     return;
@@ -89,6 +91,17 @@ function buildGallery(){
   filters.setAttribute('role','group');
   filters.setAttribute('aria-label','O que pesa mais na sua escolha?');
   const gallery=text('ul','','ynti-gallery');
+  const position=text('p','','ynti-gallery-nav');
+  if(kind==='launch'){
+    gallery.tabIndex=0;
+    gallery.setAttribute('aria-label','Alternativas na região');
+    gallery.addEventListener('scroll',updatePosition,{passive:true});
+  }
+  function updatePosition(){
+    const width=gallery.firstElementChild?.getBoundingClientRect().width||1;
+    const step=width+(parseFloat(getComputedStyle(gallery).columnGap)||0);
+    position.textContent=Math.min(items.length,1+Math.round(gallery.scrollLeft/step))+' / '+items.length;
+  }
   const overview=text('div','','ynti-overview');
   const galleryHeading=text('h3','Compare com outra opção','ynti-gallery-heading');
   const comparison=text('div','','ynti-comparison');
@@ -100,6 +113,8 @@ function buildGallery(){
   const caption=rent?'Custo mensal comparável = aluguel + condomínio. IPTU e outros encargos ficam fora desse cálculo.':'Preço, área e R$/m² se referem à configuração indicada de cada empreendimento.';
   content.append(text('h3','O que pesa mais na sua escolha?','ynti-question'),filters,overview,galleryHeading,gallery,comparison,announcement,
     text('p',caption+' Valores e disponibilidade sujeitos a confirmação.','ynti-note'),method);
+
+  if(kind==='launch')gallery.after(position);
 
   function orderedItems(){
     const order={
@@ -136,9 +151,9 @@ function buildGallery(){
       quartos:'Veja a diferença de quartos junto com a metragem e o custo mensal.',
       prazo:'Se você quer mudar mais cedo, compare o estágio e a entrega informada de cada empreendimento.',
     }[priority];
-    const advantage=!rent&&item.price>base.price&&item.area<base.area
+    const advantage=!rent&&base.price!=null&&base.area!=null&&item.price>base.price&&item.area<base.area
       ? ' Em preço e área, '+base.name+' leva vantagem nesta comparação.'
-      : !rent&&item.price<base.price&&item.area>base.area
+      : !rent&&base.price!=null&&base.area!=null&&item.price<base.price&&item.area>base.area
         ? ' Em preço e área, '+item.name+' leva vantagem nesta comparação.'
         : '';
     const timingLine=priority==='prazo'?base.name+' — '+timing(base)+'. '+item.name+' — '+timing(item)+'. ':'';
@@ -208,6 +223,10 @@ function buildGallery(){
       }catch{}
       const label=text('span','','ynti-option-label');
       label.append(text('small',[item.neighborhood,item.city].filter(Boolean).join(' · '),'ynti-option-location'),text('strong',item.name),text('span',money(item.price),'ynti-option-price'),text('span',[area(item.area),item.bedrooms==null?'':num(item.bedrooms)+' dorm.'].filter(Boolean).join(' · '),'ynti-option-specs'),text('span',highlight(item),'ynti-option-difference'),text('span','✓ Em comparação','ynti-option-current'));
+      if(kind==='launch'){
+        if(item.parking!=null)label.append(text('span',num(item.parking)+' vaga(s)','ynti-option-specs'));
+        if(item.status)label.append(text('span',item.status,'ynti-option-specs'));
+      }
       button.append(media,label);
       button.onclick=()=>{
         for(const option of buttons)option.setAttribute('aria-pressed',String(option===button));
@@ -224,6 +243,7 @@ function buildGallery(){
       }
       return cell;
     }));
+    if(kind==='launch')updatePosition();
     renderComparison(options[0]);
   }
 
@@ -243,7 +263,7 @@ function buildGallery(){
 
 async function start(){if(started)return;started=true;live.textContent='Conectando outras possibilidades…';try{await loading;if(investment){build();requestAnimationFrame(tick)}else buildGallery()}catch{live.textContent='Você pode continuar conhecendo este imóvel';content.hidden=false;content.append(text('p','A comparação está temporariamente indisponível. Explore as configurações e consulte o atendimento.','ynti-note'))}}
 function tick(now){if(last&&!paused&&!document.hidden&&step<5){elapsed+=Math.min(100,now-last);if(elapsed>(step===4?4500:1800)){elapsed=0;step++;render()}}last=now;if(step<5)requestAnimationFrame(tick)}
-const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){start();observer.disconnect()}},{threshold:.15});observer.observe(root);window.addEventListener('scroll',()=>{if(!started&&root.getBoundingClientRect().top<innerHeight*.85){start();observer.disconnect()}},{passive:true});if(location.hash==='#yincorp-intelligence')start();
+const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){start();observer.disconnect()}},{threshold:.15});observer.observe(root);window.addEventListener('scroll',()=>{if(!started&&root.getBoundingClientRect().top<innerHeight*.85){start();observer.disconnect()}},{passive:true});if(initial||location.hash==='#yincorp-intelligence')start();
 })();
 
 
