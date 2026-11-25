@@ -27,7 +27,7 @@ if (!response.ok) {
       images.append(figure);
     }
     const prompt = node('details');
-    prompt.append(node('summary', 'Prompt executado · v' + asset.promptVersion), node('p', asset.prompt));
+    prompt.append(node('summary', asset.prompt ? 'Prompt executado · v' + asset.promptVersion : 'Tratamento determinístico · v' + asset.recipeVersion), node('p', asset.prompt ?? asset.review));
     article.append(node('h2', asset.caption), node('p', asset.category + ' · ' + asset.status),
       images, node('p', asset.review), prompt);
     return article;

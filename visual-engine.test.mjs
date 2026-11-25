@@ -1,27 +1,19 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { approvedVisualRelease, visualRelease } from './lib/visual-engine.js';
+import { approvedVisualModules, visualRelease } from './lib/visual-engine.js';
 
-const categories = ['facade', 'lobby', 'leisure', 'site', 'maquette', 'blueprint', 'editorial', 'xray'];
-const complete = {
-  status: 'approved',
-  commercial: { status: 'verified', unitsUrl: '/commercial/units.json' },
-  assets: categories.map(category => ({
-    category, original: '/original.webp', asset: '/treated.webp', page: 16,
-    promptVersion: '1.0.0', status: 'approved'
-  }))
-};
-
-test('premium requires a verified table and a complete approved treatment set', () => {
-  assert.equal(approvedVisualRelease(complete), true);
-  assert.equal(approvedVisualRelease({ ...complete, assets: complete.assets.slice(0, -1) }), false);
-  const assets = complete.assets.map(asset => asset.category === 'lobby' ? { ...asset, status: 'review' } : asset);
-  assert.equal(approvedVisualRelease({ ...complete, assets }), false);
-  assert.equal(approvedVisualRelease({ ...complete, commercial: { status: 'review' } }), false);
+test('approved modules can render independently of pending modules', () => {
+  const lobby = { category: 'lobby', page: 7, original: '/original.webp', asset: '/treated.webp', recipeVersion: '1.1.0', status: 'approved' };
+  const other = { ...lobby, category: 'leisure', status: 'review' };
+  assert.deepEqual(approvedVisualModules({ assets: [lobby, other] }), { assets: [lobby], commercial: null });
+  assert.equal(approvedVisualModules({ assets: [other] }), null);
 });
 
-test('the pilot stays gated during review and outside preview', () => {
-  assert.equal(visualRelease('17933', 'preview'), null);
+test('preview exposes six approved geometry studies and the verified table', () => {
+  const pilot = visualRelease('17933', 'preview');
+  assert.equal(pilot.assets.length, 6);
+  assert.equal(pilot.assets.some(asset => asset.coverEligible), false);
+  assert.equal(pilot.commercial.units, 9);
   assert.equal(visualRelease('17933', 'production'), null);
   assert.equal(visualRelease('18850', 'preview'), null);
 });

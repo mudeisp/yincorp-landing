@@ -179,6 +179,99 @@
       "styleReference": "gourmet.webp",
       "promptVersion": "1.0.0",
       "prompt": "Edit image one, the original Praça Lindenberg Clodomiro external party terrace from page 10. Image two is reference only for the approved warm architectural cinema style. Maintain exact landscaping, furniture, materials, architectural boundaries, circulation, camera and framing. Adjust light atmosphere and realism only. No additions or text."
+    },
+    {
+      "key": "fachada-v11",
+      "category": "facade",
+      "caption": "Vista parcial da praça e das torres",
+      "status": "approved",
+      "review": "Mesma malha de pixels da fonte, com tratamento tonal. Nenhuma parede ou abertura redesenhada. A imagem parcial é exibida na galeria, sem uso como capa.",
+      "page": 2,
+      "original": "/visual-engine/17933/original-2.webp",
+      "asset": "/visual-engine/17933/fachada-v11.webp",
+      "previous": "fachada",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false
+    },
+    {
+      "key": "implantacao-v11",
+      "category": "site",
+      "caption": "Implantação · térreo e primeiro pavimento",
+      "status": "approved",
+      "review": "Níveis do book separados por translação. Mantém os desenhos de origem; sem alturas inferidas.",
+      "page": 5,
+      "original": "/visual-engine/17933/original-5.webp",
+      "asset": "/visual-engine/17933/implantacao-v11.webp",
+      "originals": [
+        "/visual-engine/17933/original-5.webp",
+        "/visual-engine/17933/original-6.webp"
+      ],
+      "sourcePages": [
+        5,
+        6
+      ],
+      "previous": "implantacao",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false
+    },
+    {
+      "key": "maquette-v11",
+      "category": "maquette",
+      "caption": "Apartamento de 191 m² · vista 1",
+      "status": "approved",
+      "review": "Mesma malha de pixels da fonte, com tratamento tonal. Nenhuma parede ou abertura redesenhada.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/maquette-v11.webp",
+      "previous": "maquette",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false
+    },
+    {
+      "key": "blueprint-v11",
+      "category": "blueprint",
+      "caption": "Apartamento de 191 m² · vista 2",
+      "status": "approved",
+      "review": "Mesma malha de pixels da fonte, com tratamento tonal. Nenhuma parede ou abertura redesenhada.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/blueprint-v11.webp",
+      "previous": "blueprint",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false
+    },
+    {
+      "key": "editorial-v11",
+      "category": "editorial",
+      "caption": "Apartamento de 191 m² · vista 3",
+      "status": "approved",
+      "review": "Mesma malha de pixels da fonte, com tratamento tonal. Nenhuma parede ou abertura redesenhada.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/editorial-v11.webp",
+      "previous": "editorial",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false
+    },
+    {
+      "key": "xray-v11",
+      "category": "xray",
+      "caption": "Apartamento de 191 m² · vista 4",
+      "status": "approved",
+      "review": "Mesma malha de pixels da fonte, com tratamento tonal. Nenhuma parede ou abertura redesenhada.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/xray-v11.webp",
+      "previous": "xray",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false
     }
-  ]
+  ],
+  "version": "1.1.0"
 }

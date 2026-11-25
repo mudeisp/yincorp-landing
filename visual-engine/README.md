@@ -9,3 +9,9 @@ Record findings per asset. Check the scope of the source (including whether a fu
 The release manifest lists the required inventory, the reviewed source pages, the approved individual assets and the separate verified commercial record. Publish only after approval of the entire set. Any edits to the source book or financial table require review of affected assets or values. An updated table is a dated reference and does not establish current availability or financing terms.
 
 The existing LP Master consumes an approved manifest in Preview only. At review or rejection it retains the conventional landing. It does not include original document or plan links in the premium block. The review site and originals are carried on this draft branch for the protected Vercel Preview.
+
+## 1.1
+
+In Preview, each reviewed asset is selected independently. The financial panel reads the existing verified catalog file independently of image approval. Partial façade views can appear in the gallery without replacing the cover. The original 1.0 studies remain in the review manifest.
+
+The geometry renderer works on registered raster artwork. The four plan views preserve the source pixel grid and use palette and shallow relief treatments. The two existing site layers are separated by translation. This workflow does not infer 3D dimensions or create a measured architectural model.
