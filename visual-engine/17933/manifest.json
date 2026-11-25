@@ -40,7 +40,13 @@
       "asset": "/visual-engine/17933/fachada.webp",
       "styleReference": "fachada.webp",
       "promptVersion": "1.0.0",
-      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 2 asset. Visual treatment: architectural blueprint editorial plate, ivory travertine, discreet antique gold linework; no invented labels or measurements. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 2 asset. Visual treatment: architectural blueprint editorial plate, ivory travertine, discreet antique gold linework; no invented labels or measurements. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
     },
     {
       "key": "lobby",
@@ -53,7 +59,13 @@
       "asset": "/visual-engine/17933/lobby.webp",
       "styleReference": "lobby.webp",
       "promptVersion": "1.0.0",
-      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 7 asset. Visual treatment: cinematic editorial lighting and realistic materials. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 7 asset. Visual treatment: cinematic editorial lighting and realistic materials. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "fitness",
@@ -66,7 +78,13 @@
       "asset": "/visual-engine/17933/fitness.webp",
       "styleReference": "lobby.webp",
       "promptVersion": "1.0.0",
-      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 8 asset. Visual treatment: cinematic architectural photography, preserve placement and count of gym equipment. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 8 asset. Visual treatment: cinematic architectural photography, preserve placement and count of gym equipment. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
     },
     {
       "key": "festas",
@@ -79,7 +97,13 @@
       "asset": "/visual-engine/17933/festas.webp",
       "styleReference": "lobby.webp",
       "promptVersion": "1.0.0",
-      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 9 asset. Visual treatment: cinematic editorial photograph, retain furniture and exact openings. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 9 asset. Visual treatment: cinematic editorial photograph, retain furniture and exact openings. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "piscina",
@@ -92,7 +116,13 @@
       "asset": "/visual-engine/17933/piscina.webp",
       "styleReference": "piscina.webp",
       "promptVersion": "1.0.0",
-      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 11 asset. Visual treatment: cinematic water reflections, preserve pool footprint, landscaping and furniture. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 11 asset. Visual treatment: cinematic water reflections, preserve pool footprint, landscaping and furniture. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "implantacao",
@@ -113,7 +143,13 @@
       ],
       "styleReference": "implantacao.webp",
       "promptVersion": "1.0.0",
-      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 5 asset. Visual treatment: illustrative exploded axonometric of ONLY the documented ground and first floors, spaced vertically with no invented layers or equipment. Image 2 is the original first-floor plan. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 5 asset. Visual treatment: illustrative exploded axonometric of ONLY the documented ground and first floors, spaced vertically with no invented layers or equipment. Image 2 is the original first-floor plan. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
     },
     {
       "key": "maquette",
@@ -126,7 +162,13 @@
       "asset": "/visual-engine/17933/maquette.webp",
       "styleReference": "planta-1.webp",
       "promptVersion": "1.0.0",
-      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down orthographic dollhouse. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down orthographic dollhouse. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
     },
     {
       "key": "blueprint",
@@ -139,7 +181,13 @@
       "asset": "/visual-engine/17933/blueprint.webp",
       "styleReference": "planta-2.webp",
       "promptVersion": "1.0.0",
-      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: editorial blueprint with clean linework. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: editorial blueprint with clean linework. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
     },
     {
       "key": "editorial",
@@ -152,7 +200,13 @@
       "asset": "/visual-engine/17933/editorial.webp",
       "styleReference": "planta-3.webp",
       "promptVersion": "1.0.0",
-      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down editorial furnished floorplan. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down editorial furnished floorplan. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
     },
     {
       "key": "xray",
@@ -165,7 +219,13 @@
       "asset": "/visual-engine/17933/xray.webp",
       "styleReference": "planta-4.webp",
       "promptVersion": "1.0.0",
-      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down translucent functional zoning, zoning overlay without text. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration."
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down translucent functional zoning, zoning overlay without text. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
     },
     {
       "key": "terraco",
@@ -178,7 +238,13 @@
       "asset": "/visual-engine/17933/terraco.webp",
       "styleReference": "gourmet.webp",
       "promptVersion": "1.0.0",
-      "prompt": "Edit image one, the original Praça Lindenberg Clodomiro external party terrace from page 10. Image two is reference only for the approved warm architectural cinema style. Maintain exact landscaping, furniture, materials, architectural boundaries, circulation, camera and framing. Adjust light atmosphere and realism only. No additions or text."
+      "prompt": "Edit image one, the original Praça Lindenberg Clodomiro external party terrace from page 10. Image two is reference only for the approved warm architectural cinema style. Maintain exact landscaping, furniture, materials, architectural boundaries, circulation, camera and framing. Adjust light atmosphere and realism only. No additions or text.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "fachada-v11",
@@ -192,7 +258,13 @@
       "previous": "fachada",
       "method": "geometry",
       "recipeVersion": "1.1.0",
-      "coverEligible": false
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "implantacao-v11",
@@ -214,7 +286,13 @@
       "previous": "implantacao",
       "method": "geometry",
       "recipeVersion": "1.1.0",
-      "coverEligible": false
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "maquette-v11",
@@ -228,7 +306,13 @@
       "previous": "maquette",
       "method": "geometry",
       "recipeVersion": "1.1.0",
-      "coverEligible": false
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "blueprint-v11",
@@ -242,7 +326,13 @@
       "previous": "blueprint",
       "method": "geometry",
       "recipeVersion": "1.1.0",
-      "coverEligible": false
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "editorial-v11",
@@ -256,7 +346,13 @@
       "previous": "editorial",
       "method": "geometry",
       "recipeVersion": "1.1.0",
-      "coverEligible": false
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "xray-v11",
@@ -270,7 +366,13 @@
       "previous": "xray",
       "method": "geometry",
       "recipeVersion": "1.1.0",
-      "coverEligible": false
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "lobby-v11",
@@ -291,7 +393,13 @@
         -15,
         -15
       ],
-      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição."
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "fitness-v11",
@@ -312,7 +420,13 @@
         -15,
         -15
       ],
-      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição."
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "festas-v11",
@@ -333,7 +447,13 @@
         -15,
         -15
       ],
-      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição."
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "terraco-v11",
@@ -354,7 +474,13 @@
         -15,
         -15
       ],
-      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição."
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     },
     {
       "key": "piscina-v11",
@@ -375,10 +501,206 @@
         -10.328,
         -15
       ],
-      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição."
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "fitness-proposta",
+      "asset": "/visual-engine/17933/fitness-proposta.webp",
+      "original": "/visual-engine/17933/original-8.webp",
+      "category": "leisure",
+      "caption": "Academia",
+      "page": 8,
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "9e37addf28e722760cf8afad8f7149fc30dc3e36856cf9e19a1cbc8a8d02376d",
+      "technicalApproval": {
+        "status": "verified",
+        "date": "2026-11-25",
+        "scope": "source, output and correspondence with approved study"
+      },
+      "artisticApproval": {
+        "status": "approved",
+        "reviewer": "owner",
+        "date": "2026-11-25"
+      }
+    },
+    {
+      "key": "implantacao-proposta",
+      "asset": "/visual-engine/17933/implantacao-proposta.webp",
+      "original": "/visual-engine/17933/original-5.webp",
+      "category": "site",
+      "caption": "Implantação · térreo e primeiro pavimento",
+      "page": 5,
+      "recipeId": "exploded",
+      "recipeVersion": "1.2.0",
+      "sha256": "9b768d379bcda776c8b7e1ca3708d97011d7401ad2634e1cbeb44f0e79c247c2",
+      "technicalApproval": {
+        "status": "verified",
+        "date": "2026-11-25",
+        "scope": "source, output and correspondence with approved study"
+      },
+      "artisticApproval": {
+        "status": "approved",
+        "reviewer": "owner",
+        "date": "2026-11-25"
+      },
+      "additionalOriginal": "/visual-engine/17933/original-6.webp"
+    },
+    {
+      "key": "maquette-a",
+      "asset": "/visual-engine/17933/maquette-a.webp",
+      "original": "/visual-engine/17933/original-16.webp",
+      "category": "maquette",
+      "caption": "Apartamento de 191 m²",
+      "page": 16,
+      "recipeId": "maquette",
+      "recipeVersion": "1.2.0",
+      "sha256": "5ba920591b12429476c680b329b5c2ced45950b4f0fe7768cdbfda60e3c806bc",
+      "technicalApproval": {
+        "status": "verified",
+        "date": "2026-11-25",
+        "scope": "source, output and correspondence with approved study"
+      },
+      "artisticApproval": {
+        "status": "approved",
+        "reviewer": "owner",
+        "date": "2026-11-25"
+      }
+    },
+    {
+      "key": "lobby-cinema",
+      "category": "lobby",
+      "caption": "Lobby",
+      "page": 7,
+      "original": "/visual-engine/17933/original-7.webp",
+      "asset": "/visual-engine/17933/lobby-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "555d155b65f6b919022c9daca983920775b5608c6b40754afb84d50a12564567",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "piscina-cinema",
+      "category": "leisure",
+      "caption": "Piscina descoberta",
+      "page": 11,
+      "original": "/visual-engine/17933/original-11.webp",
+      "asset": "/visual-engine/17933/piscina-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "6ace7255231ac2d44cd49838caaa08ebd3ca925b0d262ef177ccbf9423b7d0d4",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "festas-cinema",
+      "category": "leisure",
+      "caption": "Salão de festas",
+      "page": 9,
+      "original": "/visual-engine/17933/original-9.webp",
+      "asset": "/visual-engine/17933/festas-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "db3da17be7e8d0167ca6e7144e1b005a6158bdb513778cf1642af74f56a4cb1b",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "terraco-cinema",
+      "category": "leisure",
+      "caption": "Terraço do salão de festas",
+      "page": 10,
+      "original": "/visual-engine/17933/original-10.webp",
+      "asset": "/visual-engine/17933/terraco-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "207fe9ca727694a365f41a23129dbba7e5d17c502e5d117eb026d5a779419470",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "maquette-p17",
+      "category": "maquette",
+      "caption": "Configuração de 191 m² · p. 17",
+      "page": 17,
+      "original": "/visual-engine/17933/maquette-p17-original.webp",
+      "asset": "/visual-engine/17933/maquette-p17.webp",
+      "recipeId": "maquette",
+      "recipeVersion": "1.2.0",
+      "sha256": "8262b690aa5b735f0574fa9ebcd1198c3e6af44351ad845d1f35242cd83fb277",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "maquette-p18",
+      "category": "maquette",
+      "caption": "Configuração de 191 m² · p. 18",
+      "page": 18,
+      "original": "/visual-engine/17933/maquette-p18-original.webp",
+      "asset": "/visual-engine/17933/maquette-p18.webp",
+      "recipeId": "maquette",
+      "recipeVersion": "1.2.0",
+      "sha256": "4c5c7278bb79a6481743e6349c49bbe5885a7fd8f350cf9fdc316a3000935e1d",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "maquette-p19",
+      "category": "maquette",
+      "caption": "Configuração de 191 m² · p. 19",
+      "page": 19,
+      "original": "/visual-engine/17933/maquette-p19-original.webp",
+      "asset": "/visual-engine/17933/maquette-p19.webp",
+      "recipeId": "maquette",
+      "recipeVersion": "1.2.0",
+      "sha256": "b6abbd5778fb9ba1607c4153bdec86a92bba7547fb126479ae5445bced3f4704",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
     }
   ],
-  "version": "1.1.0",
+  "version": "1.2.0",
   "artisticReview": {
     "date": "2026-11-25",
     "scope": "laboratory",
@@ -447,13 +769,14 @@
       },
       {
         "asset": "maquette-a.webp",
-        "status": "pending",
+        "status": "approved",
         "sourceFiles": [
           "original-16.webp"
         ],
         "sourcePage": 16,
         "visualReference": "residence-maquette-referencia.webp",
-        "script": "maquette-studies.py"
+        "script": "maquette-studies.py",
+        "sha256": "5ba920591b12429476c680b329b5c2ced45950b4f0fe7768cdbfda60e3c806bc"
       },
       {
         "asset": "maquette-b.webp",
@@ -476,5 +799,14 @@
         "script": "maquette-studies.py"
       }
     ]
+  },
+  "exclusions": [
+    "Garden · p. 15: o conjunto de unidades precisa de traçado individual validado para uma maquete fiel."
+  ],
+  "timing": {
+    "elapsedSecondsUntilLastRender": 374,
+    "sharedConcurrentBatch": true,
+    "humanInterventionMinutesThisRun": 0,
+    "historicalOwnerReviewMinutes": null
   }
 }

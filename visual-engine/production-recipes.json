@@ -1,0 +1,109 @@
+{
+  "version": "1.2.0",
+  "approvedOn": "2026-11-25",
+  "approval": {
+    "technical": "Check book provenance, geometry, camera, fidelity and asset integrity.",
+    "artistic": "Decision on each exact output by the owner.",
+    "release": "Both gates must pass."
+  },
+  "cinema": {
+    "method": "ImageGen conditional image edit",
+    "prompt": "Image edit for Praça Lindenberg Clodomiro. First reference is exact content and input; second is approved Residence Brooklin lighting and finish reference only. Produce a real cinematic re-render of the first image, premium architectural photography, subtle warm directional bounce and realistic contact shadows, tactile fine-grain materials, lifelike depth and natural highlights like the second image. Lock the entire camera perspective, crop, elevations, structure, openings, all exact equipment types, silhouettes and counts, orientation and placement, furniture and mirrors. No props or lamps added, removed or moved; do not import any architecture from the second image. Crisp readable equipment throughout, one full-frame image without letters, typography or frame. Transform the lighting, reflection, material fidelity and atmosphere as a generative edit.",
+    "sourceFiles": [
+      "original-8.webp"
+    ],
+    "sourcePage": 8,
+    "visualReference": "/portal-assets/residence-70586/academia.webp",
+    "parameters": {
+      "referenceOrder": [
+        "source",
+        "style"
+      ],
+      "seed": null,
+      "output": "WebP quality 88; maximum 1600 px"
+    },
+    "approvedAsset": "17933/fitness-proposta.webp",
+    "referenceForReplication": "17933/fitness-proposta.webp",
+    "exactGenerationSource": "17933/academia-fonte-geracao.jpg",
+    "archivedVisualReference": "17933/residence-cinema-referencia.webp",
+    "replicationPrompt": "Image edit. First reference is exact content and input; second is approved Praça Lindenberg Clodomiro Cinema lighting and finish reference only. Produce a real cinematic re-render of the first image, premium architectural photography, subtle warm directional bounce and realistic contact shadows, tactile fine-grain materials, lifelike depth and natural highlights like the second image. Lock camera perspective, crop, architecture, openings, all object types, silhouettes and counts, furniture and landscape. Do not add, move or remove anything or import any architecture from the second image. Transform the lighting, reflection, material fidelity and atmosphere as a generative edit. One individual full-frame image.",
+    "quality": [
+      "Same viewing direction and framing",
+      "Same architecture, openings, furniture and equipment counts and positions",
+      "Believable bounce, depth and texture; never replace the actual scene by the style reference"
+    ]
+  },
+  "exploded": {
+    "method": "Deterministic Blender mesh with two registered book textures",
+    "prompt": null,
+    "sourceFiles": [
+      "original-5.webp",
+      "original-6.webp"
+    ],
+    "sourcePages": [
+      5,
+      6
+    ],
+    "visualReference": "/portal-assets/residence-70586/implantacao.webp",
+    "script": "17933/render-art-studies.py",
+    "parameters": {
+      "engine": "Cycles",
+      "samples": 48,
+      "size": [
+        1450,
+        1200
+      ],
+      "planeSeparationSceneUnits": 2.28,
+      "orthographicScale": 12,
+      "camera": [
+        10,
+        -12,
+        13
+      ],
+      "output": "WebP quality 88"
+    },
+    "approvedAsset": "17933/implantacao-proposta.webp",
+    "referenceForReplication": "17933/implantacao-proposta.webp",
+    "archivedVisualReference": "17933/residence-exploded-referencia.webp",
+    "quality": [
+      "Only documented levels",
+      "Register footprints on the same scale before extrusion",
+      "Use illustrative vertical gaps and slab thickness; do not infer floors"
+    ]
+  },
+  "maquette": {
+    "approvedAsset": "17933/maquette-a.webp",
+    "visualReference": "17933/residence-maquette-referencia.webp",
+    "referenceForReplication": "17933/maquette-a.webp",
+    "sourceFiles": [
+      "17933/original-16.webp"
+    ],
+    "sourcePage": 16,
+    "method": "Model separate solid meshes from a trace of the book and render with Blender Cycles",
+    "prompt": null,
+    "script": "17933/maquette-studies.py",
+    "replicationScript": "render-maquette.py",
+    "geometry": "maquette-geometry.json",
+    "parameters": {
+      "camera": [
+        3,
+        -8,
+        18
+      ],
+      "lensMillimeters": 61,
+      "samples": 48,
+      "dimensions": [
+        1500,
+        1050
+      ],
+      "workingScaleSceneUnitsPerPixel": 0.01,
+      "cutawayHeightSceneUnits": 0.58,
+      "output": "WebP quality 88"
+    },
+    "quality": [
+      "Retain documented footprint, wall position and circulation",
+      "Leave uncertain boundaries unmodeled for review",
+      "Model furnishings separately; label cut heights and finishes illustrative"
+    ]
+  }
+}
