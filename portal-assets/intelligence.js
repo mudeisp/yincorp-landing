@@ -215,10 +215,10 @@ function buildGallery(){
       };
       cell.append(button);
       const projectPath = item.path?.split('/tipologia/')[0];
-      if (document.querySelector('[data-residence-master]') && safePath(projectPath)) {
-        const visit = link({...item, path:projectPath}, 'Visite esse também!');
+      if (safePath(projectPath)) {
+        const visit = link({...item, path:projectPath}, 'Visite esse site');
         visit.classList.add('ynti-visit-project');
-        visit.setAttribute('aria-label', 'Visite esse também! ' + item.name);
+        visit.setAttribute('aria-label', 'Visite esse site ' + item.name);
         cell.classList.add('ynti-gallery-item--visit');
         cell.append(visit);
       }
