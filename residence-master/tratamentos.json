@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Fachada ao anoitecer",
+    "page": 29,
+    "command": "/cinema",
+    "before": "fachada.webp",
+    "after": "fachada-noite.webp",
+    "review": "A volumetria geral e o enquadramento foram preservados visualmente. Céu, reflexos e iluminação interna são ilustrativos.",
+    "prompt": "Edit the supplied complete official book asset for The Residence Brooklin by Living. Cinema · blue hour, cooler sky and restrained warm window glow. Preserve exact geometry, aperture positions, composition, floors, furniture and landscaping. Keep the entire original frame. No new elements, captions or logos. Illustrative visualization.",
+    "hero": true
+  },
+  {
+    "name": "Fachada à luz do dia",
+    "page": 29,
+    "command": "/daynight",
+    "before": "fachada.webp",
+    "after": "fachada-dia.webp",
+    "review": "A perspectiva geral se mantém. Céu e luminosidade foram regenerados.",
+    "prompt": "Edit the supplied complete official book asset for The Residence Brooklin by Living. Day/night · soft daylight, natural sky and architectural photography. Preserve exact geometry, aperture positions, composition, floors, furniture and landscaping. Keep the entire original frame. No new elements, captions or logos. Illustrative visualization.",
+    "day": true
+  },
+  {
+    "name": "Piscina ao entardecer",
+    "page": 40,
+    "command": "/cinema",
+    "before": "piscina.webp",
+    "after": "piscina-cinema.webp",
+    "review": "A piscina e o eixo do deck se reconhecem. A geração acrescentou luminárias decorativas e modificou a atmosfera. Uso reservado ao laboratório.",
+    "prompt": "Edit the supplied complete official book asset for The Residence Brooklin by Living. Cinema · late-afternoon warmth, contrasted water reflections, do not change deck or planting. Preserve exact geometry, aperture positions, composition, floors, furniture and landscaping. Keep the entire original frame. No new elements, captions or logos. Illustrative visualization."
+  },
+  {
+    "name": "Lobby em luz editorial",
+    "page": 32,
+    "command": "/editorial",
+    "before": "lobby.webp",
+    "after": "lobby-editorial.webp",
+    "review": "A perspectiva e o eixo do lobby se reconhecem. Mobiliário, reflexos e detalhes de acabamento passaram por interpretação visual.",
+    "prompt": "Edit the supplied complete official book asset for The Residence Brooklin by Living. Editorial · gentle daylight and realistic tactile wood, preserve every chair and access. Preserve exact geometry, aperture positions, composition, floors, furniture and landscaping. Keep the entire original frame. No new elements, captions or logos. Illustrative visualization.",
+    "narrative": true
+  },
+  {
+    "name": "71,70 m² em vista humanizada",
+    "page": 46,
+    "command": "/3d",
+    "before": "planta-46.webp",
+    "after": "planta-46-3d.webp",
+    "review": "Reprovada para uso técnico. A IA reinterpretou elementos e recriou textos. A planta oficial segue como fonte de geometria e especificações.",
+    "prompt": "Edit the supplied complete official book asset for The Residence Brooklin by Living. 3D · full top-down orthographic architectural dollhouse, preserve the complete plan and include a margin around the entire apartment. Preserve exact geometry, aperture positions, composition, floors, furniture and landscaping. Keep the entire original frame. No new elements, captions or logos. Illustrative visualization."
+  }
+]
