@@ -1,5 +1,7 @@
 const host = document.querySelector('[data-residence-master]');
 if (host) {
+  const comparison = document.getElementById('yincorp-intelligence');
+  if (comparison) comparison.after(host);
   const template = host.querySelector('template');
   const root = host.shadowRoot || host.attachShadow({mode:'open'});
   if (template) root.append(template.content.cloneNode(true));
