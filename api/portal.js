@@ -7,7 +7,7 @@ import {NATIONAL_MARKETS} from '../.portal-shared/eligibility.js';
 import { createPortalHandler } from '../.portal-shared/router.js';
 import { readInventory } from '../.portal-shared/inventory.js';
 import { publicConfig } from '../.portal-shared/public-config.js';
-import {decorate,INVESTMENT_PATH} from '../lib/intelligence.js';
+import {decorate,INVESTMENT_PATH,renderLaunchComparison} from '../lib/intelligence.js';
 import {investmentPage} from '../lib/investment-page.js';
 import {createSeoHandler,createResaleReader} from '../lib/seo-catalog.js';
 import {withPrivacyFooter} from '../lib/privacy-footer.js';
@@ -70,7 +70,7 @@ async function publicInventoryRequest(path,options={}) {
   if(options.includeContentRange)result.contentRange=response.headers.get('content-range');
   return result;
 }
-const launchHandler=createLaunchHandler({request:publicInventoryRequest});
+const launchHandler=createLaunchHandler({request:publicInventoryRequest,renderComparison:project=>renderLaunchComparison(project,{read:opts=>readInventory(opts.state,{...opts,request:publicInventoryRequest,configured:()=>true,cacheable:true,nationalEligibility:true})})});
 const handler=createPortalHandler({
   nationalEligibility:true,
   canonicalOrigin:'https://www.yincorp.com.br',
