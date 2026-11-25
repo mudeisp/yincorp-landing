@@ -1,6 +1,6 @@
 const assets = [
   ['original-16.webp', 'Planta original do book · p. 16'],
-  ['/portal-assets/residence-70586/planta-1.webp', 'Maquette aprovada · Residence Brooklin'],
+  ['residence-maquette-referencia.webp', 'Maquette aprovada · Residence Brooklin'],
   ['maquette-a.webp', 'A · Maquete fotorrealista em perspectiva superior'],
   ['maquette-b.webp', 'B · Maquete axonométrica com luz natural'],
   ['maquette-c.webp', 'C · Maquete editorial em Travertino & Ouro'],

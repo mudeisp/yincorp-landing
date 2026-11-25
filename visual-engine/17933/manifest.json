@@ -452,7 +452,7 @@
           "original-16.webp"
         ],
         "sourcePage": 16,
-        "visualReference": "/portal-assets/residence-70586/planta-1.webp",
+        "visualReference": "residence-maquette-referencia.webp",
         "script": "maquette-studies.py"
       },
       {
@@ -462,7 +462,7 @@
           "original-16.webp"
         ],
         "sourcePage": 16,
-        "visualReference": "/portal-assets/residence-70586/planta-1.webp",
+        "visualReference": "residence-maquette-referencia.webp",
         "script": "maquette-studies.py"
       },
       {
@@ -472,7 +472,7 @@
           "original-16.webp"
         ],
         "sourcePage": 16,
-        "visualReference": "/portal-assets/residence-70586/planta-1.webp",
+        "visualReference": "residence-maquette-referencia.webp",
         "script": "maquette-studies.py"
       }
     ]
