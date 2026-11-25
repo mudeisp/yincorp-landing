@@ -1,6 +1,7 @@
 import {architectureRoot,architectureSitemap,serveArchitecture} from '../lib/architecture.mjs';
 import {createLaunchHandler,rewriteLaunchLinks,launches,launchPath} from '../lib/sp-launches.js';
 import {enrichCommercialPresentation} from '../lib/commercial-presentation.js';
+import { LINDENBERG_PATH, renderLindenbergPreview } from '../lib/lindenberg-preview.js';
 import {groupEligibleDevelopments,html as h} from '../.portal-shared/model.js';
 import {NATIONAL_MARKETS} from '../.portal-shared/eligibility.js';
 import { createPortalHandler } from '../.portal-shared/router.js';
@@ -134,7 +135,7 @@ export default async function portal(req,res){
   if(await seo(req,res,path))return;
   const send=res.send.bind(res);
   res.send=body=>{
-    const rendered=res.statusCode===200?(path===MANDARIM_PATH?enrichMandarim(linkNationalEntities(decorate(body,path),path)):enrichCommercialPresentation(linkNationalEntities(decorate(body,path),path),path)):body;
+    const rendered=res.statusCode===200?(path===MANDARIM_PATH?enrichMandarim(linkNationalEntities(decorate(body,path),path)):path===LINDENBERG_PATH && process.env.VERCEL_ENV==='preview' ? renderLindenbergPreview(linkNationalEntities(decorate(body,path),path)) : enrichCommercialPresentation(linkNationalEntities(decorate(body,path),path),path)):body;
     // Structured commercial books share one experience across markets.
     const experienceRequested=[url.searchParams.get('yincorp_experience'),req.query?.yincorp_experience].includes('1');
     const isMarketRoute=NATIONAL_MARKETS.some(state=>path.startsWith(`/${state.toLowerCase()}/`));
