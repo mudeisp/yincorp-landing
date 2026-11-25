@@ -50,7 +50,7 @@ async function initialize(host) {
   const catalog = JSON.parse(document.getElementById('lindenberg-plan-catalog')?.textContent || '{}');
   const thumb = unit => {
     const plan = catalog.plans?.[catalog.unitPlanIds?.[unit.id]];
-    return plan ? `<img src="${plan.src}" alt="${plan.caption} · maquete ilustrativa">` : '';
+    return plan ? `<img src="${plan.src}" alt="${plan.caption}">` : '';
   };
   const priceArea = unit => money(Math.round(unit.totalCents / unit.totalArea));
   const a = $('a'), b = $('b');
@@ -73,7 +73,7 @@ async function initialize(host) {
   function render() {
     const items = units.map((unit,index) => ({ unit,index })).filter(({unit}) => filter === 'all' || unit.totalArea === filter);
     $('rows').innerHTML = items.map(({unit,index}) => `<tr data-id="${index}"><td><div class="pa-unit">${thumb(unit)}${unit.id}</div></td><td>${area(unit.totalArea)} m²</td><td><strong>${money(unit.totalCents)}</strong></td><td>${priceArea(unit)}</td><td><button data-unit="${index}">Ver condições ›</button></td></tr>`).join('');
-    $('pa-cards').innerHTML = items.map(({unit,index}) => `<article>${thumb(unit) || '<p>Maquete não disponível para esta tipologia.</p>'}<h3>${area(unit.totalArea)} m²</h3><p>${unit.id} · ${money(unit.totalCents)}</p><button data-unit="${index}">Ver condições</button></article>`).join('');
+    $('pa-cards').innerHTML = items.map(({unit,index}) => `<article>${thumb(unit) || '<p>Planta não disponível para esta tipologia.</p>'}<h3>${area(unit.totalArea)} m²</h3><p>${unit.id} · ${money(unit.totalCents)}</p><button data-unit="${index}">Ver condições</button></article>`).join('');
     $('pa-cards').hidden = mode === 'list';
     root.querySelector('#price-panel .scroll').hidden = mode !== 'list';
     details.style.display = 'none';

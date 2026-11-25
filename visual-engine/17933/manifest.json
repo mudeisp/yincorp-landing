@@ -568,9 +568,11 @@
         "scope": "source, output and correspondence with approved study"
       },
       "artisticApproval": {
-        "status": "approved",
+        "status": "rejected",
         "reviewer": "owner",
-        "date": "2026-11-25"
+        "date": "2026-11-25",
+        "previousStatus": "approved",
+        "reason": "Aprovação revogada pelo proprietário, que prefere a planta original do book."
       }
     },
     {
@@ -769,14 +771,17 @@
       },
       {
         "asset": "maquette-a.webp",
-        "status": "approved",
+        "status": "rejected",
         "sourceFiles": [
           "original-16.webp"
         ],
         "sourcePage": 16,
         "visualReference": "residence-maquette-referencia.webp",
         "script": "maquette-studies.py",
-        "sha256": "5ba920591b12429476c680b329b5c2ced45950b4f0fe7768cdbfda60e3c806bc"
+        "sha256": "5ba920591b12429476c680b329b5c2ced45950b4f0fe7768cdbfda60e3c806bc",
+        "previousStatus": "approved",
+        "date": "2026-11-25",
+        "replacement": "/visual-engine/17933/planta-191-book-p16.jpg"
       },
       {
         "asset": "maquette-b.webp",
@@ -808,5 +813,20 @@
     "sharedConcurrentBatch": true,
     "humanInterventionMinutesThisRun": 0,
     "historicalOwnerReviewMinutes": null
+  },
+  "commercialPlan": {
+    "asset": "/visual-engine/17933/planta-191-book-p16.jpg",
+    "caption": "Planta original de 191 m² · book oficial, p. 16",
+    "page": 16,
+    "width": 888,
+    "height": 471,
+    "sha256": "1303de21bd388cf8f601ec01d7dc246134d81a6de19b2c6e89bd072d83d2bed3",
+    "typologyId": "tipo-191",
+    "unitIds": [
+      "32"
+    ],
+    "source": "original-book",
+    "preference": "owner",
+    "date": "2026-11-25"
   }
 }
