@@ -120,6 +120,14 @@
   ],
   "rewrites": [
     {
+      "source": "/DUDA",
+      "destination": "/DUDA/index.html"
+    },
+    {
+      "source": "/DUDA/",
+      "destination": "/DUDA/index.html"
+    },
+    {
       "source": "/arquitetura",
       "destination": "/api/portal?portalPath=/arquitetura"
     },
