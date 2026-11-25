@@ -1,0 +1,194 @@
+{
+  "oruloId": "18850",
+  "version": "1.2.0",
+  "status": "review",
+  "book": {
+    "filename": "18850-Oscar_Itaim_Book.pdf",
+    "pages": 23,
+    "sha256": "0959fce590340a317fb0247b6cc28805b18fa22e26d150a8165edac1102e48d8"
+  },
+  "commercial": {
+    "status": "verified",
+    "reference": "2026-11",
+    "sourcePage": 3,
+    "units": 2,
+    "unitsUrl": "/commercial/orulo/18850/units.json",
+    "sha256": "a087076c33b1217e5cb45d956055daa6cf1fc78dc512c2de1dfdaa23f630c980",
+    "unitsSha256": "fb4d8e4bdea7e0566f88c5b587f55cba3eb1ad66594697be2d1501b4f7931ac8"
+  },
+  "assets": [
+    {
+      "key": "lobby-cinema",
+      "category": "lobby",
+      "caption": "Lobby",
+      "page": 7,
+      "original": "/visual-engine/18850/lobby-cinema-original.webp",
+      "asset": "/visual-engine/18850/lobby-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "07710bcd7f0c4a0742d6fa2e98172ce90fa0db0b0da03893a02ce9f2b2935027",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "salao-cinema",
+      "category": "leisure",
+      "caption": "Salão de festas",
+      "page": 8,
+      "original": "/visual-engine/18850/salao-cinema-original.webp",
+      "asset": "/visual-engine/18850/salao-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "13ea796c7f047822a854b5be592966162a225e027f5948c9dd4ca8d720bd6ba5",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "terraco-cinema",
+      "category": "leisure",
+      "caption": "Terraço do salão de festas",
+      "page": 9,
+      "original": "/visual-engine/18850/terraco-cinema-original.webp",
+      "asset": "/visual-engine/18850/terraco-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "f78b6cededf4c8a80343e34f6701a7429950f77c835cd4b1768371b8c97fa30a",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "infantil-cinema",
+      "category": "leisure",
+      "caption": "Brinquedoteca",
+      "page": 9,
+      "original": "/visual-engine/18850/infantil-cinema-original.webp",
+      "asset": "/visual-engine/18850/infantil-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "001e240f4ebd17bc6dc0d8d3da9ffa9cbe482396f4190427dea5ea66c2fce23d",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "piscina-cinema",
+      "category": "leisure",
+      "caption": "Piscina do rooftop",
+      "page": 10,
+      "original": "/visual-engine/18850/piscina-cinema-original.webp",
+      "asset": "/visual-engine/18850/piscina-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "92f74286cbc9ff5bd2991dac9aac8a7e4f85abee75b5396e30198d340c7260d6",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "piscina-coberta-cinema",
+      "category": "leisure",
+      "caption": "Piscina coberta",
+      "page": 10,
+      "original": "/visual-engine/18850/piscina-coberta-cinema-original.webp",
+      "asset": "/visual-engine/18850/piscina-coberta-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "4e8fffabbb2dc4e6dd9d8ea31e43cb6bcc9906c6b8ca8dd90d92f259b8f430d0",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "living-cinema",
+      "category": "leisure",
+      "caption": "Living do apartamento decorado",
+      "page": 11,
+      "original": "/visual-engine/18850/living-cinema-original.webp",
+      "asset": "/visual-engine/18850/living-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "5b9c8f1f166e8633269591be2e74daaa230e1efdfd7237c7ee1572a16cf7ae76",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "maquette-p14",
+      "category": "maquette",
+      "caption": "Apartamento de 142 m² · book inclui depósito",
+      "page": 14,
+      "original": "/commercial/orulo/18850/book-14.webp",
+      "asset": "/visual-engine/18850/maquette-p14.webp",
+      "recipeId": "maquette",
+      "recipeVersion": "1.2.0",
+      "sha256": "3cc5b57c2b4752fb1db95e70ff689c116fd58f3074773f9153018fa3d1ef0d22",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "maquette-p16",
+      "category": "maquette",
+      "caption": "Apartamento de 185 m² · book inclui depósito",
+      "page": 16,
+      "original": "/commercial/orulo/18850/book-16.webp",
+      "asset": "/visual-engine/18850/maquette-p16.webp",
+      "recipeId": "maquette",
+      "recipeVersion": "1.2.0",
+      "sha256": "4d5b68c2976bc1c0724727bd0cff531e0c37a946e5e19ce9592c15b868f55545",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    }
+  ],
+  "exclusions": [
+    "Implantação: o book não fornece plantas dos pavimentos de implantação compatíveis com a receita Exploded.",
+    "Maquettes adicionais: garden, duplex e variantes das plantas tipo ainda precisam de traçado individual.",
+    "Academia: o book menciona fitness e ioga, mas não foi localizada uma perspectiva identificada para tratamento."
+  ],
+  "timing": {
+    "elapsedSecondsUntilLastRender": 395,
+    "sharedConcurrentBatch": true,
+    "humanInterventionMinutesThisRun": 0,
+    "historicalOwnerReviewMinutes": null
+  }
+}

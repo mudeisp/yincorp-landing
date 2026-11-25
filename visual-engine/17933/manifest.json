@@ -1,0 +1,832 @@
+{
+  "oruloId": "17933",
+  "status": "review",
+  "book": {
+    "filename": "17933-Praca_Lindenberg_Clodomiro_Book.pdf",
+    "pages": 21,
+    "sha256": "0077947f90df4f044965eaede2e31a084cd73cb7925b33f5c9b7ac536aba572b"
+  },
+  "commercial": {
+    "status": "verified",
+    "reference": "2026-11",
+    "sourcePage": 5,
+    "units": 9,
+    "sha256": "fb29c9dc45ba4f51dd539480526991f5c8a5348415b2621091ed744924b41826",
+    "unitsSha256": "d49ad31b48b0582562a1a4810afc83f1b826bc53209555fc0a1c2146c74c8533",
+    "unitsUrl": "/commercial/orulo/17933/units.json"
+  },
+  "expectedAssets": [
+    "fachada",
+    "lobby",
+    "fitness",
+    "festas",
+    "piscina",
+    "implantacao",
+    "maquette",
+    "blueprint",
+    "editorial",
+    "xray",
+    "terraco"
+  ],
+  "assets": [
+    {
+      "key": "fachada",
+      "category": "facade",
+      "caption": "Vista aérea da praça e das torres",
+      "status": "rejected",
+      "review": "O original é uma vista aérea parcial e não documenta a fachada inteira. A geração reinterpretou paisagismo e superfícies. Não usar como capa.",
+      "page": 2,
+      "original": "/visual-engine/17933/original-2.webp",
+      "asset": "/visual-engine/17933/fachada.webp",
+      "styleReference": "fachada.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 2 asset. Visual treatment: architectural blueprint editorial plate, ivory travertine, discreet antique gold linework; no invented labels or measurements. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
+    },
+    {
+      "key": "lobby",
+      "category": "lobby",
+      "caption": "Lobby",
+      "status": "review",
+      "review": "Conferir aberturas, pilares, forro e elementos decorativos. Uso restrito ao laboratório.",
+      "page": 7,
+      "original": "/visual-engine/17933/original-7.webp",
+      "asset": "/visual-engine/17933/lobby.webp",
+      "styleReference": "lobby.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 7 asset. Visual treatment: cinematic editorial lighting and realistic materials. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "fitness",
+      "category": "leisure",
+      "caption": "Academia",
+      "status": "rejected",
+      "review": "A perspectiva geral se mantém, mas a geração mudou o destaque e a representação de equipamentos, além da iluminação.",
+      "page": 8,
+      "original": "/visual-engine/17933/original-8.webp",
+      "asset": "/visual-engine/17933/fitness.webp",
+      "styleReference": "lobby.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 8 asset. Visual treatment: cinematic architectural photography, preserve placement and count of gym equipment. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
+    },
+    {
+      "key": "festas",
+      "category": "leisure",
+      "caption": "Salão de festas",
+      "status": "review",
+      "review": "O eixo geral se mantém. Acabamentos, reflexos e objetos de decoração precisam de conferência para uso comercial.",
+      "page": 9,
+      "original": "/visual-engine/17933/original-9.webp",
+      "asset": "/visual-engine/17933/festas.webp",
+      "styleReference": "lobby.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 9 asset. Visual treatment: cinematic editorial photograph, retain furniture and exact openings. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "piscina",
+      "category": "leisure",
+      "caption": "Piscina descoberta",
+      "status": "review",
+      "review": "A raia e os pórticos se reconhecem. A geração alterou iluminação, reflexos e alguns elementos de borda ou mobiliário.",
+      "page": 11,
+      "original": "/visual-engine/17933/original-11.webp",
+      "asset": "/visual-engine/17933/piscina.webp",
+      "styleReference": "piscina.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 11 asset. Visual treatment: cinematic water reflections, preserve pool footprint, landscaping and furniture. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "implantacao",
+      "category": "site",
+      "caption": "Implantação do térreo e primeiro pavimento",
+      "status": "rejected",
+      "review": "A peça separa dois níveis, mas simplifica ambientes e altera geometria e mobiliário. Não usar como implantação técnica.",
+      "page": 5,
+      "original": "/visual-engine/17933/original-5.webp",
+      "asset": "/visual-engine/17933/implantacao.webp",
+      "originals": [
+        "/visual-engine/17933/original-5.webp",
+        "/visual-engine/17933/original-6.webp"
+      ],
+      "sourcePages": [
+        5,
+        6
+      ],
+      "styleReference": "implantacao.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 5 asset. Visual treatment: illustrative exploded axonometric of ONLY the documented ground and first floors, spaced vertically with no invented layers or equipment. Image 2 is the original first-floor plan. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
+    },
+    {
+      "key": "maquette",
+      "category": "maquette",
+      "caption": "Apartamento de 191 m² · vista 1",
+      "status": "rejected",
+      "review": "A maquete redesenha portas na circulação e omite ou modifica detalhes funcionais da área de serviço e da cozinha.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/maquette.webp",
+      "styleReference": "planta-1.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down orthographic dollhouse. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
+    },
+    {
+      "key": "blueprint",
+      "category": "blueprint",
+      "caption": "Apartamento de 191 m² · vista 2",
+      "status": "rejected",
+      "review": "A versão mantém o perímetro geral, mas redesenha aberturas e portas, especialmente na transição da circulação para a suíte master.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/blueprint.webp",
+      "styleReference": "planta-2.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: editorial blueprint with clean linework. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
+    },
+    {
+      "key": "editorial",
+      "category": "editorial",
+      "caption": "Apartamento de 191 m² · vista 3",
+      "status": "rejected",
+      "review": "O perímetro geral é reconhecível, mas mobiliário, equipamentos e elementos de circulação foram reinterpretados.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/editorial.webp",
+      "styleReference": "planta-3.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down editorial furnished floorplan. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
+    },
+    {
+      "key": "xray",
+      "category": "xray",
+      "caption": "Apartamento de 191 m² · vista 4",
+      "status": "rejected",
+      "review": "A geração acrescentou setas de circulação e alterou peças sanitárias e detalhamento de aberturas. Não usar como leitura técnica.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/xray.webp",
+      "styleReference": "planta-4.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Transform reference image 1, the original Praça Lindenberg Clodomiro book page 16 asset. Visual treatment: top-down translucent functional zoning, zoning overlay without text. The final reference image dictates the style ONLY, never its architecture. Retain every wall, opening, level, room, relative proportion and documented element of this project. No architecture, structures, equipment, furniture, or dimensions from the styling reference. No text, invented dimensions or logos. Show the full subject. Output an individual illustration.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "rejected"
+      }
+    },
+    {
+      "key": "terraco",
+      "category": "leisure",
+      "caption": "Terraço do salão de festas",
+      "status": "review",
+      "review": "A perspectiva central se mantém. A geração reinterpretou a vegetação e a iluminação.",
+      "page": 10,
+      "original": "/visual-engine/17933/original-10.webp",
+      "asset": "/visual-engine/17933/terraco.webp",
+      "styleReference": "gourmet.webp",
+      "promptVersion": "1.0.0",
+      "prompt": "Edit image one, the original Praça Lindenberg Clodomiro external party terrace from page 10. Image two is reference only for the approved warm architectural cinema style. Maintain exact landscaping, furniture, materials, architectural boundaries, circulation, camera and framing. Adjust light atmosphere and realism only. No additions or text.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "fachada-v11",
+      "category": "facade",
+      "caption": "Vista parcial da praça e das torres",
+      "status": "approved",
+      "review": "Mesma malha de pixels da fonte, com tratamento tonal. Nenhuma parede ou abertura redesenhada. A imagem parcial é exibida na galeria, sem uso como capa.",
+      "page": 2,
+      "original": "/visual-engine/17933/original-2.webp",
+      "asset": "/visual-engine/17933/fachada-v11.webp",
+      "previous": "fachada",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "implantacao-v11",
+      "category": "site",
+      "caption": "Implantação · térreo e primeiro pavimento",
+      "status": "approved",
+      "review": "Níveis do book separados por translação. Mantém os desenhos de origem; sem alturas inferidas.",
+      "page": 5,
+      "original": "/visual-engine/17933/original-5.webp",
+      "asset": "/visual-engine/17933/implantacao-v11.webp",
+      "originals": [
+        "/visual-engine/17933/original-5.webp",
+        "/visual-engine/17933/original-6.webp"
+      ],
+      "sourcePages": [
+        5,
+        6
+      ],
+      "previous": "implantacao",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "maquette-v11",
+      "category": "maquette",
+      "caption": "Apartamento de 191 m² · vista 1",
+      "status": "approved",
+      "review": "Mesma malha de pixels da fonte, com tratamento tonal. Nenhuma parede ou abertura redesenhada.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/maquette-v11.webp",
+      "previous": "maquette",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "blueprint-v11",
+      "category": "blueprint",
+      "caption": "Apartamento de 191 m² · vista 2",
+      "status": "approved",
+      "review": "Mesma malha de pixels da fonte, com tratamento tonal. Nenhuma parede ou abertura redesenhada.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/blueprint-v11.webp",
+      "previous": "blueprint",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "editorial-v11",
+      "category": "editorial",
+      "caption": "Apartamento de 191 m² · vista 3",
+      "status": "approved",
+      "review": "Mesma malha de pixels da fonte, com tratamento tonal. Nenhuma parede ou abertura redesenhada.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/editorial-v11.webp",
+      "previous": "editorial",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "xray-v11",
+      "category": "xray",
+      "caption": "Apartamento de 191 m² · vista 4",
+      "status": "approved",
+      "review": "Mesma malha de pixels da fonte, com tratamento tonal. Nenhuma parede ou abertura redesenhada.",
+      "page": 16,
+      "original": "/visual-engine/17933/original-16.webp",
+      "asset": "/visual-engine/17933/xray-v11.webp",
+      "previous": "xray",
+      "method": "geometry",
+      "recipeVersion": "1.1.0",
+      "coverEligible": false,
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "lobby-v11",
+      "previous": "lobby",
+      "page": 7,
+      "category": "lobby",
+      "caption": "Lobby",
+      "original": "/visual-engine/17933/original-7.webp",
+      "asset": "/visual-engine/17933/lobby-v11.webp",
+      "status": "approved",
+      "method": "generated-atmosphere-source-locked",
+      "recipeVersion": "1.1.0",
+      "promptVersion": "1.1.0",
+      "prompt": "Relight the original Praça Lindenberg Clodomiro rendering, PDF book page 7. Locked camera, locked composition. Only shift existing light temperature toward warm late-afternoon, subtly increase ambient depth. Match every edge, object silhouette, furniture, fixtures, reflections' source objects, equipment, landscaping and all positions. No added illumination fixtures, no object removal, no redecoration, no new sunlight patterns, no changes to materials. Same crop and framing. This is a conservative relighting pass.",
+      "generatedReferenceSha256": "772b45a19d48cd48f1ad6d1efa83a1665bf15d654a953bbaf65b9b0600d04cc8",
+      "channelOffsets": [
+        -6.1079,
+        -15,
+        -15
+      ],
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "fitness-v11",
+      "previous": "fitness",
+      "page": 8,
+      "category": "leisure",
+      "caption": "Academia",
+      "original": "/visual-engine/17933/original-8.webp",
+      "asset": "/visual-engine/17933/fitness-v11.webp",
+      "status": "approved",
+      "method": "generated-atmosphere-source-locked",
+      "recipeVersion": "1.1.0",
+      "promptVersion": "1.1.0",
+      "prompt": "Relight the original Praça Lindenberg Clodomiro rendering, PDF book page 8. Locked camera, locked composition. Only shift existing light temperature toward warm late-afternoon, subtly increase ambient depth. Match every edge, object silhouette, furniture, fixtures, reflections' source objects, equipment, landscaping and all positions. No added illumination fixtures, no object removal, no redecoration, no new sunlight patterns, no changes to materials. Same crop and framing. This is a conservative relighting pass.",
+      "generatedReferenceSha256": "ddbe60cdf758371885f582046a2647b81a9a2fdf928d47c74b9f03b93476c9a4",
+      "channelOffsets": [
+        -6.3778,
+        -15,
+        -15
+      ],
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "festas-v11",
+      "previous": "festas",
+      "page": 9,
+      "category": "leisure",
+      "caption": "Salão de festas",
+      "original": "/visual-engine/17933/original-9.webp",
+      "asset": "/visual-engine/17933/festas-v11.webp",
+      "status": "approved",
+      "method": "generated-atmosphere-source-locked",
+      "recipeVersion": "1.1.0",
+      "promptVersion": "1.1.0",
+      "prompt": "Relight the original Praça Lindenberg Clodomiro rendering, PDF book page 9. Locked camera, locked composition. Only shift existing light temperature toward warm late-afternoon, subtly increase ambient depth. Match every edge, object silhouette, furniture, fixtures, reflections' source objects, equipment, landscaping and all positions. No added illumination fixtures, no object removal, no redecoration, no new sunlight patterns, no changes to materials. Same crop and framing. This is a conservative relighting pass.",
+      "generatedReferenceSha256": "e2a269b489f9969ca46c71484f3ab55eb28fda7cede2d2747b7fe5bb1c1355f2",
+      "channelOffsets": [
+        -4.3223,
+        -15,
+        -15
+      ],
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "terraco-v11",
+      "previous": "terraco",
+      "page": 10,
+      "category": "leisure",
+      "caption": "Terraço do salão de festas",
+      "original": "/visual-engine/17933/original-10.webp",
+      "asset": "/visual-engine/17933/terraco-v11.webp",
+      "status": "approved",
+      "method": "generated-atmosphere-source-locked",
+      "recipeVersion": "1.1.0",
+      "promptVersion": "1.1.0",
+      "prompt": "Relight the original Praça Lindenberg Clodomiro rendering, PDF book page 10. Locked camera, locked composition. Only shift existing light temperature toward warm late-afternoon, subtly increase ambient depth. Match every edge, object silhouette, furniture, fixtures, reflections' source objects, equipment, landscaping and all positions. No added illumination fixtures, no object removal, no redecoration, no new sunlight patterns, no changes to materials. Same crop and framing. This is a conservative relighting pass.",
+      "generatedReferenceSha256": "44acfd932605f9ae08de6fded7017de4fcd82e37f77db481518ab4660ca0d50a",
+      "channelOffsets": [
+        -4.1867,
+        -15,
+        -15
+      ],
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "piscina-v11",
+      "previous": "piscina",
+      "page": 11,
+      "category": "leisure",
+      "caption": "Piscina descoberta",
+      "original": "/visual-engine/17933/original-11.webp",
+      "asset": "/visual-engine/17933/piscina-v11.webp",
+      "status": "approved",
+      "method": "generated-atmosphere-source-locked",
+      "recipeVersion": "1.1.0",
+      "promptVersion": "1.1.0",
+      "prompt": "Relight the original Praça Lindenberg Clodomiro rendering, PDF book page 11. Locked camera, locked composition. Only shift existing light temperature toward warm late-afternoon, subtly increase ambient depth. Match every edge, object silhouette, furniture, fixtures, reflections' source objects, equipment, landscaping and all positions. No added illumination fixtures, no object removal, no redecoration, no new sunlight patterns, no changes to materials. Same crop and framing. This is a conservative relighting pass.",
+      "generatedReferenceSha256": "71e85e544351a277f843962d4cb5d6a4460ed1be093ae0f559c38bb0ca904228",
+      "channelOffsets": [
+        2.1757,
+        -10.328,
+        -15
+      ],
+      "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição.",
+      "technicalApproval": {
+        "status": "review"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "fitness-proposta",
+      "asset": "/visual-engine/17933/fitness-proposta.webp",
+      "original": "/visual-engine/17933/original-8.webp",
+      "category": "leisure",
+      "caption": "Academia",
+      "page": 8,
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "9e37addf28e722760cf8afad8f7149fc30dc3e36856cf9e19a1cbc8a8d02376d",
+      "technicalApproval": {
+        "status": "verified",
+        "date": "2026-11-25",
+        "scope": "source, output and correspondence with approved study"
+      },
+      "artisticApproval": {
+        "status": "approved",
+        "reviewer": "owner",
+        "date": "2026-11-25"
+      }
+    },
+    {
+      "key": "implantacao-proposta",
+      "asset": "/visual-engine/17933/implantacao-proposta.webp",
+      "original": "/visual-engine/17933/original-5.webp",
+      "category": "site",
+      "caption": "Implantação · térreo e primeiro pavimento",
+      "page": 5,
+      "recipeId": "exploded",
+      "recipeVersion": "1.2.0",
+      "sha256": "9b768d379bcda776c8b7e1ca3708d97011d7401ad2634e1cbeb44f0e79c247c2",
+      "technicalApproval": {
+        "status": "verified",
+        "date": "2026-11-25",
+        "scope": "source, output and correspondence with approved study"
+      },
+      "artisticApproval": {
+        "status": "approved",
+        "reviewer": "owner",
+        "date": "2026-11-25"
+      },
+      "additionalOriginal": "/visual-engine/17933/original-6.webp"
+    },
+    {
+      "key": "maquette-a",
+      "asset": "/visual-engine/17933/maquette-a.webp",
+      "original": "/visual-engine/17933/original-16.webp",
+      "category": "maquette",
+      "caption": "Apartamento de 191 m²",
+      "page": 16,
+      "recipeId": "maquette",
+      "recipeVersion": "1.2.0",
+      "sha256": "5ba920591b12429476c680b329b5c2ced45950b4f0fe7768cdbfda60e3c806bc",
+      "technicalApproval": {
+        "status": "verified",
+        "date": "2026-11-25",
+        "scope": "source, output and correspondence with approved study"
+      },
+      "artisticApproval": {
+        "status": "rejected",
+        "reviewer": "owner",
+        "date": "2026-11-25",
+        "previousStatus": "approved",
+        "reason": "Aprovação revogada pelo proprietário, que prefere a planta original do book."
+      }
+    },
+    {
+      "key": "lobby-cinema",
+      "category": "lobby",
+      "caption": "Lobby",
+      "page": 7,
+      "original": "/visual-engine/17933/original-7.webp",
+      "asset": "/visual-engine/17933/lobby-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "555d155b65f6b919022c9daca983920775b5608c6b40754afb84d50a12564567",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "piscina-cinema",
+      "category": "leisure",
+      "caption": "Piscina descoberta",
+      "page": 11,
+      "original": "/visual-engine/17933/original-11.webp",
+      "asset": "/visual-engine/17933/piscina-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "6ace7255231ac2d44cd49838caaa08ebd3ca925b0d262ef177ccbf9423b7d0d4",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "festas-cinema",
+      "category": "leisure",
+      "caption": "Salão de festas",
+      "page": 9,
+      "original": "/visual-engine/17933/original-9.webp",
+      "asset": "/visual-engine/17933/festas-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "db3da17be7e8d0167ca6e7144e1b005a6158bdb513778cf1642af74f56a4cb1b",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "terraco-cinema",
+      "category": "leisure",
+      "caption": "Terraço do salão de festas",
+      "page": 10,
+      "original": "/visual-engine/17933/original-10.webp",
+      "asset": "/visual-engine/17933/terraco-cinema.webp",
+      "recipeId": "cinema",
+      "recipeVersion": "1.2.0",
+      "sha256": "207fe9ca727694a365f41a23129dbba7e5d17c502e5d117eb026d5a779419470",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "maquette-p17",
+      "category": "maquette",
+      "caption": "Configuração de 191 m² · p. 17",
+      "page": 17,
+      "original": "/visual-engine/17933/maquette-p17-original.webp",
+      "asset": "/visual-engine/17933/maquette-p17.webp",
+      "recipeId": "maquette",
+      "recipeVersion": "1.2.0",
+      "sha256": "8262b690aa5b735f0574fa9ebcd1198c3e6af44351ad845d1f35242cd83fb277",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "maquette-p18",
+      "category": "maquette",
+      "caption": "Configuração de 191 m² · p. 18",
+      "page": 18,
+      "original": "/visual-engine/17933/maquette-p18-original.webp",
+      "asset": "/visual-engine/17933/maquette-p18.webp",
+      "recipeId": "maquette",
+      "recipeVersion": "1.2.0",
+      "sha256": "4c5c7278bb79a6481743e6349c49bbe5885a7fd8f350cf9fdc316a3000935e1d",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    },
+    {
+      "key": "maquette-p19",
+      "category": "maquette",
+      "caption": "Configuração de 191 m² · p. 19",
+      "page": 19,
+      "original": "/visual-engine/17933/maquette-p19-original.webp",
+      "asset": "/visual-engine/17933/maquette-p19.webp",
+      "recipeId": "maquette",
+      "recipeVersion": "1.2.0",
+      "sha256": "b6abbd5778fb9ba1607c4153bdec86a92bba7547fb126479ae5445bced3f4704",
+      "technicalApproval": {
+        "status": "review",
+        "scope": "check against source and confirm exact spatial fidelity"
+      },
+      "artisticApproval": {
+        "status": "pending"
+      }
+    }
+  ],
+  "version": "1.2.0",
+  "artisticReview": {
+    "date": "2026-11-25",
+    "scope": "laboratory",
+    "reviewer": "owner",
+    "decisions": [
+      {
+        "asset": "fitness-proposta.webp",
+        "status": "approved",
+        "sha256": "9e37addf28e722760cf8afad8f7149fc30dc3e36856cf9e19a1cbc8a8d02376d",
+        "recipe": {
+          "method": "ImageGen conditional image edit",
+          "prompt": "Image edit for Praça Lindenberg Clodomiro. First reference is exact content and input; second is approved Residence Brooklin lighting and finish reference only. Produce a real cinematic re-render of the first image, premium architectural photography, subtle warm directional bounce and realistic contact shadows, tactile fine-grain materials, lifelike depth and natural highlights like the second image. Lock the entire camera perspective, crop, elevations, structure, openings, all exact equipment types, silhouettes and counts, orientation and placement, furniture and mirrors. No props or lamps added, removed or moved; do not import any architecture from the second image. Crisp readable equipment throughout, one full-frame image without letters, typography or frame. Transform the lighting, reflection, material fidelity and atmosphere as a generative edit.",
+          "sourceFiles": [
+            "original-8.webp"
+          ],
+          "sourcePage": 8,
+          "visualReference": "/portal-assets/residence-70586/academia.webp",
+          "parameters": {
+            "referenceOrder": [
+              "source",
+              "style"
+            ],
+            "seed": null,
+            "output": "WebP quality 88; maximum 1600 px"
+          }
+        }
+      },
+      {
+        "asset": "implantacao-proposta.webp",
+        "status": "approved",
+        "sha256": "9b768d379bcda776c8b7e1ca3708d97011d7401ad2634e1cbeb44f0e79c247c2",
+        "recipe": {
+          "method": "Deterministic Blender mesh with two registered book textures",
+          "prompt": null,
+          "sourceFiles": [
+            "original-5.webp",
+            "original-6.webp"
+          ],
+          "sourcePages": [
+            5,
+            6
+          ],
+          "visualReference": "/portal-assets/residence-70586/implantacao.webp",
+          "script": "render-art-studies.py",
+          "parameters": {
+            "engine": "Cycles",
+            "samples": 48,
+            "size": [
+              1450,
+              1200
+            ],
+            "planeSeparationSceneUnits": 2.28,
+            "orthographicScale": 12,
+            "camera": [
+              10,
+              -12,
+              13
+            ],
+            "output": "WebP quality 88"
+          }
+        }
+      },
+      {
+        "asset": "maquette-proposta.webp",
+        "status": "rejected"
+      },
+      {
+        "asset": "maquette-a.webp",
+        "status": "rejected",
+        "sourceFiles": [
+          "original-16.webp"
+        ],
+        "sourcePage": 16,
+        "visualReference": "residence-maquette-referencia.webp",
+        "script": "maquette-studies.py",
+        "sha256": "5ba920591b12429476c680b329b5c2ced45950b4f0fe7768cdbfda60e3c806bc",
+        "previousStatus": "approved",
+        "date": "2026-11-25",
+        "replacement": "/visual-engine/17933/planta-191-book-p16.jpg"
+      },
+      {
+        "asset": "maquette-b.webp",
+        "status": "pending",
+        "sourceFiles": [
+          "original-16.webp"
+        ],
+        "sourcePage": 16,
+        "visualReference": "residence-maquette-referencia.webp",
+        "script": "maquette-studies.py"
+      },
+      {
+        "asset": "maquette-c.webp",
+        "status": "pending",
+        "sourceFiles": [
+          "original-16.webp"
+        ],
+        "sourcePage": 16,
+        "visualReference": "residence-maquette-referencia.webp",
+        "script": "maquette-studies.py"
+      }
+    ]
+  },
+  "exclusions": [
+    "Garden · p. 15: o conjunto de unidades precisa de traçado individual validado para uma maquete fiel."
+  ],
+  "timing": {
+    "elapsedSecondsUntilLastRender": 374,
+    "sharedConcurrentBatch": true,
+    "humanInterventionMinutesThisRun": 0,
+    "historicalOwnerReviewMinutes": null
+  },
+  "commercialPlan": {
+    "asset": "/visual-engine/17933/planta-191-book-p16.jpg",
+    "caption": "Planta original de 191 m² · book oficial, p. 16",
+    "page": 16,
+    "width": 888,
+    "height": 471,
+    "sha256": "1303de21bd388cf8f601ec01d7dc246134d81a6de19b2c6e89bd072d83d2bed3",
+    "typologyId": "tipo-191",
+    "unitIds": [
+      "32"
+    ],
+    "source": "original-book",
+    "preference": "owner",
+    "date": "2026-11-25"
+  }
+}
