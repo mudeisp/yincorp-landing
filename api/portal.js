@@ -1,3 +1,4 @@
+import {enrichResidenceMaster} from '../lib/residence-master.js';
 import {architectureRoot,architectureSitemap,serveArchitecture} from '../lib/architecture.mjs';
 import {createLaunchHandler,rewriteLaunchLinks,launches,launchPath} from '../lib/sp-launches.js';
 import {enrichCommercialPresentation} from '../lib/commercial-presentation.js';
@@ -142,7 +143,12 @@ export default async function portal(req,res){
       (rendered.includes('class="commercial-book"')||(isMarketRoute&&/\/(?:empreendimento|imovel)\//.test(path))||(experienceRequested&&isMarketRoute))
       ?rendered.replace('</body>','<link rel="stylesheet" href="/portal-assets/global-experience.css"><script defer src="/portal-assets/global-experience.js"></script></body>')
       :rendered;
-    return send(enhanced);
+    const master = enrichResidenceMaster(enhanced,path);
+    if(master!==enhanced){
+      res.setHeader('X-Robots-Tag','noindex, nofollow');
+      res.setHeader('Cache-Control','private, no-store');
+    }
+    return send(master);
   };
   if(await launchHandler(req,res,path))return;
   // Discovery links are HTML, not JS-only navigation. No commercial flow changes.
