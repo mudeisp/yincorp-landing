@@ -9,7 +9,7 @@ test('exact 20 unique deterministic clean routes; old project and unit URLs reso
 test('inactive/symbolic prices never leak and source flags are preserved',()=>{
  const g=launchProject(p,[row,{...row,id:'two',area:69},{...row,id:'wrong',external_id:'orulo:99999:1'}]);
  assert.equal(g.units.length,1);assert.equal(g.units[0].active,false);assert.equal(g.price,null);assert.equal(g.units[0].original_price,null);
- const html=renderLaunch(g);assert.match(html,/Não representam unidades disponíveis para venda/);assert.match(html,/585 m²/);assert.match(html,/yi-travertino-page/);assert.match(html,/index,follow/);assert.match(html,/portal-lead/);assert.match(html,/G-2ZDJCLSSDN/);assert.doesNotMatch(html,/0,01|0,10|tipologia\//);
+ const html=renderLaunch(g);assert.match(html,/<p class="eyebrow">Breve lançamento<\/p><\/aside>/);assert.doesNotMatch(html,/Não representam unidades disponíveis para venda/);assert.match(html,/585 m²/);assert.match(html,/yi-travertino-page/);assert.match(html,/index,follow/);assert.match(html,/portal-lead/);assert.match(html,/G-2ZDJCLSSDN/);assert.doesNotMatch(html,/0,01|0,10|tipologia\//);
  const schema=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);assert.ok(schema['@graph'].every(n=>!n.offers));
 });
 test('active commercial prices retained; symbolic and inactive prices discarded',()=>{
