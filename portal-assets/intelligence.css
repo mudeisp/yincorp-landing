@@ -162,3 +162,7 @@
 .ynti-premium .ynti-gallery-item--visit{display:grid;grid-template-rows:1fr auto}
 .ynti-premium .ynti-gallery-item--visit .ynti-visit-project{display:block;height:auto;margin:0 14px 14px;padding:10px 12px;border:1px solid #a48154;border-radius:3px;background:#28251f;color:#fffdfa;text-align:center}
 .ynti-premium .ynti-gallery-item--visit .ynti-visit-project:focus-visible{outline:2px solid #a48154;outline-offset:2px}
+.ynti.ynti-launch{width:calc(100% - 32px);min-width:0}
+.ynti.ynti-launch .ynti-gallery-item--visit{min-width:0;overflow-wrap:anywhere}
+@media(min-width:741px){.ynti.ynti-launch .ynti-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:740px){.ynti.ynti-launch .ynti-gallery{max-width:100%;overscroll-behavior-x:contain}}

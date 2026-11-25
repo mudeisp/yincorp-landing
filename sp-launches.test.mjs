@@ -9,7 +9,7 @@ test('exact 20 unique deterministic clean routes; old project and unit URLs reso
 test('inactive/symbolic prices never leak and source flags are preserved',()=>{
  const g=launchProject(p,[row,{...row,id:'two',area:69},{...row,id:'wrong',external_id:'orulo:99999:1'}]);
  assert.equal(g.units.length,1);assert.equal(g.units[0].active,false);assert.equal(g.price,null);assert.equal(g.units[0].original_price,null);
- const html=renderLaunch(g);assert.match(html,/Não representam unidades disponíveis para venda/);assert.match(html,/585 m²/);assert.match(html,/yi-travertino-page/);assert.match(html,/index,follow/);assert.match(html,/portal-lead/);assert.match(html,/G-2ZDJCLSSDN/);assert.doesNotMatch(html,/0,01|0,10|tipologia\//);
+ const html=renderLaunch(g);assert.match(html,/<p class="eyebrow">Breve lançamento<\/p><\/aside>/);assert.doesNotMatch(html,/Não representam unidades disponíveis para venda/);assert.match(html,/585 m²/);assert.match(html,/yi-travertino-page/);assert.match(html,/index,follow/);assert.match(html,/portal-lead/);assert.match(html,/G-2ZDJCLSSDN/);assert.doesNotMatch(html,/0,01|0,10|tipologia\//);
  const schema=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);assert.ok(schema['@graph'].every(n=>!n.offers));
 });
 test('active commercial prices retained; symbolic and inactive prices discarded',()=>{
@@ -34,4 +34,19 @@ test('live resolver fails closed and redirects only after destination data exist
 test('clean URLs keep comparator routing and canonical result links',async()=>{
  const {saleRoute,decorate}=await import('./lib/intelligence.js');
  for(const p of launches){assert.equal(saleRoute(launchPath(p)).token,'orulo-'+p.id);assert.match(decorate('<head></head>',launchPath(p)),/intelligence.js/);}
+});
+
+test('a launch without price gets crawlable comparable projects from active inventory', async()=>{
+ const {compareLaunch,renderLaunchComparison}=await import('./lib/intelligence.js');
+ const project=launchProject(p,[{...row,area:100,bedrooms:3,address:{latitude:-23.6,longitude:-46.66}}]);
+ const make=(id,building,changes={})=>({...row,id:`11111111-1111-4111-8111-${String(id).padStart(12,'0')}`,external_id:`orulo:${building}:1`,development_name:'Projeto '+building,active:true,status:'Lançamento',price:2100000,area:102,bedrooms:3,typology_stock:2,image_url:'https://static.orulo.com.br/fachada.jpg',address:{latitude:-23.6,longitude:-46.66},...changes});
+ const rows=[make(1,p.id),make(2,'10002'),make(3,'10002',{area:103}),make(4,'10004',{area:180}),make(5,'10005',{active:false}),make(6,'10006',{neighborhood:'Campo Belo',address:{latitude:-23.61,longitude:-46.66}}),make(7,'10007',{neighborhood:'Distante',address:{latitude:-23.8,longitude:-46.7}})];
+ const read=async({mode,ids})=>mode==='project'?rows.filter(r=>ids.includes(r.id)):rows;
+ const result=await compareLaunch(project,{read});
+ assert.equal(result.base.price,null);
+ assert.deepEqual(result.items.map(x=>x.name),['Projeto 10002','Projeto 10006']);
+ const html=renderLaunch(project,{comparison:await renderLaunchComparison(project,{read})});
+ assert.match(html,/<h2 id="ynti-launch-title">Conheça outras possibilidades na região/);
+ assert.match(html,/href="\/sp\/sao-paulo\/empreendimento\/projeto-10002--orulo-10002">Visite esse site/);
+ assert.match(html,/index,follow/);
 });
