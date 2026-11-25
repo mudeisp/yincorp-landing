@@ -114,8 +114,12 @@ async function initializeFinance(root) {
         unit.suites == null ? null : unit.suites + ' suítes',
         unit.parking == null ? null : unit.parking + (unit.parking === 1 ? ' vaga' : ' vagas')
       ].filter(Boolean);
-      if (root.closest('[data-lp-master]') && Number.isFinite(unit.area) && unit.area > 0) {
-        details.push(formatCents(Math.round(unit.totalCents / unit.area)) + '/m² privativo');
+      if (root.closest('[data-lp-master]')) {
+        const priceArea = unit.totalArea ?? unit.area;
+        if (Number.isFinite(priceArea) && priceArea > 0) {
+          details.push(formatCents(Math.round(unit.totalCents / priceArea)) +
+            (unit.totalArea == null ? '/m² privativo' : '/m² de área privativa total'));
+        }
       }
       const overview = element('div');
       overview.className = 'commercial-price';

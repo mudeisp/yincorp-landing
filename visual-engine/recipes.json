@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "reference": "yincorp-lp-master-tabela-premium.html",
+  "method": "reference-conditioned image editing",
+  "parameters": { "transparentBackground": false },
+  "recipes": {
+    "facade": "Architectural blueprint editorial plate, ivory travertine, discreet antique gold linework",
+    "lobby": "Cinematic editorial lighting and realistic materials",
+    "leisure": "Cinematic architectural photography. Preserve equipment and layout",
+    "site": "Exploded axonometric of documented floors only",
+    "maquette": "Orthographic dollhouse",
+    "blueprint": "Editorial blueprint with clean linework",
+    "editorial": "Top-down editorial furnished floor plan",
+    "xray": "Top-down translucent functional zoning"
+  },
+  "review": [
+    "Compare with the extracted original and read the corresponding book page.",
+    "Check building silhouette, floors, openings, architecture and all documented boundaries.",
+    "Check room count, doors, circulation and terraces for every floor-plan variant.",
+    "Retain distinct originals and treatments. Reject results with invented elements or uncertain geometry.",
+    "Check the commercial table separately. Do not infer payment terms or current availability."
+  ]
+}

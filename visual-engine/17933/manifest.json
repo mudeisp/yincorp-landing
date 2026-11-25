@@ -1,0 +1,11 @@
+{
+  "oruloId": "17933",
+  "status": "review",
+  "commercial": {
+    "status": "verified",
+    "reference": "2026-11",
+    "sourcePage": 5,
+    "unitsUrl": "/commercial/orulo/17933/units.json"
+  },
+  "assets": []
+}
