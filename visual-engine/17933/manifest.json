@@ -378,5 +378,103 @@
       "review": "Atmosfera derivada da edição generativa. Curvas tonais aplicadas à imagem original, mantendo enquadramento, objetos e arquitetura na mesma posição."
     }
   ],
-  "version": "1.1.0"
+  "version": "1.1.0",
+  "artisticReview": {
+    "date": "2026-11-25",
+    "scope": "laboratory",
+    "reviewer": "owner",
+    "decisions": [
+      {
+        "asset": "fitness-proposta.webp",
+        "status": "approved",
+        "sha256": "9e37addf28e722760cf8afad8f7149fc30dc3e36856cf9e19a1cbc8a8d02376d",
+        "recipe": {
+          "method": "ImageGen conditional image edit",
+          "prompt": "Image edit for Praça Lindenberg Clodomiro. First reference is exact content and input; second is approved Residence Brooklin lighting and finish reference only. Produce a real cinematic re-render of the first image, premium architectural photography, subtle warm directional bounce and realistic contact shadows, tactile fine-grain materials, lifelike depth and natural highlights like the second image. Lock the entire camera perspective, crop, elevations, structure, openings, all exact equipment types, silhouettes and counts, orientation and placement, furniture and mirrors. No props or lamps added, removed or moved; do not import any architecture from the second image. Crisp readable equipment throughout, one full-frame image without letters, typography or frame. Transform the lighting, reflection, material fidelity and atmosphere as a generative edit.",
+          "sourceFiles": [
+            "original-8.webp"
+          ],
+          "sourcePage": 8,
+          "visualReference": "/portal-assets/residence-70586/academia.webp",
+          "parameters": {
+            "referenceOrder": [
+              "source",
+              "style"
+            ],
+            "seed": null,
+            "output": "WebP quality 88; maximum 1600 px"
+          }
+        }
+      },
+      {
+        "asset": "implantacao-proposta.webp",
+        "status": "approved",
+        "sha256": "9b768d379bcda776c8b7e1ca3708d97011d7401ad2634e1cbeb44f0e79c247c2",
+        "recipe": {
+          "method": "Deterministic Blender mesh with two registered book textures",
+          "prompt": null,
+          "sourceFiles": [
+            "original-5.webp",
+            "original-6.webp"
+          ],
+          "sourcePages": [
+            5,
+            6
+          ],
+          "visualReference": "/portal-assets/residence-70586/implantacao.webp",
+          "script": "render-art-studies.py",
+          "parameters": {
+            "engine": "Cycles",
+            "samples": 48,
+            "size": [
+              1450,
+              1200
+            ],
+            "planeSeparationSceneUnits": 2.28,
+            "orthographicScale": 12,
+            "camera": [
+              10,
+              -12,
+              13
+            ],
+            "output": "WebP quality 88"
+          }
+        }
+      },
+      {
+        "asset": "maquette-proposta.webp",
+        "status": "rejected"
+      },
+      {
+        "asset": "maquette-a.webp",
+        "status": "pending",
+        "sourceFiles": [
+          "original-16.webp"
+        ],
+        "sourcePage": 16,
+        "visualReference": "/portal-assets/residence-70586/planta-1.webp",
+        "script": "maquette-studies.py"
+      },
+      {
+        "asset": "maquette-b.webp",
+        "status": "pending",
+        "sourceFiles": [
+          "original-16.webp"
+        ],
+        "sourcePage": 16,
+        "visualReference": "/portal-assets/residence-70586/planta-1.webp",
+        "script": "maquette-studies.py"
+      },
+      {
+        "asset": "maquette-c.webp",
+        "status": "pending",
+        "sourceFiles": [
+          "original-16.webp"
+        ],
+        "sourcePage": 16,
+        "visualReference": "/portal-assets/residence-70586/planta-1.webp",
+        "script": "maquette-studies.py"
+      }
+    ]
+  }
 }
