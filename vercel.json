@@ -1,5 +1,5 @@
 {
-  "buildCommand": "node scripts/prepare-portal.mjs && node scripts/materialize-renata-pdfs.mjs && node scripts/materialize-orulo-pdfs.mjs && node scripts/prepare-site-footers.mjs",
+  "buildCommand": "node scripts/prepare-portal.mjs && node scripts/materialize-renata-pdfs.mjs && node scripts/materialize-orulo-pdfs.mjs && node scripts/prepare-site-footers.mjs && node editorial/architecture-collection/render.mjs",
   "outputDirectory": ".",
   "redirects": [
     {
@@ -119,6 +119,14 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/canva/arborea-ibirapuera",
+      "destination": "/canva/arborea-ibirapuera/index.html"
+    },
+    {
+      "source": "/canva/arborea-ibirapuera/",
+      "destination": "/canva/arborea-ibirapuera/index.html"
+    },
     {
       "source": "/DUDA",
       "destination": "/DUDA/index.html"
@@ -334,6 +342,16 @@
     {
       "source": "/guilherme.aguaverde/",
       "destination": "/guilherme.aguaverde/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/canva/arborea-ibirapuera",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, follow" }]
+    },
+    {
+      "source": "/canva/arborea-ibirapuera/index.html",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, follow" }]
     }
   ],
   "functions": {
