@@ -44,7 +44,7 @@ const timeline = [
 ];
 const insertions = {
   arborea: '<aside class="fact-sheet"><h3>Ficha do projeto</h3><dl><dt>Endereço</dt><dd>Av. República do Líbano, 2168 · Moema, São Paulo</dd><dt>Configuração</dt><dd>Uma torre · 25 unidades · 575 m² na ficha pública</dd><dt>Arquitetura e interiores</dt><dd>Jacobsen Arquitetura</dd><dt>Paisagismo</dt><dd>Orsini Paisagismo</dd></dl></aside>',
-  benx: '<div class="timeline" aria-label="Linha do tempo">' + timeline.map(([year, label, detail]) => '<details><summary><time>' + year + '</time><span>' + label + '</span></summary><p>' + detail + '</p></details>').join('') + '</div>',
+  benx: '<div class="timeline" aria-label="Linha do tempo">' + timeline.map(([year, label, detail]) => '<details><summary><span class="timeline-year">' + year + '</span><span>' + label + '</span></summary><p>' + detail + '</p></details>').join('') + '</div>',
   colecao: '<ul class="collection-list">' + collection + '</ul>',
   ibirapuera: '<div class="gallery" aria-label="Galeria de patrimônio">' + images.slice(1).map((picture) => '<figure><a data-zoom href="' + asset(picture.file) + '" aria-label="' + html('Ampliar: ' + picture.alt) + '">' + cover(picture) + '</a><figcaption>' + credit(picture) + '</figcaption></figure>').join('') + '</div>',
 };
