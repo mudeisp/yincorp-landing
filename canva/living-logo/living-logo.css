@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Yincorp Wordmark";
+  src: url("../architecture-collection/fonts/cormorant.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Yincorp Signature";
+  src: url("../architecture-collection/fonts/plus-jakarta.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.yi-living-stage {
+  --living-ink: var(--yi-ink);
+  --living-rule: #94816b55;
+  position: relative;
+  height: calc(100svh - 72px);
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  background: var(--yi-travertine);
+  color: var(--living-ink);
+}
+.yi-living-stage:has([data-edition="obsidian"]),
+.yi-living-stage:has([data-edition="wireframe"]) {
+  --living-ink: #f1e9d9;
+  --living-rule: #c5a37a56;
+  --yi-bronze: #d5ad74;
+  background: radial-gradient(ellipse at 45% 36%, #39332b, #171613 65%, #10100f);
+}
+.yi-living-stage::before {
+  content: "";
+  position: absolute;
+  inset: clamp(.75rem, 2.6vw, 2.5rem);
+  border: 1px solid var(--living-rule);
+  pointer-events: none;
+}
+.yi-living-stage > .yi-living-mark {
+  --living-size: clamp(77px, 20.5vw, 284px);
+  position: relative;
+  color: var(--living-ink);
+}
+.yi-living-mark strong {
+  font-family: "Yincorp Wordmark", var(--yi-font-title);
+  font-size: var(--living-size, 42px);
+  letter-spacing: -.06em;
+}
+.yi-living-mark span {
+  font-family: "Yincorp Signature", var(--yi-font-body);
+}
+.yi-living-stage .yi-living-mark strong {
+  text-align: center;
+}
+.yi-living-stage .yi-living-mark span {
+  margin-top: calc(var(--living-size) * .238095);
+  margin-left: 0;
+  font-size: calc(var(--living-size) * .190476);
+  align-self: center;
+}
+.yi-living-mark[data-rendering] strong {
+  color: transparent;
+}
+.yi-living-mark[data-rendering] strong::first-letter {
+  color: inherit;
+}
+.yi-living-mark[data-rendering] span {
+  opacity: var(--living-signature, 1);
+}
+.yi-living-mark:focus-visible {
+  outline: 2px solid var(--yi-bronze);
+  outline-offset: 5px;
+}
+.yi-living-canvas {
+  position: fixed;
+  z-index: 6;
+  display: block;
+  pointer-events: none;
+}
+.yi-living-canvas[hidden] { display: none; }
+.yi-living-bottom {
+  position: absolute;
+  inset: auto clamp(1.5rem, 4vw, 4rem) clamp(1.5rem, 4vw, 4rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+}
+.yi-living-bottom a,
+.yi-living-controls button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  text-decoration: none;
+  font: 400 11px/1.3 var(--yi-font-body);
+  letter-spacing: .08em;
+}
+.yi-living-controls {
+  display: flex;
+  gap: .35rem;
+  flex-wrap: wrap;
+}
+.yi-living-controls[hidden] { display: none; }
+.yi-living-controls button {
+  cursor: pointer;
+  padding: .35rem .75rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+.yi-living-controls button:hover,
+.yi-living-controls button[aria-pressed="true"] {
+  border-color: var(--living-rule);
+}
+.yi-living-lab {
+  margin: 0;
+  color: var(--yi-ink);
+  background: var(--yi-paper);
+  font-family: var(--yi-font-body);
+}
+.yi-living-lab footer {
+  padding: 2.5rem clamp(1rem, 5vw, 5rem);
+  border-top: 1px solid var(--yi-line);
+  font-size: .75rem;
+}
+@media (max-width: 600px) {
+  .yi-living-mark { --living-size: 39px; }
+  .yi-living-mark span { font-size: 6.5px; margin-top: 8px; }
+  .yi-living-bottom { flex-wrap: wrap; }
+  .yi-living-controls button { padding-inline: .48rem; }
+}

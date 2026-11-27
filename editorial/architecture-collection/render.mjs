@@ -85,22 +85,32 @@ await writeFile(new URL('index.html', output), `<!doctype html>
 <meta name="robots" content="noindex,follow">
 <meta name="description" content="${description}">
 <title>${title}</title>
+<link rel="icon" href="data:,">
 <meta property="og:type" content="article"><meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="${title}"><meta property="og:description" content="${description}">
 <meta property="og:url" content="${publicationUrl}"><meta property="og:image" content="${absolute(asset(park.file))}">
 <meta property="og:image:alt" content="${html(park.alt)}">
+<link rel="stylesheet" href="/portal-assets/editorial-tokens.css">
 <link rel="stylesheet" href="${sharedPath + 'edition.css'}">
+<link rel="stylesheet" href="/home-assets/brand-shell.css">
+<link rel="stylesheet" href="/canva/living-logo/living-logo.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+<script type="module" src="/canva/living-logo/mount.js"></script>
 <script type="application/ld+json">${JSON.stringify(graph).replace(/</g, '\\u003c')}</script>
 <script type="module" src="${sharedPath + 'experience.js'}"></script>
 </head>
 <body>
 <a class="skip" href="#edicao">Ir para a matéria</a>
 <header class="masthead">
-<a class="wordmark" href="/canva" aria-label="Yincorp Canva"><strong>Y</strong><span>Yincorp<br>Architecture Collection</span></a>
+<a class="brand yi-brand-mark yi-living-mark" id="living-dock" href="/" aria-label="Yincorp — início"><strong>yincorp</strong><span>PLACES WORTH LIVING</span></a>
 <nav aria-label="Modos de navegação"><a href="#cinema" data-mode="cinema">Cinema</a><a href="#edicao" data-mode="editorial">Editorial</a><a href="#explore" data-mode="explore">Explore</a></nav>
 <div class="reading-progress" aria-hidden="true"></div>
 </header>
 <main id="edicao" data-edition="${id}" tabindex="-1">
+<section class="yi-living-stage" aria-label="Yincorp">
+<a class="brand yi-brand-mark yi-living-mark" href="/" aria-label="Yincorp — início" data-living-logo data-dock="#living-dock"><strong>yincorp</strong><span>PLACES WORTH LIVING</span></a>
+<div class="yi-living-bottom"><a href="#cinema">Arbórea Ibirapuera <span aria-hidden="true">&nbsp;↓</span></a></div>
+</section>
 <article aria-labelledby="cover-title">
 <header id="cinema" class="cover">
 <div class="cover-copy"><p class="eyebrow">São Paulo · Moema</p>
@@ -120,6 +130,6 @@ await writeFile(new URL('index.html', output), `<!doctype html>
 <section class="closing" aria-labelledby="contact-title"><h2 id="contact-title">Arbórea Ibirapuera</h2><a class="contact-link" data-contact href="https://wa.me/5511992976368">Entre em contato <span aria-hidden="true">↗</span></a></section>
 </article>
 </main>
-<footer class="edition-footer"><a href="/" aria-label="Yincorp, início"><strong>Y</strong> Yincorp</a><p>Architecture Collection é uma iniciativa editorial independente da Yincorp.</p></footer>
+<footer class="edition-footer"><a href="/" aria-label="Yincorp, início"><strong>Y</strong> Yincorp</a><p><a href="/canva">Architecture Collection</a> é uma iniciativa editorial independente da Yincorp.</p></footer>
 <dialog class="zoom-dialog" aria-label="Imagem ampliada"><button type="button" data-close>Fechar <span aria-hidden="true">×</span></button><figure></figure></dialog>
 </body></html>\n`);

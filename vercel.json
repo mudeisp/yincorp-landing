@@ -120,6 +120,14 @@
   ],
   "rewrites": [
     {
+      "source": "/canva/living-logo",
+      "destination": "/canva/living-logo/index.html"
+    },
+    {
+      "source": "/canva/living-logo/",
+      "destination": "/canva/living-logo/index.html"
+    },
+    {
       "source": "/canva/arborea-ibirapuera",
       "destination": "/canva/arborea-ibirapuera/index.html"
     },
@@ -345,6 +353,10 @@
     }
   ],
   "headers": [
+    {
+      "source": "/canva/living-logo/:path*",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, follow" }]
+    },
     {
       "source": "/canva/arborea-ibirapuera",
       "headers": [{ "key": "X-Robots-Tag", "value": "noindex, follow" }]
