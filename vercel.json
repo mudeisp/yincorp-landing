@@ -3,6 +3,16 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/Patrus",
+      "destination": "https://mauro-petrus-althea.regalanchor2.chatgpt.site",
+      "permanent": false
+    },
+    {
+      "source": "/mauro.patrus",
+      "destination": "/Patrus",
+      "permanent": false
+    },
+    {
       "source": "/guilherme.vita3",
       "destination": "/guilherme.vita3/",
       "permanent": false
