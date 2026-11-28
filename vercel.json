@@ -3,6 +3,11 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/Luanna",
+      "destination": "https://luanna-itaim.regalanchor2.chatgpt.site",
+      "permanent": false
+    },
+    {
       "source": "/Patrus",
       "destination": "https://mauro-petrus-althea.regalanchor2.chatgpt.site",
       "permanent": false
