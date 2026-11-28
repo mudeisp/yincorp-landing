@@ -140,6 +140,14 @@
   ],
   "rewrites": [
     {
+      "source": "/luanna2",
+      "destination": "/luanna2/index.html"
+    },
+    {
+      "source": "/luanna2/",
+      "destination": "/luanna2/index.html"
+    },
+    {
       "source": "/DUDA",
       "destination": "/DUDA/index.html"
     },
