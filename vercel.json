@@ -3,6 +3,11 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/mayra.castor",
+      "destination": "https://mayra-castor.regalanchor2.chatgpt.site",
+      "permanent": false
+    },
+    {
       "source": "/Luanna",
       "destination": "https://luanna-itaim.regalanchor2.chatgpt.site",
       "permanent": false
